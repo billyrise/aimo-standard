@@ -14,18 +14,10 @@ theme:
     - content.action.edit
     - content.action.view
 
-extra:
-  alternate:
-    - name: English
-      link: ./
-      lang: en
-    - name: 日本語
-      link: ./ja/
-      lang: ja
-
 plugins:
   - search
   - i18n:
+      default_language: en
       languages:
         - locale: en
           name: English
