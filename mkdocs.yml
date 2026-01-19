@@ -17,7 +17,6 @@ theme:
 plugins:
   - search
   - i18n:
-      default_language: en
       languages:
         - locale: en
           name: English
@@ -28,9 +27,6 @@ plugins:
           build: true
       reconfigure_material: true
       docs_structure: suffix
-      use_directory_urls: true
-      nav_translations: {}
-      fallback_to_default: true
 
 nav:
   - Home:
