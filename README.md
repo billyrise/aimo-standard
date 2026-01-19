@@ -7,15 +7,13 @@ This repository is the single source of truth (SSOT) for:
 
 ## Live Documentation
 
-### Production (Target)
-- Current (latest): https://aimoaas.com/standard/  (placeholder - production deployment)
-- Versions: https://aimoaas.com/standard/versions/ (placeholder - production deployment)
+### Production
+- Current (latest): https://standard.aimoaas.com/
+- Versions: https://standard.aimoaas.com/standard/versions/
 
 ### GitHub Pages (Temporary)
-- Current (latest): https://<ORG>.github.io/aimo-standard/  (temporary - replace <ORG> with actual organization)
-- Versions: https://<ORG>.github.io/aimo-standard/versions/  (temporary)
-
-**Note:** The production deployment to `aimoaas.com/standard/` will be configured in a later step. For now, GitHub Pages serves as the temporary hosting location.
+- Current (latest): https://billyrise.github.io/aimo-standard/  (temporary)
+- Versions: https://billyrise.github.io/aimo-standard/versions/  (temporary)
 
 ## GitHub Releases
 - Official PDFs and packaged artifacts are published as GitHub Releases:
@@ -62,13 +60,10 @@ python tooling/checks/lint_schema.py
 - **Deployment:** Automatic via GitHub Actions on `main` branch push
 - **Versioning:** Managed by `mike` (current as `dev` alias `latest`, tagged versions preserved)
 
-### Production Target (Future)
-- **Hosting:** `https://aimoaas.com/standard/`
-- **Approach:** The SSOT and build pipeline remain unchanged. Only the deployment target will be switched.
-- **Options:**
-  - Cloudflare Pages (or Workers routing `/standard/` to the built site)
-  - Integration with existing `aimoaas.com` hosting infrastructure
-- **Note:** This change will be implemented in a subsequent step. The current GitHub Pages setup serves as proof of concept and temporary hosting.
+### Production
+- **Hosting:** `https://standard.aimoaas.com/`
+- **Deployment:** Production deployment is active
+- **Note:** GitHub Pages (`https://billyrise.github.io/aimo-standard/`) serves as a temporary backup/mirror
 
 ## License & Trademarks
 - License: see LICENSE.txt and NOTICE.txt
