@@ -50,7 +50,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mike deploy "${{ steps.v.outputs.ver }}" --update-aliases latest --push
+          mike deploy "${{ steps.v.outputs.ver }}" latest --update-aliases --push
           mike set-default latest --push
 
       - name: Prepare dist
