@@ -39,5 +39,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mike deploy dev latest --update-aliases --push
+          mike deploy dev latest --update-aliases --push --allow-empty
           mike set-default latest --push
