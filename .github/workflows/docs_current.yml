@@ -39,5 +39,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mike deploy dev latest --update-aliases --push --allow-empty
+          git fetch origin gh-pages:gh-pages || true
+          mike deploy dev latest --update-aliases --push
           mike set-default latest --push
