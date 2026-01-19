@@ -42,3 +42,20 @@ jobs:
           git fetch origin gh-pages:gh-pages || true
           mike deploy dev latest --update-aliases --push
           mike set-default latest --push
+
+      - name: Ensure CNAME for custom domain (standard.aimoaas.com)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages:gh-pages || true
+          git checkout gh-pages
+          echo "standard.aimoaas.com" > CNAME
+          git add CNAME
+          if git diff --cached --quiet; then
+            echo "CNAME unchanged; nothing to commit."
+          else
+            git commit -m "chore(pages): ensure CNAME for standard.aimoaas.com"
+            git push origin gh-pages
+          fi
+          git checkout -

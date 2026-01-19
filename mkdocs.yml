@@ -1,6 +1,6 @@
 site_name: AIMO Standard
 site_description: AIMO Standard Specification
-site_url: https://billyrise.github.io/aimo-standard/  # temporary GitHub Pages base; update for production
+site_url: https://standard.aimoaas.com/
 repo_url: https://github.com/billyrise/aimo-standard
 edit_uri: edit/main/docs/
 
