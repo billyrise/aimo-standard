@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aimoaas.com/standard/schemas/aimo-standard.schema.json",
+  "title": "AIMO Standard - Root",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "dictionary", "evidence"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Standard version, e.g., v0.1.0"
+    },
+    "dictionary": { "$ref": "aimo-dictionary.schema.json" },
+    "evidence": {
+      "type": "array",
+      "items": { "$ref": "aimo-ev.schema.json" }
+    }
+  }
+}

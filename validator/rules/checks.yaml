@@ -1,0 +1,11 @@
+version: 0.1
+checks:
+  - id: schema_validate_root
+    description: Validate root object against aimo-standard.schema.json
+    required: true
+  - id: schema_validate_dictionary
+    description: Validate dictionary object against aimo-dictionary.schema.json
+    required: true
+  - id: schema_validate_ev
+    description: Validate each evidence record against aimo-ev.schema.json
+    required: true
