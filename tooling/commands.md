@@ -24,14 +24,14 @@ pytest -q
 
 ### Current (working) -> alias "latest"
 ```bash
-mike deploy dev --update-aliases latest
+mike deploy dev latest --update-aliases
 mike set-default latest
 mike list
 ```
 
 ### Release version snapshot (example: 0.1.0)
 ```bash
-mike deploy 0.1.0 --update-aliases latest
+mike deploy 0.1.0 latest --update-aliases
 mike set-default latest
 mike list
 ```

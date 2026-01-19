@@ -1,6 +1,6 @@
 site_name: AIMO Standard
 site_description: AIMO Standard Specification
-site_url: https://aimoaas.com/standard/  # placeholder - update when deploying to production
+site_url: https://billyrise.github.io/aimo-standard/  # temporary GitHub Pages base; update for production
 repo_url: https://github.com/<ORG>/<REPO>  # placeholder - MUST be replaced with actual repository URL
 edit_uri: edit/main/docs/
 
@@ -17,10 +17,10 @@ theme:
 extra:
   alternate:
     - name: English
-      link: /
+      link: ./
       lang: en
     - name: 日本語
-      link: /ja/
+      link: ./ja/
       lang: ja
 
 plugins:
