@@ -1,0 +1,7 @@
+{
+  "id": "EV-000001",
+  "timestamp": "2026-01-01T00:00:00Z",
+  "source": "example-system",
+  "summary": "Example evidence record.",
+  "tags": ["example", "aimo"]
+}
