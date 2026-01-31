@@ -10,3 +10,4 @@ This document defines validator checks.
 ## Notes
 - This is the normative definition of checks.
 - `checks.yaml` is the machine-readable representation of this document.
+- The root schema (aimo-standard.schema.json) allows optional lifecycle objects at root: request, review, exception, renewal, change_log. If present, they are not structurally validated beyond being objects; content expectations are defined in docs (Evidence Bundle, Minimum Evidence Requirements).

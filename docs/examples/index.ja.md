@@ -1,0 +1,10 @@
+# Examples
+
+本セクションは、アーティファクトの組み合わせ方を示す最小・E2E 例への入口である。
+
+- **最小バンドル**: リポジトリの `examples/minimal/`（例: `sample_ev.json`, `sample_dictionary.json`）。
+- **Evidence Bundle（最小）**: `examples/evidence_bundle_minimal/` — request/review/change_log を含む root.json。[Evidence Bundle](../artifacts/evidence-bundle.md)、[Minimum Evidence](../artifacts/minimum-evidence.md) を参照。
+- **スキーマ整合**: `schemas/jsonschema/` と [Standard](../standard/current/index.md) に基づき検証する。
+- **監査対応パッケージ**: [Trust Package](../governance/trust-package.md) を参照。
+
+詳細なシナリオは後の変更単位で追加する。
