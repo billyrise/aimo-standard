@@ -27,16 +27,16 @@ All AIMO codes follow the format: **`<PREFIX>-<TOKEN>`**
 
 The AIMO taxonomy uses 8 dimension namespaces:
 
-| ID | Name (EN) | Name (JA) | Prefix | Code Count |
-| --- | --- | --- | --- | --- |
-| **FS** | Functional Scope | 機能スコープ | `FS-` | 6 |
-| **UC** | Use Case Class | ユースケース分類 | `UC-` | 30 |
-| **DT** | Data Type | データ種別 | `DT-` | 10 |
-| **CH** | Channel | チャネル | `CH-` | 8 |
-| **IM** | Integration Mode | 統合形態 | `IM-` | 7 |
-| **RS** | Risk Surface | リスク面 | `RS-` | 8 |
-| **OB** | Outcome / Benefit | 成果 | `OB-` | 7 |
-| **EV** | Evidence Type | 証跡種別 | `EV-` | 15 |
+| ID | Name | Prefix | Code Count |
+| --- | --- | --- | --- |
+| **FS** | Functional Scope | `FS-` | 6 |
+| **UC** | Use Case Class | `UC-` | 30 |
+| **DT** | Data Type | `DT-` | 10 |
+| **CH** | Channel | `CH-` | 8 |
+| **IM** | Integration Mode | `IM-` | 7 |
+| **RS** | Risk Surface | `RS-` | 8 |
+| **OB** | Outcome / Benefit | `OB-` | 7 |
+| **EV** | Evidence Type | `EV-` | 15 |
 
 **Total: 91 codes across 8 dimensions**
 

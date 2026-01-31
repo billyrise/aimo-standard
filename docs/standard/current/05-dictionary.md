@@ -32,7 +32,7 @@ The dictionary CSV uses **21 columns**:
 | 2 | `standard_version` | Yes | SemVer format | `0.1.0` |
 | 3 | `dimension_id` | Yes | Two-letter dimension ID | `FS`, `UC`, `DT` |
 | 4 | `dimension_name_en` | Yes | English dimension name | `Functional Scope` |
-| 5 | `dimension_name_ja` | Yes | Japanese dimension name | `機能スコープ` |
+| 5 | `dimension_name_ja` | Yes | Japanese dimension name | (JA text) |
 | 6 | `code` | Yes | Full code | `UC-001` |
 
 ### Label and Definition Columns (6)
@@ -40,9 +40,9 @@ The dictionary CSV uses **21 columns**:
 | # | Column | Required | Description | Example |
 | --- | --- | --- | --- | --- |
 | 7 | `label_en` | Yes | English label (max 50 chars) | `General Q&A` |
-| 8 | `label_ja` | Yes | Japanese label | `一般QA` |
+| 8 | `label_ja` | Yes | Japanese label | (JA text) |
 | 9 | `definition_en` | Yes | English definition (1-2 sentences) | `General question answering...` |
-| 10 | `definition_ja` | Yes | Japanese definition | `一般的な質問応答...` |
+| 10 | `definition_ja` | Yes | Japanese definition | (JA text) |
 | 11 | `scope_notes` | No | Usage scope clarification | `Low to medium risk...` |
 | 12 | `examples` | No | Pipe-separated examples | `chatbot\|recommendation` |
 
