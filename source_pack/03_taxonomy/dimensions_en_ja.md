@@ -1,7 +1,7 @@
 # Dimension Names EN/JA Mapping
 
-**Status**: Generated from taxonomy_dictionary_v0.1.csv
-**DO NOT EDIT MANUALLY** - regenerate with: `python tooling/taxonomy/build_taxonomy_assets.py`
+**Status**: Generated from data/taxonomy/
+**DO NOT EDIT MANUALLY** - regenerate with: `python tooling/taxonomy/build_artifacts.py`
 
 ---
 
@@ -157,6 +157,6 @@
 
 ## Generation Info
 
-- **Source**: `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`
-- **Generated**: 2026-01-31
+- **Source**: `data/taxonomy/canonical.yaml` + `i18n/*.yaml`
+- **Generated**: 2026-02-01
 - **Total Codes**: 91

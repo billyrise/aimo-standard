@@ -1,6 +1,6 @@
 # Code System Namespaces
-# Generated from: taxonomy_dictionary_v0.1.csv
-# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_taxonomy_assets.py
+# Generated from: data/taxonomy/canonical.yaml
+# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_artifacts.py
 dimension_id,dimension_name_en,dimension_name_ja,namespace_prefix,code_count,notes
 FS,"Functional Scope","機能スコープ",FS-,6,"6 codes defined"
 DT,"Data Type","データ種別",DT-,10,"10 codes defined"

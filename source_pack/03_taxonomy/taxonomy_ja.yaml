@@ -1,9 +1,9 @@
 # AIMO Taxonomy (日本語)
-# Generated from: taxonomy_dictionary_v0.1.csv
-# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_taxonomy_assets.py
+# Generated from: data/taxonomy/canonical.yaml + i18n/ja.yaml
+# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_artifacts.py
 
 version: "0.1.0"
-generated_date: "2026-01-31"
+generated_date: "2026-02-01"
 
 dimensions:
   - id: FS

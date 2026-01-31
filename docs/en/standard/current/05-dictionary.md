@@ -4,10 +4,10 @@ The AIMO Dictionary is the authoritative list of all valid codes within the taxo
 
 ## What is Dictionary
 
-The dictionary is a machine-readable CSV file that serves as the **Single Source of Truth (SSOT)** for all AIMO taxonomy codes. It contains:
+The dictionary provides a complete, machine-readable set of all AIMO taxonomy codes. It contains:
 
 - All 91 codes across 8 dimensions
-- Labels and definitions (with translations)
+- Labels and definitions (with translations in language packs)
 - Lifecycle metadata (status, version introduced, deprecated, removed)
 - Scope notes and examples for code usage
 
@@ -17,8 +17,13 @@ The dictionary enables:
 2. **Validator**: The validator checks that all codes exist in the dictionary
 3. **Coverage Map**: Codes enable mapping to external frameworks and regulations
 
-!!! info "Source of Truth"
-    The dictionary CSV (`taxonomy_dictionary_v0.1.csv`) is the authoritative source. This page is explanatory.
+!!! info "Single Source of Truth (SSOT)"
+    The SSOT for the dictionary is:
+
+    - **Structure**: `data/taxonomy/canonical.yaml` (codes, status, lifecycle)
+    - **Translations**: `data/taxonomy/i18n/*.yaml` (labels, definitions per language)
+
+    CSV files are **generated artifacts** for distribution. See [Releases](../../releases/index.md) for downloads.
 
 ## Column Schema
 
@@ -82,7 +87,11 @@ The current dictionary version is **v0.1.0** and contains:
 | **Total** | | **91** | **0** | **91** |
 
 !!! note "Complete Code Listings"
-    The complete list of 91 codes is available in the SSOT CSV file. This documentation page provides column definitions and usage guidance. For detailed code definitions with scope notes and examples, refer to `taxonomy_dictionary_v0.1.csv`.
+    The complete list of 91 codes is available in the generated CSV artifacts. This documentation page provides column definitions and usage guidance. For detailed code definitions:
+
+    - **Download**: See [Releases](../../releases/index.md) for per-language CSV files
+    - **Per-language CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
+    - **Legacy EN/JA mixed CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (frozen, for backward compatibility only)
 
 ## Update Policy
 

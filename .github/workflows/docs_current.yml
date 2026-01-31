@@ -26,13 +26,23 @@ jobs:
 
       - name: Lint
         run: |
+          echo "=== i18n Lint (Language Purity, Deprecated SSOT Phrases) ==="
           python tooling/checks/lint_i18n.py
+          echo "=== Schema Lint ==="
           python tooling/checks/lint_schema.py
+          echo "=== Manifest Lint ==="
           python tooling/checks/lint_manifest.py
+          echo "=== Taxonomy SSOT Lint ==="
+          python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+          echo "=== Legacy CSV Lint (no new language columns) ==="
+          python tooling/checks/lint_legacy_csv.py
+          echo "=== Taxonomy Dictionary Lint ==="
           python tooling/checks/lint_taxonomy_dictionary.py
+          echo "=== Taxonomy JSON Lint ==="
           python tooling/checks/lint_taxonomy_json.py
-          python tooling/taxonomy/build_taxonomy_assets.py --check
-          python tooling/taxonomy/build_i18n_taxonomy.py --check
+          echo "=== Taxonomy Artifacts Check ==="
+          python tooling/taxonomy/build_artifacts.py --check
+          echo "=== pytest ==="
           pytest -q
 
       - name: Build and verify HTML (no *_ja columns in EN pages)

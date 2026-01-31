@@ -1,31 +1,33 @@
-# Taxonomy (Authoring SSOT)
+# Taxonomy (Derived Assets)
 
-**Status**: Authoring input — Single Source of Truth (SSOT)  
-**Canonical language**: English (EN)  
-**Last updated**: CU-TAX-01 (2026-01-31)
+**Status**: Derived/generated files  
+**SSOT Location**: `data/taxonomy/` (canonical.yaml + i18n/*.yaml)  
+**Last updated**: CU-TAX-02 (2026-01-31)
 
-This directory contains the taxonomy definitions for the AIMO Standard. The taxonomy provides dimensions, codes, and dictionary entries for evidence categorization.
+This directory contains derived taxonomy assets for the AIMO Standard.
 
 ---
 
-## SSOT Declaration
+## SSOT Declaration (IMPORTANT)
 
-This directory is the **Single Source of Truth (SSOT)** for:
+⚠️ **The SSOT has moved to `data/taxonomy/`**
 
-- **Taxonomy** — 8 dimensions for classifying AI use cases and evidence
-- **Code System** — Dimension namespaces and code format (PREFIX-###)
-- **Dictionary** — 91 defined codes with EN/JA labels and definitions
+| Type | SSOT Location | Purpose |
+| --- | --- | --- |
+| Structure | `data/taxonomy/canonical.yaml` | Codes, status, lifecycle (language-neutral) |
+| English | `data/taxonomy/i18n/en.yaml` | English labels and definitions |
+| Japanese | `data/taxonomy/i18n/ja.yaml` | Japanese labels and definitions |
+| Other | `data/taxonomy/i18n/{lang}.yaml` | Additional language translations |
 
-All other representations in `docs/`, `schemas/`, `templates/`, and `examples/` are **derived** from the files in this directory.
+Files in this directory are **generated** from the SSOT. Do not edit directly.
 
 ---
 
 ## Directory Contents
 
-| File | Purpose | Status |
+| File/Dir | Purpose | Status |
 | --- | --- | --- |
-| `taxonomy_dictionary_v0.1.csv` | **Canonical SSOT**: 91 codes across 8 dimensions (21 columns) | ✅ Complete |
-| `dictionary_seed.csv` | Compatibility alias (identical to SSOT; do not edit directly) | ✅ Complete |
+| `legacy/` | Legacy EN/JA mixed CSV (backward compatibility) | ✅ Frozen |
 | `taxonomy_dictionary.json` | Generated: JSON format for schema validation | ✅ Generated |
 | `taxonomy_en.yaml` | Generated: English taxonomy (dimensions + codes) | ✅ Generated |
 | `taxonomy_ja.yaml` | Generated: Japanese taxonomy (dimensions + codes) | ✅ Generated |
@@ -34,12 +36,14 @@ All other representations in `docs/`, `schemas/`, `templates/`, and `examples/` 
 | `taxonomy_pack_v0.1.json` | Taxonomy pack for programmatic access | ✅ Complete |
 | `schemas/` | JSON schemas for validation | ✅ Complete |
 
-### Canonical vs. Compatibility Files
+### Legacy Files (Frozen)
 
-- **Canonical SSOT**: `taxonomy_dictionary_v0.1.csv` — All edits go here first.
-- **Compatibility Alias**: `dictionary_seed.csv` — Kept for backward compatibility with legacy tools. MUST be identical to SSOT. Do not edit directly.
+The `legacy/` directory contains:
 
-**Deprecation Plan**: `dictionary_seed.csv` will be deprecated in a future major version. New integrations should reference the canonical file directly.
+- `taxonomy_dictionary_v0.1.csv` — EN/JA mixed CSV (21 columns, **no new language columns**)
+- `dictionary_seed.csv` — Compatibility alias
+
+**Warning**: Legacy files are frozen. New languages are NOT added to these files. Use `artifacts/taxonomy/{version}/{lang}/` for per-language CSVs.
 
 ---
 
@@ -92,43 +96,42 @@ The SSOT CSV (`taxonomy_dictionary_v0.1.csv` and `dictionary_seed.csv`) uses the
 
 ## Update Workflow
 
-### Step 1: Edit the SSOT CSV (English canonical)
+### New SSOT-First Workflow
 
-Edit `taxonomy_dictionary_v0.1.csv` first. English definitions are canonical.
+1. **Edit the SSOT** in `data/taxonomy/`:
+   - Structure changes → `canonical.yaml`
+   - English translations → `i18n/en.yaml`
+   - Japanese translations → `i18n/ja.yaml`
 
-### Step 2: Sync legacy file
+2. **Validate SSOT**:
+   ```bash
+   python tooling/checks/lint_taxonomy_ssot.py
+   ```
 
-Ensure `dictionary_seed.csv` is identical to `taxonomy_dictionary_v0.1.csv`:
+3. **Regenerate all derived files**:
+   ```bash
+   python tooling/taxonomy/build_artifacts.py --version current --langs en ja
+   ```
 
-```bash
-cp source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv source_pack/03_taxonomy/dictionary_seed.csv
-```
+4. **Update manifest** (`source_pack/00_manifest.md`)
 
-### Step 3: Validate the CSV
+5. **Commit together**
 
-```bash
-python tooling/checks/lint_taxonomy_dictionary.py
-```
+### Adding a New Language
 
-### Step 4: Regenerate derived files
+1. Create i18n pack:
+   ```bash
+   python tooling/taxonomy/build_i18n_taxonomy.py --add-lang es --lang-name "Español"
+   ```
 
-```bash
-python tooling/taxonomy/build_taxonomy_assets.py
-```
+2. Translate `data/taxonomy/i18n/es.yaml`
 
-This regenerates:
-- `taxonomy_en.yaml`
-- `taxonomy_ja.yaml`
-- `code_system.csv`
-- `dimensions_en_ja.md`
+3. Regenerate artifacts:
+   ```bash
+   python tooling/taxonomy/build_artifacts.py --version current --langs en ja es
+   ```
 
-### Step 5: Update manifest
-
-Update `source_pack/00_manifest.md` with the CU changes.
-
-### Step 6: Commit together
-
-Commit the SSOT CSV and regenerated files together.
+**Note**: Legacy CSV files are NOT updated. New languages are only available via `artifacts/taxonomy/`.
 
 ---
 

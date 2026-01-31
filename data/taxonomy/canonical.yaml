@@ -1,9 +1,16 @@
-# AIMO Taxonomy - Canonical Structure (Language-neutral)
-# Generated from: source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv
-# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_i18n_taxonomy.py
+# AIMO Taxonomy - Canonical Structure (SSOT)
+# =========================================
+# This file is the SINGLE SOURCE OF TRUTH for taxonomy structure.
+# Edit this file directly to add/modify/deprecate codes.
 #
-# This file is the SSOT for taxonomy structure (codes, status, lifecycle).
-# Labels and definitions are in data/taxonomy/i18n/*.yaml
+# Structure:
+#   - Language-neutral: codes, status, lifecycle metadata
+#   - Labels and definitions: data/taxonomy/i18n/{lang}.yaml
+#
+# After editing, regenerate derived files:
+#   python tooling/taxonomy/build_artifacts.py --version current --langs en ja
+#
+# Language codes follow BCP47: en, ja, es, de, ko, zh-Hans, zh-Hant
 
 version: "0.1.0"
 generated_date: "2026-01-31"

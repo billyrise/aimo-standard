@@ -27,7 +27,10 @@ from typing import Any
 
 # Paths
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-SOURCE_CSV = REPO_ROOT / "source_pack" / "03_taxonomy" / "taxonomy_dictionary_v0.1.csv"
+# Note: CSV has been moved to legacy/ directory as part of SSOT migration
+# This script is deprecated for generation - use build_artifacts.py instead
+# Kept for --add-lang functionality only
+SOURCE_CSV = REPO_ROOT / "source_pack" / "03_taxonomy" / "legacy" / "taxonomy_dictionary_v0.1.csv"
 DATA_DIR = REPO_ROOT / "data" / "taxonomy"
 I18N_DIR = DATA_DIR / "i18n"
 

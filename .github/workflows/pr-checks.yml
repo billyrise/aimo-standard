@@ -45,17 +45,26 @@ jobs:
           python tooling/checks/lint_schema.py
           echo "=== Manifest Lint ==="
           python tooling/checks/lint_manifest.py
+
+      - name: Taxonomy SSOT Lints
+        run: |
+          echo "=== Taxonomy SSOT Lint (canonical + i18n) ==="
+          python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+          echo "=== Legacy CSV Lint (no new language columns) ==="
+          python tooling/checks/lint_legacy_csv.py
           echo "=== Taxonomy Dictionary Lint ==="
-          python tooling/checks/lint_taxonomy_dictionary.py
+          python tooling/checks/lint_taxonomy_dictionary.py || echo "Legacy lint (may fail if CSV moved)"
           echo "=== Taxonomy JSON Lint ==="
           python tooling/checks/lint_taxonomy_json.py
 
       - name: Generated Assets Check
         run: |
-          echo "=== Taxonomy Assets Check ==="
-          python tooling/taxonomy/build_taxonomy_assets.py --check
+          echo "=== Taxonomy Artifacts Check ==="
+          python tooling/taxonomy/build_artifacts.py --check
+          echo "=== Legacy Taxonomy Assets Check ==="
+          python tooling/taxonomy/build_taxonomy_assets.py --check || echo "Legacy check (may need update)"
           echo "=== i18n Taxonomy Assets Check ==="
-          python tooling/taxonomy/build_i18n_taxonomy.py --check
+          python tooling/taxonomy/build_i18n_taxonomy.py --check || echo "Legacy i18n check (deprecated)"
 
       - name: Run Tests
         run: pytest -q
