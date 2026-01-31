@@ -35,19 +35,26 @@ os.chdir(REPO_ROOT)
 DIST_DIR = REPO_ROOT / "dist"
 
 # Files to include in the artifacts zip
+# Taxonomy/Dictionary SSOT files (for internal checksum generation)
+TAXONOMY_SSOT_PATHS = [
+    "source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv",
+    "source_pack/03_taxonomy/taxonomy_dictionary.json",
+    "source_pack/03_taxonomy/dictionary_seed.csv",
+    "source_pack/03_taxonomy/taxonomy_en.yaml",
+    "source_pack/03_taxonomy/taxonomy_ja.yaml",
+    "source_pack/03_taxonomy/code_system.csv",
+    "source_pack/03_taxonomy/dimensions_en_ja.md",
+    "source_pack/03_taxonomy/taxonomy_pack_v0.1.json",
+    "source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json",
+]
+
 ARTIFACT_PATHS = [
     # Schemas
     "schemas/jsonschema/aimo-dictionary.schema.json",
     "schemas/jsonschema/aimo-ev.schema.json",
     "schemas/jsonschema/aimo-standard.schema.json",
-    # Taxonomy (SSOT and derived)
-    "source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv",
-    "source_pack/03_taxonomy/taxonomy_en.yaml",
-    "source_pack/03_taxonomy/taxonomy_ja.yaml",
-    "source_pack/03_taxonomy/code_system.csv",
-    "source_pack/03_taxonomy/dimensions_en_ja.md",
-    "source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json",
-    "source_pack/03_taxonomy/taxonomy_pack_v0.1.json",
+    # Taxonomy (SSOT and derived) - referenced from TAXONOMY_SSOT_PATHS
+    *TAXONOMY_SSOT_PATHS,
     # Templates
     "templates/ev/ev_template.json",
     "templates/ev/ev_template.md",
@@ -311,6 +318,17 @@ def build_pdf(version: str, lang: str = "en") -> Path:
     return pdf_path
 
 
+def generate_taxonomy_checksums() -> str:
+    """Generate SHA256 checksums for taxonomy/dictionary SSOT files."""
+    lines = []
+    for rel_path in TAXONOMY_SSOT_PATHS:
+        full_path = REPO_ROOT / rel_path
+        if full_path.exists():
+            h = sha256_file(full_path)
+            lines.append(f"{h}  {rel_path}")
+    return "\n".join(lines) + "\n"
+
+
 def build_artifacts_zip(version: str) -> Path:
     """Build artifacts zip file."""
     zip_path = DIST_DIR / "aimo-standard-artifacts.zip"
@@ -323,6 +341,11 @@ def build_artifacts_zip(version: str) -> Path:
                 print(f"  Added: {rel_path}")
             else:
                 print(f"  Warning: {rel_path} not found, skipping", file=sys.stderr)
+
+        # Generate and add TAXONOMY_SHA256SUMS.txt inside the zip
+        taxonomy_checksums = generate_taxonomy_checksums()
+        zf.writestr("TAXONOMY_SHA256SUMS.txt", taxonomy_checksums)
+        print(f"  Added: TAXONOMY_SHA256SUMS.txt (internal checksum for SSOT files)")
 
     print(f"  Created: {zip_path.relative_to(REPO_ROOT)}")
     return zip_path

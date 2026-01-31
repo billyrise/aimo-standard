@@ -7,6 +7,7 @@ Generates the following derived files from taxonomy_dictionary_v0.1.csv:
 - taxonomy_ja.yaml: Japanese taxonomy with codes by dimension
 - code_system.csv: Dimension namespaces and prefixes
 - dimensions_en_ja.md: Dimension mapping table (EN/JA)
+- taxonomy_dictionary.json: Machine-readable dictionary (aimo-dictionary.schema.json)
 
 Usage:
     python tooling/taxonomy/build_taxonomy_assets.py          # Generate files
@@ -20,6 +21,7 @@ Exit codes:
 import argparse
 import csv
 import hashlib
+import json
 import sys
 from collections import OrderedDict
 from datetime import date
@@ -44,6 +46,7 @@ OUTPUT_FILES = {
     "taxonomy_ja": TAXONOMY_DIR / "taxonomy_ja.yaml",
     "code_system": TAXONOMY_DIR / "code_system.csv",
     "dimensions_en_ja": TAXONOMY_DIR / "dimensions_en_ja.md",
+    "taxonomy_dictionary": TAXONOMY_DIR / "taxonomy_dictionary.json",
 }
 
 
@@ -243,6 +246,39 @@ def generate_dimensions_md(dimensions: OrderedDict[str, dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
+def generate_taxonomy_dictionary_json(rows: list[dict[str, str]]) -> str:
+    """Generate taxonomy_dictionary.json content conforming to aimo-dictionary.schema.json."""
+    entries = []
+
+    for row in rows:
+        entry: dict[str, Any] = {
+            "dimension_id": row["dimension_id"],
+            "code": row["code"],
+            "label_en": row["label_en"],
+            "label_ja": row["label_ja"],
+            "definition_en": row["definition_en"],
+            "definition_ja": row["definition_ja"],
+            "status": row["status"],
+            "introduced_in": row["introduced_in"],
+            "backward_compatible": row.get("backward_compatible", "").lower() == "true",
+        }
+
+        # Only include optional fields if they have values
+        if row.get("deprecated_in"):
+            entry["deprecated_in"] = row["deprecated_in"]
+        if row.get("replaced_by"):
+            entry["replaced_by"] = row["replaced_by"]
+
+        entries.append(entry)
+
+    dictionary = {
+        "taxonomy_version": "0.1.0",
+        "entries": entries,
+    }
+
+    return json.dumps(dictionary, ensure_ascii=False, indent=2) + "\n"
+
+
 def compute_content_hash(content: str) -> str:
     """Compute SHA-256 hash of content (excluding date lines for comparison)."""
     # Remove generated_date and Generated lines for stable comparison
@@ -295,6 +331,7 @@ def main() -> int:
         "taxonomy_ja": generate_taxonomy_yaml_ja(dimensions),
         "code_system": generate_code_system_csv(dimensions),
         "dimensions_en_ja": generate_dimensions_md(dimensions),
+        "taxonomy_dictionary": generate_taxonomy_dictionary_json(rows),
     }
 
     if args.check:

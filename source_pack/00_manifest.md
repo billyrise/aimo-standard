@@ -235,12 +235,20 @@ Changes to `taxonomy_dictionary_v0.1.csv` must be reflected in:
 | `source_pack/04_evidence_pack/templates/EV-*.md` | Templates | AIMO codes table |
 | `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json` | Example | Code values |
 
-### 7.0.2 dictionary_seed.csv vs taxonomy_dictionary_v0.1.csv
+### 7.0.2 Canonical SSOT vs. Compatibility Alias
 
-- **`taxonomy_dictionary_v0.1.csv`**: The SSOT (versioned, validated by CI)
-- **`dictionary_seed.csv`**: Legacy file kept for backward compatibility; MUST be identical to SSOT
+| File | Status | Description |
+| --- | --- | --- |
+| `taxonomy_dictionary_v0.1.csv` | **Canonical SSOT** | The single source of truth (versioned, validated by CI). All edits go here first. |
+| `dictionary_seed.csv` | Compatibility Alias | Kept for backward compatibility with legacy tools/scripts. MUST be identical to SSOT. Do not edit directly. |
 
-**Rule**: When updating codes, edit `taxonomy_dictionary_v0.1.csv` and sync to `dictionary_seed.csv`.
+**Rule**: When updating codes, edit `taxonomy_dictionary_v0.1.csv` only. Then sync to `dictionary_seed.csv` via copy:
+
+```bash
+cp source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv source_pack/03_taxonomy/dictionary_seed.csv
+```
+
+**Deprecation Plan**: `dictionary_seed.csv` will be deprecated in a future major version. New integrations should reference the canonical file directly.
 
 ### 7.0.3 Taxonomy Derived Assets (CU-TX-02)
 
@@ -295,9 +303,9 @@ The Source Pack (`source_pack/`) is the authoring SSOT for AIMO Standard documen
 | `artifacts/evidence-bundle` | `04_ev_templates/evidence_bundle_toc.md` | EN | TOC structure, traceability |
 | `artifacts/minimum-evidence` | `02_conformance.md`, `04_ev_templates/ev_template_full.md` | EN | Lifecycle MUST fields |
 | `coverage-map/methodology` | `01_positioning.md` | EN | Non-overclaim reference |
-| `standard/current/03-taxonomy` | `03_taxonomy/` | EN | TBD — awaiting authoritative source |
-| `standard/current/04-codes` | `03_taxonomy/code_system.csv` | EN | TBD — awaiting authoritative source |
-| `standard/current/05-dictionary` | `03_taxonomy/dictionary_seed.csv` | EN | TBD — awaiting authoritative source |
+| `standard/current/03-taxonomy` | `03_taxonomy/taxonomy_dictionary_v0.1.csv` | EN | SSOT for taxonomy |
+| `standard/current/04-codes` | `03_taxonomy/taxonomy_dictionary_v0.1.csv`, `code_system.csv` | EN | SSOT + derived code system |
+| `standard/current/05-dictionary` | `03_taxonomy/taxonomy_dictionary_v0.1.csv` | EN | SSOT for dictionary |
 | `standard/current/06-ev-template` | `04_ev_templates/ev_template_min.md`, `ev_template_full.md` | EN | Schema field alignment |
 | `standard/current/07-validator` | `05_validator/validation_rules_spec.md` | EN | Rule definitions |
 | `validator/index` | `05_validator/reference_impl_notes.md` | EN | Usage, implementation notes |
@@ -314,12 +322,14 @@ source_pack/
 ├── 01_positioning.md           # Audiences, value prop, non-goals, audit journey
 ├── 02_conformance.md           # MUST/SHOULD, conformance levels, how-to-claim
 ├── 03_taxonomy/
-│   ├── README.md               # Taxonomy SSOT format and update guide
-│   ├── taxonomy_en.yaml        # EN taxonomy (placeholder)
-│   ├── taxonomy_ja.yaml        # JA taxonomy (placeholder)
-│   ├── code_system.csv         # Code namespaces (header only)
-│   ├── dimensions_en_ja.md     # EN/JA dimension mapping
-│   └── dictionary_seed.csv     # Dictionary seed (header only)
+│   ├── README.md                        # Taxonomy SSOT format and update guide
+│   ├── taxonomy_dictionary_v0.1.csv     # SSOT: Canonical dictionary (91 codes)
+│   ├── dictionary_seed.csv              # Compatibility alias (keep for legacy; do not edit directly)
+│   ├── taxonomy_dictionary.json         # Generated: JSON format for validation
+│   ├── taxonomy_en.yaml                 # Generated: EN taxonomy
+│   ├── taxonomy_ja.yaml                 # Generated: JA taxonomy
+│   ├── code_system.csv                  # Generated: Code namespaces
+│   └── dimensions_en_ja.md              # Generated: EN/JA dimension mapping
 ├── 04_ev_templates/
 │   ├── ev_template_min.md      # Minimum EV template (MUST fields)
 │   ├── ev_template_full.md     # Full EV template (+ optional fields)

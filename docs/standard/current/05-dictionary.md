@@ -2,9 +2,16 @@
 
 The AIMO Dictionary is the authoritative list of all valid codes within the taxonomy. It provides complete definitions for each code including labels, descriptions, and lifecycle information.
 
-## Purpose and Audit Context
+## What is Dictionary
 
-The dictionary serves as the **machine-readable reference** for:
+The dictionary is a machine-readable CSV file that serves as the **Single Source of Truth (SSOT)** for all AIMO taxonomy codes. It contains:
+
+- All 91 codes across 8 dimensions
+- Bilingual labels and definitions (EN/JA)
+- Lifecycle metadata (status, version introduced, deprecated, removed)
+- Scope notes and examples for code usage
+
+The dictionary enables:
 
 1. **Evidence Templates**: Codes are used in EV templates to classify AI systems
 2. **Validator**: The validator checks that all codes exist in the dictionary
@@ -13,89 +20,115 @@ The dictionary serves as the **machine-readable reference** for:
 !!! info "SSOT Principle"
     The dictionary CSV (`taxonomy_dictionary_v0.1.csv`) is the Single Source of Truth for all codes. Documentation pages (including this one) are derived explanations. When in doubt, refer to the CSV.
 
-## Dictionary Format
+## Column Schema
 
-The dictionary is distributed as a CSV file with **21 columns**:
+The dictionary CSV uses **21 columns**:
 
-| Column | Required | Description |
+### Identification Columns (6)
+
+| # | Column | Required | Description | Example |
+| --- | --- | --- | --- | --- |
+| 1 | `standard_id` | Yes | Standard identifier | `AIMO-STD` |
+| 2 | `standard_version` | Yes | SemVer format | `0.1.0` |
+| 3 | `dimension_id` | Yes | Two-letter dimension ID | `FS`, `UC`, `DT` |
+| 4 | `dimension_name_en` | Yes | English dimension name | `Functional Scope` |
+| 5 | `dimension_name_ja` | Yes | Japanese dimension name | `機能スコープ` |
+| 6 | `code` | Yes | Full code | `UC-001` |
+
+### Label and Definition Columns (6)
+
+| # | Column | Required | Description | Example |
+| --- | --- | --- | --- | --- |
+| 7 | `label_en` | Yes | English label (max 50 chars) | `General Q&A` |
+| 8 | `label_ja` | Yes | Japanese label | `一般QA` |
+| 9 | `definition_en` | Yes | English definition (1-2 sentences) | `General question answering...` |
+| 10 | `definition_ja` | Yes | Japanese definition | `一般的な質問応答...` |
+| 11 | `scope_notes` | No | Usage scope clarification | `Low to medium risk...` |
+| 12 | `examples` | No | Pipe-separated examples | `chatbot\|recommendation` |
+
+### Lifecycle Columns (6)
+
+| # | Column | Required | Description | Example |
+| --- | --- | --- | --- | --- |
+| 13 | `status` | Yes | `active`, `deprecated`, `removed` | `active` |
+| 14 | `introduced_in` | Yes | Version when added | `0.1.0` |
+| 15 | `deprecated_in` | No | Version when deprecated | `1.2.0` |
+| 16 | `removed_in` | No | Version when removed | `2.0.0` |
+| 17 | `replaced_by` | No | Replacement code | `UC-015` |
+| 18 | `backward_compatible` | Yes | `true` or `false` | `true` |
+
+### Governance Columns (3)
+
+| # | Column | Required | Description | Example |
+| --- | --- | --- | --- | --- |
+| 19 | `references` | No | External references | ISO/IEC 42001 |
+| 20 | `owner` | No | Responsible party | `AIMO WG` |
+| 21 | `last_reviewed_date` | No | Last review (YYYY-MM-DD) | `2026-01-19` |
+
+## Initial Entries
+
+The current dictionary version is **v0.1.0** and contains:
+
+| Dimension | Name | Active Codes | Deprecated | Total |
+| --- | --- | --- | --- | --- |
+| FS | Functional Scope | 6 | 0 | 6 |
+| UC | Use Case Class | 30 | 0 | 30 |
+| DT | Data Type | 10 | 0 | 10 |
+| CH | Channel | 8 | 0 | 8 |
+| IM | Integration Mode | 7 | 0 | 7 |
+| RS | Risk Surface | 8 | 0 | 8 |
+| OB | Outcome / Benefit | 7 | 0 | 7 |
+| EV | Evidence Type | 15 | 0 | 15 |
+| **Total** | | **91** | **0** | **91** |
+
+!!! note "Complete Code Listings"
+    The complete list of 91 codes is available in the SSOT CSV file. This documentation page provides column definitions and usage guidance. For detailed code definitions with scope notes and examples, refer to `taxonomy_dictionary_v0.1.csv`.
+
+## Update Policy
+
+### Adding New Codes
+
+1. Assign the next available number within the dimension (e.g., `UC-031` after `UC-030`)
+2. Set `status` to `active`
+3. Set `introduced_in` to the current version
+4. Set `backward_compatible` to `true`
+5. Provide both EN and JA labels and definitions
+
+### Modifying Existing Codes
+
+| Change Type | Allowed | Version Impact |
 | --- | --- | --- |
-| `standard_id` | Yes | Standard identifier (AIMO-STD) |
-| `standard_version` | Yes | Version of the standard |
-| `dimension_id` | Yes | Two-letter dimension ID (FS, UC, DT, etc.) |
-| `dimension_name_en` | Yes | English dimension name |
-| `dimension_name_ja` | Yes | Japanese dimension name |
-| `code` | Yes | Full code (e.g., UC-001) |
-| `label_en` | Yes | English label |
-| `label_ja` | Yes | Japanese label |
-| `definition_en` | Yes | English definition |
-| `definition_ja` | Yes | Japanese definition |
-| `scope_notes` | No | Clarifying notes on usage scope |
-| `examples` | No | Pipe-separated examples |
-| `status` | Yes | active, deprecated, or removed |
-| `introduced_in` | Yes | Version when code was added |
-| `deprecated_in` | No | Version when marked deprecated |
-| `removed_in` | No | Version when removed |
-| `replaced_by` | No | Replacement code if deprecated |
-| `backward_compatible` | Yes | Whether change is backward compatible |
-| `references` | No | External references |
-| `owner` | Yes | Responsible party |
-| `last_reviewed_date` | Yes | Last review date (YYYY-MM-DD) |
+| Definition clarification | Yes | PATCH |
+| Scope notes update | Yes | PATCH |
+| Label change (meaning preserved) | Yes | MINOR |
+| Meaning change | No | Create new code instead |
 
-## Current Dictionary
+### Deprecating Codes
 
-The current dictionary version is **v0.1.0**.
+1. Set `status` to `deprecated`
+2. Set `deprecated_in` to current version
+3. Set `replaced_by` to the new code (if applicable)
+4. Code remains functional for backward compatibility
+5. Document the reason in scope_notes
 
-**Download:** `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`
+### Removing Codes
 
-### Code Counts by Dimension
+1. Deprecate for at least one MINOR version first
+2. Set `status` to `removed`
+3. Set `removed_in` to current MAJOR version
+4. Code is no longer valid for new evidence
 
-| Dimension | Active Codes | Deprecated | Total |
-| --- | --- | --- | --- |
-| FS (Functional Scope) | 6 | 0 | 6 |
-| UC (Use Case Class) | 30 | 0 | 30 |
-| DT (Data Type) | 10 | 0 | 10 |
-| CH (Channel) | 8 | 0 | 8 |
-| IM (Integration Mode) | 7 | 0 | 7 |
-| RS (Risk Surface) | 8 | 0 | 8 |
-| OB (Outcome / Benefit) | 7 | 0 | 7 |
-| EV (Evidence Type) | 15 | 0 | 15 |
-| **Total** | **91** | **0** | **91** |
+### Compatibility Policy
 
-## CSV Column Definitions
+| Action | Version Impact | Backward Compatible |
+| --- | --- | --- |
+| Add new code | MINOR | Yes |
+| Deprecate code | MINOR | Yes |
+| Clarify definition | PATCH | Yes |
+| Remove code | MAJOR | No |
+| Change code meaning | Not allowed | - |
 
-### Identification Fields
-
-- **standard_id**: Always `AIMO-STD` for the AIMO Standard
-- **standard_version**: SemVer format (e.g., `0.1.0`)
-- **dimension_id**: Two uppercase letters (FS, UC, DT, CH, IM, RS, OB, EV)
-- **code**: Format `<DIM>-<TOKEN>` (e.g., `UC-001`)
-
-### Label and Definition Fields
-
-- **label_en / label_ja**: Short labels (max 50 characters recommended)
-- **definition_en / definition_ja**: Full definitions (1-2 sentences)
-- **scope_notes**: Clarifications on when to use/not use the code
-- **examples**: Pipe-separated examples (e.g., `chatbot|recommendation`)
-
-### Lifecycle Fields
-
-- **status**: Current status of the code
-  - `active`: Valid and in use
-  - `deprecated`: Valid but scheduled for removal
-  - `removed`: No longer valid
-- **introduced_in**: Version when the code was first added
-- **deprecated_in**: Version when marked as deprecated (empty if not deprecated)
-- **removed_in**: Version when removed (empty if not removed)
-- **replaced_by**: Replacement code(s) if deprecated
-- **backward_compatible**: `true` if the change doesn't break existing usage
-
-### Governance Fields
-
-- **references**: External standards or documents referenced
-- **owner**: Responsible party (e.g., `AIMO WG`)
-- **last_reviewed_date**: Date of last review (YYYY-MM-DD)
-
-## How Codes Are Used
+## How to Use
 
 ### In Evidence Templates
 
@@ -108,7 +141,12 @@ Each EV template includes an 8-dimension codes table:
 | --- | --- | --- |
 | **FS** | `FS-001` | End-user Productivity |
 | **UC** | `UC-001`, `UC-002` | General Q&A, Summarization |
-| ...
+| **DT** | `DT-002`, `DT-004` | Internal, Personal Data |
+| **CH** | `CH-001` | Web UI |
+| **IM** | `IM-002` | SaaS Integrated |
+| **RS** | `RS-001`, `RS-003` | Data Leakage, Compliance Breach |
+| **OB** | `OB-001` | Efficiency |
+| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
 ```
 
 ### In Validator
@@ -116,54 +154,15 @@ Each EV template includes an 8-dimension codes table:
 The validator checks:
 
 1. All codes referenced in evidence exist in the dictionary
-2. Code format matches the expected pattern
+2. Code format matches the expected pattern (`PREFIX-###`)
 3. Deprecated codes trigger warnings
 4. Removed codes are rejected
 
-### In Coverage Map
+### Extension Guidelines
 
-Codes enable traceability to external frameworks:
+Organizations MAY extend the dictionary with custom codes:
 
-```
-UC-001 (General Q&A) → ISO/IEC 42001:2023 A.5.2.1
-DT-004 (Personal Data) → GDPR Article 4(1)
-```
-
-## Backward Compatibility Policy
-
-The `backward_compatible` field guides migration:
-
-| Field Value | Implication | Auditor Action |
-| --- | --- | --- |
-| `true` | Existing evidence remains valid | No action required |
-| `false` | Existing evidence may need updates | Review affected evidence |
-
-### Version Compatibility Matrix
-
-| Evidence Version | Dictionary Version | Compatibility |
-| --- | --- | --- |
-| 0.1.x | 0.1.x | Full |
-| 0.1.x | 0.2.x | Full (new codes added, none removed) |
-| 0.1.x | 1.0.x | Review required (breaking changes possible) |
-
-## Audit Verification Points
-
-When reviewing evidence, auditors should verify:
-
-| Check | What to Look For |
-| --- | --- |
-| **Definition clarity** | Does `definition_en/ja` clearly describe the code's meaning? |
-| **Status validity** | Is the code `active` (not `deprecated` or `removed`)? |
-| **Version alignment** | Does `introduced_in` ≤ evidence's `taxonomy_version`? |
-| **Completeness** | Are all required dimensions covered? |
-
-## Extension Guidelines
-
-Organizations MAY extend the dictionary with custom codes following these rules:
-
-### Extension Prefix
-
-Custom codes SHOULD use an organization-specific prefix:
+**Extension Prefix:**
 
 ```
 X-<ORG>-<DIM>-<TOKEN>
@@ -171,36 +170,44 @@ X-<ORG>-<DIM>-<TOKEN>
 
 Example: `X-ACME-UC-901` for ACME Corporation's custom use case code.
 
-### Extension Requirements
+**Extension Rules:**
 
 1. Custom codes MUST NOT conflict with standard codes
 2. Custom codes SHOULD be documented in a local extension dictionary
-3. Extensions SHOULD be submitted to AIMO WG for potential standardization
-4. When exchanging evidence with external parties, use only standard codes
+3. When exchanging evidence with external parties, use only standard codes
 
-## Schema Reference
+## SSOT Reference
 
-The dictionary is validated against the taxonomy pack schema:
+| Type | File | Description |
+| --- | --- | --- |
+| **SSOT** | `taxonomy_dictionary_v0.1.csv` | Single Source of Truth (91 codes, 21 columns) |
+| Derived | `taxonomy_en.yaml` | Generated English taxonomy |
+| Derived | `taxonomy_ja.yaml` | Generated Japanese taxonomy |
+| Derived | `code_system.csv` | Generated dimension namespaces |
+| Derived | `dimensions_en_ja.md` | Generated EN/JA mapping |
+| Compat | `dictionary_seed.csv` | Compatibility copy (identical to SSOT) |
 
-- **Taxonomy Pack Schema**: `source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json`
-- **Taxonomy Pack JSON**: `source_pack/03_taxonomy/taxonomy_pack_v0.1.json`
+**Location:** `source_pack/03_taxonomy/`
+
+The SSOT file `taxonomy_dictionary_v0.1.csv` is the authoritative source. This documentation page is explanatory.
+
+### Update Workflow
+
+1. Edit `taxonomy_dictionary_v0.1.csv` (the SSOT)
+2. Run `python tooling/checks/lint_taxonomy_dictionary.py` to validate
+3. Run `python tooling/taxonomy/build_taxonomy_assets.py` to regenerate derived files
+4. Sync `dictionary_seed.csv` as compatibility copy
+5. Update documentation pages as needed
+6. Commit all changes together
 
 ## Downloads
 
-| File | Description |
-| --- | --- |
-| `taxonomy_dictionary_v0.1.csv` | Full dictionary in CSV format (91 codes) |
-| `taxonomy_en.yaml` | English taxonomy (generated from CSV) |
-| `taxonomy_ja.yaml` | Japanese taxonomy (generated from CSV) |
-| `taxonomy_pack_v0.1.json` | Taxonomy pack with dimension metadata |
-| `taxonomy_pack.schema.json` | JSON Schema for taxonomy pack |
+See [Releases](../../releases/index.md) for downloadable packages containing the dictionary and related files.
 
-See [Releases](../../releases/index.md) for downloadable packages.
+## Related Pages
 
-## References
-
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions
-- [Codes](./04-codes.md) - Code format and usage
+- [Taxonomy](./03-taxonomy.md) - Dimension definitions and code tables
+- [Codes](./04-codes.md) - Code format, naming, and lifecycle
 - [Evidence Templates](./06-ev-template.md) - How codes are used in templates
 - [Validator](./07-validator.md) - Code validation rules
 - [Changelog](./08-changelog.md) - Version history
