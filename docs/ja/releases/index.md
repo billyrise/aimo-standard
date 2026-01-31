@@ -49,10 +49,10 @@ sha256sum trust_package.pdf
 
 ## リソース
 
+- **バージョン履歴テーブル**: [Standard > Versions](../standard/versions/index.md) — 全リリースアセット（PDF、ZIP、SHA256）への直接リンク付きバージョンテーブル
 - **Changelog（仕様）**: [Standard > Current > Changelog](../standard/current/08-changelog.md) — 規範・非規範の変更履歴。
-- **バージョンスナップショット**: [Standard > Versions](../standard/versions/index.md) — 固定リリースと過去版。
 - **リリースプロセス**: タグ `vX.Y.Z`、CI ビルド、`dist/` 下の PDF、チェックサム、GitHub Release アセット。リポジトリの [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) および [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照。
-- **移行とチェックサム**: リリースごとに文書化。破壊的変更には移行ガイドが必要。
+- **移行ガイド**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — 破壊的変更のアップグレードパス。
 
 ガバナンスとバージョニングポリシーは [Governance](../governance/index.md) を参照。
 

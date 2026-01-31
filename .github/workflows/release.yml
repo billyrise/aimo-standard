@@ -119,10 +119,46 @@ jobs:
         run: |
           python tooling/release/build_assets.py --version "${{ steps.v.outputs.ver }}" --ja
 
+      - name: Generate release notes from changelog
+        id: release_notes
+        run: |
+          VERSION="${{ steps.v.outputs.ver }}"
+          cat > dist/RELEASE_NOTES.md << 'EOF'
+          ## AIMO Standard ${{ steps.v.outputs.tag }}
+
+          ### Release Assets
+
+          | Asset | Description |
+          | ----- | ----------- |
+          | `trust_package.pdf` | English Trust Package (auditor-ready) |
+          | `trust_package.ja.pdf` | Japanese Trust Package |
+          | `aimo-standard-artifacts.zip` | Schemas, templates, examples, validator rules |
+          | `SHA256SUMS.txt` | SHA-256 checksums for verification |
+
+          ### Verification
+
+          ```bash
+          sha256sum -c SHA256SUMS.txt
+          ```
+
+          ### Documentation
+
+          - **Changelog**: https://standard.aimoaas.com/latest/standard/current/08-changelog/
+          - **Versions**: https://standard.aimoaas.com/latest/standard/versions/
+          - **Releases Hub**: https://standard.aimoaas.com/latest/releases/
+
+          ### Repository
+
+          - [CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md)
+          - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)
+          - [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md)
+          EOF
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           name: "${{ steps.v.outputs.tag }}"
+          body_path: dist/RELEASE_NOTES.md
           files: |
             dist/trust_package.pdf
             dist/trust_package.ja.pdf
