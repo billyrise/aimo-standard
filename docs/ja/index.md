@@ -4,14 +4,12 @@
 
 **トップレベルセクション**
 
-1. [Standard](standard/current/index.md) — 概要、スコープ、タクソノミー、コード、辞書、EVテンプレ、バリデータ仕様、changelog。[Versions](standard/versions/index.md)
-2. [Conformance](conformance/index.md) — 適合の仕方と適合レベル
-3. [Artifacts](artifacts/index.md) — タクソノミー、コード体系、辞書、証跡テンプレート、スキーマ
-4. [Validator](validator/index.md) — ルール、参照チェック、実行方法
-5. [Examples](examples/index.md) — エンドツーエンド・最小サンプル
-6. [Coverage Map](coverage-map/index.md) — 規制・基準との対応
-7. [Governance](governance/index.md) — バージョニング、セキュリティ、ライセンス、商標、引用
-8. [Releases](releases/index.md) — Changelog、移行、チェックサム、PDF
+1. [Standard](standard/index.md) — 仕様（[Current](standard/current/index.md) | [Versions](standard/versions/index.md)）、[Conformance](conformance/index.md)、[Coverage Map](coverage-map/index.md)
+2. [Artifacts](artifacts/index.md) — タクソノミー、コード体系、辞書、証跡テンプレート、スキーマ
+3. [Validator](validator/index.md) — ルール、参照チェック、実行方法
+4. [Examples](examples/index.md) — エンドツーエンド・最小サンプル
+5. [Releases](releases/index.md) — Changelog、移行、チェックサム、PDF
+6. [Governance](governance/index.md) — バージョニング、セキュリティ、ライセンス、商標、[Contributing](contributing/localization.md)
 
 **対象者別クイックリンク**
 

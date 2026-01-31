@@ -35,9 +35,9 @@ extra:
     provider: mike
 
 nav:
-  - Home:
-      - index.md
+  - index.md
   - Standard:
+      - standard/index.md
       - Current:
           - standard/current/index.md
           - Overview: standard/current/01-overview.md
@@ -48,10 +48,15 @@ nav:
           - EV Template: standard/current/06-ev-template.md
           - Validator: standard/current/07-validator.md
           - Changelog: standard/current/08-changelog.md
-      - Versions:
-          - standard/versions/index.md
-  - Conformance:
-      - conformance/index.md
+      - Versions: standard/versions/index.md
+      - Conformance: conformance/index.md
+      - Coverage Map:
+          - coverage-map/index.md
+          - Methodology: coverage-map/methodology.md
+          - ISO/IEC 42001: coverage-map/iso-42001.md
+          - NIST AI RMF: coverage-map/nist-ai-rmf.md
+          - EU AI Act: coverage-map/eu-ai-act.md
+          - ISMS: coverage-map/isms.md
   - Artifacts:
       - artifacts/index.md
       - Evidence Bundle: artifacts/evidence-bundle.md
@@ -60,18 +65,10 @@ nav:
       - validator/index.md
   - Examples:
       - examples/index.md
-  - Coverage Map:
-      - coverage-map/index.md
-      - Methodology: coverage-map/methodology.md
-      - ISO/IEC 42001: coverage-map/iso-42001.md
-      - NIST AI RMF: coverage-map/nist-ai-rmf.md
-      - EU AI Act: coverage-map/eu-ai-act.md
-      - ISMS: coverage-map/isms.md
+  - Releases:
+      - releases/index.md
   - Governance:
       - governance/index.md
       - Trust Package: governance/trust-package.md
       - Responsibility Boundary: governance/responsibility-boundary.md
-  - Releases:
-      - releases/index.md
-  - Contributing:
-      - Localization: contributing/localization.md
+      - Contributing: contributing/localization.md

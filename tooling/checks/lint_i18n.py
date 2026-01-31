@@ -35,6 +35,7 @@ ACTIVE_LANGUAGES = ["en", "ja"]
 # These are critical for the documentation to be functional
 REQUIRED_PAGES = [
     "index.md",
+    "standard/index.md",
     "standard/current/index.md",
     "standard/current/01-overview.md",
     "standard/current/02-scope.md",
