@@ -1777,6 +1777,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#language-codes-bcp47" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Codes (BCP47)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacy-csv-files-frozen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legacy CSV Files (Frozen)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1793,9 +1811,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#taxonomy-updates" class="md-nav__link">
+  <a href="#taxonomy-updates-new-ssot-first-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Taxonomy Updates
+      Taxonomy Updates (New SSOT-First Workflow)
     </span>
   </a>
   
@@ -2023,6 +2041,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#language-codes-bcp47" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Codes (BCP47)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legacy-csv-files-frozen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legacy CSV Files (Frozen)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2039,9 +2075,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#taxonomy-updates" class="md-nav__link">
+  <a href="#taxonomy-updates-new-ssot-first-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Taxonomy Updates
+      Taxonomy Updates (New SSOT-First Workflow)
     </span>
   </a>
   
@@ -2262,7 +2298,7 @@
 </ul>
 <p><strong>Fallback</strong>: If a translation is missing, the system uses English.</p>
 <h2 id="ssot-principle">SSOT Principle</h2>
-<p>AIMO uses multiple Single Source of Truth files:</p>
+<p>AIMO uses a <strong>SSOT-first architecture</strong> for taxonomy data:</p>
 <table>
 <thead>
 <tr>
@@ -2273,19 +2309,14 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Taxonomy (source)</strong></td>
-<td><code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code></td>
-<td>Master CSV with all data</td>
-</tr>
-<tr>
-<td><strong>Taxonomy (canonical)</strong></td>
+<td><strong>Taxonomy (structure)</strong></td>
 <td><code>data/taxonomy/canonical.yaml</code></td>
-<td>Language-neutral structure</td>
+<td>Language-neutral structure (SSOT)</td>
 </tr>
 <tr>
 <td><strong>Taxonomy (i18n)</strong></td>
 <td><code>data/taxonomy/i18n/*.yaml</code></td>
-<td>Per-language translations</td>
+<td>Per-language translations (SSOT)</td>
 </tr>
 <tr>
 <td><strong>Coverage Map</strong></td>
@@ -2300,7 +2331,7 @@
 </tbody>
 </table>
 <h3 id="derived-files">Derived Files</h3>
-<p>The following files are <strong>generated</strong> and should NOT be edited manually:</p>
+<p>The following files are <strong>generated</strong> from the SSOT and should NOT be edited manually:</p>
 <table>
 <thead>
 <tr>
@@ -2311,55 +2342,99 @@
 </thead>
 <tbody>
 <tr>
-<td><code>data/taxonomy/canonical.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_i18n_taxonomy.py</code></td>
+<td><code>artifacts/taxonomy/{version}/{lang}/taxonomy_dictionary.csv</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
-<td><code>data/taxonomy/i18n/en.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_i18n_taxonomy.py</code></td>
-</tr>
-<tr>
-<td><code>data/taxonomy/i18n/ja.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_i18n_taxonomy.py</code></td>
+<td><code>source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/taxonomy_en.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/taxonomy_ja.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/code_system.csv</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/dimensions_en_ja.md</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/taxonomy_dictionary.json</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="language-codes-bcp47">Language Codes (BCP47)</h3>
+<p>AIMO uses BCP47 language codes:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>en</code></td>
+<td>English</td>
+</tr>
+<tr>
+<td><code>ja</code></td>
+<td>Japanese (日本語)</td>
+</tr>
+<tr>
+<td><code>es</code></td>
+<td>Spanish (Español)</td>
+</tr>
+<tr>
+<td><code>de</code></td>
+<td>German (Deutsch)</td>
+</tr>
+<tr>
+<td><code>ko</code></td>
+<td>Korean (한국어)</td>
+</tr>
+<tr>
+<td><code>zh-Hans</code></td>
+<td>Simplified Chinese (简体中文)</td>
+</tr>
+<tr>
+<td><code>zh-Hant</code></td>
+<td>Traditional Chinese (繁體中文)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="legacy-csv-files-frozen">Legacy CSV Files (Frozen)</h3>
+<p>The legacy EN/JA mixed CSV files in <code>source_pack/03_taxonomy/legacy/</code> are:</p>
+<ul>
+<li><strong>Frozen at 21 columns</strong> — no new language columns will be added</li>
+<li><strong>Maintained for backward compatibility</strong> — existing integrations can continue to use them</li>
+<li><strong>CI-enforced</strong> — adding <code>label_es</code>, <code>definition_de</code>, etc. will fail the build</li>
+</ul>
+<p>For new languages, use the per-language artifacts in <code>artifacts/taxonomy/{version}/{lang}/</code>.</p>
 <h2 id="update-workflows">Update Workflows</h2>
-<h3 id="taxonomy-updates">Taxonomy Updates</h3>
+<h3 id="taxonomy-updates-new-ssot-first-workflow">Taxonomy Updates (New SSOT-First Workflow)</h3>
 <ol>
-<li>Edit the SSOT CSV (<code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>)</li>
-<li>Run validation: <code>python tooling/checks/lint_taxonomy_dictionary.py</code></li>
-<li>Regenerate legacy assets: <code>python tooling/taxonomy/build_taxonomy_assets.py</code></li>
-<li>Regenerate i18n assets: <code>python tooling/taxonomy/build_i18n_taxonomy.py</code></li>
-<li>Sync <code>dictionary_seed.csv</code> as compatibility copy</li>
+<li>Edit the SSOT in <code>data/taxonomy/</code>:</li>
+<li>Structure changes → <code>canonical.yaml</code></li>
+<li>English translations → <code>i18n/en.yaml</code></li>
+<li>Japanese translations → <code>i18n/ja.yaml</code></li>
+<li>Run validation: <code>python tooling/checks/lint_taxonomy_ssot.py</code></li>
+<li>Regenerate all derived files: <code>python tooling/taxonomy/build_artifacts.py --version current --langs en ja</code></li>
 <li>Update documentation pages as needed</li>
 <li>Commit all changes together</li>
 </ol>
@@ -2434,18 +2509,21 @@
 </table>
 <h2 id="quality-checks">Quality Checks</h2>
 <p>Run these checks before committing:</p>
-<pre><code class="language-bash"># i18n structure and heading consistency
+<pre><code class="language-bash"># i18n structure, heading consistency, and deprecated phrase detection
 python tooling/checks/lint_i18n.py
 
-# All other lints
+# Schema and manifest lints
 python tooling/checks/lint_schema.py
 python tooling/checks/lint_manifest.py
+
+# Taxonomy SSOT lints
+python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+python tooling/checks/lint_legacy_csv.py
 python tooling/checks/lint_taxonomy_dictionary.py
 python tooling/checks/lint_taxonomy_json.py
 
-# Taxonomy assets up to date
-python tooling/taxonomy/build_taxonomy_assets.py --check
-python tooling/taxonomy/build_i18n_taxonomy.py --check
+# Taxonomy artifacts up to date
+python tooling/taxonomy/build_artifacts.py --check
 
 # Build verification
 mkdocs build --strict

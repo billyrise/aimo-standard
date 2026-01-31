@@ -1777,6 +1777,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#bcp47" class="md-nav__link">
+    <span class="md-ellipsis">
+      言語コード（BCP47）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      レガシーCSVファイル（凍結）
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1793,16 +1811,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#ssot-first" class="md-nav__link">
     <span class="md-ellipsis">
-      タクソノミーの更新
+      タクソノミーの更新（新しいSSOT-Firstワークフロー）
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       カバレッジマップの更新
     </span>
@@ -1811,7 +1829,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       ドキュメントの更新
     </span>
@@ -1885,7 +1903,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       ファイル命名規則
     </span>
@@ -1894,7 +1912,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       品質チェック
     </span>
@@ -1903,7 +1921,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       関連ページ
     </span>
@@ -2023,6 +2041,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#bcp47" class="md-nav__link">
+    <span class="md-ellipsis">
+      言語コード（BCP47）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      レガシーCSVファイル（凍結）
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2039,16 +2075,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#ssot-first" class="md-nav__link">
     <span class="md-ellipsis">
-      タクソノミーの更新
+      タクソノミーの更新（新しいSSOT-Firstワークフロー）
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       カバレッジマップの更新
     </span>
@@ -2057,7 +2093,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       ドキュメントの更新
     </span>
@@ -2131,7 +2167,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       ファイル命名規則
     </span>
@@ -2140,7 +2176,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       品質チェック
     </span>
@@ -2149,7 +2185,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       関連ページ
     </span>
@@ -2262,7 +2298,7 @@
 </ul>
 <p><strong>フォールバック</strong>: 翻訳がない場合、システムは英語を使用します。</p>
 <h2 id="ssot">SSOT原則</h2>
-<p>AIMOは複数のSingle Source of Truthファイルを使用します：</p>
+<p>AIMOはタクソノミーデータに<strong>SSOT-firstアーキテクチャ</strong>を採用しています：</p>
 <table>
 <thead>
 <tr>
@@ -2273,19 +2309,14 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>タクソノミー（ソース）</strong></td>
-<td><code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code></td>
-<td>全データを含むマスターCSV</td>
-</tr>
-<tr>
-<td><strong>タクソノミー（canonical）</strong></td>
+<td><strong>タクソノミー（構造）</strong></td>
 <td><code>data/taxonomy/canonical.yaml</code></td>
-<td>言語中立構造</td>
+<td>言語中立構造（SSOT）</td>
 </tr>
 <tr>
 <td><strong>タクソノミー（i18n）</strong></td>
 <td><code>data/taxonomy/i18n/*.yaml</code></td>
-<td>言語別翻訳</td>
+<td>言語別翻訳（SSOT）</td>
 </tr>
 <tr>
 <td><strong>カバレッジマップ</strong></td>
@@ -2300,7 +2331,7 @@
 </tbody>
 </table>
 <h3 id="_5">派生ファイル</h3>
-<p>以下のファイルは<strong>生成</strong>されるため、手動編集禁止です：</p>
+<p>以下のファイルはSSOTから<strong>生成</strong>されるため、手動編集禁止です：</p>
 <table>
 <thead>
 <tr>
@@ -2311,66 +2342,110 @@
 </thead>
 <tbody>
 <tr>
-<td><code>data/taxonomy/canonical.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_i18n_taxonomy.py</code></td>
+<td><code>artifacts/taxonomy/{version}/{lang}/taxonomy_dictionary.csv</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
-<td><code>data/taxonomy/i18n/en.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_i18n_taxonomy.py</code></td>
-</tr>
-<tr>
-<td><code>data/taxonomy/i18n/ja.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_i18n_taxonomy.py</code></td>
+<td><code>source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/taxonomy_en.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/taxonomy_ja.yaml</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/code_system.csv</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/dimensions_en_ja.md</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 <tr>
 <td><code>source_pack/03_taxonomy/taxonomy_dictionary.json</code></td>
-<td><code>taxonomy_dictionary_v0.1.csv</code></td>
-<td><code>build_taxonomy_assets.py</code></td>
+<td>canonical + i18n</td>
+<td><code>build_artifacts.py</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="bcp47">言語コード（BCP47）</h3>
+<p>AIMOはBCP47言語コードを採用しています：</p>
+<table>
+<thead>
+<tr>
+<th>コード</th>
+<th>言語</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>en</code></td>
+<td>English</td>
+</tr>
+<tr>
+<td><code>ja</code></td>
+<td>日本語</td>
+</tr>
+<tr>
+<td><code>es</code></td>
+<td>Español（スペイン語）</td>
+</tr>
+<tr>
+<td><code>de</code></td>
+<td>Deutsch（ドイツ語）</td>
+</tr>
+<tr>
+<td><code>ko</code></td>
+<td>한국어（韓国語）</td>
+</tr>
+<tr>
+<td><code>zh-Hans</code></td>
+<td>简体中文（簡体字中国語）</td>
+</tr>
+<tr>
+<td><code>zh-Hant</code></td>
+<td>繁體中文（繁体字中国語）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="csv">レガシーCSVファイル（凍結）</h3>
+<p><code>source_pack/03_taxonomy/legacy/</code> にあるレガシー英日混在CSVファイルは：</p>
+<ul>
+<li><strong>21列で凍結</strong> — 新しい言語列は追加されません</li>
+<li><strong>後方互換性のため維持</strong> — 既存の連携は引き続き使用可能</li>
+<li><strong>CIで強制</strong> — <code>label_es</code>, <code>definition_de</code> などを追加するとビルドが失敗します</li>
+</ul>
+<p>新しい言語には <code>artifacts/taxonomy/{version}/{lang}/</code> の言語別アーティファクトを使用してください。</p>
 <h2 id="_6">更新ワークフロー</h2>
-<h3 id="_7">タクソノミーの更新</h3>
+<h3 id="ssot-first">タクソノミーの更新（新しいSSOT-Firstワークフロー）</h3>
 <ol>
-<li>SSOT CSV（<code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>）を編集</li>
-<li>検証を実行: <code>python tooling/checks/lint_taxonomy_dictionary.py</code></li>
-<li>レガシーアセットを再生成: <code>python tooling/taxonomy/build_taxonomy_assets.py</code></li>
-<li>i18nアセットを再生成: <code>python tooling/taxonomy/build_i18n_taxonomy.py</code></li>
-<li><code>dictionary_seed.csv</code> を互換コピーとして同期</li>
+<li><code>data/taxonomy/</code> のSSOTを編集:</li>
+<li>構造変更 → <code>canonical.yaml</code></li>
+<li>英語翻訳 → <code>i18n/en.yaml</code></li>
+<li>日本語翻訳 → <code>i18n/ja.yaml</code></li>
+<li>検証を実行: <code>python tooling/checks/lint_taxonomy_ssot.py</code></li>
+<li>全派生ファイルを再生成: <code>python tooling/taxonomy/build_artifacts.py --version current --langs en ja</code></li>
 <li>必要に応じてドキュメントページを更新</li>
 <li>すべての変更をまとめてコミット</li>
 </ol>
-<h3 id="_8">カバレッジマップの更新</h3>
+<h3 id="_7">カバレッジマップの更新</h3>
 <ol>
 <li><code>coverage_map/coverage_map.yaml</code>（SSOT）を編集</li>
 <li>対応するフレームワークページの表を更新（<code>docs/en/coverage-map/*.md</code>）</li>
 <li>日本語訳を更新（<code>docs/ja/coverage-map/*.md</code>）</li>
 <li>すべての変更をまとめてコミット</li>
 </ol>
-<h3 id="_9">ドキュメントの更新</h3>
+<h3 id="_8">ドキュメントの更新</h3>
 <ol>
 <li>英語ソース（<code>docs/en/...</code>）を編集</li>
 <li>対応する日本語ファイル（<code>docs/ja/...</code>）を更新</li>
@@ -2405,7 +2480,7 @@
 </code></pre>
 <p>!!! success "完了"
     新言語は <code>/dev/es/</code> で利用可能になります</p>
-<h2 id="_10">ファイル命名規則</h2>
+<h2 id="_9">ファイル命名規則</h2>
 <table>
 <thead>
 <tr>
@@ -2432,25 +2507,28 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_11">品質チェック</h2>
+<h2 id="_10">品質チェック</h2>
 <p>コミット前に以下のチェックを実行：</p>
-<pre><code class="language-bash"># i18n構造と見出し整合性
+<pre><code class="language-bash"># i18n構造、見出し整合性、旧フレーズ検出
 python tooling/checks/lint_i18n.py
 
-# その他のlint
+# スキーマとマニフェストのlint
 python tooling/checks/lint_schema.py
 python tooling/checks/lint_manifest.py
+
+# タクソノミーSSOT lint
+python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+python tooling/checks/lint_legacy_csv.py
 python tooling/checks/lint_taxonomy_dictionary.py
 python tooling/checks/lint_taxonomy_json.py
 
-# タクソノミーアセットが最新か確認
-python tooling/taxonomy/build_taxonomy_assets.py --check
-python tooling/taxonomy/build_i18n_taxonomy.py --check
+# タクソノミーアーティファクトが最新か確認
+python tooling/taxonomy/build_artifacts.py --check
 
 # ビルド確認
 mkdocs build --strict
 </code></pre>
-<h2 id="_12">関連ページ</h2>
+<h2 id="_11">関連ページ</h2>
 <ul>
 <li><a href="../../releases/">Releases</a> — ダウンロード可能なパッケージ</li>
 <li><a href="../../governance/">Governance</a> — プロジェクトガバナンス</li>

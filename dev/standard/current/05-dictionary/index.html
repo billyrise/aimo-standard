@@ -2174,10 +2174,10 @@
 <h1 id="dictionary">Dictionary</h1>
 <p>The AIMO Dictionary is the authoritative list of all valid codes within the taxonomy. It provides complete definitions for each code including labels, descriptions, and lifecycle information.</p>
 <h2 id="what-is-dictionary">What is Dictionary</h2>
-<p>The dictionary is a machine-readable CSV file that serves as the <strong>Single Source of Truth (SSOT)</strong> for all AIMO taxonomy codes. It contains:</p>
+<p>The dictionary provides a complete, machine-readable set of all AIMO taxonomy codes. It contains:</p>
 <ul>
 <li>All 91 codes across 8 dimensions</li>
-<li>Labels and definitions (with translations)</li>
+<li>Labels and definitions (with translations in language packs)</li>
 <li>Lifecycle metadata (status, version introduced, deprecated, removed)</li>
 <li>Scope notes and examples for code usage</li>
 </ul>
@@ -2187,8 +2187,13 @@
 <li><strong>Validator</strong>: The validator checks that all codes exist in the dictionary</li>
 <li><strong>Coverage Map</strong>: Codes enable mapping to external frameworks and regulations</li>
 </ol>
-<p>!!! info "Source of Truth"
-    The dictionary CSV (<code>taxonomy_dictionary_v0.1.csv</code>) is the authoritative source. This page is explanatory.</p>
+<p>!!! info "Single Source of Truth (SSOT)"
+    The SSOT for the dictionary is:</p>
+<pre><code>- **Structure**: `data/taxonomy/canonical.yaml` (codes, status, lifecycle)
+- **Translations**: `data/taxonomy/i18n/*.yaml` (labels, definitions per language)
+
+CSV files are **generated artifacts** for distribution. See [Releases](../../releases/index.md) for downloads.
+</code></pre>
 <h2 id="column-schema">Column Schema</h2>
 <p>The canonical dictionary uses <strong>18 columns</strong> (language-neutral structure):</p>
 <h3 id="identification-columns-5">Identification Columns (5)</h3>
@@ -2454,7 +2459,11 @@
 </tbody>
 </table>
 <p>!!! note "Complete Code Listings"
-    The complete list of 91 codes is available in the SSOT CSV file. This documentation page provides column definitions and usage guidance. For detailed code definitions with scope notes and examples, refer to <code>taxonomy_dictionary_v0.1.csv</code>.</p>
+    The complete list of 91 codes is available in the generated CSV artifacts. This documentation page provides column definitions and usage guidance. For detailed code definitions:</p>
+<pre><code>- **Download**: See [Releases](../../releases/index.md) for per-language CSV files
+- **Per-language CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
+- **Legacy EN/JA mixed CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (frozen, for backward compatibility only)
+</code></pre>
 <h2 id="update-policy">Update Policy</h2>
 <h3 id="adding-new-codes">Adding New Codes</h3>
 <ol>
