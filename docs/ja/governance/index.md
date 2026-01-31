@@ -5,6 +5,7 @@
 監査対応資料はこちらから: [Trust Package](trust-package.md)。
 
 - **責任境界**: [責任境界](responsibility-boundary.md) — AIMO が提供するもの・しないもの、前提条件、採用者責任。
+- **SEO & Canonical ポリシー**: [SEO & Canonical ポリシー](seo-canonical-policy.md) — URL正規化、監査人向け引用ガイダンス、本番サイト vs ミラーサイト。
 
 - **ガバナンス (SSOT)**: [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) — 唯一の情報源、編集可能領域、規範的 vs 非規範的、リリース要件。
 - **セキュリティ**: [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) — 開示とセキュリティモデル。

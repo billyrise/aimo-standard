@@ -1,6 +1,6 @@
 # Baseline Audit Report
 
-**Generated:** 2026-02-01 07:50:08
+**Generated:** 2026-02-01 08:04:48
 
 ## Summary
 
@@ -10,6 +10,7 @@
 | Translation Coverage | 1 | 0 | 0 |
 | Reference Integrity | 1 | 0 | 0 |
 | Unreferenced Files | 1 | 0 | 0 |
+| Redirect Targets | 1 | 0 | 0 |
 | Release Requirements | 1 | 0 | 0 |
 
 **Status: ALL CHECKS PASSED** ✓
@@ -47,6 +48,14 @@
 | File | Message | Recommendation |
 |------|---------|----------------|
 | `docs/` | All docs files are referenced in nav or linked | - |
+
+### Redirect Targets
+
+#### OK
+
+| File | Message | Recommendation |
+|------|---------|----------------|
+| `tooling/release/build_redirects.py` | All 10 redirect targets exist | - |
 
 ### Release Requirements
 
