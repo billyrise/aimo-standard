@@ -120,6 +120,13 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja/releases/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/dev/standard/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/standard/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja/standard/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/dev/standard/current/</loc>
         <lastmod>2026-01-31</lastmod>
         <changefreq>daily</changefreq>
@@ -314,6 +321,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/dev/ja/releases/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/devreleases/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/ja/standard/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/dev/ja/standard/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/devstandard/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/dev/ja/standard/current/</loc>
