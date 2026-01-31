@@ -5,6 +5,9 @@ Lint check for taxonomy_dictionary_v0.1.csv.
 Validates the Taxonomy Dictionary SSOT for structural consistency, required fields,
 uniqueness constraints, and semantic validity.
 
+Also enforces the FROZEN language policy: only EN+JA columns are allowed.
+Adding new language columns (e.g., *_es, *_de, *_ko, *_zh) will fail CI.
+
 Usage:
     python tooling/checks/lint_taxonomy_dictionary.py
 
@@ -23,7 +26,7 @@ from typing import List, Tuple
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 DICTIONARY_PATH = REPO_ROOT / "source_pack" / "03_taxonomy" / "taxonomy_dictionary_v0.1.csv"
 
-# Expected column count and headers
+# Expected column count and headers (FROZEN at EN+JA)
 EXPECTED_COLUMNS = 21
 EXPECTED_HEADERS = [
     "standard_id",
@@ -76,6 +79,20 @@ CODE_PATTERN = re.compile(r"^([A-Z]{2})-(\d{3})$")
 # SemVer pattern
 SEMVER_PATTERN = re.compile(r"^(\d+)\.(\d+)\.(\d+)$")
 
+# FROZEN: Only EN+JA language suffixes are allowed
+# Any other language suffixes will fail CI
+# Known language column patterns that are allowed (EN+JA only)
+ALLOWED_LANG_COLUMNS = {
+    "dimension_name_en", "dimension_name_ja",
+    "label_en", "label_ja",
+    "definition_en", "definition_ja",
+}
+# Pattern to detect new language columns: *_XX where XX is a language code
+# but NOT matching known non-language suffixes like _id, _in, _by, _notes, etc.
+NEW_LANG_COLUMN_PATTERN = re.compile(
+    r"^(dimension_name|label|definition)_([a-z]{2}(?:-[a-z]+)?)$"
+)
+
 
 def parse_semver(version: str) -> Tuple[int, int, int]:
     """Parse a SemVer string into a tuple (major, minor, patch)."""
@@ -116,6 +133,19 @@ def main() -> int:
         errors.append(
             f"Column count mismatch: expected {EXPECTED_COLUMNS}, got {len(headers)}"
         )
+
+    # Check 2b: FROZEN language policy - block new language columns
+    for header in headers:
+        match = NEW_LANG_COLUMN_PATTERN.match(header)
+        if match:
+            # This is a language-specific column (dimension_name_*, label_*, definition_*)
+            if header not in ALLOWED_LANG_COLUMNS:
+                lang_code = match.group(2)  # e.g., "es", "de", "ko"
+                errors.append(
+                    f"FROZEN: New language column '{header}' is not allowed. "
+                    f"Only EN+JA columns are permitted in this CSV. "
+                    f"Add translations to data/taxonomy/i18n/{lang_code}.yaml instead."
+                )
 
     # Check 3: Header names match
     for i, expected in enumerate(EXPECTED_HEADERS):

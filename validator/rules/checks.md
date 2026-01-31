@@ -37,9 +37,10 @@ Examples of invalid codes:
 
 Dictionary entries are validated for:
 
-1. **Required fields**: `code`, `label_en`, `label_ja`, `definition_en`
+1. **Required fields**: `code`, `label`, `definition`, `status`
 2. **Code format**: Must match the AIMO code pattern
 3. **Status values**: Must be `active`, `deprecated`, or `removed`
+4. **Translations**: Each supported language must have entries in `data/taxonomy/i18n/{lang}.yaml`
 
 ## Notes
 

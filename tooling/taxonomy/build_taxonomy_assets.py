@@ -9,6 +9,10 @@ Generates the following derived files from taxonomy_dictionary_v0.1.csv:
 - dimensions_en_ja.md: Dimension mapping table (EN/JA)
 - taxonomy_dictionary.json: Machine-readable dictionary (aimo-dictionary.schema.json)
 
+Single-language CSV export (language-neutral schema):
+    python tooling/taxonomy/build_taxonomy_assets.py --export-lang en
+    python tooling/taxonomy/build_taxonomy_assets.py --export-lang ja
+
 Usage:
     python tooling/taxonomy/build_taxonomy_assets.py          # Generate files
     python tooling/taxonomy/build_taxonomy_assets.py --check  # Check if regeneration needed
@@ -279,6 +283,69 @@ def generate_taxonomy_dictionary_json(rows: list[dict[str, str]]) -> str:
     return json.dumps(dictionary, ensure_ascii=False, indent=2) + "\n"
 
 
+def generate_single_lang_csv(rows: list[dict[str, str]], lang: str) -> str:
+    """
+    Generate a single-language CSV with language-neutral column names.
+    
+    Output columns (18 columns, language-neutral):
+    standard_id, standard_version, dimension_id, dimension_name, code,
+    label, definition, scope_notes, examples,
+    status, introduced_in, deprecated_in, removed_in, replaced_by, backward_compatible,
+    references, owner, last_reviewed_date
+    """
+    lines = [
+        "# AIMO Taxonomy Dictionary - Single Language Export",
+        f"# Language: {lang}",
+        "# Generated from: taxonomy_dictionary_v0.1.csv + data/taxonomy/i18n/{}.yaml".format(lang),
+        "# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_taxonomy_assets.py --export-lang {}".format(lang),
+        "standard_id,standard_version,dimension_id,dimension_name,code,label,definition,scope_notes,examples,status,introduced_in,deprecated_in,removed_in,replaced_by,backward_compatible,references,owner,last_reviewed_date",
+    ]
+
+    name_key = f"dimension_name_{lang}"
+    label_key = f"label_{lang}"
+    definition_key = f"definition_{lang}"
+
+    for row in rows:
+        # Use language-specific values, fallback to EN if not available
+        dim_name = row.get(name_key, row.get("dimension_name_en", ""))
+        label = row.get(label_key, row.get("label_en", ""))
+        definition = row.get(definition_key, row.get("definition_en", ""))
+
+        # Escape quotes for CSV
+        dim_name = dim_name.replace('"', '""')
+        label = label.replace('"', '""')
+        definition = definition.replace('"', '""')
+        scope_notes = row.get("scope_notes", "").replace('"', '""')
+        examples = row.get("examples", "").replace('"', '""')
+        references = row.get("references", "").replace('"', '""')
+        owner = row.get("owner", "").replace('"', '""')
+
+        line = ','.join([
+            row["standard_id"],
+            row["standard_version"],
+            row["dimension_id"],
+            f'"{dim_name}"',
+            row["code"],
+            f'"{label}"',
+            f'"{definition}"',
+            f'"{scope_notes}"',
+            f'"{examples}"',
+            row["status"],
+            row["introduced_in"],
+            row.get("deprecated_in", ""),
+            row.get("removed_in", ""),
+            row.get("replaced_by", ""),
+            row.get("backward_compatible", ""),
+            f'"{references}"',
+            f'"{owner}"',
+            row.get("last_reviewed_date", ""),
+        ])
+        lines.append(line)
+
+    lines.append("")
+    return "\n".join(lines)
+
+
 def compute_content_hash(content: str) -> str:
     """Compute SHA-256 hash of content (excluding date lines for comparison)."""
     # Remove generated_date and Generated lines for stable comparison
@@ -311,6 +378,11 @@ def main() -> int:
         action="store_true",
         help="Check if regeneration is needed (no file writes)",
     )
+    parser.add_argument(
+        "--export-lang",
+        metavar="LANG",
+        help="Export single-language CSV (e.g., en, ja) to taxonomy_dictionary.{lang}.csv",
+    )
     args = parser.parse_args()
 
     # Verify source exists
@@ -324,6 +396,22 @@ def main() -> int:
     dimensions = extract_dimensions(rows)
 
     print(f"Found {len(dimensions)} dimensions with {len(rows)} total codes")
+
+    # Handle --export-lang mode
+    if args.export_lang:
+        lang = args.export_lang.lower()
+        if lang not in ("en", "ja"):
+            # For languages other than en/ja, would need to read from i18n pack
+            # For now, only en/ja are supported as they exist in the legacy CSV
+            print(f"NOTE: Language '{lang}' export would read from data/taxonomy/i18n/{lang}.yaml")
+            print("Currently only 'en' and 'ja' are supported (data in legacy CSV)")
+            return 1
+
+        output_path = TAXONOMY_DIR / f"taxonomy_dictionary.{lang}.csv"
+        content = generate_single_lang_csv(rows, lang)
+        output_path.write_text(content, encoding="utf-8")
+        print(f"Generated: {output_path.relative_to(REPO_ROOT)}")
+        return 0
 
     # Generate content
     generated = {

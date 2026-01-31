@@ -10,13 +10,20 @@ This directory contains the taxonomy definitions for the AIMO Standard. The taxo
 
 ## SSOT Declaration
 
-This directory is the **Single Source of Truth (SSOT)** for:
+The **Single Source of Truth (SSOT)** uses a language-neutral architecture:
+
+| SSOT File | Purpose |
+| --- | --- |
+| `data/taxonomy/canonical.yaml` | Language-neutral structure (codes, status, lifecycle) |
+| `data/taxonomy/i18n/*.yaml` | Translations (labels, definitions per language) |
+
+This directory contains:
 
 - **Taxonomy** — 8 dimensions for classifying AI use cases and evidence
 - **Code System** — Dimension namespaces and code format (PREFIX-###)
-- **Dictionary** — 91 defined codes with EN/JA labels and definitions
+- **Legacy CSV** — EN+JA combined export for backward compatibility (frozen)
 
-All other representations in `docs/`, `schemas/`, `templates/`, and `examples/` are **derived** from the files in this directory.
+All other representations in `docs/`, `schemas/`, `templates/`, and `examples/` are **derived** from the SSOT.
 
 ---
 
@@ -60,9 +67,11 @@ All other representations in `docs/`, `schemas/`, `templates/`, and `examples/` 
 
 ---
 
-## CSV Column Specification (21 columns)
+## Legacy CSV Format (21 columns) — FROZEN
 
-The SSOT CSV (`taxonomy_dictionary_v0.1.csv` and `dictionary_seed.csv`) uses the following columns:
+The legacy CSV (`taxonomy_dictionary_v0.1.csv`) contains EN+JA columns for backward compatibility.
+
+> **⚠️ FROZEN**: No new language columns will be added. For additional languages, use `data/taxonomy/i18n/{lang}.yaml`.
 
 | # | Column | Required | Description |
 | --- | --- | --- | --- |
@@ -70,12 +79,12 @@ The SSOT CSV (`taxonomy_dictionary_v0.1.csv` and `dictionary_seed.csv`) uses the
 | 2 | `standard_version` | Yes | SemVer (e.g., "0.1.0") |
 | 3 | `dimension_id` | Yes | One of: FS, UC, DT, CH, IM, RS, OB, EV |
 | 4 | `dimension_name_en` | Yes | English dimension name |
-| 5 | `dimension_name_ja` | Yes | Japanese dimension name |
+| 5 | `dimension_name_ja` | Yes | Japanese dimension name (legacy) |
 | 6 | `code` | Yes | Unique code (PREFIX-###) |
 | 7 | `label_en` | Yes | English label |
-| 8 | `label_ja` | Yes | Japanese label |
+| 8 | `label_ja` | Yes | Japanese label (legacy) |
 | 9 | `definition_en` | Yes | English definition |
-| 10 | `definition_ja` | Yes | Japanese definition |
+| 10 | `definition_ja` | Yes | Japanese definition (legacy) |
 | 11 | `scope_notes` | No | Usage/scope notes |
 | 12 | `examples` | No | Pipe-separated examples |
 | 13 | `status` | Yes | active, deprecated, or removed |
@@ -87,6 +96,15 @@ The SSOT CSV (`taxonomy_dictionary_v0.1.csv` and `dictionary_seed.csv`) uses the
 | 19 | `references` | No | External references |
 | 20 | `owner` | No | Working group owner |
 | 21 | `last_reviewed_date` | No | ISO date of last review |
+
+### Language-Neutral Schema (Canonical)
+
+For new integrations, use the language-neutral SSOT:
+
+| File | Contains |
+| --- | --- |
+| `data/taxonomy/canonical.yaml` | `code`, `status`, `introduced_in`, `scope_notes`, `examples` |
+| `data/taxonomy/i18n/{lang}.yaml` | `dimension_name`, `label`, `definition` per language |
 
 ---
 
@@ -184,8 +202,9 @@ python tooling/taxonomy/build_taxonomy_assets.py --check
 
 ## Authoring Notes
 
-- **English is canonical**: Edit EN definitions first, then JA follows
+- **English is canonical**: Edit EN definitions first, translations follow in i18n packs
 - **Do NOT edit generated files**: Files marked "Generated" are overwritten by the build script
 - **Use stable IDs**: Code IDs must follow PREFIX-### format
 - **Version tracking**: All codes have `introduced_in` for traceability
 - **Non-overclaim**: Taxonomy is a classification system, not a compliance guarantee
+- **No new CSV language columns**: Adding `*_es`, `*_de`, etc. columns is blocked by CI lint
