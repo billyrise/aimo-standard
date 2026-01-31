@@ -35,7 +35,8 @@ Each release includes:
 
 ## Principles
 - GitHub repo is SSOT; do not hand-edit generated outputs.
-- English is canonical; Japanese follows via `.ja.md` files.
+- English is canonical; translations use folder-based structure (`docs/en/`, `docs/ja/`, etc.).
+- Taxonomy SSOT is `data/taxonomy/canonical.yaml` + `i18n/*.yaml`; CSVs are generated artifacts.
 - "Current" and "Past" versions must be clearly accessible.
 - Releases must include PDF, checksum, and (when available) build attestation.
 

@@ -202,18 +202,21 @@ python tooling/checks/lint_i18n.py && mkdocs build --strict
 コミット前に以下のチェックを実行：
 
 ```bash
-# i18n構造と見出し整合性
+# i18n構造、見出し整合性、旧フレーズ検出
 python tooling/checks/lint_i18n.py
 
-# その他のlint
+# スキーマとマニフェストのlint
 python tooling/checks/lint_schema.py
 python tooling/checks/lint_manifest.py
+
+# タクソノミーSSOT lint
+python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+python tooling/checks/lint_legacy_csv.py
 python tooling/checks/lint_taxonomy_dictionary.py
 python tooling/checks/lint_taxonomy_json.py
 
-# タクソノミーアセットが最新か確認
-python tooling/taxonomy/build_taxonomy_assets.py --check
-python tooling/taxonomy/build_i18n_taxonomy.py --check
+# タクソノミーアーティファクトが最新か確認
+python tooling/taxonomy/build_artifacts.py --check
 
 # ビルド確認
 mkdocs build --strict
