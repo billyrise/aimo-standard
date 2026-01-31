@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://standard.aimoaas.com/schemas/evidence_pack_manifest.schema.json",
+  "title": "AIMO Evidence Pack Manifest Schema",
+  "description": "Schema for AIMO Evidence Pack manifest containing mandatory metadata and 8-dimension codes.",
+  "type": "object",
+  "required": [
+    "pack_id",
+    "pack_version",
+    "created_date",
+    "last_updated",
+    "taxonomy_version",
+    "codes",
+    "evidence_files"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to this schema."
+    },
+    "pack_id": {
+      "type": "string",
+      "description": "Unique identifier for this Evidence Pack.",
+      "pattern": "^EP-[A-Za-z0-9-]+$"
+    },
+    "pack_version": {
+      "type": "string",
+      "description": "Version of this Evidence Pack (SemVer).",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable title of the Evidence Pack."
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the AI system or use case covered."
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the pack was created (YYYY-MM-DD)."
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the pack was last updated (YYYY-MM-DD)."
+    },
+    "taxonomy_version": {
+      "type": "string",
+      "description": "Version of AIMO Taxonomy used.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "owner": {
+      "type": "string",
+      "description": "Owner or responsible party for this Evidence Pack."
+    },
+    "codes": {
+      "type": "object",
+      "description": "8-dimension AIMO codes applicable to this Evidence Pack.",
+      "required": ["FS", "UC", "DT", "CH", "IM", "RS", "EV"],
+      "additionalProperties": false,
+      "properties": {
+        "FS": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^FS-\\d{3}$" },
+          "minItems": 1,
+          "description": "Functional Scope codes."
+        },
+        "UC": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^UC-\\d{3}$" },
+          "minItems": 1,
+          "description": "Use Case Class codes."
+        },
+        "DT": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^DT-\\d{3}$" },
+          "minItems": 1,
+          "description": "Data Type codes."
+        },
+        "CH": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^CH-\\d{3}$" },
+          "minItems": 1,
+          "description": "Channel codes."
+        },
+        "IM": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^IM-\\d{3}$" },
+          "minItems": 1,
+          "description": "Integration Mode codes."
+        },
+        "RS": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^RS-\\d{3}$" },
+          "minItems": 1,
+          "description": "Risk Surface codes."
+        },
+        "OB": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^OB-\\d{3}$" },
+          "description": "Outcome / Benefit codes (optional)."
+        },
+        "EV": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^EV-\\d{3}$" },
+          "minItems": 1,
+          "description": "Evidence Type codes."
+        }
+      }
+    },
+    "evidence_files": {
+      "type": "array",
+      "description": "List of evidence documents included in this pack.",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/evidence_file"
+      }
+    },
+    "change_log": {
+      "type": "array",
+      "description": "Change history for this Evidence Pack.",
+      "items": {
+        "$ref": "#/$defs/change_entry"
+      }
+    },
+    "integrity": {
+      "$ref": "#/$defs/integrity",
+      "description": "Integrity verification information."
+    }
+  },
+  "$defs": {
+    "evidence_file": {
+      "type": "object",
+      "required": ["file_id", "filename", "ev_type", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "file_id": {
+          "type": "string",
+          "description": "Unique file identifier within the pack.",
+          "pattern": "^EV-\\d{2}$"
+        },
+        "filename": {
+          "type": "string",
+          "description": "Filename of the evidence document."
+        },
+        "ev_type": {
+          "type": "string",
+          "description": "Evidence type code (e.g., EV-001).",
+          "pattern": "^EV-\\d{3}$"
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable title of the evidence document."
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description of the document content."
+        },
+        "required": {
+          "type": "boolean",
+          "description": "Whether this evidence is mandatory for MVP."
+        },
+        "hash": {
+          "type": "string",
+          "description": "SHA-256 hash of the file for integrity verification."
+        }
+      }
+    },
+    "change_entry": {
+      "type": "object",
+      "required": ["date", "version", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of the change."
+        },
+        "version": {
+          "type": "string",
+          "description": "Version after the change."
+        },
+        "author": {
+          "type": "string",
+          "description": "Person or system that made the change."
+        },
+        "summary": {
+          "type": "string",
+          "description": "Summary of the change."
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["SHA-256", "SHA-512"],
+          "description": "Hash algorithm used."
+        },
+        "manifest_hash": {
+          "type": "string",
+          "description": "Hash of this manifest file (excluding this field)."
+        },
+        "signed_by": {
+          "type": "string",
+          "description": "Signer identity if digitally signed."
+        },
+        "signature": {
+          "type": "string",
+          "description": "Digital signature if applicable."
+        }
+      }
+    }
+  }
+}

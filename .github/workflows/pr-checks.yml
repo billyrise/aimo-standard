@@ -66,6 +66,16 @@ jobs:
           echo "=== i18n Taxonomy Assets Check ==="
           python tooling/taxonomy/build_i18n_taxonomy.py --check || echo "Legacy i18n check (deprecated)"
 
+      - name: Artifacts Sync Check (SSOT → Distribution)
+        run: |
+          echo "=== Artifacts Sync Check ==="
+          python tooling/checks/lint_artifacts_sync.py --check
+
+      - name: Baseline Audit
+        run: |
+          echo "=== Baseline Audit ==="
+          python tooling/audit/baseline_audit.py --check
+
       - name: Run Tests
         run: pytest -q
 
