@@ -14,6 +14,26 @@
     "evidence": {
       "type": "array",
       "items": { "$ref": "aimo-ev.schema.json" }
+    },
+    "request": {
+      "type": "object",
+      "description": "Optional request (application) record; id, timestamp, actor/role, scope, rationale recommended"
+    },
+    "review": {
+      "type": "object",
+      "description": "Optional review/approval record; id, timestamp, actor/role, decision, references recommended"
+    },
+    "exception": {
+      "type": "object",
+      "description": "Optional exception record; id, timestamp, scope, expiry, compensating controls, renewal ref recommended"
+    },
+    "renewal": {
+      "type": "object",
+      "description": "Optional renewal/re-evaluation record; id, timestamp, actor/role, decision, references recommended"
+    },
+    "change_log": {
+      "type": "object",
+      "description": "Optional change log or reference; id, timestamp, actor, change description, references recommended"
     }
   }
 }

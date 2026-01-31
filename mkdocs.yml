@@ -28,6 +28,10 @@ plugins:
       reconfigure_material: true
       docs_structure: suffix
 
+extra:
+  version:
+    provider: mike
+
 nav:
   - Home:
       - index.md
@@ -44,3 +48,20 @@ nav:
           - Changelog: standard/current/08-changelog.md
       - Versions:
           - standard/versions/index.md
+  - Conformance:
+      - conformance/index.md
+  - Artifacts:
+      - artifacts/index.md
+      - Evidence Bundle: artifacts/evidence-bundle.md
+      - Minimum Evidence Requirements: artifacts/minimum-evidence.md
+  - Validator:
+      - validator/index.md
+  - Examples:
+      - examples/index.md
+  - Coverage Map:
+      - coverage-map/index.md
+  - Governance:
+      - governance/index.md
+      - Trust Package: governance/trust-package.md
+  - Releases:
+      - releases/index.md

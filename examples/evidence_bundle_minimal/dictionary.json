@@ -1,0 +1,6 @@
+{
+  "entries": [
+    { "key": "REQ-001", "label": "Request", "description": "AI use request" },
+    { "key": "EV-001", "label": "Evidence", "description": "Use evidence record" }
+  ]
+}
