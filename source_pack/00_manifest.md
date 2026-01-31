@@ -218,3 +218,5 @@ The Trust Package PDF (`trust_package.pdf`, `trust_package.ja.pdf`) includes the
 | CU-06 | 2026-01-31 | Added: Responsibility Boundary page, expanded Integrity & Access, Submission Package steps, Non-overclaim consistency, Legal quick links, Audit journey sections |
 | CU-06.1 | 2026-01-31 | Created: source_pack/00_manifest.md as SSOT, DIRECTORY_TREE.txt |
 | CU-06.2 | 2026-01-31 | Updated: Trust Package PDF includes Responsibility Boundary, framework mappings, Releases appendix |
+| CU-06.3 | 2026-01-31 | Added: CI guardrail lint_manifest.py to enforce SSOT requirements |
+| CU-06.4 | 2026-01-31 | Added: RACI matrix, operational profiles table, auditor verification procedure |

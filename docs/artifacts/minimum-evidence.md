@@ -77,6 +77,28 @@ Evidence integrity and access control are essential for audit reliance. While AI
 - **Access is controlled**: access logs and role definitions show who had access and that least privilege was applied.
 - **Audit reliance is supported**: together, these elements give auditors confidence in the reliability of evidence.
 
+### Recommended operational profiles
+
+Choose a profile based on your risk tolerance and regulatory requirements. These are recommendations, not mandates.
+
+| Aspect | Lightweight | Standard | Strict |
+| --- | --- | --- | --- |
+| **Use case** | Internal pilots, low-risk AI | Production systems, moderate risk | Regulated industries, high-risk AI |
+| **Retention period** | 1-2 years | 5-7 years | 7-10+ years or regulatory minimum |
+| **Immutability** | SHA-256 hashes | SHA-256 + append-only logs | WORM storage + digital signatures |
+| **Access control** | Role-based (basic) | Role-based + access logging | Separation of duties + full audit trail |
+| **Audit trail** | Change log only | Change log + access log | Full system logs + periodic verification |
+| **Verification frequency** | On-demand | Quarterly | Monthly or continuous |
+| **Validator usage** | Optional | Required before submission | Required + automated CI checks |
+
+!!! note "Retention periods are examples"
+    Retention periods shown are illustrative. Organizations must determine retention based on applicable laws, contracts, industry requirements, and internal policies.
+
+!!! tip "How to choose"
+    - **Lightweight**: Suitable for experimentation, internal tools, or low-stakes applications where formal audits are unlikely.
+    - **Standard**: Recommended for most production deployments where audits may occur but are not continuous.
+    - **Strict**: Required for regulated industries (finance, healthcare, government) or AI systems with significant risk impact.
+
 ## Important note
 
 This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.

@@ -41,6 +41,33 @@ The AIMO Standard assumes:
 | **Continuous alignment** | Update evidence and mappings as AIMO Standard versions and external frameworks evolve. |
 | **Audit preparation** | Package evidence bundles and run validation before submission to auditors. |
 
+## RACI Matrix (責任分界表)
+
+The following RACI matrix clarifies responsibilities across AIMO Standard, Adopter, and Auditor roles.
+
+| Activity | AIMO Standard | Adopter | Auditor |
+| --- | :---: | :---: | :---: |
+| **Define evidence schema & templates** | R/A | I | I |
+| **Create evidence records** | — | R/A | I |
+| **Store & retain evidence** | — | R/A | I |
+| **Implement access controls** | — | R/A | I |
+| **Implement integrity controls (hash, WORM)** | — | R/A | I |
+| **Run validator on bundle** | C | R/A | C |
+| **Package submission (zip, checksums)** | C | R/A | I |
+| **Verify checksums (sha256)** | — | C | R/A |
+| **Verify bundle structure (validator)** | — | C | R/A |
+| **Interpret regulatory requirements** | — | R/A | C |
+| **Issue audit conclusion** | — | — | R/A |
+| **Provide legal advice** | — | — | — |
+
+**Legend**: R = Responsible, A = Accountable, C = Consulted, I = Informed, — = Not applicable
+
+!!! note "Key takeaway"
+    AIMO Standard is responsible for **defining the format**. Adopters are responsible for **creating, storing, and validating evidence**. Auditors are responsible for **verifying submissions and issuing audit conclusions**.
+
+!!! warning "Non-certification notice"
+    AIMO Standard is informative; it does not certify compliance or provide legal advice. Audit conclusions and conformity assessments are the sole responsibility of qualified auditors and legal professionals.
+
 ## Non-overclaim statement
 
 !!! warning "Important"

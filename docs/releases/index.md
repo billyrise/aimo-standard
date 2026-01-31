@@ -72,6 +72,19 @@ When preparing evidence for audit submission:
 
 For the complete preparation guide, see [Trust Package](../governance/trust-package.md).
 
+## For auditors: Verification procedure
+
+Auditors receiving evidence submissions should verify integrity and structure:
+
+1. **Verify checksums**: Run `sha256sum -c SHA256SUMS.txt` to confirm file integrity
+2. **Run validator**: Execute `python validator/src/validate.py bundle/` to check structure
+3. **Confirm version**: Verify the stated AIMO Standard version exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
+
+!!! tip "Obtain tools independently"
+    Auditors should download the validator and schemas directly from the official AIMO Standard release, not from the submitting party.
+
+For the full verification procedure, see [Trust Package](../governance/trust-package.md).
+
 ## Non-overclaim statement
 
 !!! warning "Important"

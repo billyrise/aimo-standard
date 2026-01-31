@@ -86,6 +86,86 @@ For release assets and verification, see [Releases](../releases/index.md).
 
 See [Responsibility Boundary](responsibility-boundary.md) for details on scope, assumptions, and adopter responsibilities.
 
+## For auditors: Verification procedure
+
+When receiving an evidence submission, auditors should verify integrity and structure using the following steps:
+
+### Step 1: Verify checksums (SHA-256)
+
+```bash
+# Download or receive SHA256SUMS.txt with the submission
+# Verify all files match their recorded checksums
+sha256sum -c SHA256SUMS.txt
+
+# Or verify individual files manually:
+sha256sum evidence_bundle.zip
+# Compare output against the value in SHA256SUMS.txt
+```
+
+If any checksum fails, the submission should be rejected or re-requested.
+
+### Step 2: Verify bundle structure (Validator)
+
+**Prerequisites** (one-time setup):
+
+```bash
+# Clone the official AIMO Standard release
+git clone https://github.com/billyrise/aimo-standard.git
+cd aimo-standard
+git checkout v0.1.2  # Use the version stated in submission
+
+# Set up Python environment
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+**Run validation**:
+
+```bash
+# Extract the submitted bundle
+unzip evidence_bundle.zip -d bundle/
+
+# Run validator against the bundle's root.json
+python validator/src/validate.py bundle/root.json
+
+# Expected output: "validation OK" or list of errors
+```
+
+**Example** (using built-in sample):
+
+```bash
+python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+```
+
+The validator checks:
+
+- Required files exist (EV records, Dictionary)
+- JSON files conform to schema
+- Cross-references (request_id, review_id, etc.) are valid
+- Timestamps are present and properly formatted
+
+### Step 3: Verify version alignment
+
+Check that the submission references an official AIMO Standard release:
+
+1. Confirm the stated version (e.g., `v0.1.2`) exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
+2. Compare submitted schemas against the release artifacts
+3. Note any deviations from the official release
+
+### What to look for
+
+| Check | Pass Criteria | Fail Action |
+| --- | --- | --- |
+| Checksums match | All `sha256sum -c` checks pass | Reject or re-request |
+| Validator passes | No errors from `validate.py` | Request fixes before acceptance |
+| Version exists | Release tag exists on GitHub | Clarify version alignment |
+| Required fields present | EV records have id, timestamp, source, summary | Request completion |
+| Traceability intact | Cross-references resolve correctly | Request linkage fixes |
+
+!!! info "Auditor independence"
+    Auditors should obtain the validator and schemas directly from the official AIMO Standard release, not from the submitting party, to ensure verification independence.
+
 ## Audit journey
 
 From this page, the recommended audit journey is:

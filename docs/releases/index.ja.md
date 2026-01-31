@@ -72,6 +72,19 @@ sha256sum trust_package.pdf
 
 完全な準備ガイドは [Trust Package](../governance/trust-package.ja.md) を参照。
 
+## 監査人向け：検証手順
+
+証跡提出物を受領した監査人は、完全性と構造を検証すべきである：
+
+1. **チェックサム検証**: `sha256sum -c SHA256SUMS.txt` を実行してファイルの完全性を確認
+2. **バリデータ実行**: `python validator/src/validate.py bundle/` を実行して構造を確認
+3. **バージョン確認**: 記載された AIMO Standard バージョンが [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認
+
+!!! tip "ツールを独立に取得"
+    監査人はバリデータとスキーマを、提出者からではなく、公式 AIMO Standard リリースから直接ダウンロードすべきである。
+
+完全な検証手順は [Trust Package](../governance/trust-package.ja.md) を参照。
+
 ## 非過剰主張ステートメント
 
 !!! warning "重要"

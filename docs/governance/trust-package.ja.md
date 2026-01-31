@@ -86,6 +86,86 @@ AIMO Standard は構造化された証跡フォーマットと説明可能性フ
 
 スコープ、前提条件、採用者責任の詳細は [責任境界](responsibility-boundary.ja.md) を参照。
 
+## 監査人向け：検証手順
+
+証跡提出物を受領した際、監査人は以下の手順で完全性と構造を検証すべきである：
+
+### ステップ1：チェックサムの検証（SHA-256）
+
+```bash
+# 提出物と一緒に SHA256SUMS.txt を受領
+# 全ファイルが記録されたチェックサムと一致することを確認
+sha256sum -c SHA256SUMS.txt
+
+# または個別ファイルを手動検証：
+sha256sum evidence_bundle.zip
+# 出力を SHA256SUMS.txt の値と比較
+```
+
+チェックサムが一致しない場合、提出物を却下または再提出を要求すべきである。
+
+### ステップ2：バンドル構造の検証（バリデータ）
+
+**前提条件**（初回セットアップ）：
+
+```bash
+# 公式 AIMO Standard リリースをクローン
+git clone https://github.com/billyrise/aimo-standard.git
+cd aimo-standard
+git checkout v0.1.2  # 提出物に記載されたバージョンを使用
+
+# Python 環境のセットアップ
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+**検証の実行**：
+
+```bash
+# 提出されたバンドルを展開
+unzip evidence_bundle.zip -d bundle/
+
+# バンドルの root.json に対してバリデータを実行
+python validator/src/validate.py bundle/root.json
+
+# 期待出力：「validation OK」またはエラーリスト
+```
+
+**例**（組み込みサンプル使用）：
+
+```bash
+python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+```
+
+バリデータは以下を確認する：
+
+- 必須ファイルの存在（EV レコード、Dictionary）
+- JSON ファイルのスキーマ準拠
+- 相互参照（request_id、review_id 等）の有効性
+- タイムスタンプの存在と適切な形式
+
+### ステップ3：バージョン整合の確認
+
+提出物が公式 AIMO Standard リリースを参照していることを確認する：
+
+1. 記載バージョン（例：`v0.1.2`）が [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認
+2. 提出されたスキーマをリリースアーティファクトと比較
+3. 公式リリースからの逸脱を記録
+
+### 確認ポイント
+
+| 確認項目 | 合格基準 | 不合格時の対応 |
+| --- | --- | --- |
+| チェックサム一致 | 全 `sha256sum -c` チェック合格 | 却下または再提出要求 |
+| バリデータ合格 | `validate.py` でエラーなし | 受領前に修正要求 |
+| バージョン存在 | リリースタグが GitHub に存在 | バージョン整合を明確化 |
+| 必須フィールド存在 | EV レコードに id, timestamp, source, summary | 完成を要求 |
+| トレーサビリティ維持 | 相互参照が正しく解決 | リンク修正を要求 |
+
+!!! info "監査人の独立性"
+    監査人はバリデータとスキーマを、提出者からではなく、公式 AIMO Standard リリースから直接取得し、検証の独立性を確保すべきである。
+
 ## 監査ジャーニー
 
 本ページからの推奨監査ジャーニー：

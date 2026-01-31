@@ -28,6 +28,7 @@ jobs:
         run: |
           python tooling/checks/lint_i18n.py
           python tooling/checks/lint_schema.py
+          python tooling/checks/lint_manifest.py
           pytest -q
 
       - name: Configure git user
