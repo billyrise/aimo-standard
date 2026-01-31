@@ -60,20 +60,28 @@ ARTIFACT_PATHS = [
 # Trust Package pages to include in PDF (in order)
 TRUST_PACKAGE_PAGES_EN = [
     "docs/governance/trust-package.md",
-    "docs/conformance/index.md",
-    "docs/coverage-map/index.md",
-    "docs/coverage-map/methodology.md",
+    "docs/governance/responsibility-boundary.md",
     "docs/artifacts/evidence-bundle.md",
     "docs/artifacts/minimum-evidence.md",
+    "docs/coverage-map/methodology.md",
+    "docs/coverage-map/iso-42001.md",
+    "docs/coverage-map/nist-ai-rmf.md",
+    "docs/coverage-map/eu-ai-act.md",
+    "docs/coverage-map/isms.md",
+    "docs/releases/index.md",
 ]
 
 TRUST_PACKAGE_PAGES_JA = [
     "docs/governance/trust-package.ja.md",
-    "docs/conformance/index.ja.md",
-    "docs/coverage-map/index.ja.md",
-    "docs/coverage-map/methodology.ja.md",
+    "docs/governance/responsibility-boundary.ja.md",
     "docs/artifacts/evidence-bundle.ja.md",
     "docs/artifacts/minimum-evidence.ja.md",
+    "docs/coverage-map/methodology.ja.md",
+    "docs/coverage-map/iso-42001.ja.md",
+    "docs/coverage-map/nist-ai-rmf.ja.md",
+    "docs/coverage-map/eu-ai-act.ja.md",
+    "docs/coverage-map/isms.ja.md",
+    "docs/releases/index.ja.md",
 ]
 
 PDF_HTML_TEMPLATE = """<!DOCTYPE html>

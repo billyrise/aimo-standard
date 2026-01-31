@@ -84,13 +84,18 @@ The GitHub Actions release workflow (`release.yml`) automatically:
 
 ## Trust Package Contents
 
-The PDF includes:
+The PDF includes (in order):
 
-- Trust Package overview
-- Conformance levels
-- Coverage Map index and methodology
-- Evidence Bundle structure
-- Minimum Evidence requirements
+1. Trust Package overview
+2. Responsibility Boundary (scope, assumptions, adopter responsibilities)
+3. Evidence Bundle (structure, TOC, traceability)
+4. Minimum Evidence Requirements (lifecycle checklist, integrity & access)
+5. Coverage Map Methodology
+6. ISO/IEC 42001 mapping
+7. NIST AI RMF mapping
+8. EU AI Act mapping
+9. ISMS mapping
+10. Releases (appendix: download, verification, submission steps)
 
 ## Artifacts Zip Contents
 
