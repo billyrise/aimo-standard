@@ -112,7 +112,7 @@ sha256sum evidence_bundle.zip
 # 公式 AIMO Standard リリースをクローン
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
-git checkout v0.1.2  # 提出物に記載されたバージョンを使用
+git checkout v0.1.3  # 提出物に記載されたバージョンを使用
 
 # Python 環境のセットアップ
 python -m venv .venv
@@ -149,7 +149,7 @@ python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 
 提出物が公式 AIMO Standard リリースを参照していることを確認する：
 
-1. 記載バージョン（例：`v0.1.2`）が [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認
+1. 記載バージョン（例：`v0.1.3`）が [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認
 2. 提出されたスキーマをリリースアーティファクトと比較
 3. 公式リリースからの逸脱を記録
 

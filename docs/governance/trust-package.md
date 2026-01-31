@@ -112,7 +112,7 @@ If any checksum fails, the submission should be rejected or re-requested.
 # Clone the official AIMO Standard release
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
-git checkout v0.1.2  # Use the version stated in submission
+git checkout v0.1.3  # Use the version stated in submission
 
 # Set up Python environment
 python -m venv .venv
@@ -149,7 +149,7 @@ The validator checks:
 
 Check that the submission references an official AIMO Standard release:
 
-1. Confirm the stated version (e.g., `v0.1.2`) exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
+1. Confirm the stated version (e.g., `v0.1.3`) exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
 2. Compare submitted schemas against the release artifacts
 3. Note any deviations from the official release
 
