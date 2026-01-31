@@ -1,0 +1,105 @@
+{
+  "$schema": "./schemas/taxonomy_pack.schema.json",
+  "standard_id": "AIMO-STD",
+  "version": "0.1.0",
+  "released_date": "2026-01-31",
+  "dimensions": [
+    {
+      "dimension_id": "FS",
+      "name_en": "Functional Scope",
+      "name_ja": "機能スコープ",
+      "description_en": "Categorizes AI use by the business function it supports.",
+      "description_ja": "AIが支援するビジネス機能による分類。",
+      "token_type": "numeric",
+      "required": true,
+      "multi_select": false,
+      "composition_priority": 1,
+      "examples": ["FS-001", "FS-002", "FS-003"]
+    },
+    {
+      "dimension_id": "UC",
+      "name_en": "Use Case Class",
+      "name_ja": "ユースケース分類",
+      "description_en": "Categorizes AI use by the type of task or interaction.",
+      "description_ja": "タスクまたは対話の種類によるAI利用の分類。",
+      "token_type": "numeric",
+      "required": true,
+      "multi_select": true,
+      "composition_priority": 2,
+      "examples": ["UC-001", "UC-005", "UC-010"]
+    },
+    {
+      "dimension_id": "DT",
+      "name_en": "Data Type",
+      "name_ja": "データ種別",
+      "description_en": "Categorizes the sensitivity and classification of data involved.",
+      "description_ja": "関与するデータの機密性と分類。",
+      "token_type": "numeric",
+      "required": true,
+      "multi_select": true,
+      "composition_priority": 3,
+      "examples": ["DT-001", "DT-004", "DT-007"]
+    },
+    {
+      "dimension_id": "CH",
+      "name_en": "Channel",
+      "name_ja": "チャネル",
+      "description_en": "Categorizes how users access or interact with the AI.",
+      "description_ja": "ユーザーがAIにアクセス・対話する方法。",
+      "token_type": "numeric",
+      "required": true,
+      "multi_select": true,
+      "composition_priority": 4,
+      "examples": ["CH-001", "CH-002", "CH-003"]
+    },
+    {
+      "dimension_id": "IM",
+      "name_en": "Integration Mode",
+      "name_ja": "統合形態",
+      "description_en": "Categorizes how AI is integrated into enterprise systems.",
+      "description_ja": "AIがエンタープライズシステムに統合される形態。",
+      "token_type": "numeric",
+      "required": true,
+      "multi_select": false,
+      "composition_priority": 5,
+      "examples": ["IM-001", "IM-002", "IM-003"]
+    },
+    {
+      "dimension_id": "RS",
+      "name_en": "Risk Surface",
+      "name_ja": "リスク面",
+      "description_en": "Categorizes the types of risks associated with the AI use.",
+      "description_ja": "AI利用に関連するリスクの種類。",
+      "token_type": "numeric",
+      "required": true,
+      "multi_select": true,
+      "composition_priority": 6,
+      "examples": ["RS-001", "RS-003", "RS-005"]
+    },
+    {
+      "dimension_id": "OB",
+      "name_en": "Outcome / Benefit",
+      "name_ja": "成果",
+      "description_en": "Categorizes the expected outcomes or benefits from AI use.",
+      "description_ja": "AI利用から期待される成果・ベネフィット。",
+      "token_type": "numeric",
+      "required": false,
+      "multi_select": true,
+      "composition_priority": 7,
+      "examples": ["OB-001", "OB-002", "OB-004"]
+    },
+    {
+      "dimension_id": "EV",
+      "name_en": "Evidence Type",
+      "name_ja": "証跡種別",
+      "description_en": "Categorizes the types of evidence required or collected.",
+      "description_ja": "必要な/収集する証跡の種類。",
+      "token_type": "numeric",
+      "required": true,
+      "multi_select": true,
+      "composition_priority": 8,
+      "examples": ["EV-001", "EV-002", "EV-003"]
+    }
+  ],
+  "dictionary_csv": "taxonomy_dictionary_v0.1.csv"
+}

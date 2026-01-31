@@ -1,6 +1,75 @@
 {
+  "taxonomy_version": "0.1.0",
   "entries": [
-    { "key": "REQ-001", "label": "Request", "description": "AI use request" },
-    { "key": "EV-001", "label": "Evidence", "description": "Use evidence record" }
+    {
+      "dimension_id": "FS",
+      "code": "FS-001",
+      "label_en": "End-user Productivity",
+      "label_ja": "社内生産性",
+      "definition_en": "AI used to improve productivity of internal end users.",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "UC",
+      "code": "UC-001",
+      "label_en": "General Q&A",
+      "label_ja": "一般QA",
+      "definition_en": "General question answering and information lookup.",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "DT",
+      "code": "DT-002",
+      "label_en": "Internal",
+      "label_ja": "社内情報",
+      "definition_en": "Non-public internal business data.",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "CH",
+      "code": "CH-004",
+      "label_en": "ChatOps",
+      "label_ja": "チャット連携",
+      "definition_en": "AI accessed via Slack/Teams integrations.",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "IM",
+      "code": "IM-002",
+      "label_en": "SaaS Integrated",
+      "label_ja": "SaaS連携",
+      "definition_en": "AI features integrated within a SaaS application.",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "RS",
+      "code": "RS-001",
+      "label_en": "Data Leakage",
+      "label_ja": "情報漏えい",
+      "definition_en": "Risk of unintended data disclosure.",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-001",
+      "label_en": "System Overview",
+      "label_ja": "システム概要",
+      "definition_en": "High-level overview of the AI system.",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    }
   ]
 }
