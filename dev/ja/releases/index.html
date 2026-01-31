@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://standard.aimoaas.com/dev/ja/releases/">
       
       
-        <link rel="prev" href="../governance/trust-package/">
+        <link rel="prev" href="../governance/responsibility-boundary/">
       
       
       
@@ -1405,6 +1405,8 @@
       
         
       
+        
+      
     
     
     
@@ -1463,6 +1465,29 @@
   
   <span class="md-ellipsis">
     Trust Package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../governance/responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
     
   </span>
   
@@ -1622,6 +1647,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      提出パッケージの準備
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      非過剰主張ステートメント
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1716,6 +1759,23 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 <li><strong>移行とチェックサム</strong>: リリースごとに文書化。破壊的変更には移行ガイドが必要。</li>
 </ul>
 <p>ガバナンスとバージョニングポリシーは <a href="../governance/">Governance</a> を参照。</p>
+<h2 id="_5">提出パッケージの準備</h2>
+<p>監査提出用の証跡を準備する際：</p>
+<ol>
+<li><strong>Evidence Bundle の作成</strong>: <a href="../artifacts/evidence-bundle/">Evidence Bundle</a> と <a href="../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> に従い、EV レコード、Dictionary、Summary、Change Log を作成する。</li>
+<li><strong>Validator の実行</strong>: <code>python validator/src/validate.py</code> を実行して構造整合性を確認する。エラーはすべて修正する。</li>
+<li><strong>チェックサムの生成</strong>: 検証用の SHA-256 チェックサムを作成する：
+   <code>bash
+   sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
+<li><strong>パッケージ化</strong>: バンドルディレクトリの zip アーカイブを作成する。</li>
+<li><strong>バージョン整合の記録</strong>: 証跡が整合する AIMO Standard リリース（例：<code>v1.0.0</code>）を記録する。</li>
+<li><strong>提出</strong>: パッケージ、チェックサム、バージョン参照を監査人に提供する。</li>
+</ol>
+<p>完全な準備ガイドは <a href="../governance/trust-package/">Trust Package</a> を参照。</p>
+<h2 id="_6">非過剰主張ステートメント</h2>
+<p>!!! warning "重要"
+    AIMO Standard は<strong>説明可能性と証跡準備</strong>を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も<strong>行わない</strong>。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。</p>
+<p>スコープ、前提条件、採用者責任は <a href="../governance/responsibility-boundary/">責任境界</a> を参照。</p>
 
 
 

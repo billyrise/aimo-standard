@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../releases/">
+        <link rel="next" href="../responsibility-boundary/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1409,6 +1409,8 @@
       
         
       
+        
+      
     
     
     
@@ -1559,9 +1561,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#important-note" class="md-nav__link">
+  <a href="#responsibility-boundary" class="md-nav__link">
     <span class="md-ellipsis">
-      Important note
+      Responsibility boundary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prepare-a-submission-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to prepare a submission package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-overclaim-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-overclaim statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit journey
     </span>
   </a>
   
@@ -1571,6 +1600,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1715,9 +1767,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#important-note" class="md-nav__link">
+  <a href="#responsibility-boundary" class="md-nav__link">
     <span class="md-ellipsis">
-      Important note
+      Responsibility boundary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prepare-a-submission-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to prepare a submission package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-overclaim-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-overclaim statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit journey
     </span>
   </a>
   
@@ -1839,8 +1918,37 @@ See <a href="https://github.com/billyrise/aimo-standard/blob/main/README.md">REA
 <li><strong>Validator Rules</strong>: <code>validator/rules/</code> — Validation rule definitions</li>
 <li><strong>Governance docs</strong>: <code>VERSIONING.md</code>, <code>GOVERNANCE.md</code>, <code>SECURITY.md</code>, <code>LICENSE.txt</code>, etc.</li>
 </ul>
-<h2 id="important-note">Important note</h2>
-<p>This package supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.</p>
+<h2 id="responsibility-boundary">Responsibility boundary</h2>
+<p>The AIMO Standard provides a structured evidence format and explainability framework. It does <strong>not</strong> provide legal advice, compliance certification, risk assessment, or audit execution.</p>
+<p>For the full scope definition, assumptions, and adopter responsibilities, see <a href="../responsibility-boundary/">Responsibility Boundary</a>.</p>
+<h2 id="how-to-prepare-a-submission-package">How to prepare a submission package</h2>
+<p>Follow these steps to prepare an audit-ready submission:</p>
+<ol>
+<li><strong>Generate Evidence Bundle</strong>: Create EV records, Dictionary, Summary, and Change Log per <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> and <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a>.</li>
+<li><strong>Run Validator</strong>: Execute <code>python validator/src/validate.py</code> against your bundle to check structural consistency. Fix any errors before proceeding.</li>
+<li><strong>Create Checksums</strong>: Generate SHA-256 checksums for all submission files:
+   <code>bash
+   sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
+<li><strong>Package Artifacts</strong>: Create a zip archive of your evidence bundle:
+   <code>bash
+   zip -r evidence_bundle.zip bundle_directory/</code></li>
+<li><strong>Reference Release Version</strong>: Note which AIMO Standard version (e.g., <code>v1.0.0</code>) your bundle aligns with.</li>
+<li><strong>Deliver</strong>: Provide the zip, checksums, and version reference to your auditor or compliance function.</li>
+</ol>
+<p>For release assets and verification, see <a href="../../releases/">Releases</a>.</p>
+<h2 id="non-overclaim-statement">Non-overclaim statement</h2>
+<p>!!! warning "Important"
+    The AIMO Standard supports <strong>explainability and evidence readiness</strong>. It does <strong>not</strong> provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.</p>
+<p>See <a href="../responsibility-boundary/">Responsibility Boundary</a> for details on scope, assumptions, and adopter responsibilities.</p>
+<h2 id="audit-journey">Audit journey</h2>
+<p>From this page, the recommended audit journey is:</p>
+<ol>
+<li><strong>Evidence structure</strong>: <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> — understand bundle TOC and traceability</li>
+<li><strong>Required evidence</strong>: <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> — MUST-level checklist by lifecycle</li>
+<li><strong>Framework alignment</strong>: <a href="../../coverage-map/">Coverage Map</a> + <a href="../../coverage-map/methodology/">Methodology</a> — see how AIMO maps to external frameworks</li>
+<li><strong>Validation</strong>: <a href="../../validator/">Validator</a> — run structural consistency checks</li>
+<li><strong>Download</strong>: <a href="../../releases/">Releases</a> — get release assets and verify checksums</li>
+</ol>
 
 
 

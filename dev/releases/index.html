@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://standard.aimoaas.com/dev/releases/">
       
       
-        <link rel="prev" href="../governance/trust-package/">
+        <link rel="prev" href="../governance/responsibility-boundary/">
       
       
       
@@ -1405,6 +1405,8 @@
       
         
       
+        
+      
     
     
     
@@ -1463,6 +1465,29 @@
   
   <span class="md-ellipsis">
     Trust Package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../governance/responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
     
   </span>
   
@@ -1622,6 +1647,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#preparing-your-submission-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing your submission package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-overclaim-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-overclaim statement
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1716,6 +1759,23 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 <li><strong>Migration and checksums</strong>: documented per release; breaking changes require migration guidance.</li>
 </ul>
 <p>For governance and versioning policy, see <a href="../governance/">Governance</a>.</p>
+<h2 id="preparing-your-submission-package">Preparing your submission package</h2>
+<p>When preparing evidence for audit submission:</p>
+<ol>
+<li><strong>Create your Evidence Bundle</strong>: Follow <a href="../artifacts/evidence-bundle/">Evidence Bundle</a> and <a href="../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> to create EV records, Dictionary, Summary, and Change Log.</li>
+<li><strong>Run the Validator</strong>: Execute <code>python validator/src/validate.py</code> to check structural consistency. Fix all errors before proceeding.</li>
+<li><strong>Generate Checksums</strong>: Create SHA-256 checksums for verification:
+   <code>bash
+   sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
+<li><strong>Package</strong>: Create a zip archive of your bundle directory.</li>
+<li><strong>Document version alignment</strong>: Note which AIMO Standard release (e.g., <code>v1.0.0</code>) your evidence aligns with.</li>
+<li><strong>Deliver</strong>: Provide the package, checksums, and version reference to your auditor.</li>
+</ol>
+<p>For the complete preparation guide, see <a href="../governance/trust-package/">Trust Package</a>.</p>
+<h2 id="non-overclaim-statement">Non-overclaim statement</h2>
+<p>!!! warning "Important"
+    The AIMO Standard supports <strong>explainability and evidence readiness</strong>. It does <strong>not</strong> provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.</p>
+<p>See <a href="../governance/responsibility-boundary/">Responsibility Boundary</a> for scope, assumptions, and adopter responsibilities.</p>
 
 
 

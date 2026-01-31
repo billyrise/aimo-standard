@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../releases/">
+        <link rel="next" href="../responsibility-boundary/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1409,6 +1409,8 @@
       
         
       
+        
+      
     
     
     
@@ -1561,7 +1563,34 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      重要な注意
+      責任境界
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      提出パッケージの準備方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      非過剰主張ステートメント
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      監査ジャーニー
     </span>
   </a>
   
@@ -1571,6 +1600,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1717,7 +1769,34 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      重要な注意
+      責任境界
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      提出パッケージの準備方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      非過剰主張ステートメント
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      監査ジャーニー
     </span>
   </a>
   
@@ -1839,8 +1918,37 @@
 <li><strong>バリデータルール</strong>: <code>validator/rules/</code> — 検証ルール定義</li>
 <li><strong>ガバナンス文書</strong>: <code>VERSIONING.md</code>、<code>GOVERNANCE.md</code>、<code>SECURITY.md</code>、<code>LICENSE.txt</code> など</li>
 </ul>
-<h2 id="_5">重要な注意</h2>
-<p>このパッケージは説明可能性とエビデンス準備をサポートします。法的助言を提供したり、コンプライアンスを保証するものではありません。</p>
+<h2 id="_5">責任境界</h2>
+<p>AIMO Standard は構造化された証跡フォーマットと説明可能性フレームワークを提供する。法的助言、適合認証、リスク評価、監査実施は<strong>提供しない</strong>。</p>
+<p>スコープ定義、前提条件、採用者責任の詳細は <a href="../responsibility-boundary/">責任境界</a> を参照。</p>
+<h2 id="_6">提出パッケージの準備方法</h2>
+<p>監査対応の提出物を準備するには、以下のステップに従う：</p>
+<ol>
+<li><strong>Evidence Bundle の生成</strong>: <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> と <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> に従い、EV レコード、Dictionary、Summary、Change Log を作成する。</li>
+<li><strong>Validator の実行</strong>: <code>python validator/src/validate.py</code> をバンドルに対して実行し、構造整合性を確認する。エラーがあれば修正する。</li>
+<li><strong>チェックサムの作成</strong>: 提出ファイルすべての SHA-256 チェックサムを生成する：
+   <code>bash
+   sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
+<li><strong>アーティファクトのパッケージ化</strong>: 証跡バンドルの zip アーカイブを作成する：
+   <code>bash
+   zip -r evidence_bundle.zip bundle_directory/</code></li>
+<li><strong>リリースバージョンの参照</strong>: バンドルが整合する AIMO Standard バージョン（例：<code>v1.0.0</code>）を記録する。</li>
+<li><strong>提出</strong>: zip、チェックサム、バージョン参照を監査人またはコンプライアンス機能に提供する。</li>
+</ol>
+<p>リリースアセットと検証については <a href="../../releases/">Releases</a> を参照。</p>
+<h2 id="_7">非過剰主張ステートメント</h2>
+<p>!!! warning "重要"
+    AIMO Standard は<strong>説明可能性と証跡準備</strong>を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も<strong>行わない</strong>。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。</p>
+<p>スコープ、前提条件、採用者責任の詳細は <a href="../responsibility-boundary/">責任境界</a> を参照。</p>
+<h2 id="_8">監査ジャーニー</h2>
+<p>本ページからの推奨監査ジャーニー：</p>
+<ol>
+<li><strong>証跡構造</strong>: <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> — バンドル TOC と追跡可能性を理解</li>
+<li><strong>必須証跡</strong>: <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> — ライフサイクル別 MUST チェックリスト</li>
+<li><strong>フレームワーク整合</strong>: <a href="../../coverage-map/">Coverage Map</a> + <a href="../../coverage-map/methodology/">Methodology</a> — AIMO と外部フレームワークの対応を確認</li>
+<li><strong>検証</strong>: <a href="../../validator/">Validator</a> — 構造整合性チェックを実行</li>
+<li><strong>ダウンロード</strong>: <a href="../../releases/">Releases</a> — リリースアセットを取得しチェックサムを検証</li>
+</ol>
 
 
 

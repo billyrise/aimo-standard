@@ -1165,6 +1165,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="6) Integrity &amp; Access (完全性/アクセス制御)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-control-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access control guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retention guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immutability-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immutability options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-trail-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit trail expectations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-it-proves" class="md-nav__link">
+    <span class="md-ellipsis">
+      What it proves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1517,6 +1568,8 @@
       
         
       
+        
+      
     
     
     
@@ -1575,6 +1628,29 @@
   
   <span class="md-ellipsis">
     Trust Package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
     
   </span>
   
@@ -1730,6 +1806,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="6) Integrity &amp; Access (完全性/アクセス制御)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-control-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access control guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retention guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immutability-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immutability options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-trail-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit trail expectations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-it-proves" class="md-nav__link">
+    <span class="md-ellipsis">
+      What it proves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1806,9 +1933,116 @@
 <li><strong>What it proves</strong>: that changes to the bundle or its contents are recorded and traceable.</li>
 </ul>
 <h2 id="6-integrity-access">6) Integrity &amp; Access (完全性/アクセス制御)</h2>
+<p>Evidence integrity and access control are essential for audit reliance. While AIMO does not prescribe specific technical controls, adopters should document how these expectations are met.</p>
+<h3 id="access-control-guidance">Access control guidance</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Role-based access</strong></td>
+<td>Define roles (e.g., evidence creator, reviewer, auditor, admin) and document who can create, read, update, or delete evidence.</td>
+</tr>
+<tr>
+<td><strong>Least privilege</strong></td>
+<td>Grant minimum necessary access; restrict write access to authorized personnel.</td>
+</tr>
+<tr>
+<td><strong>Access logging</strong></td>
+<td>Log access events (who, when, what) for audit trail purposes.</td>
+</tr>
+<tr>
+<td><strong>Separation of duties</strong></td>
+<td>Where practical, separate evidence creation from approval roles.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retention-guidance">Retention guidance</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Retention period</strong></td>
+<td>Define and document retention periods based on regulatory requirements and organizational policy (e.g., 5-7 years for financial audits).</td>
+</tr>
+<tr>
+<td><strong>Retention schedule</strong></td>
+<td>Maintain a schedule showing what evidence is retained, for how long, and when it can be disposed.</td>
+</tr>
+<tr>
+<td><strong>Legal hold</strong></td>
+<td>Support legal hold processes that suspend normal retention/deletion for litigation or investigation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="immutability-options">Immutability options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cryptographic hashing</strong></td>
+<td>Generate SHA-256 (or stronger) hashes for evidence files; store hashes separately for verification.</td>
+</tr>
+<tr>
+<td><strong>WORM storage</strong></td>
+<td>Use Write-Once-Read-Many storage for evidence archives to prevent modification.</td>
+</tr>
+<tr>
+<td><strong>Append-only logs</strong></td>
+<td>Use append-only audit logs for change tracking.</td>
+</tr>
+<tr>
+<td><strong>Digital signatures</strong></td>
+<td>Sign evidence bundles to prove authorship and detect tampering.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="audit-trail-expectations">Audit trail expectations</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>What to document</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Change log</strong></td>
+<td>Record who changed what, when, and why (see Change Log lifecycle group).</td>
+</tr>
+<tr>
+<td><strong>Access log</strong></td>
+<td>Record who accessed evidence, when, and for what purpose.</td>
+</tr>
+<tr>
+<td><strong>System logs</strong></td>
+<td>Retain relevant system logs (authentication, authorization) that support evidence integrity claims.</td>
+</tr>
+<tr>
+<td><strong>Verification records</strong></td>
+<td>Document periodic integrity verification (hash checks, audit reviews).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-it-proves">What it proves</h3>
 <ul>
-<li><strong>Implementation</strong>: recommended (e.g. access control, hashing, WORM, audit logs). Requirements are stated from the perspective of explainability: who had access, how integrity was preserved.</li>
-<li><strong>What it proves</strong>: that evidence is preserved and access is controlled to support audit reliance.</li>
+<li><strong>Evidence is preserved</strong>: integrity mechanisms (hashing, WORM, signatures) demonstrate that evidence has not been tampered with.</li>
+<li><strong>Access is controlled</strong>: access logs and role definitions show who had access and that least privilege was applied.</li>
+<li><strong>Audit reliance is supported</strong>: together, these elements give auditors confidence in the reliability of evidence.</li>
 </ul>
 <h2 id="important-note">Important note</h2>
 <p>This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.</p>

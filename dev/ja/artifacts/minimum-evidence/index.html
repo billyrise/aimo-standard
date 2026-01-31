@@ -1165,6 +1165,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="6) Integrity &amp; Access（完全性/アクセス制御）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      アクセス制御の指針
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      保持期間の指針
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      不変性オプション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      監査証跡の期待事項
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      示すこと
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1517,6 +1568,8 @@
       
         
       
+        
+      
     
     
     
@@ -1575,6 +1628,29 @@
   
   <span class="md-ellipsis">
     Trust Package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
     
   </span>
   
@@ -1730,6 +1806,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="6) Integrity &amp; Access（完全性/アクセス制御）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      アクセス制御の指針
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      保持期間の指針
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      不変性オプション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      監査証跡の期待事項
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      示すこと
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1806,9 +1933,116 @@
 <li><strong>示すこと</strong>: バンドルまたはその内容の変更が記録され追跡可能であること。</li>
 </ul>
 <h2 id="6-integrity-access">6) Integrity &amp; Access（完全性/アクセス制御）</h2>
+<p>証跡の完全性とアクセス制御は監査の依拠に不可欠である。AIMO は特定の技術的統制を規定しないが、採用者はこれらの期待事項がどのように満たされているかを文書化すべきである。</p>
+<h3 id="_1">アクセス制御の指針</h3>
+<table>
+<thead>
+<tr>
+<th>観点</th>
+<th>指針</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ロールベースアクセス</strong></td>
+<td>ロール（証跡作成者、審査者、監査人、管理者等）を定義し、誰が証跡を作成・閲覧・更新・削除できるかを文書化する。</td>
+</tr>
+<tr>
+<td><strong>最小権限</strong></td>
+<td>必要最小限のアクセスを付与し、書き込み権限を承認された担当者に制限する。</td>
+</tr>
+<tr>
+<td><strong>アクセスログ</strong></td>
+<td>監査証跡のため、アクセスイベント（誰が、いつ、何を）を記録する。</td>
+</tr>
+<tr>
+<td><strong>職務分離</strong></td>
+<td>可能な場合、証跡作成と承認のロールを分離する。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">保持期間の指針</h3>
+<table>
+<thead>
+<tr>
+<th>観点</th>
+<th>指針</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>保持期間</strong></td>
+<td>規制要件と組織ポリシーに基づき保持期間を定義・文書化する（例：財務監査では5〜7年）。</td>
+</tr>
+<tr>
+<td><strong>保持スケジュール</strong></td>
+<td>どの証跡を、どのくらいの期間保持し、いつ廃棄可能かを示すスケジュールを維持する。</td>
+</tr>
+<tr>
+<td><strong>訴訟ホールド</strong></td>
+<td>訴訟・調査のため通常の保持・削除を停止する訴訟ホールドプロセスを支援する。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">不変性オプション</h3>
+<table>
+<thead>
+<tr>
+<th>オプション</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>暗号学的ハッシュ</strong></td>
+<td>証跡ファイルに対し SHA-256（またはより強力な）ハッシュを生成し、検証用にハッシュを別途保管する。</td>
+</tr>
+<tr>
+<td><strong>WORM ストレージ</strong></td>
+<td>証跡アーカイブに Write-Once-Read-Many ストレージを使用し、変更を防止する。</td>
+</tr>
+<tr>
+<td><strong>追記専用ログ</strong></td>
+<td>変更追跡に追記専用の監査ログを使用する。</td>
+</tr>
+<tr>
+<td><strong>デジタル署名</strong></td>
+<td>証跡バンドルに署名し、作成者を証明し改ざんを検出する。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">監査証跡の期待事項</h3>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>文書化すべき内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>変更ログ</strong></td>
+<td>誰が、何を、いつ、なぜ変更したかを記録する（Change Log ライフサイクルグループ参照）。</td>
+</tr>
+<tr>
+<td><strong>アクセスログ</strong></td>
+<td>誰が、いつ、何のために証跡にアクセスしたかを記録する。</td>
+</tr>
+<tr>
+<td><strong>システムログ</strong></td>
+<td>証跡の完全性主張を支える関連システムログ（認証、認可）を保持する。</td>
+</tr>
+<tr>
+<td><strong>検証記録</strong></td>
+<td>定期的な完全性検証（ハッシュチェック、監査レビュー）を文書化する。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">示すこと</h3>
 <ul>
-<li><strong>実装</strong>: 推奨（アクセス制御、ハッシュ、WORM、監査ログ等）。要件は説明可能性の観点で記載する（誰がアクセスしたか、完全性をどう保全したか）。</li>
-<li><strong>示すこと</strong>: 証跡が保全され、監査の依拠を支えるアクセス制御が行われていること。</li>
+<li><strong>証跡が保全されている</strong>: 完全性メカニズム（ハッシュ、WORM、署名）により、証跡が改ざんされていないことを示す。</li>
+<li><strong>アクセスが制御されている</strong>: アクセスログとロール定義により、誰がアクセス権を持ち、最小権限が適用されていることを示す。</li>
+<li><strong>監査の依拠が支えられている</strong>: これらの要素を合わせて、監査人に証跡の信頼性への確信を与える。</li>
 </ul>
 <h2 id="important-note">Important note</h2>
 <p>本最小セットは説明可能性と証跡準備を支援する。法的助言の提供および適合の保証は行わない。</p>
