@@ -2787,7 +2787,7 @@ EV: EV-001（申請記録）, EV-002（審査/承認記録）
 <tbody>
 <tr>
 <td><strong>SSOT</strong></td>
-<td><code>source_pack/03_taxonomy/dictionary_seed.csv</code></td>
+<td><code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code></td>
 <td>唯一の正（91コード、21列）</td>
 </tr>
 <tr>
@@ -2810,14 +2810,20 @@ EV: EV-001（申請記録）, EV-002（審査/承認記録）
 <td><code>source_pack/03_taxonomy/dimensions_en_ja.md</code></td>
 <td>生成されたEN/JAマッピング</td>
 </tr>
+<tr>
+<td>互換</td>
+<td><code>source_pack/03_taxonomy/dictionary_seed.csv</code></td>
+<td>互換コピー（SSOTと同一）</td>
+</tr>
 </tbody>
 </table>
-<p><strong>このドキュメントページは説明用です。</strong> 正式な定義については、常に<code>source_pack/03_taxonomy/</code>内のSSOTファイル<code>dictionary_seed.csv</code>を参照してください。</p>
+<p><strong>このドキュメントページは説明用です。</strong> 正式な定義については、常に<code>source_pack/03_taxonomy/</code>内のSSOTファイル<code>taxonomy_dictionary_v0.1.csv</code>を参照してください。</p>
 <h3 id="_10">更新ワークフロー</h3>
 <ol>
-<li>まずSSOT CSV（<code>dictionary_seed.csv</code>）を編集</li>
+<li>まずSSOT CSV（<code>taxonomy_dictionary_v0.1.csv</code>）を編集</li>
 <li><code>python tooling/checks/lint_taxonomy_dictionary.py</code>を実行して検証</li>
 <li><code>python tooling/taxonomy/build_taxonomy_assets.py</code>を実行して派生ファイルを再生成</li>
+<li><code>dictionary_seed.csv</code>を互換コピーとして同期</li>
 <li>必要に応じてドキュメントページを更新</li>
 <li>すべての変更をまとめてコミット</li>
 </ol>

@@ -2137,7 +2137,7 @@
 <li><strong>Coverage Map</strong>: Codes enable mapping to external frameworks and regulations</li>
 </ol>
 <p>!!! info "SSOT Principle"
-    The dictionary CSV (<code>dictionary_seed.csv</code>) is the Single Source of Truth for all codes. Documentation pages (including this one) are derived explanations. When in doubt, refer to the CSV.</p>
+    The dictionary CSV (<code>taxonomy_dictionary_v0.1.csv</code>) is the Single Source of Truth for all codes. Documentation pages (including this one) are derived explanations. When in doubt, refer to the CSV.</p>
 <h2 id="column-schema">Column Schema</h2>
 <p>The dictionary CSV uses <strong>21 columns</strong>:</p>
 <h3 id="identification-columns-6">Identification Columns (6)</h3>
@@ -2422,7 +2422,7 @@
 </tbody>
 </table>
 <p>!!! note "Complete Code Listings"
-    The complete list of 91 codes is available in the SSOT CSV file. This documentation page provides column definitions and usage guidance. For detailed code definitions with scope notes and examples, refer to <code>dictionary_seed.csv</code>.</p>
+    The complete list of 91 codes is available in the SSOT CSV file. This documentation page provides column definitions and usage guidance. For detailed code definitions with scope notes and examples, refer to <code>taxonomy_dictionary_v0.1.csv</code>.</p>
 <h2 id="update-policy">Update Policy</h2>
 <h3 id="adding-new-codes">Adding New Codes</h3>
 <ol>
@@ -2564,7 +2564,7 @@
 <tbody>
 <tr>
 <td><strong>SSOT</strong></td>
-<td><code>dictionary_seed.csv</code></td>
+<td><code>taxonomy_dictionary_v0.1.csv</code></td>
 <td>Single Source of Truth (91 codes, 21 columns)</td>
 </tr>
 <tr>
@@ -2587,15 +2587,21 @@
 <td><code>dimensions_en_ja.md</code></td>
 <td>Generated EN/JA mapping</td>
 </tr>
+<tr>
+<td>Compat</td>
+<td><code>dictionary_seed.csv</code></td>
+<td>Compatibility copy (identical to SSOT)</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Location:</strong> <code>source_pack/03_taxonomy/</code></p>
-<p>The SSOT file <code>dictionary_seed.csv</code> is the authoritative source. This documentation page is explanatory.</p>
+<p>The SSOT file <code>taxonomy_dictionary_v0.1.csv</code> is the authoritative source. This documentation page is explanatory.</p>
 <h3 id="update-workflow">Update Workflow</h3>
 <ol>
-<li>Edit <code>dictionary_seed.csv</code> (the SSOT)</li>
+<li>Edit <code>taxonomy_dictionary_v0.1.csv</code> (the SSOT)</li>
 <li>Run <code>python tooling/checks/lint_taxonomy_dictionary.py</code> to validate</li>
 <li>Run <code>python tooling/taxonomy/build_taxonomy_assets.py</code> to regenerate derived files</li>
+<li>Sync <code>dictionary_seed.csv</code> as compatibility copy</li>
 <li>Update documentation pages as needed</li>
 <li>Commit all changes together</li>
 </ol>

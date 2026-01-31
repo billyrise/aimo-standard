@@ -2137,7 +2137,7 @@
 <li><strong>カバレッジマップ</strong>：コードにより外部フレームワークや規制へのマッピングが可能になります</li>
 </ol>
 <p>!!! info "SSOTの原則"
-    辞書CSV（<code>dictionary_seed.csv</code>）はすべてのコードの唯一の正（Single Source of Truth）です。ドキュメントページ（このページを含む）は派生した説明です。疑問がある場合はCSVを参照してください。</p>
+    辞書CSV（<code>taxonomy_dictionary_v0.1.csv</code>）はすべてのコードの唯一の正（Single Source of Truth）です。ドキュメントページ（このページを含む）は派生した説明です。疑問がある場合はCSVを参照してください。</p>
 <h2 id="_3">列スキーマ</h2>
 <p>辞書CSVは<strong>21列</strong>を使用します：</p>
 <h3 id="6">識別列（6）</h3>
@@ -2422,7 +2422,7 @@
 </tbody>
 </table>
 <p>!!! note "完全なコード一覧"
-    91コードの完全なリストはSSOT CSVファイルで利用可能です。このドキュメントページは列定義と使用ガイダンスを提供します。スコープノートと例を含む詳細なコード定義については、<code>dictionary_seed.csv</code>を参照してください。</p>
+    91コードの完全なリストはSSOT CSVファイルで利用可能です。このドキュメントページは列定義と使用ガイダンスを提供します。スコープノートと例を含む詳細なコード定義については、<code>taxonomy_dictionary_v0.1.csv</code>を参照してください。</p>
 <h2 id="_5">更新ポリシー</h2>
 <h3 id="_6">新規コードの追加</h3>
 <ol>
@@ -2564,7 +2564,7 @@
 <tbody>
 <tr>
 <td><strong>SSOT</strong></td>
-<td><code>dictionary_seed.csv</code></td>
+<td><code>taxonomy_dictionary_v0.1.csv</code></td>
 <td>唯一の正（91コード、21列）</td>
 </tr>
 <tr>
@@ -2587,15 +2587,21 @@
 <td><code>dimensions_en_ja.md</code></td>
 <td>生成されたEN/JAマッピング</td>
 </tr>
+<tr>
+<td>互換</td>
+<td><code>dictionary_seed.csv</code></td>
+<td>互換コピー（SSOTと同一）</td>
+</tr>
 </tbody>
 </table>
 <p><strong>場所：</strong> <code>source_pack/03_taxonomy/</code></p>
-<p>SSOTファイル<code>dictionary_seed.csv</code>が正式なソースです。このドキュメントページは説明用です。</p>
+<p>SSOTファイル<code>taxonomy_dictionary_v0.1.csv</code>が正式なソースです。このドキュメントページは説明用です。</p>
 <h3 id="_15">更新ワークフロー</h3>
 <ol>
-<li><code>dictionary_seed.csv</code>（SSOT）を編集</li>
+<li><code>taxonomy_dictionary_v0.1.csv</code>（SSOT）を編集</li>
 <li><code>python tooling/checks/lint_taxonomy_dictionary.py</code>を実行して検証</li>
 <li><code>python tooling/taxonomy/build_taxonomy_assets.py</code>を実行して派生ファイルを再生成</li>
+<li><code>dictionary_seed.csv</code>を互換コピーとして同期</li>
 <li>必要に応じてドキュメントページを更新</li>
 <li>すべての変更をまとめてコミット</li>
 </ol>

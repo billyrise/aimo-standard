@@ -2787,7 +2787,7 @@ EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
 <tbody>
 <tr>
 <td><strong>SSOT</strong></td>
-<td><code>source_pack/03_taxonomy/dictionary_seed.csv</code></td>
+<td><code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code></td>
 <td>Single Source of Truth (91 codes, 21 columns)</td>
 </tr>
 <tr>
@@ -2810,14 +2810,20 @@ EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
 <td><code>source_pack/03_taxonomy/dimensions_en_ja.md</code></td>
 <td>Generated EN/JA mapping</td>
 </tr>
+<tr>
+<td>Compat</td>
+<td><code>source_pack/03_taxonomy/dictionary_seed.csv</code></td>
+<td>Compatibility copy (identical to SSOT)</td>
+</tr>
 </tbody>
 </table>
-<p><strong>This documentation page is explanatory.</strong> For authoritative definitions, always reference the SSOT file <code>dictionary_seed.csv</code> in <code>source_pack/03_taxonomy/</code>.</p>
+<p><strong>This documentation page is explanatory.</strong> For authoritative definitions, always reference the SSOT file <code>taxonomy_dictionary_v0.1.csv</code> in <code>source_pack/03_taxonomy/</code>.</p>
 <h3 id="update-workflow">Update Workflow</h3>
 <ol>
-<li>Edit the SSOT CSV (<code>dictionary_seed.csv</code>) first</li>
+<li>Edit the SSOT CSV (<code>taxonomy_dictionary_v0.1.csv</code>) first</li>
 <li>Run <code>python tooling/checks/lint_taxonomy_dictionary.py</code> to validate</li>
 <li>Run <code>python tooling/taxonomy/build_taxonomy_assets.py</code> to regenerate derived files</li>
+<li>Sync <code>dictionary_seed.csv</code> as compatibility copy</li>
 <li>Update documentation pages as needed</li>
 <li>Commit all changes together</li>
 </ol>
