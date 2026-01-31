@@ -1,0 +1,129 @@
+# AIMO Standard Directory Tree
+# Generated: 2026-01-31 (CU-06.1)
+# Excludes: site/, dist/, .venv/, .git/
+
+.
+├── .cursor/
+│   └── rules/
+│       ├── 00-governance.md
+│       ├── 01-editing-policy.md
+│       └── 02-release-process.md
+├── .github/
+│   └── workflows/
+│       ├── docs_current.yml
+│       └── release.yml
+├── .gitignore
+├── coverage_map/
+│   └── coverage_map.yaml
+├── docs/
+│   ├── artifacts/
+│   │   ├── evidence-bundle.ja.md
+│   │   ├── evidence-bundle.md
+│   │   ├── index.ja.md
+│   │   ├── index.md
+│   │   ├── minimum-evidence.ja.md
+│   │   └── minimum-evidence.md
+│   ├── conformance/
+│   │   ├── index.ja.md
+│   │   └── index.md
+│   ├── coverage-map/
+│   │   ├── eu-ai-act.ja.md
+│   │   ├── eu-ai-act.md
+│   │   ├── index.ja.md
+│   │   ├── index.md
+│   │   ├── isms.ja.md
+│   │   ├── isms.md
+│   │   ├── iso-42001.ja.md
+│   │   ├── iso-42001.md
+│   │   ├── methodology.ja.md
+│   │   ├── methodology.md
+│   │   ├── nist-ai-rmf.ja.md
+│   │   └── nist-ai-rmf.md
+│   ├── examples/
+│   │   ├── index.ja.md
+│   │   └── index.md
+│   ├── governance/
+│   │   ├── index.ja.md
+│   │   ├── index.md
+│   │   ├── responsibility-boundary.ja.md
+│   │   ├── responsibility-boundary.md
+│   │   ├── trust-package.ja.md
+│   │   └── trust-package.md
+│   ├── index.ja.md
+│   ├── index.md
+│   ├── releases/
+│   │   ├── index.ja.md
+│   │   └── index.md
+│   ├── standard/
+│   │   ├── current/
+│   │   │   ├── 01-overview.ja.md
+│   │   │   ├── 01-overview.md
+│   │   │   ├── 02-scope.ja.md
+│   │   │   ├── 02-scope.md
+│   │   │   ├── 03-taxonomy.ja.md
+│   │   │   ├── 03-taxonomy.md
+│   │   │   ├── 04-codes.ja.md
+│   │   │   ├── 04-codes.md
+│   │   │   ├── 05-dictionary.ja.md
+│   │   │   ├── 05-dictionary.md
+│   │   │   ├── 06-ev-template.ja.md
+│   │   │   ├── 06-ev-template.md
+│   │   │   ├── 07-validator.ja.md
+│   │   │   ├── 07-validator.md
+│   │   │   ├── 08-changelog.ja.md
+│   │   │   ├── 08-changelog.md
+│   │   │   ├── index.ja.md
+│   │   │   └── index.md
+│   │   └── versions/
+│   │       ├── index.ja.md
+│   │       └── index.md
+│   └── validator/
+│       ├── index.ja.md
+│       └── index.md
+├── examples/
+│   ├── evidence_bundle_minimal/
+│   │   ├── README.md
+│   │   ├── dictionary.json
+│   │   └── root.json
+│   └── minimal/
+│       ├── sample_dictionary.json
+│       └── sample_ev.json
+├── GOVERNANCE.md
+├── LICENSE.txt
+├── mkdocs.yml
+├── NOTICE.txt
+├── README.md
+├── requirements.txt
+├── schemas/
+│   └── jsonschema/
+│       ├── aimo-dictionary.schema.json
+│       ├── aimo-ev.schema.json
+│       └── aimo-standard.schema.json
+├── SECURITY.md
+├── source_pack/
+│   ├── 00_manifest.md
+│   └── DIRECTORY_TREE.txt
+├── templates/
+│   └── ev/
+│       ├── ev_template.json
+│       └── ev_template.md
+├── tooling/
+│   ├── checks/
+│   │   ├── lint_i18n.py
+│   │   └── lint_schema.py
+│   ├── commands.md
+│   ├── pdf/
+│   │   └── README.md
+│   ├── release/
+│   │   └── build_assets.py
+│   └── requirements.txt
+├── TRADEMARKS.md
+├── validator/
+│   ├── rules/
+│   │   ├── checks.md
+│   │   └── checks.yaml
+│   ├── src/
+│   │   └── validate.py
+│   └── tests/
+│       └── test_validate.py
+└── VERSIONING.md
