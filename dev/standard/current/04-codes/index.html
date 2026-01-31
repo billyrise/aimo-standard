@@ -54,6 +54,18 @@
     
     
     
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/standard/current/04-codes/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja//standard/current/04-codes/">
+
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/dev/standard/current/04-codes/">
+
+
   </head>
   
   
@@ -744,6 +756,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Codes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -755,6 +780,205 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Conventions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimension-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimension Identifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Composition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-select-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-select Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-select-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single-select Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Lifecycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle-metadata-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifecycle Metadata Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecation Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backward-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backward Compatibility
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-readable-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Machine-Readable References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1612,6 +1836,194 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Conventions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimension-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimension Identifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Composition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-select-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-select Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-select-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single-select Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Lifecycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle-metadata-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifecycle Metadata Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecation Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backward-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backward Compatibility
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-readable-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Machine-Readable References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1643,7 +2055,341 @@
 
 
 <h1 id="codes">Codes</h1>
-<p>TBD: define code namespaces, formats, and examples.</p>
+<p>This section defines the AIMO Code System format, naming conventions, and lifecycle management.</p>
+<h2 id="code-format">Code Format</h2>
+<p>All AIMO codes follow the format: <strong><code>&lt;DIM&gt;-&lt;TOKEN&gt;</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+<th>Format</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;DIM&gt;</code></td>
+<td>Dimension identifier</td>
+<td>2 uppercase letters</td>
+<td>FS, UC, DT</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Separator</td>
+<td>Hyphen</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>&lt;TOKEN&gt;</code></td>
+<td>Unique token within dimension</td>
+<td>3 digits (zero-padded)</td>
+<td>001, 002, 003</td>
+</tr>
+</tbody>
+</table>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<ol>
+<li><strong>Prefix stability</strong>: The two-letter dimension prefix (FS, UC, etc.) is fixed and will not change.</li>
+<li><strong>Zero-padding</strong>: Tokens are always 3 digits, zero-padded (e.g., <code>001</code> not <code>1</code>).</li>
+<li><strong>Sequential assignment</strong>: New codes are assigned the next available number within a dimension.</li>
+<li><strong>No reuse</strong>: Removed codes are never reassigned to different meanings.</li>
+</ol>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><code>FS-001</code> - Functional Scope: End-user Productivity</li>
+<li><code>UC-005</code> - Use Case Class: Code Generation</li>
+<li><code>DT-004</code> - Data Type: Personal Data</li>
+<li><code>CH-003</code> - Channel: IDE Plugin</li>
+<li><code>IM-002</code> - Integration Mode: SaaS Integrated</li>
+<li><code>RS-001</code> - Risk Surface: Data Leakage</li>
+<li><code>OB-001</code> - Outcome/Benefit: Efficiency</li>
+<li><code>EV-001</code> - Evidence Type: System Overview</li>
+</ul>
+<h2 id="dimension-identifiers">Dimension Identifiers</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Dimension Name</th>
+<th>Token Type</th>
+<th>Required</th>
+<th>Multi-select</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FS</strong></td>
+<td>Functional Scope</td>
+<td>Numeric (001-999)</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>UC</strong></td>
+<td>Use Case Class</td>
+<td>Numeric (001-999)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>DT</strong></td>
+<td>Data Type</td>
+<td>Numeric (001-999)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>CH</strong></td>
+<td>Channel</td>
+<td>Numeric (001-999)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>IM</strong></td>
+<td>Integration Mode</td>
+<td>Numeric (001-999)</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>RS</strong></td>
+<td>Risk Surface</td>
+<td>Numeric (001-999)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>OB</strong></td>
+<td>Outcome / Benefit</td>
+<td>Numeric (001-999)</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>EV</strong></td>
+<td>Evidence Type</td>
+<td>Numeric (001-999)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-composition">Code Composition</h2>
+<p>When documenting an AI system, codes from multiple dimensions are combined. The <strong>composition priority</strong> determines the order when listing codes:</p>
+<ol>
+<li>FS (Functional Scope)</li>
+<li>UC (Use Case Class)</li>
+<li>DT (Data Type)</li>
+<li>CH (Channel)</li>
+<li>IM (Integration Mode)</li>
+<li>RS (Risk Surface)</li>
+<li>OB (Outcome / Benefit)</li>
+<li>EV (Evidence Type)</li>
+</ol>
+<p><strong>Example composition:</strong></p>
+<pre><code>FS: FS-001
+UC: UC-001, UC-002
+DT: DT-002, DT-004
+CH: CH-001
+IM: IM-002
+RS: RS-001, RS-003
+OB: OB-001
+EV: EV-001, EV-002, EV-003, EV-004, EV-005, EV-006, EV-007
+</code></pre>
+<h2 id="usage-guidelines">Usage Guidelines</h2>
+<h3 id="required-dimensions">Required Dimensions</h3>
+<p>For each AI system or use case, you MUST specify at least one code from each required dimension:</p>
+<ul>
+<li>FS (exactly one)</li>
+<li>UC (one or more)</li>
+<li>DT (one or more)</li>
+<li>CH (one or more)</li>
+<li>IM (exactly one)</li>
+<li>RS (one or more)</li>
+<li>EV (one or more)</li>
+</ul>
+<h3 id="optional-dimensions">Optional Dimensions</h3>
+<ul>
+<li>OB (zero or more)</li>
+</ul>
+<h3 id="multi-select-dimensions">Multi-select Dimensions</h3>
+<p>When <code>multi_select: true</code>, multiple codes from the same dimension can be selected. For example, an AI system might process both <code>DT-002</code> (Internal) and <code>DT-004</code> (Personal Data).</p>
+<h3 id="single-select-dimensions">Single-select Dimensions</h3>
+<p>When <code>multi_select: false</code>, exactly one code must be selected from the dimension. For example, each AI system has one primary <code>FS</code> (Functional Scope) and one <code>IM</code> (Integration Mode).</p>
+<h2 id="code-lifecycle">Code Lifecycle</h2>
+<h3 id="status-values">Status Values</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+<th>Validator Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>active</code></td>
+<td>Currently valid and in use</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td><code>deprecated</code></td>
+<td>Still valid but scheduled for removal</td>
+<td>Accepted with warning</td>
+</tr>
+<tr>
+<td><code>removed</code></td>
+<td>No longer valid; do not use</td>
+<td>Rejected</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lifecycle-metadata-fields">Lifecycle Metadata Fields</h3>
+<p>The dictionary tracks lifecycle with these fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>introduced_in</code></td>
+<td>Version when code was added</td>
+<td><code>0.1.0</code></td>
+</tr>
+<tr>
+<td><code>deprecated_in</code></td>
+<td>Version when marked deprecated</td>
+<td><code>1.2.0</code></td>
+</tr>
+<tr>
+<td><code>removed_in</code></td>
+<td>Version when removed</td>
+<td><code>2.0.0</code></td>
+</tr>
+<tr>
+<td><code>replaced_by</code></td>
+<td>Replacement code(s)</td>
+<td><code>UC-015</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="deprecation-rules">Deprecation Rules</h3>
+<ol>
+<li>Codes MUST be marked <code>deprecated</code> for at least one MINOR version before removal</li>
+<li>Deprecated codes include <code>deprecated_in</code> version and <code>replaced_by</code> if applicable</li>
+<li>Removal occurs only in MAJOR version increments</li>
+<li>Deprecated codes remain valid for backward compatibility during the deprecation period</li>
+</ol>
+<p><strong>Example timeline:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.0</td>
+<td><code>active</code></td>
+<td>Code <code>UC-010</code> introduced</td>
+</tr>
+<tr>
+<td>1.2.0</td>
+<td><code>deprecated</code></td>
+<td>Marked deprecated, <code>replaced_by: UC-015</code></td>
+</tr>
+<tr>
+<td>2.0.0</td>
+<td><code>removed</code></td>
+<td>No longer accepted by validator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="versioning">Versioning</h3>
+<p>Code changes follow <a href="../08-changelog/">Semantic Versioning</a>:</p>
+<ul>
+<li><strong>MAJOR</strong>: Code removal or breaking changes</li>
+<li><strong>MINOR</strong>: New codes added, codes deprecated</li>
+<li><strong>PATCH</strong>: Definition clarifications only (no structural changes)</li>
+</ul>
+<h3 id="backward-compatibility">Backward Compatibility</h3>
+<p>The <code>backward_compatible</code> field indicates whether a change breaks existing usage:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td>Existing evidence using this code remains valid</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>Existing evidence may need updates (MAJOR version change)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validation">Validation</h2>
+<p>The validator checks:</p>
+<ol>
+<li>All required dimensions have at least one code</li>
+<li>Single-select dimensions have exactly one code</li>
+<li>All codes exist in the current taxonomy dictionary</li>
+<li>Code format matches <code>&lt;DIM&gt;-&lt;TOKEN&gt;</code> pattern</li>
+<li>Deprecated codes are flagged with warnings</li>
+</ol>
+<p>See <a href="../07-validator/">Validator</a> for implementation details.</p>
+<h2 id="machine-readable-references">Machine-Readable References</h2>
+<p>Access the complete code definitions in machine-readable formats:</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Format</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>CSV</td>
+<td><code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code></td>
+</tr>
+<tr>
+<td>Taxonomy (EN)</td>
+<td>YAML</td>
+<td><code>source_pack/03_taxonomy/taxonomy_en.yaml</code></td>
+</tr>
+<tr>
+<td>Taxonomy (JA)</td>
+<td>YAML</td>
+<td><code>source_pack/03_taxonomy/taxonomy_ja.yaml</code></td>
+</tr>
+<tr>
+<td>Code System</td>
+<td>CSV</td>
+<td><code>source_pack/03_taxonomy/code_system.csv</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="../03-taxonomy/">Taxonomy</a> - Full dimension definitions</li>
+<li><a href="../05-dictionary/">Dictionary</a> - Complete code listings</li>
+<li><a href="../07-validator/">Validator</a> - Validation rules</li>
+<li><a href="../08-changelog/">Changelog</a> - Version history</li>
+</ul>
 
 
 

@@ -54,6 +54,18 @@
     
     
     
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/ja/standard/current/07-validator/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja//ja/standard/current/07-validator/">
+
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/dev/ja/standard/current/07-validator/">
+
+
   </head>
   
   
@@ -813,6 +825,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Validator
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -824,6 +849,214 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      バリデータMVP要件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="バリデータMVP要件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 必須フィールドバリデーション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 次元コードバリデーション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 辞書存在チェック
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. コードフォーマットバリデーション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. スキーマバリデーション
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      バリデーションルール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="バリデーションルール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルール：必須次元
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルール：有効なコード
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルール：コードフォーマット
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルール：バージョンフォーマット
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      エラー出力フォーマット
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      バリデータがチェックしないこと
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      リファレンス実装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="リファレンス実装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      出力例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      バージョニングポリシー
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      スキーマ参照
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      参照
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1612,6 +1845,203 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      バリデータMVP要件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="バリデータMVP要件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 必須フィールドバリデーション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 次元コードバリデーション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 辞書存在チェック
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. コードフォーマットバリデーション
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. スキーマバリデーション
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      バリデーションルール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="バリデーションルール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルール：必須次元
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルール：有効なコード
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルール：コードフォーマット
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルール：バージョンフォーマット
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      エラー出力フォーマット
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      バリデータがチェックしないこと
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      リファレンス実装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="リファレンス実装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      出力例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      バージョニングポリシー
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      スキーマ参照
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      参照
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1643,9 +2073,259 @@
 
 
 <h1 id="_1">バリデータ</h1>
-<p>バリデータは、成果物が標準に準拠していることを検証します。
-チェック項目の規範定義は <code>validator/rules/checks.md</code> と <code>checks.yaml</code> にあります。
-最小リファレンス実装は <code>validator/src/validate.py</code> にあります。</p>
+<p>AIMOバリデータは、Evidence Packおよび関連アーティファクトがAIMO Standardスキーマと要件に準拠していることを確認します。</p>
+<h2 id="mvp">バリデータMVP要件</h2>
+<p>最小限のバリデータは以下のチェックを実行する必要があります：</p>
+<h3 id="1">1. 必須フィールドバリデーション</h3>
+<p>すべての必須フィールドが存在することを確認：</p>
+<table>
+<thead>
+<tr>
+<th>アーティファクト</th>
+<th>必須フィールド</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Evidence Packマニフェスト</td>
+<td>pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files</td>
+</tr>
+<tr>
+<td>Codesオブジェクト</td>
+<td>FS, UC, DT, CH, IM, RS, EV（OBは任意）</td>
+</tr>
+<tr>
+<td>Evidence Fileエントリ</td>
+<td>file_id, filename, ev_type, title</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2">2. 次元コードバリデーション</h3>
+<p>各必須次元に少なくとも1つのコードがあることを確認：</p>
+<table>
+<thead>
+<tr>
+<th>次元</th>
+<th>要件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS（機能スコープ）</td>
+<td>正確に1つのコード</td>
+</tr>
+<tr>
+<td>UC（ユースケース分類）</td>
+<td>少なくとも1つのコード</td>
+</tr>
+<tr>
+<td>DT（データ種別）</td>
+<td>少なくとも1つのコード</td>
+</tr>
+<tr>
+<td>CH（チャネル）</td>
+<td>少なくとも1つのコード</td>
+</tr>
+<tr>
+<td>IM（統合形態）</td>
+<td>正確に1つのコード</td>
+</tr>
+<tr>
+<td>RS（リスク面）</td>
+<td>少なくとも1つのコード</td>
+</tr>
+<tr>
+<td>OB（成果）</td>
+<td>任意（0個以上）</td>
+</tr>
+<tr>
+<td>EV（証跡種別）</td>
+<td>少なくとも1つのコード</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3">3. 辞書存在チェック</h3>
+<p>すべてのコードがタクソノミー辞書に存在することを検証：</p>
+<ul>
+<li>指定された<code>taxonomy_version</code>のタクソノミー辞書をロード</li>
+<li>マニフェスト内の各コードが辞書に存在することを確認</li>
+<li>無効なコードを次元と値と共に報告</li>
+</ul>
+<h3 id="4">4. コードフォーマットバリデーション</h3>
+<p>すべてのコードが期待されるフォーマットに一致することを確認：</p>
+<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+</code></pre>
+<h3 id="5">5. スキーマバリデーション</h3>
+<p>JSON Schemaに対してバリデーション：</p>
+<table>
+<thead>
+<tr>
+<th>スキーマ</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>evidence_pack_manifest.schema.json</code></td>
+<td>Evidence Packマニフェスト</td>
+</tr>
+<tr>
+<td><code>taxonomy_pack.schema.json</code></td>
+<td>タクソノミーパック定義</td>
+</tr>
+<tr>
+<td><code>changelog.schema.json</code></td>
+<td>変更履歴エントリ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">バリデーションルール</h2>
+<h3 id="_3">ルール：必須次元</h3>
+<pre><code class="language-yaml">rule_id: required_dimensions
+description: すべての必須次元に少なくとも1つのコードが必要
+severity: error
+check: |
+  - FS: 正確に1つ
+  - UC: 少なくとも1つ
+  - DT: 少なくとも1つ
+  - CH: 少なくとも1つ
+  - IM: 正確に1つ
+  - RS: 少なくとも1つ
+  - EV: 少なくとも1つ
+</code></pre>
+<h3 id="_4">ルール：有効なコード</h3>
+<pre><code class="language-yaml">rule_id: valid_codes
+description: すべてのコードがタクソノミー辞書に存在する必要がある
+severity: error
+check: |
+  manifest.codes内の各コードについて：
+    - 指定されたtaxonomy_versionの辞書にコードが存在する
+    - コードステータスが'active'（'deprecated'の場合は警告）
+</code></pre>
+<h3 id="_5">ルール：コードフォーマット</h3>
+<pre><code class="language-yaml">rule_id: code_format
+description: すべてのコードが標準フォーマットに一致する必要がある
+severity: error
+pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$&quot;
+</code></pre>
+<h3 id="_6">ルール：バージョンフォーマット</h3>
+<pre><code class="language-yaml">rule_id: version_format
+description: バージョンは有効なSemVerである必要がある
+severity: error
+pattern: &quot;^\\d+\\.\\d+\\.\\d+$&quot;
+fields:
+  - pack_version
+  - taxonomy_version
+</code></pre>
+<h2 id="_7">エラー出力フォーマット</h2>
+<p>バリデーションエラーは以下のフォーマットで報告されます：</p>
+<pre><code>&lt;path&gt;: &lt;severity&gt;: &lt;message&gt;
+</code></pre>
+<p><strong>例：</strong></p>
+<pre><code>codes.FS: error: 必須次元'FS'にコードがありません
+codes.UC[0]: error: コード'UC-999'は辞書v0.1.0に存在しません
+pack_version: error: 無効なバージョンフォーマット'v1.0'（SemVer形式が必要）
+codes.RS[1]: warning: コード'RS-002'はv0.2.0で非推奨です
+</code></pre>
+<h2 id="_8">バリデータがチェックしないこと</h2>
+<p>バリデータは構造的な適合性に焦点を当て、コンテンツ品質はチェックしません：</p>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>コンテンツの正確性</td>
+<td>バリデータは構造をチェックし、意味はチェックしない</td>
+</tr>
+<tr>
+<td>証跡の完全性</td>
+<td>テンプレートはガイドであり、強制フォーマットではない</td>
+</tr>
+<tr>
+<td>相互参照の解決</td>
+<td>ファイル存在は検証されない</td>
+</tr>
+<tr>
+<td>タイムスタンプの有効性</td>
+<td>ISO-8601は厳密にバリデーションされない</td>
+</tr>
+<tr>
+<td>IDの一意性</td>
+<td>現在は強制されていない</td>
+</tr>
+<tr>
+<td>完全性ハッシュ</td>
+<td>採用者の責任</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">リファレンス実装</h2>
+<p>Pythonでのリファレンス実装が提供されています：</p>
+<pre><code>validator/src/validate.py
+</code></pre>
+<h3 id="_10">使用方法</h3>
+<pre><code class="language-bash">python validator/src/validate.py &lt;manifest.json&gt;
+</code></pre>
+<h3 id="_11">出力例</h3>
+<pre><code>Validating: evidence_pack_manifest.json
+Taxonomy version: 0.1.0
+
+Checking required dimensions...
+  FS: OK (1 code)
+  UC: OK (3 codes)
+  DT: OK (1 code)
+  CH: OK (1 code)
+  IM: OK (1 code)
+  RS: OK (3 codes)
+  OB: OK (2 codes)
+  EV: OK (7 codes)
+
+Checking code validity...
+  All codes valid.
+
+Validation: PASSED
+</code></pre>
+<h2 id="_12">バージョニングポリシー</h2>
+<p>バリデータルールはSemVerに従います：</p>
+<ul>
+<li><strong>MAJOR</strong>: 破壊的なルール変更（既存の有効なパックを失敗させる新しい必須チェック）</li>
+<li><strong>MINOR</strong>: 新しい任意チェック、警告、または情報メッセージ</li>
+<li><strong>PATCH</strong>: バリデーション結果を変更しないバグ修正</li>
+</ul>
+<h2 id="_13">スキーマ参照</h2>
+<table>
+<thead>
+<tr>
+<th>スキーマ</th>
+<th>場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Evidence Packマニフェスト</td>
+<td><code>source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json</code></td>
+</tr>
+<tr>
+<td>タクソノミーパック</td>
+<td><code>source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json</code></td>
+</tr>
+<tr>
+<td>変更履歴</td>
+<td><code>source_pack/03_taxonomy/schemas/changelog.schema.json</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_14">参照</h2>
+<ul>
+<li><a href="../03-taxonomy/">タクソノミー</a> - 次元定義</li>
+<li><a href="../04-codes/">コード</a> - コードフォーマット</li>
+<li><a href="../05-dictionary/">辞書</a> - コード辞書</li>
+<li><a href="../../../validator/">バリデータルール</a> - 完全なルールドキュメント</li>
+</ul>
 
 
 

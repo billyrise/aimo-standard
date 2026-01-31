@@ -54,6 +54,18 @@
     
     
     
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/ja/governance/trust-package/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja//ja/governance/trust-package/">
+
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/dev/ja/governance/trust-package/">
+
+
   </head>
   
   
@@ -1953,6 +1965,7 @@
 <li><strong>適合性</strong>: コンプライアンスの主張方法とレベルの意味 — <a href="../../conformance/">Conformance</a></li>
 <li><strong>カバレッジマップ</strong>: 外部標準へのマッピング — <a href="../../coverage-map/">カバレッジマップ索引</a>、<a href="../../coverage-map/methodology/">カバレッジマップ方法論</a></li>
 <li><strong>標準</strong>: 規範的要件と定義 — <a href="../../standard/current/">Standard (Current)</a></li>
+<li><strong>タクソノミー</strong>: AIガバナンスの8次元分類体系 — <a href="../../standard/current/03-taxonomy/">タクソノミー</a>、<a href="../../standard/current/04-codes/">コード</a>、<a href="../../standard/current/05-dictionary/">辞書</a></li>
 <li><strong>エビデンスバンドル</strong>: 構造、TOC、トレーサビリティ — <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a></li>
 <li><strong>最小エビデンス要件</strong>: ライフサイクル別MUSTレベルチェックリスト — <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a></li>
 <li><strong>バリデータ</strong>: ルールと参照チェック — <a href="../../validator/">Validator</a></li>
@@ -1979,6 +1992,11 @@
 <td>カバレッジマッピング</td>
 <td><a href="../../coverage-map/">カバレッジマップ索引</a>、<a href="../../coverage-map/methodology/">カバレッジマップ方法論</a></td>
 <td>外部規制・標準に対する説明可能性</td>
+</tr>
+<tr>
+<td>タクソノミー＆辞書</td>
+<td><a href="../../standard/current/03-taxonomy/">タクソノミー</a>、<a href="../../standard/current/04-codes/">コード</a>、<a href="../../standard/current/05-dictionary/">辞書</a></td>
+<td>AIシステムの分類体系（8次元、91コード）</td>
 </tr>
 <tr>
 <td>エビデンス成果物</td>
@@ -2013,6 +2031,7 @@
 <h2 id="artifacts-zip">Artifacts zip の内容</h2>
 <p><code>aimo-standard-artifacts.zip</code> には以下が含まれます：</p>
 <ul>
+<li><strong>タクソノミー（SSOT）</strong>: <code>source_pack/03_taxonomy/</code> — 辞書CSV（91コード）、YAML、コード体系</li>
 <li><strong>JSON スキーマ</strong>: <code>schemas/jsonschema/</code> — 機械可読な検証スキーマ</li>
 <li><strong>テンプレート</strong>: <code>templates/ev/</code> — エビデンス記録テンプレート（JSON + Markdown）</li>
 <li><strong>サンプル</strong>: <code>examples/</code> — 素早い導入のための最小サンプルバンドル</li>
@@ -2134,6 +2153,7 @@ python validator/src/validate.py bundle/root.json
 <h2 id="_10">監査ジャーニー</h2>
 <p>本ページからの推奨監査ジャーニー：</p>
 <ol>
+<li><strong>分類体系</strong>: <a href="../../standard/current/03-taxonomy/">タクソノミー</a> + <a href="../../standard/current/05-dictionary/">辞書</a> — 8次元コード体系を理解</li>
 <li><strong>証跡構造</strong>: <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> — バンドル TOC と追跡可能性を理解</li>
 <li><strong>必須証跡</strong>: <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> — ライフサイクル別 MUST チェックリスト</li>
 <li><strong>フレームワーク整合</strong>: <a href="../../coverage-map/">Coverage Map</a> + <a href="../../coverage-map/methodology/">Methodology</a> — AIMO と外部フレームワークの対応を確認</li>

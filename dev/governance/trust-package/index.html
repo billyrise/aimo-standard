@@ -54,6 +54,18 @@
     
     
     
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/governance/trust-package/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja//governance/trust-package/">
+
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/dev/governance/trust-package/">
+
+
   </head>
   
   
@@ -1953,6 +1965,7 @@ It is a hub only; detailed Evidence TOC and Coverage tables are maintained in th
 <li><strong>Conformance</strong>: how to claim compliance and what levels mean — <a href="../../conformance/">Conformance</a></li>
 <li><strong>Coverage Map</strong>: mapping to external standards — <a href="../../coverage-map/">Coverage Map index</a>, <a href="../../coverage-map/methodology/">Coverage Map methodology</a></li>
 <li><strong>Standard</strong>: normative requirements and definitions — <a href="../../standard/current/">Standard (Current)</a></li>
+<li><strong>Taxonomy</strong>: 8-dimension classification system for AI governance — <a href="../../standard/current/03-taxonomy/">Taxonomy</a>, <a href="../../standard/current/04-codes/">Codes</a>, <a href="../../standard/current/05-dictionary/">Dictionary</a></li>
 <li><strong>Evidence Bundle</strong>: structure, TOC, traceability — <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a></li>
 <li><strong>Minimum Evidence Requirements</strong>: MUST-level checklist by lifecycle — <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a></li>
 <li><strong>Validator</strong>: rules and reference checks — <a href="../../validator/">Validator</a></li>
@@ -1979,6 +1992,11 @@ It is a hub only; detailed Evidence TOC and Coverage tables are maintained in th
 <td>Coverage mapping</td>
 <td><a href="../../coverage-map/">Coverage Map index</a>, <a href="../../coverage-map/methodology/">Coverage Map methodology</a></td>
 <td>Explainability against external regulations and standards</td>
+</tr>
+<tr>
+<td>Taxonomy &amp; Dictionary</td>
+<td><a href="../../standard/current/03-taxonomy/">Taxonomy</a>, <a href="../../standard/current/04-codes/">Codes</a>, <a href="../../standard/current/05-dictionary/">Dictionary</a></td>
+<td>Classification system for AI systems (8 dimensions, 91 codes)</td>
 </tr>
 <tr>
 <td>Evidence artifacts</td>
@@ -2013,6 +2031,7 @@ See <a href="https://github.com/billyrise/aimo-standard/blob/main/README.md">REA
 <h2 id="artifacts-zip-contents">Artifacts zip contents</h2>
 <p>The <code>aimo-standard-artifacts.zip</code> includes:</p>
 <ul>
+<li><strong>Taxonomy (SSOT)</strong>: <code>source_pack/03_taxonomy/</code> — Dictionary CSV (91 codes), YAML, code system</li>
 <li><strong>JSON Schemas</strong>: <code>schemas/jsonschema/</code> — Machine-readable validation schemas</li>
 <li><strong>Templates</strong>: <code>templates/ev/</code> — Evidence record templates (JSON + Markdown)</li>
 <li><strong>Examples</strong>: <code>examples/</code> — Minimal sample bundles for quick adoption</li>
@@ -2134,6 +2153,7 @@ python validator/src/validate.py bundle/root.json
 <h2 id="audit-journey">Audit journey</h2>
 <p>From this page, the recommended audit journey is:</p>
 <ol>
+<li><strong>Classification system</strong>: <a href="../../standard/current/03-taxonomy/">Taxonomy</a> + <a href="../../standard/current/05-dictionary/">Dictionary</a> — understand the 8-dimension code system</li>
 <li><strong>Evidence structure</strong>: <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> — understand bundle TOC and traceability</li>
 <li><strong>Required evidence</strong>: <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> — MUST-level checklist by lifecycle</li>
 <li><strong>Framework alignment</strong>: <a href="../../coverage-map/">Coverage Map</a> + <a href="../../coverage-map/methodology/">Methodology</a> — see how AIMO maps to external frameworks</li>
