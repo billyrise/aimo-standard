@@ -188,14 +188,14 @@ See [Validator](./07-validator.md) for implementation details.
 
 Access the complete code definitions in machine-readable formats:
 
-| Resource | Format | Path |
+| Type | Format | Path |
 | --- | --- | --- |
-| Dictionary (SSOT) | CSV | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` |
-| Code System | CSV | `source_pack/03_taxonomy/code_system.csv` |
-| Taxonomy (EN) | YAML | `source_pack/03_taxonomy/taxonomy_en.yaml` |
-| Taxonomy (JA) | YAML | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
+| **SSOT** | CSV | `source_pack/03_taxonomy/dictionary_seed.csv` |
+| Derived | CSV | `source_pack/03_taxonomy/code_system.csv` |
+| Derived | YAML | `source_pack/03_taxonomy/taxonomy_en.yaml` |
+| Derived | YAML | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
 
-The SSOT files in `source_pack/03_taxonomy/` are the authoritative source. This documentation page is explanatory.
+The SSOT file `dictionary_seed.csv` in `source_pack/03_taxonomy/` is the authoritative source. This documentation page is explanatory.
 
 ## Related Pages
 

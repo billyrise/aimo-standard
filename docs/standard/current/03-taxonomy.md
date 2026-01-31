@@ -209,19 +209,19 @@ EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
 
 The authoritative definition of the taxonomy is maintained in:
 
-| Resource | Path |
-| --- | --- |
-| Dictionary CSV (SSOT) | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` |
-| Taxonomy YAML (EN) | `source_pack/03_taxonomy/taxonomy_en.yaml` |
-| Taxonomy YAML (JA) | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
-| Code System CSV | `source_pack/03_taxonomy/code_system.csv` |
-| Dimensions EN/JA | `source_pack/03_taxonomy/dimensions_en_ja.md` |
+| Type | File | Description |
+| --- | --- | --- |
+| **SSOT** | `source_pack/03_taxonomy/dictionary_seed.csv` | Single Source of Truth (91 codes, 21 columns) |
+| Derived | `source_pack/03_taxonomy/taxonomy_en.yaml` | Generated English taxonomy |
+| Derived | `source_pack/03_taxonomy/taxonomy_ja.yaml` | Generated Japanese taxonomy |
+| Derived | `source_pack/03_taxonomy/code_system.csv` | Generated dimension namespaces |
+| Derived | `source_pack/03_taxonomy/dimensions_en_ja.md` | Generated EN/JA mapping |
 
-**This documentation page is explanatory.** For authoritative definitions, always reference the SSOT files in `source_pack/03_taxonomy/`.
+**This documentation page is explanatory.** For authoritative definitions, always reference the SSOT file `dictionary_seed.csv` in `source_pack/03_taxonomy/`.
 
 ### Update Workflow
 
-1. Edit the SSOT CSV (`taxonomy_dictionary_v0.1.csv`) first
+1. Edit the SSOT CSV (`dictionary_seed.csv`) first
 2. Run `python tooling/checks/lint_taxonomy_dictionary.py` to validate
 3. Run `python tooling/taxonomy/build_taxonomy_assets.py` to regenerate derived files
 4. Update documentation pages as needed

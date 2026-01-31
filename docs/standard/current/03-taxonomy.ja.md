@@ -209,19 +209,19 @@ EV: EV-001（申請記録）, EV-002（審査/承認記録）
 
 タクソノミーの正式な定義は以下で管理されています：
 
-| リソース | パス |
-| --- | --- |
-| Dictionary CSV（SSOT） | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` |
-| Taxonomy YAML（EN） | `source_pack/03_taxonomy/taxonomy_en.yaml` |
-| Taxonomy YAML（JA） | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
-| Code System CSV | `source_pack/03_taxonomy/code_system.csv` |
-| Dimensions EN/JA | `source_pack/03_taxonomy/dimensions_en_ja.md` |
+| 種別 | ファイル | 説明 |
+| --- | --- | --- |
+| **SSOT** | `source_pack/03_taxonomy/dictionary_seed.csv` | 唯一の正（91コード、21列） |
+| 派生 | `source_pack/03_taxonomy/taxonomy_en.yaml` | 生成された英語タクソノミー |
+| 派生 | `source_pack/03_taxonomy/taxonomy_ja.yaml` | 生成された日本語タクソノミー |
+| 派生 | `source_pack/03_taxonomy/code_system.csv` | 生成された次元ネームスペース |
+| 派生 | `source_pack/03_taxonomy/dimensions_en_ja.md` | 生成されたEN/JAマッピング |
 
-**このドキュメントページは説明用です。** 正式な定義については、常に`source_pack/03_taxonomy/`内のSSOTファイルを参照してください。
+**このドキュメントページは説明用です。** 正式な定義については、常に`source_pack/03_taxonomy/`内のSSOTファイル`dictionary_seed.csv`を参照してください。
 
 ### 更新ワークフロー
 
-1. まずSSOT CSV（`taxonomy_dictionary_v0.1.csv`）を編集
+1. まずSSOT CSV（`dictionary_seed.csv`）を編集
 2. `python tooling/checks/lint_taxonomy_dictionary.py`を実行して検証
 3. `python tooling/taxonomy/build_taxonomy_assets.py`を実行して派生ファイルを再生成
 4. 必要に応じてドキュメントページを更新

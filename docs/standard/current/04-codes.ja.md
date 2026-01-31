@@ -188,14 +188,14 @@ EV: EV-001, EV-002
 
 機械可読形式で完全なコード定義にアクセスできます：
 
-| リソース | フォーマット | パス |
+| 種別 | フォーマット | パス |
 | --- | --- | --- |
-| Dictionary（SSOT） | CSV | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` |
-| Code System | CSV | `source_pack/03_taxonomy/code_system.csv` |
-| Taxonomy（EN） | YAML | `source_pack/03_taxonomy/taxonomy_en.yaml` |
-| Taxonomy（JA） | YAML | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
+| **SSOT** | CSV | `source_pack/03_taxonomy/dictionary_seed.csv` |
+| 派生 | CSV | `source_pack/03_taxonomy/code_system.csv` |
+| 派生 | YAML | `source_pack/03_taxonomy/taxonomy_en.yaml` |
+| 派生 | YAML | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
 
-`source_pack/03_taxonomy/`内のSSOTファイルが正式なソースです。このドキュメントページは説明用です。
+`source_pack/03_taxonomy/`内のSSOTファイル`dictionary_seed.csv`が正式なソースです。このドキュメントページは説明用です。
 
 ## 関連ページ
 
