@@ -22,7 +22,7 @@
     
     
       
-        <title>Releases - AIMO Standard</title>
+        <title>リリース（Releases） - AIMO Standard</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Releases
+              リリース（Releases）
             
           </span>
         </div>
@@ -1565,6 +1565,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      最新リリースのダウンロード
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      リリースアセット
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="リリースアセット">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ダウンロードの検証
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifacts-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artifacts Zip の内容
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      リソース
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1595,21 +1654,66 @@
   
 
 
-<h1 id="releases">Releases</h1>
-<p>本セクションは、バージョン付きリリース、changelog、配布アーティファクトのハブである。</p>
+<h1 id="releases">リリース（Releases）</h1>
+<p>本セクションは、バージョン付きリリース、changelog、移行、配布アーティファクトのハブです。</p>
+<h2 id="_1">最新リリースのダウンロード</h2>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
+<h2 id="_2">リリースアセット</h2>
+<p>各公式リリース（<code>vX.Y.Z</code> タグ）には以下が含まれます：</p>
+<table>
+<thead>
+<tr>
+<th>アセット</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>trust_package.pdf</code></td>
+<td>英語版 Trust Package — 監査対応の保証資料</td>
+</tr>
+<tr>
+<td><code>trust_package.ja.pdf</code></td>
+<td>日本語版 Trust Package</td>
+</tr>
+<tr>
+<td><code>aimo-standard-artifacts.zip</code></td>
+<td>スキーマ、テンプレート、サンプル、バリデータルール</td>
+</tr>
+<tr>
+<td><code>SHA256SUMS.txt</code></td>
+<td>全アセットの SHA-256 チェックサム</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">ダウンロードの検証</h3>
+<p>ダウンロード後、チェックサムでファイルの整合性を検証できます：</p>
+<pre><code class="language-bash"># チェックサムファイルをダウンロード
+curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+
+# 特定のファイルを検証
+sha256sum -c SHA256SUMS.txt --ignore-missing
+</code></pre>
+<p>または手動で：</p>
+<pre><code class="language-bash">sha256sum trust_package.pdf
+# 出力を SHA256SUMS.txt と比較
+</code></pre>
+<h2 id="artifacts-zip">Artifacts Zip の内容</h2>
+<p><code>aimo-standard-artifacts.zip</code> には以下が含まれます：</p>
 <ul>
-<li><strong>Changelog</strong>: <a href="../standard/current/08-changelog/">Standard &gt; Changelog</a>。</li>
-<li><strong>バージョンスナップショット</strong>: <a href="../standard/versions/">Standard &gt; Versions</a>。</li>
-<li><strong>リリースポリシー</strong>: <a href="../governance/">Governance</a> と <a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> を参照。</li>
+<li><code>schemas/jsonschema/*</code> — 検証用 JSON スキーマ</li>
+<li><code>templates/ev/*</code> — エビデンステンプレート（JSON + Markdown）</li>
+<li><code>examples/*</code> — サンプルエビデンスバンドル</li>
+<li><code>coverage_map/coverage_map.yaml</code> — 外部標準へのマッピング</li>
+<li><code>validator/rules/*</code> — 検証ルール定義</li>
+<li><code>VERSIONING.md</code>、<code>GOVERNANCE.md</code>、<code>SECURITY.md</code> など</li>
 </ul>
-<p>移行ガイドやチェックサムは必要に応じてリリースごとに掲載する。</p>
-<h1 id="releases_1">リリース（Releases）</h1>
-<p>本セクションは、バージョン付きリリース、changelog、移行、配布アーティファクトのハブである。</p>
+<h2 id="_4">リソース</h2>
 <ul>
 <li><strong>Changelog（仕様）</strong>: <a href="../standard/current/08-changelog/">Standard &gt; Current &gt; Changelog</a> — 規範・非規範の変更履歴。</li>
 <li><strong>バージョンスナップショット</strong>: <a href="../standard/versions/">Standard &gt; Versions</a> — 固定リリースと過去版。</li>
 <li><strong>リリースプロセス</strong>: タグ <code>vX.Y.Z</code>、CI ビルド、<code>dist/</code> 下の PDF、チェックサム、GitHub Release アセット。リポジトリの <a href="https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md">GOVERNANCE.md</a> および <a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> を参照。</li>
-<li><strong>移行とチェックサム</strong>: リリースごとに文書化予定。破壊的変更には移行ガイドが必要。</li>
+<li><strong>移行とチェックサム</strong>: リリースごとに文書化。破壊的変更には移行ガイドが必要。</li>
 </ul>
 <p>ガバナンスとバージョニングポリシーは <a href="../governance/">Governance</a> を参照。</p>
 

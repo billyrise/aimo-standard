@@ -1565,6 +1565,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-latest-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Latest Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release Assets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Release Assets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verifying-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifying Downloads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifacts-zip-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artifacts Zip Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1596,20 +1655,65 @@
 
 
 <h1 id="releases">Releases</h1>
-<p>This section is a hub for versioned releases, changelog, and distribution artifacts.</p>
-<ul>
-<li><strong>Changelog</strong>: <a href="../standard/current/08-changelog/">Standard &gt; Changelog</a>.</li>
-<li><strong>Versioned snapshots</strong>: <a href="../standard/versions/">Standard &gt; Versions</a>.</li>
-<li><strong>Release policy</strong>: see <a href="../governance/">Governance</a> and <a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a>.</li>
-</ul>
-<p>Migration guides and checksums are listed per release when applicable.</p>
-<h1 id="releases_1">Releases</h1>
 <p>This section is a hub for versioned releases, changelog, migration, and distribution artifacts.</p>
+<h2 id="download-latest-release">Download Latest Release</h2>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
+<h2 id="release-assets">Release Assets</h2>
+<p>Each official release (<code>vX.Y.Z</code> tag) includes:</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>trust_package.pdf</code></td>
+<td>English Trust Package — auditor-ready assurance materials</td>
+</tr>
+<tr>
+<td><code>trust_package.ja.pdf</code></td>
+<td>Japanese Trust Package</td>
+</tr>
+<tr>
+<td><code>aimo-standard-artifacts.zip</code></td>
+<td>Schemas, templates, examples, validator rules</td>
+</tr>
+<tr>
+<td><code>SHA256SUMS.txt</code></td>
+<td>SHA-256 checksums for all assets</td>
+</tr>
+</tbody>
+</table>
+<h3 id="verifying-downloads">Verifying Downloads</h3>
+<p>After downloading, verify file integrity using checksums:</p>
+<pre><code class="language-bash"># Download the checksums file
+curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+
+# Verify a specific file
+sha256sum -c SHA256SUMS.txt --ignore-missing
+</code></pre>
+<p>Or manually:</p>
+<pre><code class="language-bash">sha256sum trust_package.pdf
+# Compare output with SHA256SUMS.txt
+</code></pre>
+<h2 id="artifacts-zip-contents">Artifacts Zip Contents</h2>
+<p>The <code>aimo-standard-artifacts.zip</code> contains:</p>
+<ul>
+<li><code>schemas/jsonschema/*</code> — JSON Schemas for validation</li>
+<li><code>templates/ev/*</code> — Evidence templates (JSON + Markdown)</li>
+<li><code>examples/*</code> — Sample evidence bundles</li>
+<li><code>coverage_map/coverage_map.yaml</code> — External standards mapping</li>
+<li><code>validator/rules/*</code> — Validation rule definitions</li>
+<li><code>VERSIONING.md</code>, <code>GOVERNANCE.md</code>, <code>SECURITY.md</code>, etc.</li>
+</ul>
+<h2 id="resources">Resources</h2>
 <ul>
 <li><strong>Changelog (spec)</strong>: <a href="../standard/current/08-changelog/">Standard &gt; Current &gt; Changelog</a> — normative and non-normative change history.</li>
 <li><strong>Versioned snapshots</strong>: <a href="../standard/versions/">Standard &gt; Versions</a> — frozen releases and past versions.</li>
 <li><strong>Release process</strong>: tagging <code>vX.Y.Z</code>, CI build, PDF under <code>dist/</code>, checksums, GitHub Release assets. See <a href="https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md">GOVERNANCE.md</a> and <a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> in the repository.</li>
-<li><strong>Migration and checksums</strong>: to be documented per release; breaking changes require migration guidance.</li>
+<li><strong>Migration and checksums</strong>: documented per release; breaking changes require migration guidance.</li>
 </ul>
 <p>For governance and versioning policy, see <a href="../governance/">Governance</a>.</p>
 

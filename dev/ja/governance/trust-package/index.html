@@ -1516,7 +1516,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      含まれるもの
+      ダウンロード
     </span>
   </a>
   
@@ -1525,7 +1525,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      監査対応のための最小セット
+      含まれるもの
     </span>
   </a>
   
@@ -1534,7 +1534,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      引用方法
+      監査対応のための最小セット
     </span>
   </a>
   
@@ -1542,6 +1542,24 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifacts-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artifacts zip の内容
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       重要な注意
     </span>
@@ -1654,7 +1672,7 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      含まれるもの
+      ダウンロード
     </span>
   </a>
   
@@ -1663,7 +1681,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      監査対応のための最小セット
+      含まれるもの
     </span>
   </a>
   
@@ -1672,7 +1690,7 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      引用方法
+      監査対応のための最小セット
     </span>
   </a>
   
@@ -1680,6 +1698,24 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifacts-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artifacts zip の内容
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       重要な注意
     </span>
@@ -1722,7 +1758,16 @@
 <h1 id="trust-package">Trust Package（保証パッケージ）</h1>
 <p>このページは、監査人、法務、ITセキュリティが採用準備を評価するために必要な最小限の資料をまとめています。
 これはハブのみであり、詳細なエビデンスTOCとカバレッジテーブルはそれぞれのセクションで管理されています。</p>
-<h2 id="_1">含まれるもの</h2>
+<h2 id="_1">ダウンロード</h2>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">Trust Package PDF をダウンロード（最新リリース）</a></strong></p>
+<p>Trust Package PDF は監査対応資料を単一ドキュメントにまとめたものです。各 GitHub Release には以下が含まれます：</p>
+<ul>
+<li><code>trust_package.pdf</code> — 英語版 Trust Package</li>
+<li><code>trust_package.ja.pdf</code> — 日本語版 Trust Package</li>
+<li><code>aimo-standard-artifacts.zip</code> — スキーマ、テンプレート、サンプル、バリデータルール</li>
+<li><code>SHA256SUMS.txt</code> — 検証用チェックサム</li>
+</ul>
+<h2 id="_2">含まれるもの</h2>
 <ul>
 <li><strong>適合性</strong>: コンプライアンスの主張方法とレベルの意味 — <a href="../../conformance/">Conformance</a></li>
 <li><strong>カバレッジマップ</strong>: 外部標準へのマッピング — <a href="../../coverage-map/">カバレッジマップ索引</a>、<a href="../../coverage-map/methodology/">カバレッジマップ方法論</a></li>
@@ -1734,7 +1779,7 @@
 <li><strong>リリース</strong>: 変更履歴と配布 — <a href="../../releases/">Releases</a></li>
 <li><strong>ガバナンス</strong>: ポリシー、セキュリティ、ライセンス — <a href="../">Governance</a></li>
 </ul>
-<h2 id="_2">監査対応のための最小セット</h2>
+<h2 id="_3">監査対応のための最小セット</h2>
 <table>
 <thead>
 <tr>
@@ -1781,10 +1826,20 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_3">引用方法</h2>
+<h2 id="_4">引用方法</h2>
 <p>引用ガイダンスとコンテキストはリポジトリREADMEを使用してください。ガバナンスは権威あるポリシーにリンクしています。
 <a href="https://github.com/billyrise/aimo-standard/blob/main/README.md">README.md</a> と <a href="../">Governance</a> を参照。</p>
-<h2 id="_4">重要な注意</h2>
+<h2 id="artifacts-zip">Artifacts zip の内容</h2>
+<p><code>aimo-standard-artifacts.zip</code> には以下が含まれます：</p>
+<ul>
+<li><strong>JSON スキーマ</strong>: <code>schemas/jsonschema/</code> — 機械可読な検証スキーマ</li>
+<li><strong>テンプレート</strong>: <code>templates/ev/</code> — エビデンス記録テンプレート（JSON + Markdown）</li>
+<li><strong>サンプル</strong>: <code>examples/</code> — 素早い導入のための最小サンプルバンドル</li>
+<li><strong>カバレッジマップ</strong>: <code>coverage_map/coverage_map.yaml</code> — 外部標準へのマッピング</li>
+<li><strong>バリデータルール</strong>: <code>validator/rules/</code> — 検証ルール定義</li>
+<li><strong>ガバナンス文書</strong>: <code>VERSIONING.md</code>、<code>GOVERNANCE.md</code>、<code>SECURITY.md</code>、<code>LICENSE.txt</code> など</li>
+</ul>
+<h2 id="_5">重要な注意</h2>
 <p>このパッケージは説明可能性とエビデンス準備をサポートします。法的助言を提供したり、コンプライアンスを保証するものではありません。</p>
 
 
