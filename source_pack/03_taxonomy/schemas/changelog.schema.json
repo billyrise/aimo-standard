@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://standard.aimoaas.com/schemas/changelog.schema.json",
+  "title": "AIMO Changelog Schema",
+  "description": "Schema for AIMO Standard changelog entries tracking version changes.",
+  "type": "object",
+  "required": ["standard_id", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to this schema."
+    },
+    "standard_id": {
+      "type": "string",
+      "description": "Identifier for the standard (e.g., AIMO-STD)."
+    },
+    "entries": {
+      "type": "array",
+      "description": "Array of changelog entries, newest first.",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "required": ["version", "date", "change_type", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Version number (SemVer format).",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Release date in ISO 8601 format (YYYY-MM-DD)."
+        },
+        "change_type": {
+          "type": "string",
+          "enum": ["major", "minor", "patch"],
+          "description": "Type of version change per SemVer."
+        },
+        "backward_compatible": {
+          "type": "boolean",
+          "description": "Whether this change is backward compatible."
+        },
+        "summary": {
+          "type": "string",
+          "description": "Brief summary of changes in this version."
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/detail"
+          },
+          "description": "Detailed list of individual changes."
+        },
+        "deprecated": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of codes or features deprecated in this version."
+        },
+        "removed": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of codes or features removed in this version."
+        },
+        "migration_notes": {
+          "type": "string",
+          "description": "Notes for migrating from previous version."
+        }
+      }
+    },
+    "detail": {
+      "type": "object",
+      "required": ["type", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["added", "changed", "deprecated", "removed", "fixed", "security"],
+          "description": "Type of change."
+        },
+        "scope": {
+          "type": "string",
+          "description": "Affected dimension or component (e.g., FS, UC, schema)."
+        },
+        "code": {
+          "type": "string",
+          "description": "Specific code affected, if applicable."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the change."
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,93 @@
 {
+  "taxonomy_version": "0.1.0",
   "entries": [
-    { "key": "EXAMPLE_KEY", "label": "Example Label", "description": "Example dictionary entry." }
+    {
+      "dimension_id": "FS",
+      "code": "FS-001",
+      "label_en": "End-user Productivity",
+      "label_ja": "社内生産性",
+      "definition_en": "AI used to improve productivity of internal end users (writing, search, summarization, meeting notes).",
+      "definition_ja": "社内業務の生産性向上を目的とした利用。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "UC",
+      "code": "UC-001",
+      "label_en": "General Q&A",
+      "label_ja": "一般QA",
+      "definition_en": "General question answering and information lookup.",
+      "definition_ja": "一般的な質問応答と情報検索。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "DT",
+      "code": "DT-002",
+      "label_en": "Internal",
+      "label_ja": "社内情報",
+      "definition_en": "Non-public internal business data (policies, procedures, internal docs).",
+      "definition_ja": "社外非公開の社内業務データ。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "CH",
+      "code": "CH-001",
+      "label_en": "Web UI",
+      "label_ja": "Web UI",
+      "definition_en": "User interacts with AI via a web browser interface.",
+      "definition_ja": "Webブラウザ経由での対話。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "IM",
+      "code": "IM-002",
+      "label_en": "SaaS Integrated",
+      "label_ja": "SaaS連携",
+      "definition_en": "AI features are integrated within a SaaS application.",
+      "definition_ja": "SaaSアプリケーションにAI機能が組み込まれている。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "RS",
+      "code": "RS-001",
+      "label_en": "Data Leakage",
+      "label_ja": "情報漏えい",
+      "definition_en": "Risk of unintended disclosure of sensitive data to unauthorized parties or external AI providers.",
+      "definition_ja": "意図しない情報漏えいのリスク。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "OB",
+      "code": "OB-001",
+      "label_en": "Efficiency",
+      "label_ja": "効率化",
+      "definition_en": "Improves time and/or cost efficiency of tasks.",
+      "definition_ja": "業務の時間・コスト効率の向上。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-001",
+      "label_en": "System Overview",
+      "label_ja": "システム概要",
+      "definition_en": "High-level overview document for the AI system.",
+      "definition_ja": "AIシステムのハイレベル概要ドキュメント。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    }
   ]
 }

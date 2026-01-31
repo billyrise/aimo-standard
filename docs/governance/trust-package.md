@@ -19,6 +19,7 @@ The Trust Package PDF consolidates auditor-ready materials into a single documen
 - **Conformance**: how to claim compliance and what levels mean — [Conformance](../conformance/index.md)
 - **Coverage Map**: mapping to external standards — [Coverage Map index](../coverage-map/index.md), [Coverage Map methodology](../coverage-map/methodology.md)
 - **Standard**: normative requirements and definitions — [Standard (Current)](../standard/current/index.md)
+- **Taxonomy**: 8-dimension classification system for AI governance — [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md)
 - **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](../artifacts/evidence-bundle.md)
 - **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
 - **Validator**: rules and reference checks — [Validator](../validator/index.md)
@@ -32,6 +33,7 @@ The Trust Package PDF consolidates auditor-ready materials into a single documen
 | --- | --- | --- |
 | Conformance levels | [Conformance](../conformance/index.md) | How to claim compliance and the scope of evidence required |
 | Coverage mapping | [Coverage Map index](../coverage-map/index.md), [Coverage Map methodology](../coverage-map/methodology.md) | Explainability against external regulations and standards |
+| Taxonomy & Dictionary | [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md) | Classification system for AI systems (8 dimensions, 91 codes) |
 | Evidence artifacts | [Evidence Bundle](../artifacts/evidence-bundle.md), [Minimum Evidence](../artifacts/minimum-evidence.md), [EV Template](../standard/current/06-ev-template.md) | What data must exist to support traceability |
 | Validator checks | [Validator](../validator/index.md) | How to verify internal consistency and completeness |
 | Example bundle | [Examples](../examples/index.md) | What an audit-ready package looks like in practice |
@@ -47,6 +49,7 @@ See [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) 
 
 The `aimo-standard-artifacts.zip` includes:
 
+- **Taxonomy (SSOT)**: `source_pack/03_taxonomy/` — Dictionary CSV (91 codes), YAML, code system
 - **JSON Schemas**: `schemas/jsonschema/` — Machine-readable validation schemas
 - **Templates**: `templates/ev/` — Evidence record templates (JSON + Markdown)
 - **Examples**: `examples/` — Minimal sample bundles for quick adoption
@@ -170,8 +173,9 @@ Check that the submission references an official AIMO Standard release:
 
 From this page, the recommended audit journey is:
 
-1. **Evidence structure**: [Evidence Bundle](../artifacts/evidence-bundle.md) — understand bundle TOC and traceability
-2. **Required evidence**: [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist by lifecycle
-3. **Framework alignment**: [Coverage Map](../coverage-map/index.md) + [Methodology](../coverage-map/methodology.md) — see how AIMO maps to external frameworks
-4. **Validation**: [Validator](../validator/index.md) — run structural consistency checks
-5. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums
+1. **Classification system**: [Taxonomy](../standard/current/03-taxonomy.md) + [Dictionary](../standard/current/05-dictionary.md) — understand the 8-dimension code system
+2. **Evidence structure**: [Evidence Bundle](../artifacts/evidence-bundle.md) — understand bundle TOC and traceability
+3. **Required evidence**: [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist by lifecycle
+4. **Framework alignment**: [Coverage Map](../coverage-map/index.md) + [Methodology](../coverage-map/methodology.md) — see how AIMO maps to external frameworks
+5. **Validation**: [Validator](../validator/index.md) — run structural consistency checks
+6. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums

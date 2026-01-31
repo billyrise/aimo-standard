@@ -15,16 +15,17 @@ This site hosts the human-readable AIMO Standard specification. English is canon
 
 **Quick links by audience**
 
-- **For auditors**: [Trust Package](governance/trust-package.md), [Evidence Bundle](artifacts/evidence-bundle.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Coverage Map](coverage-map/index.md), [Methodology](coverage-map/methodology.md), [Validator](validator/index.md), [Releases](releases/index.md)
-- **For security**: [Trust Package](governance/trust-package.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Governance](governance/index.md), [Validator](validator/index.md), [Standard > EV Template](standard/current/06-ev-template.md)
-- **For IT ops**: [Trust Package](governance/trust-package.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Releases](releases/index.md), [Validator](validator/index.md), [Examples](examples/index.md), [Conformance](conformance/index.md)
+- **For auditors**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Dictionary](standard/current/05-dictionary.md), [Evidence Bundle](artifacts/evidence-bundle.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Coverage Map](coverage-map/index.md), [Validator](validator/index.md), [Releases](releases/index.md)
+- **For security**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Governance](governance/index.md), [Validator](validator/index.md), [Standard > EV Template](standard/current/06-ev-template.md)
+- **For IT ops**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Releases](releases/index.md), [Validator](validator/index.md), [Examples](examples/index.md), [Conformance](conformance/index.md)
 - **For legal/procurement**: [Trust Package](governance/trust-package.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Coverage Map Methodology](coverage-map/methodology.md), [Releases](releases/index.md), [Governance](governance/index.md) (license, trademarks)
 
 **Audit journey** (2-click path):
 
 1. [Trust Package](governance/trust-package.md) — start here for auditor-ready materials
-2. [Evidence Bundle](artifacts/evidence-bundle.md) — structure and TOC
-3. [Minimum Evidence Requirements](artifacts/minimum-evidence.md) — MUST-level checklist
-4. [Coverage Map](coverage-map/index.md) + [Methodology](coverage-map/methodology.md) — framework mappings
-5. [Validator](validator/index.md) — run structural checks
-6. [Releases](releases/index.md) — download assets and verify
+2. [Taxonomy](standard/current/03-taxonomy.md) + [Dictionary](standard/current/05-dictionary.md) — understand the 8-dimension code system
+3. [Evidence Bundle](artifacts/evidence-bundle.md) — structure and TOC
+4. [Minimum Evidence Requirements](artifacts/minimum-evidence.md) — MUST-level checklist
+5. [Coverage Map](coverage-map/index.md) + [Methodology](coverage-map/methodology.md) — framework mappings
+6. [Validator](validator/index.md) — run structural checks
+7. [Releases](releases/index.md) — download assets and verify

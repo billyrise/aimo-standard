@@ -1,40 +1,120 @@
 {
-  "version": "v0.1.0",
+  "version": "0.1.0",
+  "taxonomy_version": "0.1.0",
   "dictionary": {
+    "taxonomy_version": "0.1.0",
     "entries": [
-      { "key": "REQ-001", "label": "Request", "description": "AI use request" },
-      { "key": "EV-001", "label": "Evidence", "description": "Use evidence record" }
+      {
+        "dimension_id": "FS",
+        "code": "FS-001",
+        "label_en": "End-user Productivity",
+        "label_ja": "社内生産性",
+        "definition_en": "AI used to improve productivity of internal end users.",
+        "status": "active",
+        "introduced_in": "0.1.0",
+        "backward_compatible": true
+      },
+      {
+        "dimension_id": "UC",
+        "code": "UC-001",
+        "label_en": "General Q&A",
+        "label_ja": "一般QA",
+        "definition_en": "General question answering and information lookup.",
+        "status": "active",
+        "introduced_in": "0.1.0",
+        "backward_compatible": true
+      },
+      {
+        "dimension_id": "DT",
+        "code": "DT-002",
+        "label_en": "Internal",
+        "label_ja": "社内情報",
+        "definition_en": "Non-public internal business data.",
+        "status": "active",
+        "introduced_in": "0.1.0",
+        "backward_compatible": true
+      },
+      {
+        "dimension_id": "CH",
+        "code": "CH-004",
+        "label_en": "ChatOps",
+        "label_ja": "チャット連携",
+        "definition_en": "AI accessed via Slack/Teams integrations.",
+        "status": "active",
+        "introduced_in": "0.1.0",
+        "backward_compatible": true
+      },
+      {
+        "dimension_id": "IM",
+        "code": "IM-002",
+        "label_en": "SaaS Integrated",
+        "label_ja": "SaaS連携",
+        "definition_en": "AI features integrated within a SaaS application.",
+        "status": "active",
+        "introduced_in": "0.1.0",
+        "backward_compatible": true
+      },
+      {
+        "dimension_id": "RS",
+        "code": "RS-001",
+        "label_en": "Data Leakage",
+        "label_ja": "情報漏えい",
+        "definition_en": "Risk of unintended data disclosure.",
+        "status": "active",
+        "introduced_in": "0.1.0",
+        "backward_compatible": true
+      },
+      {
+        "dimension_id": "EV",
+        "code": "EV-001",
+        "label_en": "System Overview",
+        "label_ja": "システム概要",
+        "definition_en": "High-level overview of the AI system.",
+        "status": "active",
+        "introduced_in": "0.1.0",
+        "backward_compatible": true
+      }
     ]
   },
   "evidence": [
     {
-      "id": "EV-001",
+      "id": "EV-20260115-001",
       "timestamp": "2026-01-15T10:00:00Z",
-      "source": "example-system",
-      "summary": "Minimal evidence record for Evidence Bundle example.",
-      "tags": ["example", "evidence-bundle"]
+      "source": "slack-copilot-bot",
+      "summary": "Evidence of Slack-integrated AI assistant usage for internal Q&A on company policies.",
+      "taxonomy_version": "0.1.0",
+      "codes": {
+        "FS": ["FS-001"],
+        "UC": ["UC-001"],
+        "DT": ["DT-002"],
+        "CH": ["CH-004"],
+        "IM": ["IM-002"],
+        "RS": ["RS-001"],
+        "EV": ["EV-001"]
+      },
+      "tags": ["slack", "chatops", "qa"]
     }
   ],
   "request": {
-    "id": "REQ-001",
+    "id": "REQ-20260110-001",
     "timestamp": "2026-01-10T09:00:00Z",
-    "actor": "requester",
-    "scope": "Example AI use",
-    "rationale": "Minimal bundle example"
+    "actor": "it-requester@example.com",
+    "scope": "Deploy Slack AI bot for internal policy Q&A",
+    "rationale": "Improve employee access to HR and IT policies"
   },
   "review": {
-    "id": "REV-001",
+    "id": "REV-20260112-001",
     "timestamp": "2026-01-12T14:00:00Z",
-    "actor": "reviewer",
+    "actor": "security-reviewer@example.com",
     "decision": "approved",
-    "rationale": "Within policy",
-    "references": ["REQ-001"]
+    "rationale": "Data classification is internal-only, no PII exposure",
+    "references": ["REQ-20260110-001"]
   },
   "change_log": {
-    "id": "CHG-001",
+    "id": "CHG-20260115-001",
     "timestamp": "2026-01-15T10:00:00Z",
     "actor": "system",
-    "change_description": "Initial bundle creation",
-    "references": ["EV-001"]
+    "change_description": "Initial evidence bundle creation for Slack AI bot",
+    "references": ["EV-20260115-001", "REQ-20260110-001", "REV-20260112-001"]
   }
 }

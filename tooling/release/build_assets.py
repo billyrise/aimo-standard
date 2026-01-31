@@ -36,19 +36,33 @@ DIST_DIR = REPO_ROOT / "dist"
 
 # Files to include in the artifacts zip
 ARTIFACT_PATHS = [
+    # Schemas
     "schemas/jsonschema/aimo-dictionary.schema.json",
     "schemas/jsonschema/aimo-ev.schema.json",
     "schemas/jsonschema/aimo-standard.schema.json",
+    # Taxonomy (SSOT and derived)
+    "source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv",
+    "source_pack/03_taxonomy/taxonomy_en.yaml",
+    "source_pack/03_taxonomy/taxonomy_ja.yaml",
+    "source_pack/03_taxonomy/code_system.csv",
+    "source_pack/03_taxonomy/dimensions_en_ja.md",
+    "source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json",
+    "source_pack/03_taxonomy/taxonomy_pack_v0.1.json",
+    # Templates
     "templates/ev/ev_template.json",
     "templates/ev/ev_template.md",
+    # Examples
     "examples/minimal/sample_dictionary.json",
     "examples/minimal/sample_ev.json",
     "examples/evidence_bundle_minimal/dictionary.json",
     "examples/evidence_bundle_minimal/root.json",
     "examples/evidence_bundle_minimal/README.md",
+    # Coverage map
     "coverage_map/coverage_map.yaml",
+    # Validator
     "validator/rules/checks.yaml",
     "validator/rules/checks.md",
+    # Governance
     "VERSIONING.md",
     "GOVERNANCE.md",
     "SECURITY.md",
