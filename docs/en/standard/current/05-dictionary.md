@@ -22,48 +22,48 @@ The dictionary enables:
 
 ## Column Schema
 
-The dictionary CSV uses **21 columns**:
+The canonical dictionary uses **18 columns** (language-neutral structure):
 
-### Identification Columns (6)
+### Identification Columns (5)
 
 | # | Column | Required | Description | Example |
 | --- | --- | --- | --- | --- |
 | 1 | `standard_id` | Yes | Standard identifier | `AIMO-STD` |
 | 2 | `standard_version` | Yes | SemVer format | `0.1.0` |
 | 3 | `dimension_id` | Yes | Two-letter dimension ID | `FS`, `UC`, `DT` |
-| 4 | `dimension_name_en` | Yes | English dimension name | `Functional Scope` |
-| 5 | `dimension_name_ja` | Yes | Japanese dimension name | (JA text) |
-| 6 | `code` | Yes | Full code | `UC-001` |
+| 4 | `dimension_name` | Yes | Dimension name | `Functional Scope` |
+| 5 | `code` | Yes | Full code | `UC-001` |
 
-### Label and Definition Columns (6)
+### Label and Definition Columns (4)
 
 | # | Column | Required | Description | Example |
 | --- | --- | --- | --- | --- |
-| 7 | `label_en` | Yes | English label (max 50 chars) | `General Q&A` |
-| 8 | `label_ja` | Yes | Japanese label | (JA text) |
-| 9 | `definition_en` | Yes | English definition (1-2 sentences) | `General question answering...` |
-| 10 | `definition_ja` | Yes | Japanese definition | (JA text) |
-| 11 | `scope_notes` | No | Usage scope clarification | `Low to medium risk...` |
-| 12 | `examples` | No | Pipe-separated examples | `chatbot\|recommendation` |
+| 6 | `label` | Yes | Code label (max 50 chars) | `General Q&A` |
+| 7 | `definition` | Yes | Code definition (1-2 sentences) | `General question answering...` |
+| 8 | `scope_notes` | No | Usage scope clarification | `Low to medium risk...` |
+| 9 | `examples` | No | Pipe-separated examples | `chatbot\|recommendation` |
+
+!!! note "Translations"
+    The canonical data model separates translations into language packs (`data/taxonomy/i18n/*.yaml`). Each language pack provides localized `dimension_name`, `label`, and `definition` values. See [Localization Guide](../../contributing/localization.md) for details.
 
 ### Lifecycle Columns (6)
 
 | # | Column | Required | Description | Example |
 | --- | --- | --- | --- | --- |
-| 13 | `status` | Yes | `active`, `deprecated`, `removed` | `active` |
-| 14 | `introduced_in` | Yes | Version when added | `0.1.0` |
-| 15 | `deprecated_in` | No | Version when deprecated | `1.2.0` |
-| 16 | `removed_in` | No | Version when removed | `2.0.0` |
-| 17 | `replaced_by` | No | Replacement code | `UC-015` |
-| 18 | `backward_compatible` | Yes | `true` or `false` | `true` |
+| 10 | `status` | Yes | `active`, `deprecated`, `removed` | `active` |
+| 11 | `introduced_in` | Yes | Version when added | `0.1.0` |
+| 12 | `deprecated_in` | No | Version when deprecated | `1.2.0` |
+| 13 | `removed_in` | No | Version when removed | `2.0.0` |
+| 14 | `replaced_by` | No | Replacement code | `UC-015` |
+| 15 | `backward_compatible` | Yes | `true` or `false` | `true` |
 
 ### Governance Columns (3)
 
 | # | Column | Required | Description | Example |
 | --- | --- | --- | --- | --- |
-| 19 | `references` | No | External references | ISO/IEC 42001 |
-| 20 | `owner` | No | Responsible party | `AIMO WG` |
-| 21 | `last_reviewed_date` | No | Last review (YYYY-MM-DD) | `2026-01-19` |
+| 16 | `references` | No | External references | ISO/IEC 42001 |
+| 17 | `owner` | No | Responsible party | `AIMO WG` |
+| 18 | `last_reviewed_date` | No | Last review (YYYY-MM-DD) | `2026-01-19` |
 
 ## Initial Entries
 
@@ -92,7 +92,7 @@ The current dictionary version is **v0.1.0** and contains:
 2. Set `status` to `active`
 3. Set `introduced_in` to the current version
 4. Set `backward_compatible` to `true`
-5. Provide both EN and JA labels and definitions
+5. Provide label and definition (add translations to language packs)
 
 ### Modifying Existing Codes
 

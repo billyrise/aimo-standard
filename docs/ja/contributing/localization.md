@@ -2,6 +2,21 @@
 
 本ページでは、AIMO Standard ドキュメントのローカライゼーション（i18n）構造、メンテナンスワークフロー、SSOT（Single Source of Truth）原則について説明します。
 
+## 言語純度ポリシー
+
+**各言語ページはその言語のコンテンツのみを含むべきです。**
+
+| ルール | 説明 |
+| --- | --- |
+| **ENページ** | CJK文字や言語固有カラム（`_ja`サフィックス等）への参照を含まない |
+| **JAページ** | EN固有の用語を正規構造として説明しない |
+| **例外** | `tooling/checks/lint_i18n.py` の `MIXED_LANGUAGE_ALLOWLIST` に記載 |
+
+このポリシーにより：
+1. 読者は選択した言語のみを見る
+2. 新言語追加時に既存ページを更新する必要がない
+3. CIが自動的に違反を検出できる
+
 ## 言語構造
 
 AIMO Standard ドキュメントは**フォルダベースの i18n 構造**を採用しています：
@@ -108,44 +123,48 @@ AIMOは複数のSingle Source of Truthファイルを使用します：
 4. `mkdocs build --strict` を実行してビルドを確認
 5. すべての変更をまとめてコミット
 
-## 新言語の追加
+## 新言語の追加（5ステップ）
 
 新しい言語（例：スペイン語）を追加するには：
 
-### ステップ1: タクソノミー翻訳パックの作成
+### ステップ1: タクソノミーパックを生成
 
 ```bash
 python tooling/taxonomy/build_i18n_taxonomy.py --add-lang es --lang-name "Español"
 ```
 
-これにより、英語の参照をコメントとして含む空のテンプレート `data/taxonomy/i18n/es.yaml` が作成されます。
+英語参照をコメントとして含む `data/taxonomy/i18n/es.yaml` が作成されます。
 
-### ステップ2: ドキュメント構造の作成
+### ステップ2: ドキュメントフォルダを作成
 
 ```bash
-mkdir -p docs/es
-cp -r docs/en/* docs/es/
+mkdir -p docs/es && cp -r docs/en/* docs/es/
 ```
 
-### ステップ3: MkDocs設定の更新
-
-`mkdocs.yml` に言語を追加:
+### ステップ3: mkdocs.ymlを更新
 
 ```yaml
 plugins:
   - i18n:
       languages:
-        # ... 既存の言語 ...
         - locale: es
           name: Español
           build: true
 ```
 
-### ステップ4: コンテンツの翻訳
+### ステップ4: 翻訳
 
-1. `data/taxonomy/i18n/es.yaml` のタクソノミーラベルを翻訳
-2. `docs/es/` のドキュメントファイルを翻訳
-3. `mkdocs build --strict` を実行して確認
+- `data/taxonomy/i18n/es.yaml` を翻訳
+- `docs/es/` のファイルを翻訳
+
+### ステップ5: 検証
+
+```bash
+python tooling/checks/lint_i18n.py && mkdocs build --strict
+```
+
+!!! success "完了"
+    新言語は `/dev/es/` で利用可能になります
 
 ## ファイル命名規則
 

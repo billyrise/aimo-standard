@@ -7,6 +7,7 @@ Quality Gates:
 2. Required Pages: Critical pages must exist in all active languages
 3. Heading Consistency: Heading levels match between translations
 4. Orphan Detection: Warn about JA files without EN counterpart
+5. Language-specific Column Detection: Detect _ja/_en suffixed columns in wrong language docs
 
 Exit Codes:
 - 0: All checks pass
@@ -54,6 +55,12 @@ RECOMMENDED_PAGES = [
     "contributing/localization.md",
 ]
 
+# Pages allowed to have mixed-language content (e.g., translation mapping docs)
+# Use relative path from language directory (e.g., "contributing/localization.md")
+MIXED_LANGUAGE_ALLOWLIST = [
+    "contributing/localization.md",  # Localization guide may reference both languages
+]
+
 # Regex patterns
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+)$")
 # CJK character ranges:
@@ -66,6 +73,23 @@ HEADING_RE = re.compile(r"^(#{1,6})\s+(.+)$")
 CJK_RE = re.compile(r"[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\u3400-\u4DBF\uFF00-\uFFEF]")
 # Code block detection
 CODE_FENCE_RE = re.compile(r"^```")
+
+# Language-specific column patterns that indicate wrong language content
+# In EN pages: should not have _ja suffix columns documented
+# In JA pages: should not have _en suffix columns documented
+LANG_COLUMN_PATTERNS = {
+    "en": [
+        re.compile(r"`[a-z_]+_ja`"),  # _ja suffix columns like `label_ja`
+        re.compile(r"\|\s*`?dimension_name_ja`?\s*\|"),  # Table cells with _ja columns
+        re.compile(r"\|\s*`?label_ja`?\s*\|"),
+        re.compile(r"\|\s*`?definition_ja`?\s*\|"),
+        re.compile(r"Japanese\s+(dimension\s+name|label|definition)", re.IGNORECASE),
+    ],
+    "ja": [
+        # JA pages should use Japanese terminology, not EN-specific references
+        # This is a softer check - we mainly care about _ja columns in EN pages
+    ],
+}
 
 
 def is_in_code_block(lines: list[str], line_idx: int) -> bool:
@@ -97,6 +121,34 @@ def check_language_purity(filepath: Path) -> list[tuple[int, str]]:
         line_without_code = re.sub(r"`[^`]+`", "", line)
         if CJK_RE.search(line_without_code):
             issues.append((i + 1, line.strip()))
+
+    return issues
+
+
+def check_language_column_patterns(filepath: Path, lang: str) -> list[tuple[int, str, str]]:
+    """
+    Check for language-specific column patterns in the wrong language file.
+    For example, _ja suffix columns should not be documented in EN pages.
+    
+    Returns list of (line_num, line_content, pattern_description).
+    """
+    issues = []
+    patterns = LANG_COLUMN_PATTERNS.get(lang, [])
+    if not patterns:
+        return issues
+
+    content = filepath.read_text(encoding="utf-8")
+    lines = content.splitlines()
+
+    for i, line in enumerate(lines):
+        # Skip if inside code block (code examples may legitimately reference columns)
+        if is_in_code_block(lines, i):
+            continue
+
+        for pattern in patterns:
+            if pattern.search(line):
+                issues.append((i + 1, line.strip(), pattern.pattern))
+                break  # Only report first match per line
 
     return issues
 
@@ -173,11 +225,36 @@ def main():
 
     for en_file in en_files:
         rel_path = en_file.relative_to(EN_DIR)
+        rel_path_str = str(rel_path).replace("\\", "/")
+
+        # Skip files in allowlist
+        if rel_path_str in MIXED_LANGUAGE_ALLOWLIST:
+            continue
+
         cjk_issues = check_language_purity(en_file)
 
         for line_num, line in cjk_issues:
             errors.append(
                 f"[CRITICAL] CJK characters in EN file: docs/en/{rel_path}:{line_num}\n"
+                f"           {line[:80]}{'...' if len(line) > 80 else ''}"
+            )
+
+    # === Check 2b: Language-specific Column Patterns (e.g., _ja in EN files) ===
+    print("Checking for wrong-language column patterns...")
+    for en_file in en_files:
+        rel_path = en_file.relative_to(EN_DIR)
+        rel_path_str = str(rel_path).replace("\\", "/")
+
+        # Skip files in allowlist
+        if rel_path_str in MIXED_LANGUAGE_ALLOWLIST:
+            continue
+
+        column_issues = check_language_column_patterns(en_file, "en")
+
+        for line_num, line, pattern in column_issues:
+            errors.append(
+                f"[CRITICAL] Language-specific content in EN file: docs/en/{rel_path}:{line_num}\n"
+                f"           Pattern: {pattern}\n"
                 f"           {line[:80]}{'...' if len(line) > 80 else ''}"
             )
 

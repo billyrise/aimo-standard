@@ -2,6 +2,21 @@
 
 This page documents the localization (i18n) structure, maintenance workflow, and SSOT (Single Source of Truth) principles for the AIMO Standard documentation.
 
+## Language Purity Policy
+
+**Each language page should contain only that language's content.**
+
+| Rule | Description |
+| --- | --- |
+| **EN pages** | Must not contain CJK characters or references to language-specific columns (e.g., `_ja` suffixes) |
+| **JA pages** | Must not explain EN-specific terminology as if it were the canonical structure |
+| **Exceptions** | Listed in `MIXED_LANGUAGE_ALLOWLIST` in `tooling/checks/lint_i18n.py` |
+
+This policy ensures:
+1. Readers see only their selected language
+2. Adding new languages doesn't require updating existing pages
+3. CI can automatically detect violations
+
 ## Language Structure
 
 The AIMO Standard documentation uses a **folder-based i18n structure**:
@@ -108,44 +123,48 @@ The following files are **generated** and should NOT be edited manually:
 4. Run `mkdocs build --strict` to verify build
 5. Commit all changes together
 
-## Adding a New Language
+## Adding a New Language (5 Steps)
 
 To add a new language (e.g., Spanish):
 
-### Step 1: Create Taxonomy Translation Pack
+### Step 1: Generate Taxonomy Pack
 
 ```bash
 python tooling/taxonomy/build_i18n_taxonomy.py --add-lang es --lang-name "Español"
 ```
 
-This creates `data/taxonomy/i18n/es.yaml` with an empty template containing English references as comments.
+Creates `data/taxonomy/i18n/es.yaml` with English references as comments.
 
-### Step 2: Create Documentation Structure
+### Step 2: Create Docs Folder
 
 ```bash
-mkdir -p docs/es
-cp -r docs/en/* docs/es/
+mkdir -p docs/es && cp -r docs/en/* docs/es/
 ```
 
-### Step 3: Update MkDocs Configuration
-
-Add the language to `mkdocs.yml`:
+### Step 3: Update mkdocs.yml
 
 ```yaml
 plugins:
   - i18n:
       languages:
-        # ... existing languages ...
         - locale: es
           name: Español
           build: true
 ```
 
-### Step 4: Translate Content
+### Step 4: Translate
 
-1. Translate taxonomy labels in `data/taxonomy/i18n/es.yaml`
-2. Translate documentation files in `docs/es/`
-3. Run `mkdocs build --strict` to verify
+- Translate `data/taxonomy/i18n/es.yaml`
+- Translate files in `docs/es/`
+
+### Step 5: Verify
+
+```bash
+python tooling/checks/lint_i18n.py && mkdocs build --strict
+```
+
+!!! success "Done"
+    New language is now available at `/dev/es/`
 
 ## File Naming Conventions
 
