@@ -43,6 +43,41 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja/coverage-map/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/dev/coverage-map/eu-ai-act/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/coverage-map/eu-ai-act/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja/coverage-map/eu-ai-act/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/coverage-map/isms/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/coverage-map/isms/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja/coverage-map/isms/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/coverage-map/iso-42001/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/coverage-map/iso-42001/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja/coverage-map/iso-42001/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/coverage-map/methodology/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/coverage-map/methodology/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja/coverage-map/methodology/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/coverage-map/nist-ai-rmf/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/dev/coverage-map/nist-ai-rmf/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/devja/coverage-map/nist-ai-rmf/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/dev/examples/</loc>
         <lastmod>2026-01-31</lastmod>
         <changefreq>daily</changefreq>
@@ -188,6 +223,41 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/dev/ja/coverage-map/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/devcoverage-map/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/ja/coverage-map/eu-ai-act/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/dev/ja/coverage-map/eu-ai-act/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/devcoverage-map/eu-ai-act/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/ja/coverage-map/isms/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/dev/ja/coverage-map/isms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/devcoverage-map/isms/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/ja/coverage-map/iso-42001/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/dev/ja/coverage-map/iso-42001/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/devcoverage-map/iso-42001/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/ja/coverage-map/methodology/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/dev/ja/coverage-map/methodology/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/devcoverage-map/methodology/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/dev/ja/coverage-map/nist-ai-rmf/</loc>
+        <lastmod>2026-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/dev/ja/coverage-map/nist-ai-rmf/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/devcoverage-map/nist-ai-rmf/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/dev/ja/examples/</loc>
