@@ -1,25 +1,18 @@
 # Codes
 
-This section defines the AIMO Code System format, naming conventions, and lifecycle management.
+This page defines the AIMO Code System format, naming conventions, and lifecycle management.
 
 ## Code Format
 
-All AIMO codes follow the format: **`<DIM>-<TOKEN>`**
+All AIMO codes follow the format: **`<PREFIX>-<TOKEN>`**
 
 | Component | Description | Format | Example |
 | --- | --- | --- | --- |
-| `<DIM>` | Dimension identifier | 2 uppercase letters | FS, UC, DT |
+| `<PREFIX>` | Dimension identifier | 2 uppercase letters | FS, UC, DT |
 | `-` | Separator | Hyphen | - |
 | `<TOKEN>` | Unique token within dimension | 3 digits (zero-padded) | 001, 002, 003 |
 
-### Naming Conventions
-
-1. **Prefix stability**: The two-letter dimension prefix (FS, UC, etc.) is fixed and will not change.
-2. **Zero-padding**: Tokens are always 3 digits, zero-padded (e.g., `001` not `1`).
-3. **Sequential assignment**: New codes are assigned the next available number within a dimension.
-4. **No reuse**: Removed codes are never reassigned to different meanings.
-
-**Examples:**
+### Examples
 
 - `FS-001` - Functional Scope: End-user Productivity
 - `UC-005` - Use Case Class: Code Generation
@@ -28,22 +21,77 @@ All AIMO codes follow the format: **`<DIM>-<TOKEN>`**
 - `IM-002` - Integration Mode: SaaS Integrated
 - `RS-001` - Risk Surface: Data Leakage
 - `OB-001` - Outcome/Benefit: Efficiency
-- `EV-001` - Evidence Type: System Overview
+- `EV-001` - Evidence Type: Request Record
 
-## Dimension Identifiers
+## Namespaces
 
-| ID | Dimension Name | Token Type | Required | Multi-select |
+The AIMO taxonomy uses 8 dimension namespaces:
+
+| ID | Name (EN) | Name (JA) | Prefix | Code Count |
 | --- | --- | --- | --- | --- |
-| **FS** | Functional Scope | Numeric (001-999) | Yes | No |
-| **UC** | Use Case Class | Numeric (001-999) | Yes | Yes |
-| **DT** | Data Type | Numeric (001-999) | Yes | Yes |
-| **CH** | Channel | Numeric (001-999) | Yes | Yes |
-| **IM** | Integration Mode | Numeric (001-999) | Yes | No |
-| **RS** | Risk Surface | Numeric (001-999) | Yes | Yes |
-| **OB** | Outcome / Benefit | Numeric (001-999) | No | Yes |
-| **EV** | Evidence Type | Numeric (001-999) | Yes | Yes |
+| **FS** | Functional Scope | 機能スコープ | `FS-` | 6 |
+| **UC** | Use Case Class | ユースケース分類 | `UC-` | 30 |
+| **DT** | Data Type | データ種別 | `DT-` | 10 |
+| **CH** | Channel | チャネル | `CH-` | 8 |
+| **IM** | Integration Mode | 統合形態 | `IM-` | 7 |
+| **RS** | Risk Surface | リスク面 | `RS-` | 8 |
+| **OB** | Outcome / Benefit | 成果 | `OB-` | 7 |
+| **EV** | Evidence Type | 証跡種別 | `EV-` | 15 |
 
-## Code Composition
+**Total: 91 codes across 8 dimensions**
+
+### Namespace Rules
+
+1. **Prefix is fixed**: The two-letter dimension prefix (FS, UC, etc.) is permanent and will never change.
+2. **Zero-padding**: Tokens are always 3 digits, zero-padded (e.g., `001` not `1`).
+3. **Sequential assignment**: New codes are assigned the next available number within a dimension.
+4. **No reuse**: Removed codes are never reassigned to different meanings.
+
+## Stability Rules
+
+Code stability is a critical principle for audit traceability.
+
+### ID Immutability
+
+- **Code IDs are immutable** — once assigned, a code ID never changes meaning
+- A code like `UC-001` will always mean "General Q&A" for its entire lifecycle
+- If the meaning needs to change, a new code is created instead
+
+### No Reuse Policy
+
+- Deprecated or removed codes are **never reassigned** to different meanings
+- This ensures historical evidence remains valid and traceable
+- Example: If `UC-010` is deprecated, a new use case gets `UC-031` (not `UC-010`)
+
+### Deprecation Before Removal
+
+- Codes must be marked `deprecated` for at least one MINOR version before removal
+- Removal only occurs in MAJOR version increments
+- See [Lifecycle](#lifecycle) section for details
+
+## Usage
+
+### Required Dimensions
+
+For each AI system or use case, you MUST specify at least one code from each required dimension:
+
+| Dimension | Selection | Notes |
+| --- | --- | --- |
+| FS | Exactly 1 | Primary business function |
+| UC | 1 or more | Task types performed |
+| DT | 1 or more | Data classifications |
+| CH | 1 or more | Access channels |
+| IM | Exactly 1 | Integration mode |
+| RS | 1 or more | Risk categories |
+| EV | 1 or more | Evidence types |
+
+### Optional Dimensions
+
+| Dimension | Selection | Notes |
+| --- | --- | --- |
+| OB | 0 or more | Expected benefits (optional) |
+
+### Code Composition
 
 When documenting an AI system, codes from multiple dimensions are combined. The **composition priority** determines the order when listing codes:
 
@@ -66,36 +114,10 @@ CH: CH-001
 IM: IM-002
 RS: RS-001, RS-003
 OB: OB-001
-EV: EV-001, EV-002, EV-003, EV-004, EV-005, EV-006, EV-007
+EV: EV-001, EV-002
 ```
 
-## Usage Guidelines
-
-### Required Dimensions
-
-For each AI system or use case, you MUST specify at least one code from each required dimension:
-
-- FS (exactly one)
-- UC (one or more)
-- DT (one or more)
-- CH (one or more)
-- IM (exactly one)
-- RS (one or more)
-- EV (one or more)
-
-### Optional Dimensions
-
-- OB (zero or more)
-
-### Multi-select Dimensions
-
-When `multi_select: true`, multiple codes from the same dimension can be selected. For example, an AI system might process both `DT-002` (Internal) and `DT-004` (Personal Data).
-
-### Single-select Dimensions
-
-When `multi_select: false`, exactly one code must be selected from the dimension. For example, each AI system has one primary `FS` (Functional Scope) and one `IM` (Integration Mode).
-
-## Code Lifecycle
+## Lifecycle
 
 ### Status Values
 
@@ -109,12 +131,14 @@ When `multi_select: false`, exactly one code must be selected from the dimension
 
 The dictionary tracks lifecycle with these fields:
 
-| Field | Description | Example |
-| --- | --- | --- |
-| `introduced_in` | Version when code was added | `0.1.0` |
-| `deprecated_in` | Version when marked deprecated | `1.2.0` |
-| `removed_in` | Version when removed | `2.0.0` |
-| `replaced_by` | Replacement code(s) | `UC-015` |
+| Field | Required | Description | Example |
+| --- | --- | --- | --- |
+| `status` | Yes | Current status | `active` |
+| `introduced_in` | Yes | Version when code was added | `0.1.0` |
+| `deprecated_in` | No | Version when marked deprecated | `1.2.0` |
+| `removed_in` | No | Version when removed | `2.0.0` |
+| `replaced_by` | No | Replacement code(s) | `UC-015` |
+| `backward_compatible` | Yes | Whether change breaks existing usage | `true` |
 
 ### Deprecation Rules
 
@@ -128,7 +152,7 @@ The dictionary tracks lifecycle with these fields:
 | Version | Status | Action |
 | --- | --- | --- |
 | 0.1.0 | `active` | Code `UC-010` introduced |
-| 1.2.0 | `deprecated` | Marked deprecated, `replaced_by: UC-015` |
+| 1.2.0 | `deprecated` | Marked deprecated, `replaced_by: UC-031` |
 | 2.0.0 | `removed` | No longer accepted by validator |
 
 ### Versioning
@@ -155,25 +179,27 @@ The validator checks:
 1. All required dimensions have at least one code
 2. Single-select dimensions have exactly one code
 3. All codes exist in the current taxonomy dictionary
-4. Code format matches `<DIM>-<TOKEN>` pattern
+4. Code format matches `<PREFIX>-<TOKEN>` pattern (e.g., `UC-001`)
 5. Deprecated codes are flagged with warnings
 
 See [Validator](./07-validator.md) for implementation details.
 
-## Machine-Readable References
+## SSOT Reference
 
 Access the complete code definitions in machine-readable formats:
 
-| Resource | Format | Path |
+| Type | Format | Path |
 | --- | --- | --- |
-| Dictionary | CSV | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` |
-| Taxonomy (EN) | YAML | `source_pack/03_taxonomy/taxonomy_en.yaml` |
-| Taxonomy (JA) | YAML | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
-| Code System | CSV | `source_pack/03_taxonomy/code_system.csv` |
+| **SSOT** | CSV | `source_pack/03_taxonomy/dictionary_seed.csv` |
+| Derived | CSV | `source_pack/03_taxonomy/code_system.csv` |
+| Derived | YAML | `source_pack/03_taxonomy/taxonomy_en.yaml` |
+| Derived | YAML | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
 
-## References
+The SSOT file `dictionary_seed.csv` in `source_pack/03_taxonomy/` is the authoritative source. This documentation page is explanatory.
+
+## Related Pages
 
 - [Taxonomy](./03-taxonomy.md) - Full dimension definitions
-- [Dictionary](./05-dictionary.md) - Complete code listings
+- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
 - [Validator](./07-validator.md) - Validation rules
 - [Changelog](./08-changelog.md) - Version history
