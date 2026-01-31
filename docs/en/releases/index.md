@@ -49,10 +49,10 @@ The `aimo-standard-artifacts.zip` contains:
 
 ## Resources
 
+- **Version History Table**: [Standard > Versions](../standard/versions/index.md) — version table with direct links to all release assets (PDF, ZIP, SHA256)
 - **Changelog (spec)**: [Standard > Current > Changelog](../standard/current/08-changelog.md) — normative and non-normative change history.
-- **Versioned snapshots**: [Standard > Versions](../standard/versions/index.md) — frozen releases and past versions.
 - **Release process**: tagging `vX.Y.Z`, CI build, PDF under `dist/`, checksums, GitHub Release assets. See [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) and [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) in the repository.
-- **Migration and checksums**: documented per release; breaking changes require migration guidance.
+- **Migration guide**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — upgrade paths for breaking changes.
 
 For governance and versioning policy, see [Governance](../governance/index.md).
 
