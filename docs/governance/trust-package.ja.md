@@ -3,6 +3,17 @@
 このページは、監査人、法務、ITセキュリティが採用準備を評価するために必要な最小限の資料をまとめています。
 これはハブのみであり、詳細なエビデンスTOCとカバレッジテーブルはそれぞれのセクションで管理されています。
 
+## ダウンロード
+
+**[Trust Package PDF をダウンロード（最新リリース）](https://github.com/billyrise/aimo-standard/releases/latest)**
+
+Trust Package PDF は監査対応資料を単一ドキュメントにまとめたものです。各 GitHub Release には以下が含まれます：
+
+- `trust_package.pdf` — 英語版 Trust Package
+- `trust_package.ja.pdf` — 日本語版 Trust Package
+- `aimo-standard-artifacts.zip` — スキーマ、テンプレート、サンプル、バリデータルール
+- `SHA256SUMS.txt` — 検証用チェックサム
+
 ## 含まれるもの
 
 - **適合性**: コンプライアンスの主張方法とレベルの意味 — [Conformance](../conformance/index.ja.md)
@@ -31,6 +42,17 @@
 
 引用ガイダンスとコンテキストはリポジトリREADMEを使用してください。ガバナンスは権威あるポリシーにリンクしています。
 [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) と [Governance](../governance/index.ja.md) を参照。
+
+## Artifacts zip の内容
+
+`aimo-standard-artifacts.zip` には以下が含まれます：
+
+- **JSON スキーマ**: `schemas/jsonschema/` — 機械可読な検証スキーマ
+- **テンプレート**: `templates/ev/` — エビデンス記録テンプレート（JSON + Markdown）
+- **サンプル**: `examples/` — 素早い導入のための最小サンプルバンドル
+- **カバレッジマップ**: `coverage_map/coverage_map.yaml` — 外部標準へのマッピング
+- **バリデータルール**: `validator/rules/` — 検証ルール定義
+- **ガバナンス文書**: `VERSIONING.md`、`GOVERNANCE.md`、`SECURITY.md`、`LICENSE.txt` など
 
 ## 重要な注意
 

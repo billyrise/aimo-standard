@@ -17,7 +17,13 @@ This repository is the single source of truth (SSOT) for:
 
 ## GitHub Releases
 - Official PDFs and packaged artifacts are published as GitHub Releases:
-  - https://github.com/<ORG>/<REPO>/releases (placeholder - replace <ORG> and <REPO> with actual values)
+  - https://github.com/billyrise/aimo-standard/releases
+
+Each release includes:
+- `trust_package.pdf` — English Trust Package (auditor-ready)
+- `trust_package.ja.pdf` — Japanese Trust Package
+- `aimo-standard-artifacts.zip` — Schemas, templates, examples, validator rules
+- `SHA256SUMS.txt` — Checksums for verification
 
 ## Repository Layout
 - `docs/` : source content for spec website and PDF (EN canonical, JA translated)

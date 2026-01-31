@@ -20,6 +20,29 @@ python tooling/checks/lint_schema.py
 pytest -q
 ```
 
+## Build Release Assets (PDF + Zip)
+
+Build Trust Package PDF and artifacts zip for release:
+
+```bash
+# Build EN PDF + artifacts zip
+python tooling/release/build_assets.py
+
+# Build EN + JA PDFs + artifacts zip
+python tooling/release/build_assets.py --ja
+
+# Build with explicit version
+python tooling/release/build_assets.py --version 1.0.0 --ja
+```
+
+Output is placed in `dist/`:
+- `trust_package.pdf` — English Trust Package PDF
+- `trust_package.ja.pdf` — Japanese Trust Package PDF (with `--ja`)
+- `aimo-standard-artifacts.zip` — Schemas, templates, examples, validator rules
+- `SHA256SUMS.txt` — Checksums for all assets
+
+See `tooling/pdf/README.md` for system prerequisites (WeasyPrint dependencies).
+
 ## Versioned Deploy with mike (GitHub Pages branch deployment)
 
 ### Current (working) -> alias "latest"
