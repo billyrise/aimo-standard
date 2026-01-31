@@ -202,18 +202,21 @@ python tooling/checks/lint_i18n.py && mkdocs build --strict
 Run these checks before committing:
 
 ```bash
-# i18n structure and heading consistency
+# i18n structure, heading consistency, and deprecated phrase detection
 python tooling/checks/lint_i18n.py
 
-# All other lints
+# Schema and manifest lints
 python tooling/checks/lint_schema.py
 python tooling/checks/lint_manifest.py
+
+# Taxonomy SSOT lints
+python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+python tooling/checks/lint_legacy_csv.py
 python tooling/checks/lint_taxonomy_dictionary.py
 python tooling/checks/lint_taxonomy_json.py
 
-# Taxonomy assets up to date
-python tooling/taxonomy/build_taxonomy_assets.py --check
-python tooling/taxonomy/build_i18n_taxonomy.py --check
+# Taxonomy artifacts up to date
+python tooling/taxonomy/build_artifacts.py --check
 
 # Build verification
 mkdocs build --strict
