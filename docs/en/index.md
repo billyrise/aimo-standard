@@ -4,14 +4,12 @@ This site hosts the human-readable AIMO Standard specification.
 
 **Top-level sections**
 
-1. [Standard](standard/current/index.md) — Overview, scope, taxonomy, codes, dictionary, EV template, validator spec, changelog; [Versions](standard/versions/index.md)
-2. [Conformance](conformance/index.md) — How to comply and conformance levels
-3. [Artifacts](artifacts/index.md) — Taxonomy, code system, dictionary, evidence templates, schemas
-4. [Validator](validator/index.md) — Rules, reference checks, how to run
-5. [Examples](examples/index.md) — End-to-end and minimal samples
-6. [Coverage Map](coverage-map/index.md) — Regulations and standards mapping
-7. [Governance](governance/index.md) — Versioning, security, license, trademarks, cite
-8. [Releases](releases/index.md) — Changelog, migration, checksums, PDF
+1. [Standard](standard/index.md) — Specification ([Current](standard/current/index.md) | [Versions](standard/versions/index.md)), [Conformance](conformance/index.md), [Coverage Map](coverage-map/index.md)
+2. [Artifacts](artifacts/index.md) — Taxonomy, code system, dictionary, evidence templates, schemas
+3. [Validator](validator/index.md) — Rules, reference checks, how to run
+4. [Examples](examples/index.md) — End-to-end and minimal samples
+5. [Releases](releases/index.md) — Changelog, migration, checksums, PDF
+6. [Governance](governance/index.md) — Versioning, security, license, trademarks, [Contributing](contributing/localization.md)
 
 **Quick links by audience**
 
