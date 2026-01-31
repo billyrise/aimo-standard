@@ -1,18 +1,11 @@
 # Coverage Map
 
-本セクションは、AIMO Standard の要求事項と外部規制・基準の対応を示し、監査での説明可能性を担保する。
+本セクションは、監査での説明可能性のため、AIMO Standard の証跡・アーティファクトと外部フレームワーク・規制の対応を示す。適合の保証や法的助言は**行わない**。
 
-- **対象**: ISO/IEC 42001、EU AI Act、NIST AI RMF、ISMS（ISO/IEC 27001/27002）、SOC2、日本企業向けの監査・内部統制語彙。
-- **目的**: どの証跡がどの外部要求を説明できるかを示す（適合保証はしない）。
-- **関連**: [Conformance](../conformance/index.md)、[Standard（Current）](../standard/current/index.md)、[Trust Package](../governance/trust-package.md)。
+- **[Methodology](methodology.md)**: マッピングの位置づけと利用方法、更新ポリシー、[Evidence Bundle](../artifacts/evidence-bundle.md)・[Minimum Evidence Requirements](../artifacts/minimum-evidence.md) との関係。
+- **ISO/IEC 42001**: [ISO/IEC 42001 対応表](iso-42001.md) — AIマネジメントシステムの観点。
+- **NIST AI RMF**: [NIST AI RMF 対応表](nist-ai-rmf.md) — Govern, Map, Measure, Manage。
+- **EU AI Act**: [EU AI Act 対応表](eu-ai-act.md) — 文書化・記録管理の概要（法解釈ではない）。
+- **ISMS 観点**: [ISMS 対応表](isms.md) — ISO/IEC 27001/27002 の観点（変更管理、アクセス制御、ログ、証跡の完全性）。
 
-表の内容は後の変更単位で追加する。
-# カバレッジマップ（Coverage Map）
-
-本セクションでは、AIMO Standard の要求事項と外部規制・基準との対応表を提供する。
-
-- **目的**: AIMO の統制・要求が、ISO/IEC 42001、EU AI Act、NIST AI RMF、ISMS（例: ISO/IEC 27001/27002）、SOC2、および日本企業向けの一般的な監査・内部統制の語彙にどう対応するかを示す。「適合を保証する」のではなく、どの証跡がどの外部要求を説明できるかを明確にする。
-- **内容（後の変更単位で追加）**: 要求 → 証跡 → アーティファクトの表。監査・コンプライアンスのための追跡可能性。
-- **関連**: [Conformance](../conformance/index.md)、[Standard > Current](../standard/current/index.md)。
-
-現時点は構成のみ。表の内容は専用の変更単位で追加する。
+マッピングデータの SSOT: `coverage_map/coverage_map.yaml`。本ページの表は同ファイルに基づく。変更時は両方を更新すること。
