@@ -18,7 +18,7 @@ The dictionary enables:
 3. **Coverage Map**: Codes enable mapping to external frameworks and regulations
 
 !!! info "SSOT Principle"
-    The dictionary CSV (`dictionary_seed.csv`) is the Single Source of Truth for all codes. Documentation pages (including this one) are derived explanations. When in doubt, refer to the CSV.
+    The dictionary CSV (`taxonomy_dictionary_v0.1.csv`) is the Single Source of Truth for all codes. Documentation pages (including this one) are derived explanations. When in doubt, refer to the CSV.
 
 ## Column Schema
 
@@ -82,7 +82,7 @@ The current dictionary version is **v0.1.0** and contains:
 | **Total** | | **91** | **0** | **91** |
 
 !!! note "Complete Code Listings"
-    The complete list of 91 codes is available in the SSOT CSV file. This documentation page provides column definitions and usage guidance. For detailed code definitions with scope notes and examples, refer to `dictionary_seed.csv`.
+    The complete list of 91 codes is available in the SSOT CSV file. This documentation page provides column definitions and usage guidance. For detailed code definitions with scope notes and examples, refer to `taxonomy_dictionary_v0.1.csv`.
 
 ## Update Policy
 
@@ -180,23 +180,25 @@ Example: `X-ACME-UC-901` for ACME Corporation's custom use case code.
 
 | Type | File | Description |
 | --- | --- | --- |
-| **SSOT** | `dictionary_seed.csv` | Single Source of Truth (91 codes, 21 columns) |
+| **SSOT** | `taxonomy_dictionary_v0.1.csv` | Single Source of Truth (91 codes, 21 columns) |
 | Derived | `taxonomy_en.yaml` | Generated English taxonomy |
 | Derived | `taxonomy_ja.yaml` | Generated Japanese taxonomy |
 | Derived | `code_system.csv` | Generated dimension namespaces |
 | Derived | `dimensions_en_ja.md` | Generated EN/JA mapping |
+| Compat | `dictionary_seed.csv` | Compatibility copy (identical to SSOT) |
 
 **Location:** `source_pack/03_taxonomy/`
 
-The SSOT file `dictionary_seed.csv` is the authoritative source. This documentation page is explanatory.
+The SSOT file `taxonomy_dictionary_v0.1.csv` is the authoritative source. This documentation page is explanatory.
 
 ### Update Workflow
 
-1. Edit `dictionary_seed.csv` (the SSOT)
+1. Edit `taxonomy_dictionary_v0.1.csv` (the SSOT)
 2. Run `python tooling/checks/lint_taxonomy_dictionary.py` to validate
 3. Run `python tooling/taxonomy/build_taxonomy_assets.py` to regenerate derived files
-4. Update documentation pages as needed
-5. Commit all changes together
+4. Sync `dictionary_seed.csv` as compatibility copy
+5. Update documentation pages as needed
+6. Commit all changes together
 
 ## Downloads
 

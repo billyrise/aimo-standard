@@ -24,14 +24,22 @@ All other representations in `docs/`, `schemas/`, `templates/`, and `examples/` 
 
 | File | Purpose | Status |
 | --- | --- | --- |
-| `taxonomy_dictionary_v0.1.csv` | SSOT: 91 codes across 8 dimensions (21 columns) | ✅ Complete |
-| `dictionary_seed.csv` | Identical copy for legacy/API compatibility | ✅ Complete |
-| `taxonomy_en.yaml` | Generated English taxonomy (dimensions + codes) | ✅ Generated |
-| `taxonomy_ja.yaml` | Generated Japanese taxonomy (dimensions + codes) | ✅ Generated |
-| `code_system.csv` | Generated dimension namespaces and prefixes | ✅ Generated |
-| `dimensions_en_ja.md` | Generated dimension names EN/JA mapping | ✅ Generated |
+| `taxonomy_dictionary_v0.1.csv` | **Canonical SSOT**: 91 codes across 8 dimensions (21 columns) | ✅ Complete |
+| `dictionary_seed.csv` | Compatibility alias (identical to SSOT; do not edit directly) | ✅ Complete |
+| `taxonomy_dictionary.json` | Generated: JSON format for schema validation | ✅ Generated |
+| `taxonomy_en.yaml` | Generated: English taxonomy (dimensions + codes) | ✅ Generated |
+| `taxonomy_ja.yaml` | Generated: Japanese taxonomy (dimensions + codes) | ✅ Generated |
+| `code_system.csv` | Generated: Dimension namespaces and prefixes | ✅ Generated |
+| `dimensions_en_ja.md` | Generated: Dimension names EN/JA mapping | ✅ Generated |
 | `taxonomy_pack_v0.1.json` | Taxonomy pack for programmatic access | ✅ Complete |
 | `schemas/` | JSON schemas for validation | ✅ Complete |
+
+### Canonical vs. Compatibility Files
+
+- **Canonical SSOT**: `taxonomy_dictionary_v0.1.csv` — All edits go here first.
+- **Compatibility Alias**: `dictionary_seed.csv` — Kept for backward compatibility with legacy tools. MUST be identical to SSOT. Do not edit directly.
+
+**Deprecation Plan**: `dictionary_seed.csv` will be deprecated in a future major version. New integrations should reference the canonical file directly.
 
 ---
 

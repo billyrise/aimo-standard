@@ -211,21 +211,23 @@ The authoritative definition of the taxonomy is maintained in:
 
 | Type | File | Description |
 | --- | --- | --- |
-| **SSOT** | `source_pack/03_taxonomy/dictionary_seed.csv` | Single Source of Truth (91 codes, 21 columns) |
+| **SSOT** | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` | Single Source of Truth (91 codes, 21 columns) |
 | Derived | `source_pack/03_taxonomy/taxonomy_en.yaml` | Generated English taxonomy |
 | Derived | `source_pack/03_taxonomy/taxonomy_ja.yaml` | Generated Japanese taxonomy |
 | Derived | `source_pack/03_taxonomy/code_system.csv` | Generated dimension namespaces |
 | Derived | `source_pack/03_taxonomy/dimensions_en_ja.md` | Generated EN/JA mapping |
+| Compat | `source_pack/03_taxonomy/dictionary_seed.csv` | Compatibility copy (identical to SSOT) |
 
-**This documentation page is explanatory.** For authoritative definitions, always reference the SSOT file `dictionary_seed.csv` in `source_pack/03_taxonomy/`.
+**This documentation page is explanatory.** For authoritative definitions, always reference the SSOT file `taxonomy_dictionary_v0.1.csv` in `source_pack/03_taxonomy/`.
 
 ### Update Workflow
 
-1. Edit the SSOT CSV (`dictionary_seed.csv`) first
+1. Edit the SSOT CSV (`taxonomy_dictionary_v0.1.csv`) first
 2. Run `python tooling/checks/lint_taxonomy_dictionary.py` to validate
 3. Run `python tooling/taxonomy/build_taxonomy_assets.py` to regenerate derived files
-4. Update documentation pages as needed
-5. Commit all changes together
+4. Sync `dictionary_seed.csv` as compatibility copy
+5. Update documentation pages as needed
+6. Commit all changes together
 
 ## Related Pages
 

@@ -30,6 +30,7 @@ jobs:
           python tooling/checks/lint_schema.py
           python tooling/checks/lint_manifest.py
           python tooling/checks/lint_taxonomy_dictionary.py
+          python tooling/checks/lint_taxonomy_json.py
           python tooling/taxonomy/build_taxonomy_assets.py --check
           pytest -q
 
