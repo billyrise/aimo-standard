@@ -1,0 +1,78 @@
+name: pr-checks
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "source_pack/**"
+      - "data/**"
+      - "coverage_map/**"
+      - "schemas/**"
+      - "tooling/**"
+      - "mkdocs.yml"
+      - "requirements.txt"
+      - ".github/workflows/**"
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+
+      - name: i18n Quality Gates
+        run: |
+          echo "=== i18n Lint (Language Purity, Required Pages) ==="
+          python tooling/checks/lint_i18n.py
+
+      - name: Schema and Content Lints
+        run: |
+          echo "=== Schema Lint ==="
+          python tooling/checks/lint_schema.py
+          echo "=== Manifest Lint ==="
+          python tooling/checks/lint_manifest.py
+          echo "=== Taxonomy Dictionary Lint ==="
+          python tooling/checks/lint_taxonomy_dictionary.py
+          echo "=== Taxonomy JSON Lint ==="
+          python tooling/checks/lint_taxonomy_json.py
+
+      - name: Generated Assets Check
+        run: |
+          echo "=== Taxonomy Assets Check ==="
+          python tooling/taxonomy/build_taxonomy_assets.py --check
+          echo "=== i18n Taxonomy Assets Check ==="
+          python tooling/taxonomy/build_i18n_taxonomy.py --check
+
+      - name: Run Tests
+        run: pytest -q
+
+      - name: Build Documentation
+        run: |
+          echo "=== MkDocs Build (strict mode) ==="
+          python -m mkdocs build --strict
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## PR Check Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| i18n Quality Gates | ${{ job.status == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Schema/Content Lints | ${{ job.status == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Generated Assets | ${{ job.status == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Documentation Build | ${{ job.status == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
