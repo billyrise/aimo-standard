@@ -1,37 +1,37 @@
 # Trust Package（保証パッケージ）
 
-本ページは、監査・法務・情報セキュリティが採用判断に必要とする最小資料を束ねるハブである。
-詳細な Evidence TOC や Coverage 表は、それぞれのセクションで管理する。
+このページは、監査人、法務、ITセキュリティが採用準備を評価するために必要な最小限の資料をまとめています。
+これはハブのみであり、詳細なエビデンスTOCとカバレッジテーブルはそれぞれのセクションで管理されています。
 
-## What you get
+## 含まれるもの
 
-- **Conformance**: 適合の主張方法とレベルの意味 — [Conformance](../conformance/index.md)
-- **Coverage Map**: 外部基準との対応 — [Coverage Map](../coverage-map/index.md)
-- **Standard**: 規範要件と定義 — [Standard（Current）](../standard/current/index.md)
-- **Evidence Bundle**: 構造、TOC、追跡可能性 — [Evidence Bundle](../artifacts/evidence-bundle.md)
-- **Minimum Evidence Requirements**: ライフサイクル別 MUST チェックリスト — [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- **Validator**: ルールと参照チェック — [Validator](../validator/index.md)
-- **Examples**: 監査対応サンプル — [Examples](../examples/index.md)
-- **Releases**: 変更履歴と配布 — [Releases](../releases/index.md)
-- **Governance**: ポリシー、セキュリティ、ライセンス — [Governance](../governance/index.md)
+- **適合性**: コンプライアンスの主張方法とレベルの意味 — [Conformance](../conformance/index.ja.md)
+- **カバレッジマップ**: 外部標準へのマッピング — [カバレッジマップ索引](../coverage-map/index.ja.md)、[カバレッジマップ方法論](../coverage-map/methodology.ja.md)
+- **標準**: 規範的要件と定義 — [Standard (Current)](../standard/current/index.ja.md)
+- **エビデンスバンドル**: 構造、TOC、トレーサビリティ — [Evidence Bundle](../artifacts/evidence-bundle.ja.md)
+- **最小エビデンス要件**: ライフサイクル別MUSTレベルチェックリスト — [Minimum Evidence Requirements](../artifacts/minimum-evidence.ja.md)
+- **バリデータ**: ルールと参照チェック — [Validator](../validator/index.ja.md)
+- **例**: 監査対応サンプルバンドル — [Examples](../examples/index.ja.md)
+- **リリース**: 変更履歴と配布 — [Releases](../releases/index.ja.md)
+- **ガバナンス**: ポリシー、セキュリティ、ライセンス — [Governance](../governance/index.ja.md)
 
-## Minimum set for audit-readiness
+## 監査対応のための最小セット
 
-| 項目 | 参照先 | 成果／示せること |
+| 項目 | 場所 | 成果 / 証明されること |
 | --- | --- | --- |
-| 適合レベル | [Conformance](../conformance/index.md) | 適合の主張方法と必要な証跡範囲 |
-| 対応マッピング | [Coverage Map](../coverage-map/index.md) | 外部規制・基準への説明可能性 |
-| 証跡アーティファクト | [Evidence Bundle](../artifacts/evidence-bundle.md)、[Minimum Evidence](../artifacts/minimum-evidence.md)、[EV Template](../standard/current/06-ev-template.md) | 追跡可能性を支える必須データ |
-| バリデータ検証 | [Validator](../validator/index.md) | 内部整合性と完全性の検証方法 |
-| 例示パッケージ | [Examples](../examples/index.md) | 監査対応パッケージの具体像 |
-| 変更管理 | [Releases](../releases/index.md)、[Governance](../governance/index.md) | 更新の管理と通知の方法 |
-| セキュリティ／ライセンス／商標 | [Governance](../governance/index.md) | 採用判断に必要な法務・セキュリティ姿勢 |
+| 適合性レベル | [Conformance](../conformance/index.ja.md) | コンプライアンスの主張方法と必要なエビデンスの範囲 |
+| カバレッジマッピング | [カバレッジマップ索引](../coverage-map/index.ja.md)、[カバレッジマップ方法論](../coverage-map/methodology.ja.md) | 外部規制・標準に対する説明可能性 |
+| エビデンス成果物 | [Evidence Bundle](../artifacts/evidence-bundle.ja.md)、[Minimum Evidence](../artifacts/minimum-evidence.ja.md)、[EV Template](../standard/current/06-ev-template.ja.md) | トレーサビリティをサポートするために存在すべきデータ |
+| バリデータチェック | [Validator](../validator/index.ja.md) | 内部一貫性と完全性の検証方法 |
+| サンプルバンドル | [Examples](../examples/index.ja.md) | 監査対応パッケージの実例 |
+| 変更管理 | [Releases](../releases/index.ja.md)、[Governance](../governance/index.ja.md) | 更新の管理と通知方法 |
+| セキュリティ / ライセンス / 商標 | [Governance](../governance/index.ja.md) | 採用決定のための法的・セキュリティ体制 |
 
-## How to cite
+## 引用方法
 
-引用方法と背景説明は README を参照し、ガバナンスのリンクから権威的ポリシーを確認する。
-参照: [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md)、[Governance](../governance/index.md)。
+引用ガイダンスとコンテキストはリポジトリREADMEを使用してください。ガバナンスは権威あるポリシーにリンクしています。
+[README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) と [Governance](../governance/index.ja.md) を参照。
 
-## Important note
+## 重要な注意
 
-本パッケージは説明可能性と証跡準備を支援するが、法的助言を提供せず、適合を保証しない。
+このパッケージは説明可能性とエビデンス準備をサポートします。法的助言を提供したり、コンプライアンスを保証するものではありません。
