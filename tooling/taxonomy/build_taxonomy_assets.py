@@ -38,7 +38,9 @@ except ImportError:
 # Paths
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 TAXONOMY_DIR = REPO_ROOT / "source_pack" / "03_taxonomy"
-DICTIONARY_PATH = TAXONOMY_DIR / "taxonomy_dictionary_v0.1.csv"
+# Note: CSV has been moved to legacy/ directory as part of SSOT migration
+# This script is deprecated - use build_artifacts.py instead
+DICTIONARY_PATH = TAXONOMY_DIR / "legacy" / "taxonomy_dictionary_v0.1.csv"
 
 # Output paths
 OUTPUT_FILES = {

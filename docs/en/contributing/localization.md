@@ -71,42 +71,65 @@ Each language pack contains:
 
 ## SSOT Principle
 
-AIMO uses multiple Single Source of Truth files:
+AIMO uses a **SSOT-first architecture** for taxonomy data:
 
 | Asset Type | SSOT Location | Description |
 | --- | --- | --- |
-| **Taxonomy (source)** | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` | Master CSV with all data |
-| **Taxonomy (canonical)** | `data/taxonomy/canonical.yaml` | Language-neutral structure |
-| **Taxonomy (i18n)** | `data/taxonomy/i18n/*.yaml` | Per-language translations |
+| **Taxonomy (structure)** | `data/taxonomy/canonical.yaml` | Language-neutral structure (SSOT) |
+| **Taxonomy (i18n)** | `data/taxonomy/i18n/*.yaml` | Per-language translations (SSOT) |
 | **Coverage Map** | `coverage_map/coverage_map.yaml` | Framework-to-evidence mapping |
 | **Schemas** | `schemas/jsonschema/` | JSON validation schemas |
 
 ### Derived Files
 
-The following files are **generated** and should NOT be edited manually:
+The following files are **generated** from the SSOT and should NOT be edited manually:
 
 | File | Generated From | Generator |
 | --- | --- | --- |
-| `data/taxonomy/canonical.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_i18n_taxonomy.py` |
-| `data/taxonomy/i18n/en.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_i18n_taxonomy.py` |
-| `data/taxonomy/i18n/ja.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_i18n_taxonomy.py` |
-| `source_pack/03_taxonomy/taxonomy_en.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
-| `source_pack/03_taxonomy/taxonomy_ja.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
-| `source_pack/03_taxonomy/code_system.csv` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
-| `source_pack/03_taxonomy/dimensions_en_ja.md` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
-| `source_pack/03_taxonomy/taxonomy_dictionary.json` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
+| `artifacts/taxonomy/{version}/{lang}/taxonomy_dictionary.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_en.yaml` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_ja.yaml` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/code_system.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/dimensions_en_ja.md` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_dictionary.json` | canonical + i18n | `build_artifacts.py` |
+
+### Language Codes (BCP47)
+
+AIMO uses BCP47 language codes:
+
+| Code | Language |
+| --- | --- |
+| `en` | English |
+| `ja` | Japanese (日本語) |
+| `es` | Spanish (Español) |
+| `de` | German (Deutsch) |
+| `ko` | Korean (한국어) |
+| `zh-Hans` | Simplified Chinese (简体中文) |
+| `zh-Hant` | Traditional Chinese (繁體中文) |
+
+### Legacy CSV Files (Frozen)
+
+The legacy EN/JA mixed CSV files in `source_pack/03_taxonomy/legacy/` are:
+
+- **Frozen at 21 columns** — no new language columns will be added
+- **Maintained for backward compatibility** — existing integrations can continue to use them
+- **CI-enforced** — adding `label_es`, `definition_de`, etc. will fail the build
+
+For new languages, use the per-language artifacts in `artifacts/taxonomy/{version}/{lang}/`.
 
 ## Update Workflows
 
-### Taxonomy Updates
+### Taxonomy Updates (New SSOT-First Workflow)
 
-1. Edit the SSOT CSV (`source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`)
-2. Run validation: `python tooling/checks/lint_taxonomy_dictionary.py`
-3. Regenerate legacy assets: `python tooling/taxonomy/build_taxonomy_assets.py`
-4. Regenerate i18n assets: `python tooling/taxonomy/build_i18n_taxonomy.py`
-5. Sync `dictionary_seed.csv` as compatibility copy
-6. Update documentation pages as needed
-7. Commit all changes together
+1. Edit the SSOT in `data/taxonomy/`:
+   - Structure changes → `canonical.yaml`
+   - English translations → `i18n/en.yaml`
+   - Japanese translations → `i18n/ja.yaml`
+2. Run validation: `python tooling/checks/lint_taxonomy_ssot.py`
+3. Regenerate all derived files: `python tooling/taxonomy/build_artifacts.py --version current --langs en ja`
+4. Update documentation pages as needed
+5. Commit all changes together
 
 ### Coverage Map Updates
 

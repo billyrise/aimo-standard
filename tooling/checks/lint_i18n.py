@@ -91,6 +91,25 @@ LANG_COLUMN_PATTERNS = {
     ],
 }
 
+# Deprecated SSOT phrases that should not appear in documentation
+# These indicate outdated references to the old CSV-as-SSOT model
+DEPRECATED_SSOT_PHRASES = [
+    # English patterns
+    re.compile(r"SSOT\s+is\s+(the\s+)?CSV", re.IGNORECASE),
+    re.compile(r"taxonomy_dictionary_v0\.1\.csv.*(?:is|as)\s+the\s+(?:authoritative|SSOT|single\s+source)", re.IGNORECASE),
+    re.compile(r"(?:serves?\s+as|is)\s+(?:the\s+)?(?:Single\s+Source\s+of\s+Truth|SSOT).*CSV", re.IGNORECASE),
+    re.compile(r"CSV\s+file\s+(?:that\s+)?serves?\s+as\s+(?:the\s+)?(?:Single\s+Source|SSOT)", re.IGNORECASE),
+    # Japanese patterns
+    re.compile(r"CSV.*(?:が|は).*(?:正式|正本|SSOT)", re.IGNORECASE),
+    re.compile(r"辞書CSV.*が正式なソース", re.IGNORECASE),
+]
+
+# Files that may contain legacy references for historical/migration documentation
+DEPRECATED_PHRASE_ALLOWLIST = [
+    "contributing/localization.md",  # May explain migration
+    "releases/index.md",  # May reference old versions
+]
+
 
 def is_in_code_block(lines: list[str], line_idx: int) -> bool:
     """Check if the given line is inside a fenced code block."""
@@ -146,6 +165,30 @@ def check_language_column_patterns(filepath: Path, lang: str) -> list[tuple[int,
             continue
 
         for pattern in patterns:
+            if pattern.search(line):
+                issues.append((i + 1, line.strip(), pattern.pattern))
+                break  # Only report first match per line
+
+    return issues
+
+
+def check_deprecated_ssot_phrases(filepath: Path) -> list[tuple[int, str, str]]:
+    """
+    Check for deprecated SSOT phrases that incorrectly state CSV is the SSOT.
+    The correct SSOT is canonical.yaml + i18n/*.yaml.
+    
+    Returns list of (line_num, line_content, pattern_description).
+    """
+    issues = []
+    content = filepath.read_text(encoding="utf-8")
+    lines = content.splitlines()
+
+    for i, line in enumerate(lines):
+        # Skip if inside code block
+        if is_in_code_block(lines, i):
+            continue
+
+        for pattern in DEPRECATED_SSOT_PHRASES:
             if pattern.search(line):
                 issues.append((i + 1, line.strip(), pattern.pattern))
                 break  # Only report first match per line
@@ -256,6 +299,33 @@ def main():
                 f"[CRITICAL] Language-specific content in EN file: docs/en/{rel_path}:{line_num}\n"
                 f"           Pattern: {pattern}\n"
                 f"           {line[:80]}{'...' if len(line) > 80 else ''}"
+            )
+
+    # === Check 2c: Deprecated SSOT Phrases (CSV is not the SSOT) ===
+    print("Checking for deprecated SSOT phrases...")
+    all_docs = list(EN_DIR.rglob("*.md")) + list(JA_DIR.rglob("*.md"))
+    for doc_file in all_docs:
+        # Determine relative path for allowlist check
+        if doc_file.is_relative_to(EN_DIR):
+            rel_path = doc_file.relative_to(EN_DIR)
+            lang_prefix = "en"
+        else:
+            rel_path = doc_file.relative_to(JA_DIR)
+            lang_prefix = "ja"
+        rel_path_str = str(rel_path).replace("\\", "/")
+
+        # Skip files in allowlist
+        if rel_path_str in DEPRECATED_PHRASE_ALLOWLIST:
+            continue
+
+        ssot_issues = check_deprecated_ssot_phrases(doc_file)
+
+        for line_num, line, pattern in ssot_issues:
+            errors.append(
+                f"[CRITICAL] Deprecated SSOT phrase in docs/{lang_prefix}/{rel_path}:{line_num}\n"
+                f"           Pattern: {pattern}\n"
+                f"           {line[:80]}{'...' if len(line) > 80 else ''}\n"
+                f"           FIX: SSOT is canonical.yaml + i18n/*.yaml, not CSV"
             )
 
     # === Check 3: Translation Coverage & Heading Consistency ===

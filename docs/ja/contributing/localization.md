@@ -71,42 +71,65 @@ data/
 
 ## SSOT原則
 
-AIMOは複数のSingle Source of Truthファイルを使用します：
+AIMOはタクソノミーデータに**SSOT-firstアーキテクチャ**を採用しています：
 
 | アセットタイプ | SSOT場所 | 説明 |
 | --- | --- | --- |
-| **タクソノミー（ソース）** | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` | 全データを含むマスターCSV |
-| **タクソノミー（canonical）** | `data/taxonomy/canonical.yaml` | 言語中立構造 |
-| **タクソノミー（i18n）** | `data/taxonomy/i18n/*.yaml` | 言語別翻訳 |
+| **タクソノミー（構造）** | `data/taxonomy/canonical.yaml` | 言語中立構造（SSOT） |
+| **タクソノミー（i18n）** | `data/taxonomy/i18n/*.yaml` | 言語別翻訳（SSOT） |
 | **カバレッジマップ** | `coverage_map/coverage_map.yaml` | フレームワークと証跡のマッピング |
 | **スキーマ** | `schemas/jsonschema/` | JSON検証スキーマ |
 
 ### 派生ファイル
 
-以下のファイルは**生成**されるため、手動編集禁止です：
+以下のファイルはSSOTから**生成**されるため、手動編集禁止です：
 
 | ファイル | 生成元 | ジェネレータ |
 | --- | --- | --- |
-| `data/taxonomy/canonical.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_i18n_taxonomy.py` |
-| `data/taxonomy/i18n/en.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_i18n_taxonomy.py` |
-| `data/taxonomy/i18n/ja.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_i18n_taxonomy.py` |
-| `source_pack/03_taxonomy/taxonomy_en.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
-| `source_pack/03_taxonomy/taxonomy_ja.yaml` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
-| `source_pack/03_taxonomy/code_system.csv` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
-| `source_pack/03_taxonomy/dimensions_en_ja.md` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
-| `source_pack/03_taxonomy/taxonomy_dictionary.json` | `taxonomy_dictionary_v0.1.csv` | `build_taxonomy_assets.py` |
+| `artifacts/taxonomy/{version}/{lang}/taxonomy_dictionary.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_en.yaml` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_ja.yaml` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/code_system.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/dimensions_en_ja.md` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_dictionary.json` | canonical + i18n | `build_artifacts.py` |
+
+### 言語コード（BCP47）
+
+AIMOはBCP47言語コードを採用しています：
+
+| コード | 言語 |
+| --- | --- |
+| `en` | English |
+| `ja` | 日本語 |
+| `es` | Español（スペイン語） |
+| `de` | Deutsch（ドイツ語） |
+| `ko` | 한국어（韓国語） |
+| `zh-Hans` | 简体中文（簡体字中国語） |
+| `zh-Hant` | 繁體中文（繁体字中国語） |
+
+### レガシーCSVファイル（凍結）
+
+`source_pack/03_taxonomy/legacy/` にあるレガシー英日混在CSVファイルは：
+
+- **21列で凍結** — 新しい言語列は追加されません
+- **後方互換性のため維持** — 既存の連携は引き続き使用可能
+- **CIで強制** — `label_es`, `definition_de` などを追加するとビルドが失敗します
+
+新しい言語には `artifacts/taxonomy/{version}/{lang}/` の言語別アーティファクトを使用してください。
 
 ## 更新ワークフロー
 
-### タクソノミーの更新
+### タクソノミーの更新（新しいSSOT-Firstワークフロー）
 
-1. SSOT CSV（`source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`）を編集
-2. 検証を実行: `python tooling/checks/lint_taxonomy_dictionary.py`
-3. レガシーアセットを再生成: `python tooling/taxonomy/build_taxonomy_assets.py`
-4. i18nアセットを再生成: `python tooling/taxonomy/build_i18n_taxonomy.py`
-5. `dictionary_seed.csv` を互換コピーとして同期
-6. 必要に応じてドキュメントページを更新
-7. すべての変更をまとめてコミット
+1. `data/taxonomy/` のSSOTを編集:
+   - 構造変更 → `canonical.yaml`
+   - 英語翻訳 → `i18n/en.yaml`
+   - 日本語翻訳 → `i18n/ja.yaml`
+2. 検証を実行: `python tooling/checks/lint_taxonomy_ssot.py`
+3. 全派生ファイルを再生成: `python tooling/taxonomy/build_artifacts.py --version current --langs en ja`
+4. 必要に応じてドキュメントページを更新
+5. すべての変更をまとめてコミット
 
 ### カバレッジマップの更新
 

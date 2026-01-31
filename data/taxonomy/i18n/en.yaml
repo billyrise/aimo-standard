@@ -1,9 +1,13 @@
-# AIMO Taxonomy - English Labels and Definitions
-# Generated from: source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv
-# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_i18n_taxonomy.py
+# AIMO Taxonomy - English Labels and Definitions (SSOT)
+# ======================================================
+# This file is the SINGLE SOURCE OF TRUTH for English translations.
+# Edit this file directly to add/update English labels and definitions.
 #
-# This file provides translations for the canonical taxonomy structure.
-# Structure is defined in data/taxonomy/canonical.yaml
+# Structure is defined in: data/taxonomy/canonical.yaml
+# Language code: en (BCP47)
+#
+# After editing, regenerate derived files:
+#   python tooling/taxonomy/build_artifacts.py --version current --langs en ja
 
 language: "en"
 language_name: "English"

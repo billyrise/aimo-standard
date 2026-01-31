@@ -156,6 +156,28 @@
       "backward_compatible": true
     },
     {
+      "dimension_id": "DT",
+      "code": "DT-009",
+      "label_en": "Operational Logs",
+      "label_ja": "運用ログ",
+      "definition_en": "Operational or system logs used for monitoring and troubleshooting.",
+      "definition_ja": "監視・障害対応等に用いる運用/システムログ。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "DT",
+      "code": "DT-010",
+      "label_en": "Security Telemetry",
+      "label_ja": "セキュリティテレメトリ",
+      "definition_en": "Security telemetry such as alerts and detections.",
+      "definition_ja": "アラート・検知等のセキュリティテレメトリ。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
       "dimension_id": "CH",
       "code": "CH-001",
       "label_en": "Web UI",
@@ -222,6 +244,28 @@
       "backward_compatible": true
     },
     {
+      "dimension_id": "CH",
+      "code": "CH-007",
+      "label_en": "Email",
+      "label_ja": "メール",
+      "definition_en": "Use via email interface or email-based automation.",
+      "definition_ja": "メール経由またはメール起点の自動化で利用。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "CH",
+      "code": "CH-008",
+      "label_en": "Command Line",
+      "label_ja": "CLI",
+      "definition_en": "Use via command-line interface.",
+      "definition_ja": "CLI経由の利用。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
       "dimension_id": "IM",
       "code": "IM-001",
       "label_en": "Standalone",
@@ -272,6 +316,28 @@
       "label_ja": "オンプレ/プライベート",
       "definition_en": "AI hosted in private/on-prem environment.",
       "definition_ja": "オンプレまたは専用環境でホストするAI。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "IM",
+      "code": "IM-006",
+      "label_en": "Managed Service",
+      "label_ja": "マネージド",
+      "definition_en": "Use via managed service with enterprise controls.",
+      "definition_ja": "企業統制を伴うマネージドサービスとして利用。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "IM",
+      "code": "IM-007",
+      "label_en": "Shadow / Unmanaged",
+      "label_ja": "シャドー/未管理",
+      "definition_en": "Use outside of approved governance controls.",
+      "definition_ja": "承認された統制外での利用。",
       "status": "active",
       "introduced_in": "0.1.0",
       "backward_compatible": true
@@ -332,6 +398,39 @@
       "backward_compatible": true
     },
     {
+      "dimension_id": "RS",
+      "code": "RS-006",
+      "label_en": "Bias/Fairness",
+      "label_ja": "偏り/公平性",
+      "definition_en": "Risk of unfair or biased outcomes.",
+      "definition_ja": "不公平・偏りのある結果を生むリスク。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "RS",
+      "code": "RS-007",
+      "label_en": "Safety",
+      "label_ja": "安全性",
+      "definition_en": "Risk of harmful content or unsafe recommendations.",
+      "definition_ja": "有害コンテンツや危険な推奨のリスク。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "RS",
+      "code": "RS-008",
+      "label_en": "Third-party Risk",
+      "label_ja": "第三者リスク",
+      "definition_en": "Vendors, sub-processors, and model provider risks.",
+      "definition_ja": "ベンダー/下請け/モデル提供者に起因するリスク。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
       "dimension_id": "OB",
       "code": "OB-001",
       "label_en": "Efficiency",
@@ -382,6 +481,28 @@
       "label_ja": "新規性/革新",
       "definition_en": "Enables new capabilities or innovations.",
       "definition_ja": "新たな能力・イノベーションを実現。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "OB",
+      "code": "OB-006",
+      "label_en": "Customer Satisfaction",
+      "label_ja": "顧客満足",
+      "definition_en": "Improves customer satisfaction.",
+      "definition_ja": "顧客満足の向上。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "OB",
+      "code": "OB-007",
+      "label_en": "Employee Experience",
+      "label_ja": "従業員体験",
+      "definition_en": "Improves employee experience.",
+      "definition_ja": "従業員体験の向上。",
       "status": "active",
       "introduced_in": "0.1.0",
       "backward_compatible": true
@@ -459,6 +580,94 @@
       "label_ja": "アクセスログ",
       "definition_en": "Evidence of access control and access history.",
       "definition_ja": "アクセス制御とアクセス履歴の証跡。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-008",
+      "label_en": "Model/Service Inventory",
+      "label_ja": "AI資産台帳",
+      "definition_en": "Inventory record of models/services used.",
+      "definition_ja": "利用するモデル/サービスの台帳記録。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-009",
+      "label_en": "Risk Assessment",
+      "label_ja": "リスク評価",
+      "definition_en": "Documented risk assessment for the use/service.",
+      "definition_ja": "利用/サービスのリスク評価文書。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-010",
+      "label_en": "Control Mapping",
+      "label_ja": "統制マッピング",
+      "definition_en": "Control mapping evidence to external frameworks.",
+      "definition_ja": "外部フレームワークへの統制マッピング証跡。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-011",
+      "label_en": "Training/Guidance",
+      "label_ja": "教育/ガイダンス",
+      "definition_en": "Evidence of training or guidance provided to users.",
+      "definition_ja": "利用者に提供した教育/ガイダンスの証跡。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-012",
+      "label_en": "Monitoring Evidence",
+      "label_ja": "監視証跡",
+      "definition_en": "Evidence of monitoring and ongoing oversight.",
+      "definition_ja": "監視・継続的監督の証跡。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-013",
+      "label_en": "Incident Record",
+      "label_ja": "インシデント記録",
+      "definition_en": "Evidence of incident handling related to AI use.",
+      "definition_ja": "AI利用に関連するインシデント対応の証跡。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-014",
+      "label_en": "Third-party Assessment",
+      "label_ja": "第三者評価",
+      "definition_en": "Evidence of vendor or third-party assessment.",
+      "definition_ja": "ベンダー/第三者評価の証跡。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-015",
+      "label_en": "Attestation/Sign-off",
+      "label_ja": "宣誓/サインオフ",
+      "definition_en": "Formal attestation or sign-off record.",
+      "definition_ja": "正式な宣誓/サインオフの証跡。",
       "status": "active",
       "introduced_in": "0.1.0",
       "backward_compatible": true
@@ -789,215 +998,6 @@
       "label_ja": "その他",
       "definition_en": "Other use cases not covered above.",
       "definition_ja": "上記に含まれないユースケース。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "DT",
-      "code": "DT-009",
-      "label_en": "Operational Logs",
-      "label_ja": "運用ログ",
-      "definition_en": "Operational or system logs used for monitoring and troubleshooting.",
-      "definition_ja": "監視・障害対応等に用いる運用/システムログ。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "DT",
-      "code": "DT-010",
-      "label_en": "Security Telemetry",
-      "label_ja": "セキュリティテレメトリ",
-      "definition_en": "Security telemetry such as alerts and detections.",
-      "definition_ja": "アラート・検知等のセキュリティテレメトリ。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "RS",
-      "code": "RS-006",
-      "label_en": "Bias/Fairness",
-      "label_ja": "偏り/公平性",
-      "definition_en": "Risk of unfair or biased outcomes.",
-      "definition_ja": "不公平・偏りのある結果を生むリスク。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "RS",
-      "code": "RS-007",
-      "label_en": "Safety",
-      "label_ja": "安全性",
-      "definition_en": "Risk of harmful content or unsafe recommendations.",
-      "definition_ja": "有害コンテンツや危険な推奨のリスク。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "RS",
-      "code": "RS-008",
-      "label_en": "Third-party Risk",
-      "label_ja": "第三者リスク",
-      "definition_en": "Vendors, sub-processors, and model provider risks.",
-      "definition_ja": "ベンダー/下請け/モデル提供者に起因するリスク。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "OB",
-      "code": "OB-006",
-      "label_en": "Customer Satisfaction",
-      "label_ja": "顧客満足",
-      "definition_en": "Improves customer satisfaction.",
-      "definition_ja": "顧客満足の向上。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "OB",
-      "code": "OB-007",
-      "label_en": "Employee Experience",
-      "label_ja": "従業員体験",
-      "definition_en": "Improves employee experience.",
-      "definition_ja": "従業員体験の向上。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "CH",
-      "code": "CH-007",
-      "label_en": "Email",
-      "label_ja": "メール",
-      "definition_en": "Use via email interface or email-based automation.",
-      "definition_ja": "メール経由またはメール起点の自動化で利用。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "CH",
-      "code": "CH-008",
-      "label_en": "Command Line",
-      "label_ja": "CLI",
-      "definition_en": "Use via command-line interface.",
-      "definition_ja": "CLI経由の利用。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "IM",
-      "code": "IM-006",
-      "label_en": "Managed Service",
-      "label_ja": "マネージド",
-      "definition_en": "Use via managed service with enterprise controls.",
-      "definition_ja": "企業統制を伴うマネージドサービスとして利用。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "IM",
-      "code": "IM-007",
-      "label_en": "Shadow / Unmanaged",
-      "label_ja": "シャドー/未管理",
-      "definition_en": "Use outside of approved governance controls.",
-      "definition_ja": "承認された統制外での利用。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "EV",
-      "code": "EV-008",
-      "label_en": "Model/Service Inventory",
-      "label_ja": "AI資産台帳",
-      "definition_en": "Inventory record of models/services used.",
-      "definition_ja": "利用するモデル/サービスの台帳記録。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "EV",
-      "code": "EV-009",
-      "label_en": "Risk Assessment",
-      "label_ja": "リスク評価",
-      "definition_en": "Documented risk assessment for the use/service.",
-      "definition_ja": "利用/サービスのリスク評価文書。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "EV",
-      "code": "EV-010",
-      "label_en": "Control Mapping",
-      "label_ja": "統制マッピング",
-      "definition_en": "Control mapping evidence to external frameworks.",
-      "definition_ja": "外部フレームワークへの統制マッピング証跡。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "EV",
-      "code": "EV-011",
-      "label_en": "Training/Guidance",
-      "label_ja": "教育/ガイダンス",
-      "definition_en": "Evidence of training or guidance provided to users.",
-      "definition_ja": "利用者に提供した教育/ガイダンスの証跡。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "EV",
-      "code": "EV-012",
-      "label_en": "Monitoring Evidence",
-      "label_ja": "監視証跡",
-      "definition_en": "Evidence of monitoring and ongoing oversight.",
-      "definition_ja": "監視・継続的監督の証跡。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "EV",
-      "code": "EV-013",
-      "label_en": "Incident Record",
-      "label_ja": "インシデント記録",
-      "definition_en": "Evidence of incident handling related to AI use.",
-      "definition_ja": "AI利用に関連するインシデント対応の証跡。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "EV",
-      "code": "EV-014",
-      "label_en": "Third-party Assessment",
-      "label_ja": "第三者評価",
-      "definition_en": "Evidence of vendor or third-party assessment.",
-      "definition_ja": "ベンダー/第三者評価の証跡。",
-      "status": "active",
-      "introduced_in": "0.1.0",
-      "backward_compatible": true
-    },
-    {
-      "dimension_id": "EV",
-      "code": "EV-015",
-      "label_en": "Attestation/Sign-off",
-      "label_ja": "宣誓/サインオフ",
-      "definition_en": "Formal attestation or sign-off record.",
-      "definition_ja": "正式な宣誓/サインオフの証跡。",
       "status": "active",
       "introduced_in": "0.1.0",
       "backward_compatible": true

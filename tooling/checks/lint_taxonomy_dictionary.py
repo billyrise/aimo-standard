@@ -21,7 +21,8 @@ from typing import List, Tuple
 
 # Ensure we run from repo root
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-DICTIONARY_PATH = REPO_ROOT / "source_pack" / "03_taxonomy" / "taxonomy_dictionary_v0.1.csv"
+# Note: CSV has been moved to legacy/ directory as part of SSOT migration
+DICTIONARY_PATH = REPO_ROOT / "source_pack" / "03_taxonomy" / "legacy" / "taxonomy_dictionary_v0.1.csv"
 
 # Expected column count and headers
 EXPECTED_COLUMNS = 21
