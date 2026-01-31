@@ -581,18 +581,25 @@ Examples:
 
 def normalize_for_compare(content: str) -> str:
     """Normalize content for comparison (ignore dates)."""
+    import re
+    # Pattern to match ISO dates (YYYY-MM-DD) at end of CSV lines
+    date_pattern = re.compile(r',\d{4}-\d{2}-\d{2}$')
+    
     lines = []
     for line in content.splitlines():
-        # Skip lines that contain generated dates
+        # Skip lines that contain generated dates (YAML/MD)
         if "generated_date:" in line.lower():
             continue
         if "**generated**:" in line.lower():
             continue
         if "- **generated**:" in line.lower():
             continue
+        # Skip CSV header containing last_reviewed_date
         if "last_reviewed_date" in line.lower():
             continue
-        lines.append(line)
+        # Normalize CSV data lines: remove trailing date column
+        normalized_line = date_pattern.sub(',DATE', line)
+        lines.append(normalized_line)
     return "\n".join(lines)
 
 
