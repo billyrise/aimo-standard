@@ -5,6 +5,7 @@ This section is a hub for project governance, security, licensing, and citation.
 Start here for auditor-ready materials: [Trust Package](trust-package.md).
 
 - **Responsibility Boundary**: [Responsibility Boundary](responsibility-boundary.md) — what AIMO provides and does not provide, assumptions, adopter responsibilities.
+- **SEO & Canonical Policy**: [SEO & Canonical Policy](seo-canonical-policy.md) — URL canonicalization, auditor citation guidance, Production vs mirror sites.
 
 - **Governance (SSOT)**: [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) — single source of truth, editable areas, normative vs non-normative, release requirements.
 - **Security**: [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) — disclosure and security model.

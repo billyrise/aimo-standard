@@ -8,12 +8,12 @@ This repository is the single source of truth (SSOT) for:
 ## Live Documentation
 
 ### Production
-- Current (latest): https://standard.aimoaas.com/
-- Versions: https://standard.aimoaas.com/standard/versions/
+- Current (latest): https://standard.aimoaas.com/latest/
+- Versions: https://standard.aimoaas.com/latest/standard/versions/
 
 ### GitHub Pages (Temporary)
-- Current (latest): https://billyrise.github.io/aimo-standard/  (temporary)
-- Versions: https://billyrise.github.io/aimo-standard/versions/  (temporary)
+- Current (latest): https://billyrise.github.io/aimo-standard/latest/  (temporary)
+- Versions: https://billyrise.github.io/aimo-standard/latest/standard/versions/  (temporary)
 
 ## GitHub Releases
 - Official PDFs and packaged artifacts are published as GitHub Releases:

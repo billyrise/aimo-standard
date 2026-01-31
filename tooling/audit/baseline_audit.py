@@ -456,6 +456,99 @@ def check_unreferenced_files() -> list[AuditItem]:
     return items
 
 
+def check_redirect_targets() -> list[AuditItem]:
+    """
+    Check that all redirect targets in build_redirects.py exist in docs/.
+    Ensures redirects point to valid source documents.
+    """
+    items = []
+
+    # Import REDIRECT_MAPS from build_redirects.py
+    build_redirects_path = ROOT / "tooling" / "release" / "build_redirects.py"
+    if not build_redirects_path.exists():
+        items.append(AuditItem(
+            category="Redirect Targets",
+            status="WARN",
+            file_path="tooling/release/build_redirects.py",
+            message="Redirect generator script not found",
+            recommendation="Create build_redirects.py for legacy URL support"
+        ))
+        return items
+
+    # Parse REDIRECT_MAPS from the script
+    redirect_maps = {}
+    try:
+        content = build_redirects_path.read_text(encoding="utf-8")
+        # Extract REDIRECT_MAPS dictionary using regex
+        import ast
+        # Find the REDIRECT_MAPS = { ... } block
+        match = re.search(r'REDIRECT_MAPS\s*=\s*\{([^}]+)\}', content, re.DOTALL)
+        if match:
+            # Parse each line like: "source": "target",
+            for line in match.group(1).strip().split('\n'):
+                line = line.strip()
+                if line.startswith('#') or not line:
+                    continue
+                # Match "key": "value",
+                kv_match = re.match(r'"([^"]+)":\s*"([^"]+)"', line)
+                if kv_match:
+                    redirect_maps[kv_match.group(1)] = kv_match.group(2)
+    except Exception as e:
+        items.append(AuditItem(
+            category="Redirect Targets",
+            status="WARN",
+            file_path="tooling/release/build_redirects.py",
+            message=f"Could not parse REDIRECT_MAPS: {e}",
+            recommendation="Check build_redirects.py syntax"
+        ))
+        return items
+
+    if not redirect_maps:
+        items.append(AuditItem(
+            category="Redirect Targets",
+            status="OK",
+            file_path="tooling/release/build_redirects.py",
+            message="No redirect mappings configured",
+            recommendation=""
+        ))
+        return items
+
+    # Check each redirect target exists in docs/en/
+    invalid_targets = []
+    for source, target in redirect_maps.items():
+        # Target path is like "standard/versions/" - convert to doc path
+        # URLs ending with / map to either index.md or <name>.md
+        target_doc = target.rstrip('/')
+
+        # First try: target as a directory with index.md
+        target_path_index = EN_DIR / target_doc / "index.md"
+        # Second try: target as a file with .md extension
+        target_path_file = EN_DIR / (target_doc + ".md")
+
+        target_exists = target_path_index.exists() or target_path_file.exists()
+
+        if not target_exists:
+            invalid_targets.append((source, target))
+            items.append(AuditItem(
+                category="Redirect Targets",
+                status="NG",
+                file_path=f"build_redirects.py ({source})",
+                message=f"Redirect target not found: {target}",
+                recommendation=f"Create docs/en/{target_doc}/index.md or docs/en/{target_doc}.md"
+            ))
+
+    if not invalid_targets:
+        items.append(AuditItem(
+            category="Redirect Targets",
+            status="OK",
+            file_path="tooling/release/build_redirects.py",
+            message=f"All {len(redirect_maps)} redirect targets exist",
+            recommendation=""
+        ))
+
+    return items
+
+
 def check_release_requirements() -> list[AuditItem]:
     """
     Check that release requirements are met.
@@ -647,6 +740,9 @@ def main():
 
     print("Checking unreferenced files...")
     all_items.extend(check_unreferenced_files())
+
+    print("Checking redirect targets...")
+    all_items.extend(check_redirect_targets())
 
     print("Checking release requirements...")
     all_items.extend(check_release_requirements())
