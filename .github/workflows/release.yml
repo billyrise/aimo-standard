@@ -10,6 +10,10 @@ permissions:
   id-token: write
   attestations: write
 
+env:
+  LANG: C.UTF-8
+  LC_ALL: C.UTF-8
+
 jobs:
   build-release:
     runs-on: ubuntu-latest
@@ -30,16 +34,27 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install system deps for WeasyPrint (libs + fonts)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libpango-1.0-0 libpangocairo-1.0-0 libcairo2 libgdk-pixbuf2.0-0 \
+            fonts-noto-cjk fonts-noto-core fonts-noto-color-emoji
+
       - name: Install deps
         run: |
           python -m pip install -U pip
           pip install -r requirements.txt
+          pip install -r tooling/requirements.txt
 
-      - name: Lint & Test
+      - name: Quality gates (lint + test)
         run: |
           python tooling/checks/lint_i18n.py
           python tooling/checks/lint_schema.py
           pytest -q
+
+      - name: Build docs (mkdocs)
+        run: python -m mkdocs build --strict
 
       - name: Configure git user
         run: |
@@ -71,28 +86,25 @@ jobs:
           fi
           git checkout -
 
-      - name: Prepare dist
+      - name: Build release assets (PDF + zip + checksums)
         run: |
-          mkdir -p dist
-          cp -r schemas templates examples validator docs mkdocs.yml README.md LICENSE.txt NOTICE.txt TRADEMARKS.md VERSIONING.md GOVERNANCE.md SECURITY.md dist/ || true
-          (cd dist && zip -r "AIMO-Standard_${{ steps.v.outputs.tag }}_artifacts.zip" .)
-
-      - name: Checksums
-        run: |
-          cd dist
-          sha256sum "AIMO-Standard_${{ steps.v.outputs.tag }}_artifacts.zip" > "AIMO-Standard_${{ steps.v.outputs.tag }}_artifacts.zip.sha256"
+          python tooling/release/build_assets.py --version "${{ steps.v.outputs.ver }}" --ja
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           name: "${{ steps.v.outputs.tag }}"
           files: |
-            dist/AIMO-Standard_${{ steps.v.outputs.tag }}_artifacts.zip
-            dist/AIMO-Standard_${{ steps.v.outputs.tag }}_artifacts.zip.sha256
+            dist/trust_package.pdf
+            dist/trust_package.ja.pdf
+            dist/aimo-standard-artifacts.zip
+            dist/SHA256SUMS.txt
 
       - name: Attest build provenance
         uses: actions/attest-build-provenance@v1
         with:
           subject-path: |
-            dist/AIMO-Standard_${{ steps.v.outputs.tag }}_artifacts.zip
-            dist/AIMO-Standard_${{ steps.v.outputs.tag }}_artifacts.zip.sha256
+            dist/trust_package.pdf
+            dist/trust_package.ja.pdf
+            dist/aimo-standard-artifacts.zip
+            dist/SHA256SUMS.txt

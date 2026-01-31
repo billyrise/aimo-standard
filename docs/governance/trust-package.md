@@ -3,6 +3,17 @@
 This page bundles the minimum materials auditors, legal, and IT security need to assess adoption readiness.
 It is a hub only; detailed Evidence TOC and Coverage tables are maintained in their respective sections.
 
+## Download
+
+**[Download Trust Package PDF (Latest Release)](https://github.com/billyrise/aimo-standard/releases/latest)**
+
+The Trust Package PDF consolidates auditor-ready materials into a single document. Each GitHub Release includes:
+
+- `trust_package.pdf` — English Trust Package
+- `trust_package.ja.pdf` — Japanese Trust Package
+- `aimo-standard-artifacts.zip` — Schemas, templates, examples, validator rules
+- `SHA256SUMS.txt` — Checksums for verification
+
 ## What you get
 
 - **Conformance**: how to claim compliance and what levels mean — [Conformance](../conformance/index.md)
@@ -31,6 +42,17 @@ It is a hub only; detailed Evidence TOC and Coverage tables are maintained in th
 
 Use the repository README for citation guidance and context; governance links to the authoritative policies.
 See [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) and [Governance](../governance/index.md).
+
+## Artifacts zip contents
+
+The `aimo-standard-artifacts.zip` includes:
+
+- **JSON Schemas**: `schemas/jsonschema/` — Machine-readable validation schemas
+- **Templates**: `templates/ev/` — Evidence record templates (JSON + Markdown)
+- **Examples**: `examples/` — Minimal sample bundles for quick adoption
+- **Coverage Map**: `coverage_map/coverage_map.yaml` — Mapping to external standards
+- **Validator Rules**: `validator/rules/` — Validation rule definitions
+- **Governance docs**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt`, etc.
 
 ## Important note
 
