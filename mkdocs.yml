@@ -60,6 +60,11 @@ nav:
       - examples/index.md
   - Coverage Map:
       - coverage-map/index.md
+      - Methodology: coverage-map/methodology.md
+      - ISO/IEC 42001: coverage-map/iso-42001.md
+      - NIST AI RMF: coverage-map/nist-ai-rmf.md
+      - EU AI Act: coverage-map/eu-ai-act.md
+      - ISMS: coverage-map/isms.md
   - Governance:
       - governance/index.md
       - Trust Package: governance/trust-package.md
