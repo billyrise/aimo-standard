@@ -55,3 +55,26 @@ The `aimo-standard-artifacts.zip` contains:
 - **Migration and checksums**: documented per release; breaking changes require migration guidance.
 
 For governance and versioning policy, see [Governance](../governance/index.md).
+
+## Preparing your submission package
+
+When preparing evidence for audit submission:
+
+1. **Create your Evidence Bundle**: Follow [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) to create EV records, Dictionary, Summary, and Change Log.
+2. **Run the Validator**: Execute `python validator/src/validate.py` to check structural consistency. Fix all errors before proceeding.
+3. **Generate Checksums**: Create SHA-256 checksums for verification:
+   ```bash
+   sha256sum *.json *.pdf > SHA256SUMS.txt
+   ```
+4. **Package**: Create a zip archive of your bundle directory.
+5. **Document version alignment**: Note which AIMO Standard release (e.g., `v1.0.0`) your evidence aligns with.
+6. **Deliver**: Provide the package, checksums, and version reference to your auditor.
+
+For the complete preparation guide, see [Trust Package](../governance/trust-package.md).
+
+## Non-overclaim statement
+
+!!! warning "Important"
+    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+
+See [Responsibility Boundary](../governance/responsibility-boundary.md) for scope, assumptions, and adopter responsibilities.

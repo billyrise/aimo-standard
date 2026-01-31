@@ -34,8 +34,48 @@ This page defines the minimum evidence requirements as a MUST-level checklist, g
 
 ## 6) Integrity & Access (完全性/アクセス制御)
 
-- **Implementation**: recommended (e.g. access control, hashing, WORM, audit logs). Requirements are stated from the perspective of explainability: who had access, how integrity was preserved.
-- **What it proves**: that evidence is preserved and access is controlled to support audit reliance.
+Evidence integrity and access control are essential for audit reliance. While AIMO does not prescribe specific technical controls, adopters should document how these expectations are met.
+
+### Access control guidance
+
+| Aspect | Guidance |
+| --- | --- |
+| **Role-based access** | Define roles (e.g., evidence creator, reviewer, auditor, admin) and document who can create, read, update, or delete evidence. |
+| **Least privilege** | Grant minimum necessary access; restrict write access to authorized personnel. |
+| **Access logging** | Log access events (who, when, what) for audit trail purposes. |
+| **Separation of duties** | Where practical, separate evidence creation from approval roles. |
+
+### Retention guidance
+
+| Aspect | Guidance |
+| --- | --- |
+| **Retention period** | Define and document retention periods based on regulatory requirements and organizational policy (e.g., 5-7 years for financial audits). |
+| **Retention schedule** | Maintain a schedule showing what evidence is retained, for how long, and when it can be disposed. |
+| **Legal hold** | Support legal hold processes that suspend normal retention/deletion for litigation or investigation. |
+
+### Immutability options
+
+| Option | Description |
+| --- | --- |
+| **Cryptographic hashing** | Generate SHA-256 (or stronger) hashes for evidence files; store hashes separately for verification. |
+| **WORM storage** | Use Write-Once-Read-Many storage for evidence archives to prevent modification. |
+| **Append-only logs** | Use append-only audit logs for change tracking. |
+| **Digital signatures** | Sign evidence bundles to prove authorship and detect tampering. |
+
+### Audit trail expectations
+
+| Element | What to document |
+| --- | --- |
+| **Change log** | Record who changed what, when, and why (see Change Log lifecycle group). |
+| **Access log** | Record who accessed evidence, when, and for what purpose. |
+| **System logs** | Retain relevant system logs (authentication, authorization) that support evidence integrity claims. |
+| **Verification records** | Document periodic integrity verification (hash checks, audit reviews). |
+
+### What it proves
+
+- **Evidence is preserved**: integrity mechanisms (hashing, WORM, signatures) demonstrate that evidence has not been tampered with.
+- **Access is controlled**: access logs and role definitions show who had access and that least privilege was applied.
+- **Audit reliance is supported**: together, these elements give auditors confidence in the reliability of evidence.
 
 ## Important note
 

@@ -32,3 +32,24 @@
 監査では、Evidence Bundle を用いて、AI 利用が申請・審査・承認されていること、例外が有効期限と代替統制・更新と紐づいていること、変更が記録されていることを確認する。TOC と追跡可能性のルールにより、必要なアーティファクトの所在と、request / review / exception / renewal / EV 間の ID と参照の追跡が可能となる。Summary で概要を把握し、Change Log で変更管理と説明責任を支える。
 
 MUST レベルのフィールドとライフサイクル区分は [Minimum Evidence Requirements](minimum-evidence.md) を参照。
+
+## 運用ガイダンス
+
+!!! info "完全性とアクセス制御"
+    AIMO は特定の統制を規定しないが、採用者は以下を文書化すべきである：
+    
+    - **アクセスロール**: 誰が証跡を作成・閲覧・更新・削除できるか
+    - **保持ポリシー**: 証跡をどのくらいの期間、どのスケジュールで保持するか
+    - **完全性メカニズム**: 使用するハッシュ、WORM ストレージ、デジタル署名
+    - **監査証跡**: バンドルへのアクセスと変更のログ
+    
+    詳細は [Minimum Evidence Requirements > Integrity & Access](minimum-evidence.ja.md#6-integrity-access完全性アクセス制御) を参照。
+
+## 監査ジャーニー
+
+本ページから、典型的な監査ジャーニーは以下のように続く：
+
+1. **次へ**: [Minimum Evidence Requirements](minimum-evidence.ja.md) — ライフサイクル別 MUST チェックリスト
+2. **続いて**: [Coverage Map](../coverage-map/index.ja.md) — 外部フレームワークへのマッピング
+3. **検証**: [Validator](../validator/index.ja.md) — 構造チェックを実行
+4. **ダウンロード**: [Releases](../releases/index.ja.md) — リリースアセットを取得し、チェックサムを検証

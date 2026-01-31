@@ -54,6 +54,44 @@ The `aimo-standard-artifacts.zip` includes:
 - **Validator Rules**: `validator/rules/` — Validation rule definitions
 - **Governance docs**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt`, etc.
 
-## Important note
+## Responsibility boundary
 
-This package supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.
+The AIMO Standard provides a structured evidence format and explainability framework. It does **not** provide legal advice, compliance certification, risk assessment, or audit execution.
+
+For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](responsibility-boundary.md).
+
+## How to prepare a submission package
+
+Follow these steps to prepare an audit-ready submission:
+
+1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
+2. **Run Validator**: Execute `python validator/src/validate.py` against your bundle to check structural consistency. Fix any errors before proceeding.
+3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
+   ```bash
+   sha256sum *.json *.pdf > SHA256SUMS.txt
+   ```
+4. **Package Artifacts**: Create a zip archive of your evidence bundle:
+   ```bash
+   zip -r evidence_bundle.zip bundle_directory/
+   ```
+5. **Reference Release Version**: Note which AIMO Standard version (e.g., `v1.0.0`) your bundle aligns with.
+6. **Deliver**: Provide the zip, checksums, and version reference to your auditor or compliance function.
+
+For release assets and verification, see [Releases](../releases/index.md).
+
+## Non-overclaim statement
+
+!!! warning "Important"
+    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+
+See [Responsibility Boundary](responsibility-boundary.md) for details on scope, assumptions, and adopter responsibilities.
+
+## Audit journey
+
+From this page, the recommended audit journey is:
+
+1. **Evidence structure**: [Evidence Bundle](../artifacts/evidence-bundle.md) — understand bundle TOC and traceability
+2. **Required evidence**: [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist by lifecycle
+3. **Framework alignment**: [Coverage Map](../coverage-map/index.md) + [Methodology](../coverage-map/methodology.md) — see how AIMO maps to external frameworks
+4. **Validation**: [Validator](../validator/index.md) — run structural consistency checks
+5. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums

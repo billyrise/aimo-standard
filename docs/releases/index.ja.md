@@ -54,4 +54,27 @@ sha256sum trust_package.pdf
 - **リリースプロセス**: タグ `vX.Y.Z`、CI ビルド、`dist/` 下の PDF、チェックサム、GitHub Release アセット。リポジトリの [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) および [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照。
 - **移行とチェックサム**: リリースごとに文書化。破壊的変更には移行ガイドが必要。
 
-ガバナンスとバージョニングポリシーは [Governance](../governance/index.md) を参照。
+ガバナンスとバージョニングポリシーは [Governance](../governance/index.ja.md) を参照。
+
+## 提出パッケージの準備
+
+監査提出用の証跡を準備する際：
+
+1. **Evidence Bundle の作成**: [Evidence Bundle](../artifacts/evidence-bundle.ja.md) と [Minimum Evidence Requirements](../artifacts/minimum-evidence.ja.md) に従い、EV レコード、Dictionary、Summary、Change Log を作成する。
+2. **Validator の実行**: `python validator/src/validate.py` を実行して構造整合性を確認する。エラーはすべて修正する。
+3. **チェックサムの生成**: 検証用の SHA-256 チェックサムを作成する：
+   ```bash
+   sha256sum *.json *.pdf > SHA256SUMS.txt
+   ```
+4. **パッケージ化**: バンドルディレクトリの zip アーカイブを作成する。
+5. **バージョン整合の記録**: 証跡が整合する AIMO Standard リリース（例：`v1.0.0`）を記録する。
+6. **提出**: パッケージ、チェックサム、バージョン参照を監査人に提供する。
+
+完全な準備ガイドは [Trust Package](../governance/trust-package.ja.md) を参照。
+
+## 非過剰主張ステートメント
+
+!!! warning "重要"
+    AIMO Standard は**説明可能性と証跡準備**を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も**行わない**。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。
+
+スコープ、前提条件、採用者責任は [責任境界](../governance/responsibility-boundary.ja.md) を参照。

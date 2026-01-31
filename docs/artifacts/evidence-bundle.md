@@ -32,3 +32,24 @@ An **Evidence Bundle** is an audit package: a structured set of artifacts that s
 Auditors use the Evidence Bundle to verify that AI use is requested, reviewed, and approved; that exceptions are time-bound and have compensating controls and renewal; and that changes are logged. The TOC and traceability rules let them locate required artifacts and follow IDs and references across request, review, exception, renewal, and EV records. The Summary gives a quick overview; the Change Log supports change control and accountability.
 
 See [Minimum Evidence Requirements](minimum-evidence.md) for MUST-level fields and lifecycle groups.
+
+## Operational guidance
+
+!!! info "Integrity and access control"
+    While AIMO does not prescribe specific controls, adopters should document:
+    
+    - **Access roles**: who can create, read, update, or delete evidence
+    - **Retention policy**: how long evidence is retained and under what schedule
+    - **Integrity mechanisms**: hashing, WORM storage, or digital signatures used
+    - **Audit trail**: logs of access and changes to the bundle
+    
+    See [Minimum Evidence Requirements > Integrity & Access](minimum-evidence.md#6-integrity-access-完全性アクセス制御) for detailed guidance.
+
+## Audit journey
+
+From this page, the typical audit journey continues:
+
+1. **Next**: [Minimum Evidence Requirements](minimum-evidence.md) — MUST-level checklist by lifecycle
+2. **Then**: [Coverage Map](../coverage-map/index.md) — mapping to external frameworks
+3. **Validate**: [Validator](../validator/index.md) — run structural checks
+4. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums
