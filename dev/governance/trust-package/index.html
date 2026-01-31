@@ -1588,6 +1588,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#for-auditors-verification-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      For auditors: Verification procedure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For auditors: Verification procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-verify-checksums-sha-256" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Verify checksums (SHA-256)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-verify-bundle-structure-validator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Verify bundle structure (Validator)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-verify-version-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify version alignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-look-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to look for
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#audit-journey" class="md-nav__link">
     <span class="md-ellipsis">
       Audit journey
@@ -1794,6 +1845,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#for-auditors-verification-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      For auditors: Verification procedure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For auditors: Verification procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-verify-checksums-sha-256" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Verify checksums (SHA-256)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-verify-bundle-structure-validator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Verify bundle structure (Validator)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-verify-version-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify version alignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-look-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to look for
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#audit-journey" class="md-nav__link">
     <span class="md-ellipsis">
       Audit journey
@@ -1940,6 +2042,95 @@ See <a href="https://github.com/billyrise/aimo-standard/blob/main/README.md">REA
 <p>!!! warning "Important"
     The AIMO Standard supports <strong>explainability and evidence readiness</strong>. It does <strong>not</strong> provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.</p>
 <p>See <a href="../responsibility-boundary/">Responsibility Boundary</a> for details on scope, assumptions, and adopter responsibilities.</p>
+<h2 id="for-auditors-verification-procedure">For auditors: Verification procedure</h2>
+<p>When receiving an evidence submission, auditors should verify integrity and structure using the following steps:</p>
+<h3 id="step-1-verify-checksums-sha-256">Step 1: Verify checksums (SHA-256)</h3>
+<pre><code class="language-bash"># Download or receive SHA256SUMS.txt with the submission
+# Verify all files match their recorded checksums
+sha256sum -c SHA256SUMS.txt
+
+# Or verify individual files manually:
+sha256sum evidence_bundle.zip
+# Compare output against the value in SHA256SUMS.txt
+</code></pre>
+<p>If any checksum fails, the submission should be rejected or re-requested.</p>
+<h3 id="step-2-verify-bundle-structure-validator">Step 2: Verify bundle structure (Validator)</h3>
+<p><strong>Prerequisites</strong> (one-time setup):</p>
+<pre><code class="language-bash"># Clone the official AIMO Standard release
+git clone https://github.com/billyrise/aimo-standard.git
+cd aimo-standard
+git checkout v0.1.2  # Use the version stated in submission
+
+# Set up Python environment
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+</code></pre>
+<p><strong>Run validation</strong>:</p>
+<pre><code class="language-bash"># Extract the submitted bundle
+unzip evidence_bundle.zip -d bundle/
+
+# Run validator against the bundle's root.json
+python validator/src/validate.py bundle/root.json
+
+# Expected output: &quot;validation OK&quot; or list of errors
+</code></pre>
+<p><strong>Example</strong> (using built-in sample):</p>
+<pre><code class="language-bash">python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+</code></pre>
+<p>The validator checks:</p>
+<ul>
+<li>Required files exist (EV records, Dictionary)</li>
+<li>JSON files conform to schema</li>
+<li>Cross-references (request_id, review_id, etc.) are valid</li>
+<li>Timestamps are present and properly formatted</li>
+</ul>
+<h3 id="step-3-verify-version-alignment">Step 3: Verify version alignment</h3>
+<p>Check that the submission references an official AIMO Standard release:</p>
+<ol>
+<li>Confirm the stated version (e.g., <code>v0.1.2</code>) exists at <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a></li>
+<li>Compare submitted schemas against the release artifacts</li>
+<li>Note any deviations from the official release</li>
+</ol>
+<h3 id="what-to-look-for">What to look for</h3>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Pass Criteria</th>
+<th>Fail Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checksums match</td>
+<td>All <code>sha256sum -c</code> checks pass</td>
+<td>Reject or re-request</td>
+</tr>
+<tr>
+<td>Validator passes</td>
+<td>No errors from <code>validate.py</code></td>
+<td>Request fixes before acceptance</td>
+</tr>
+<tr>
+<td>Version exists</td>
+<td>Release tag exists on GitHub</td>
+<td>Clarify version alignment</td>
+</tr>
+<tr>
+<td>Required fields present</td>
+<td>EV records have id, timestamp, source, summary</td>
+<td>Request completion</td>
+</tr>
+<tr>
+<td>Traceability intact</td>
+<td>Cross-references resolve correctly</td>
+<td>Request linkage fixes</td>
+</tr>
+</tbody>
+</table>
+<p>!!! info "Auditor independence"
+    Auditors should obtain the validator and schemas directly from the official AIMO Standard release, not from the submitting party, to ensure verification independence.</p>
 <h2 id="audit-journey">Audit journey</h2>
 <p>From this page, the recommended audit journey is:</p>
 <ol>

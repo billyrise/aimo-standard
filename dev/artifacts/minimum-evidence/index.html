@@ -1213,6 +1213,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#recommended-operational-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended operational profiles
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1854,6 +1863,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#recommended-operational-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended operational profiles
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2044,6 +2062,68 @@
 <li><strong>Access is controlled</strong>: access logs and role definitions show who had access and that least privilege was applied.</li>
 <li><strong>Audit reliance is supported</strong>: together, these elements give auditors confidence in the reliability of evidence.</li>
 </ul>
+<h3 id="recommended-operational-profiles">Recommended operational profiles</h3>
+<p>Choose a profile based on your risk tolerance and regulatory requirements. These are recommendations, not mandates.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Lightweight</th>
+<th>Standard</th>
+<th>Strict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Use case</strong></td>
+<td>Internal pilots, low-risk AI</td>
+<td>Production systems, moderate risk</td>
+<td>Regulated industries, high-risk AI</td>
+</tr>
+<tr>
+<td><strong>Retention period</strong></td>
+<td>1-2 years</td>
+<td>5-7 years</td>
+<td>7-10+ years or regulatory minimum</td>
+</tr>
+<tr>
+<td><strong>Immutability</strong></td>
+<td>SHA-256 hashes</td>
+<td>SHA-256 + append-only logs</td>
+<td>WORM storage + digital signatures</td>
+</tr>
+<tr>
+<td><strong>Access control</strong></td>
+<td>Role-based (basic)</td>
+<td>Role-based + access logging</td>
+<td>Separation of duties + full audit trail</td>
+</tr>
+<tr>
+<td><strong>Audit trail</strong></td>
+<td>Change log only</td>
+<td>Change log + access log</td>
+<td>Full system logs + periodic verification</td>
+</tr>
+<tr>
+<td><strong>Verification frequency</strong></td>
+<td>On-demand</td>
+<td>Quarterly</td>
+<td>Monthly or continuous</td>
+</tr>
+<tr>
+<td><strong>Validator usage</strong></td>
+<td>Optional</td>
+<td>Required before submission</td>
+<td>Required + automated CI checks</td>
+</tr>
+</tbody>
+</table>
+<p>!!! note "Retention periods are examples"
+    Retention periods shown are illustrative. Organizations must determine retention based on applicable laws, contracts, industry requirements, and internal policies.</p>
+<p>!!! tip "How to choose"
+    - <strong>Lightweight</strong>: Suitable for experimentation, internal tools, or low-stakes applications where formal audits are unlikely.
+    - <strong>Standard</strong>: Recommended for most production deployments where audits may occur but are not continuous.
+    - <strong>Strict</strong>: Required for regulated industries (finance, healthcare, government) or AI systems with significant risk impact.</p>
 <h2 id="important-note">Important note</h2>
 <p>This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.</p>
 <p>See <a href="../evidence-bundle/">Evidence Bundle</a> for bundle structure and TOC; see <a href="../../standard/current/06-ev-template/">EV Template</a> and schemas for field-level alignment.</p>

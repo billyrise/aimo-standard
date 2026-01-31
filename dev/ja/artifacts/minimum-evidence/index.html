@@ -1213,6 +1213,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      推奨運用プロファイル
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1854,6 +1863,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      推奨運用プロファイル
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2044,6 +2062,68 @@
 <li><strong>アクセスが制御されている</strong>: アクセスログとロール定義により、誰がアクセス権を持ち、最小権限が適用されていることを示す。</li>
 <li><strong>監査の依拠が支えられている</strong>: これらの要素を合わせて、監査人に証跡の信頼性への確信を与える。</li>
 </ul>
+<h3 id="_6">推奨運用プロファイル</h3>
+<p>リスク許容度と規制要件に基づきプロファイルを選択する。これらは推奨であり、義務ではない。</p>
+<table>
+<thead>
+<tr>
+<th>観点</th>
+<th>軽量（Lightweight）</th>
+<th>標準（Standard）</th>
+<th>厳格（Strict）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>用途</strong></td>
+<td>内部パイロット、低リスクAI</td>
+<td>本番システム、中リスク</td>
+<td>規制産業、高リスクAI</td>
+</tr>
+<tr>
+<td><strong>保持期間</strong></td>
+<td>1〜2年</td>
+<td>5〜7年</td>
+<td>7〜10年以上または規制最低限</td>
+</tr>
+<tr>
+<td><strong>不変性</strong></td>
+<td>SHA-256 ハッシュ</td>
+<td>SHA-256 + 追記専用ログ</td>
+<td>WORM ストレージ + デジタル署名</td>
+</tr>
+<tr>
+<td><strong>アクセス制御</strong></td>
+<td>ロールベース（基本）</td>
+<td>ロールベース + アクセスログ</td>
+<td>職務分離 + 完全監査証跡</td>
+</tr>
+<tr>
+<td><strong>監査証跡</strong></td>
+<td>変更ログのみ</td>
+<td>変更ログ + アクセスログ</td>
+<td>完全システムログ + 定期検証</td>
+</tr>
+<tr>
+<td><strong>検証頻度</strong></td>
+<td>オンデマンド</td>
+<td>四半期ごと</td>
+<td>月次または継続的</td>
+</tr>
+<tr>
+<td><strong>バリデータ利用</strong></td>
+<td>任意</td>
+<td>提出前に必須</td>
+<td>必須 + 自動 CI チェック</td>
+</tr>
+</tbody>
+</table>
+<p>!!! note "保持期間は例示"
+    表中の保持期間は例示である。組織は適用法令、契約、業界要件、内部ポリシーに基づき保持期間を決定すること。</p>
+<p>!!! tip "選び方"
+    - <strong>軽量</strong>: 実験、内部ツール、正式な監査が想定されない低リスク用途に適する。
+    - <strong>標準</strong>: 監査の可能性はあるが継続的ではない、ほとんどの本番デプロイに推奨。
+    - <strong>厳格</strong>: 規制産業（金融、医療、政府）またはリスク影響の大きいAIシステムに必須。</p>
 <h2 id="important-note">Important note</h2>
 <p>本最小セットは説明可能性と証跡準備を支援する。法的助言の提供および適合の保証は行わない。</p>
 <p>バンドル構造と TOC は <a href="../evidence-bundle/">Evidence Bundle</a>、フィールドレベルの整合は <a href="../../standard/current/06-ev-template/">EV Template</a> およびスキーマを参照。</p>

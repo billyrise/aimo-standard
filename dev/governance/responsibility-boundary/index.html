@@ -1575,6 +1575,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#raci-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      RACI Matrix (責任分界表)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#non-overclaim-statement" class="md-nav__link">
     <span class="md-ellipsis">
       Non-overclaim statement
@@ -1731,6 +1740,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#raci-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      RACI Matrix (責任分界表)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#non-overclaim-statement" class="md-nav__link">
     <span class="md-ellipsis">
       Non-overclaim statement
@@ -1868,6 +1886,97 @@
 </tr>
 </tbody>
 </table>
+<h2 id="raci-matrix">RACI Matrix (責任分界表)</h2>
+<p>The following RACI matrix clarifies responsibilities across AIMO Standard, Adopter, and Auditor roles.</p>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th style="text-align: center;">AIMO Standard</th>
+<th style="text-align: center;">Adopter</th>
+<th style="text-align: center;">Auditor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Define evidence schema &amp; templates</strong></td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>Create evidence records</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>Store &amp; retain evidence</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>Implement access controls</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>Implement integrity controls (hash, WORM)</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>Run validator on bundle</strong></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr>
+<td><strong>Package submission (zip, checksums)</strong></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>Verify checksums (sha256)</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">R/A</td>
+</tr>
+<tr>
+<td><strong>Verify bundle structure (validator)</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">R/A</td>
+</tr>
+<tr>
+<td><strong>Interpret regulatory requirements</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr>
+<td><strong>Issue audit conclusion</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+</tr>
+<tr>
+<td><strong>Provide legal advice</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend</strong>: R = Responsible, A = Accountable, C = Consulted, I = Informed, — = Not applicable</p>
+<p>!!! note "Key takeaway"
+    AIMO Standard is responsible for <strong>defining the format</strong>. Adopters are responsible for <strong>creating, storing, and validating evidence</strong>. Auditors are responsible for <strong>verifying submissions and issuing audit conclusions</strong>.</p>
+<p>!!! warning "Non-certification notice"
+    AIMO Standard is informative; it does not certify compliance or provide legal advice. Audit conclusions and conformity assessments are the sole responsibility of qualified auditors and legal professionals.</p>
 <h2 id="non-overclaim-statement">Non-overclaim statement</h2>
 <p>!!! warning "Important"
     The AIMO Standard supports <strong>explainability and evidence readiness</strong>. It does <strong>not</strong> provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.</p>

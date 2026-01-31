@@ -1575,6 +1575,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#raci" class="md-nav__link">
+    <span class="md-ellipsis">
+      RACI マトリクス（責任分界表）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       非過剰主張ステートメント
@@ -1731,6 +1740,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#raci" class="md-nav__link">
+    <span class="md-ellipsis">
+      RACI マトリクス（責任分界表）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       非過剰主張ステートメント
@@ -1868,6 +1886,97 @@
 </tr>
 </tbody>
 </table>
+<h2 id="raci">RACI マトリクス（責任分界表）</h2>
+<p>以下の RACI マトリクスは、AIMO Standard、採用者、監査人の間での責任分担を明確にする。</p>
+<table>
+<thead>
+<tr>
+<th>活動</th>
+<th style="text-align: center;">AIMO Standard</th>
+<th style="text-align: center;">採用者</th>
+<th style="text-align: center;">監査人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>証跡スキーマ・テンプレートの定義</strong></td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>証跡レコードの作成</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>証跡の保管・保持</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>アクセス制御の実装</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>完全性統制の実装（ハッシュ、WORM）</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>バンドルへのバリデータ実行</strong></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr>
+<td><strong>提出パッケージの作成（zip、チェックサム）</strong></td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td><strong>チェックサムの検証（sha256）</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">R/A</td>
+</tr>
+<tr>
+<td><strong>バンドル構造の検証（バリデータ）</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">R/A</td>
+</tr>
+<tr>
+<td><strong>規制要件の解釈</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr>
+<td><strong>監査結論の発行</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">R/A</td>
+</tr>
+<tr>
+<td><strong>法的助言の提供</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>凡例</strong>: R = 実行責任、A = 説明責任、C = 協議、I = 報告先、— = 該当なし</p>
+<p>!!! note "ポイント"
+    AIMO Standard は<strong>フォーマット定義</strong>に責任を持つ。採用者は<strong>証跡の作成・保管・検証</strong>に責任を持つ。監査人は<strong>提出物の検証と監査結論の発行</strong>に責任を持つ。</p>
+<p>!!! warning "非認証の注意"
+    AIMO Standard は情報提供のみであり、適合の認証や法的助言は行わない。監査結論および適合性評価は、適格な監査人・法務専門家の責任である。</p>
 <h2 id="_3">非過剰主張ステートメント</h2>
 <p>!!! warning "重要"
     AIMO Standard は<strong>説明可能性と証跡準備</strong>を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も<strong>行わない</strong>。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。</p>

@@ -1659,6 +1659,15 @@
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
+      監査人向け：検証手順
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
       非過剰主張ステートメント
     </span>
   </a>
@@ -1772,7 +1781,17 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 <li><strong>提出</strong>: パッケージ、チェックサム、バージョン参照を監査人に提供する。</li>
 </ol>
 <p>完全な準備ガイドは <a href="../governance/trust-package/">Trust Package</a> を参照。</p>
-<h2 id="_6">非過剰主張ステートメント</h2>
+<h2 id="_6">監査人向け：検証手順</h2>
+<p>証跡提出物を受領した監査人は、完全性と構造を検証すべきである：</p>
+<ol>
+<li><strong>チェックサム検証</strong>: <code>sha256sum -c SHA256SUMS.txt</code> を実行してファイルの完全性を確認</li>
+<li><strong>バリデータ実行</strong>: <code>python validator/src/validate.py bundle/</code> を実行して構造を確認</li>
+<li><strong>バージョン確認</strong>: 記載された AIMO Standard バージョンが <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a> に存在することを確認</li>
+</ol>
+<p>!!! tip "ツールを独立に取得"
+    監査人はバリデータとスキーマを、提出者からではなく、公式 AIMO Standard リリースから直接ダウンロードすべきである。</p>
+<p>完全な検証手順は <a href="../governance/trust-package/">Trust Package</a> を参照。</p>
+<h2 id="_7">非過剰主張ステートメント</h2>
 <p>!!! warning "重要"
     AIMO Standard は<strong>説明可能性と証跡準備</strong>を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も<strong>行わない</strong>。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。</p>
 <p>スコープ、前提条件、採用者責任は <a href="../governance/responsibility-boundary/">責任境界</a> を参照。</p>

@@ -1657,6 +1657,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#for-auditors-verification-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      For auditors: Verification procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#non-overclaim-statement" class="md-nav__link">
     <span class="md-ellipsis">
       Non-overclaim statement
@@ -1772,6 +1781,16 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 <li><strong>Deliver</strong>: Provide the package, checksums, and version reference to your auditor.</li>
 </ol>
 <p>For the complete preparation guide, see <a href="../governance/trust-package/">Trust Package</a>.</p>
+<h2 id="for-auditors-verification-procedure">For auditors: Verification procedure</h2>
+<p>Auditors receiving evidence submissions should verify integrity and structure:</p>
+<ol>
+<li><strong>Verify checksums</strong>: Run <code>sha256sum -c SHA256SUMS.txt</code> to confirm file integrity</li>
+<li><strong>Run validator</strong>: Execute <code>python validator/src/validate.py bundle/</code> to check structure</li>
+<li><strong>Confirm version</strong>: Verify the stated AIMO Standard version exists at <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a></li>
+</ol>
+<p>!!! tip "Obtain tools independently"
+    Auditors should download the validator and schemas directly from the official AIMO Standard release, not from the submitting party.</p>
+<p>For the full verification procedure, see <a href="../governance/trust-package/">Trust Package</a>.</p>
 <h2 id="non-overclaim-statement">Non-overclaim statement</h2>
 <p>!!! warning "Important"
     The AIMO Standard supports <strong>explainability and evidence readiness</strong>. It does <strong>not</strong> provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.</p>
