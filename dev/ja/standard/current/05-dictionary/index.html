@@ -861,25 +861,25 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      識別列（5）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ラベルと定義列（4）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      識別列（6）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ラベルと定義列（6）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6_2" class="md-nav__link">
     <span class="md-ellipsis">
       ライフサイクル列（6）
     </span>
@@ -1970,25 +1970,25 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      識別列（5）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ラベルと定義列（4）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      識別列（6）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ラベルと定義列（6）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6_2" class="md-nav__link">
     <span class="md-ellipsis">
       ライフサイクル列（6）
     </span>
@@ -2190,8 +2190,8 @@
 <p>!!! info "正式なソース"
     辞書CSV（<code>taxonomy_dictionary_v0.1.csv</code>）が正式なソースです。このページは説明用です。</p>
 <h2 id="_3">列スキーマ</h2>
-<p>辞書CSVは<strong>21列</strong>を使用します：</p>
-<h3 id="6">識別列（6）</h3>
+<p>正規辞書は<strong>18列</strong>を使用します（言語非依存構造）：</p>
+<h3 id="5">識別列（5）</h3>
 <table>
 <thead>
 <tr>
@@ -2226,20 +2226,13 @@
 </tr>
 <tr>
 <td>4</td>
-<td><code>dimension_name_en</code></td>
+<td><code>dimension_name</code></td>
 <td>はい</td>
-<td>英語の次元名</td>
-<td><code>Functional Scope</code></td>
-</tr>
-<tr>
-<td>5</td>
-<td><code>dimension_name_ja</code></td>
-<td>はい</td>
-<td>日本語の次元名</td>
+<td>次元名</td>
 <td><code>機能スコープ</code></td>
 </tr>
 <tr>
-<td>6</td>
+<td>5</td>
 <td><code>code</code></td>
 <td>はい</td>
 <td>完全なコード</td>
@@ -2247,7 +2240,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="6_1">ラベルと定義列（6）</h3>
+<h3 id="4">ラベルと定義列（4）</h3>
 <table>
 <thead>
 <tr>
@@ -2260,42 +2253,28 @@
 </thead>
 <tbody>
 <tr>
-<td>7</td>
-<td><code>label_en</code></td>
+<td>6</td>
+<td><code>label</code></td>
 <td>はい</td>
-<td>英語ラベル（最大50文字）</td>
-<td><code>General Q&amp;A</code></td>
-</tr>
-<tr>
-<td>8</td>
-<td><code>label_ja</code></td>
-<td>はい</td>
-<td>日本語ラベル</td>
+<td>コードラベル（最大50文字）</td>
 <td><code>一般QA</code></td>
 </tr>
 <tr>
-<td>9</td>
-<td><code>definition_en</code></td>
+<td>7</td>
+<td><code>definition</code></td>
 <td>はい</td>
-<td>英語定義（1〜2文）</td>
-<td><code>General question answering...</code></td>
+<td>コード定義（1〜2文）</td>
+<td><code>一般的な質問応答・対話利用。</code></td>
 </tr>
 <tr>
-<td>10</td>
-<td><code>definition_ja</code></td>
-<td>はい</td>
-<td>日本語定義</td>
-<td><code>一般的な質問応答...</code></td>
-</tr>
-<tr>
-<td>11</td>
+<td>8</td>
 <td><code>scope_notes</code></td>
 <td>いいえ</td>
 <td>使用範囲の補足</td>
 <td><code>Low to medium risk...</code></td>
 </tr>
 <tr>
-<td>12</td>
+<td>9</td>
 <td><code>examples</code></td>
 <td>いいえ</td>
 <td>パイプ区切りの例</td>
@@ -2303,7 +2282,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="6_2">ライフサイクル列（6）</h3>
+<p>!!! note "翻訳"
+    正規データモデルでは翻訳を言語パック（<code>data/taxonomy/i18n/*.yaml</code>）に分離しています。各言語パックは<code>dimension_name</code>、<code>label</code>、<code>definition</code>のローカライズ版を提供します。詳細は<a href="../../../contributing/localization/">ローカリゼーションガイド</a>を参照してください。</p>
+<h3 id="6">ライフサイクル列（6）</h3>
 <table>
 <thead>
 <tr>
@@ -2316,42 +2297,42 @@
 </thead>
 <tbody>
 <tr>
-<td>13</td>
+<td>10</td>
 <td><code>status</code></td>
 <td>はい</td>
 <td><code>active</code>, <code>deprecated</code>, <code>removed</code></td>
 <td><code>active</code></td>
 </tr>
 <tr>
-<td>14</td>
+<td>11</td>
 <td><code>introduced_in</code></td>
 <td>はい</td>
 <td>追加されたバージョン</td>
 <td><code>0.1.0</code></td>
 </tr>
 <tr>
-<td>15</td>
+<td>12</td>
 <td><code>deprecated_in</code></td>
 <td>いいえ</td>
 <td>非推奨化されたバージョン</td>
 <td><code>1.2.0</code></td>
 </tr>
 <tr>
-<td>16</td>
+<td>13</td>
 <td><code>removed_in</code></td>
 <td>いいえ</td>
 <td>削除されたバージョン</td>
 <td><code>2.0.0</code></td>
 </tr>
 <tr>
-<td>17</td>
+<td>14</td>
 <td><code>replaced_by</code></td>
 <td>いいえ</td>
 <td>代替コード</td>
 <td><code>UC-015</code></td>
 </tr>
 <tr>
-<td>18</td>
+<td>15</td>
 <td><code>backward_compatible</code></td>
 <td>はい</td>
 <td><code>true</code>または<code>false</code></td>
@@ -2372,21 +2353,21 @@
 </thead>
 <tbody>
 <tr>
-<td>19</td>
+<td>16</td>
 <td><code>references</code></td>
 <td>いいえ</td>
 <td>外部参照</td>
 <td>ISO/IEC 42001</td>
 </tr>
 <tr>
-<td>20</td>
+<td>17</td>
 <td><code>owner</code></td>
 <td>いいえ</td>
 <td>責任者</td>
 <td><code>AIMO WG</code></td>
 </tr>
 <tr>
-<td>21</td>
+<td>18</td>
 <td><code>last_reviewed_date</code></td>
 <td>いいえ</td>
 <td>最終レビュー（YYYY-MM-DD）</td>
@@ -2481,7 +2462,7 @@
 <li><code>status</code>を<code>active</code>に設定</li>
 <li><code>introduced_in</code>を現在のバージョンに設定</li>
 <li><code>backward_compatible</code>を<code>true</code>に設定</li>
-<li>ENとJA両方のラベルと定義を提供</li>
+<li>ラベルと定義を提供（翻訳は言語パックに追加）</li>
 </ol>
 <h3 id="_7">既存コードの変更</h3>
 <table>

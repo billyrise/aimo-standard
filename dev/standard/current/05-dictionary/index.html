@@ -861,18 +861,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identification-columns-6" class="md-nav__link">
+  <a href="#identification-columns-5" class="md-nav__link">
     <span class="md-ellipsis">
-      Identification Columns (6)
+      Identification Columns (5)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#label-and-definition-columns-6" class="md-nav__link">
+  <a href="#label-and-definition-columns-4" class="md-nav__link">
     <span class="md-ellipsis">
-      Label and Definition Columns (6)
+      Label and Definition Columns (4)
     </span>
   </a>
   
@@ -1970,18 +1970,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identification-columns-6" class="md-nav__link">
+  <a href="#identification-columns-5" class="md-nav__link">
     <span class="md-ellipsis">
-      Identification Columns (6)
+      Identification Columns (5)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#label-and-definition-columns-6" class="md-nav__link">
+  <a href="#label-and-definition-columns-4" class="md-nav__link">
     <span class="md-ellipsis">
-      Label and Definition Columns (6)
+      Label and Definition Columns (4)
     </span>
   </a>
   
@@ -2190,8 +2190,8 @@
 <p>!!! info "Source of Truth"
     The dictionary CSV (<code>taxonomy_dictionary_v0.1.csv</code>) is the authoritative source. This page is explanatory.</p>
 <h2 id="column-schema">Column Schema</h2>
-<p>The dictionary CSV uses <strong>21 columns</strong>:</p>
-<h3 id="identification-columns-6">Identification Columns (6)</h3>
+<p>The canonical dictionary uses <strong>18 columns</strong> (language-neutral structure):</p>
+<h3 id="identification-columns-5">Identification Columns (5)</h3>
 <table>
 <thead>
 <tr>
@@ -2226,20 +2226,13 @@
 </tr>
 <tr>
 <td>4</td>
-<td><code>dimension_name_en</code></td>
+<td><code>dimension_name</code></td>
 <td>Yes</td>
-<td>English dimension name</td>
+<td>Dimension name</td>
 <td><code>Functional Scope</code></td>
 </tr>
 <tr>
 <td>5</td>
-<td><code>dimension_name_ja</code></td>
-<td>Yes</td>
-<td>Japanese dimension name</td>
-<td>(JA text)</td>
-</tr>
-<tr>
-<td>6</td>
 <td><code>code</code></td>
 <td>Yes</td>
 <td>Full code</td>
@@ -2247,7 +2240,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="label-and-definition-columns-6">Label and Definition Columns (6)</h3>
+<h3 id="label-and-definition-columns-4">Label and Definition Columns (4)</h3>
 <table>
 <thead>
 <tr>
@@ -2260,42 +2253,28 @@
 </thead>
 <tbody>
 <tr>
-<td>7</td>
-<td><code>label_en</code></td>
+<td>6</td>
+<td><code>label</code></td>
 <td>Yes</td>
-<td>English label (max 50 chars)</td>
+<td>Code label (max 50 chars)</td>
 <td><code>General Q&amp;A</code></td>
 </tr>
 <tr>
-<td>8</td>
-<td><code>label_ja</code></td>
+<td>7</td>
+<td><code>definition</code></td>
 <td>Yes</td>
-<td>Japanese label</td>
-<td>(JA text)</td>
-</tr>
-<tr>
-<td>9</td>
-<td><code>definition_en</code></td>
-<td>Yes</td>
-<td>English definition (1-2 sentences)</td>
+<td>Code definition (1-2 sentences)</td>
 <td><code>General question answering...</code></td>
 </tr>
 <tr>
-<td>10</td>
-<td><code>definition_ja</code></td>
-<td>Yes</td>
-<td>Japanese definition</td>
-<td>(JA text)</td>
-</tr>
-<tr>
-<td>11</td>
+<td>8</td>
 <td><code>scope_notes</code></td>
 <td>No</td>
 <td>Usage scope clarification</td>
 <td><code>Low to medium risk...</code></td>
 </tr>
 <tr>
-<td>12</td>
+<td>9</td>
 <td><code>examples</code></td>
 <td>No</td>
 <td>Pipe-separated examples</td>
@@ -2303,6 +2282,8 @@
 </tr>
 </tbody>
 </table>
+<p>!!! note "Translations"
+    The canonical data model separates translations into language packs (<code>data/taxonomy/i18n/*.yaml</code>). Each language pack provides localized <code>dimension_name</code>, <code>label</code>, and <code>definition</code> values. See <a href="../../../contributing/localization/">Localization Guide</a> for details.</p>
 <h3 id="lifecycle-columns-6">Lifecycle Columns (6)</h3>
 <table>
 <thead>
@@ -2316,42 +2297,42 @@
 </thead>
 <tbody>
 <tr>
-<td>13</td>
+<td>10</td>
 <td><code>status</code></td>
 <td>Yes</td>
 <td><code>active</code>, <code>deprecated</code>, <code>removed</code></td>
 <td><code>active</code></td>
 </tr>
 <tr>
-<td>14</td>
+<td>11</td>
 <td><code>introduced_in</code></td>
 <td>Yes</td>
 <td>Version when added</td>
 <td><code>0.1.0</code></td>
 </tr>
 <tr>
-<td>15</td>
+<td>12</td>
 <td><code>deprecated_in</code></td>
 <td>No</td>
 <td>Version when deprecated</td>
 <td><code>1.2.0</code></td>
 </tr>
 <tr>
-<td>16</td>
+<td>13</td>
 <td><code>removed_in</code></td>
 <td>No</td>
 <td>Version when removed</td>
 <td><code>2.0.0</code></td>
 </tr>
 <tr>
-<td>17</td>
+<td>14</td>
 <td><code>replaced_by</code></td>
 <td>No</td>
 <td>Replacement code</td>
 <td><code>UC-015</code></td>
 </tr>
 <tr>
-<td>18</td>
+<td>15</td>
 <td><code>backward_compatible</code></td>
 <td>Yes</td>
 <td><code>true</code> or <code>false</code></td>
@@ -2372,21 +2353,21 @@
 </thead>
 <tbody>
 <tr>
-<td>19</td>
+<td>16</td>
 <td><code>references</code></td>
 <td>No</td>
 <td>External references</td>
 <td>ISO/IEC 42001</td>
 </tr>
 <tr>
-<td>20</td>
+<td>17</td>
 <td><code>owner</code></td>
 <td>No</td>
 <td>Responsible party</td>
 <td><code>AIMO WG</code></td>
 </tr>
 <tr>
-<td>21</td>
+<td>18</td>
 <td><code>last_reviewed_date</code></td>
 <td>No</td>
 <td>Last review (YYYY-MM-DD)</td>
@@ -2481,7 +2462,7 @@
 <li>Set <code>status</code> to <code>active</code></li>
 <li>Set <code>introduced_in</code> to the current version</li>
 <li>Set <code>backward_compatible</code> to <code>true</code></li>
-<li>Provide both EN and JA labels and definitions</li>
+<li>Provide label and definition (add translations to language packs)</li>
 </ol>
 <h3 id="modifying-existing-codes">Modifying Existing Codes</h3>
 <table>

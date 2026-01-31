@@ -1708,6 +1708,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#language-purity-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Purity Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#language-structure" class="md-nav__link">
     <span class="md-ellipsis">
       Language Structure
@@ -1816,46 +1825,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-a-new-language" class="md-nav__link">
+  <a href="#adding-a-new-language-5-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding a New Language
+      Adding a New Language (5 Steps)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Adding a New Language">
+    <nav class="md-nav" aria-label="Adding a New Language (5 Steps)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-create-taxonomy-translation-pack" class="md-nav__link">
+  <a href="#step-1-generate-taxonomy-pack" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Create Taxonomy Translation Pack
+      Step 1: Generate Taxonomy Pack
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-create-documentation-structure" class="md-nav__link">
+  <a href="#step-2-create-docs-folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Create Documentation Structure
+      Step 2: Create Docs Folder
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-update-mkdocs-configuration" class="md-nav__link">
+  <a href="#step-3-update-mkdocsyml" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Update MkDocs Configuration
+      Step 3: Update mkdocs.yml
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-translate-content" class="md-nav__link">
+  <a href="#step-4-translate" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Translate Content
+      Step 4: Translate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Verify
     </span>
   </a>
   
@@ -1936,6 +1954,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#language-purity-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Purity Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#language-structure" class="md-nav__link">
     <span class="md-ellipsis">
       Language Structure
@@ -2044,46 +2071,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-a-new-language" class="md-nav__link">
+  <a href="#adding-a-new-language-5-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding a New Language
+      Adding a New Language (5 Steps)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Adding a New Language">
+    <nav class="md-nav" aria-label="Adding a New Language (5 Steps)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-create-taxonomy-translation-pack" class="md-nav__link">
+  <a href="#step-1-generate-taxonomy-pack" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Create Taxonomy Translation Pack
+      Step 1: Generate Taxonomy Pack
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-create-documentation-structure" class="md-nav__link">
+  <a href="#step-2-create-docs-folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Create Documentation Structure
+      Step 2: Create Docs Folder
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-update-mkdocs-configuration" class="md-nav__link">
+  <a href="#step-3-update-mkdocsyml" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Update MkDocs Configuration
+      Step 3: Update mkdocs.yml
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-translate-content" class="md-nav__link">
+  <a href="#step-4-translate" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Translate Content
+      Step 4: Translate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Verify
     </span>
   </a>
   
@@ -2155,6 +2191,34 @@
 
 <h1 id="localization-guide">Localization Guide</h1>
 <p>This page documents the localization (i18n) structure, maintenance workflow, and SSOT (Single Source of Truth) principles for the AIMO Standard documentation.</p>
+<h2 id="language-purity-policy">Language Purity Policy</h2>
+<p><strong>Each language page should contain only that language's content.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EN pages</strong></td>
+<td>Must not contain CJK characters or references to language-specific columns (e.g., <code>_ja</code> suffixes)</td>
+</tr>
+<tr>
+<td><strong>JA pages</strong></td>
+<td>Must not explain EN-specific terminology as if it were the canonical structure</td>
+</tr>
+<tr>
+<td><strong>Exceptions</strong></td>
+<td>Listed in <code>MIXED_LANGUAGE_ALLOWLIST</code> in <code>tooling/checks/lint_i18n.py</code></td>
+</tr>
+</tbody>
+</table>
+<p>This policy ensures:
+1. Readers see only their selected language
+2. Adding new languages doesn't require updating existing pages
+3. CI can automatically detect violations</p>
 <h2 id="language-structure">Language Structure</h2>
 <p>The AIMO Standard documentation uses a <strong>folder-based i18n structure</strong>:</p>
 <pre><code>docs/
@@ -2314,32 +2378,33 @@
 <li>Run <code>mkdocs build --strict</code> to verify build</li>
 <li>Commit all changes together</li>
 </ol>
-<h2 id="adding-a-new-language">Adding a New Language</h2>
+<h2 id="adding-a-new-language-5-steps">Adding a New Language (5 Steps)</h2>
 <p>To add a new language (e.g., Spanish):</p>
-<h3 id="step-1-create-taxonomy-translation-pack">Step 1: Create Taxonomy Translation Pack</h3>
+<h3 id="step-1-generate-taxonomy-pack">Step 1: Generate Taxonomy Pack</h3>
 <pre><code class="language-bash">python tooling/taxonomy/build_i18n_taxonomy.py --add-lang es --lang-name &quot;Español&quot;
 </code></pre>
-<p>This creates <code>data/taxonomy/i18n/es.yaml</code> with an empty template containing English references as comments.</p>
-<h3 id="step-2-create-documentation-structure">Step 2: Create Documentation Structure</h3>
-<pre><code class="language-bash">mkdir -p docs/es
-cp -r docs/en/* docs/es/
+<p>Creates <code>data/taxonomy/i18n/es.yaml</code> with English references as comments.</p>
+<h3 id="step-2-create-docs-folder">Step 2: Create Docs Folder</h3>
+<pre><code class="language-bash">mkdir -p docs/es &amp;&amp; cp -r docs/en/* docs/es/
 </code></pre>
-<h3 id="step-3-update-mkdocs-configuration">Step 3: Update MkDocs Configuration</h3>
-<p>Add the language to <code>mkdocs.yml</code>:</p>
+<h3 id="step-3-update-mkdocsyml">Step 3: Update mkdocs.yml</h3>
 <pre><code class="language-yaml">plugins:
   - i18n:
       languages:
-        # ... existing languages ...
         - locale: es
           name: Español
           build: true
 </code></pre>
-<h3 id="step-4-translate-content">Step 4: Translate Content</h3>
-<ol>
-<li>Translate taxonomy labels in <code>data/taxonomy/i18n/es.yaml</code></li>
-<li>Translate documentation files in <code>docs/es/</code></li>
-<li>Run <code>mkdocs build --strict</code> to verify</li>
-</ol>
+<h3 id="step-4-translate">Step 4: Translate</h3>
+<ul>
+<li>Translate <code>data/taxonomy/i18n/es.yaml</code></li>
+<li>Translate files in <code>docs/es/</code></li>
+</ul>
+<h3 id="step-5-verify">Step 5: Verify</h3>
+<pre><code class="language-bash">python tooling/checks/lint_i18n.py &amp;&amp; mkdocs build --strict
+</code></pre>
+<p>!!! success "Done"
+    New language is now available at <code>/dev/es/</code></p>
 <h2 id="file-naming-conventions">File Naming Conventions</h2>
 <table>
 <thead>
