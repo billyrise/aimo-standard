@@ -1,7 +1,7 @@
 # AIMO Standard Content Manifest
 
 **Status**: Single Source of Truth (SSOT) for documentation coverage  
-**Last updated**: CU-TX-05 (2026-01-31)
+**Last updated**: CU-TAX-01 (2026-01-31)
 
 This manifest is the canonical checklist for auditor-first documentation. All CU (Change Unit) changes that affect documentation scope must update this file.
 
@@ -448,3 +448,4 @@ grep 'hreflang' site/ja/index.html
 | CU-TX-03 | 2026-01-31 | Updated: `docs/standard/current/03-taxonomy.md`, `04-codes.md`, `05-dictionary.md` and their JA counterparts. Added audit context, SSOT references, Non-overclaim links, usage rules, lifecycle metadata, and corrected code counts (91 codes). |
 | CU-TX-04 | 2026-01-31 | Updated: schemas (aimo-dictionary/ev/standard.schema.json) with code patterns and taxonomy fields. Updated templates/examples with real taxonomy codes. Updated validator checks. Added taxonomy files to release artifacts. |
 | CU-TX-05 | 2026-01-31 | Updated: manifest with Taxonomy & Dictionary section (1.7). Added taxonomy/dictionary links to Trust Package, index.md audit journey and quick links. |
+| CU-TAX-01 | 2026-01-31 | Finalized: source_pack/03_taxonomy/ as SSOT. Created dictionary_seed.csv (91 codes, 8 dimensions). Updated README.md with SSOT declaration, column spec, update workflow, compatibility policy. Confirmed taxonomy_en.yaml, taxonomy_ja.yaml, code_system.csv, dimensions_en_ja.md are fully populated. |
