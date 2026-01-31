@@ -28,16 +28,16 @@ The taxonomy is a classification system only. It does not:
 
 AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-letter prefix.
 
-| ID | Name (EN) | Name (JA) | Code Count | Description |
-| --- | --- | --- | --- | --- |
-| **FS** | Functional Scope | 機能スコープ | 6 | Which business function is supported |
-| **UC** | Use Case Class | ユースケース分類 | 30 | What type of task is performed |
-| **DT** | Data Type | データ種別 | 10 | What data classifications are involved |
-| **CH** | Channel | チャネル | 8 | How users access the AI |
-| **IM** | Integration Mode | 統合形態 | 7 | How AI connects to enterprise systems |
-| **RS** | Risk Surface | リスク面 | 8 | What risks are associated |
-| **OB** | Outcome / Benefit | 成果 | 7 | What benefits are expected |
-| **EV** | Evidence Type | 証跡種別 | 15 | What evidence is required |
+| ID | Name | Code Count | Description |
+| --- | --- | --- | --- |
+| **FS** | Functional Scope | 6 | Which business function is supported |
+| **UC** | Use Case Class | 30 | What type of task is performed |
+| **DT** | Data Type | 10 | What data classifications are involved |
+| **CH** | Channel | 8 | How users access the AI |
+| **IM** | Integration Mode | 7 | How AI connects to enterprise systems |
+| **RS** | Risk Surface | 8 | What risks are associated |
+| **OB** | Outcome / Benefit | 7 | What benefits are expected |
+| **EV** | Evidence Type | 15 | What evidence is required |
 
 **Total: 91 codes across 8 dimensions**
 
@@ -51,132 +51,132 @@ AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-l
 
 ## Dimension Definitions
 
-### FS: Functional Scope / 機能スコープ
+### FS: Functional Scope
 
 Categorizes AI use by the business function it supports. **Select exactly one.**
 
-| Code | Label (EN) | Label (JA) | Definition |
-| --- | --- | --- | --- |
-| FS-001 | End-user Productivity | 社内生産性 | AI used to improve productivity of internal end users (writing, search, summarization, meeting notes). |
-| FS-002 | Customer-facing Features | 顧客向け機能 | AI embedded in product/service features provided to customers. |
-| FS-003 | Developer Tooling | 開発支援 | AI used to assist software development and engineering tasks. |
-| FS-004 | IT Operations | IT運用 | AI used for IT operations and system administration (monitoring, incident handling). |
-| FS-005 | Security Operations | セキュリティ運用 | AI used for security monitoring/response (SOC, detection, triage). |
-| FS-006 | Governance & Compliance | ガバナンス/コンプライアンス | AI used to support governance/compliance activities (policy, audit evidence). |
+| Code | Label | Definition |
+| --- | --- | --- |
+| FS-001 | End-user Productivity | AI used to improve productivity of internal end users (writing, search, summarization, meeting notes). |
+| FS-002 | Customer-facing Features | AI embedded in product/service features provided to customers. |
+| FS-003 | Developer Tooling | AI used to assist software development and engineering tasks. |
+| FS-004 | IT Operations | AI used for IT operations and system administration (monitoring, incident handling). |
+| FS-005 | Security Operations | AI used for security monitoring/response (SOC, detection, triage). |
+| FS-006 | Governance & Compliance | AI used to support governance/compliance activities (policy, audit evidence). |
 
-### UC: Use Case Class / ユースケース分類
+### UC: Use Case Class
 
 Categorizes AI use by the type of task or interaction. **Select one or more.** Full list includes 30 codes; representative examples below.
 
-| Code | Label (EN) | Label (JA) | Definition |
-| --- | --- | --- | --- |
-| UC-001 | General Q&A | 一般QA | General question answering and conversational use. |
-| UC-002 | Summarization | 要約 | Summarizing documents, meetings, or messages. |
-| UC-003 | Translation | 翻訳 | Translation between languages. |
-| UC-004 | Content Drafting | 文章作成 | Generating drafts for emails, documents, or reports. |
-| UC-005 | Code Generation | コード生成 | Generating code or scripts. |
-| UC-006 | Code Review | コードレビュー | Reviewing code for issues and improvements. |
-| UC-009 | Search/RAG | 検索/RAG | RAG-based retrieval and question answering. |
-| UC-010 | Agentic Automation | エージェント自動化 | Autonomous or semi-autonomous agents executing actions. |
+| Code | Label | Definition |
+| --- | --- | --- |
+| UC-001 | General Q&A | General question answering and conversational use. |
+| UC-002 | Summarization | Summarizing documents, meetings, or messages. |
+| UC-003 | Translation | Translation between languages. |
+| UC-004 | Content Drafting | Generating drafts for emails, documents, or reports. |
+| UC-005 | Code Generation | Generating code or scripts. |
+| UC-006 | Code Review | Reviewing code for issues and improvements. |
+| UC-009 | Search/RAG | RAG-based retrieval and question answering. |
+| UC-010 | Agentic Automation | Autonomous or semi-autonomous agents executing actions. |
 
 See [Dictionary](./05-dictionary.md) for the complete list of 30 UC codes.
 
-### DT: Data Type / データ種別
+### DT: Data Type
 
 Categorizes the sensitivity and classification of data involved. **Select one or more.**
 
-| Code | Label (EN) | Label (JA) | Definition |
-| --- | --- | --- | --- |
-| DT-001 | Public | 公開情報 | Data that is publicly available and intended for public disclosure. |
-| DT-002 | Internal | 社内情報 | Non-public internal business data. |
-| DT-003 | Confidential | 機密情報 | Highly sensitive internal data requiring restricted access. |
-| DT-004 | Personal Data | 個人情報 | Personal data as defined by applicable privacy laws. |
-| DT-005 | Sensitive Personal Data | 要配慮個人情報 | Special category/sensitive personal data. |
-| DT-006 | Credentials | 認証情報 | Authentication secrets and credentials. |
-| DT-007 | Source Code | ソースコード | Source code and related artifacts. |
-| DT-008 | Customer Data | 顧客データ | Customer-provided or customer-related data. |
-| DT-009 | Operational Logs | 運用ログ | Operational or system logs used for monitoring and troubleshooting. |
-| DT-010 | Security Telemetry | セキュリティテレメトリ | Security telemetry such as alerts and detections. |
+| Code | Label | Definition |
+| --- | --- | --- |
+| DT-001 | Public | Data that is publicly available and intended for public disclosure. |
+| DT-002 | Internal | Non-public internal business data. |
+| DT-003 | Confidential | Highly sensitive internal data requiring restricted access. |
+| DT-004 | Personal Data | Personal data as defined by applicable privacy laws. |
+| DT-005 | Sensitive Personal Data | Special category/sensitive personal data. |
+| DT-006 | Credentials | Authentication secrets and credentials. |
+| DT-007 | Source Code | Source code and related artifacts. |
+| DT-008 | Customer Data | Customer-provided or customer-related data. |
+| DT-009 | Operational Logs | Operational or system logs used for monitoring and troubleshooting. |
+| DT-010 | Security Telemetry | Security telemetry such as alerts and detections. |
 
-### CH: Channel / チャネル
+### CH: Channel
 
 Categorizes how users access or interact with the AI. **Select one or more.**
 
-| Code | Label (EN) | Label (JA) | Definition |
-| --- | --- | --- | --- |
-| CH-001 | Web UI | Web UI | Use via a web user interface. |
-| CH-002 | API | API | Use via programmatic API integration. |
-| CH-003 | IDE Plugin | IDEプラグイン | Use via IDE/editor plugin. |
-| CH-004 | ChatOps | チャット連携 | Use via chat platforms (Slack/Teams) integrations. |
-| CH-005 | Desktop App | デスクトップアプリ | Use via native desktop application. |
-| CH-006 | Mobile App | モバイルアプリ | Use via native mobile application. |
-| CH-007 | Email | メール | Use via email interface or email-based automation. |
-| CH-008 | Command Line | CLI | Use via command-line interface. |
+| Code | Label | Definition |
+| --- | --- | --- |
+| CH-001 | Web UI | Use via a web user interface. |
+| CH-002 | API | Use via programmatic API integration. |
+| CH-003 | IDE Plugin | Use via IDE/editor plugin. |
+| CH-004 | ChatOps | Use via chat platforms (Slack/Teams) integrations. |
+| CH-005 | Desktop App | Use via native desktop application. |
+| CH-006 | Mobile App | Use via native mobile application. |
+| CH-007 | Email | Use via email interface or email-based automation. |
+| CH-008 | Command Line | Use via command-line interface. |
 
-### IM: Integration Mode / 統合形態
+### IM: Integration Mode
 
 Categorizes how AI is integrated into enterprise systems. **Select exactly one.**
 
-| Code | Label (EN) | Label (JA) | Definition |
-| --- | --- | --- | --- |
-| IM-001 | Standalone | 単体利用 | Used standalone without integration into enterprise systems. |
-| IM-002 | SaaS Integrated | SaaS連携 | SaaS application integrates AI features. |
-| IM-003 | Enterprise App Embedded | 社内アプリ組込み | AI embedded into internal enterprise applications. |
-| IM-004 | RPA/Workflow | ワークフロー/RPA | AI invoked within workflow automation or RPA. |
-| IM-005 | On-prem / Private | オンプレ/プライベート | AI hosted in private/on-prem environment. |
-| IM-006 | Managed Service | マネージド | Use via managed service with enterprise controls. |
-| IM-007 | Shadow / Unmanaged | シャドー/未管理 | Use outside of approved governance controls. |
+| Code | Label | Definition |
+| --- | --- | --- |
+| IM-001 | Standalone | Used standalone without integration into enterprise systems. |
+| IM-002 | SaaS Integrated | SaaS application integrates AI features. |
+| IM-003 | Enterprise App Embedded | AI embedded into internal enterprise applications. |
+| IM-004 | RPA/Workflow | AI invoked within workflow automation or RPA. |
+| IM-005 | On-prem / Private | AI hosted in private/on-prem environment. |
+| IM-006 | Managed Service | Use via managed service with enterprise controls. |
+| IM-007 | Shadow / Unmanaged | Use outside of approved governance controls. |
 
-### RS: Risk Surface / リスク面
+### RS: Risk Surface
 
 Categorizes the types of risks associated with the AI use. **Select one or more.**
 
-| Code | Label (EN) | Label (JA) | Definition |
-| --- | --- | --- | --- |
-| RS-001 | Data Leakage | 情報漏えい | Risk of unintended data disclosure. |
-| RS-002 | Security Abuse | 悪用/攻撃 | Risk that the system is abused for malicious purposes. |
-| RS-003 | Compliance Breach | 法令/規程違反 | Risk of violating laws/regulations/policies. |
-| RS-004 | IP Infringement | 知財侵害 | Risk of infringing copyright/patent/trade secrets. |
-| RS-005 | Model Misuse | モデル誤用 | Risk from inappropriate model use or over-reliance. |
-| RS-006 | Bias/Fairness | 偏り/公平性 | Risk of unfair or biased outcomes. |
-| RS-007 | Safety | 安全性 | Risk of harmful content or unsafe recommendations. |
-| RS-008 | Third-party Risk | 第三者リスク | Vendors, sub-processors, and model provider risks. |
+| Code | Label | Definition |
+| --- | --- | --- |
+| RS-001 | Data Leakage | Risk of unintended data disclosure. |
+| RS-002 | Security Abuse | Risk that the system is abused for malicious purposes. |
+| RS-003 | Compliance Breach | Risk of violating laws/regulations/policies. |
+| RS-004 | IP Infringement | Risk of infringing copyright/patent/trade secrets. |
+| RS-005 | Model Misuse | Risk from inappropriate model use or over-reliance. |
+| RS-006 | Bias/Fairness | Risk of unfair or biased outcomes. |
+| RS-007 | Safety | Risk of harmful content or unsafe recommendations. |
+| RS-008 | Third-party Risk | Vendors, sub-processors, and model provider risks. |
 
-### OB: Outcome / Benefit / 成果
+### OB: Outcome / Benefit
 
 Categorizes the expected outcomes or benefits from AI use. **Optional; select zero or more.**
 
-| Code | Label (EN) | Label (JA) | Definition |
-| --- | --- | --- | --- |
-| OB-001 | Efficiency | 効率化 | Improves time/cost efficiency. |
-| OB-002 | Quality | 品質向上 | Improves quality/accuracy of outputs. |
-| OB-003 | Revenue | 売上貢献 | Contributes to revenue growth. |
-| OB-004 | Risk Reduction | リスク低減 | Reduces operational/security/compliance risk. |
-| OB-005 | Innovation | 新規性/革新 | Enables new capabilities or innovations. |
-| OB-006 | Customer Satisfaction | 顧客満足 | Improves customer satisfaction. |
-| OB-007 | Employee Experience | 従業員体験 | Improves employee experience. |
+| Code | Label | Definition |
+| --- | --- | --- |
+| OB-001 | Efficiency | Improves time/cost efficiency. |
+| OB-002 | Quality | Improves quality/accuracy of outputs. |
+| OB-003 | Revenue | Contributes to revenue growth. |
+| OB-004 | Risk Reduction | Reduces operational/security/compliance risk. |
+| OB-005 | Innovation | Enables new capabilities or innovations. |
+| OB-006 | Customer Satisfaction | Improves customer satisfaction. |
+| OB-007 | Employee Experience | Improves employee experience. |
 
-### EV: Evidence Type / 証跡種別
+### EV: Evidence Type
 
 Categorizes the types of evidence required or collected. **Select one or more.**
 
-| Code | Label (EN) | Label (JA) | Definition |
-| --- | --- | --- | --- |
-| EV-001 | Request Record | 申請記録 | Evidence that an AI use/service was requested and described. |
-| EV-002 | Review/Approval Record | 審査/承認記録 | Evidence that a review/approval was performed. |
-| EV-003 | Exception Record | 例外記録 | Evidence that an exception was granted and tracked. |
-| EV-004 | Renewal/Re-evaluation Record | 更新/再評価記録 | Evidence that renewal or re-evaluation occurred. |
-| EV-005 | Change Log Entry | 変更管理記録 | Evidence of changes and their approvals. |
-| EV-006 | Integrity Proof | 完全性証明 | Evidence of integrity (hash, signature, WORM). |
-| EV-007 | Access Log | アクセスログ | Evidence of access control and access history. |
-| EV-008 | Model/Service Inventory | AI資産台帳 | Inventory record of models/services used. |
-| EV-009 | Risk Assessment | リスク評価 | Documented risk assessment for the use/service. |
-| EV-010 | Control Mapping | 統制マッピング | Control mapping evidence to external frameworks. |
-| EV-011 | Training/Guidance | 教育/ガイダンス | Evidence of training or guidance provided to users. |
-| EV-012 | Monitoring Evidence | 監視証跡 | Evidence of monitoring and ongoing oversight. |
-| EV-013 | Incident Record | インシデント記録 | Evidence of incident handling related to AI use. |
-| EV-014 | Third-party Assessment | 第三者評価 | Evidence of vendor or third-party assessment. |
-| EV-015 | Attestation/Sign-off | 宣誓/サインオフ | Formal attestation or sign-off record. |
+| Code | Label | Definition |
+| --- | --- | --- |
+| EV-001 | Request Record | Evidence that an AI use/service was requested and described. |
+| EV-002 | Review/Approval Record | Evidence that a review/approval was performed. |
+| EV-003 | Exception Record | Evidence that an exception was granted and tracked. |
+| EV-004 | Renewal/Re-evaluation Record | Evidence that renewal or re-evaluation occurred. |
+| EV-005 | Change Log Entry | Evidence of changes and their approvals. |
+| EV-006 | Integrity Proof | Evidence of integrity (hash, signature, WORM). |
+| EV-007 | Access Log | Evidence of access control and access history. |
+| EV-008 | Model/Service Inventory | Inventory record of models/services used. |
+| EV-009 | Risk Assessment | Documented risk assessment for the use/service. |
+| EV-010 | Control Mapping | Control mapping evidence to external frameworks. |
+| EV-011 | Training/Guidance | Evidence of training or guidance provided to users. |
+| EV-012 | Monitoring Evidence | Evidence of monitoring and ongoing oversight. |
+| EV-013 | Incident Record | Evidence of incident handling related to AI use. |
+| EV-014 | Third-party Assessment | Evidence of vendor or third-party assessment. |
+| EV-015 | Attestation/Sign-off | Formal attestation or sign-off record. |
 
 ## How to Use
 

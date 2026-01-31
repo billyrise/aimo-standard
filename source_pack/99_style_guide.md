@@ -56,6 +56,32 @@ This document defines terminology, translation rules, and style conventions for 
 
 ## 2. Translation Priority Rules
 
+### Rule 0: Language Separation (EN/JA Purity)
+
+**English canonical pages (`.md`) must be English-only.** Localization happens in per-locale pages (`.ja.md`, etc.).
+
+**Prohibited in EN pages:**
+
+- Japanese columns in tables (e.g., `Label (JA)`, `Name (JA)`)
+- Japanese text in parentheses (e.g., `(日本語: …)`)
+- Dual-language headings (e.g., `### FS: Functional Scope / 機能スコープ`)
+- Any hiragana, katakana, or kanji characters in prose
+
+**Allowed in EN pages:**
+
+- References to JA file paths (e.g., `taxonomy_ja.yaml`)
+- CSV column names that describe JA content (e.g., `label_ja`, `dimension_name_ja`)
+- SSOT CSV files may contain both EN and JA data; docs reference the CSV, not embed the values
+
+**Allowed in JA pages:**
+
+- English terms in parentheses (e.g., `機能スコープ (Functional Scope)`)
+- Technical terms kept in English (JSON, API, AIMO, etc.)
+
+**CI Enforcement:**
+
+The `lint_lang_purity.py` check (if enabled) validates that EN pages (`docs/**/*.md` excluding `*.ja.md`) contain no Japanese characters outside code blocks.
+
 ### Rule 1: English is Canonical
 
 All normative statements are authored in English first. Japanese translations are derivative.
