@@ -190,12 +190,13 @@ EV: EV-001, EV-002
 
 | 種別 | フォーマット | パス |
 | --- | --- | --- |
-| **SSOT** | CSV | `source_pack/03_taxonomy/dictionary_seed.csv` |
+| **SSOT** | CSV | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` |
 | 派生 | CSV | `source_pack/03_taxonomy/code_system.csv` |
 | 派生 | YAML | `source_pack/03_taxonomy/taxonomy_en.yaml` |
 | 派生 | YAML | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
+| 互換 | CSV | `source_pack/03_taxonomy/dictionary_seed.csv` |
 
-`source_pack/03_taxonomy/`内のSSOTファイル`dictionary_seed.csv`が正式なソースです。このドキュメントページは説明用です。
+`source_pack/03_taxonomy/`内のSSOTファイル`taxonomy_dictionary_v0.1.csv`が正式なソースです。このドキュメントページは説明用です。
 
 ## 関連ページ
 

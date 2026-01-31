@@ -190,12 +190,13 @@ Access the complete code definitions in machine-readable formats:
 
 | Type | Format | Path |
 | --- | --- | --- |
-| **SSOT** | CSV | `source_pack/03_taxonomy/dictionary_seed.csv` |
+| **SSOT** | CSV | `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` |
 | Derived | CSV | `source_pack/03_taxonomy/code_system.csv` |
 | Derived | YAML | `source_pack/03_taxonomy/taxonomy_en.yaml` |
 | Derived | YAML | `source_pack/03_taxonomy/taxonomy_ja.yaml` |
+| Compat | CSV | `source_pack/03_taxonomy/dictionary_seed.csv` |
 
-The SSOT file `dictionary_seed.csv` in `source_pack/03_taxonomy/` is the authoritative source. This documentation page is explanatory.
+The SSOT file `taxonomy_dictionary_v0.1.csv` in `source_pack/03_taxonomy/` is the authoritative source. This documentation page is explanatory.
 
 ## Related Pages
 
