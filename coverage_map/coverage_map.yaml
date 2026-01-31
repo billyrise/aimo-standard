@@ -1,0 +1,521 @@
+# AIMO Standard Coverage Map (SSOT)
+# Purpose: map external framework requirements to AIMO evidence/artifacts for explainability.
+# This mapping does NOT guarantee compliance or constitute legal advice.
+
+meta:
+  version: "0.1.0"
+  last_updated: "2026-01-31"
+  methodology: "Informative mapping only. Readers must verify against authoritative framework texts. AIMO supports explainability and evidence readiness; it does not guarantee conformity to any external standard or regulation."
+
+frameworks:
+  - id: iso42001
+    name: "ISO/IEC 42001 (AI management system)"
+    type: standard
+    notes: "High-level themes; verify against published standard."
+  - id: nist_ai_rmf
+    name: "NIST AI Risk Management Framework"
+    type: standard
+    notes: "Govern, Map, Measure, Manage; verify against NIST publication."
+  - id: eu_ai_act
+    name: "EU AI Act"
+    type: regulation
+    notes: "High-level documentation/record-keeping themes; not legal interpretation."
+  - id: iso27001
+    name: "ISO/IEC 27001/27002 (ISMS)"
+    type: standard
+    notes: "Change management, access control, logging, evidence integrity; verify against published standards."
+
+mappings:
+  # --- ISO/IEC 42001 (15–25) ---
+  - framework_id: iso42001
+    framework_ref: "4.1 Context of the organization"
+    framework_topic: "Understanding context and scope"
+    aimo_requirements: [standard/current/02-scope, standard/current/01-overview]
+    evidence_bundle_items: [Summary, Dictionary, EV records]
+    minimum_evidence_refs: [request, review]
+    artifacts: [schemas/jsonschema/aimo-standard.schema.json, templates/ev/]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "4.2 Interested parties"
+    framework_topic: "Stakeholder requirements"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [Summary, request, review]
+    minimum_evidence_refs: [request, review]
+    artifacts: [templates/ev/ev_template.md]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "5.1 Leadership and commitment"
+    framework_topic: "Top management commitment"
+    aimo_requirements: [standard/current/01-overview]
+    evidence_bundle_items: [Summary, review]
+    minimum_evidence_refs: [review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "5.2 Policy"
+    framework_topic: "AI policy and objectives"
+    aimo_requirements: [standard/current/02-scope, standard/current/03-taxonomy]
+    evidence_bundle_items: [Dictionary, EV, Summary]
+    minimum_evidence_refs: [request, review]
+    artifacts: [schemas/jsonschema/, templates/ev/]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "6.1 Actions to address risks and opportunities"
+    framework_topic: "Risk and opportunity treatment"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [request, review, exception]
+    minimum_evidence_refs: [request, review, exception]
+    artifacts: [templates/ev/ev_template.md]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "6.2 AI system objectives and planning"
+    framework_topic: "Objectives and planning for AI systems"
+    aimo_requirements: [standard/current/02-scope, standard/current/05-dictionary]
+    evidence_bundle_items: [EV, Dictionary, Summary]
+    minimum_evidence_refs: [request, review]
+    artifacts: [schemas/jsonschema/aimo-dictionary.schema.json]
+    validator_refs: schema_validate_dictionary
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "7.1 Resources"
+    framework_topic: "Resource allocation"
+    aimo_requirements: [standard/current/01-overview]
+    evidence_bundle_items: [Summary]
+    minimum_evidence_refs: [review]
+    artifacts: []
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "7.2 Competence"
+    framework_topic: "Competence and awareness"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [review, EV]
+    minimum_evidence_refs: [review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "7.3 Awareness"
+    framework_topic: "Awareness of policy and objectives"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [Summary, EV]
+    minimum_evidence_refs: [review]
+    artifacts: []
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "7.4 Documentation"
+    framework_topic: "Documented information"
+    aimo_requirements: [standard/current/06-ev-template, artifacts/evidence-bundle]
+    evidence_bundle_items: [EV, Dictionary, Summary, change_log]
+    minimum_evidence_refs: [request, review, change_log]
+    artifacts: [schemas/jsonschema/, templates/ev/, examples/]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "8.1 Operational planning and control"
+    framework_topic: "Operational controls"
+    aimo_requirements: [standard/current/06-ev-template]
+    evidence_bundle_items: [EV, request, review, exception]
+    minimum_evidence_refs: [request, review, exception]
+    artifacts: [templates/ev/, examples/evidence_bundle_minimal/]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "8.2 Determination of applicability"
+    framework_topic: "Applicability of controls"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [Dictionary, Summary]
+    minimum_evidence_refs: [request, review]
+    artifacts: [schemas/jsonschema/aimo-dictionary.schema.json]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "9.1 Monitoring and measurement"
+    framework_topic: "Monitoring and measurement of performance"
+    aimo_requirements: [standard/current/06-ev-template]
+    evidence_bundle_items: [EV, change_log]
+    minimum_evidence_refs: [change_log, integrity]
+    artifacts: [schemas/jsonschema/aimo-ev.schema.json]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "9.2 Internal audit"
+    framework_topic: "Internal audit"
+    aimo_requirements: [artifacts/evidence-bundle, artifacts/minimum-evidence]
+    evidence_bundle_items: [EV, request, review, Summary, change_log]
+    minimum_evidence_refs: [request, review, change_log]
+    artifacts: [examples/evidence_bundle_minimal/]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "9.3 Management review"
+    framework_topic: "Management review"
+    aimo_requirements: [standard/current/01-overview]
+    evidence_bundle_items: [Summary, review, renewal]
+    minimum_evidence_refs: [review, renewal]
+    artifacts: [templates/ev/ev_template.md]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "10.1 Improvement – nonconformity and corrective action"
+    framework_topic: "Corrective action"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [exception, renewal, change_log]
+    minimum_evidence_refs: [exception, renewal, change_log]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso42001
+    framework_ref: "10.2 Continual improvement"
+    framework_topic: "Continual improvement"
+    aimo_requirements: [standard/current/08-changelog]
+    evidence_bundle_items: [change_log, renewal]
+    minimum_evidence_refs: [change_log, renewal]
+    artifacts: [schemas/jsonschema/aimo-standard.schema.json]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+
+  # --- NIST AI RMF (15–25) ---
+  - framework_id: nist_ai_rmf
+    framework_ref: "Govern 1.1 – Policies"
+    framework_topic: "Governance policies"
+    aimo_requirements: [standard/current/02-scope, standard/current/03-taxonomy]
+    evidence_bundle_items: [Dictionary, Summary, review]
+    minimum_evidence_refs: [review]
+    artifacts: [schemas/jsonschema/aimo-dictionary.schema.json]
+    validator_refs: schema_validate_dictionary
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Govern 1.2 – Roles and responsibilities"
+    framework_topic: "Roles and responsibilities"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [request, review]
+    minimum_evidence_refs: [request, review]
+    artifacts: [templates/ev/ev_template.md]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Govern 2.1 – Accountability"
+    framework_topic: "Accountability"
+    aimo_requirements: [artifacts/evidence-bundle]
+    evidence_bundle_items: [EV, request, review, change_log]
+    minimum_evidence_refs: [request, review, change_log]
+    artifacts: [examples/evidence_bundle_minimal/]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Govern 3.1 – Risk management"
+    framework_topic: "Risk management"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [request, review, exception]
+    minimum_evidence_refs: [request, review, exception]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Map 1.1 – Context mapping"
+    framework_topic: "Context and scope mapping"
+    aimo_requirements: [standard/current/02-scope, standard/current/05-dictionary]
+    evidence_bundle_items: [Dictionary, Summary]
+    minimum_evidence_refs: [request]
+    artifacts: [schemas/jsonschema/aimo-dictionary.schema.json]
+    validator_refs: schema_validate_dictionary
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Map 2.1 – Data and documentation"
+    framework_topic: "Data and documentation"
+    aimo_requirements: [standard/current/06-ev-template]
+    evidence_bundle_items: [EV, Dictionary, change_log]
+    minimum_evidence_refs: [change_log]
+    artifacts: [schemas/jsonschema/aimo-ev.schema.json]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Measure 1.1 – Performance and impact"
+    framework_topic: "Performance and impact measurement"
+    aimo_requirements: [standard/current/06-ev-template]
+    evidence_bundle_items: [EV]
+    minimum_evidence_refs: []
+    artifacts: [schemas/jsonschema/aimo-ev.schema.json]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Measure 2.1 – Monitoring"
+    framework_topic: "Monitoring"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [EV, change_log]
+    minimum_evidence_refs: [change_log, integrity]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Manage 1.1 – Allocation of resources"
+    framework_topic: "Resource allocation"
+    aimo_requirements: [standard/current/01-overview]
+    evidence_bundle_items: [Summary, review]
+    minimum_evidence_refs: [review]
+    artifacts: []
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Manage 2.1 – Incidents and responses"
+    framework_topic: "Incident and response"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [exception, renewal, change_log]
+    minimum_evidence_refs: [exception, renewal, change_log]
+    artifacts: [templates/ev/ev_template.md]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Manage 3.1 – Change management"
+    framework_topic: "Change management"
+    aimo_requirements: [artifacts/evidence-bundle]
+    evidence_bundle_items: [change_log]
+    minimum_evidence_refs: [change_log]
+    artifacts: [schemas/jsonschema/aimo-standard.schema.json]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Manage 4.1 – Review and update"
+    framework_topic: "Review and update"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [renewal, review]
+    minimum_evidence_refs: [review, renewal]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Govern 4.1 – Culture"
+    framework_topic: "Organizational culture"
+    aimo_requirements: [standard/current/01-overview]
+    evidence_bundle_items: [Summary, review]
+    minimum_evidence_refs: [review]
+    artifacts: []
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Map 3.1 – Data governance"
+    framework_topic: "Data governance"
+    aimo_requirements: [standard/current/05-dictionary]
+    evidence_bundle_items: [Dictionary, EV]
+    minimum_evidence_refs: []
+    artifacts: [schemas/jsonschema/aimo-dictionary.schema.json]
+    validator_refs: schema_validate_dictionary
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Measure 3.1 – Testing and validation"
+    framework_topic: "Testing and validation"
+    aimo_requirements: [standard/current/07-validator]
+    evidence_bundle_items: [EV]
+    minimum_evidence_refs: []
+    artifacts: [validator/rules/, validator/src/]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against NIST publication."
+  - framework_id: nist_ai_rmf
+    framework_ref: "Manage 5.1 – Communication"
+    framework_topic: "Communication and reporting"
+    aimo_requirements: [artifacts/evidence-bundle]
+    evidence_bundle_items: [Summary, change_log]
+    minimum_evidence_refs: [change_log]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against NIST publication."
+
+  # --- EU AI Act (10–20) ---
+  - framework_id: eu_ai_act
+    framework_ref: "Art 11 – Documentation (high-risk)"
+    framework_topic: "Technical documentation"
+    aimo_requirements: [standard/current/06-ev-template, artifacts/evidence-bundle]
+    evidence_bundle_items: [EV, Dictionary, Summary]
+    minimum_evidence_refs: [request, review]
+    artifacts: [schemas/jsonschema/, templates/ev/]
+    validator_refs: schema_validate_ev
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 12 – Record-keeping"
+    framework_topic: "Record-keeping"
+    aimo_requirements: [artifacts/evidence-bundle, artifacts/minimum-evidence]
+    evidence_bundle_items: [EV, change_log, request, review]
+    minimum_evidence_refs: [request, review, change_log]
+    artifacts: [examples/evidence_bundle_minimal/]
+    validator_refs: schema_validate_ev
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 13 – Transparency (user information)"
+    framework_topic: "Transparency and user information"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [Summary, EV]
+    minimum_evidence_refs: [review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 14 – Human oversight"
+    framework_topic: "Human oversight"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [review, exception]
+    minimum_evidence_refs: [review, exception]
+    artifacts: [templates/ev/ev_template.md]
+    validator_refs: n/a
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 17 – Risk management (high-risk)"
+    framework_topic: "Risk management system"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [request, review, exception, renewal]
+    minimum_evidence_refs: [request, review, exception, renewal]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 29 – Documentation (general-purpose AI)"
+    framework_topic: "Documentation for GPAI"
+    aimo_requirements: [standard/current/06-ev-template]
+    evidence_bundle_items: [EV, Dictionary, Summary]
+    minimum_evidence_refs: [request, review]
+    artifacts: [schemas/jsonschema/]
+    validator_refs: schema_validate_ev
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Recitals – Accountability"
+    framework_topic: "Accountability and traceability"
+    aimo_requirements: [artifacts/evidence-bundle]
+    evidence_bundle_items: [EV, request, review, change_log]
+    minimum_evidence_refs: [request, review, change_log]
+    artifacts: [examples/evidence_bundle_minimal/]
+    validator_refs: schema_validate_ev
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 9 – Risk management (obligations)"
+    framework_topic: "Risk management obligations"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [request, review, exception]
+    minimum_evidence_refs: [request, review, exception]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 10 – Data governance"
+    framework_topic: "Data and data governance"
+    aimo_requirements: [standard/current/05-dictionary]
+    evidence_bundle_items: [Dictionary, EV]
+    minimum_evidence_refs: []
+    artifacts: [schemas/jsonschema/]
+    validator_refs: schema_validate_dictionary
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 26 – Transparency (limited risk)"
+    framework_topic: "Transparency for limited-risk AI"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [Summary, EV]
+    minimum_evidence_refs: [review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 52 – Transparency (deployer)"
+    framework_topic: "Transparency obligations for deployers"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [EV, Summary]
+    minimum_evidence_refs: [review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "High-level only; not legal advice. Verify against official text."
+
+  # --- ISO/IEC 27001/27002 (10–15) ---
+  - framework_id: iso27001
+    framework_ref: "A.5.24 – Information security in project management"
+    framework_topic: "Security in projects"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [request, review]
+    minimum_evidence_refs: [request, review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.5.29 – Information security during disruption"
+    framework_topic: "Security during disruption"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [exception, renewal]
+    minimum_evidence_refs: [exception, renewal]
+    artifacts: [templates/ev/ev_template.md]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.5.30 – ICT readiness for business continuity"
+    framework_topic: "ICT readiness"
+    aimo_requirements: [standard/current/01-overview]
+    evidence_bundle_items: [Summary]
+    minimum_evidence_refs: [integrity]
+    artifacts: []
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.8.1 – Inventory of assets"
+    framework_topic: "Asset inventory"
+    aimo_requirements: [standard/current/05-dictionary]
+    evidence_bundle_items: [Dictionary, EV]
+    minimum_evidence_refs: []
+    artifacts: [schemas/jsonschema/aimo-dictionary.schema.json]
+    validator_refs: schema_validate_dictionary
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.8.2 – Information classification"
+    framework_topic: "Information classification"
+    aimo_requirements: [standard/current/03-taxonomy]
+    evidence_bundle_items: [Dictionary]
+    minimum_evidence_refs: [review]
+    artifacts: [schemas/jsonschema/aimo-dictionary.schema.json]
+    validator_refs: schema_validate_dictionary
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.8.3 – Access control"
+    framework_topic: "Access control"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: []
+    minimum_evidence_refs: [integrity]
+    artifacts: []
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.8.15 – Logging"
+    framework_topic: "Logging"
+    aimo_requirements: [standard/current/06-ev-template]
+    evidence_bundle_items: [EV, change_log]
+    minimum_evidence_refs: [change_log]
+    artifacts: [schemas/jsonschema/aimo-ev.schema.json]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.8.16 – Monitoring activities"
+    framework_topic: "Monitoring"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [EV, change_log]
+    minimum_evidence_refs: [change_log, integrity]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.8.32 – Change management"
+    framework_topic: "Change management"
+    aimo_requirements: [artifacts/evidence-bundle]
+    evidence_bundle_items: [change_log]
+    minimum_evidence_refs: [change_log]
+    artifacts: [schemas/jsonschema/aimo-standard.schema.json]
+    validator_refs: n/a
+    notes: "Informative mapping; verify against official text."
+  - framework_id: iso27001
+    framework_ref: "A.8.33 – Test information"
+    framework_topic: "Test and validation"
+    aimo_requirements: [validator/index]
+    evidence_bundle_items: [EV]
+    minimum_evidence_refs: []
+    artifacts: [validator/rules/, validator/src/]
+    validator_refs: schema_validate_ev
+    notes: "Informative mapping; verify against official text."
