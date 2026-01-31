@@ -65,6 +65,16 @@ jobs:
           echo "=== MkDocs Build (strict mode) ==="
           python -m mkdocs build --strict
 
+      - name: Verify HTML (no *_ja columns in EN pages)
+        run: |
+          echo "=== HTML Verification ==="
+          # Verify EN dictionary page does not contain language-specific column names
+          if grep -rE "dimension_name_ja|label_ja|definition_ja" site/standard/current/05-dictionary/ 2>/dev/null; then
+            echo "ERROR: EN dictionary page contains *_ja column references"
+            exit 1
+          fi
+          echo "HTML verification passed: no *_ja columns in EN pages"
+
       - name: Summary
         if: always()
         run: |

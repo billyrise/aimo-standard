@@ -35,12 +35,24 @@ jobs:
           python tooling/taxonomy/build_i18n_taxonomy.py --check
           pytest -q
 
+      - name: Build and verify HTML (no *_ja columns in EN pages)
+        run: |
+          python -m mkdocs build --strict
+          # Verify EN dictionary page does not contain language-specific column names
+          if grep -rE "dimension_name_ja|label_ja|definition_ja" site/standard/current/05-dictionary/ 2>/dev/null; then
+            echo "ERROR: EN dictionary page contains *_ja column references"
+            exit 1
+          fi
+          echo "HTML verification passed: no *_ja columns in EN pages"
+
       - name: Configure git user
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy current to gh-pages (dev -> latest alias)
+      # Deploy main branch as 'dev' with 'latest' as alias
+      # This keeps /dev/ and /latest/ always in sync with the latest main
+      - name: Deploy current to gh-pages (dev + latest in sync)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

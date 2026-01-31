@@ -61,17 +61,31 @@ jobs:
       - name: Build docs (mkdocs)
         run: python -m mkdocs build --strict
 
+      - name: Verify HTML (no *_ja columns in EN pages)
+        run: |
+          # Verify EN dictionary page does not contain language-specific column names
+          if grep -rE "dimension_name_ja|label_ja|definition_ja" site/standard/current/05-dictionary/ 2>/dev/null; then
+            echo "ERROR: EN dictionary page contains *_ja column references"
+            exit 1
+          fi
+          echo "HTML verification passed: no *_ja columns in EN pages"
+
       - name: Configure git user
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy version snapshot to gh-pages (VER -> latest alias)
+      - name: Deploy version snapshot to gh-pages (VER -> dev/latest aliases)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch origin gh-pages:gh-pages || true
-          mike deploy "${{ steps.v.outputs.ver }}" latest --update-aliases --push
+          # Deploy versioned snapshot (e.g., 0.1.0)
+          mike deploy "${{ steps.v.outputs.ver }}" --push
+          # Update dev alias to point to this version
+          mike deploy dev --update-aliases --push
+          # Update latest alias to point to dev (keeps dev and latest in sync)
+          mike alias dev latest --update-aliases --push
           mike set-default latest --push
 
       - name: Ensure CNAME for custom domain (standard.aimoaas.com)
