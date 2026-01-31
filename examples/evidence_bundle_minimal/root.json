@@ -1,0 +1,40 @@
+{
+  "version": "v0.1.0",
+  "dictionary": {
+    "entries": [
+      { "key": "REQ-001", "label": "Request", "description": "AI use request" },
+      { "key": "EV-001", "label": "Evidence", "description": "Use evidence record" }
+    ]
+  },
+  "evidence": [
+    {
+      "id": "EV-001",
+      "timestamp": "2026-01-15T10:00:00Z",
+      "source": "example-system",
+      "summary": "Minimal evidence record for Evidence Bundle example.",
+      "tags": ["example", "evidence-bundle"]
+    }
+  ],
+  "request": {
+    "id": "REQ-001",
+    "timestamp": "2026-01-10T09:00:00Z",
+    "actor": "requester",
+    "scope": "Example AI use",
+    "rationale": "Minimal bundle example"
+  },
+  "review": {
+    "id": "REV-001",
+    "timestamp": "2026-01-12T14:00:00Z",
+    "actor": "reviewer",
+    "decision": "approved",
+    "rationale": "Within policy",
+    "references": ["REQ-001"]
+  },
+  "change_log": {
+    "id": "CHG-001",
+    "timestamp": "2026-01-15T10:00:00Z",
+    "actor": "system",
+    "change_description": "Initial bundle creation",
+    "references": ["EV-001"]
+  }
+}
