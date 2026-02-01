@@ -93,6 +93,9 @@ See [Responsibility Boundary](responsibility-boundary.md) for details on scope, 
 
 When receiving an evidence submission, auditors should verify integrity and structure using the following steps:
 
+!!! success "Build Provenance Available"
+    Starting from v0.1.6, all release assets include cryptographically signed build attestations. See [Verification Procedure](../standard/versions/index.md#4-verify-build-provenance-attestation) for attestation verification steps.
+
 ### Step 1: Verify checksums (SHA-256)
 
 ```bash
