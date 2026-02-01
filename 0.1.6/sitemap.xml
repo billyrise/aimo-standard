@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/artifacts/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/artifacts/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/artifacts/evidence-bundle/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/artifacts/evidence-bundle/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/artifacts/evidence-bundle/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/artifacts/minimum-evidence/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/artifacts/minimum-evidence/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/conformance/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/conformance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/conformance/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/contributing/localization/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/contributing/localization/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/contributing/localization/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/coverage-map/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/coverage-map/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/coverage-map/eu-ai-act/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/coverage-map/eu-ai-act/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/coverage-map/eu-ai-act/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/coverage-map/isms/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/coverage-map/isms/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/coverage-map/isms/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/coverage-map/iso-42001/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/coverage-map/iso-42001/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/coverage-map/iso-42001/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/coverage-map/methodology/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/coverage-map/methodology/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/coverage-map/methodology/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/coverage-map/nist-ai-rmf/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/coverage-map/nist-ai-rmf/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/coverage-map/nist-ai-rmf/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/examples/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/examples/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/examples/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/cite/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/cite/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/cite/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/contributing/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/contributing/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/license/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/license/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/license/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/responsibility-boundary/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/responsibility-boundary/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/responsibility-boundary/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/security/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/security/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/security/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/seo-canonical-policy/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/seo-canonical-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/seo-canonical-policy/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/trademarks/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/trademarks/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/trademarks/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/governance/trust-package/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/governance/trust-package/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/governance/trust-package/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/releases/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/releases/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/releases/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/01-overview/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/01-overview/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/01-overview/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/02-scope/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/02-scope/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/02-scope/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/03-taxonomy/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/03-taxonomy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/03-taxonomy/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/04-codes/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/04-codes/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/04-codes/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/05-dictionary/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/05-dictionary/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/05-dictionary/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/06-ev-template/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/06-ev-template/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/06-ev-template/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/07-validator/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/07-validator/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/07-validator/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/current/08-changelog/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/current/08-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/current/08-changelog/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/standard/versions/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/standard/versions/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/standard/versions/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/validator/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/validator/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja/validator/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/artifacts/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/artifacts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/artifacts/evidence-bundle/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/artifacts/evidence-bundle/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6artifacts/evidence-bundle/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/artifacts/minimum-evidence/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/artifacts/minimum-evidence/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/conformance/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/conformance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6conformance/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/contributing/localization/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/contributing/localization/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6contributing/localization/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/coverage-map/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6coverage-map/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/coverage-map/eu-ai-act/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/coverage-map/eu-ai-act/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6coverage-map/eu-ai-act/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/coverage-map/isms/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/coverage-map/isms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6coverage-map/isms/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/coverage-map/iso-42001/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/coverage-map/iso-42001/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6coverage-map/iso-42001/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/coverage-map/methodology/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/coverage-map/methodology/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6coverage-map/methodology/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/coverage-map/nist-ai-rmf/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/coverage-map/nist-ai-rmf/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6coverage-map/nist-ai-rmf/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/examples/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/examples/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6examples/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/cite/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/cite/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/cite/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/contributing/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/contributing/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/license/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/license/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/license/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/responsibility-boundary/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/responsibility-boundary/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/responsibility-boundary/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/security/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/security/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/security/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/seo-canonical-policy/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/seo-canonical-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/seo-canonical-policy/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/trademarks/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/trademarks/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/trademarks/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/governance/trust-package/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/governance/trust-package/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6governance/trust-package/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/releases/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/releases/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6releases/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/01-overview/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/01-overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/01-overview/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/02-scope/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/02-scope/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/02-scope/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/03-taxonomy/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/03-taxonomy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/03-taxonomy/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/04-codes/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/04-codes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/04-codes/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/05-dictionary/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/05-dictionary/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/05-dictionary/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/06-ev-template/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/06-ev-template/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/06-ev-template/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/07-validator/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/07-validator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/07-validator/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/current/08-changelog/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/current/08-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/current/08-changelog/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/standard/versions/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/standard/versions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6standard/versions/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/0.1.6/ja/validator/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6/ja/validator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6validator/"/>
+    </url>
+</urlset>
