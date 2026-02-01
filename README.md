@@ -72,6 +72,16 @@ python tooling/checks/lint_schema.py
 - **Deployment:** Production deployment is active
 - **Note:** GitHub Pages (`https://billyrise.github.io/aimo-standard/`) serves as a temporary backup/mirror
 
-## License & Trademarks
-- License: see LICENSE.txt and NOTICE.txt
-- Trademarks: see TRADEMARKS.md
+## Governance & Policies
+
+| Resource | Description |
+| -------- | ----------- |
+| [Governance (Website)](https://standard.aimoaas.com/latest/governance/) | Full governance documentation |
+| [Trust Package](https://standard.aimoaas.com/latest/governance/trust-package/) | Auditor-ready materials |
+| [SECURITY.md](SECURITY.md) | Security policy and vulnerability reporting |
+| [CITATION.cff](CITATION.cff) | How to cite AIMO Standard |
+| [LICENSE.txt](LICENSE.txt) | Apache-2.0 license |
+| [NOTICE.txt](NOTICE.txt) | Attribution notice |
+| [TRADEMARKS.md](TRADEMARKS.md) | Trademark usage guidelines |
+| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community guidelines |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |

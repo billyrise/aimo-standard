@@ -17,3 +17,6 @@ build/
 
 # Test artifacts
 .pytest_cache/
+
+# Local Cursor rules (not shared)
+.cursor/rules/03-docs-conventions.md
