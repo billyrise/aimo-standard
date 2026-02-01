@@ -1,5 +1,9 @@
 name: release
 
+# Release workflow - deploys versioned docs and updates /latest/ alias
+# IMPORTANT: This is the ONLY workflow that updates /latest/
+# See VERSIONING.md for the complete versioning policy
+
 on:
   push:
     tags:
@@ -28,6 +32,43 @@ jobs:
           VER="${TAG#v}"
           echo "tag=$TAG" >> $GITHUB_OUTPUT
           echo "ver=$VER" >> $GITHUB_OUTPUT
+          echo ""
+          echo "=== Release Version ==="
+          echo "Tag: $TAG"
+          echo "Version (directory): $VER"
+
+      # CRITICAL: Check that this version doesn't already exist
+      # Never rewrite a released version - this would violate immutability
+      - name: Check version does not already exist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          
+          echo "=== Checking for existing version $VERSION ==="
+          
+          # Try to fetch gh-pages branch
+          git fetch origin gh-pages:gh-pages 2>/dev/null || {
+            echo "No gh-pages branch exists yet - OK to proceed"
+            exit 0
+          }
+          
+          # Check if version directory already exists
+          if git ls-tree --name-only gh-pages | grep -q "^${VERSION}$"; then
+            echo ""
+            echo "ERROR: Version $VERSION already exists in gh-pages!"
+            echo ""
+            echo "This would violate the immutability policy."
+            echo "Released versions MUST NOT be overwritten."
+            echo ""
+            echo "If you need to fix something, release a new PATCH version instead."
+            echo "See VERSIONING.md for details."
+            echo ""
+            exit 1
+          fi
+          
+          echo "Version $VERSION does not exist - OK to proceed"
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -91,18 +132,49 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy version snapshot to gh-pages (VER -> latest/dev aliases)
+      # Deploy versioned snapshot and update /latest/ alias
+      # IMPORTANT: This is the ONLY place that updates /latest/
+      # dev is handled separately by deploy-dev.yml
+      - name: Deploy version snapshot and update latest alias
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          
+          echo "=== Deploying version $VERSION ==="
+          echo ""
+          
           git fetch origin gh-pages:gh-pages || true
-          # Remove existing 'dev' and 'latest' versions if they exist (to allow as aliases)
-          mike delete dev --push 2>/dev/null || true
-          mike delete latest --push 2>/dev/null || true
-          # Deploy versioned snapshot (e.g., 0.1.0) with latest and dev as aliases
-          # This ensures language switcher links use /latest/ (not /dev/)
-          mike deploy "${{ steps.v.outputs.ver }}" latest dev --update-aliases --push
-          mike set-default latest --push
+          
+          # Deploy versioned snapshot with latest as alias
+          # Using --update-aliases ensures latest points to this version
+          # Note: dev is NOT an alias here - it's deployed separately by deploy-dev.yml
+          echo "Step 1: Deploy $VERSION with latest alias"
+          mike deploy --push --update-aliases "$VERSION" latest
+          
+          echo ""
+          echo "Step 2: Set latest as default version"
+          mike set-default --push latest
+          
+          echo ""
+          echo "=== Deployment complete ==="
+          echo "Version deployed: /$VERSION/"
+          echo "latest alias now points to: /$VERSION/"
+          echo ""
+          echo "=== Current mike versions ==="
+          mike list
+          
+          echo ""
+          echo "=== Verification ==="
+          # Verify the alias is correct
+          ALIASES=$(mike list | grep "$VERSION")
+          if echo "$ALIASES" | grep -q "latest"; then
+            echo "✓ Confirmed: latest -> $VERSION"
+          else
+            echo "ERROR: latest alias not pointing to $VERSION!"
+            exit 1
+          fi
 
       - name: Generate legacy URL redirects
         env:

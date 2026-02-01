@@ -74,6 +74,11 @@ jobs:
           echo "=== Baseline Audit ==="
           python tooling/audit/baseline_audit.py --check
 
+      - name: Version Alias Policy Check
+        run: |
+          echo "=== Version Alias Policy Check ==="
+          python tooling/checks/check_version_alias.py --check
+
       - name: Run Tests
         run: pytest -q
 

@@ -1,6 +1,6 @@
 # Baseline Audit Report
 
-**Generated:** 2026-02-01 10:52:17
+**Generated:** 2026-02-01 11:18:35
 
 ## Summary
 
@@ -12,6 +12,7 @@
 | Unreferenced Files | 1 | 0 | 0 |
 | Redirect Targets | 1 | 0 | 0 |
 | Release Requirements | 1 | 0 | 0 |
+| Versioning Policy | 3 | 0 | 0 |
 
 **Status: ALL CHECKS PASSED** ✓
 
@@ -64,3 +65,13 @@
 | File | Message | Recommendation |
 |------|---------|----------------|
 | `.github/workflows/release.yml` | Release workflow properly configured for required assets | - |
+
+### Versioning Policy
+
+#### OK
+
+| File | Message | Recommendation |
+|------|---------|----------------|
+| `mkdocs.yml` | alias_type: redirect is configured | - |
+| `deploy-dev.yml` | deploy-dev.yml correctly deploys only to dev | - |
+| `docs_current.yml` | Old workflow removed | - |

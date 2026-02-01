@@ -40,19 +40,38 @@ site_url: https://standard.aimoaas.com/
 
 ### バージョン管理とCanonical
 
-AIMO Standardはドキュメントのバージョン管理に[mike](https://github.com/jimporter/mike)を使用しています：
+AIMO Standardはドキュメントのバージョン管理に[mike](https://github.com/jimporter/mike)を `alias_type: redirect` で使用しています：
 
-| バージョン | URLパターン | Canonical状態 |
-|-----------|-------------|---------------|
-| `latest`（エイリアス） | `https://standard.aimoaas.com/latest/` | 現行安定版の正規 |
-| `dev` | `https://standard.aimoaas.com/dev/` | 開発版の正規（noindex推奨） |
-| バージョン指定（例：`1.0.0`） | `https://standard.aimoaas.com/1.0.0/` | 特定バージョンの正規 |
+| バージョン | URLパターン | Canonical状態 | インデックス可 |
+|-----------|-------------|---------------|----------------|
+| バージョン指定（例：`0.1.6`） | `https://standard.aimoaas.com/0.1.6/` | 特定バージョンの正規 | はい |
+| `latest`（エイリアス） | `https://standard.aimoaas.com/latest/` | 現行リリースへ**リダイレクト** | はい（ターゲット経由） |
+| `dev` | `https://standard.aimoaas.com/dev/` | プレビューのみ | **いいえ**（noindex強制） |
 
-**重要事項：**
+**重要な区別：**
 
-- `latest`は最新の安定リリースを指すエイリアスです。
-- `dev`は`main`ブランチを反映し、変更される可能性があります。正式な監査では引用を避けてください。
-- バージョン指定スナップショットは不変であり、監査引用に安全です。
+| 側面 | `/X.Y.Z/` | `/latest/` | `/dev/` |
+|------|-----------|------------|---------|
+| 内容 | 固定スナップショット | `/X.Y.Z/`へリダイレクト | mainブランチプレビュー |
+| 可変性 | 不変 | リリース時にポインタ更新 | 継続的 |
+| 監査用 | **はい（推奨）** | はい（固定に解決） | **絶対不可** |
+| SEO | インデックス対象 | ターゲット経由で対象 | noindex |
+
+**alias_type: redirect の動作：**
+
+ファイルをコピーする代わりに、`/latest/` にはリダイレクトページが含まれます：
+
+```html
+<!-- /latest/index.html -->
+<meta http-equiv="refresh" content="0; url=../0.1.6/">
+<link rel="canonical" href="https://standard.aimoaas.com/0.1.6/">
+```
+
+これにより：
+
+1. **コンテンツのドリフトなし** — `/latest/` は指すリリースと乖離できません。
+2. **重複コンテンツなし** — 検索エンジンは1つの正規ソースを認識。
+3. **アトミックな更新** — エイリアスの変更で全ページを一度に更新。
 
 !!! info "Git タグ vs. サイトパス"
     Git リリースタグは `v` プレフィックスを使用します（例：`v0.1.6`）が、サイトパスでは `v` を省略します（例：`/0.1.6/`）。これは mike などのドキュメントバージョン管理ツールの標準的な方法です。
@@ -120,15 +139,34 @@ Sitemap: https://standard.aimoaas.com/sitemap.xml
 - すべての本番URL
 - 各言語の`hreflang`代替
 
-## GitHub Pages の noindex 設定
+## noindex 設定
 
-GitHub Pages（ミラーサイト）へのデプロイ時、デプロイワークフローは検索エンジンがミラーをインデックスしないように`noindex`メタタグを追加する必要があります：
+### `/dev/`（プレビュー）— 必須 noindex
+
+`/dev/` バージョンには未リリースのコンテンツが含まれており、以下を防ぐために noindex が必須です：
+
+- 検索エンジンが不安定なコンテンツをインデックスすること
+- ユーザーが検索経由で `/dev/` を見つけて監査で引用すること
+- リリース済みと未リリースのコンテンツの混乱
+
+**実装：**
+
+`deploy-dev.yml` ワークフローがテーマオーバーライド経由で `/dev/` のすべてのページに noindex メタタグを挿入します：
+
+```html
+<!-- /dev/ ページのみに挿入 -->
+<meta name="robots" content="noindex, nofollow">
+```
+
+### GitHub Pages ミラー — noindex
+
+GitHub Pages（`billyrise.github.io` のミラーサイト）へのデプロイ時、重複インデックスを防ぐためにすべてのページに noindex を設定する必要があります：
 
 ```html
 <meta name="robots" content="noindex, nofollow">
 ```
 
-これにより、検索エンジンは常に本番のcanonical URLを優先します。
+これにより、検索エンジンは常に `standard.aimoaas.com` の本番 canonical URL を優先します。
 
 ## 検証方法
 

@@ -1,4 +1,7 @@
-name: deploy-docs
+name: deploy-dev
+
+# Deploy main branch to /dev/ (preview only)
+# IMPORTANT: This workflow NEVER updates /latest/ - only the release workflow does that
 
 on:
   workflow_run:
@@ -10,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  deploy:
+  deploy-dev:
     # Only deploy if quality-gate succeeded and it was a push (not PR)
     if: >
       github.event.workflow_run.conclusion == 'success' &&
@@ -31,6 +34,18 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt
 
+      # Set is_dev_deploy flag for noindex meta tag injection
+      - name: Configure for dev deployment (noindex)
+        run: |
+          echo "Building for dev deployment - noindex will be applied"
+          # Add is_dev_deploy to mkdocs.yml extra section for template access
+          cat >> mkdocs.yml << 'EOF'
+          
+          # DEV DEPLOYMENT FLAG (auto-injected by deploy-dev.yml)
+          # This triggers noindex meta tag in theme override
+            is_dev_deploy: true
+          EOF
+
       - name: Build documentation
         run: python -m mkdocs build --strict
 
@@ -39,18 +54,32 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # Deploy main branch as 'latest' with 'dev' as alias
-      # This ensures language switcher links use /latest/ (not /dev/)
-      - name: Deploy current to gh-pages (latest + dev in sync)
+      # Deploy ONLY to dev - NEVER touch latest
+      # dev is explicitly marked as preview/unreleased content
+      - name: Deploy to dev (preview only)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch origin gh-pages:gh-pages || true
-          # Remove existing 'dev' version if it exists (to convert to alias)
-          mike delete dev --push 2>/dev/null || true
-          # Deploy as 'latest' (primary) with 'dev' as alias
-          mike deploy latest dev --update-aliases --push
-          mike set-default latest --push
+          
+          echo "=== Deploying to /dev/ (preview) ==="
+          echo "IMPORTANT: This deployment does NOT affect /latest/"
+          echo ""
+          
+          # Deploy as 'dev' only - no aliases, no updating latest
+          # The --title flag sets the display name in the version selector
+          mike deploy --push dev --title "dev (preview)"
+          
+          echo ""
+          echo "=== Deployment complete ==="
+          echo "Deployed to: /dev/"
+          echo ""
+          echo "=== Current mike versions ==="
+          mike list
+          
+          echo ""
+          echo "NOTE: /latest/ was NOT modified by this workflow."
+          echo "To update /latest/, push a release tag (v*.*.*)."
 
       - name: Generate legacy URL redirects
         env:
