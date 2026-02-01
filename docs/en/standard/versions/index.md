@@ -199,13 +199,37 @@ When upgrading between versions with breaking changes:
 
 Each release creates a frozen documentation snapshot accessible at:
 
-- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.1.0/`)
+- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.1.6/`)
 - GitHub Pages: `https://billyrise.github.io/aimo-standard/{version}/`
 
-The `latest` alias always points to the most recent release.
+### URL Types and Their Meaning
+
+| URL Pattern | Description | For Audit Citations? |
+|-------------|-------------|---------------------|
+| `/X.Y.Z/` (e.g., `/0.1.6/`) | **Frozen release** — immutable snapshot | **Yes** (preferred) |
+| `/latest/` | **Alias** — redirects to most recent release | Yes (resolves to `/X.Y.Z/`) |
+| `/dev/` | **Preview** — unreleased main branch content | **No** (not for citations) |
+
+!!! warning "Understanding `/latest/` vs `/dev/`"
+    - **`/latest/`** is an alias (redirect) to the most recent **released** version. It is safe for citations as it resolves to a frozen snapshot.
+    - **`/dev/`** reflects the current `main` branch and may contain **unreleased changes**. Never cite `/dev/` in audit reports.
+
+### FAQ
+
+??? question "Why is `/latest/` not a version number?"
+    `/latest/` is a convenience alias that always redirects to the most recent stable release (e.g., `/0.1.6/`). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.
+
+??? question "Which URL should auditors cite?"
+    - **Formal audits (immutability required)**: Use `/X.Y.Z/` (e.g., `https://standard.aimoaas.com/0.1.6/standard/current/`)
+    - **General references**: `/latest/` is acceptable as it redirects to the current release
+    - **Never cite**: `/dev/` (unreleased, subject to change)
+
+??? question "What if `/latest/` shows different content than expected?"
+    This would be a deployment bug. If you suspect `/latest/` differs from the most recent [GitHub Release](https://github.com/billyrise/aimo-standard/releases), please [report an issue](https://github.com/billyrise/aimo-standard/issues). The `/latest/` alias should always redirect to the most recent tagged release.
 
 ## Resources
 
 - **[Releases Hub](../../releases/index.md)** — Submission preparation, auditor verification, non-overclaim statement
 - **[Trust Package](../../governance/trust-package.md)** — Auditor-ready assurance materials
 - **[Changelog (detailed)](../current/08-changelog.md)** — Full change history with deprecation tracking
+- **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Complete versioning policy

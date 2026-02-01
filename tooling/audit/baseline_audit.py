@@ -45,6 +45,8 @@ VALIDATOR_DIR = ROOT / "validator"
 REPORTS_DIR = ROOT / "REPORTS"
 MKDOCS_YML = ROOT / "mkdocs.yml"
 RELEASE_WORKFLOW = ROOT / ".github" / "workflows" / "release.yml"
+DEPLOY_DEV_WORKFLOW = ROOT / ".github" / "workflows" / "deploy-dev.yml"
+DOCS_CURRENT_WORKFLOW = ROOT / ".github" / "workflows" / "docs_current.yml"  # Should not exist
 
 
 class AuditItem(NamedTuple):
@@ -549,6 +551,95 @@ def check_redirect_targets() -> list[AuditItem]:
     return items
 
 
+def check_versioning_policy() -> list[AuditItem]:
+    """
+    Check that versioning configuration follows immutability policy.
+    - alias_type must be redirect (not copy)
+    - deploy-dev.yml must exist and not touch latest
+    - docs_current.yml must not exist (old workflow)
+    """
+    items = []
+
+    # Check mkdocs.yml for alias_type
+    if MKDOCS_YML.exists():
+        content = MKDOCS_YML.read_text(encoding="utf-8")
+        
+        if "alias_type: redirect" in content:
+            items.append(AuditItem(
+                category="Versioning Policy",
+                status="OK",
+                file_path="mkdocs.yml",
+                message="alias_type: redirect is configured",
+                recommendation=""
+            ))
+        elif "alias_type: copy" in content:
+            items.append(AuditItem(
+                category="Versioning Policy",
+                status="NG",
+                file_path="mkdocs.yml",
+                message="alias_type: copy causes content drift",
+                recommendation="Change to alias_type: redirect"
+            ))
+        elif "- mike:" in content:
+            items.append(AuditItem(
+                category="Versioning Policy",
+                status="NG",
+                file_path="mkdocs.yml",
+                message="mike plugin found but alias_type not set (defaults to copy)",
+                recommendation="Add alias_type: redirect to mike plugin config"
+            ))
+
+    # Check that deploy-dev.yml exists
+    if DEPLOY_DEV_WORKFLOW.exists():
+        content = DEPLOY_DEV_WORKFLOW.read_text(encoding="utf-8")
+        
+        # Check it doesn't update latest
+        if re.search(r'mike deploy[^#\n]*latest', content):
+            items.append(AuditItem(
+                category="Versioning Policy",
+                status="NG",
+                file_path="deploy-dev.yml",
+                message="deploy-dev.yml updates latest on main branch",
+                recommendation="Remove latest from mike deploy command"
+            ))
+        else:
+            items.append(AuditItem(
+                category="Versioning Policy",
+                status="OK",
+                file_path="deploy-dev.yml",
+                message="deploy-dev.yml correctly deploys only to dev",
+                recommendation=""
+            ))
+    else:
+        items.append(AuditItem(
+            category="Versioning Policy",
+            status="NG",
+            file_path="deploy-dev.yml",
+            message="deploy-dev.yml not found",
+            recommendation="Create deploy-dev.yml for main branch deployments"
+        ))
+
+    # Check that old docs_current.yml is removed
+    if DOCS_CURRENT_WORKFLOW.exists():
+        items.append(AuditItem(
+            category="Versioning Policy",
+            status="NG",
+            file_path="docs_current.yml",
+            message="Old workflow still exists - updates latest on main push",
+            recommendation="Delete docs_current.yml (replaced by deploy-dev.yml)"
+        ))
+    else:
+        items.append(AuditItem(
+            category="Versioning Policy",
+            status="OK",
+            file_path="docs_current.yml",
+            message="Old workflow removed",
+            recommendation=""
+        ))
+
+    return items
+
+
 def check_release_requirements() -> list[AuditItem]:
     """
     Check that release requirements are met.
@@ -746,6 +837,9 @@ def main():
 
     print("Checking release requirements...")
     all_items.extend(check_release_requirements())
+
+    print("Checking versioning policy...")
+    all_items.extend(check_versioning_policy())
 
     print()
 
