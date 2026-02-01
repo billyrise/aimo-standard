@@ -90,6 +90,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch origin gh-pages:gh-pages || true
+          # Remove existing 'dev' version if it exists (to convert to alias)
+          mike delete dev --push 2>/dev/null || true
           # Deploy versioned snapshot (e.g., 0.1.0) with latest and dev as aliases
           # This ensures language switcher links use /latest/ (not /dev/)
           mike deploy "${{ steps.v.outputs.ver }}" latest dev --update-aliases --push

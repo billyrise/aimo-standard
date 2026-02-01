@@ -67,6 +67,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch origin gh-pages:gh-pages || true
+          # Remove existing 'dev' version if it exists (to convert to alias)
+          mike delete dev --push 2>/dev/null || true
           # Deploy as 'latest' (primary) with 'dev' as alias
           mike deploy latest dev --update-aliases --push
           mike set-default latest --push
