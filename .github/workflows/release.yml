@@ -115,6 +115,16 @@ jobs:
           echo "=== pytest ==="
           pytest -q
 
+      # CRITICAL: Ensure documentation references match the release version
+      # This prevents deploying a release where Versions/Cite/CITATION.cff
+      # still reference an older version
+      - name: Release consistency check
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          echo "=== Release Consistency Check ==="
+          python tooling/checks/check_release_consistency.py
+
       - name: Build docs (mkdocs)
         run: python -m mkdocs build --strict
 
