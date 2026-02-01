@@ -44,7 +44,7 @@ AIMO Standardはドキュメントのバージョン管理に[mike](https://gith
 
 | バージョン | URLパターン | Canonical状態 | インデックス可 |
 |-----------|-------------|---------------|----------------|
-| バージョン指定（例：`0.1.6`） | `https://standard.aimoaas.com/0.1.6/` | 特定バージョンの正規 | はい |
+| バージョン指定（例：`0.1.7`） | `https://standard.aimoaas.com/0.1.7/` | 特定バージョンの正規 | はい |
 | `latest`（エイリアス） | `https://standard.aimoaas.com/latest/` | 現行リリースへ**リダイレクト** | はい（ターゲット経由） |
 | `dev` | `https://standard.aimoaas.com/dev/` | プレビューのみ | **いいえ**（noindex強制） |
 
@@ -63,8 +63,8 @@ AIMO Standardはドキュメントのバージョン管理に[mike](https://gith
 
 ```html
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.1.6/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.1.6/">
+<meta http-equiv="refresh" content="0; url=../0.1.7/">
+<link rel="canonical" href="https://standard.aimoaas.com/0.1.7/">
 ```
 
 これにより：
@@ -74,7 +74,7 @@ AIMO Standardはドキュメントのバージョン管理に[mike](https://gith
 3. **アトミックな更新** — エイリアスの変更で全ページを一度に更新。
 
 !!! info "Git タグ vs. サイトパス"
-    Git リリースタグは `v` プレフィックスを使用します（例：`v0.1.6`）が、サイトパスでは `v` を省略します（例：`/0.1.6/`）。これは mike などのドキュメントバージョン管理ツールの標準的な方法です。
+    Git リリースタグは `v` プレフィックスを使用します（例：`v0.1.7`）が、サイトパスでは `v` を省略します（例：`/0.1.7/`）。これは mike などのドキュメントバージョン管理ツールの標準的な方法です。
 
 ## 監査人ガイダンス：引用すべきURL
 

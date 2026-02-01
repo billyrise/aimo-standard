@@ -44,7 +44,7 @@ AIMO Standard uses [mike](https://github.com/jimporter/mike) for documentation v
 
 | Version | URL Pattern | Canonical Status | Indexable |
 |---------|-------------|------------------|-----------|
-| Versioned (e.g., `0.1.6`) | `https://standard.aimoaas.com/0.1.6/` | Canonical for that specific version | Yes |
+| Versioned (e.g., `0.1.7`) | `https://standard.aimoaas.com/0.1.7/` | Canonical for that specific version | Yes |
 | `latest` (alias) | `https://standard.aimoaas.com/latest/` | **Redirects** to current release | Yes (via target) |
 | `dev` | `https://standard.aimoaas.com/dev/` | Preview only | **No** (noindex enforced) |
 
@@ -63,8 +63,8 @@ Instead of copying files, `/latest/` contains redirect pages pointing to the cur
 
 ```html
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.1.6/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.1.6/">
+<meta http-equiv="refresh" content="0; url=../0.1.7/">
+<link rel="canonical" href="https://standard.aimoaas.com/0.1.7/">
 ```
 
 This ensures:
@@ -74,7 +74,7 @@ This ensures:
 3. **Atomic updates** — Changing the alias updates all pages at once.
 
 !!! info "Git Tag vs. Site Path"
-    Git release tags use `v` prefix (e.g., `v0.1.6`), but site paths omit the `v` (e.g., `/0.1.6/`). This is standard practice for documentation versioning tools like mike.
+    Git release tags use `v` prefix (e.g., `v0.1.7`), but site paths omit the `v` (e.g., `/0.1.7/`). This is standard practice for documentation versioning tools like mike.
 
 ## Auditor Guidance: Which URL to Cite
 

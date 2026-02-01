@@ -161,8 +161,8 @@ git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
 
 # IMPORTANT: Use the exact version stated in the submission
-# Replace VERSION with the submitter's declared version (e.g., v0.1.6)
-VERSION=v0.1.6  # ← Match the version in the submission
+# Replace VERSION with the submitter's declared version (e.g., v0.1.7)
+VERSION=v0.1.7  # ← Match the version in the submission
 git checkout "$VERSION"
 
 # Set up Python environment
