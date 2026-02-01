@@ -2070,14 +2070,34 @@
 <ol>
 <li><strong>Evidence Bundle の生成</strong>: <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> と <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> に従い、EV レコード、Dictionary、Summary、Change Log を作成する。</li>
 <li><strong>Validator の実行</strong>: <code>python validator/src/validate.py bundle/root.json</code> を実行し、構造整合性を確認する。エラーがあれば修正する。</li>
-<li><strong>チェックサムの作成</strong>: 提出ファイルすべての SHA-256 チェックサムを生成する：
-   <code>bash
-   sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
+<li>
+<p><strong>チェックサムの作成</strong>: 提出ファイルすべての SHA-256 チェックサムを生成する：</p>
+<p>=== "Linux"</p>
+<pre><code>```bash
+sha256sum *.json *.pdf &gt; SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+shasum -a 256 *.json *.pdf &gt; SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+Get-ChildItem *.json, *.pdf | ForEach-Object {
+    $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+    "$hash  $($_.Name)"
+} | Out-File SHA256SUMS.txt -Encoding UTF8
+```
+</code></pre>
+<ol>
 <li><strong>アーティファクトのパッケージ化</strong>: 証跡バンドルの zip アーカイブを作成する：
    <code>bash
    zip -r evidence_bundle.zip bundle_directory/</code></li>
 <li><strong>リリースバージョンの参照</strong>: バンドルが整合する AIMO Standard バージョン（例：<code>v1.0.0</code>）を記録する。</li>
 <li><strong>提出</strong>: zip、チェックサム、バージョン参照を監査人またはコンプライアンス機能に提供する。</li>
+</ol>
+</li>
 </ol>
 <p>リリースアセットと検証については <a href="../../releases/">Releases</a> を参照。</p>
 <h2 id="_7">非過剰主張ステートメント</h2>
@@ -2089,13 +2109,35 @@
 <p>!!! success "ビルド来歴証明が利用可能"
     v0.1.6以降、すべてのリリースアセットには暗号署名付きビルド来歴証明が含まれています。attestation 検証手順は <a href="../../standard/versions/">バージョンページの検証手順</a> を参照してください。</p>
 <h3 id="1sha-256">ステップ1：チェックサムの検証（SHA-256）</h3>
-<pre><code class="language-bash"># 提出物と一緒に SHA256SUMS.txt を受領
+<p>=== "Linux"</p>
+<pre><code>```bash
+# 提出物と一緒に SHA256SUMS.txt を受領
 # 全ファイルが記録されたチェックサムと一致することを確認
 sha256sum -c SHA256SUMS.txt
 
 # または個別ファイルを手動検証：
 sha256sum evidence_bundle.zip
 # 出力を SHA256SUMS.txt の値と比較
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+# 全ファイルがチェックサムと一致することを確認
+shasum -a 256 -c SHA256SUMS.txt
+
+# または個別ファイルを手動検証：
+shasum -a 256 evidence_bundle.zip
+# 出力を SHA256SUMS.txt の値と比較
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+# 個別ファイルを検証
+Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
+
+# Hash 出力を SHA256SUMS.txt と比較
+Get-Content .\SHA256SUMS.txt
+```
 </code></pre>
 <p>チェックサムが一致しない場合、提出物を却下または再提出を要求すべきである。</p>
 <h3 id="2">ステップ2：バンドル構造の検証（バリデータ）</h3>
@@ -2103,13 +2145,19 @@ sha256sum evidence_bundle.zip
 <pre><code class="language-bash"># 公式 AIMO Standard リリースをクローン
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
-git checkout v0.1.3  # 提出物に記載されたバージョンを使用
+
+# 重要：提出物に記載された正確なバージョンを使用
+# VERSION を提出者が宣言したバージョンに置き換える（例：v0.1.6）
+VERSION=v0.1.6  # ← 提出物のバージョンに合わせる
+git checkout &quot;$VERSION&quot;
 
 # Python 環境のセットアップ
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 </code></pre>
+<p>!!! warning "バージョン一致"
+    常に提出物に記載された正確な AIMO Standard バージョンを使用してください。異なるバージョンを使用すると、バージョン間のスキーマやルール変更により検証結果が一致しない場合があります。</p>
 <p><strong>検証の実行</strong>：</p>
 <pre><code class="language-bash"># 提出されたバンドルを展開
 unzip evidence_bundle.zip -d bundle/

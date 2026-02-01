@@ -2117,8 +2117,8 @@ site_url: https://standard.aimoaas.com/
 <td>開発版の正規（noindex推奨）</td>
 </tr>
 <tr>
-<td>タグ付き（例：<code>v1.0.0</code>）</td>
-<td><code>https://standard.aimoaas.com/v1.0.0/</code></td>
+<td>バージョン指定（例：<code>1.0.0</code>）</td>
+<td><code>https://standard.aimoaas.com/1.0.0/</code></td>
 <td>特定バージョンの正規</td>
 </tr>
 </tbody>
@@ -2127,8 +2127,10 @@ site_url: https://standard.aimoaas.com/
 <ul>
 <li><code>latest</code>は最新の安定リリースを指すエイリアスです。</li>
 <li><code>dev</code>は<code>main</code>ブランチを反映し、変更される可能性があります。正式な監査では引用を避けてください。</li>
-<li>タグ付きバージョン（例：<code>v1.0.0</code>）は不変であり、監査引用に安全です。</li>
+<li>バージョン指定スナップショットは不変であり、監査引用に安全です。</li>
 </ul>
+<p>!!! info "Git タグ vs. サイトパス"
+    Git リリースタグは <code>v</code> プレフィックスを使用します（例：<code>v0.1.6</code>）が、サイトパスでは <code>v</code> を省略します（例：<code>/0.1.6/</code>）。これは mike などのドキュメントバージョン管理ツールの標準的な方法です。</p>
 <h2 id="url">監査人ガイダンス：引用すべきURL</h2>
 <p>監査レポート、コンプライアンス文書、または外部参照でAIMO Standardを引用する際：</p>
 <h3 id="url_1">推奨される引用URL</h3>
@@ -2146,7 +2148,7 @@ site_url: https://standard.aimoaas.com/
 </tr>
 <tr>
 <td>特定バージョン（監査用）</td>
-<td><code>https://standard.aimoaas.com/v{X.Y.Z}/standard/current/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/standard/current/</code></td>
 </tr>
 <tr>
 <td>ガバナンス &amp; ポリシー</td>
@@ -2164,10 +2166,12 @@ site_url: https://standard.aimoaas.com/
 <li>~~<code>https://standard.aimoaas.com/dev/</code>~~ — 開発版、変更される可能性あり</li>
 </ul>
 <h3 id="_1">不変性のためのバージョン指定引用</h3>
-<p>不変の参照が必要な正式監査では、タグ付きバージョンURLを使用してください：</p>
-<pre><code>https://standard.aimoaas.com/v1.0.0/standard/current/01-overview/
+<p>不変の参照が必要な正式監査では、バージョン指定スナップショットURLを使用してください：</p>
+<pre><code>https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 </code></pre>
-<p>タグ付きバージョンはリリース時点で凍結され、変更されません。</p>
+<p>バージョン指定スナップショットはリリース時点で凍結され、変更されません。</p>
+<p>!!! note "URLフォーマット"
+    サイトパスでは <code>v</code> プレフィックスを省略します。バージョン <code>v1.0.0</code> の場合、URLでは <code>/1.0.0/</code> を使用します。</p>
 <h2 id="_2">技術的実装</h2>
 <h3 id="html">生成されるHTMLの例</h3>
 <p>生成される各HTMLページの<code>&lt;head&gt;</code>には、canonicalとhreflangタグが含まれます：</p>

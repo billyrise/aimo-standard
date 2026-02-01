@@ -1777,15 +1777,43 @@
 </table>
 <h3 id="_3">ダウンロードの検証</h3>
 <p>ダウンロード後、チェックサムでファイルの整合性を検証できます：</p>
-<pre><code class="language-bash"># チェックサムファイルをダウンロード
+<p>=== "Linux"</p>
+<pre><code>```bash
+# チェックサムファイルをダウンロード
 curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
 
 # 特定のファイルを検証
 sha256sum -c SHA256SUMS.txt --ignore-missing
-</code></pre>
-<p>または手動で：</p>
-<pre><code class="language-bash">sha256sum trust_package.pdf
+
+# または手動で検証：
+sha256sum trust_package.pdf
 # 出力を SHA256SUMS.txt と比較
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+# チェックサムファイルをダウンロード
+curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+
+# 特定のファイルを検証
+shasum -a 256 -c SHA256SUMS.txt
+
+# または手動で検証：
+shasum -a 256 trust_package.pdf
+# 出力を SHA256SUMS.txt と比較
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+# チェックサムファイルをダウンロード
+Invoke-WebRequest -Uri "https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+
+# 特定のファイルを検証
+Get-FileHash .\trust_package.pdf -Algorithm SHA256
+
+# Hash 出力を SHA256SUMS.txt と比較
+Get-Content .\SHA256SUMS.txt
+```
 </code></pre>
 <h2 id="artifacts-zip">Artifacts Zip の内容</h2>
 <p><code>aimo-standard-artifacts.zip</code> には以下が含まれます：</p>
@@ -1810,18 +1838,38 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 <ol>
 <li><strong>Evidence Bundle の作成</strong>: <a href="../artifacts/evidence-bundle/">Evidence Bundle</a> と <a href="../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> に従い、EV レコード、Dictionary、Summary、Change Log を作成する。</li>
 <li><strong>Validator の実行</strong>: <code>python validator/src/validate.py bundle/root.json</code> を実行して構造整合性を確認する。エラーはすべて修正する。</li>
-<li><strong>チェックサムの生成</strong>: 検証用の SHA-256 チェックサムを作成する：
-   <code>bash
-   sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
+<li>
+<p><strong>チェックサムの生成</strong>: 検証用の SHA-256 チェックサムを作成する：</p>
+<p>=== "Linux"</p>
+<pre><code>```bash
+sha256sum *.json *.pdf &gt; SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+shasum -a 256 *.json *.pdf &gt; SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+Get-ChildItem *.json, *.pdf | ForEach-Object {
+    $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+    "$hash  $($_.Name)"
+} | Out-File SHA256SUMS.txt -Encoding UTF8
+```
+</code></pre>
+<ol>
 <li><strong>パッケージ化</strong>: バンドルディレクトリの zip アーカイブを作成する。</li>
 <li><strong>バージョン整合の記録</strong>: 証跡が整合する AIMO Standard リリース（例：<code>v1.0.0</code>）を記録する。</li>
 <li><strong>提出</strong>: パッケージ、チェックサム、バージョン参照を監査人に提供する。</li>
+</ol>
+</li>
 </ol>
 <p>完全な準備ガイドは <a href="../governance/trust-package/">Trust Package</a> を参照。</p>
 <h2 id="_6">監査人向け：検証手順</h2>
 <p>証跡提出物を受領した監査人は、完全性と構造を検証すべきである：</p>
 <ol>
-<li><strong>チェックサム検証</strong>: <code>sha256sum -c SHA256SUMS.txt</code> を実行してファイルの完全性を確認</li>
+<li><strong>チェックサム検証</strong>: チェックサム検証（Linux: <code>sha256sum -c</code>、macOS: <code>shasum -a 256 -c</code>、Windows: <code>Get-FileHash</code>）を実行してファイルの完全性を確認</li>
 <li><strong>バリデータ実行</strong>: <code>python validator/src/validate.py bundle/root.json</code> を実行して構造を確認</li>
 <li><strong>バージョン確認</strong>: 記載された AIMO Standard バージョンが <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a> に存在することを確認</li>
 </ol>

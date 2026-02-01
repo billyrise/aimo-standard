@@ -2070,14 +2070,34 @@ See <a href="https://github.com/billyrise/aimo-standard/blob/main/README.md">REA
 <ol>
 <li><strong>Generate Evidence Bundle</strong>: Create EV records, Dictionary, Summary, and Change Log per <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> and <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a>.</li>
 <li><strong>Run Validator</strong>: Execute <code>python validator/src/validate.py bundle/root.json</code> to check structural consistency. Fix any errors before proceeding.</li>
-<li><strong>Create Checksums</strong>: Generate SHA-256 checksums for all submission files:
-   <code>bash
-   sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
+<li>
+<p><strong>Create Checksums</strong>: Generate SHA-256 checksums for all submission files:</p>
+<p>=== "Linux"</p>
+<pre><code>```bash
+sha256sum *.json *.pdf &gt; SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+shasum -a 256 *.json *.pdf &gt; SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+Get-ChildItem *.json, *.pdf | ForEach-Object {
+    $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+    "$hash  $($_.Name)"
+} | Out-File SHA256SUMS.txt -Encoding UTF8
+```
+</code></pre>
+<ol>
 <li><strong>Package Artifacts</strong>: Create a zip archive of your evidence bundle:
    <code>bash
    zip -r evidence_bundle.zip bundle_directory/</code></li>
 <li><strong>Reference Release Version</strong>: Note which AIMO Standard version (e.g., <code>v1.0.0</code>) your bundle aligns with.</li>
 <li><strong>Deliver</strong>: Provide the zip, checksums, and version reference to your auditor or compliance function.</li>
+</ol>
+</li>
 </ol>
 <p>For release assets and verification, see <a href="../../releases/">Releases</a>.</p>
 <h2 id="non-overclaim-statement">Non-overclaim statement</h2>
@@ -2089,13 +2109,35 @@ See <a href="https://github.com/billyrise/aimo-standard/blob/main/README.md">REA
 <p>!!! success "Build Provenance Available"
     Starting from v0.1.6, all release assets include cryptographically signed build attestations. See <a href="../../standard/versions/#4-verify-build-provenance-attestation">Verification Procedure</a> for attestation verification steps.</p>
 <h3 id="step-1-verify-checksums-sha-256">Step 1: Verify checksums (SHA-256)</h3>
-<pre><code class="language-bash"># Download or receive SHA256SUMS.txt with the submission
+<p>=== "Linux"</p>
+<pre><code>```bash
+# Download or receive SHA256SUMS.txt with the submission
 # Verify all files match their recorded checksums
 sha256sum -c SHA256SUMS.txt
 
 # Or verify individual files manually:
 sha256sum evidence_bundle.zip
 # Compare output against the value in SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+# Verify all files match their recorded checksums
+shasum -a 256 -c SHA256SUMS.txt
+
+# Or verify individual files manually:
+shasum -a 256 evidence_bundle.zip
+# Compare output against the value in SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+# Verify individual files
+Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
+
+# Compare the Hash output with SHA256SUMS.txt
+Get-Content .\SHA256SUMS.txt
+```
 </code></pre>
 <p>If any checksum fails, the submission should be rejected or re-requested.</p>
 <h3 id="step-2-verify-bundle-structure-validator">Step 2: Verify bundle structure (Validator)</h3>
@@ -2103,13 +2145,19 @@ sha256sum evidence_bundle.zip
 <pre><code class="language-bash"># Clone the official AIMO Standard release
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
-git checkout v0.1.3  # Use the version stated in submission
+
+# IMPORTANT: Use the exact version stated in the submission
+# Replace VERSION with the submitter's declared version (e.g., v0.1.6)
+VERSION=v0.1.6  # ← Match the version in the submission
+git checkout &quot;$VERSION&quot;
 
 # Set up Python environment
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 </code></pre>
+<p>!!! warning "Version Matching"
+    Always use the exact AIMO Standard version stated in the submission. Using a different version may cause validation mismatches due to schema or rule changes between versions.</p>
 <p><strong>Run validation</strong>:</p>
 <pre><code class="language-bash"># Extract the submitted bundle
 unzip evidence_bundle.zip -d bundle/

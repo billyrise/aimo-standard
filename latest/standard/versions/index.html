@@ -1994,30 +1994,91 @@
 <h2 id="verification-procedure">Verification Procedure</h2>
 <p>Auditors and implementers should verify download integrity using SHA-256 checksums:</p>
 <h3 id="1-download-release-assets">1. Download Release Assets</h3>
-<pre><code class="language-bash"># Download all assets for a specific version
+<p>=== "Linux / macOS"</p>
+<pre><code>```bash
+# Download all assets for a specific version
 VERSION=v0.1.6
-BASE_URL=&quot;https://github.com/billyrise/aimo-standard/releases/download/${VERSION}&quot;
+BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
-curl -LO &quot;${BASE_URL}/trust_package.pdf&quot;
-curl -LO &quot;${BASE_URL}/trust_package.ja.pdf&quot;
-curl -LO &quot;${BASE_URL}/aimo-standard-artifacts.zip&quot;
-curl -LO &quot;${BASE_URL}/SHA256SUMS.txt&quot;
+curl -LO "${BASE_URL}/trust_package.pdf"
+curl -LO "${BASE_URL}/trust_package.ja.pdf"
+curl -LO "${BASE_URL}/aimo-standard-artifacts.zip"
+curl -LO "${BASE_URL}/SHA256SUMS.txt"
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+# Download all assets for a specific version
+$VERSION = "v0.1.6"
+$BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
+
+Invoke-WebRequest -Uri "$BASE_URL/trust_package.pdf" -OutFile trust_package.pdf
+Invoke-WebRequest -Uri "$BASE_URL/trust_package.ja.pdf" -OutFile trust_package.ja.pdf
+Invoke-WebRequest -Uri "$BASE_URL/aimo-standard-artifacts.zip" -OutFile aimo-standard-artifacts.zip
+Invoke-WebRequest -Uri "$BASE_URL/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+```
 </code></pre>
 <h3 id="2-verify-checksums">2. Verify Checksums</h3>
-<pre><code class="language-bash"># Verify all downloaded files against checksums
+<p>=== "Linux"</p>
+<pre><code>```bash
+# Verify all downloaded files against checksums
 sha256sum -c SHA256SUMS.txt
 
-# Expected output (all should show &quot;OK&quot;):
+# Expected output (all should show "OK"):
 # trust_package.pdf: OK
 # trust_package.ja.pdf: OK
 # aimo-standard-artifacts.zip: OK
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+# Verify all downloaded files against checksums
+shasum -a 256 -c SHA256SUMS.txt
+
+# Expected output (all should show "OK"):
+# trust_package.pdf: OK
+# trust_package.ja.pdf: OK
+# aimo-standard-artifacts.zip: OK
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+# Verify each file
+Get-FileHash .\trust_package.pdf -Algorithm SHA256
+Get-FileHash .\trust_package.ja.pdf -Algorithm SHA256
+Get-FileHash .\aimo-standard-artifacts.zip -Algorithm SHA256
+
+# Compare Hash output with SHA256SUMS.txt
+Get-Content .\SHA256SUMS.txt
+```
 </code></pre>
 <h3 id="3-manual-verification-alternative">3. Manual Verification (Alternative)</h3>
-<pre><code class="language-bash"># Compute hash for a specific file
+<p>=== "Linux"</p>
+<pre><code>```bash
+# Compute hash for a specific file
 sha256sum trust_package.pdf
 
 # Compare output with SHA256SUMS.txt
 cat SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+# Compute hash for a specific file
+shasum -a 256 trust_package.pdf
+
+# Compare output with SHA256SUMS.txt
+cat SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+# Compute hash for a specific file
+Get-FileHash .\trust_package.pdf -Algorithm SHA256
+
+# View checksums file
+Get-Content .\SHA256SUMS.txt
+```
 </code></pre>
 <p>!!! tip "For Auditors"
     Always obtain the checksums file directly from the official GitHub Release, not from the submitting party. This ensures independent verification.</p>

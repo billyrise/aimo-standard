@@ -2117,8 +2117,8 @@ site_url: https://standard.aimoaas.com/
 <td>Canonical for development (noindex recommended)</td>
 </tr>
 <tr>
-<td>Tagged (e.g., <code>v1.0.0</code>)</td>
-<td><code>https://standard.aimoaas.com/v1.0.0/</code></td>
+<td>Versioned (e.g., <code>1.0.0</code>)</td>
+<td><code>https://standard.aimoaas.com/1.0.0/</code></td>
 <td>Canonical for that specific version</td>
 </tr>
 </tbody>
@@ -2127,8 +2127,10 @@ site_url: https://standard.aimoaas.com/
 <ul>
 <li><code>latest</code> is an alias pointing to the most recent stable release.</li>
 <li><code>dev</code> reflects the <code>main</code> branch and may change; avoid citing in formal audits.</li>
-<li>Tagged versions (e.g., <code>v1.0.0</code>) are immutable and safe for audit citations.</li>
+<li>Versioned snapshots are immutable and safe for audit citations.</li>
 </ul>
+<p>!!! info "Git Tag vs. Site Path"
+    Git release tags use <code>v</code> prefix (e.g., <code>v0.1.6</code>), but site paths omit the <code>v</code> (e.g., <code>/0.1.6/</code>). This is standard practice for documentation versioning tools like mike.</p>
 <h2 id="auditor-guidance-which-url-to-cite">Auditor Guidance: Which URL to Cite</h2>
 <p>When citing AIMO Standard in audit reports, compliance documentation, or external references:</p>
 <h3 id="recommended-citation-urls">Recommended Citation URLs</h3>
@@ -2146,7 +2148,7 @@ site_url: https://standard.aimoaas.com/
 </tr>
 <tr>
 <td>Specific version (for audit)</td>
-<td><code>https://standard.aimoaas.com/v{X.Y.Z}/standard/current/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/standard/current/</code></td>
 </tr>
 <tr>
 <td>Governance &amp; policies</td>
@@ -2164,10 +2166,12 @@ site_url: https://standard.aimoaas.com/
 <li>~~<code>https://standard.aimoaas.com/dev/</code>~~ — Development version, subject to change</li>
 </ul>
 <h3 id="versioned-citation-for-immutability">Versioned Citation for Immutability</h3>
-<p>For formal audits requiring immutable references, use tagged version URLs:</p>
-<pre><code>https://standard.aimoaas.com/v1.0.0/standard/current/01-overview/
+<p>For formal audits requiring immutable references, use versioned snapshot URLs:</p>
+<pre><code>https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 </code></pre>
-<p>Tagged versions are frozen at release time and will not change.</p>
+<p>Versioned snapshots are frozen at release time and will not change.</p>
+<p>!!! note "URL Format"
+    Site paths use version numbers without the <code>v</code> prefix. For version <code>v1.0.0</code>, use <code>/1.0.0/</code> in URLs.</p>
 <h2 id="technical-implementation">Technical Implementation</h2>
 <h3 id="generated-html-example">Generated HTML Example</h3>
 <p>Every generated HTML page includes canonical and hreflang tags in the <code>&lt;head&gt;</code>:</p>
