@@ -2086,6 +2086,8 @@ See <a href="https://github.com/billyrise/aimo-standard/blob/main/README.md">REA
 <p>See <a href="../responsibility-boundary/">Responsibility Boundary</a> for details on scope, assumptions, and adopter responsibilities.</p>
 <h2 id="for-auditors-verification-procedure">For auditors: Verification procedure</h2>
 <p>When receiving an evidence submission, auditors should verify integrity and structure using the following steps:</p>
+<p>!!! success "Build Provenance Available"
+    Starting from v0.1.6, all release assets include cryptographically signed build attestations. See <a href="../../standard/versions/#4-verify-build-provenance-attestation">Verification Procedure</a> for attestation verification steps.</p>
 <h3 id="step-1-verify-checksums-sha-256">Step 1: Verify checksums (SHA-256)</h3>
 <pre><code class="language-bash"># Download or receive SHA256SUMS.txt with the submission
 # Verify all files match their recorded checksums
