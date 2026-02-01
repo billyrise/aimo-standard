@@ -173,3 +173,33 @@ jobs:
             dist/trust_package.ja.pdf
             dist/aimo-standard-artifacts.zip
             dist/SHA256SUMS.txt
+
+      - name: Update versions page on main branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          DATE="$(date -u +%Y-%m-%d)"
+
+          # Stash any local changes and switch to main
+          git stash --include-untracked || true
+          git fetch origin main:main
+          git checkout main
+
+          # Run the versions page updater
+          python tooling/release/update_versions_page.py --version "$VERSION" --date "$DATE"
+
+          # Commit and push if there are changes
+          git add docs/en/standard/versions/index.md docs/ja/standard/versions/index.md
+          if git diff --cached --quiet; then
+            echo "Versions pages already up to date."
+          else
+            git commit -m "docs: update versions page for v${VERSION}"
+            git push origin main
+            echo "✓ Versions pages updated on main branch"
+          fi
+
+          # Return to original state
+          git checkout -
+          git stash pop || true
