@@ -2,6 +2,16 @@
 
 本サイトは AIMO Standard の仕様を公開します。
 
+## なぜ今、Agentic AI監査が必要か
+
+企業のAIリスクは、**「未承認AI（Shadow AI）」の拡大**と、**「自律エージェント（Agentic AI）」の権限暴走**により、従来のISMS/IT統制だけでは追跡・説明が困難になっています。
+AIMO Standardは、AI利用を共通言語（Taxonomy）で分類し、証跡（Evidence）を最小要件で揃え、Validatorで整合性を担保することで、監査説明と是正を加速します。
+※本標準は法的助言や特定規制・規格への準拠保証を提供するものではありません（[Coverage Map](coverage-map/index.md)を参照してください）。
+
+- [Taxonomy](standard/current/03-taxonomy.md)（共通言語で分類する）
+- [Minimum Evidence Requirements](artifacts/minimum-evidence.md)（最低限の証跡要件）
+- [Validator](validator/index.md)（整合性チェック）
+
 **トップレベルセクション**
 
 1. [Standard](standard/index.md) — 仕様（[Current](standard/current/index.md) | [Versions](standard/versions/index.md)）、[Conformance](conformance/index.md)、[Coverage Map](coverage-map/index.md)

@@ -2,6 +2,12 @@
 
 The AIMO Validator ensures that Evidence Packs and related artifacts conform to the AIMO Standard schemas and requirements.
 
+See also: [Human Oversight Protocol](../../governance/human-oversight-protocol.md) — responsibility boundary for machine vs. human review.
+
+## Validator in practice
+
+For a 30-second quickstart (install, run, interpret output), see [Validator hub](../../validator/index.md).
+
 ## Validator MVP Requirements
 
 The minimum viable validator MUST perform the following checks:

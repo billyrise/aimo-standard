@@ -76,6 +76,43 @@ Each official release includes:
 
 ## Change History
 
+### Version 0.1.7 (2026-02-01)
+
+**Summary:** Documentation enhancements for legal safety, agentic AI focus, governance boundaries, and operational guidance.
+
+#### Added
+
+**Governance Documentation**
+
+- Human Oversight Protocol (EN/JA): machine vs. human review responsibility boundary
+- Log Schemas (EN/JA): vendor-neutral schemas for Shadow AI discovery and agent activity evidence
+  - `shadow-ai-discovery.schema.json`
+  - `agent-activity.schema.json`
+
+**Coverage Map Enhancements**
+
+- "No automatic compliance" section in Coverage Map index (legal safety)
+- "How to use this map" traceability workflow section
+- Traceability shortcuts in individual mapping pages (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+
+**Standard Documentation**
+
+- Top page: "Why agentic AI audits are needed now" section with Shadow AI / Agentic AI focus
+- Taxonomy: "Examples of AI/agentic-specific risks" section for differentiation
+- Validator: Quickstart (30 seconds) with CLI usage and sample output
+
+#### Changed
+
+- Updated Responsibility Boundary with Human Oversight Protocol cross-reference
+- Updated Minimum Evidence with Log Schemas cross-reference
+- Updated mkdocs.yml navigation for new governance and artifacts pages
+
+#### Backward Compatibility
+
+All changes are documentation additions; no schema or code system changes.
+
+---
+
 ### Version 0.1.0 (2026-01-31)
 
 **Summary:** Initial release of AIMO Standard with 8-dimension code system and Evidence Pack templates.

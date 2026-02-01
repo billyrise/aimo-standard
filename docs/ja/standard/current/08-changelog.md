@@ -76,6 +76,43 @@ v1.0.0: FS-007 削除 (status: removed)
 
 ## 変更履歴
 
+### バージョン 0.1.7（2026-02-01）
+
+**概要：** 法的安全性、Agentic AIフォーカス、ガバナンス境界、運用ガイダンスのドキュメント強化。
+
+#### 追加
+
+**ガバナンスドキュメント**
+
+- 人による監督プロトコル（EN/JA）：機械と人によるレビューの責任境界
+- ログスキーマ（EN/JA）：Shadow AI検知とエージェント活動証跡のためのベンダー中立スキーマ
+  - `shadow-ai-discovery.schema.json`
+  - `agent-activity.schema.json`
+
+**Coverage Map強化**
+
+- Coverage Mapインデックスに「準拠保証ではありません」セクション（法的安全性）
+- 「本マップの使い方」traceabilityワークフローセクション
+- 個別マッピングページにTraceabilityショートカット（ISO 42001、NIST AI RMF、EU AI Act、ISMS）
+
+**Standard ドキュメント**
+
+- トップページ：「なぜ今、Agentic AI監査が必要か」セクション（Shadow AI / Agentic AIフォーカス）
+- Taxonomy：「AI/Agentic特有リスクの例」セクション（差別化のため）
+- Validator：クイックスタート（30秒）CLIの使用方法とサンプル出力
+
+#### 変更
+
+- Responsibility BoundaryにHuman Oversight Protocolへの相互参照を追加
+- Minimum EvidenceにLog Schemasへの相互参照を追加
+- mkdocs.ymlナビゲーションに新しいガバナンスとアーティファクトページを追加
+
+#### 後方互換性
+
+すべての変更はドキュメント追加であり、スキーマやコード体系の変更はありません。
+
+---
+
 ### バージョン 0.1.0（2026-01-31）
 
 **概要：** 8次元コード体系とEvidence Packテンプレートを含むAIMO Standardの初回リリース。

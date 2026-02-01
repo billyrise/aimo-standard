@@ -1,5 +1,7 @@
 # Methodology
 
+> Note: This methodology supports traceability and evidence readiness. It does not guarantee compliance with any specific regulation/standard.
+
 This page explains what the Coverage Map is and is not, how to use it in audit, and how it relates to the Evidence Bundle and Minimum Evidence Requirements.
 
 ## What the mapping is

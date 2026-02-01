@@ -1,5 +1,13 @@
 # ISMS view (ISO/IEC 27001/27002) mapping
 
+> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+
+- [Taxonomy](../standard/current/03-taxonomy.md)
+- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
+- [Log Schemas](../artifacts/log-schemas/index.md)
+- [Validator](../validator/index.md)
+- [Human Oversight Protocol](../governance/human-oversight-protocol.md)
+
 This page maps selected ISO/IEC 27001/27002 themes (change management, access control, logging, evidence integrity) to AIMO evidence and artifacts. It is for explainability only; it does not guarantee conformity to ISO/IEC 27001 or 27002. Verify against the published standards.
 
 

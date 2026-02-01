@@ -24,6 +24,16 @@ The taxonomy is a classification system only. It does not:
 - Certify conformity to external frameworks (ISO, NIST, EU AI Act, etc.)
 - Provide risk assessments or control recommendations
 
+## Examples of AI/agentic-specific risks (why an AI-specific standard is needed)
+
+Traditional security controls (e.g., ISMS) alone often fail to capture LLM/agent-specific failure modes and autonomous agent deviations (e.g., unintended tool execution, recursive loops) in an **audit-explainable** manner.
+AIMO Taxonomy provides a shared language to classify these AI-specific risks and connect them to evidence requirements and remediation workflows.
+
+(Reference examples for differentiation. The codes below are illustrative placeholders; the official code system follows the Standard definitions.)
+- AG-01 Runaway Loop / Recursion
+- AG-02 Unauthorized Tool Use (confused deputy-style misuse)
+- AG-03 Privilege Boundary Drift
+
 ## Dimensions Overview
 
 AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-letter prefix.

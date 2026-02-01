@@ -104,3 +104,5 @@
 本最小セットは説明可能性と証跡準備を支援する。法的助言の提供および適合の保証は行わない。
 
 バンドル構造と TOC は [Evidence Bundle](evidence-bundle.md)、フィールドレベルの整合は [EV Template](../standard/current/06-ev-template.md) およびスキーマを参照。
+
+関連：[ログスキーマ](log-schemas/index.md) — Shadow AI 検知およびエージェント活動証跡のための正規化ログ形式。

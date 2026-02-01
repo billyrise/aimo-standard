@@ -1,5 +1,7 @@
 # Methodology
 
+> 注：本Methodologyは対応関係（traceability）と証跡準備を支援します。特定規制・規格への準拠を保証するものではありません。
+
 本ページでは、Coverage Map の位置づけ、監査での利用方法、Evidence Bundle および Minimum Evidence Requirements との関係を説明する。
 
 ## What the mapping is
