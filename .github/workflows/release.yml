@@ -247,33 +247,63 @@ jobs:
         run: |
           python tooling/release/build_assets.py --version "${{ steps.v.outputs.ver }}" --ja
 
+      - name: Create source and site snapshots
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          
+          echo "=== Creating source snapshot ==="
+          # Create source snapshot from git archive (clean, no .git)
+          git archive --format=zip --prefix="aimo-standard-${VERSION}/" HEAD \
+            -o "dist/aimo-standard-${VERSION}-src.zip"
+          echo "Created: dist/aimo-standard-${VERSION}-src.zip"
+          
+          echo ""
+          echo "=== Creating site snapshot ==="
+          # Create site snapshot from built docs
+          (cd site && zip -r "../dist/aimo-standard-${VERSION}-site.zip" .)
+          echo "Created: dist/aimo-standard-${VERSION}-site.zip"
+          
+          echo ""
+          echo "=== Updating checksums ==="
+          # Regenerate checksums to include new files
+          (cd dist && sha256sum *.pdf *.zip > SHA256SUMS.txt)
+          echo "Updated: dist/SHA256SUMS.txt"
+          
+          echo ""
+          echo "=== Release assets ==="
+          ls -la dist/
+
       - name: Generate release notes from changelog
         id: release_notes
         run: |
           VERSION="${{ steps.v.outputs.ver }}"
-          cat > dist/RELEASE_NOTES.md << 'EOF'
+          cat > dist/RELEASE_NOTES.md << EOF
           ## AIMO Standard ${{ steps.v.outputs.tag }}
 
           ### Release Assets
 
           | Asset | Description |
           | ----- | ----------- |
-          | `trust_package.pdf` | English Trust Package (auditor-ready) |
-          | `trust_package.ja.pdf` | Japanese Trust Package |
-          | `aimo-standard-artifacts.zip` | Schemas, templates, examples, validator rules |
-          | `SHA256SUMS.txt` | SHA-256 checksums for verification |
+          | \`trust_package.pdf\` | English Trust Package (auditor-ready) |
+          | \`trust_package.ja.pdf\` | Japanese Trust Package |
+          | \`aimo-standard-artifacts.zip\` | Schemas, templates, examples, validator rules |
+          | \`aimo-standard-${VERSION}-src.zip\` | Source code snapshot |
+          | \`aimo-standard-${VERSION}-site.zip\` | Built documentation site |
+          | \`SHA256SUMS.txt\` | SHA-256 checksums for verification |
 
           ### Verification
 
-          ```bash
+          \`\`\`bash
           sha256sum -c SHA256SUMS.txt
-          ```
+          \`\`\`
 
           ### Documentation
 
-          - **Changelog**: https://standard.aimoaas.com/latest/standard/current/08-changelog/
-          - **Versions**: https://standard.aimoaas.com/latest/standard/versions/
-          - **Releases Hub**: https://standard.aimoaas.com/latest/releases/
+          - **This version**: https://standard.aimoaas.com/${VERSION}/
+          - **Latest**: https://standard.aimoaas.com/latest/
+          - **Changelog**: https://standard.aimoaas.com/${VERSION}/standard/current/08-changelog/
+          - **Versions**: https://standard.aimoaas.com/${VERSION}/standard/versions/
 
           ### Repository
 
@@ -291,6 +321,8 @@ jobs:
             dist/trust_package.pdf
             dist/trust_package.ja.pdf
             dist/aimo-standard-artifacts.zip
+            dist/aimo-standard-${{ steps.v.outputs.ver }}-src.zip
+            dist/aimo-standard-${{ steps.v.outputs.ver }}-site.zip
             dist/SHA256SUMS.txt
 
       - name: Attest build provenance
@@ -300,6 +332,8 @@ jobs:
             dist/trust_package.pdf
             dist/trust_package.ja.pdf
             dist/aimo-standard-artifacts.zip
+            dist/aimo-standard-${{ steps.v.outputs.ver }}-src.zip
+            dist/aimo-standard-${{ steps.v.outputs.ver }}-site.zip
             dist/SHA256SUMS.txt
 
       - name: Update versions page on main branch
@@ -331,3 +365,42 @@ jobs:
           # Return to original state
           git checkout -
           git stash pop || true
+
+      - name: Release summary
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.v.outputs.ver }}"
+          TAG="${{ steps.v.outputs.tag }}"
+          RELEASE_URL="https://github.com/${{ github.repository }}/releases/tag/${TAG}"
+          
+          echo "## Release Complete: ${TAG}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Published URLs" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| URL | Description |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | ----------- |" >> $GITHUB_STEP_SUMMARY
+          echo "| https://standard.aimoaas.com/${VERSION}/ | Version ${VERSION} (immutable) |" >> $GITHUB_STEP_SUMMARY
+          echo "| https://standard.aimoaas.com/latest/ | Latest alias (now points to ${VERSION}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| ${RELEASE_URL} | GitHub Release with assets |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Release Assets" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Asset | Size |" >> $GITHUB_STEP_SUMMARY
+          echo "| ----- | ---- |" >> $GITHUB_STEP_SUMMARY
+          for f in dist/*.pdf dist/*.zip dist/*.txt; do
+            if [ -f "$f" ]; then
+              SIZE=$(ls -lh "$f" | awk '{print $5}')
+              NAME=$(basename "$f")
+              echo "| \`${NAME}\` | ${SIZE} |" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Verification" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All checks passed:" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Release consistency check (Versions/Cite/CITATION.cff)" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] MkDocs build (strict mode)" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] mike deploy with latest alias" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] GitHub Release created" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Build provenance attestations" >> $GITHUB_STEP_SUMMARY

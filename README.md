@@ -60,6 +60,57 @@ python tooling/checks/lint_i18n.py
 python tooling/checks/lint_schema.py
 ```
 
+## Release Process
+
+The release process is fully automated via GitHub Actions, with a two-step workflow to prevent version mismatch errors.
+
+### Step 1: Prepare Release (Automated Version Bump)
+
+1. Go to **Actions** → **prepare-release** → **Run workflow**
+2. Enter the new version number (e.g., `0.1.8`) — do NOT include the `v` prefix
+3. Click **Run workflow**
+
+This will:
+- Automatically update all version references (Versions pages, Cite pages, CITATION.cff)
+- Verify consistency with `check_release_consistency.py`
+- Create a PR with all changes
+
+### Step 2: Tag and Release (Automated Deployment)
+
+1. Review and merge the PR created in Step 1
+2. Create and push the release tag:
+   ```bash
+   git tag v0.1.8
+   git push origin v0.1.8
+   ```
+
+This will automatically:
+- Run consistency checks (fails if versions don't match)
+- Build docs with `mkdocs build --strict`
+- Deploy via `mike` with `latest` alias update
+- Create GitHub Release with assets (PDFs, ZIPs, checksums)
+- Generate build provenance attestations
+
+### Release Assets
+
+Each release includes:
+| Asset | Description |
+| ----- | ----------- |
+| `trust_package.pdf` | English Trust Package (auditor-ready) |
+| `trust_package.ja.pdf` | Japanese Trust Package |
+| `aimo-standard-artifacts.zip` | Schemas, templates, examples, validator rules |
+| `aimo-standard-X.Y.Z-src.zip` | Source code snapshot |
+| `aimo-standard-X.Y.Z-site.zip` | Built documentation site |
+| `SHA256SUMS.txt` | SHA-256 checksums for verification |
+
+### Prerequisites for Automated PR Creation
+
+The `prepare-release` workflow uses [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request).
+For this to work, ensure:
+- **Repository Settings** → **Actions** → **General** → **Workflow permissions**:
+  - Select "Read and write permissions"
+  - Check "Allow GitHub Actions to create and approve pull requests"
+
 ## Deployment Strategy
 
 ### Current Setup (Temporary)
