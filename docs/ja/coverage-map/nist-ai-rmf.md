@@ -1,5 +1,13 @@
 # NIST AI RMF mapping
 
+> 参照ショートカット：Taxonomy → Minimum Evidence → Validator → 人による監督プロトコル
+
+- [Taxonomy](../standard/current/03-taxonomy.md)
+- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
+- [ログスキーマ](../artifacts/log-schemas/index.md)
+- [Validator](../validator/index.md)
+- [人による監督プロトコル](../governance/human-oversight-protocol.md)
+
 本ページは、NIST AI Risk Management Framework（Govern, Map, Measure, Manage）の主要テーマを AIMO の証跡・アーティファクトに対応付ける。説明可能性のためのものであり、NIST AI RMF への適合を保証しない。NIST 発行物と照合すること。
 
 

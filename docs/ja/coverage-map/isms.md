@@ -1,5 +1,13 @@
 # ISMS view (ISO/IEC 27001/27002) mapping
 
+> 参照ショートカット：Taxonomy → Minimum Evidence → Validator → 人による監督プロトコル
+
+- [Taxonomy](../standard/current/03-taxonomy.md)
+- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
+- [ログスキーマ](../artifacts/log-schemas/index.md)
+- [Validator](../validator/index.md)
+- [人による監督プロトコル](../governance/human-oversight-protocol.md)
+
 本ページは、ISO/IEC 27001/27002 の主要テーマ（変更管理、アクセス制御、ログ、証跡の完全性）を AIMO の証跡・アーティファクトに対応付ける。説明可能性のためのものであり、ISO/IEC 27001 または 27002 への適合を保証しない。発行された規格と照合すること。
 
 

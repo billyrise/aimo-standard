@@ -1,5 +1,13 @@
 # NIST AI RMF mapping
 
+> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+
+- [Taxonomy](../standard/current/03-taxonomy.md)
+- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
+- [Log Schemas](../artifacts/log-schemas/index.md)
+- [Validator](../validator/index.md)
+- [Human Oversight Protocol](../governance/human-oversight-protocol.md)
+
 This page maps selected NIST AI Risk Management Framework (Govern, Map, Measure, Manage) themes to AIMO evidence and artifacts. It is for explainability only; it does not guarantee conformity to the NIST AI RMF. Verify against the NIST publication.
 
 

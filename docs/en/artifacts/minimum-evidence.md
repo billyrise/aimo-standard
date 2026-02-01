@@ -104,3 +104,5 @@ Choose a profile based on your risk tolerance and regulatory requirements. These
 This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.
 
 See [Evidence Bundle](evidence-bundle.md) for bundle structure and TOC; see [EV Template](../standard/current/06-ev-template.md) and schemas for field-level alignment.
+
+See also: [Log Schemas](log-schemas/index.md) — normalized log formats for Shadow AI discovery and agent activity evidence.

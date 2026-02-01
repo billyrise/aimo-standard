@@ -2,6 +2,12 @@
 
 AIMOバリデータは、Evidence Packおよび関連アーティファクトがAIMO Standardスキーマと要件に準拠していることを確認します。
 
+関連：[人による監督プロトコル](../../governance/human-oversight-protocol.md) — 機械チェックと人の判断の責任境界。
+
+## 実運用でのValidator
+
+30秒クイックスタート（インストール、実行、出力の解釈）は [Validator ハブ](../../validator/index.md) を参照。
+
 ## バリデータMVP要件
 
 最小限のバリデータは以下のチェックを実行する必要があります：

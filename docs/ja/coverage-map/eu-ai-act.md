@@ -1,5 +1,13 @@
 # EU AI Act mapping
 
+> 参照ショートカット：Taxonomy → Minimum Evidence → Validator → 人による監督プロトコル
+
+- [Taxonomy](../standard/current/03-taxonomy.md)
+- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
+- [ログスキーマ](../artifacts/log-schemas/index.md)
+- [Validator](../validator/index.md)
+- [人による監督プロトコル](../governance/human-oversight-protocol.md)
+
 本ページは、EU AI Act の主要テーマ（文書化、記録保持、リスク管理、人的監督、透明性）を AIMO の証跡・アーティファクトに対応付ける。概要レベルであり、**法的助言**や適合の保証ではない。正式な法令と照合すること。
 
 

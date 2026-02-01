@@ -1,5 +1,13 @@
 # EU AI Act mapping
 
+> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+
+- [Taxonomy](../standard/current/03-taxonomy.md)
+- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
+- [Log Schemas](../artifacts/log-schemas/index.md)
+- [Validator](../validator/index.md)
+- [Human Oversight Protocol](../governance/human-oversight-protocol.md)
+
 This page maps selected EU AI Act themes (documentation, record-keeping, risk management, human oversight, transparency) to AIMO evidence and artifacts. It is high-level only and does **not** constitute legal advice or guarantee conformity. Verify against the official legal text.
 
 

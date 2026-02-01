@@ -2,6 +2,16 @@
 
 This site hosts the human-readable AIMO Standard specification.
 
+## Why agentic AI audits are needed now
+
+Enterprise AI risk is increasingly driven by **Shadow AI (unapproved AI use)** and **agentic AI (autonomous agents) with broad tool privileges**, making traditional ISMS/IT controls insufficient for traceability and audit explanations.
+AIMO Standard classifies AI usage with a shared language (Taxonomy), defines minimum evidence requirements, and enforces consistency via a Validator—accelerating auditability and remediation.
+Note: AIMO Standard does not provide legal advice or automatically guarantee compliance with any specific regulation/standard (see [Coverage Map](coverage-map/index.md)).
+
+- [Taxonomy](standard/current/03-taxonomy.md) (shared language)
+- [Minimum Evidence Requirements](artifacts/minimum-evidence.md)
+- [Validator](validator/index.md) (consistency checks)
+
 **Top-level sections**
 
 1. [Standard](standard/index.md) — Specification ([Current](standard/current/index.md) | [Versions](standard/versions/index.md)), [Conformance](conformance/index.md), [Coverage Map](coverage-map/index.md)
