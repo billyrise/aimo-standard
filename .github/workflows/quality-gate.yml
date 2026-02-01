@@ -1,24 +1,16 @@
-name: pr-checks
+name: quality-gate
 
 on:
   pull_request:
     branches: [main]
-    paths:
-      - "docs/**"
-      - "source_pack/**"
-      - "data/**"
-      - "coverage_map/**"
-      - "schemas/**"
-      - "tooling/**"
-      - "mkdocs.yml"
-      - "requirements.txt"
-      - ".github/workflows/**"
+  push:
+    branches: [main]
 
 permissions:
   contents: read
 
 jobs:
-  lint-and-build:
+  quality-gate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,6 +20,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
       - name: Install dependencies
         run: |

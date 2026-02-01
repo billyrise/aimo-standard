@@ -62,6 +62,52 @@ cat SHA256SUMS.txt
 !!! tip "監査人向け"
     チェックサムファイルは常に公式 GitHub Release から直接取得し、提出者からは受け取らないでください。これにより独立した検証が保証されます。
 
+### 4. ビルド来歴の検証（Attestation）
+
+v0.1.6以降、すべてのリリースアセットには GitHub Actions によって生成された暗号署名付きビルド来歴証明（attestation）が含まれています。これにより、アセットが公式リポジトリで改ざんなくビルドされたことを検証できます。
+
+**前提条件**: [GitHub CLI](https://cli.github.com/) (`gh`) のインストール
+
+```bash
+# GitHub CLI でリリースアセットをダウンロード
+VERSION=v0.1.6
+gh release download "$VERSION" --repo billyrise/aimo-standard
+
+# 各アセットの attestation を検証
+gh attestation verify trust_package.pdf --repo billyrise/aimo-standard
+gh attestation verify trust_package.ja.pdf --repo billyrise/aimo-standard
+gh attestation verify aimo-standard-artifacts.zip --repo billyrise/aimo-standard
+gh attestation verify SHA256SUMS.txt --repo billyrise/aimo-standard
+```
+
+**期待される出力**（成功時）:
+
+```
+Loaded digest sha256:abc123... for file trust_package.pdf
+Loaded 1 attestation from GitHub API
+✓ Verification succeeded!
+```
+
+**オフライン検証**（エアギャップ環境）:
+
+```bash
+# まず trusted root をダウンロード（ネットワーク接続が1回必要）
+gh attestation trusted-root > trusted-root.jsonl
+
+# その後オフラインで検証
+gh attestation verify trust_package.pdf \
+  --repo billyrise/aimo-standard \
+  --custom-trusted-root trusted-root.jsonl
+```
+
+!!! info "attestation が証明すること"
+    ビルド来歴証明は、リリースアセットが以下であることを暗号学的に証明します：
+
+    1. GitHub Actions によってビルドされた（開発者のローカルマシンではない）
+    2. 公式の `billyrise/aimo-standard` リポジトリからビルドされた
+    3. リリースタグに関連付けられた正確なコミットからビルドされた
+    4. ビルド完了後に改変されていない
+
 ## 互換性
 
 AIMO Standard は [Semantic Versioning](https://semver.org/) (SemVer) に従います：
