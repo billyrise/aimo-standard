@@ -1,15 +1,5 @@
 # Validator
 
-本セクションは、検証ルールと参照チェックのハブである。
-規範仕様は Standard に記載する。
-
-- **仕様**: [Standard > Validator](../standard/current/07-validator.md)。
-- **ルールと実装**: リポジトリの `validator/rules/` と `validator/src/`。
-- **監査での利用**: 内部整合性と完全性の確認に用いる。
-
-証跡パッケージは [Examples](../examples/index.md) および [Trust Package](../governance/trust-package.md) を参照。
-# バリデータ（Validator）
-
 本ページは検証ツールとルールのハブである。バリデータおよびルールの規範仕様は Standard に記載する。
 
 - **仕様**: [Standard > Current > Validator](../standard/current/07-validator.md) — ルール、参照チェック、検証と証跡の関係。
