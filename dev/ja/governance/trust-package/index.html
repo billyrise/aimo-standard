@@ -2069,7 +2069,7 @@
 <p>監査対応の提出物を準備するには、以下のステップに従う：</p>
 <ol>
 <li><strong>Evidence Bundle の生成</strong>: <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> と <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> に従い、EV レコード、Dictionary、Summary、Change Log を作成する。</li>
-<li><strong>Validator の実行</strong>: <code>python validator/src/validate.py</code> をバンドルに対して実行し、構造整合性を確認する。エラーがあれば修正する。</li>
+<li><strong>Validator の実行</strong>: <code>python validator/src/validate.py bundle/root.json</code> を実行し、構造整合性を確認する。エラーがあれば修正する。</li>
 <li><strong>チェックサムの作成</strong>: 提出ファイルすべての SHA-256 チェックサムを生成する：
    <code>bash
    sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>

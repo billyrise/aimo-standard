@@ -2069,7 +2069,7 @@ See <a href="https://github.com/billyrise/aimo-standard/blob/main/README.md">REA
 <p>Follow these steps to prepare an audit-ready submission:</p>
 <ol>
 <li><strong>Generate Evidence Bundle</strong>: Create EV records, Dictionary, Summary, and Change Log per <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a> and <a href="../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a>.</li>
-<li><strong>Run Validator</strong>: Execute <code>python validator/src/validate.py</code> against your bundle to check structural consistency. Fix any errors before proceeding.</li>
+<li><strong>Run Validator</strong>: Execute <code>python validator/src/validate.py bundle/root.json</code> to check structural consistency. Fix any errors before proceeding.</li>
 <li><strong>Create Checksums</strong>: Generate SHA-256 checksums for all submission files:
    <code>bash
    sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>

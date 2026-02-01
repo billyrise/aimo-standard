@@ -820,6 +820,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conformance
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -831,6 +844,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      期待される証跡
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      非過剰主張
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      関連ページ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1643,6 +1711,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      期待される証跡
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      非過剰主張
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      関連ページ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1674,22 +1786,28 @@
 
 
 <h1 id="conformance">Conformance</h1>
-<p>本セクションでは、AIMO Standard への適合の主張方法と必要な証跡の考え方を定義する。
-適合レベルと仕様・アーティファクトの関係を示すハブである。</p>
+<p>本セクションでは、AIMO Standard への適合の主張方法と期待される証跡を定義する。</p>
+<h2 id="_1">目的</h2>
 <ul>
-<li><strong>適合レベル</strong>: 判定基準と対象範囲（概要のみ。詳細は後の変更単位で拡張）。</li>
-<li><strong>証跡準備</strong>: アーティファクトと検証が主張を支える — <a href="../artifacts/">Artifacts</a>、<a href="../validator/">Validator</a> を参照。</li>
-<li><strong>規範ソース</strong>: 要件は <a href="../standard/current/">Standard（Current）</a> に定義される。</li>
+<li><strong>主張できること</strong>: AIMO Standard の証跡構造とトレーサビリティ要件への整合性。</li>
+<li><strong>主張できないこと</strong>: 法的適合、認証、規制当局の承認。<a href="../governance/responsibility-boundary/">責任境界</a> を参照。</li>
 </ul>
-<p>統合入口は <a href="../governance/trust-package/">Trust Package</a> を参照。</p>
-<h1 id="conformance_1">適合性（Conformance）</h1>
-<p>本セクションでは、AIMO Standard への適合方法および適合レベルの意味を説明する。</p>
+<h2 id="_2">期待される証跡</h2>
+<p>適合を示すために、組織は以下を提供する必要がある：</p>
+<ol>
+<li><strong>Evidence Bundle</strong>: <a href="../artifacts/">Artifacts</a> および <a href="../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> に従った構造化 EV レコード。</li>
+<li><strong>Validator 結果</strong>: バリデータからの合格出力 — <a href="../validator/">Validator</a> を参照。</li>
+<li><strong>バージョン参照</strong>: 明示的な AIMO Standard バージョン — <a href="../standard/versions/">Versions</a> を参照。</li>
+</ol>
+<h2 id="_3">非過剰主張</h2>
+<p>!!! warning "重要"
+    AIMO Standard への適合は、<strong>証跡準備とトレーサビリティ</strong>を示すものであり、法的適合や認証を示すものではない。<a href="../governance/responsibility-boundary/">責任境界</a> を参照。</p>
+<h2 id="_4">関連ページ</h2>
 <ul>
-<li><strong>適合レベル</strong>: 定義と判定基準（後の変更単位で拡張予定）。</li>
-<li><strong>適合の仕方</strong>: アーティファクト（タクソノミー、辞書、証跡テンプレート、バリデータ）を用いた追跡可能性の示し方。</li>
-<li><strong>仕様との関係</strong>: <a href="../standard/current/">Standard &gt; Current</a> が規範要件を定義する。適合性は実装がそれにどう対応するかを説明する。</li>
+<li><a href="../governance/trust-package/">Trust Package</a> — 監査人向けの統合入口</li>
+<li><a href="../standard/current/">Standard (Current)</a> — 規範要件</li>
+<li><a href="../artifacts/">Artifacts</a> — 証跡構造</li>
 </ul>
-<p>関連: <a href="../artifacts/">Artifacts</a>、<a href="../validator/">Validator</a>。</p>
 
 
 

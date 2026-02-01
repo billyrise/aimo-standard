@@ -1809,7 +1809,7 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 <p>監査提出用の証跡を準備する際：</p>
 <ol>
 <li><strong>Evidence Bundle の作成</strong>: <a href="../artifacts/evidence-bundle/">Evidence Bundle</a> と <a href="../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> に従い、EV レコード、Dictionary、Summary、Change Log を作成する。</li>
-<li><strong>Validator の実行</strong>: <code>python validator/src/validate.py</code> を実行して構造整合性を確認する。エラーはすべて修正する。</li>
+<li><strong>Validator の実行</strong>: <code>python validator/src/validate.py bundle/root.json</code> を実行して構造整合性を確認する。エラーはすべて修正する。</li>
 <li><strong>チェックサムの生成</strong>: 検証用の SHA-256 チェックサムを作成する：
    <code>bash
    sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
@@ -1822,7 +1822,7 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 <p>証跡提出物を受領した監査人は、完全性と構造を検証すべきである：</p>
 <ol>
 <li><strong>チェックサム検証</strong>: <code>sha256sum -c SHA256SUMS.txt</code> を実行してファイルの完全性を確認</li>
-<li><strong>バリデータ実行</strong>: <code>python validator/src/validate.py bundle/</code> を実行して構造を確認</li>
+<li><strong>バリデータ実行</strong>: <code>python validator/src/validate.py bundle/root.json</code> を実行して構造を確認</li>
 <li><strong>バージョン確認</strong>: 記載された AIMO Standard バージョンが <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a> に存在することを確認</li>
 </ol>
 <p>!!! tip "ツールを独立に取得"
