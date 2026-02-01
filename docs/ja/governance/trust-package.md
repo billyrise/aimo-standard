@@ -161,8 +161,8 @@ git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
 
 # 重要：提出物に記載された正確なバージョンを使用
-# VERSION を提出者が宣言したバージョンに置き換える（例：v0.1.6）
-VERSION=v0.1.6  # ← 提出物のバージョンに合わせる
+# VERSION を提出者が宣言したバージョンに置き換える（例：v0.1.7）
+VERSION=v0.1.7  # ← 提出物のバージョンに合わせる
 git checkout "$VERSION"
 
 # Python 環境のセットアップ

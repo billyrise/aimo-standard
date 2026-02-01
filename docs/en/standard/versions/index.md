@@ -44,7 +44,7 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 
     ```powershell
     # Download all assets for a specific version
-    $VERSION = "v0.1.6"
+    $VERSION = "v0.1.7"
     $BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
 
     Invoke-WebRequest -Uri "$BASE_URL/trust_package.pdf" -OutFile trust_package.pdf
@@ -200,14 +200,14 @@ When upgrading between versions with breaking changes:
 
 Each release creates a frozen documentation snapshot accessible at:
 
-- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.1.6/`)
+- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.1.7/`)
 - GitHub Pages: `https://billyrise.github.io/aimo-standard/{version}/`
 
 ### URL Types and Their Meaning
 
 | URL Pattern | Description | For Audit Citations? |
 |-------------|-------------|---------------------|
-| `/X.Y.Z/` (e.g., `/0.1.6/`) | **Frozen release** — immutable snapshot | **Yes** (preferred) |
+| `/X.Y.Z/` (e.g., `/0.1.7/`) | **Frozen release** — immutable snapshot | **Yes** (preferred) |
 | `/latest/` | **Alias** — redirects to most recent release | Yes (resolves to `/X.Y.Z/`) |
 | `/dev/` | **Preview** — unreleased main branch content | **No** (not for citations) |
 
@@ -218,10 +218,10 @@ Each release creates a frozen documentation snapshot accessible at:
 ### FAQ
 
 ??? question "Why is `/latest/` not a version number?"
-    `/latest/` is a convenience alias that always redirects to the most recent stable release (e.g., `/0.1.6/`). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.
+    `/latest/` is a convenience alias that always redirects to the most recent stable release (e.g., `/0.1.7/`). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.
 
 ??? question "Which URL should auditors cite?"
-    - **Formal audits (immutability required)**: Use `/X.Y.Z/` (e.g., `https://standard.aimoaas.com/0.1.6/standard/current/`)
+    - **Formal audits (immutability required)**: Use `/X.Y.Z/` (e.g., `https://standard.aimoaas.com/0.1.7/standard/current/`)
     - **General references**: `/latest/` is acceptable as it redirects to the current release
     - **Never cite**: `/dev/` (unreleased, subject to change)
 
