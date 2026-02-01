@@ -46,13 +46,16 @@ AIMO Standardはドキュメントのバージョン管理に[mike](https://gith
 |-----------|-------------|---------------|
 | `latest`（エイリアス） | `https://standard.aimoaas.com/latest/` | 現行安定版の正規 |
 | `dev` | `https://standard.aimoaas.com/dev/` | 開発版の正規（noindex推奨） |
-| タグ付き（例：`v1.0.0`） | `https://standard.aimoaas.com/v1.0.0/` | 特定バージョンの正規 |
+| バージョン指定（例：`1.0.0`） | `https://standard.aimoaas.com/1.0.0/` | 特定バージョンの正規 |
 
 **重要事項：**
 
 - `latest`は最新の安定リリースを指すエイリアスです。
 - `dev`は`main`ブランチを反映し、変更される可能性があります。正式な監査では引用を避けてください。
-- タグ付きバージョン（例：`v1.0.0`）は不変であり、監査引用に安全です。
+- バージョン指定スナップショットは不変であり、監査引用に安全です。
+
+!!! info "Git タグ vs. サイトパス"
+    Git リリースタグは `v` プレフィックスを使用します（例：`v0.1.6`）が、サイトパスでは `v` を省略します（例：`/0.1.6/`）。これは mike などのドキュメントバージョン管理ツールの標準的な方法です。
 
 ## 監査人ガイダンス：引用すべきURL
 
@@ -63,7 +66,7 @@ AIMO Standardはドキュメントのバージョン管理に[mike](https://gith
 | ユースケース | 推奨URL |
 |--------------|---------|
 | 現行安定版仕様 | `https://standard.aimoaas.com/latest/standard/current/` |
-| 特定バージョン（監査用） | `https://standard.aimoaas.com/v{X.Y.Z}/standard/current/` |
+| 特定バージョン（監査用） | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
 | ガバナンス & ポリシー | `https://standard.aimoaas.com/latest/governance/` |
 | Trust Package | `https://standard.aimoaas.com/latest/governance/trust-package/` |
 
@@ -74,13 +77,16 @@ AIMO Standardはドキュメントのバージョン管理に[mike](https://gith
 
 ### 不変性のためのバージョン指定引用
 
-不変の参照が必要な正式監査では、タグ付きバージョンURLを使用してください：
+不変の参照が必要な正式監査では、バージョン指定スナップショットURLを使用してください：
 
 ```
-https://standard.aimoaas.com/v1.0.0/standard/current/01-overview/
+https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 ```
 
-タグ付きバージョンはリリース時点で凍結され、変更されません。
+バージョン指定スナップショットはリリース時点で凍結され、変更されません。
+
+!!! note "URLフォーマット"
+    サイトパスでは `v` プレフィックスを省略します。バージョン `v1.0.0` の場合、URLでは `/1.0.0/` を使用します。
 
 ## 技術的実装
 

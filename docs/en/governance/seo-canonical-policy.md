@@ -46,13 +46,16 @@ AIMO Standard uses [mike](https://github.com/jimporter/mike) for documentation v
 |---------|-------------|------------------|
 | `latest` (alias) | `https://standard.aimoaas.com/latest/` | Canonical for current stable |
 | `dev` | `https://standard.aimoaas.com/dev/` | Canonical for development (noindex recommended) |
-| Tagged (e.g., `v1.0.0`) | `https://standard.aimoaas.com/v1.0.0/` | Canonical for that specific version |
+| Versioned (e.g., `1.0.0`) | `https://standard.aimoaas.com/1.0.0/` | Canonical for that specific version |
 
 **Important notes:**
 
 - `latest` is an alias pointing to the most recent stable release.
 - `dev` reflects the `main` branch and may change; avoid citing in formal audits.
-- Tagged versions (e.g., `v1.0.0`) are immutable and safe for audit citations.
+- Versioned snapshots are immutable and safe for audit citations.
+
+!!! info "Git Tag vs. Site Path"
+    Git release tags use `v` prefix (e.g., `v0.1.6`), but site paths omit the `v` (e.g., `/0.1.6/`). This is standard practice for documentation versioning tools like mike.
 
 ## Auditor Guidance: Which URL to Cite
 
@@ -63,7 +66,7 @@ When citing AIMO Standard in audit reports, compliance documentation, or externa
 | Use Case | Recommended URL |
 |----------|-----------------|
 | Current stable specification | `https://standard.aimoaas.com/latest/standard/current/` |
-| Specific version (for audit) | `https://standard.aimoaas.com/v{X.Y.Z}/standard/current/` |
+| Specific version (for audit) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
 | Governance & policies | `https://standard.aimoaas.com/latest/governance/` |
 | Trust Package | `https://standard.aimoaas.com/latest/governance/trust-package/` |
 
@@ -74,13 +77,16 @@ When citing AIMO Standard in audit reports, compliance documentation, or externa
 
 ### Versioned Citation for Immutability
 
-For formal audits requiring immutable references, use tagged version URLs:
+For formal audits requiring immutable references, use versioned snapshot URLs:
 
 ```
-https://standard.aimoaas.com/v1.0.0/standard/current/01-overview/
+https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 ```
 
-Tagged versions are frozen at release time and will not change.
+Versioned snapshots are frozen at release time and will not change.
+
+!!! note "URL Format"
+    Site paths use version numbers without the `v` prefix. For version `v1.0.0`, use `/1.0.0/` in URLs.
 
 ## Technical Implementation
 

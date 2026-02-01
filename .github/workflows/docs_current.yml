@@ -52,6 +52,46 @@ jobs:
           mike deploy latest dev --update-aliases --push
           mike set-default latest --push
 
+      - name: Generate legacy URL redirects
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages:gh-pages || true
+          git checkout gh-pages
+          
+          # Generate redirect HTML pages inline (tooling not available on gh-pages)
+          REDIRECT_TEMPLATE='<!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="utf-8">
+              <meta http-equiv="refresh" content="0; url=TARGET">
+              <link rel="canonical" href="TARGET">
+              <title>Redirecting...</title>
+          </head>
+          <body>
+              <p>This page has moved. If you are not redirected, <a href="TARGET">click here</a>.</p>
+          </body>
+          </html>'
+          
+          # Root-level redirects to /latest/
+          for path in "standard/versions" "standard/current"; do
+            mkdir -p "$path"
+            target="../latest/${path}/"
+            echo "${REDIRECT_TEMPLATE//TARGET/$target}" > "${path}/index.html"
+            echo "Created redirect: ${path}/index.html -> $target"
+          done
+          
+          # Commit and push if there are changes
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No redirect changes to commit."
+          else
+            git commit -m "chore(pages): generate legacy URL redirects"
+            git push origin gh-pages
+          fi
+          git checkout -
+
       - name: Ensure CNAME for custom domain (standard.aimoaas.com)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

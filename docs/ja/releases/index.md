@@ -21,20 +21,46 @@
 
 ダウンロード後、チェックサムでファイルの整合性を検証できます：
 
-```bash
-# チェックサムファイルをダウンロード
-curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+=== "Linux"
 
-# 特定のファイルを検証
-sha256sum -c SHA256SUMS.txt --ignore-missing
-```
+    ```bash
+    # チェックサムファイルをダウンロード
+    curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
 
-または手動で：
+    # 特定のファイルを検証
+    sha256sum -c SHA256SUMS.txt --ignore-missing
 
-```bash
-sha256sum trust_package.pdf
-# 出力を SHA256SUMS.txt と比較
-```
+    # または手動で検証：
+    sha256sum trust_package.pdf
+    # 出力を SHA256SUMS.txt と比較
+    ```
+
+=== "macOS"
+
+    ```bash
+    # チェックサムファイルをダウンロード
+    curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+
+    # 特定のファイルを検証
+    shasum -a 256 -c SHA256SUMS.txt
+
+    # または手動で検証：
+    shasum -a 256 trust_package.pdf
+    # 出力を SHA256SUMS.txt と比較
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # チェックサムファイルをダウンロード
+    Invoke-WebRequest -Uri "https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+
+    # 特定のファイルを検証
+    Get-FileHash .\trust_package.pdf -Algorithm SHA256
+
+    # Hash 出力を SHA256SUMS.txt と比較
+    Get-Content .\SHA256SUMS.txt
+    ```
 
 ## Artifacts Zip の内容
 
@@ -63,9 +89,27 @@ sha256sum trust_package.pdf
 1. **Evidence Bundle の作成**: [Evidence Bundle](../artifacts/evidence-bundle.md) と [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) に従い、EV レコード、Dictionary、Summary、Change Log を作成する。
 2. **Validator の実行**: `python validator/src/validate.py bundle/root.json` を実行して構造整合性を確認する。エラーはすべて修正する。
 3. **チェックサムの生成**: 検証用の SHA-256 チェックサムを作成する：
-   ```bash
-   sha256sum *.json *.pdf > SHA256SUMS.txt
-   ```
+
+    === "Linux"
+
+        ```bash
+        sha256sum *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "macOS"
+
+        ```bash
+        shasum -a 256 *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "Windows (PowerShell)"
+
+        ```powershell
+        Get-ChildItem *.json, *.pdf | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+            "$hash  $($_.Name)"
+        } | Out-File SHA256SUMS.txt -Encoding UTF8
+        ```
 4. **パッケージ化**: バンドルディレクトリの zip アーカイブを作成する。
 5. **バージョン整合の記録**: 証跡が整合する AIMO Standard リリース（例：`v1.0.0`）を記録する。
 6. **提出**: パッケージ、チェックサム、バージョン参照を監査人に提供する。
@@ -76,7 +120,7 @@ sha256sum trust_package.pdf
 
 証跡提出物を受領した監査人は、完全性と構造を検証すべきである：
 
-1. **チェックサム検証**: `sha256sum -c SHA256SUMS.txt` を実行してファイルの完全性を確認
+1. **チェックサム検証**: チェックサム検証（Linux: `sha256sum -c`、macOS: `shasum -a 256 -c`、Windows: `Get-FileHash`）を実行してファイルの完全性を確認
 2. **バリデータ実行**: `python validator/src/validate.py bundle/root.json` を実行して構造を確認
 3. **バージョン確認**: 記載された AIMO Standard バージョンが [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認
 

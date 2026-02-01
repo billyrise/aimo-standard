@@ -26,38 +26,101 @@
 
 ### 1. リリースアセットのダウンロード
 
-```bash
-# 特定バージョンの全アセットをダウンロード
-VERSION=v0.1.6
-BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
+=== "Linux / macOS"
 
-curl -LO "${BASE_URL}/trust_package.pdf"
-curl -LO "${BASE_URL}/trust_package.ja.pdf"
-curl -LO "${BASE_URL}/aimo-standard-artifacts.zip"
-curl -LO "${BASE_URL}/SHA256SUMS.txt"
-```
+    ```bash
+    # 特定バージョンの全アセットをダウンロード
+    VERSION=v0.1.6
+    BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
+
+    curl -LO "${BASE_URL}/trust_package.pdf"
+    curl -LO "${BASE_URL}/trust_package.ja.pdf"
+    curl -LO "${BASE_URL}/aimo-standard-artifacts.zip"
+    curl -LO "${BASE_URL}/SHA256SUMS.txt"
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # 特定バージョンの全アセットをダウンロード
+    $VERSION = "v0.1.6"
+    $BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
+
+    Invoke-WebRequest -Uri "$BASE_URL/trust_package.pdf" -OutFile trust_package.pdf
+    Invoke-WebRequest -Uri "$BASE_URL/trust_package.ja.pdf" -OutFile trust_package.ja.pdf
+    Invoke-WebRequest -Uri "$BASE_URL/aimo-standard-artifacts.zip" -OutFile aimo-standard-artifacts.zip
+    Invoke-WebRequest -Uri "$BASE_URL/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+    ```
 
 ### 2. チェックサム検証
 
-```bash
-# ダウンロードした全ファイルをチェックサムで検証
-sha256sum -c SHA256SUMS.txt
+=== "Linux"
 
-# 期待される出力（すべて "OK" と表示されるべき）:
-# trust_package.pdf: OK
-# trust_package.ja.pdf: OK
-# aimo-standard-artifacts.zip: OK
-```
+    ```bash
+    # ダウンロードした全ファイルをチェックサムで検証
+    sha256sum -c SHA256SUMS.txt
+
+    # 期待される出力（すべて "OK" と表示されるべき）:
+    # trust_package.pdf: OK
+    # trust_package.ja.pdf: OK
+    # aimo-standard-artifacts.zip: OK
+    ```
+
+=== "macOS"
+
+    ```bash
+    # ダウンロードした全ファイルをチェックサムで検証
+    shasum -a 256 -c SHA256SUMS.txt
+
+    # 期待される出力（すべて "OK" と表示されるべき）:
+    # trust_package.pdf: OK
+    # trust_package.ja.pdf: OK
+    # aimo-standard-artifacts.zip: OK
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # 各ファイルを検証
+    Get-FileHash .\trust_package.pdf -Algorithm SHA256
+    Get-FileHash .\trust_package.ja.pdf -Algorithm SHA256
+    Get-FileHash .\aimo-standard-artifacts.zip -Algorithm SHA256
+
+    # Hash 出力を SHA256SUMS.txt と比較
+    Get-Content .\SHA256SUMS.txt
+    ```
 
 ### 3. 手動検証（代替方法）
 
-```bash
-# 特定ファイルのハッシュを計算
-sha256sum trust_package.pdf
+=== "Linux"
 
-# 出力を SHA256SUMS.txt と比較
-cat SHA256SUMS.txt
-```
+    ```bash
+    # 特定ファイルのハッシュを計算
+    sha256sum trust_package.pdf
+
+    # 出力を SHA256SUMS.txt と比較
+    cat SHA256SUMS.txt
+    ```
+
+=== "macOS"
+
+    ```bash
+    # 特定ファイルのハッシュを計算
+    shasum -a 256 trust_package.pdf
+
+    # 出力を SHA256SUMS.txt と比較
+    cat SHA256SUMS.txt
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # 特定ファイルのハッシュを計算
+    Get-FileHash .\trust_package.pdf -Algorithm SHA256
+
+    # チェックサムファイルを表示
+    Get-Content .\SHA256SUMS.txt
+    ```
 
 !!! tip "監査人向け"
     チェックサムファイルは常に公式 GitHub Release から直接取得し、提出者からは受け取らないでください。これにより独立した検証が保証されます。
