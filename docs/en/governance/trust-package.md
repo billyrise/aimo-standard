@@ -68,7 +68,7 @@ For the full scope definition, assumptions, and adopter responsibilities, see [R
 Follow these steps to prepare an audit-ready submission:
 
 1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-2. **Run Validator**: Execute `python validator/src/validate.py` against your bundle to check structural consistency. Fix any errors before proceeding.
+2. **Run Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix any errors before proceeding.
 3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
    ```bash
    sha256sum *.json *.pdf > SHA256SUMS.txt

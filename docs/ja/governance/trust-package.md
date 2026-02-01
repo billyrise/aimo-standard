@@ -68,7 +68,7 @@ AIMO Standard は構造化された証跡フォーマットと説明可能性フ
 監査対応の提出物を準備するには、以下のステップに従う：
 
 1. **Evidence Bundle の生成**: [Evidence Bundle](../artifacts/evidence-bundle.md) と [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) に従い、EV レコード、Dictionary、Summary、Change Log を作成する。
-2. **Validator の実行**: `python validator/src/validate.py` をバンドルに対して実行し、構造整合性を確認する。エラーがあれば修正する。
+2. **Validator の実行**: `python validator/src/validate.py bundle/root.json` を実行し、構造整合性を確認する。エラーがあれば修正する。
 3. **チェックサムの作成**: 提出ファイルすべての SHA-256 チェックサムを生成する：
    ```bash
    sha256sum *.json *.pdf > SHA256SUMS.txt

@@ -61,7 +61,7 @@ For governance and versioning policy, see [Governance](../governance/index.md).
 When preparing evidence for audit submission:
 
 1. **Create your Evidence Bundle**: Follow [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) to create EV records, Dictionary, Summary, and Change Log.
-2. **Run the Validator**: Execute `python validator/src/validate.py` to check structural consistency. Fix all errors before proceeding.
+2. **Run the Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix all errors before proceeding.
 3. **Generate Checksums**: Create SHA-256 checksums for verification:
    ```bash
    sha256sum *.json *.pdf > SHA256SUMS.txt
@@ -77,7 +77,7 @@ For the complete preparation guide, see [Trust Package](../governance/trust-pack
 Auditors receiving evidence submissions should verify integrity and structure:
 
 1. **Verify checksums**: Run `sha256sum -c SHA256SUMS.txt` to confirm file integrity
-2. **Run validator**: Execute `python validator/src/validate.py bundle/` to check structure
+2. **Run validator**: Execute `python validator/src/validate.py bundle/root.json` to check structure
 3. **Confirm version**: Verify the stated AIMO Standard version exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
 
 !!! tip "Obtain tools independently"
