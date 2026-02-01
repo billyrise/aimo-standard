@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{# AIMO Standard - SEO hreflang alternate links in HTML head #}
+{% block extrahead %}
+{{ super() }}
+{% if page and page.canonical_url %}
+{# Extract path from canonical URL #}
+{% set current_path = page.canonical_url | replace(config.site_url, '') %}
+{% if current_path.startswith('ja/') %}
+{# JA page: EN alternate is without /ja/, JA is current #}
+{% set en_path = current_path[3:] %}
+<link rel="alternate" hreflang="en" href="{{ config.site_url }}{{ en_path }}">
+<link rel="alternate" hreflang="ja" href="{{ page.canonical_url }}">
+{% else %}
+{# EN page: JA alternate has /ja/ prefix #}
+<link rel="alternate" hreflang="en" href="{{ page.canonical_url }}">
+<link rel="alternate" hreflang="ja" href="{{ config.site_url }}ja/{{ current_path }}">
+{% endif %}
+<link rel="alternate" hreflang="x-default" href="{{ config.site_url }}{{ current_path if not current_path.startswith('ja/') else current_path[3:] }}">
+{% endif %}
+{% endblock %}
