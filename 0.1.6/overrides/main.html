@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 
-{# AIMO Standard - SEO hreflang alternate links in HTML head #}
+{# AIMO Standard - SEO and version-specific meta tags in HTML head #}
 {% block extrahead %}
 {{ super() }}
+{# noindex for dev (preview) version - unreleased content should not be indexed #}
+{# This is set by deploy-dev.yml via MIKE_DOCS_VERSION environment variable #}
+{% if config.extra.is_dev_deploy %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
 {% if page and page.canonical_url %}
 {# Extract path from canonical URL #}
 {% set current_path = page.canonical_url | replace(config.site_url, '') %}

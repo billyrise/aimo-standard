@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://standard.aimoaas.com/0.1.6/releases/">
+        <link rel="canonical" href="https://standard.aimoaas.com/latest/releases/">
       
       
         <link rel="prev" href="../examples/">
@@ -60,10 +60,13 @@
 
 
 
-<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.6/releases/">
-<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.6ja//releases/">
 
-<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/0.1.6/releases/">
+
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/releases/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja//releases/">
+
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/releases/">
 
 
   </head>
@@ -1034,6 +1037,8 @@
       
         
       
+        
+      
     
     
     
@@ -1120,6 +1125,122 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../artifacts/log-schemas/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Log Schemas
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Log Schemas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artifacts/log-schemas/shadow-ai-discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shadow AI Discovery Log Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artifacts/log-schemas/agent-activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Activity Log Format
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1348,6 +1469,8 @@
       
         
       
+        
+      
     
     
     
@@ -1429,6 +1552,29 @@
   
   <span class="md-ellipsis">
     Responsibility Boundary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../governance/human-oversight-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Human Oversight Protocol
     
   </span>
   
@@ -1777,15 +1923,43 @@
 </table>
 <h3 id="verifying-downloads">Verifying Downloads</h3>
 <p>After downloading, verify file integrity using checksums:</p>
-<pre><code class="language-bash"># Download the checksums file
+<p>=== "Linux"</p>
+<pre><code>```bash
+# Download the checksums file
 curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
 
 # Verify a specific file
 sha256sum -c SHA256SUMS.txt --ignore-missing
-</code></pre>
-<p>Or manually:</p>
-<pre><code class="language-bash">sha256sum trust_package.pdf
+
+# Or verify manually:
+sha256sum trust_package.pdf
 # Compare output with SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+# Download the checksums file
+curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+
+# Verify a specific file
+shasum -a 256 -c SHA256SUMS.txt
+
+# Or verify manually:
+shasum -a 256 trust_package.pdf
+# Compare output with SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+# Download the checksums file
+Invoke-WebRequest -Uri "https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+
+# Verify a specific file
+Get-FileHash .\trust_package.pdf -Algorithm SHA256
+
+# Compare the Hash output with SHA256SUMS.txt
+Get-Content .\SHA256SUMS.txt
+```
 </code></pre>
 <h2 id="artifacts-zip-contents">Artifacts Zip Contents</h2>
 <p>The <code>aimo-standard-artifacts.zip</code> contains:</p>
@@ -1810,18 +1984,38 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 <ol>
 <li><strong>Create your Evidence Bundle</strong>: Follow <a href="../artifacts/evidence-bundle/">Evidence Bundle</a> and <a href="../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> to create EV records, Dictionary, Summary, and Change Log.</li>
 <li><strong>Run the Validator</strong>: Execute <code>python validator/src/validate.py bundle/root.json</code> to check structural consistency. Fix all errors before proceeding.</li>
-<li><strong>Generate Checksums</strong>: Create SHA-256 checksums for verification:
-   <code>bash
-   sha256sum *.json *.pdf &gt; SHA256SUMS.txt</code></li>
+<li>
+<p><strong>Generate Checksums</strong>: Create SHA-256 checksums for verification:</p>
+<p>=== "Linux"</p>
+<pre><code>```bash
+sha256sum *.json *.pdf &gt; SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "macOS"</p>
+<pre><code>```bash
+shasum -a 256 *.json *.pdf &gt; SHA256SUMS.txt
+```
+</code></pre>
+<p>=== "Windows (PowerShell)"</p>
+<pre><code>```powershell
+Get-ChildItem *.json, *.pdf | ForEach-Object {
+    $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+    "$hash  $($_.Name)"
+} | Out-File SHA256SUMS.txt -Encoding UTF8
+```
+</code></pre>
+<ol>
 <li><strong>Package</strong>: Create a zip archive of your bundle directory.</li>
 <li><strong>Document version alignment</strong>: Note which AIMO Standard release (e.g., <code>v1.0.0</code>) your evidence aligns with.</li>
 <li><strong>Deliver</strong>: Provide the package, checksums, and version reference to your auditor.</li>
+</ol>
+</li>
 </ol>
 <p>For the complete preparation guide, see <a href="../governance/trust-package/">Trust Package</a>.</p>
 <h2 id="for-auditors-verification-procedure">For auditors: Verification procedure</h2>
 <p>Auditors receiving evidence submissions should verify integrity and structure:</p>
 <ol>
-<li><strong>Verify checksums</strong>: Run <code>sha256sum -c SHA256SUMS.txt</code> to confirm file integrity</li>
+<li><strong>Verify checksums</strong>: Run checksum verification (Linux: <code>sha256sum -c</code>, macOS: <code>shasum -a 256 -c</code>, Windows: <code>Get-FileHash</code>) to confirm file integrity</li>
 <li><strong>Run validator</strong>: Execute <code>python validator/src/validate.py bundle/root.json</code> to check structure</li>
 <li><strong>Confirm version</strong>: Verify the stated AIMO Standard version exists at <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a></li>
 </ol>
@@ -1880,7 +2074,7 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
