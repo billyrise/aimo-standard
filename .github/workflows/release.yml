@@ -85,17 +85,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy version snapshot to gh-pages (VER -> dev/latest aliases)
+      - name: Deploy version snapshot to gh-pages (VER -> latest/dev aliases)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch origin gh-pages:gh-pages || true
-          # Deploy versioned snapshot (e.g., 0.1.0)
-          mike deploy "${{ steps.v.outputs.ver }}" --push
-          # Update dev alias to point to this version
-          mike deploy dev --update-aliases --push
-          # Update latest alias to point to dev (keeps dev and latest in sync)
-          mike alias dev latest --update-aliases --push
+          # Deploy versioned snapshot (e.g., 0.1.0) with latest and dev as aliases
+          # This ensures language switcher links use /latest/ (not /dev/)
+          mike deploy "${{ steps.v.outputs.ver }}" latest dev --update-aliases --push
           mike set-default latest --push
 
       - name: Ensure CNAME for custom domain (standard.aimoaas.com)
