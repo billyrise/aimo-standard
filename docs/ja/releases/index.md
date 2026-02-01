@@ -61,7 +61,7 @@ sha256sum trust_package.pdf
 監査提出用の証跡を準備する際：
 
 1. **Evidence Bundle の作成**: [Evidence Bundle](../artifacts/evidence-bundle.md) と [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) に従い、EV レコード、Dictionary、Summary、Change Log を作成する。
-2. **Validator の実行**: `python validator/src/validate.py` を実行して構造整合性を確認する。エラーはすべて修正する。
+2. **Validator の実行**: `python validator/src/validate.py bundle/root.json` を実行して構造整合性を確認する。エラーはすべて修正する。
 3. **チェックサムの生成**: 検証用の SHA-256 チェックサムを作成する：
    ```bash
    sha256sum *.json *.pdf > SHA256SUMS.txt
@@ -77,7 +77,7 @@ sha256sum trust_package.pdf
 証跡提出物を受領した監査人は、完全性と構造を検証すべきである：
 
 1. **チェックサム検証**: `sha256sum -c SHA256SUMS.txt` を実行してファイルの完全性を確認
-2. **バリデータ実行**: `python validator/src/validate.py bundle/` を実行して構造を確認
+2. **バリデータ実行**: `python validator/src/validate.py bundle/root.json` を実行して構造を確認
 3. **バージョン確認**: 記載された AIMO Standard バージョンが [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認
 
 !!! tip "ツールを独立に取得"

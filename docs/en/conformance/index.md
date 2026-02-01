@@ -1,19 +1,27 @@
 # Conformance
 
 This section defines how organizations claim compliance with the AIMO Standard and what evidence is expected.
-It is a hub for conformance levels and their relationship to the specification and artifacts.
 
-- **Conformance levels**: criteria and scope (overview here; expanded in later change units).
-- **Evidence readiness**: how artifacts and validator checks support claims — see [Artifacts](../artifacts/index.md) and [Validator](../validator/index.md).
-- **Normative source**: requirements are defined in [Standard (Current)](../standard/current/index.md).
+## Purpose
 
-For a consolidated entry point, see the [Trust Package](../governance/trust-package.md).
-# Conformance
+- **What you can claim**: Alignment with the AIMO Standard's evidence structure and traceability requirements.
+- **What you cannot claim**: Legal compliance, certification, or regulatory approval. See [Responsibility Boundary](../governance/responsibility-boundary.md).
 
-This section describes how to comply with the AIMO Standard and what conformance levels mean.
+## Expected Evidence
 
-- **Conformance levels**: definitions and criteria (to be expanded in a later change unit).
-- **How to comply**: use of artifacts (taxonomy, dictionary, evidence templates, validator) to demonstrate traceability.
-- **Relationship to specifications**: [Standard > Current](../standard/current/index.md) defines normative requirements; conformance explains how implementations map to them.
+To demonstrate conformance, organizations must provide:
 
-See also: [Artifacts](../artifacts/index.md), [Validator](../validator/index.md).
+1. **Evidence Bundle**: Structured EV records per [Artifacts](../artifacts/index.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
+2. **Validator Results**: Passing output from the validator — see [Validator](../validator/index.md).
+3. **Version Reference**: Explicit AIMO Standard version — see [Versions](../standard/versions/index.md).
+
+## Non-overclaim
+
+!!! warning "Important"
+    Conformance to the AIMO Standard demonstrates **evidence readiness and traceability**, not legal compliance or certification. See [Responsibility Boundary](../governance/responsibility-boundary.md).
+
+## Related Pages
+
+- [Trust Package](../governance/trust-package.md) — Consolidated entry point for auditors
+- [Standard (Current)](../standard/current/index.md) — Normative requirements
+- [Artifacts](../artifacts/index.md) — Evidence structure

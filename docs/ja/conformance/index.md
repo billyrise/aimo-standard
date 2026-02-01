@@ -1,19 +1,27 @@
 # Conformance
 
-本セクションでは、AIMO Standard への適合の主張方法と必要な証跡の考え方を定義する。
-適合レベルと仕様・アーティファクトの関係を示すハブである。
+本セクションでは、AIMO Standard への適合の主張方法と期待される証跡を定義する。
 
-- **適合レベル**: 判定基準と対象範囲（概要のみ。詳細は後の変更単位で拡張）。
-- **証跡準備**: アーティファクトと検証が主張を支える — [Artifacts](../artifacts/index.md)、[Validator](../validator/index.md) を参照。
-- **規範ソース**: 要件は [Standard（Current）](../standard/current/index.md) に定義される。
+## 目的
 
-統合入口は [Trust Package](../governance/trust-package.md) を参照。
-# 適合性（Conformance）
+- **主張できること**: AIMO Standard の証跡構造とトレーサビリティ要件への整合性。
+- **主張できないこと**: 法的適合、認証、規制当局の承認。[責任境界](../governance/responsibility-boundary.md) を参照。
 
-本セクションでは、AIMO Standard への適合方法および適合レベルの意味を説明する。
+## 期待される証跡
 
-- **適合レベル**: 定義と判定基準（後の変更単位で拡張予定）。
-- **適合の仕方**: アーティファクト（タクソノミー、辞書、証跡テンプレート、バリデータ）を用いた追跡可能性の示し方。
-- **仕様との関係**: [Standard > Current](../standard/current/index.md) が規範要件を定義する。適合性は実装がそれにどう対応するかを説明する。
+適合を示すために、組織は以下を提供する必要がある：
 
-関連: [Artifacts](../artifacts/index.md)、[Validator](../validator/index.md)。
+1. **Evidence Bundle**: [Artifacts](../artifacts/index.md) および [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) に従った構造化 EV レコード。
+2. **Validator 結果**: バリデータからの合格出力 — [Validator](../validator/index.md) を参照。
+3. **バージョン参照**: 明示的な AIMO Standard バージョン — [Versions](../standard/versions/index.md) を参照。
+
+## 非過剰主張
+
+!!! warning "重要"
+    AIMO Standard への適合は、**証跡準備とトレーサビリティ**を示すものであり、法的適合や認証を示すものではない。[責任境界](../governance/responsibility-boundary.md) を参照。
+
+## 関連ページ
+
+- [Trust Package](../governance/trust-package.md) — 監査人向けの統合入口
+- [Standard (Current)](../standard/current/index.md) — 規範要件
+- [Artifacts](../artifacts/index.md) — 証跡構造
