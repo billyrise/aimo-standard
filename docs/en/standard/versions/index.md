@@ -5,12 +5,13 @@ Official releases are frozen snapshots published with auditor-ready PDFs and mac
 ## Latest Release
 
 !!! success "Current Version"
-    **v0.1.6** (2026-02-01) — [View Documentation](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.6)
+    **v0.1.7** (2026-02-01) — [View Documentation](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.7)
 
 ## Version History
 
 | Version | Date | Release Notes | PDF (EN) | PDF (JA) | Artifacts | Checksums |
 | :------ | :--- | :------------ | :------- | :------- | :-------- | :-------- |
+| **v0.1.7** | 2026-02-01 | [Changelog](../current/08-changelog.md#version-017) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.7/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.7/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.7/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.7/SHA256SUMS.txt) |
 | **v0.1.6** | 2026-02-01 | [Changelog](../current/08-changelog.md#version-016) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.6/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.6/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.6/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.6/SHA256SUMS.txt) |
 | **v0.1.3** | 2026-01-31 | [Changelog](../current/08-changelog.md#version-013) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.3/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.3/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.3/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.3/SHA256SUMS.txt) |
 | **v0.1.2** | 2026-01-31 | [Changelog](../current/08-changelog.md#version-012) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/SHA256SUMS.txt) |
@@ -30,7 +31,7 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 
     ```bash
     # Download all assets for a specific version
-    VERSION=v0.1.6
+    VERSION=v0.1.7
     BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
     curl -LO "${BASE_URL}/trust_package.pdf"
@@ -133,7 +134,7 @@ Starting from v0.1.6, all release assets include cryptographically signed build 
 
 ```bash
 # Download release assets using GitHub CLI
-VERSION=v0.1.6
+VERSION=v0.1.7
 gh release download "$VERSION" --repo billyrise/aimo-standard
 
 # Verify attestation for each asset
