@@ -68,7 +68,7 @@ v1.0.0: FS-007 削除 (status: removed)
 
 | アーティファクト | 説明 |
 | --- | --- |
-| バージョン付きサイトスナップショット | `https://standard.aimoaas.com/v0.1.0/` |
+| バージョン付きサイトスナップショット | `https://standard.aimoaas.com/0.1.0/` |
 | PDF仕様書 | `AIMO-Standard_v0.1.0.pdf` |
 | アセットパッケージ（ZIP） | スキーマ、テンプレート、辞書 |
 | チェックサム | 完全性のためのSHA-256ハッシュ |

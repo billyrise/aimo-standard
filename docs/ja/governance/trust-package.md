@@ -70,9 +70,27 @@ AIMO Standard は構造化された証跡フォーマットと説明可能性フ
 1. **Evidence Bundle の生成**: [Evidence Bundle](../artifacts/evidence-bundle.md) と [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) に従い、EV レコード、Dictionary、Summary、Change Log を作成する。
 2. **Validator の実行**: `python validator/src/validate.py bundle/root.json` を実行し、構造整合性を確認する。エラーがあれば修正する。
 3. **チェックサムの作成**: 提出ファイルすべての SHA-256 チェックサムを生成する：
-   ```bash
-   sha256sum *.json *.pdf > SHA256SUMS.txt
-   ```
+
+    === "Linux"
+
+        ```bash
+        sha256sum *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "macOS"
+
+        ```bash
+        shasum -a 256 *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "Windows (PowerShell)"
+
+        ```powershell
+        Get-ChildItem *.json, *.pdf | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+            "$hash  $($_.Name)"
+        } | Out-File SHA256SUMS.txt -Encoding UTF8
+        ```
 4. **アーティファクトのパッケージ化**: 証跡バンドルの zip アーカイブを作成する：
    ```bash
    zip -r evidence_bundle.zip bundle_directory/
@@ -98,15 +116,38 @@ AIMO Standard は構造化された証跡フォーマットと説明可能性フ
 
 ### ステップ1：チェックサムの検証（SHA-256）
 
-```bash
-# 提出物と一緒に SHA256SUMS.txt を受領
-# 全ファイルが記録されたチェックサムと一致することを確認
-sha256sum -c SHA256SUMS.txt
+=== "Linux"
 
-# または個別ファイルを手動検証：
-sha256sum evidence_bundle.zip
-# 出力を SHA256SUMS.txt の値と比較
-```
+    ```bash
+    # 提出物と一緒に SHA256SUMS.txt を受領
+    # 全ファイルが記録されたチェックサムと一致することを確認
+    sha256sum -c SHA256SUMS.txt
+
+    # または個別ファイルを手動検証：
+    sha256sum evidence_bundle.zip
+    # 出力を SHA256SUMS.txt の値と比較
+    ```
+
+=== "macOS"
+
+    ```bash
+    # 全ファイルがチェックサムと一致することを確認
+    shasum -a 256 -c SHA256SUMS.txt
+
+    # または個別ファイルを手動検証：
+    shasum -a 256 evidence_bundle.zip
+    # 出力を SHA256SUMS.txt の値と比較
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # 個別ファイルを検証
+    Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
+
+    # Hash 出力を SHA256SUMS.txt と比較
+    Get-Content .\SHA256SUMS.txt
+    ```
 
 チェックサムが一致しない場合、提出物を却下または再提出を要求すべきである。
 
@@ -118,13 +159,20 @@ sha256sum evidence_bundle.zip
 # 公式 AIMO Standard リリースをクローン
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
-git checkout v0.1.3  # 提出物に記載されたバージョンを使用
+
+# 重要：提出物に記載された正確なバージョンを使用
+# VERSION を提出者が宣言したバージョンに置き換える（例：v0.1.6）
+VERSION=v0.1.6  # ← 提出物のバージョンに合わせる
+git checkout "$VERSION"
 
 # Python 環境のセットアップ
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+!!! warning "バージョン一致"
+    常に提出物に記載された正確な AIMO Standard バージョンを使用してください。異なるバージョンを使用すると、バージョン間のスキーマやルール変更により検証結果が一致しない場合があります。
 
 **検証の実行**：
 

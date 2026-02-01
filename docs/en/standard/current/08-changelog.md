@@ -68,7 +68,7 @@ Each official release includes:
 
 | Artifact | Description |
 | --- | --- |
-| Versioned site snapshot | `https://standard.aimoaas.com/v0.1.0/` |
+| Versioned site snapshot | `https://standard.aimoaas.com/0.1.0/` |
 | PDF specification | `AIMO-Standard_v0.1.0.pdf` |
 | Asset package (ZIP) | Schemas, templates, dictionary |
 | Checksums | SHA-256 hashes for integrity |

@@ -39,6 +39,11 @@ jobs:
           echo "=== Manifest Lint ==="
           python tooling/checks/lint_manifest.py
 
+      - name: Docs Consistency Lint
+        run: |
+          echo "=== Docs Consistency Lint (URL patterns, version references) ==="
+          python tooling/checks/lint_docs_consistency.py
+
       - name: Taxonomy SSOT Lints
         run: |
           echo "=== Taxonomy SSOT Lint (canonical + i18n) ==="

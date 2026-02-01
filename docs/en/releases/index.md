@@ -21,20 +21,46 @@ Each official release (`vX.Y.Z` tag) includes:
 
 After downloading, verify file integrity using checksums:
 
-```bash
-# Download the checksums file
-curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+=== "Linux"
 
-# Verify a specific file
-sha256sum -c SHA256SUMS.txt --ignore-missing
-```
+    ```bash
+    # Download the checksums file
+    curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
 
-Or manually:
+    # Verify a specific file
+    sha256sum -c SHA256SUMS.txt --ignore-missing
 
-```bash
-sha256sum trust_package.pdf
-# Compare output with SHA256SUMS.txt
-```
+    # Or verify manually:
+    sha256sum trust_package.pdf
+    # Compare output with SHA256SUMS.txt
+    ```
+
+=== "macOS"
+
+    ```bash
+    # Download the checksums file
+    curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+
+    # Verify a specific file
+    shasum -a 256 -c SHA256SUMS.txt
+
+    # Or verify manually:
+    shasum -a 256 trust_package.pdf
+    # Compare output with SHA256SUMS.txt
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # Download the checksums file
+    Invoke-WebRequest -Uri "https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+
+    # Verify a specific file
+    Get-FileHash .\trust_package.pdf -Algorithm SHA256
+
+    # Compare the Hash output with SHA256SUMS.txt
+    Get-Content .\SHA256SUMS.txt
+    ```
 
 ## Artifacts Zip Contents
 
@@ -63,9 +89,27 @@ When preparing evidence for audit submission:
 1. **Create your Evidence Bundle**: Follow [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) to create EV records, Dictionary, Summary, and Change Log.
 2. **Run the Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix all errors before proceeding.
 3. **Generate Checksums**: Create SHA-256 checksums for verification:
-   ```bash
-   sha256sum *.json *.pdf > SHA256SUMS.txt
-   ```
+
+    === "Linux"
+
+        ```bash
+        sha256sum *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "macOS"
+
+        ```bash
+        shasum -a 256 *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "Windows (PowerShell)"
+
+        ```powershell
+        Get-ChildItem *.json, *.pdf | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+            "$hash  $($_.Name)"
+        } | Out-File SHA256SUMS.txt -Encoding UTF8
+        ```
 4. **Package**: Create a zip archive of your bundle directory.
 5. **Document version alignment**: Note which AIMO Standard release (e.g., `v1.0.0`) your evidence aligns with.
 6. **Deliver**: Provide the package, checksums, and version reference to your auditor.
@@ -76,7 +120,7 @@ For the complete preparation guide, see [Trust Package](../governance/trust-pack
 
 Auditors receiving evidence submissions should verify integrity and structure:
 
-1. **Verify checksums**: Run `sha256sum -c SHA256SUMS.txt` to confirm file integrity
+1. **Verify checksums**: Run checksum verification (Linux: `sha256sum -c`, macOS: `shasum -a 256 -c`, Windows: `Get-FileHash`) to confirm file integrity
 2. **Run validator**: Execute `python validator/src/validate.py bundle/root.json` to check structure
 3. **Confirm version**: Verify the stated AIMO Standard version exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
 

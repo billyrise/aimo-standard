@@ -70,9 +70,27 @@ Follow these steps to prepare an audit-ready submission:
 1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
 2. **Run Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix any errors before proceeding.
 3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
-   ```bash
-   sha256sum *.json *.pdf > SHA256SUMS.txt
-   ```
+
+    === "Linux"
+
+        ```bash
+        sha256sum *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "macOS"
+
+        ```bash
+        shasum -a 256 *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "Windows (PowerShell)"
+
+        ```powershell
+        Get-ChildItem *.json, *.pdf | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+            "$hash  $($_.Name)"
+        } | Out-File SHA256SUMS.txt -Encoding UTF8
+        ```
 4. **Package Artifacts**: Create a zip archive of your evidence bundle:
    ```bash
    zip -r evidence_bundle.zip bundle_directory/
@@ -98,15 +116,38 @@ When receiving an evidence submission, auditors should verify integrity and stru
 
 ### Step 1: Verify checksums (SHA-256)
 
-```bash
-# Download or receive SHA256SUMS.txt with the submission
-# Verify all files match their recorded checksums
-sha256sum -c SHA256SUMS.txt
+=== "Linux"
 
-# Or verify individual files manually:
-sha256sum evidence_bundle.zip
-# Compare output against the value in SHA256SUMS.txt
-```
+    ```bash
+    # Download or receive SHA256SUMS.txt with the submission
+    # Verify all files match their recorded checksums
+    sha256sum -c SHA256SUMS.txt
+
+    # Or verify individual files manually:
+    sha256sum evidence_bundle.zip
+    # Compare output against the value in SHA256SUMS.txt
+    ```
+
+=== "macOS"
+
+    ```bash
+    # Verify all files match their recorded checksums
+    shasum -a 256 -c SHA256SUMS.txt
+
+    # Or verify individual files manually:
+    shasum -a 256 evidence_bundle.zip
+    # Compare output against the value in SHA256SUMS.txt
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # Verify individual files
+    Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
+
+    # Compare the Hash output with SHA256SUMS.txt
+    Get-Content .\SHA256SUMS.txt
+    ```
 
 If any checksum fails, the submission should be rejected or re-requested.
 
@@ -118,13 +159,20 @@ If any checksum fails, the submission should be rejected or re-requested.
 # Clone the official AIMO Standard release
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
-git checkout v0.1.3  # Use the version stated in submission
+
+# IMPORTANT: Use the exact version stated in the submission
+# Replace VERSION with the submitter's declared version (e.g., v0.1.6)
+VERSION=v0.1.6  # ← Match the version in the submission
+git checkout "$VERSION"
 
 # Set up Python environment
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+!!! warning "Version Matching"
+    Always use the exact AIMO Standard version stated in the submission. Using a different version may cause validation mismatches due to schema or rule changes between versions.
 
 **Run validation**:
 
