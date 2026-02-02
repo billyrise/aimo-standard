@@ -1,60 +1,54 @@
 ---
-description: AIMO Standard governance hub - Project governance, security policies, licensing, citation guidelines, and contribution rules.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/index.md
-source_hash: cc8aa10b5e5da43a
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Centre de gouvernance du standard AIMO - Gouvernance du projet, politiques de sécurité, licences, directives de citation et règles de contribution.
 ---
 
-# Governance
+# Gouvernance
 
-This section is the hub for project governance, security, licensing, citation, and contribution guidelines.
+Cette section est le centre pour la gouvernance du projet, la sécurité, les licences, les citations et les directives de contribution.
 
-Start here for auditor-ready materials: **[Trust Package](trust-package.md)**.
+Commencez ici pour les matériaux prêts pour les auditeurs : **[Package de confiance](trust-package.md)**.
 
-## Governance Pages
+## Pages de gouvernance
 
 | Page | Description |
 | ---- | ----------- |
-| [Trust Package](trust-package.md) | Auditor-ready materials hub |
-| [Responsibility Boundary](responsibility-boundary.md) | What AIMO provides and does not provide |
-| [Security](security.md) | Vulnerability reporting and security policy |
-| [License](license.md) | Licensing terms (Apache-2.0) |
-| [Trademarks](trademarks.md) | Trademark usage guidelines |
-| [How to Cite](cite.md) | Citation guidance for papers and audits |
-| [Contributing](contributing.md) | How to contribute to AIMO Standard |
-| [SEO & Canonical Policy](seo-canonical-policy.md) | URL canonicalization guidance |
+| [Package de confiance](trust-package.md) | Centre des matériaux prêts pour les auditeurs |
+| [Périmètre de responsabilité](responsibility-boundary.md) | Ce que fournit et ne fournit pas AIMO |
+| [Sécurité](security.md) | Signalement de vulnérabilités et politique de sécurité |
+| [Licence](license.md) | Termes de licence (Apache-2.0) |
+| [Marques](trademarks.md) | Directives d'utilisation des marques |
+| [Comment citer](cite.md) | Conseils de citation pour articles et audits |
+| [Contribuer](contributing.md) | Comment contribuer au standard AIMO |
+| [Politique SEO et canonique](seo-canonical-policy.md) | Conseils de canonicalisation des URL |
 
-## Repository Policy Files
+## Fichiers de politique du dépôt
 
-The following files live in the repository root and contain authoritative policies:
+Les fichiers suivants se trouvent à la racine du dépôt et contiennent les politiques faisant autorité :
 
-| File | Description |
+| Fichier | Description |
 | ---- | ----------- |
-| [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) | SSOT, change process, normative vs non-normative |
-| [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) | Full security policy |
-| [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) | Apache-2.0 license |
-| [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) | Attribution notice |
-| [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) | Full trademark policy |
-| [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) | Machine-readable citation |
-| [CODE_OF_CONDUCT.md](https://github.com/billyrise/aimo-standard/blob/main/CODE_OF_CONDUCT.md) | Community guidelines |
-| [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) | Contribution quick start |
-| [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) | SemVer policy |
+| [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) | SSOT, processus de changement, normatif vs non-normatif |
+| [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) | Politique de sécurité complète |
+| [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) | Licence Apache-2.0 |
+| [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) | Avis d'attribution |
+| [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) | Politique complète des marques |
+| [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) | Citation lisible par machine |
+| [CODE_OF_CONDUCT.md](https://github.com/billyrise/aimo-standard/blob/main/CODE_OF_CONDUCT.md) | Directives communautaires |
+| [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) | Démarrage rapide de contribution |
+| [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) | Politique SemVer |
 
-## Audit Journey
+## Parcours d'audit
 
-For auditors and compliance reviewers, the recommended reading order:
+Pour les auditeurs et réviseurs de conformité, l'ordre de lecture recommandé :
 
-1. **[Trust Package](trust-package.md)** — Overview of audit-ready materials
-2. **[Responsibility Boundary](responsibility-boundary.md)** — Scope and adopter responsibilities
-3. **[Security](security.md)** — Security posture and disclosure policy
-4. **[License](license.md)** — Licensing terms for adoption
-5. **[How to Cite](cite.md)** — Citation for audit documentation
+1. **[Package de confiance](trust-package.md)** — Vue d'ensemble des matériaux prêts pour l'audit
+2. **[Périmètre de responsabilité](responsibility-boundary.md)** — Périmètre et responsabilités des adopteurs
+3. **[Sécurité](security.md)** — Posture de sécurité et politique de divulgation
+4. **[Licence](license.md)** — Termes de licence pour l'adoption
+5. **[Comment citer](cite.md)** — Citation pour la documentation d'audit
 
-## Related Pages
+## Pages connexes
 
-- [Releases](../releases/index.md) — Release snapshots and changelog
-- [Conformance](../conformance/index.md) — Conformance levels
-- [Localization Guide](../contributing/localization.md) — i18n workflow
+- [Versions](../releases/index.md) — Instantanés de version et changelog
+- [Conformité](../conformance/index.md) — Niveaux de conformité
+- [Guide de localisation](../contributing/localization.md) — Flux de travail i18n

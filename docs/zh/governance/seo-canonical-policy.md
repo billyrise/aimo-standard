@@ -1,75 +1,69 @@
 ---
-description: AIMO SEO and canonical URL policy - URL canonicalization strategy for search engines, auditors, and external references.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/seo-canonical-policy.md
-source_hash: 3932484358683f0c
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO SEO 和规范URL政策 - 面向搜索引擎、审计师和外部引用的URL规范化策略。
 ---
 
-# SEO & Canonical Policy
+# SEO 与规范策略
 
-This page documents how AIMO Standard manages URL canonicalization for search engines, auditors, and external references.
+本页记录 AIMO 标准如何管理面向搜索引擎、审计师和外部引用的URL规范化。
 
-## Production vs Mirror Sites
+## 生产与镜像站点
 
-| Environment | URL | Role | Indexable |
+| 环境 | URL | 角色 | 可索引 |
 |-------------|-----|------|-----------|
-| **Production** | `https://standard.aimoaas.com/` | Canonical site for all purposes | Yes |
-| GitHub Pages | `https://billyrise.github.io/aimo-standard/` | Temporary mirror / CI preview | No (noindex) |
+| **生产** | `https://standard.aimoaas.com/` | 所有用途的规范站点 | 是 |
+| GitHub Pages | `https://billyrise.github.io/aimo-standard/` | 临时镜像/CI预览 | 否（noindex） |
 
-**Key principle**: Production (`standard.aimoaas.com`) is the authoritative URL. GitHub Pages serves as a temporary backup/mirror and should not be cited in audit reports or external references.
+**关键原则**：生产（`standard.aimoaas.com`）是权威URL。GitHub Pages 作为临时备份/镜像，不应在审计报告或外部引用中引用。
 
-## Canonical URL Strategy
+## 规范URL策略
 
-### How Canonical URLs Are Generated
+### 规范URL如何生成
 
-AIMO Standard uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) with the following configuration:
+AIMO 标准使用 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)，配置如下：
 
 ```yaml
 # mkdocs.yml
 site_url: https://standard.aimoaas.com/
 ```
 
-This `site_url` setting ensures:
+此 `site_url` 设置确保：
 
-1. **`<link rel="canonical">`** — Each generated HTML page includes a canonical link pointing to the Production URL.
-2. **`sitemap.xml`** — All URLs in the sitemap reference Production.
-3. **`robots.txt`** — Sitemap reference points to Production.
-4. **`hreflang` alternates** — Language alternates use Production URLs.
+1. **`<link rel="canonical">`** — 每个生成的HTML页面包含指向生产URL的规范链接。
+2. **`sitemap.xml`** — 站点地图中的所有URL引用生产。
+3. **`robots.txt`** — 站点地图引用指向生产。
+4. **`hreflang` 备选** — 语言备选使用生产URL。
 
-### Language-Specific Canonicals
+### 语言特定的规范
 
-| Language | URL Pattern | Example |
+| 语言 | URL 模式 | 示例 |
 |----------|-------------|---------|
-| English (default) | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
-| Japanese | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
+| 英语（默认） | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
+| 日语 | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
 
-Each language version is self-canonical and includes `hreflang` alternates to the other language(s) plus `x-default` pointing to the English version.
+每个语言版本是自规范的，并包含指向其他语言的 `hreflang` 备选，以及指向英语版本的 `x-default`。
 
-### Versioned Documentation and Canonicals
+### 版本化文档和规范
 
-AIMO Standard uses [mike](https://github.com/jimporter/mike) for documentation versioning with `alias_type: redirect`:
+AIMO 标准使用 [mike](https://github.com/jimporter/mike) 进行文档版本控制，配置 `alias_type: redirect`：
 
-| Version | URL Pattern | Canonical Status | Indexable |
+| 版本 | URL 模式 | 规范状态 | 可索引 |
 |---------|-------------|------------------|-----------|
-| Versioned (e.g., `0.0.1`) | `https://standard.aimoaas.com/0.0.1/` | Canonical for that specific version | Yes |
-| `latest` (alias) | `https://standard.aimoaas.com/latest/` | **Redirects** to current release | Yes (via target) |
-| `dev` | `https://standard.aimoaas.com/dev/` | Preview only | **No** (noindex enforced) |
+| 版本化（例如 `0.0.1`） | `https://standard.aimoaas.com/0.0.1/` | 该特定版本的规范 | 是 |
+| `latest`（别名） | `https://standard.aimoaas.com/latest/` | **重定向**到当前版本 | 是（通过目标） |
+| `dev` | `https://standard.aimoaas.com/dev/` | 仅预览 | **否**（强制 noindex） |
 
-**Critical distinctions:**
+**关键区别：**
 
-| Aspect | `/X.Y.Z/` | `/latest/` | `/dev/` |
+| 方面 | `/X.Y.Z/` | `/latest/` | `/dev/` |
 |--------|-----------|------------|---------|
-| Content | Frozen snapshot | Redirect to `/X.Y.Z/` | Main branch preview |
-| Mutable | Never | Pointer updates on release | Continuous |
-| For audits | **Yes (preferred)** | Yes (resolves to frozen) | **Never** |
-| SEO | Indexed | Indexed via target | noindex |
+| 内容 | 冻结快照 | 重定向到 `/X.Y.Z/` | 主分支预览 |
+| 可变 | 从不 | 指针在发布时更新 | 持续 |
+| 用于审计 | **是（首选）** | 是（解析到冻结版本） | **从不** |
+| SEO | 已索引 | 通过目标索引 | noindex |
 
-**How alias_type: redirect works:**
+**alias_type: redirect 如何工作：**
 
-Instead of copying files, `/latest/` contains redirect pages pointing to the current release:
+`/latest/` 包含指向当前版本的重定向页面，而不是复制文件：
 
 ```html
 <!-- /latest/index.html -->
@@ -77,57 +71,57 @@ Instead of copying files, `/latest/` contains redirect pages pointing to the cur
 <link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
 ```
 
-This ensures:
+这确保：
 
-1. **No content drift** — `/latest/` cannot diverge from the release it points to.
-2. **No duplicate content** — Search engines see one canonical source.
-3. **Atomic updates** — Changing the alias updates all pages at once.
+1. **无内容漂移** — `/latest/` 不会与其指向的版本产生偏差。
+2. **无重复内容** — 搜索引擎看到一个规范来源。
+3. **原子更新** — 更改别名会一次更新所有页面。
 
-!!! info "Git Tag vs. Site Path"
-    Git release tags use `v` prefix (e.g., `v0.0.1`), but site paths omit the `v` (e.g., `/0.0.1/`). This is standard practice for documentation versioning tools like mike.
+!!! info "Git 标签与站点路径"
+    Git 发布标签使用 `v` 前缀（例如 `v0.0.1`），但站点路径省略 `v`（例如 `/0.0.1/`）。这是 mike 等文档版本控制工具的标准做法。
 
-## Auditor Guidance: Which URL to Cite
+## 审计师指南：引用哪个URL
 
-When citing AIMO Standard in audit reports, compliance documentation, or external references:
+在审计报告、合规文档或外部引用中引用 AIMO 标准时：
 
-### Recommended Citation URLs
+### 推荐的引用URL
 
-| Use Case | Recommended URL |
+| 用例 | 推荐URL |
 |----------|-----------------|
-| Current stable specification | `https://standard.aimoaas.com/latest/standard/current/` |
-| Specific version (for audit) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
-| Governance & policies | `https://standard.aimoaas.com/latest/governance/` |
-| Trust Package | `https://standard.aimoaas.com/latest/governance/trust-package/` |
+| 当前稳定规范 | `https://standard.aimoaas.com/latest/standard/current/` |
+| 特定版本（用于审计） | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
+| 治理与政策 | `https://standard.aimoaas.com/latest/governance/` |
+| 信任包 | `https://standard.aimoaas.com/latest/governance/trust-package/` |
 
-### Do NOT Cite
+### 不要引用
 
-- ~~`https://billyrise.github.io/aimo-standard/`~~ — Temporary mirror, not canonical
-- ~~`https://standard.aimoaas.com/dev/`~~ — Development version, subject to change
+- ~~`https://billyrise.github.io/aimo-standard/`~~ — 临时镜像，非规范
+- ~~`https://standard.aimoaas.com/dev/`~~ — 开发版本，可能会更改
 
-### Versioned Citation for Immutability
+### 不可变性的版本化引用
 
-For formal audits requiring immutable references, use versioned snapshot URLs:
+对于需要不可变引用的正式审计，使用版本化快照URL：
 
 ```
 https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 ```
 
-Versioned snapshots are frozen at release time and will not change.
+版本化快照在发布时冻结，不会更改。
 
-!!! note "URL Format"
-    Site paths use version numbers without the `v` prefix. For version `v1.0.0`, use `/1.0.0/` in URLs.
+!!! note "URL 格式"
+    站点路径使用不带 `v` 前缀的版本号。对于版本 `v1.0.0`，在URL中使用 `/1.0.0/`。
 
-## Technical Implementation
+## 技术实现
 
-### Generated HTML Example
+### 生成的HTML示例
 
-Every generated HTML page includes canonical and hreflang tags in the `<head>`:
+每个生成的HTML页面在 `<head>` 中包含规范和 hreflang 标签：
 
 ```html
-<!-- Canonical (always points to Production) -->
+<!-- 规范（始终指向生产） -->
 <link rel="canonical" href="https://standard.aimoaas.com/latest/governance/">
 
-<!-- Language alternates -->
+<!-- 语言备选 -->
 <link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/governance/">
 <link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/governance/">
 <link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/governance/">
@@ -142,66 +136,66 @@ Allow: /
 Sitemap: https://standard.aimoaas.com/sitemap.xml
 ```
 
-### Sitemap
+### 站点地图
 
-The sitemap is generated by `mkdocs-static-i18n` plugin and includes:
+站点地图由 `mkdocs-static-i18n` 插件生成，包括：
 
-- All Production URLs
-- `hreflang` alternates for each language
+- 所有生产URL
+- 每种语言的 `hreflang` 备选
 
-## Noindex Configuration
+## Noindex 配置
 
-### `/dev/` (Preview) — Mandatory Noindex
+### `/dev/`（预览）— 强制 Noindex
 
-The `/dev/` version contains unreleased content and MUST have noindex to prevent:
+`/dev/` 版本包含未发布的内容，必须有 noindex 以防止：
 
-- Search engines indexing unstable content
-- Users finding `/dev/` via search and citing it in audits
-- Confusion between released and unreleased content
+- 搜索引擎索引不稳定内容
+- 用户通过搜索找到 `/dev/` 并在审计中引用
+- 已发布和未发布内容之间的混淆
 
-**Implementation:**
+**实现：**
 
-The `deploy-dev.yml` workflow injects a noindex meta tag into all `/dev/` pages via theme override:
+`deploy-dev.yml` 工作流通过主题覆盖将 noindex 元标签注入所有 `/dev/` 页面：
 
 ```html
-<!-- Injected into /dev/ pages only -->
+<!-- 仅注入到 /dev/ 页面 -->
 <meta name="robots" content="noindex, nofollow">
 ```
 
-### GitHub Pages Mirror — Noindex
+### GitHub Pages 镜像 — Noindex
 
-When deploying to GitHub Pages (the mirror site at `billyrise.github.io`), all pages should have noindex to prevent duplicate indexing:
+部署到 GitHub Pages（`billyrise.github.io` 的镜像站点）时，所有页面应有 noindex 以防止重复索引：
 
 ```html
 <meta name="robots" content="noindex, nofollow">
 ```
 
-This ensures search engines always prioritize the Production canonical URLs at `standard.aimoaas.com`.
+这确保搜索引擎始终优先考虑 `standard.aimoaas.com` 上的生产规范URL。
 
-## Verification
+## 验证
 
-After each build, you can verify canonical URLs by:
+每次构建后，您可以通过以下方式验证规范URL：
 
-1. **Inspecting generated HTML** — Check `site/` directory after `mkdocs build`
-2. **Using browser DevTools** — Inspect `<head>` section on deployed pages
-3. **Google Search Console** — Monitor which URLs are indexed
+1. **检查生成的HTML** — 在 `mkdocs build` 后检查 `site/` 目录
+2. **使用浏览器开发者工具** — 检查已部署页面的 `<head>` 部分
+3. **Google Search Console** — 监控哪些URL被索引
 
-Example verification command:
+示例验证命令：
 
 ```bash
 mkdocs build
 grep -r 'rel="canonical"' site/ | head -5
 ```
 
-Expected output should show Production URLs, e.g.:
+预期输出应显示生产URL，例如：
 
 ```
 site/index.html:<link rel="canonical" href="https://standard.aimoaas.com/">
 site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.com/governance/">
 ```
 
-## Related Documentation
+## 相关文档
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Releases](../releases/index.md) — Version history and changelog
-- [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Version policy
+- [信任包](trust-package.md) — 审计师就绪材料
+- [发布](../releases/index.md) — 版本历史和变更日志
+- [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 版本政策

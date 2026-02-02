@@ -1,60 +1,54 @@
 ---
-description: AIMO Standard governance hub - Project governance, security policies, licensing, citation guidelines, and contribution rules.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/index.md
-source_hash: cc8aa10b5e5da43a
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 거버넌스 허브 - 프로젝트 거버넌스, 보안 정책, 라이선스, 인용 지침 및 기여 규칙.
 ---
 
-# Governance
+# 거버넌스
 
-This section is the hub for project governance, security, licensing, citation, and contribution guidelines.
+이 섹션은 프로젝트 거버넌스, 보안, 라이선스, 인용 및 기여 지침의 허브입니다.
 
-Start here for auditor-ready materials: **[Trust Package](trust-package.md)**.
+감사자 준비 자료는 여기서 시작하세요: **[신뢰 패키지](trust-package.md)**.
 
-## Governance Pages
+## 거버넌스 페이지
 
-| Page | Description |
+| 페이지 | 설명 |
 | ---- | ----------- |
-| [Trust Package](trust-package.md) | Auditor-ready materials hub |
-| [Responsibility Boundary](responsibility-boundary.md) | What AIMO provides and does not provide |
-| [Security](security.md) | Vulnerability reporting and security policy |
-| [License](license.md) | Licensing terms (Apache-2.0) |
-| [Trademarks](trademarks.md) | Trademark usage guidelines |
-| [How to Cite](cite.md) | Citation guidance for papers and audits |
-| [Contributing](contributing.md) | How to contribute to AIMO Standard |
-| [SEO & Canonical Policy](seo-canonical-policy.md) | URL canonicalization guidance |
+| [신뢰 패키지](trust-package.md) | 감사자 준비 자료 허브 |
+| [책임 경계](responsibility-boundary.md) | AIMO가 제공하는 것과 제공하지 않는 것 |
+| [보안](security.md) | 취약점 보고 및 보안 정책 |
+| [라이선스](license.md) | 라이선스 조건 (Apache-2.0) |
+| [상표](trademarks.md) | 상표 사용 지침 |
+| [인용 방법](cite.md) | 논문 및 감사를 위한 인용 지침 |
+| [기여하기](contributing.md) | AIMO 표준에 기여하는 방법 |
+| [SEO 및 정식 URL 정책](seo-canonical-policy.md) | URL 정식화 지침 |
 
-## Repository Policy Files
+## 저장소 정책 파일
 
-The following files live in the repository root and contain authoritative policies:
+다음 파일들은 저장소 루트에 있으며 권위 있는 정책을 포함합니다:
 
-| File | Description |
+| 파일 | 설명 |
 | ---- | ----------- |
-| [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) | SSOT, change process, normative vs non-normative |
-| [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) | Full security policy |
-| [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) | Apache-2.0 license |
-| [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) | Attribution notice |
-| [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) | Full trademark policy |
-| [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) | Machine-readable citation |
-| [CODE_OF_CONDUCT.md](https://github.com/billyrise/aimo-standard/blob/main/CODE_OF_CONDUCT.md) | Community guidelines |
-| [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) | Contribution quick start |
-| [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) | SemVer policy |
+| [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) | SSOT, 변경 프로세스, 규범적 vs 비규범적 |
+| [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) | 전체 보안 정책 |
+| [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) | Apache-2.0 라이선스 |
+| [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) | 저작자 표시 공지 |
+| [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) | 전체 상표 정책 |
+| [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) | 기계 판독 가능 인용 |
+| [CODE_OF_CONDUCT.md](https://github.com/billyrise/aimo-standard/blob/main/CODE_OF_CONDUCT.md) | 커뮤니티 지침 |
+| [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) | 기여 빠른 시작 |
+| [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) | SemVer 정책 |
 
-## Audit Journey
+## 감사 여정
 
-For auditors and compliance reviewers, the recommended reading order:
+감사자 및 컴플라이언스 검토자를 위한 권장 읽기 순서:
 
-1. **[Trust Package](trust-package.md)** — Overview of audit-ready materials
-2. **[Responsibility Boundary](responsibility-boundary.md)** — Scope and adopter responsibilities
-3. **[Security](security.md)** — Security posture and disclosure policy
-4. **[License](license.md)** — Licensing terms for adoption
-5. **[How to Cite](cite.md)** — Citation for audit documentation
+1. **[신뢰 패키지](trust-package.md)** — 감사 준비 자료 개요
+2. **[책임 경계](responsibility-boundary.md)** — 범위 및 채택자 책임
+3. **[보안](security.md)** — 보안 태세 및 공개 정책
+4. **[라이선스](license.md)** — 채택을 위한 라이선스 조건
+5. **[인용 방법](cite.md)** — 감사 문서를 위한 인용
 
-## Related Pages
+## 관련 페이지
 
-- [Releases](../releases/index.md) — Release snapshots and changelog
-- [Conformance](../conformance/index.md) — Conformance levels
-- [Localization Guide](../contributing/localization.md) — i18n workflow
+- [릴리스](../releases/index.md) — 릴리스 스냅샷 및 변경로그
+- [적합성](../conformance/index.md) — 적합성 수준
+- [현지화 가이드](../contributing/localization.md) — i18n 워크플로우

@@ -1,155 +1,149 @@
 ---
-description: AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/08-changelog.md
-source_hash: 1876c04a8b22d480
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Changelog e política de versionamento do AIMO Standard. Documenta histórico de versões, regras de semantic versioning e orientação de migração entre releases.
 ---
 
 # Changelog
 
-This section documents the versioning policy and change history for the AIMO Standard.
+Esta seção documenta a política de versionamento e histórico de mudanças do AIMO Standard.
 
-## Versioning Policy
+## Política de Versionamento
 
-AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
+AIMO Standard segue [Semantic Versioning](https://semver.org/) (SemVer):
 
-### Version Format: MAJOR.MINOR.PATCH
+### Formato de Versão: MAJOR.MINOR.PATCH
 
-| Change Type | Version Bump | Examples |
+| Tipo de Mudança | Bump de Versão | Exemplos |
 | --- | --- | --- |
-| **MAJOR** | X.0.0 | Breaking schema changes, code removal, required field changes |
-| **MINOR** | 0.X.0 | New codes, new optional fields, new dimensions (optional) |
-| **PATCH** | 0.0.X | Documentation fixes, definition clarifications, validator bug fixes |
+| **MAJOR** | X.0.0 | Breaking changes de schema, remoção de código, mudanças de campos obrigatórios |
+| **MINOR** | 0.X.0 | Novos códigos, novos campos opcionais, novas dimensões (opcionais) |
+| **PATCH** | 0.0.X | Correções de documentação, esclarecimentos de definição, correções de bug do validador |
 
-### Breaking vs. Compatible Changes
+### Mudanças Breaking vs. Compatíveis
 
 **Breaking Changes (MAJOR):**
 
-- Removal of codes (after deprecation period)
-- Changes to required fields in schemas
-- Structural changes that invalidate existing documents
-- Changes to code format patterns
+- Remoção de códigos (após período de depreciação)
+- Mudanças em campos obrigatórios em schemas
+- Mudanças estruturais que invalidam documentos existentes
+- Mudanças em padrões de formato de código
 
-**Backward Compatible Changes (MINOR):**
+**Mudanças Backward Compatible (MINOR):**
 
-- Adding new codes to existing dimensions
-- Adding new optional fields to schemas
-- Adding new optional dimensions
-- Adding new evidence templates
+- Adicionar novos códigos a dimensões existentes
+- Adicionar novos campos opcionais a schemas
+- Adicionar novas dimensões opcionais
+- Adicionar novos templates de evidência
 
-**Non-breaking Changes (PATCH):**
+**Mudanças Non-breaking (PATCH):**
 
-- Documentation corrections
-- Clarification of existing definitions
-- Translation improvements
-- Validator bug fixes
+- Correções de documentação
+- Esclarecimento de definições existentes
+- Melhorias de tradução
+- Correções de bug do validador
 
-## Deprecation Policy
+## Política de Depreciação
 
-### Deprecation Process
+### Processo de Depreciação
 
-1. **Mark as Deprecated**: Code or feature is marked with `status: deprecated` and `deprecated_in: X.Y.Z`
-2. **Deprecation Period**: At least one MINOR version must pass before removal
-3. **Provide Replacement**: If applicable, `replaced_by` indicates the replacement
-4. **Remove in MAJOR**: Removal occurs in the next MAJOR version
+1. **Marcar como Deprecated**: Código ou funcionalidade é marcado com `status: deprecated` e `deprecated_in: X.Y.Z`
+2. **Período de Depreciação**: Pelo menos uma versão MINOR deve passar antes da remoção
+3. **Fornecer Substituição**: Se aplicável, `replaced_by` indica a substituição
+4. **Remover em MAJOR**: Remoção ocorre na próxima versão MAJOR
 
-### Example Lifecycle
+### Exemplo de Ciclo de Vida
 
 ```
-v0.0.1: FS-007 introduced (status: active)
+v0.0.1: FS-007 introduzido (status: active)
 v0.1.0: FS-007 deprecated (status: deprecated, replaced_by: FS-008)
-v0.2.0: FS-007 still available with deprecation warning
-v1.0.0: FS-007 removed (status: removed)
+v0.2.0: FS-007 ainda disponível com aviso de depreciação
+v1.0.0: FS-007 removido (status: removed)
 ```
 
-### Using Deprecated Codes
+### Usando Códigos Deprecated
 
-- Deprecated codes remain valid for validation
-- Validator SHOULD emit a warning for deprecated codes
-- New implementations SHOULD use replacement codes
-- Existing documents MAY continue using deprecated codes until migration
+- Códigos deprecated permanecem válidos para validação
+- Validador DEVERIA emitir aviso para códigos deprecated
+- Novas implementações DEVERIAM usar códigos de substituição
+- Documentos existentes PODEM continuar usando códigos deprecated até migração
 
-## Release Artifacts
+## Artefatos de Release
 
-Each official release includes:
+Cada release oficial inclui:
 
-| Artifact | Description |
+| Artefato | Descrição |
 | --- | --- |
-| Versioned site snapshot | `https://standard.aimoaas.com/0.0.1/` |
-| PDF specification | `trust_package.pdf` |
-| Asset package (ZIP) | Schemas, templates, dictionary |
-| Checksums | SHA-256 hashes for integrity |
-| Changelog | This document |
+| Snapshot do site versionado | `https://standard.aimoaas.com/0.0.1/` |
+| Especificação PDF | `trust_package.pdf` |
+| Pacote de ativos (ZIP) | Schemas, templates, dicionário |
+| Checksums | Hashes SHA-256 para integridade |
+| Changelog | Este documento |
 
-## Change History
+## Histórico de Mudanças
 
-### Version 0.0.1 (2026-02-02)
+### Versão 0.0.1 (2026-02-02)
 
-**Summary:** Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.
+**Resumo:** Release inicial do AIMO Standard com sistema de códigos de 8 dimensões, templates de Evidence Pack e documentação abrangente de governança.
 
-#### Added
+#### Adicionado
 
-**Code System (8 Dimensions)**
+**Sistema de Códigos (8 Dimensões)**
 
-| Dimension | Codes Added | Description |
+| Dimensão | Códigos Adicionados | Descrição |
 | --- | --- | --- |
-| FS | FS-001 to FS-006 | Functional Scope |
-| UC | UC-001 to UC-010 | Use Case Class |
-| DT | DT-001 to DT-008 | Data Type |
-| CH | CH-001 to CH-006 | Channel |
-| IM | IM-001 to IM-005 | Integration Mode |
-| RS | RS-001 to RS-005 | Risk Surface |
-| OB | OB-001 to OB-005 | Outcome / Benefit |
-| EV | EV-001 to EV-007 | Evidence Type |
+| FS | FS-001 a FS-006 | Escopo Funcional |
+| UC | UC-001 a UC-010 | Classe de Caso de Uso |
+| DT | DT-001 a DT-008 | Tipo de Dados |
+| CH | CH-001 a CH-006 | Canal |
+| IM | IM-001 a IM-005 | Modo de Integração |
+| RS | RS-001 a RS-005 | Superfície de Risco |
+| OB | OB-001 a OB-005 | Resultado / Benefício |
+| EV | EV-001 a EV-007 | Tipo de Evidência |
 
 **Schemas**
 
-- `taxonomy_pack.schema.json`: Taxonomy pack definition
-- `changelog.schema.json`: Changelog entries
-- `evidence_pack_manifest.schema.json`: Evidence Pack manifests
-- `shadow-ai-discovery.schema.json`: Shadow AI discovery evidence
-- `agent-activity.schema.json`: Agent activity evidence
+- `taxonomy_pack.schema.json`: Definição de pacote de taxonomia
+- `changelog.schema.json`: Entradas de changelog
+- `evidence_pack_manifest.schema.json`: Manifestos de Evidence Pack
+- `shadow-ai-discovery.schema.json`: Evidência de descoberta de Shadow AI
+- `agent-activity.schema.json`: Evidência de atividade de agente
 
-**Evidence Pack Templates (MVP)**
+**Templates de Evidence Pack (MVP)**
 
-- EV-01: System Overview
-- EV-02: Data Flow
-- EV-03: AI Inventory
-- EV-04: Risk & Impact Assessment
-- EV-05: Controls & Approvals
-- EV-06: Logging & Monitoring
-- EV-07: Incident & Exception Handling
+- EV-01: Visão Geral do Sistema
+- EV-02: Fluxo de Dados
+- EV-03: Inventário de IA
+- EV-04: Avaliação de Risco e Impacto
+- EV-05: Controles e Aprovações
+- EV-06: Logging e Monitoramento
+- EV-07: Tratamento de Incidentes e Exceções
 
-**Documentation**
+**Documentação**
 
-- Taxonomy documentation with 8-dimension definitions
-- Code System format specification
-- Dictionary CSV format specification
-- Versioning and change policy
-- Validator MVP requirements
-- Human Oversight Protocol
-- Coverage Map (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+- Documentação de taxonomia com definições de 8 dimensões
+- Especificação de formato do Sistema de Códigos
+- Especificação de formato de CSV do Dicionário
+- Política de versionamento e mudança
+- Requisitos MVP do validador
+- Protocolo de Supervisão Humana
+- Mapa de Cobertura (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 - Trust Package
 
-#### Backward Compatibility
+#### Compatibilidade Retroativa
 
-This is the initial release; no backward compatibility concerns.
+Este é o release inicial; sem preocupações de compatibilidade retroativa.
 
 ---
 
-## Machine-Readable Changelog
+## Changelog Legível por Máquina
 
-A machine-readable changelog is available:
+Um changelog legível por máquina está disponível:
 
 - `changelog/changelog.json`
 
-This file follows the `changelog.schema.json` schema and can be parsed programmatically.
+Este arquivo segue o schema `changelog.schema.json` e pode ser parseado programaticamente.
 
-## References
+## Referências
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions
-- [Dictionary](./05-dictionary.md) - Code dictionary
-- [Versioning Policy](../../governance/index.md) - Versioning policy (see VERSIONING.md in repository root)
+- [Taxonomia](./03-taxonomy.md) - Definições de dimensão
+- [Dicionário](./05-dictionary.md) - Dicionário de códigos
+- [Política de Versionamento](../../governance/index.md) - Política de versionamento (veja VERSIONING.md na raiz do repositório)

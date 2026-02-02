@@ -1,101 +1,95 @@
 ---
-description: AIMO Human Oversight Protocol - Boundary between automated validation and human review. Machine vs. human judgment responsibilities in AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/human-oversight-protocol.md
-source_hash: 0a95f9e625c9d49f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Protocolo de Supervisión Humana AIMO - Límite entre validación automatizada y revisión humana. Responsabilidades de juicio máquina vs. humano en gobernanza de IA.
 ---
 
-# Human Oversight Protocol
+# Protocolo de Supervisión Humana
 
-This page defines the boundary between what automated validation (Validator) can check and what requires human review (Human-in-the-Loop). It clarifies the responsibilities for machine vs. human judgment in AI governance evidence processes.
+Esta página define el límite entre lo que la validación automatizada (Validador) puede verificar y lo que requiere revisión humana (Human-in-the-Loop). Clarifica las responsabilidades para juicio de máquina vs. humano en procesos de evidencia de gobernanza de IA.
 
-## Purpose
+## Propósito
 
-Automated validation tools can efficiently check structural and syntactic correctness, but cannot replace human judgment for context-dependent decisions. This protocol:
+Las herramientas de validación automatizada pueden verificar eficientemente la corrección estructural y sintáctica, pero no pueden reemplazar el juicio humano para decisiones dependientes del contexto. Este protocolo:
 
-- Clarifies what the Validator can and cannot verify
-- Defines the scope of human review required for effective governance
-- Supports audit explanations by documenting the human oversight process
-- Provides a framework for organizations implementing AI governance workflows
+- Clarifica qué puede y no puede verificar el Validador
+- Define el alcance de la revisión humana requerida para gobernanza efectiva
+- Soporta explicaciones de auditoría documentando el proceso de supervisión humana
+- Proporciona un marco para organizaciones implementando flujos de trabajo de gobernanza de IA
 
-## What automated validation can do (Validator scope)
+## Qué puede hacer la validación automatizada (alcance del Validador)
 
-The AIMO Validator and similar automated tools can check:
+El Validador AIMO y herramientas automatizadas similares pueden verificar:
 
-| Capability | Description |
+| Capacidad | Descripción |
 | --- | --- |
-| **Completeness of required fields/documents** | Verify that all mandatory fields are present in manifests, EV records, and other artifacts |
-| **Structural consistency** | Validate references, IDs, and cross-links between artifacts (e.g., request_id → review_id) |
-| **Schema validation** | Check that JSON/YAML artifacts conform to defined schemas |
-| **Code format validation** | Verify that taxonomy codes match expected patterns (e.g., `UC-001`) |
-| **Integrity checks** | Validate hash format and presence (not recomputation against content) |
-| **Dictionary validation** | Confirm that codes exist in the taxonomy dictionary |
+| **Completitud de campos/documentos requeridos** | Verificar que todos los campos obligatorios están presentes en manifiestos, registros EV y otros artefactos |
+| **Consistencia estructural** | Validar referencias, IDs y enlaces cruzados entre artefactos (ej., request_id → review_id) |
+| **Validación de esquema** | Verificar que artefactos JSON/YAML conforman a esquemas definidos |
+| **Validación de formato de código** | Verificar que códigos de taxonomía coinciden con patrones esperados (ej., `UC-001`) |
+| **Verificaciones de integridad** | Validar formato y presencia de hash (no recálculo contra contenido) |
+| **Validación de diccionario** | Confirmar que los códigos existen en el diccionario de taxonomía |
 
-See [Validator](../standard/current/07-validator.md) for detailed validation rules and reference implementation.
+Consulte [Validador](../standard/current/07-validator.md) para reglas de validación detalladas e implementación de referencia.
 
-## What requires human review (Human-in-the-Loop scope)
+## Qué requiere revisión humana (alcance Human-in-the-Loop)
 
-The following areas require human judgment and cannot be automated:
+Las siguientes áreas requieren juicio humano y no pueden automatizarse:
 
-| Capability | Description |
+| Capacidad | Descripción |
 | --- | --- |
-| **Context-dependent risk judgment** | Assessing business, ethical, and operational risks based on organizational context |
-| **Exception approval rationale** | Evaluating whether an exception is justified and compensating controls are adequate |
-| **Remediation decision-making** | Prioritizing fixes, allocating resources, and determining timelines |
-| **Policy trade-offs** | Balancing competing requirements (e.g., speed vs. thoroughness, cost vs. risk) |
-| **Residual risk acceptance** | Deciding whether remaining risks are acceptable after controls |
-| **Cross-domain impact assessment** | Evaluating implications for legal, HR, operations, and other functions |
-| **Content accuracy verification** | Confirming that evidence content is factually correct and complete |
-| **Stakeholder communication** | Explaining decisions to auditors, regulators, and leadership |
+| **Juicio de riesgo dependiente del contexto** | Evaluar riesgos de negocio, éticos y operacionales basados en contexto organizacional |
+| **Justificación de aprobación de excepciones** | Evaluar si una excepción está justificada y los controles compensatorios son adecuados |
+| **Toma de decisiones de remediación** | Priorizar correcciones, asignar recursos y determinar cronogramas |
+| **Compensaciones de políticas** | Balancear requisitos competidores (ej., velocidad vs. minuciosidad, costo vs. riesgo) |
+| **Aceptación de riesgo residual** | Decidir si los riesgos restantes son aceptables después de controles |
+| **Evaluación de impacto entre dominios** | Evaluar implicaciones para legal, RRHH, operaciones y otras funciones |
+| **Verificación de precisión del contenido** | Confirmar que el contenido de evidencia es factualmente correcto y completo |
+| **Comunicación con stakeholders** | Explicar decisiones a auditores, reguladores y liderazgo |
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-| Aspect | Validator (Machine) | Human Reviewer |
+| Aspecto | Validador (Máquina) | Revisor Humano |
 | --- | --- | --- |
-| **Structure** | ✓ Can verify | Review if flagged |
-| **Completeness** | ✓ Can verify fields | Verify content adequacy |
-| **Format** | ✓ Can verify | — |
-| **Risk judgment** | ✗ Cannot assess | ✓ Must assess |
-| **Exception approval** | ✗ Cannot decide | ✓ Must decide |
-| **Remediation priority** | ✗ Cannot prioritize | ✓ Must prioritize |
-| **Legal interpretation** | ✗ Cannot interpret | ✓ Must verify with counsel |
-| **Audit conclusion** | ✗ Cannot conclude | ✓ Auditor responsibility |
+| **Estructura** | ✓ Puede verificar | Revisar si se marca |
+| **Completitud** | ✓ Puede verificar campos | Verificar adecuación del contenido |
+| **Formato** | ✓ Puede verificar | — |
+| **Juicio de riesgo** | ✗ No puede evaluar | ✓ Debe evaluar |
+| **Aprobación de excepción** | ✗ No puede decidir | ✓ Debe decidir |
+| **Prioridad de remediación** | ✗ No puede priorizar | ✓ Debe priorizar |
+| **Interpretación legal** | ✗ No puede interpretar | ✓ Debe verificar con asesor |
+| **Conclusión de auditoría** | ✗ No puede concluir | ✓ Responsabilidad del auditor |
 
-!!! note "Complementary roles"
-    Validator and human review are **complementary**, not alternatives. Validator ensures structural consistency before human review; human review ensures contextual appropriateness.
+!!! note "Roles complementarios"
+    Validador y revisión humana son **complementarios**, no alternativas. El Validador asegura consistencia estructural antes de la revisión humana; la revisión humana asegura adecuación contextual.
 
-## Evidence expectations
+## Expectativas de evidencia
 
-Organizations implementing human oversight should document:
+Las organizaciones implementando supervisión humana deben documentar:
 
-| Evidence Type | Description |
+| Tipo de Evidencia | Descripción |
 | --- | --- |
-| **Review record** | Who reviewed, when, and what decision was made |
-| **Approval rationale** | Why the decision was made (especially for exceptions) |
-| **Escalation record** | When and why issues were escalated to higher authority |
-| **Remediation plan** | Planned actions, owners, and timelines for addressing issues |
-| **Sign-off** | Formal attestation that review was completed |
+| **Registro de revisión** | Quién revisó, cuándo y qué decisión se tomó |
+| **Justificación de aprobación** | Por qué se tomó la decisión (especialmente para excepciones) |
+| **Registro de escalación** | Cuándo y por qué se escalaron issues a autoridad superior |
+| **Plan de remediación** | Acciones planificadas, responsables y cronogramas para abordar issues |
+| **Firma** | Atestación formal de que la revisión fue completada |
 
-These records should be included in the Evidence Bundle per [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
+Estos registros deben incluirse en el Paquete de Evidencia según [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md).
 
-## Non-overclaim
+## No sobre-reclamar
 
-!!! warning "Important"
-    This protocol defines a **framework for documenting human oversight**. It does **not**:
+!!! warning "Importante"
+    Este protocolo define un **marco para documentar supervisión humana**. **No**:
 
-    - Provide legal advice or regulatory interpretation
-    - Guarantee compliance with any regulation or standard
-    - Replace qualified human judgment with automated decisions
-    - Prescribe specific organizational processes
+    - Proporciona asesoramiento legal ni interpretación regulatoria
+    - Garantiza cumplimiento con ninguna regulación o estándar
+    - Reemplaza juicio humano calificado con decisiones automatizadas
+    - Prescribe procesos organizacionales específicos
 
-    Organizations must adapt this framework to their specific context, risk profile, and regulatory requirements.
+    Las organizaciones deben adaptar este marco a su contexto específico, perfil de riesgo y requisitos regulatorios.
 
-## Related pages
+## Páginas relacionadas
 
-- [Validator](../standard/current/07-validator.md) — automated validation rules and reference implementation
-- [Responsibility Boundary](responsibility-boundary.md) — what AIMO provides vs. adopter responsibilities
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level evidence checklist
-- [Trust Package](trust-package.md) — auditor-ready materials hub
+- [Validador](../standard/current/07-validator.md) — reglas de validación automatizada e implementación de referencia
+- [Límite de Responsabilidad](responsibility-boundary.md) — qué proporciona AIMO vs. responsabilidades del adoptante
+- [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md) — lista de verificación de evidencia de nivel DEBE
+- [Paquete de Confianza](trust-package.md) — centro de materiales listos para auditores

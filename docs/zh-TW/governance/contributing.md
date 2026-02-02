@@ -1,108 +1,102 @@
 ---
-description: AIMO Standard contribution guide - How to contribute code, documentation, and translations. Issue and PR guidelines.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/contributing.md
-source_hash: 09ff722418d2f2b4
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 標準貢獻指南 - 如何貢獻程式碼、文件和翻譯。Issue 和 PR 指引。
 ---
 
-# Contributing
+# 貢獻
 
-This page provides guidelines for contributing to AIMO Standard.
+本頁提供貢獻 AIMO 標準的指引。
 
-## Quick Start
+## 快速開始
 
-1. Fork the repository
-2. Create a feature branch
-3. Make changes following the guidelines below
-4. Run quality checks
-5. Submit a pull request
+1. Fork 儲存庫
+2. 建立功能分支
+3. 按照以下指引進行變更
+4. 執行品質檢查
+5. 提交 pull request
 
-## Key Principles
+## 主要原則
 
-| Principle | Description |
+| 原則 | 說明 |
 | --------- | ----------- |
-| English is canonical | Edit `docs/en/` first, then update `docs/ja/` |
-| SSOT | This repository is the single source of truth |
-| No manual edits to generated files | Edit sources, regenerate, commit |
-| All changes via PR | Even maintainers use pull requests |
+| 英文是規範版本 | 先編輯 `docs/en/`，然後更新 `docs/ja/` |
+| SSOT | 此儲存庫是單一事實來源 |
+| 不手動編輯產生的檔案 | 編輯來源，重新產生，提交 |
+| 所有變更透過 PR | 即使是維護者也使用 pull request |
 
-## Quality Checks
+## 品質檢查
 
-Before submitting a PR, run:
+提交 PR 前，執行：
 
 ```bash
-# Activate virtual environment
+# 啟動虛擬環境
 source .venv/bin/activate
 
-# Run lints
+# 執行 lint
 python tooling/checks/lint_i18n.py
 python tooling/checks/lint_schema.py
 python tooling/audit/baseline_audit.py --check
 
-# Build documentation
+# 建置文件
 mkdocs build --strict
 ```
 
-## Change Types
+## 變更類型
 
-| Type | Examples | Review Requirements |
+| 類型 | 範例 | 審查要求 |
 | ---- | -------- | ------------------- |
-| Normative | Schema changes, requirements | Maintainer + discussion |
-| Non-normative | Typos, clarifications | Maintainer approval |
-| i18n | Translations | Structure must match EN |
-| Tooling | CI/CD, scripts | Maintainer approval |
+| 規範性 | 結構描述變更、要求 | 維護者 + 討論 |
+| 非規範性 | 錯字、澄清 | 維護者核准 |
+| i18n | 翻譯 | 結構必須符合 EN |
+| 工具 | CI/CD、腳本 | 維護者核准 |
 
-## i18n Guidelines
+## i18n 指引
 
-### Update Order
+### 更新順序
 
-1. Edit English source (`docs/en/...`)
-2. Update Japanese translation (`docs/ja/...`)
-3. Run `lint_i18n.py` to verify consistency
-4. Commit both together
+1. 編輯英文來源（`docs/en/...`）
+2. 更新日文翻譯（`docs/ja/...`）
+3. 執行 `lint_i18n.py` 驗證一致性
+4. 一起提交
 
-### Structure Requirements
+### 結構要求
 
-- Same file names in both languages
-- Same heading hierarchy
-- Same page count per section
+- 兩種語言使用相同檔名
+- 相同的標題層級
+- 每個章節相同的頁面數量
 
-## PR Checklist
+## PR 檢查清單
 
-When submitting a PR, verify:
+提交 PR 時，驗證：
 
-- [ ] Change type identified (docs / schema / examples / tooling)
-- [ ] Breaking change assessment completed
-- [ ] i18n: EN and JA updated together (if applicable)
-- [ ] Quality checks pass
-- [ ] Related issues linked
+- [ ] 已識別變更類型（docs / schema / examples / tooling）
+- [ ] 已完成破壞性變更評估
+- [ ] i18n：EN 和 JA 一起更新（如適用）
+- [ ] 品質檢查通過
+- [ ] 已連結相關 issue
 
-## Breaking Changes
+## 破壞性變更
 
-Breaking changes require:
+破壞性變更需要：
 
-1. Issue discussion before implementation
-2. Version bump per [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)
-3. Changelog entry with migration guidance
+1. 實作前的 issue 討論
+2. 根據 [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) 進行版本提升
+3. 包含遷移指引的變更日誌條目
 
-## Conformance Claim Updates
+## 符合性聲明更新
 
-To add or modify conformance claims:
+要新增或修改符合性聲明：
 
-1. Update the coverage map YAML
-2. Update corresponding documentation pages
-3. Run validator tests
-4. Document the mapping rationale
+1. 更新覆蓋範圍對應 YAML
+2. 更新對應的文件頁面
+3. 執行驗證器測試
+4. 記錄對應理由
 
-## Full Guidelines
+## 完整指引
 
-See [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) for the root-level guide.
+請參閱 [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) 了解根目錄層級指南。
 
-## Related Pages
+## 相關頁面
 
-- [Governance](index.md) — Project governance
-- [Localization Guide](../contributing/localization.md) — i18n details
-- [Responsibility Boundary](responsibility-boundary.md) — What AIMO provides
+- [治理](index.md) — 專案治理
+- [在地化指南](../contributing/localization.md) — i18n 詳細資訊
+- [責任邊界](responsibility-boundary.md) — AIMO 提供的內容

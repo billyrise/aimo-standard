@@ -1,76 +1,70 @@
 ---
-description: AIMO Standard security policy - Vulnerability reporting, disclosure procedures, and security considerations for AI governance implementations.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/security.md
-source_hash: 035ba54290c8cf46
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 보안 정책 - 취약점 보고, 공개 절차 및 AI 거버넌스 구현을 위한 보안 고려사항.
 ---
 
-# Security
+# 보안
 
-This page documents the security policy for AIMO Standard, including vulnerability reporting and disclosure procedures.
+이 페이지는 취약점 보고 및 공개 절차를 포함한 AIMO 표준의 보안 정책을 문서화합니다.
 
-## Scope
+## 범위
 
-### In Scope
+### 범위 내
 
-- Validator reference implementation (`validator/`)
-- Build and release tooling (`tooling/`)
-- JSON schemas (`schemas/`)
-- Documentation website infrastructure
+- 검증기 참조 구현 (`validator/`)
+- 빌드 및 릴리스 도구 (`tooling/`)
+- JSON 스키마 (`schemas/`)
+- 문서 웹사이트 인프라
 
-### Out of Scope
+### 범위 외
 
-- Specification content (normative text is not a security artifact)
-- Adopter implementations using AIMO Standard
-- External dependencies (report to upstream maintainers)
+- 사양 내용 (규범적 텍스트는 보안 산출물이 아님)
+- AIMO 표준을 사용하는 채택자 구현
+- 외부 종속성 (업스트림 메인테이너에게 보고)
 
-## Supported Versions
+## 지원 버전
 
-| Version | Supported |
+| 버전 | 지원 |
 | ------- | --------- |
-| latest (dev) | Yes |
-| Tagged releases (vX.Y.Z) | Yes (latest 2 minor versions) |
-| Older releases | No (upgrade recommended) |
+| latest (dev) | 예 |
+| 태그된 릴리스 (vX.Y.Z) | 예 (최신 2개 마이너 버전) |
+| 이전 릴리스 | 아니요 (업그레이드 권장) |
 
-## Reporting a Vulnerability
+## 취약점 보고
 
-**Do not** open a public GitHub issue for security vulnerabilities.
+보안 취약점에 대해 공개 GitHub 이슈를 열지 **마세요**.
 
-### Process
+### 프로세스
 
-1. Report privately via GitHub's private vulnerability reporting
-2. Include: description, reproduction steps, affected versions, impact
-3. Allow time for assessment and fix development
+1. GitHub의 비공개 취약점 보고를 통해 비공개로 보고
+2. 포함 사항: 설명, 재현 단계, 영향 받는 버전, 영향
+3. 평가 및 수정 개발을 위한 시간 허용
 
-### Timeline
+### 일정
 
-| Phase | Timeline |
+| 단계 | 일정 |
 | ----- | -------- |
-| Acknowledgment | 72 hours |
-| Initial assessment | 7 days |
-| Coordinated disclosure | 90 days max |
+| 확인 | 72시간 |
+| 초기 평가 | 7일 |
+| 조정된 공개 | 최대 90일 |
 
-## Disclosure Policy
+## 공개 정책
 
-1. Vulnerabilities are reported privately
-2. Fixes are developed before public disclosure
-3. Security advisories are published after fixes are available
-4. Reporters are credited (unless anonymity requested)
+1. 취약점은 비공개로 보고됩니다
+2. 수정이 공개 공개 전에 개발됩니다
+3. 수정이 가능한 후 보안 권고가 게시됩니다
+4. 보고자는 크레딧을 받습니다 (익명 요청 제외)
 
-## Security Measures
+## 보안 조치
 
-- CI/CD checks on all changes
-- Signed releases with SHA-256 checksums
-- Mandatory PR review before merge
+- 모든 변경에 대한 CI/CD 검사
+- SHA-256 체크섬이 있는 서명된 릴리스
+- 병합 전 필수 PR 검토
 
-## Full Policy
+## 전체 정책
 
-See [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) for the complete security policy.
+전체 보안 정책은 [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md)를 참조하세요.
 
-## Related Pages
+## 관련 페이지
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
+- [신뢰 패키지](trust-package.md) — 감사자 준비 자료
+- [거버넌스](index.md) — 프로젝트 거버넌스

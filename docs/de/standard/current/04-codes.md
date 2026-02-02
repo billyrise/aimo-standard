@@ -1,120 +1,114 @@
 ---
-description: AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/04-codes.md
-source_hash: 4fbe61ae36d25e5e
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Code-System Format und Namenskonventionen. Definiert Code-Struktur (XX-NNN), Lifecycle-Zustände, Versionierung und Deprecation-Richtlinien für Taxonomie-Codes.
 ---
 
 # Codes
 
-This page defines the AIMO Code System format, naming conventions, and lifecycle management.
+Diese Seite definiert das AIMO Code-System Format, Namenskonventionen und Lifecycle-Management.
 
-## Code Format
+## Code-Format
 
-All AIMO codes follow the format: **`<PREFIX>-<TOKEN>`**
+Alle AIMO-Codes folgen dem Format: **`<PRÄFIX>-<TOKEN>`**
 
-| Component | Description | Format | Example |
+| Komponente | Beschreibung | Format | Beispiel |
 | --- | --- | --- | --- |
-| `<PREFIX>` | Dimension identifier | 2 uppercase letters | FS, UC, DT |
-| `-` | Separator | Hyphen | - |
-| `<TOKEN>` | Unique token within dimension | 3 digits (zero-padded) | 001, 002, 003 |
+| `<PRÄFIX>` | Dimensions-Identifikator | 2 Großbuchstaben | FS, UC, DT |
+| `-` | Trennzeichen | Bindestrich | - |
+| `<TOKEN>` | Eindeutiges Token innerhalb der Dimension | 3 Ziffern (nullgefüllt) | 001, 002, 003 |
 
-### Examples
+### Beispiele
 
-- `FS-001` - Functional Scope: End-user Productivity
-- `UC-005` - Use Case Class: Code Generation
-- `DT-004` - Data Type: Personal Data
-- `CH-003` - Channel: IDE Plugin
-- `IM-002` - Integration Mode: SaaS Integrated
-- `RS-001` - Risk Surface: Data Leakage
-- `OB-001` - Outcome/Benefit: Efficiency
-- `EV-001` - Evidence Type: Request Record
+- `FS-001` - Funktionaler Scope: Endbenutzer-Produktivität
+- `UC-005` - Anwendungsfall-Klasse: Code-Generierung
+- `DT-004` - Datentyp: Personenbezogene Daten
+- `CH-003` - Kanal: IDE-Plugin
+- `IM-002` - Integrationsmodus: SaaS-integriert
+- `RS-001` - Risikooberfläche: Datenleck
+- `OB-001` - Ergebnis/Nutzen: Effizienz
+- `EV-001` - Evidence-Typ: Antragsdatensatz
 
-## Namespaces
+## Namensräume
 
-The AIMO taxonomy uses 8 dimension namespaces:
+Die AIMO Taxonomie verwendet 8 Dimensions-Namensräume:
 
-| ID | Name | Prefix | Code Count |
+| ID | Name | Präfix | Code-Anzahl |
 | --- | --- | --- | --- |
-| **FS** | Functional Scope | `FS-` | 6 |
-| **UC** | Use Case Class | `UC-` | 30 |
-| **DT** | Data Type | `DT-` | 10 |
-| **CH** | Channel | `CH-` | 8 |
-| **IM** | Integration Mode | `IM-` | 7 |
-| **RS** | Risk Surface | `RS-` | 8 |
-| **OB** | Outcome / Benefit | `OB-` | 7 |
-| **EV** | Evidence Type | `EV-` | 15 |
+| **FS** | Funktionaler Scope | `FS-` | 6 |
+| **UC** | Anwendungsfall-Klasse | `UC-` | 30 |
+| **DT** | Datentyp | `DT-` | 10 |
+| **CH** | Kanal | `CH-` | 8 |
+| **IM** | Integrationsmodus | `IM-` | 7 |
+| **RS** | Risikooberfläche | `RS-` | 8 |
+| **OB** | Ergebnis / Nutzen | `OB-` | 7 |
+| **EV** | Evidence-Typ | `EV-` | 15 |
 
-**Total: 91 codes across 8 dimensions**
+**Gesamt: 91 Codes über 8 Dimensionen**
 
-### Namespace Rules
+### Namensraum-Regeln
 
-1. **Prefix is fixed**: The two-letter dimension prefix (FS, UC, etc.) is permanent and will never change.
-2. **Zero-padding**: Tokens are always 3 digits, zero-padded (e.g., `001` not `1`).
-3. **Sequential assignment**: New codes are assigned the next available number within a dimension.
-4. **No reuse**: Removed codes are never reassigned to different meanings.
+1. **Präfix ist fest**: Das zwei-Buchstaben-Dimensions-Präfix (FS, UC, etc.) ist permanent und wird sich nie ändern.
+2. **Nullfüllung**: Tokens sind immer 3 Ziffern, nullgefüllt (z.B. `001` nicht `1`).
+3. **Sequenzielle Zuweisung**: Neue Codes erhalten die nächste verfügbare Nummer innerhalb einer Dimension.
+4. **Keine Wiederverwendung**: Entfernte Codes werden nie für andere Bedeutungen neu zugewiesen.
 
-## Stability Rules
+## Stabilitätsregeln
 
-Code stability is a critical principle for audit traceability.
+Code-Stabilität ist ein kritisches Prinzip für Audit-Nachverfolgbarkeit.
 
-### ID Immutability
+### ID-Unveränderlichkeit
 
-- **Code IDs are immutable** — once assigned, a code ID never changes meaning
-- A code like `UC-001` will always mean "General Q&A" for its entire lifecycle
-- If the meaning needs to change, a new code is created instead
+- **Code-IDs sind unveränderlich** — einmal zugewiesen, ändert eine Code-ID nie ihre Bedeutung
+- Ein Code wie `UC-001` wird immer "Allgemeine F&A" für seinen gesamten Lifecycle bedeuten
+- Wenn die Bedeutung geändert werden muss, wird stattdessen ein neuer Code erstellt
 
-### No Reuse Policy
+### Keine-Wiederverwendung-Richtlinie
 
-- Deprecated or removed codes are **never reassigned** to different meanings
-- This ensures historical evidence remains valid and traceable
-- Example: If `UC-010` is deprecated, a new use case gets `UC-031` (not `UC-010`)
+- Veraltete oder entfernte Codes werden **nie** für andere Bedeutungen neu zugewiesen
+- Dies stellt sicher, dass historisches Evidence gültig und nachverfolgbar bleibt
+- Beispiel: Wenn `UC-010` veraltet ist, erhält ein neuer Anwendungsfall `UC-031` (nicht `UC-010`)
 
-### Deprecation Before Removal
+### Deprecation vor Entfernung
 
-- Codes must be marked `deprecated` for at least one MINOR version before removal
-- Removal only occurs in MAJOR version increments
-- See [Lifecycle](#lifecycle) section for details
+- Codes müssen für mindestens eine MINOR-Version als `deprecated` markiert werden, bevor sie entfernt werden
+- Entfernung erfolgt nur bei MAJOR-Versionserhöhungen
+- Siehe Abschnitt [Lifecycle](#lifecycle) für Details
 
-## Usage
+## Verwendung
 
-### Required Dimensions
+### Erforderliche Dimensionen
 
-For each AI system or use case, you MUST specify at least one code from each required dimension:
+Für jedes KI-System oder jeden Anwendungsfall MÜSSEN Sie mindestens einen Code aus jeder erforderlichen Dimension angeben:
 
-| Dimension | Selection | Notes |
+| Dimension | Auswahl | Hinweise |
 | --- | --- | --- |
-| FS | Exactly 1 | Primary business function |
-| UC | 1 or more | Task types performed |
-| DT | 1 or more | Data classifications |
-| CH | 1 or more | Access channels |
-| IM | Exactly 1 | Integration mode |
-| RS | 1 or more | Risk categories |
-| EV | 1 or more | Evidence types |
+| FS | Genau 1 | Primäre Geschäftsfunktion |
+| UC | 1 oder mehr | Ausgeführte Aufgabentypen |
+| DT | 1 oder mehr | Datenklassifizierungen |
+| CH | 1 oder mehr | Zugriffskanäle |
+| IM | Genau 1 | Integrationsmodus |
+| RS | 1 oder mehr | Risikokategorien |
+| EV | 1 oder mehr | Evidence-Typen |
 
-### Optional Dimensions
+### Optionale Dimensionen
 
-| Dimension | Selection | Notes |
+| Dimension | Auswahl | Hinweise |
 | --- | --- | --- |
-| OB | 0 or more | Expected benefits (optional) |
+| OB | 0 oder mehr | Erwartete Vorteile (optional) |
 
-### Code Composition
+### Code-Komposition
 
-When documenting an AI system, codes from multiple dimensions are combined. The **composition priority** determines the order when listing codes:
+Bei der Dokumentation eines KI-Systems werden Codes aus mehreren Dimensionen kombiniert. Die **Kompositionspriorität** bestimmt die Reihenfolge bei der Auflistung von Codes:
 
-1. FS (Functional Scope)
-2. UC (Use Case Class)
-3. DT (Data Type)
-4. CH (Channel)
-5. IM (Integration Mode)
-6. RS (Risk Surface)
-7. OB (Outcome / Benefit)
-8. EV (Evidence Type)
+1. FS (Funktionaler Scope)
+2. UC (Anwendungsfall-Klasse)
+3. DT (Datentyp)
+4. CH (Kanal)
+5. IM (Integrationsmodus)
+6. RS (Risikooberfläche)
+7. OB (Ergebnis / Nutzen)
+8. EV (Evidence-Typ)
 
-**Example composition:**
+**Beispielkomposition:**
 
 ```
 FS: FS-001
@@ -129,79 +123,79 @@ EV: EV-001, EV-002
 
 ## Lifecycle
 
-### Status Values
+### Statuswerte
 
-| Status | Description | Validator Behavior |
+| Status | Beschreibung | Validator-Verhalten |
 | --- | --- | --- |
-| `active` | Currently valid and in use | Accepted |
-| `deprecated` | Still valid but scheduled for removal | Accepted with warning |
-| `removed` | No longer valid; do not use | Rejected |
+| `active` | Derzeit gültig und in Verwendung | Akzeptiert |
+| `deprecated` | Noch gültig, aber zur Entfernung vorgesehen | Akzeptiert mit Warnung |
+| `removed` | Nicht mehr gültig; nicht verwenden | Abgelehnt |
 
-### Lifecycle Metadata Fields
+### Lifecycle-Metadatenfelder
 
-The dictionary tracks lifecycle with these fields:
+Das Dictionary verfolgt den Lifecycle mit diesen Feldern:
 
-| Field | Required | Description | Example |
+| Feld | Erforderlich | Beschreibung | Beispiel |
 | --- | --- | --- | --- |
-| `status` | Yes | Current status | `active` |
-| `introduced_in` | Yes | Version when code was added | `0.1.0` |
-| `deprecated_in` | No | Version when marked deprecated | `1.2.0` |
-| `removed_in` | No | Version when removed | `2.0.0` |
-| `replaced_by` | No | Replacement code(s) | `UC-015` |
-| `backward_compatible` | Yes | Whether change breaks existing usage | `true` |
+| `status` | Ja | Aktueller Status | `active` |
+| `introduced_in` | Ja | Version, als Code hinzugefügt wurde | `0.1.0` |
+| `deprecated_in` | Nein | Version, als als veraltet markiert | `1.2.0` |
+| `removed_in` | Nein | Version, als entfernt | `2.0.0` |
+| `replaced_by` | Nein | Ersetzungscode(s) | `UC-015` |
+| `backward_compatible` | Ja | Ob Änderung bestehende Nutzung bricht | `true` |
 
-### Deprecation Rules
+### Deprecation-Regeln
 
-1. Codes MUST be marked `deprecated` for at least one MINOR version before removal
-2. Deprecated codes include `deprecated_in` version and `replaced_by` if applicable
-3. Removal occurs only in MAJOR version increments
-4. Deprecated codes remain valid for backward compatibility during the deprecation period
+1. Codes MÜSSEN für mindestens eine MINOR-Version als `deprecated` markiert werden, bevor sie entfernt werden
+2. Veraltete Codes enthalten `deprecated_in`-Version und `replaced_by`, falls zutreffend
+3. Entfernung erfolgt nur bei MAJOR-Versionserhöhungen
+4. Veraltete Codes bleiben während des Deprecation-Zeitraums für Rückwärtskompatibilität gültig
 
-**Example timeline:**
+**Beispielzeitlinie:**
 
-| Version | Status | Action |
+| Version | Status | Aktion |
 | --- | --- | --- |
-| 0.1.0 | `active` | Code `UC-010` introduced |
-| 1.2.0 | `deprecated` | Marked deprecated, `replaced_by: UC-031` |
-| 2.0.0 | `removed` | No longer accepted by validator |
+| 0.1.0 | `active` | Code `UC-010` eingeführt |
+| 1.2.0 | `deprecated` | Als veraltet markiert, `replaced_by: UC-031` |
+| 2.0.0 | `removed` | Nicht mehr vom Validator akzeptiert |
 
-### Versioning
+### Versionierung
 
-Code changes follow [Semantic Versioning](./08-changelog.md):
+Code-Änderungen folgen [Semantic Versioning](./08-changelog.md):
 
-- **MAJOR**: Code removal or breaking changes
-- **MINOR**: New codes added, codes deprecated
-- **PATCH**: Definition clarifications only (no structural changes)
+- **MAJOR**: Code-Entfernung oder Breaking Changes
+- **MINOR**: Neue Codes hinzugefügt, Codes veraltet
+- **PATCH**: Nur Definitionsklarstellungen (keine strukturellen Änderungen)
 
-### Backward Compatibility
+### Rückwärtskompatibilität
 
-The `backward_compatible` field indicates whether a change breaks existing usage:
+Das `backward_compatible`-Feld zeigt an, ob eine Änderung bestehende Nutzung bricht:
 
-| Value | Meaning |
+| Wert | Bedeutung |
 | --- | --- |
-| `true` | Existing evidence using this code remains valid |
-| `false` | Existing evidence may need updates (MAJOR version change) |
+| `true` | Bestehendes Evidence mit diesem Code bleibt gültig |
+| `false` | Bestehendes Evidence benötigt möglicherweise Updates (MAJOR-Versionsänderung) |
 
-## Validation
+## Validierung
 
-The validator checks:
+Der Validator prüft:
 
-1. All required dimensions have at least one code
-2. Single-select dimensions have exactly one code
-3. All codes exist in the current taxonomy dictionary
-4. Code format matches `<PREFIX>-<TOKEN>` pattern (e.g., `UC-001`)
-5. Deprecated codes are flagged with warnings
+1. Alle erforderlichen Dimensionen haben mindestens einen Code
+2. Einzel-Auswahl-Dimensionen haben genau einen Code
+3. Alle Codes existieren im aktuellen Taxonomie-Dictionary
+4. Code-Format entspricht dem Muster `<PRÄFIX>-<TOKEN>` (z.B. `UC-001`)
+5. Veraltete Codes werden mit Warnungen gekennzeichnet
 
-See [Validator](./07-validator.md) for implementation details.
+Siehe [Validator](./07-validator.md) für Implementierungsdetails.
 
-## SSOT Reference
+## SSOT-Referenz
 
-!!! info "Source of Truth"
-    The authoritative definition is `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+!!! info "Quelle der Wahrheit"
+    Die maßgebliche Definition ist `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Diese Seite ist erklärend. Siehe [Lokalisierungsleitfaden](../../contributing/localization.md) für Update-Workflows.
 
-## Related Pages
+## Verwandte Seiten
 
-- [Taxonomy](./03-taxonomy.md) - Full dimension definitions
-- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
-- [Validator](./07-validator.md) - Validation rules
-- [Changelog](./08-changelog.md) - Version history
+- [Taxonomie](./03-taxonomy.md) - Vollständige Dimensionsdefinitionen
+- [Dictionary](./05-dictionary.md) - Vollständige Code-Listen und Spaltendefinitionen
+- [Validator](./07-validator.md) - Validierungsregeln
+- [Changelog](./08-changelog.md) - Versionshistorie

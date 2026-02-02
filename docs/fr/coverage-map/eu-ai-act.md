@@ -1,38 +1,32 @@
 ---
-description: AIMO Standard to EU AI Act mapping. Traceability between AIMO taxonomy codes and EU AI Act risk categories and requirements.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/eu-ai-act.md
-source_hash: 0cb113dcf0c1daa9
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Correspondance du standard AIMO avec l'EU AI Act. Traçabilité entre les codes de taxonomie AIMO et les catégories de risque et exigences de l'EU AI Act.
 ---
 
-# EU AI Act mapping
+# Correspondance EU AI Act
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> Raccourcis de traçabilité : Taxonomie → Exigences minimales de preuves → Validateur → Protocole de surveillance humaine.
 
-- [Taxonomy](../standard/current/03-taxonomy.md)
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- [Log Schemas](../artifacts/log-schemas/index.md)
-- [Validator](../validator/index.md)
-- [Human Oversight Protocol](../governance/human-oversight-protocol.md)
+- [Taxonomie](../standard/current/03-taxonomy.md)
+- [Exigences minimales de preuves](../artifacts/minimum-evidence.md)
+- [Schémas de journaux](../artifacts/log-schemas/index.md)
+- [Validateur](../validator/index.md)
+- [Protocole de surveillance humaine](../governance/human-oversight-protocol.md)
 
-This page maps selected EU AI Act themes (documentation, record-keeping, risk management, human oversight, transparency) to AIMO evidence and artifacts. It is high-level only and does **not** constitute legal advice or guarantee conformity. Verify against the official legal text.
+Cette page met en correspondance des thèmes sélectionnés de l'EU AI Act (documentation, tenue de registres, gestion des risques, surveillance humaine, transparence) avec les preuves et artefacts AIMO. C'est uniquement de haut niveau et ne constitue **pas** un avis juridique ni ne garantit la conformité. Vérifiez par rapport au texte juridique officiel.
 
 
-## Mapping table
+## Table de correspondance
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| Référence du cadre / sujet | Preuve AIMO / où dans AIMO | Lot de preuves / Preuves minimales | Artefacts et validation | Notes |
 | --- | --- | --- | --- | --- |
-| Art 9 – Risk management (obligations) | [Scope](../standard/current/02-scope.md) | request, review, exception | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Art 10 – Data governance | [Dictionary](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | High-level only; not legal advice. Verify against official text. |
-| Art 11 – Documentation (high-risk) | [EV Template](../standard/current/06-ev-template.md), [Evidence Bundle](../artifacts/evidence-bundle.md) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; schema_validate_ev | High-level only; not legal advice. Verify against official text. |
-| Art 12 – Record-keeping | [Evidence Bundle](../artifacts/evidence-bundle.md), [Minimum Evidence](../artifacts/minimum-evidence.md) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | High-level only; not legal advice. Verify against official text. |
-| Art 13 – Transparency (user information) | [Scope](../standard/current/02-scope.md) | Summary, EV; review | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Art 14 – Human oversight | [Minimum Evidence](../artifacts/minimum-evidence.md) | review, exception; review, exception | templates/ev/ev_template.md | High-level only; not legal advice. Verify against official text. |
-| Art 17 – Risk management (high-risk) | [Scope](../standard/current/02-scope.md) | request, review, exception, renewal | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Art 26 – Transparency (limited risk) | [Scope](../standard/current/02-scope.md) | Summary, EV; review | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Art 29 – Documentation (general-purpose AI) | [EV Template](../standard/current/06-ev-template.md) | EV, Dictionary, Summary; request, review | schemas/jsonschema/; schema_validate_ev | High-level only; not legal advice. Verify against official text. |
-| Art 52 – Transparency (deployer) | [Minimum Evidence](../artifacts/minimum-evidence.md) | EV, Summary; review | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Recitals – Accountability | [Evidence Bundle](../artifacts/evidence-bundle.md) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | High-level only; not legal advice. Verify against official text. |
+| Art 9 – Gestion des risques (obligations) | [Périmètre](../standard/current/02-scope.md) | demande, revue, exception | templates/ev/ | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 10 – Gouvernance des données | [Dictionnaire](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 11 – Documentation (haut risque) | [Modèle EV](../standard/current/06-ev-template.md), [Lot de preuves](../artifacts/evidence-bundle.md) | EV, Dictionary, Summary; demande, revue | schemas/jsonschema/, templates/ev/; schema_validate_ev | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 12 – Tenue de registres | [Lot de preuves](../artifacts/evidence-bundle.md), [Preuves minimales](../artifacts/minimum-evidence.md) | EV, change_log, demande, revue | examples/evidence_bundle_minimal/; schema_validate_ev | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 13 – Transparence (information utilisateur) | [Périmètre](../standard/current/02-scope.md) | Summary, EV; revue | templates/ev/ | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 14 – Surveillance humaine | [Preuves minimales](../artifacts/minimum-evidence.md) | revue, exception; revue, exception | templates/ev/ev_template.md | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 17 – Gestion des risques (haut risque) | [Périmètre](../standard/current/02-scope.md) | demande, revue, exception, renouvellement | templates/ev/ | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 26 – Transparence (risque limité) | [Périmètre](../standard/current/02-scope.md) | Summary, EV; revue | templates/ev/ | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 29 – Documentation (IA à usage général) | [Modèle EV](../standard/current/06-ev-template.md) | EV, Dictionary, Summary; demande, revue | schemas/jsonschema/; schema_validate_ev | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Art 52 – Transparence (déployeur) | [Preuves minimales](../artifacts/minimum-evidence.md) | EV, Summary; revue | templates/ev/ | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |
+| Considérants – Responsabilité | [Lot de preuves](../artifacts/evidence-bundle.md) | EV, demande, revue, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | Haut niveau uniquement ; pas d'avis juridique. Vérifiez par rapport au texte officiel. |

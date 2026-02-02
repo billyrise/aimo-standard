@@ -1,86 +1,80 @@
 ---
-description: Agent Activity Log Format - Vendor-neutral schema for agentic AI privilege exercise, tool execution, and recursive operation monitoring in enterprises.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/agent-activity.md
-source_hash: 295769d5ebeeb14f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Formato de Registro de Actividad de Agente - Esquema neutral a proveedores para ejercicio de privilegios de IA agéntica, ejecución de herramientas y monitoreo de operaciones recursivas en empresas.
 ---
 
-# Agent Activity Log Format
+# Formato de Registro de Actividad de Agente
 
-## Purpose
+## Propósito
 
-This schema defines a vendor-neutral format for logs that document **agentic AI privilege exercise, tool execution, and recursive operations**. It enables organizations to:
+Este esquema define un formato neutral a proveedores para registros que documentan **ejercicio de privilegios de IA agéntica, ejecución de herramientas y operaciones recursivas**. Permite a las organizaciones:
 
-- Maintain an auditable record of autonomous agent actions
-- Track "who did what with what authority" for compliance and incident investigation
-- Support explainability for agentic AI operations in audit contexts
+- Mantener un registro auditable de acciones de agentes autónomos
+- Rastrear "quién hizo qué con qué autoridad" para cumplimiento e investigación de incidentes
+- Soportar explicabilidad para operaciones de IA agéntica en contextos de auditoría
 
-## Event model
+## Modelo de eventos
 
-The schema supports four event types that capture the agentic operation lifecycle:
+El esquema soporta cuatro tipos de eventos que capturan el ciclo de vida de operación agéntica:
 
-| Event Type | Description |
+| Tipo de Evento | Descripción |
 | --- | --- |
-| `agent_run` | Start or completion of an agent execution session |
-| `tool_call` | Agent invoking a tool or external action |
-| `tool_result` | Result returned from a tool invocation |
-| `escalation` | Agent requesting human intervention or elevated privileges |
+| `agent_run` | Inicio o finalización de una sesión de ejecución de agente |
+| `tool_call` | Agente invocando una herramienta o acción externa |
+| `tool_result` | Resultado devuelto de una invocación de herramienta |
+| `escalation` | Agente solicitando intervención humana o privilegios elevados |
 
-## Required fields (MUST)
+## Campos requeridos (DEBE)
 
-| Field | Type | Description | Example |
+| Campo | Tipo | Descripción | Ejemplo |
 | --- | --- | --- | --- |
-| `event_time` | string (ISO8601) | Timestamp of the event | `2026-01-15T09:30:00Z` |
-| `agent_id` | string | Identifier of the agent | `agent-coding-assistant-v2` |
-| `agent_version` | string | Version of the agent | `2.1.0` |
-| `run_id` | string | Unique identifier for this run/session | `run-20260115-abc123` |
-| `event_type` | string | Type of event | `agent_run`, `tool_call`, `tool_result`, `escalation` |
-| `actor_id` | string | Initiating user or service | `user@example.com` |
-| `tool_name` | string | Name of the tool invoked | `file_write`, `api_call`, `shell_exec` |
-| `tool_action` | string | Action performed by the tool | `create`, `read`, `update`, `delete`, `execute` |
-| `tool_target` | string | Target of the action | `/path/to/file`, `https://api.example.com` |
-| `auth_context` | string | Permission/role summary | `role:developer, scope:project-x` |
-| `input_ref` | string | Hash or URI to input (not the content itself) | `sha256:def456...` |
-| `output_ref` | string | Hash or URI to output (not the content itself) | `sha256:ghi789...` |
-| `decision` | string | Policy decision applied | `allow`, `block`, `needs_review`, `unknown` |
-| `evidence_ref` | string | Reference to related evidence | `urn:evidence:...` |
+| `event_time` | string (ISO8601) | Marca de tiempo del evento | `2026-01-15T09:30:00Z` |
+| `agent_id` | string | Identificador del agente | `agent-coding-assistant-v2` |
+| `agent_version` | string | Versión del agente | `2.1.0` |
+| `run_id` | string | Identificador único para esta ejecución/sesión | `run-20260115-abc123` |
+| `event_type` | string | Tipo de evento | `agent_run`, `tool_call`, `tool_result`, `escalation` |
+| `actor_id` | string | Usuario o servicio iniciador | `user@example.com` |
+| `tool_name` | string | Nombre de la herramienta invocada | `file_write`, `api_call`, `shell_exec` |
+| `tool_action` | string | Acción realizada por la herramienta | `create`, `read`, `update`, `delete`, `execute` |
+| `tool_target` | string | Objetivo de la acción | `/path/to/file`, `https://api.example.com` |
+| `auth_context` | string | Resumen de permiso/rol | `role:developer, scope:project-x` |
+| `input_ref` | string | Hash o URI a la entrada (no el contenido en sí) | `sha256:def456...` |
+| `output_ref` | string | Hash o URI a la salida (no el contenido en sí) | `sha256:ghi789...` |
+| `decision` | string | Decisión de política aplicada | `allow`, `block`, `needs_review`, `unknown` |
+| `evidence_ref` | string | Referencia a evidencia relacionada | `urn:evidence:...` |
 
-## Optional fields (SHOULD/MAY)
+## Campos opcionales (DEBERÍA/PUEDE)
 
-| Field | Type | Description |
+| Campo | Tipo | Descripción |
 | --- | --- | --- |
-| `recursion_depth` | number | Current recursion depth for nested agent calls |
-| `retry_count` | number | Number of retries for this action |
-| `policy_id` | string | Policy that triggered the decision |
-| `prompt_template_id` | string | Prompt template identifier |
-| `model` | string | Model used for this action |
-| `latency_ms` | number | Latency in milliseconds |
-| `cost_estimate` | number | Estimated cost of this action |
-| `error_code` | string | Error code if the action failed |
+| `recursion_depth` | number | Profundidad de recursión actual para llamadas de agente anidadas |
+| `retry_count` | number | Número de reintentos para esta acción |
+| `policy_id` | string | Política que desencadenó la decisión |
+| `prompt_template_id` | string | Identificador de plantilla de prompt |
+| `model` | string | Modelo usado para esta acción |
+| `latency_ms` | number | Latencia en milisegundos |
+| `cost_estimate` | number | Costo estimado de esta acción |
+| `error_code` | string | Código de error si la acción falló |
 
-## Safety notes
+## Notas de seguridad
 
-!!! warning "Agentic risk assumptions"
-    When logging agentic AI activity, assume the following risks:
+!!! warning "Suposiciones de riesgo agéntico"
+    Al registrar actividad de IA agéntica, asuma los siguientes riesgos:
 
-    - **Prompt injection**: Malicious inputs may attempt to manipulate agent behavior
-    - **Over-privilege**: Agents may have broader permissions than intended for a specific task
-    - **Recursive loops**: Agents may enter unintended recursive execution patterns
-    - **Confused deputy**: Agents may be tricked into acting on behalf of unauthorized parties
+    - **Inyección de prompt**: Entradas maliciosas pueden intentar manipular el comportamiento del agente
+    - **Sobre-privilegio**: Los agentes pueden tener permisos más amplios de lo previsto para una tarea específica
+    - **Bucles recursivos**: Los agentes pueden entrar en patrones de ejecución recursiva no intencionales
+    - **Deputy confundido**: Los agentes pueden ser engañados para actuar en nombre de partes no autorizadas
 
-    The schema is designed to capture "who did what with what authority" to support post-incident analysis and audit explanations. It does not prevent these risks; organizations must implement appropriate guardrails.
+    El esquema está diseñado para capturar "quién hizo qué con qué autoridad" para soportar análisis post-incidente y explicaciones de auditoría. No previene estos riesgos; las organizaciones deben implementar salvaguardas apropiadas.
 
-!!! warning "Data handling"
-    - **Do not embed** secrets, credentials, or sensitive content in `input_ref` or `output_ref`.
-    - Use hash references or secure URIs to separately stored content.
-    - Apply appropriate access controls and retention policies.
+!!! warning "Manejo de datos"
+    - **No incruste** secretos, credenciales o contenido sensible en `input_ref` o `output_ref`.
+    - Use referencias hash o URIs seguros a contenido almacenado por separado.
+    - Aplique controles de acceso y políticas de retención apropiados.
 
 ## JSON Schema
 
-Download: [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json)
+Descargar: [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json)
 
 ```json
 {
@@ -111,9 +105,9 @@ Download: [agent-activity.schema.json](https://github.com/billyrise/aimo-standar
 }
 ```
 
-## Related pages
+## Páginas relacionadas
 
-- [Log Schemas index](index.md)
-- [Shadow AI Discovery Log](shadow-ai-discovery.md)
-- [Minimum Evidence Requirements](../minimum-evidence.md)
-- [Taxonomy: UC-010 Agentic Automation](../../standard/current/03-taxonomy.md)
+- [Índice de Esquemas de Registro](index.md)
+- [Registro de Descubrimiento de Shadow AI](shadow-ai-discovery.md)
+- [Requisitos Mínimos de Evidencia](../minimum-evidence.md)
+- [Taxonomía: UC-010 Automatización Agéntica](../../standard/current/03-taxonomy.md)

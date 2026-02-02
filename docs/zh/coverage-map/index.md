@@ -1,42 +1,36 @@
 ---
-description: AIMO Coverage Map - Traceability between AIMO Standard and major regulations (ISO 42001, NIST AI RMF, EU AI Act, ISMS) for audit readiness.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/index.md
-source_hash: 4cc217bc21f8b662
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 覆盖映射 - AIMO 标准与主要法规（ISO 42001、NIST AI RMF、欧盟AI法案、ISMS）之间的可追溯性，用于审计就绪。
 ---
 
-# Coverage Map
+# 覆盖映射
 
-## Important: Scope of this Coverage Map (No automatic compliance)
+## 重要说明：此覆盖映射的范围（不自动合规）
 
-This Coverage Map provides **traceability** between AIMO Standard elements and major regulations/standards to accelerate audit explanations and evidence readiness.
-**It does NOT automatically guarantee compliance** with any specific regulation or standard.
-Applicable obligations vary by role (e.g., provider/deployer), use case, risk classification, transition timelines, and authoritative interpretations/certification schemes.
+此覆盖映射提供 AIMO 标准元素与主要法规/标准之间的**可追溯性**，以加速审计解释和证据就绪。
+**它不会自动保证符合**任何特定法规或标准。
+适用的义务因角色（如提供者/部署者）、用例、风险分类、过渡时间表和权威解释/认证方案而异。
 
-## How to use this map (traceability workflow)
+## 如何使用此映射（可追溯性工作流程）
 
-1. Start from the external requirement (e.g., ISO/NIST/EU AI Act/ISMS) and find the mapped AIMO Standard elements.
-2. Use the linked AIMO elements to identify required artifacts and minimum evidence requirements.
-3. Validate completeness and consistency using the Validator, and apply human review where required (see [Human Oversight Protocol](../governance/human-oversight-protocol.md)).
+1. 从外部要求（如 ISO/NIST/欧盟AI法案/ISMS）开始，找到映射的 AIMO 标准元素。
+2. 使用链接的 AIMO 元素来识别所需的工件和最低证据要求。
+3. 使用验证器验证完整性和一致性，并在需要时应用人工审查（参见 [人工监督协议](../governance/human-oversight-protocol.md)）。
 
-**Key resources:**
+**关键资源：**
 
-- [Taxonomy](../standard/current/03-taxonomy.md) — classification codes
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist
-- [Evidence Bundle](../artifacts/evidence-bundle.md) — bundle structure and TOC
-- [Log Schemas](../artifacts/log-schemas/index.md) — Shadow AI / agent activity evidence
-- [Validator](../validator/index.md) — structural consistency checks
-- [Human Oversight Protocol](../governance/human-oversight-protocol.md) — machine vs. human review boundary
+- [分类法](../standard/current/03-taxonomy.md) — 分类代码
+- [最低证据要求](../artifacts/minimum-evidence.md) — MUST 级别清单
+- [证据包](../artifacts/evidence-bundle.md) — 包结构和目录
+- [日志模式](../artifacts/log-schemas/index.md) — 影子AI/代理活动证据
+- [验证器](../validator/index.md) — 结构一致性检查
+- [人工监督协议](../governance/human-oversight-protocol.md) — 机器与人工审查的边界
 
 ---
 
-This section maps AIMO Standard evidence and artifacts to external frameworks and regulations for audit explainability. It does **not** guarantee compliance or provide legal advice.
+本节将 AIMO 标准证据和工件映射到外部框架和法规，以支持审计可解释性。它**不**保证合规或提供法律建议。
 
-- **[Methodology](methodology.md)**: what the mapping is and is not; how to use it; update policy; relationship to [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-- **ISO/IEC 42001**: [ISO/IEC 42001 mapping](iso-42001.md) — AI management system themes.
-- **NIST AI RMF**: [NIST AI RMF mapping](nist-ai-rmf.md) — Govern, Map, Measure, Manage.
-- **EU AI Act**: [EU AI Act mapping](eu-ai-act.md) — high-level documentation and record-keeping (not legal interpretation).
-- **ISMS view**: [ISMS mapping](isms.md) — ISO/IEC 27001/27002 themes (change management, access control, logging, evidence integrity).
+- **[方法论](methodology.md)**：映射是什么和不是什么；如何使用它；更新策略；与 [证据包](../artifacts/evidence-bundle.md) 和 [最低证据要求](../artifacts/minimum-evidence.md) 的关系。
+- **ISO/IEC 42001**：[ISO/IEC 42001 映射](iso-42001.md) — AI管理系统主题。
+- **NIST AI RMF**：[NIST AI RMF 映射](nist-ai-rmf.md) — 治理、映射、度量、管理。
+- **欧盟AI法案**：[欧盟AI法案映射](eu-ai-act.md) — 高级别文档和记录保存（非法律解释）。
+- **ISMS 视图**：[ISMS 映射](isms.md) — ISO/IEC 27001/27002 主题（变更管理、访问控制、日志、证据完整性）。

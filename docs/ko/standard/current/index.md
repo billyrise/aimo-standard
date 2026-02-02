@@ -1,15 +1,9 @@
 ---
-description: Current AIMO Standard specification. Includes overview, scope, taxonomy, codes, dictionary, evidence templates, and validator rules for AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/index.md
-source_hash: 7b332772b472660d
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: 현재 AIMO 표준 사양. AI 거버넌스를 위한 개요, 범위, 분류체계, 코드, 딕셔너리, 증거 템플릿 및 검증기 규칙이 포함됩니다.
 ---
 
-# Current (Latest)
+# 현재 (최신)
 
-This is the current working version of the AIMO Standard.
+이것은 AIMO 표준의 현재 작업 버전입니다.
 
-For official frozen releases, see: Standard > Versions.
+공식 고정 릴리스는 표준 > 버전을 참조하세요.

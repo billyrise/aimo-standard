@@ -1,49 +1,43 @@
 ---
-description: AIMO Standard - Open standard for AI governance and audit. Taxonomy with 8 dimensions and 91 codes for classifying AI use, evidence requirements, and validator for enterprise compliance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/index.md
-source_hash: 7b2b4ef78f06fcf5
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 - AI 거버넌스 및 감사를 위한 오픈 표준. AI 사용 분류를 위한 8개 차원과 91개 코드를 갖춘 분류체계, 증거 요구사항, 기업 컴플라이언스를 위한 검증기.
 ---
 
-# AIMO Standard
+# AIMO 표준
 
-This site hosts the human-readable AIMO Standard specification.
+이 사이트는 사람이 읽을 수 있는 AIMO 표준 사양을 호스팅합니다.
 
-## Why agentic AI audits are needed now
+## 지금 에이전틱 AI 감사가 필요한 이유
 
-Enterprise AI risk is increasingly driven by **Shadow AI (unapproved AI use)** and **agentic AI (autonomous agents) with broad tool privileges**, making traditional ISMS/IT controls insufficient for traceability and audit explanations.
-AIMO Standard classifies AI usage with a shared language (Taxonomy), defines minimum evidence requirements, and enforces consistency via a Validator—accelerating auditability and remediation.
-Note: AIMO Standard does not provide legal advice or automatically guarantee compliance with any specific regulation/standard (see [Coverage Map](coverage-map/index.md)).
+기업 AI 리스크는 점점 더 **Shadow AI(승인되지 않은 AI 사용)**와 **광범위한 도구 권한을 가진 에이전틱 AI(자율 에이전트)**에 의해 주도되어, 전통적인 ISMS/IT 통제가 추적성 및 감사 설명에 불충분해지고 있습니다.
+AIMO 표준은 공유 언어(분류체계)로 AI 사용을 분류하고, 최소 증거 요구사항을 정의하며, 검증기를 통해 일관성을 강제하여 감사 가능성과 해결을 가속화합니다.
+참고: AIMO 표준은 법률 자문을 제공하지 않으며 특정 규정/표준과의 컴플라이언스를 자동으로 보장하지 않습니다([커버리지 맵](coverage-map/index.md) 참조).
 
-- [Taxonomy](standard/current/03-taxonomy.md) (shared language)
-- [Minimum Evidence Requirements](artifacts/minimum-evidence.md)
-- [Validator](validator/index.md) (consistency checks)
+- [분류체계](standard/current/03-taxonomy.md) (공유 언어)
+- [최소 증거 요구사항](artifacts/minimum-evidence.md)
+- [검증기](validator/index.md) (일관성 검사)
 
-**Top-level sections**
+**최상위 섹션**
 
-1. [Standard](standard/index.md) — Specification ([Current](standard/current/index.md) | [Versions](standard/versions/index.md)), [Conformance](conformance/index.md), [Coverage Map](coverage-map/index.md)
-2. [Artifacts](artifacts/index.md) — Taxonomy, code system, dictionary, evidence templates, schemas
-3. [Validator](validator/index.md) — Rules, reference checks, how to run
-4. [Examples](examples/index.md) — End-to-end and minimal samples
-5. [Releases](releases/index.md) — Changelog, migration, checksums, PDF
-6. [Governance](governance/index.md) — Versioning, security, license, trademarks, [Contributing](contributing/localization.md)
+1. [표준](standard/index.md) — 사양 ([현재](standard/current/index.md) | [버전](standard/versions/index.md)), [적합성](conformance/index.md), [커버리지 맵](coverage-map/index.md)
+2. [산출물](artifacts/index.md) — 분류체계, 코드 시스템, 딕셔너리, 증거 템플릿, 스키마
+3. [검증기](validator/index.md) — 규칙, 참조 검사, 실행 방법
+4. [예제](examples/index.md) — 엔드투엔드 및 최소 샘플
+5. [릴리스](releases/index.md) — 변경로그, 마이그레이션, 체크섬, PDF
+6. [거버넌스](governance/index.md) — 버전 관리, 보안, 라이선스, 상표, [기여하기](contributing/localization.md)
 
-**Quick links by audience**
+**대상별 빠른 링크**
 
-- **For auditors**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Dictionary](standard/current/05-dictionary.md), [Evidence Bundle](artifacts/evidence-bundle.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Coverage Map](coverage-map/index.md), [Validator](validator/index.md), [Releases](releases/index.md)
-- **For security**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Governance](governance/index.md), [Validator](validator/index.md), [Standard > EV Template](standard/current/06-ev-template.md)
-- **For IT ops**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Releases](releases/index.md), [Validator](validator/index.md), [Examples](examples/index.md), [Conformance](conformance/index.md)
-- **For legal/procurement**: [Trust Package](governance/trust-package.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Coverage Map Methodology](coverage-map/methodology.md), [Releases](releases/index.md), [Governance](governance/index.md) (license, trademarks)
+- **감사자용**: [신뢰 패키지](governance/trust-package.md), [분류체계](standard/current/03-taxonomy.md), [딕셔너리](standard/current/05-dictionary.md), [증거 번들](artifacts/evidence-bundle.md), [최소 증거 요구사항](artifacts/minimum-evidence.md), [커버리지 맵](coverage-map/index.md), [검증기](validator/index.md), [릴리스](releases/index.md)
+- **보안용**: [신뢰 패키지](governance/trust-package.md), [분류체계](standard/current/03-taxonomy.md), [최소 증거 요구사항](artifacts/minimum-evidence.md), [책임 경계](governance/responsibility-boundary.md), [거버넌스](governance/index.md), [검증기](validator/index.md), [표준 > EV 템플릿](standard/current/06-ev-template.md)
+- **IT 운영용**: [신뢰 패키지](governance/trust-package.md), [분류체계](standard/current/03-taxonomy.md), [최소 증거 요구사항](artifacts/minimum-evidence.md), [릴리스](releases/index.md), [검증기](validator/index.md), [예제](examples/index.md), [적합성](conformance/index.md)
+- **법무/조달용**: [신뢰 패키지](governance/trust-package.md), [책임 경계](governance/responsibility-boundary.md), [커버리지 맵 방법론](coverage-map/methodology.md), [릴리스](releases/index.md), [거버넌스](governance/index.md) (라이선스, 상표)
 
-**Audit journey** (2-click path):
+**감사 여정** (2클릭 경로):
 
-1. [Trust Package](governance/trust-package.md) — start here for auditor-ready materials
-2. [Taxonomy](standard/current/03-taxonomy.md) + [Dictionary](standard/current/05-dictionary.md) — understand the 8-dimension code system
-3. [Evidence Bundle](artifacts/evidence-bundle.md) — structure and TOC
-4. [Minimum Evidence Requirements](artifacts/minimum-evidence.md) — MUST-level checklist
-5. [Coverage Map](coverage-map/index.md) + [Methodology](coverage-map/methodology.md) — framework mappings
-6. [Validator](validator/index.md) — run structural checks
-7. [Releases](releases/index.md) — download assets and verify
+1. [신뢰 패키지](governance/trust-package.md) — 감사자 준비 자료는 여기서 시작
+2. [분류체계](standard/current/03-taxonomy.md) + [딕셔너리](standard/current/05-dictionary.md) — 8차원 코드 시스템 이해
+3. [증거 번들](artifacts/evidence-bundle.md) — 구조 및 목차
+4. [최소 증거 요구사항](artifacts/minimum-evidence.md) — MUST 수준 체크리스트
+5. [커버리지 맵](coverage-map/index.md) + [방법론](coverage-map/methodology.md) — 프레임워크 매핑
+6. [검증기](validator/index.md) — 구조적 검사 실행
+7. [릴리스](releases/index.md) — 자산 다운로드 및 확인

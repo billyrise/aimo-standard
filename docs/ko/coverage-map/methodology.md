@@ -1,59 +1,53 @@
 ---
-description: Coverage Map methodology - How AIMO maps to external frameworks. Usage in audits, relationship to Evidence Bundle, and traceability approach.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/methodology.md
-source_hash: c495d78e6f93ef50
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: 커버리지 맵 방법론 - AIMO가 외부 프레임워크에 매핑하는 방법. 감사에서의 사용, 증거 번들과의 관계 및 추적성 접근방식.
 ---
 
-# Methodology
+# 방법론
 
-> Note: This methodology supports traceability and evidence readiness. It does not guarantee compliance with any specific regulation/standard.
+> 참고: 이 방법론은 추적성 및 증거 준비를 지원합니다. 특정 규정/표준과의 컴플라이언스를 보장하지 않습니다.
 
-This page explains what the Coverage Map is and is not, how to use it in audit, and how it relates to the Evidence Bundle and Minimum Evidence Requirements.
+이 페이지는 커버리지 맵이 무엇이고 무엇이 아닌지, 감사에서 어떻게 사용하는지, 증거 번들 및 최소 증거 요구사항과 어떻게 관련되는지 설명합니다.
 
-## What the mapping is
+## 매핑이란
 
-- An **informative** mapping from external framework/regulation references (by topic) to AIMO evidence, Evidence Bundle TOC items, Minimum Evidence lifecycle groups, artifacts, and validator checks.
-- A support tool for **explainability**: which AIMO evidence and artifacts can help demonstrate or explain alignment with a given external requirement (without claiming conformity).
+- 외부 프레임워크/규정 참조(주제별)에서 AIMO 증거, 증거 번들 목차 항목, 최소 증거 생명주기 그룹, 산출물 및 검증기 검사로의 **참고용** 매핑입니다.
+- **설명 가능성**을 위한 지원 도구: 어떤 AIMO 증거와 산출물이 주어진 외부 요구사항과의 정합을 입증하거나 설명하는 데 도움이 될 수 있는지 (적합성을 주장하지 않고).
 
-## What the mapping is not
+## 매핑이 아닌 것
 
-- **Not** a guarantee of compliance with any framework or regulation.
-- **Not** legal advice or a substitute for verification against authoritative texts.
-- **Not** exhaustive; it is a practical subset for audit-readiness and explainability.
+- 어떤 프레임워크나 규정과의 컴플라이언스 **보장이 아닙니다**.
+- 법률 자문이나 권위 있는 텍스트에 대한 검증의 **대체가 아닙니다**.
+- **완전하지 않음**; 감사 준비 및 설명 가능성을 위한 실용적인 하위 집합입니다.
 
-## How to use it in audit
+## 감사에서 사용하는 방법
 
-Use the flow: **requirement → evidence → artifact → validation**.
+흐름 사용: **요구사항 → 증거 → 산출물 → 검증**.
 
-1. **Requirement**: Identify the external framework reference and topic (e.g. ISO 42001 documentation, EU AI Act record-keeping).
-2. **Evidence**: See which AIMO Evidence Bundle items and Minimum Evidence lifecycle groups (request, review, exception, renewal, change_log, integrity) support explainability for that requirement.
-3. **Artifact**: Locate the artifacts (schemas, templates, examples) that implement or illustrate that evidence.
-4. **Validation**: Use the validator and schema checks referenced to verify structural consistency.
+1. **요구사항**: 외부 프레임워크 참조 및 주제를 식별합니다(예: ISO 42001 문서화, EU AI Act 기록 보존).
+2. **증거**: 해당 요구사항에 대한 설명 가능성을 지원하는 AIMO 증거 번들 항목 및 최소 증거 생명주기 그룹(request, review, exception, renewal, change_log, integrity)을 확인합니다.
+3. **산출물**: 해당 증거를 구현하거나 설명하는 산출물(스키마, 템플릿, 예제)을 찾습니다.
+4. **검증**: 참조된 검증기 및 스키마 검사를 사용하여 구조적 일관성을 확인합니다.
 
-Readers must verify against the authoritative text of each framework or regulation.
+독자는 각 프레임워크 또는 규정의 권위 있는 텍스트와 대조하여 확인해야 합니다.
 
-## Relationship to Evidence Bundle and Minimum Evidence Requirements
+## 증거 번들 및 최소 증거 요구사항과의 관계
 
-- **[Evidence Bundle](../artifacts/evidence-bundle.md)**: Defines the bundle structure, TOC, and traceability. Coverage Map rows reference Evidence Bundle sections (e.g. EV, Dictionary, Summary, change_log, request, review, exception, renewal).
-- **[Minimum Evidence Requirements](../artifacts/minimum-evidence.md)**: Defines MUST-level lifecycle groups (request, review, exception, renewal, change_log, integrity). Coverage Map rows reference these groups in `minimum_evidence_refs`.
+- **[증거 번들](../artifacts/evidence-bundle.md)**: 번들 구조, 목차 및 추적성을 정의합니다. 커버리지 맵 행은 증거 번들 섹션(예: EV, Dictionary, Summary, change_log, request, review, exception, renewal)을 참조합니다.
+- **[최소 증거 요구사항](../artifacts/minimum-evidence.md)**: MUST 수준 생명주기 그룹(request, review, exception, renewal, change_log, integrity)을 정의합니다. 커버리지 맵 행은 `minimum_evidence_refs`에서 이 그룹을 참조합니다.
 
-Use the Coverage Map to see which Evidence Bundle items and Minimum Evidence groups support explainability for a given external requirement.
+커버리지 맵을 사용하여 어떤 증거 번들 항목 및 최소 증거 그룹이 주어진 외부 요구사항에 대한 설명 가능성을 지원하는지 확인하세요.
 
-## Non-overclaim statement
+## 과대 주장 금지 선언
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "중요"
+    AIMO 표준은 **설명 가능성 및 증거 준비**를 지원합니다. 법률 자문을 제공하거나, 컴플라이언스를 보장하거나, 어떤 규정 또는 프레임워크에 대한 적합성을 인증하지 **않습니다**. 채택자는 권위 있는 텍스트와 대조하여 주장을 확인하고 적절한 전문 자문을 받아야 합니다.
 
-See [Responsibility Boundary](../governance/responsibility-boundary.md) for scope, assumptions, and adopter responsibilities.
+범위, 가정 및 채택자 책임에 대해서는 [책임 경계](../governance/responsibility-boundary.md)를 참조하세요.
 
-## Audit journey
+## 감사 여정
 
-From this page, continue to:
+이 페이지에서 다음으로 계속하세요:
 
-1. **Framework mappings**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Validate**: [Validator](../validator/index.md) — run structural checks
-3. **Download**: [Releases](../releases/index.md) — get release assets
+1. **프레임워크 매핑**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
+2. **검증**: [검증기](../validator/index.md) — 구조적 검사 실행
+3. **다운로드**: [릴리스](../releases/index.md) — 릴리스 자산 획득

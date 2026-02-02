@@ -1,120 +1,114 @@
 ---
-description: AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/04-codes.md
-source_hash: 4fbe61ae36d25e5e
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 代码系统格式和命名约定。定义代码结构（XX-NNN）、生命周期状态、版本控制和分类法代码的弃用政策。
 ---
 
-# Codes
+# 代码
 
-This page defines the AIMO Code System format, naming conventions, and lifecycle management.
+本页定义 AIMO 代码系统格式、命名约定和生命周期管理。
 
-## Code Format
+## 代码格式
 
-All AIMO codes follow the format: **`<PREFIX>-<TOKEN>`**
+所有 AIMO 代码遵循格式：**`<前缀>-<标记>`**
 
-| Component | Description | Format | Example |
+| 组件 | 描述 | 格式 | 示例 |
 | --- | --- | --- | --- |
-| `<PREFIX>` | Dimension identifier | 2 uppercase letters | FS, UC, DT |
-| `-` | Separator | Hyphen | - |
-| `<TOKEN>` | Unique token within dimension | 3 digits (zero-padded) | 001, 002, 003 |
+| `<前缀>` | 维度标识符 | 2个大写字母 | FS, UC, DT |
+| `-` | 分隔符 | 连字符 | - |
+| `<标记>` | 维度内的唯一标记 | 3位数字（零填充） | 001, 002, 003 |
 
-### Examples
+### 示例
 
-- `FS-001` - Functional Scope: End-user Productivity
-- `UC-005` - Use Case Class: Code Generation
-- `DT-004` - Data Type: Personal Data
-- `CH-003` - Channel: IDE Plugin
-- `IM-002` - Integration Mode: SaaS Integrated
-- `RS-001` - Risk Surface: Data Leakage
-- `OB-001` - Outcome/Benefit: Efficiency
-- `EV-001` - Evidence Type: Request Record
+- `FS-001` - 功能范围：最终用户生产力
+- `UC-005` - 用例类别：代码生成
+- `DT-004` - 数据类型：个人数据
+- `CH-003` - 渠道：IDE 插件
+- `IM-002` - 集成模式：SaaS 集成
+- `RS-001` - 风险面：数据泄露
+- `OB-001` - 结果/收益：效率
+- `EV-001` - 证据类型：请求记录
 
-## Namespaces
+## 命名空间
 
-The AIMO taxonomy uses 8 dimension namespaces:
+AIMO 分类法使用8个维度命名空间：
 
-| ID | Name | Prefix | Code Count |
+| ID | 名称 | 前缀 | 代码数量 |
 | --- | --- | --- | --- |
-| **FS** | Functional Scope | `FS-` | 6 |
-| **UC** | Use Case Class | `UC-` | 30 |
-| **DT** | Data Type | `DT-` | 10 |
-| **CH** | Channel | `CH-` | 8 |
-| **IM** | Integration Mode | `IM-` | 7 |
-| **RS** | Risk Surface | `RS-` | 8 |
-| **OB** | Outcome / Benefit | `OB-` | 7 |
-| **EV** | Evidence Type | `EV-` | 15 |
+| **FS** | 功能范围 | `FS-` | 6 |
+| **UC** | 用例类别 | `UC-` | 30 |
+| **DT** | 数据类型 | `DT-` | 10 |
+| **CH** | 渠道 | `CH-` | 8 |
+| **IM** | 集成模式 | `IM-` | 7 |
+| **RS** | 风险面 | `RS-` | 8 |
+| **OB** | 结果/收益 | `OB-` | 7 |
+| **EV** | 证据类型 | `EV-` | 15 |
 
-**Total: 91 codes across 8 dimensions**
+**总计：8个维度下的91个代码**
 
-### Namespace Rules
+### 命名空间规则
 
-1. **Prefix is fixed**: The two-letter dimension prefix (FS, UC, etc.) is permanent and will never change.
-2. **Zero-padding**: Tokens are always 3 digits, zero-padded (e.g., `001` not `1`).
-3. **Sequential assignment**: New codes are assigned the next available number within a dimension.
-4. **No reuse**: Removed codes are never reassigned to different meanings.
+1. **前缀是固定的**：两字母维度前缀（FS、UC 等）是永久的，永远不会改变。
+2. **零填充**：标记始终是3位数字，零填充（例如 `001` 而非 `1`）。
+3. **顺序分配**：新代码在维度内分配下一个可用编号。
+4. **不重用**：已删除的代码永远不会重新分配给不同的含义。
 
-## Stability Rules
+## 稳定性规则
 
-Code stability is a critical principle for audit traceability.
+代码稳定性是审计可追溯性的关键原则。
 
-### ID Immutability
+### ID 不可变性
 
-- **Code IDs are immutable** — once assigned, a code ID never changes meaning
-- A code like `UC-001` will always mean "General Q&A" for its entire lifecycle
-- If the meaning needs to change, a new code is created instead
+- **代码ID是不可变的** — 一旦分配，代码ID的含义永远不会改变
+- 像 `UC-001` 这样的代码在其整个生命周期中将始终表示"通用问答"
+- 如果含义需要改变，则创建新代码
 
-### No Reuse Policy
+### 不重用政策
 
-- Deprecated or removed codes are **never reassigned** to different meanings
-- This ensures historical evidence remains valid and traceable
-- Example: If `UC-010` is deprecated, a new use case gets `UC-031` (not `UC-010`)
+- 已弃用或已删除的代码**永远不会重新分配**给不同的含义
+- 这确保历史证据保持有效和可追溯
+- 示例：如果 `UC-010` 被弃用，新用例获得 `UC-031`（而非 `UC-010`）
 
-### Deprecation Before Removal
+### 删除前弃用
 
-- Codes must be marked `deprecated` for at least one MINOR version before removal
-- Removal only occurs in MAJOR version increments
-- See [Lifecycle](#lifecycle) section for details
+- 代码必须在删除前至少标记为 `deprecated` 一个 MINOR 版本
+- 删除仅在 MAJOR 版本增量中发生
+- 详情请参阅 [生命周期](#lifecycle) 部分
 
-## Usage
+## 使用
 
-### Required Dimensions
+### 必需维度
 
-For each AI system or use case, you MUST specify at least one code from each required dimension:
+对于每个AI系统或用例，您必须从每个必需维度指定至少一个代码：
 
-| Dimension | Selection | Notes |
+| 维度 | 选择 | 说明 |
 | --- | --- | --- |
-| FS | Exactly 1 | Primary business function |
-| UC | 1 or more | Task types performed |
-| DT | 1 or more | Data classifications |
-| CH | 1 or more | Access channels |
-| IM | Exactly 1 | Integration mode |
-| RS | 1 or more | Risk categories |
-| EV | 1 or more | Evidence types |
+| FS | 恰好1个 | 主要业务功能 |
+| UC | 1个或多个 | 执行的任务类型 |
+| DT | 1个或多个 | 数据分类 |
+| CH | 1个或多个 | 访问渠道 |
+| IM | 恰好1个 | 集成模式 |
+| RS | 1个或多个 | 风险类别 |
+| EV | 1个或多个 | 证据类型 |
 
-### Optional Dimensions
+### 可选维度
 
-| Dimension | Selection | Notes |
+| 维度 | 选择 | 说明 |
 | --- | --- | --- |
-| OB | 0 or more | Expected benefits (optional) |
+| OB | 0个或多个 | 预期收益（可选） |
 
-### Code Composition
+### 代码组合
 
-When documenting an AI system, codes from multiple dimensions are combined. The **composition priority** determines the order when listing codes:
+记录AI系统时，来自多个维度的代码被组合。**组合优先级**确定列出代码时的顺序：
 
-1. FS (Functional Scope)
-2. UC (Use Case Class)
-3. DT (Data Type)
-4. CH (Channel)
-5. IM (Integration Mode)
-6. RS (Risk Surface)
-7. OB (Outcome / Benefit)
-8. EV (Evidence Type)
+1. FS（功能范围）
+2. UC（用例类别）
+3. DT（数据类型）
+4. CH（渠道）
+5. IM（集成模式）
+6. RS（风险面）
+7. OB（结果/收益）
+8. EV（证据类型）
 
-**Example composition:**
+**组合示例：**
 
 ```
 FS: FS-001
@@ -127,81 +121,81 @@ OB: OB-001
 EV: EV-001, EV-002
 ```
 
-## Lifecycle
+## 生命周期
 
-### Status Values
+### 状态值
 
-| Status | Description | Validator Behavior |
+| 状态 | 描述 | 验证器行为 |
 | --- | --- | --- |
-| `active` | Currently valid and in use | Accepted |
-| `deprecated` | Still valid but scheduled for removal | Accepted with warning |
-| `removed` | No longer valid; do not use | Rejected |
+| `active` | 当前有效并在使用中 | 接受 |
+| `deprecated` | 仍然有效但计划删除 | 接受并警告 |
+| `removed` | 不再有效；不要使用 | 拒绝 |
 
-### Lifecycle Metadata Fields
+### 生命周期元数据字段
 
-The dictionary tracks lifecycle with these fields:
+字典使用这些字段跟踪生命周期：
 
-| Field | Required | Description | Example |
+| 字段 | 必需 | 描述 | 示例 |
 | --- | --- | --- | --- |
-| `status` | Yes | Current status | `active` |
-| `introduced_in` | Yes | Version when code was added | `0.1.0` |
-| `deprecated_in` | No | Version when marked deprecated | `1.2.0` |
-| `removed_in` | No | Version when removed | `2.0.0` |
-| `replaced_by` | No | Replacement code(s) | `UC-015` |
-| `backward_compatible` | Yes | Whether change breaks existing usage | `true` |
+| `status` | 是 | 当前状态 | `active` |
+| `introduced_in` | 是 | 添加代码的版本 | `0.1.0` |
+| `deprecated_in` | 否 | 标记为弃用的版本 | `1.2.0` |
+| `removed_in` | 否 | 删除的版本 | `2.0.0` |
+| `replaced_by` | 否 | 替代代码 | `UC-015` |
+| `backward_compatible` | 是 | 更改是否破坏现有使用 | `true` |
 
-### Deprecation Rules
+### 弃用规则
 
-1. Codes MUST be marked `deprecated` for at least one MINOR version before removal
-2. Deprecated codes include `deprecated_in` version and `replaced_by` if applicable
-3. Removal occurs only in MAJOR version increments
-4. Deprecated codes remain valid for backward compatibility during the deprecation period
+1. 代码必须在删除前至少标记为 `deprecated` 一个 MINOR 版本
+2. 弃用的代码包含 `deprecated_in` 版本和 `replaced_by`（如适用）
+3. 删除仅在 MAJOR 版本增量中发生
+4. 弃用的代码在弃用期间保持有效以实现向后兼容
 
-**Example timeline:**
+**示例时间线：**
 
-| Version | Status | Action |
+| 版本 | 状态 | 操作 |
 | --- | --- | --- |
-| 0.1.0 | `active` | Code `UC-010` introduced |
-| 1.2.0 | `deprecated` | Marked deprecated, `replaced_by: UC-031` |
-| 2.0.0 | `removed` | No longer accepted by validator |
+| 0.1.0 | `active` | 代码 `UC-010` 引入 |
+| 1.2.0 | `deprecated` | 标记为弃用，`replaced_by: UC-031` |
+| 2.0.0 | `removed` | 验证器不再接受 |
 
-### Versioning
+### 版本控制
 
-Code changes follow [Semantic Versioning](./08-changelog.md):
+代码更改遵循 [语义版本控制](./08-changelog.md)：
 
-- **MAJOR**: Code removal or breaking changes
-- **MINOR**: New codes added, codes deprecated
-- **PATCH**: Definition clarifications only (no structural changes)
+- **MAJOR**：代码删除或破坏性更改
+- **MINOR**：添加新代码、弃用代码
+- **PATCH**：仅定义澄清（无结构更改）
 
-### Backward Compatibility
+### 向后兼容性
 
-The `backward_compatible` field indicates whether a change breaks existing usage:
+`backward_compatible` 字段指示更改是否破坏现有使用：
 
-| Value | Meaning |
+| 值 | 含义 |
 | --- | --- |
-| `true` | Existing evidence using this code remains valid |
-| `false` | Existing evidence may need updates (MAJOR version change) |
+| `true` | 使用此代码的现有证据仍然有效 |
+| `false` | 现有证据可能需要更新（MAJOR 版本更改） |
 
-## Validation
+## 验证
 
-The validator checks:
+验证器检查：
 
-1. All required dimensions have at least one code
-2. Single-select dimensions have exactly one code
-3. All codes exist in the current taxonomy dictionary
-4. Code format matches `<PREFIX>-<TOKEN>` pattern (e.g., `UC-001`)
-5. Deprecated codes are flagged with warnings
+1. 所有必需维度至少有一个代码
+2. 单选维度恰好有一个代码
+3. 所有代码存在于当前分类法字典中
+4. 代码格式匹配 `<前缀>-<标记>` 模式（例如 `UC-001`）
+5. 弃用的代码标记警告
 
-See [Validator](./07-validator.md) for implementation details.
+请参阅 [验证器](./07-validator.md) 了解实现详情。
 
-## SSOT Reference
+## SSOT 参考
 
-!!! info "Source of Truth"
-    The authoritative definition is `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+!!! info "事实来源"
+    权威定义是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本页是解释性的。有关更新工作流程，请参阅 [本地化指南](../../contributing/localization.md)。
 
-## Related Pages
+## 相关页面
 
-- [Taxonomy](./03-taxonomy.md) - Full dimension definitions
-- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
-- [Validator](./07-validator.md) - Validation rules
-- [Changelog](./08-changelog.md) - Version history
+- [分类法](./03-taxonomy.md) - 完整维度定义
+- [字典](./05-dictionary.md) - 完整代码列表和列定义
+- [验证器](./07-validator.md) - 验证规则
+- [变更日志](./08-changelog.md) - 版本历史

@@ -1,101 +1,95 @@
 ---
-description: AIMO Human Oversight Protocol - Boundary between automated validation and human review. Machine vs. human judgment responsibilities in AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/human-oversight-protocol.md
-source_hash: 0a95f9e625c9d49f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 인간 감독 프로토콜 - 자동화된 검증과 인간 검토 간의 경계. AI 거버넌스에서의 기계 vs. 인간 판단 책임.
 ---
 
-# Human Oversight Protocol
+# 인간 감독 프로토콜
 
-This page defines the boundary between what automated validation (Validator) can check and what requires human review (Human-in-the-Loop). It clarifies the responsibilities for machine vs. human judgment in AI governance evidence processes.
+이 페이지는 자동화된 검증(검증기)이 확인할 수 있는 것과 인간 검토(Human-in-the-Loop)가 필요한 것 사이의 경계를 정의합니다. AI 거버넌스 증거 프로세스에서 기계 vs. 인간 판단의 책임을 명확히 합니다.
 
-## Purpose
+## 목적
 
-Automated validation tools can efficiently check structural and syntactic correctness, but cannot replace human judgment for context-dependent decisions. This protocol:
+자동화된 검증 도구는 구조적 및 문법적 정확성을 효율적으로 확인할 수 있지만, 맥락 의존적 결정에 대한 인간 판단을 대체할 수 없습니다. 이 프로토콜은:
 
-- Clarifies what the Validator can and cannot verify
-- Defines the scope of human review required for effective governance
-- Supports audit explanations by documenting the human oversight process
-- Provides a framework for organizations implementing AI governance workflows
+- 검증기가 확인할 수 있는 것과 없는 것을 명확히 함
+- 효과적인 거버넌스에 필요한 인간 검토 범위를 정의
+- 인간 감독 프로세스를 문서화하여 감사 설명 지원
+- AI 거버넌스 워크플로우를 구현하는 조직을 위한 프레임워크 제공
 
-## What automated validation can do (Validator scope)
+## 자동화된 검증이 할 수 있는 것 (검증기 범위)
 
-The AIMO Validator and similar automated tools can check:
+AIMO 검증기 및 유사한 자동화 도구가 확인할 수 있는 것:
 
-| Capability | Description |
+| 기능 | 설명 |
 | --- | --- |
-| **Completeness of required fields/documents** | Verify that all mandatory fields are present in manifests, EV records, and other artifacts |
-| **Structural consistency** | Validate references, IDs, and cross-links between artifacts (e.g., request_id → review_id) |
-| **Schema validation** | Check that JSON/YAML artifacts conform to defined schemas |
-| **Code format validation** | Verify that taxonomy codes match expected patterns (e.g., `UC-001`) |
-| **Integrity checks** | Validate hash format and presence (not recomputation against content) |
-| **Dictionary validation** | Confirm that codes exist in the taxonomy dictionary |
+| **필수 필드/문서의 완전성** | 매니페스트, EV 레코드 및 기타 산출물에 모든 필수 필드가 있는지 확인 |
+| **구조적 일관성** | 산출물 간의 참조, ID 및 상호 연결 검증 (예: request_id → review_id) |
+| **스키마 검증** | JSON/YAML 산출물이 정의된 스키마에 부합하는지 확인 |
+| **코드 형식 검증** | 분류체계 코드가 예상 패턴과 일치하는지 확인 (예: `UC-001`) |
+| **무결성 검사** | 해시 형식 및 존재 검증 (내용에 대한 재계산 아님) |
+| **딕셔너리 검증** | 코드가 분류체계 딕셔너리에 존재하는지 확인 |
 
-See [Validator](../standard/current/07-validator.md) for detailed validation rules and reference implementation.
+상세 검증 규칙 및 참조 구현은 [검증기](../standard/current/07-validator.md)를 참조하세요.
 
-## What requires human review (Human-in-the-Loop scope)
+## 인간 검토가 필요한 것 (Human-in-the-Loop 범위)
 
-The following areas require human judgment and cannot be automated:
+다음 영역은 인간 판단이 필요하며 자동화할 수 없습니다:
 
-| Capability | Description |
+| 기능 | 설명 |
 | --- | --- |
-| **Context-dependent risk judgment** | Assessing business, ethical, and operational risks based on organizational context |
-| **Exception approval rationale** | Evaluating whether an exception is justified and compensating controls are adequate |
-| **Remediation decision-making** | Prioritizing fixes, allocating resources, and determining timelines |
-| **Policy trade-offs** | Balancing competing requirements (e.g., speed vs. thoroughness, cost vs. risk) |
-| **Residual risk acceptance** | Deciding whether remaining risks are acceptable after controls |
-| **Cross-domain impact assessment** | Evaluating implications for legal, HR, operations, and other functions |
-| **Content accuracy verification** | Confirming that evidence content is factually correct and complete |
-| **Stakeholder communication** | Explaining decisions to auditors, regulators, and leadership |
+| **맥락 의존적 리스크 판단** | 조직 맥락에 기반한 비즈니스, 윤리 및 운영 리스크 평가 |
+| **예외 승인 근거** | 예외가 정당하고 보완 통제가 적절한지 평가 |
+| **해결 의사결정** | 수정 우선순위, 자원 할당 및 일정 결정 |
+| **정책 트레이드오프** | 경쟁하는 요구사항 간의 균형 (예: 속도 vs. 철저함, 비용 vs. 리스크) |
+| **잔여 리스크 수용** | 통제 후 남은 리스크가 수용 가능한지 결정 |
+| **교차 도메인 영향 평가** | 법률, HR, 운영 및 기타 기능에 대한 영향 평가 |
+| **내용 정확성 검증** | 증거 내용이 사실적으로 정확하고 완전한지 확인 |
+| **이해관계자 커뮤니케이션** | 감사자, 규제기관 및 리더십에 결정 설명 |
 
-## Responsibility boundary
+## 책임 경계
 
-| Aspect | Validator (Machine) | Human Reviewer |
+| 측면 | 검증기 (기계) | 인간 검토자 |
 | --- | --- | --- |
-| **Structure** | ✓ Can verify | Review if flagged |
-| **Completeness** | ✓ Can verify fields | Verify content adequacy |
-| **Format** | ✓ Can verify | — |
-| **Risk judgment** | ✗ Cannot assess | ✓ Must assess |
-| **Exception approval** | ✗ Cannot decide | ✓ Must decide |
-| **Remediation priority** | ✗ Cannot prioritize | ✓ Must prioritize |
-| **Legal interpretation** | ✗ Cannot interpret | ✓ Must verify with counsel |
-| **Audit conclusion** | ✗ Cannot conclude | ✓ Auditor responsibility |
+| **구조** | ✓ 확인 가능 | 플래그된 경우 검토 |
+| **완전성** | ✓ 필드 확인 가능 | 내용 적절성 확인 |
+| **형식** | ✓ 확인 가능 | — |
+| **리스크 판단** | ✗ 평가 불가 | ✓ 반드시 평가 |
+| **예외 승인** | ✗ 결정 불가 | ✓ 반드시 결정 |
+| **해결 우선순위** | ✗ 우선순위 지정 불가 | ✓ 반드시 우선순위 지정 |
+| **법적 해석** | ✗ 해석 불가 | ✓ 법률 고문과 확인 필요 |
+| **감사 결론** | ✗ 결론 불가 | ✓ 감사자 책임 |
 
-!!! note "Complementary roles"
-    Validator and human review are **complementary**, not alternatives. Validator ensures structural consistency before human review; human review ensures contextual appropriateness.
+!!! note "보완적 역할"
+    검증기와 인간 검토는 대안이 아니라 **보완적**입니다. 검증기는 인간 검토 전에 구조적 일관성을 보장하고; 인간 검토는 맥락적 적절성을 보장합니다.
 
-## Evidence expectations
+## 증거 기대사항
 
-Organizations implementing human oversight should document:
+인간 감독을 구현하는 조직은 다음을 문서화해야 합니다:
 
-| Evidence Type | Description |
+| 증거 유형 | 설명 |
 | --- | --- |
-| **Review record** | Who reviewed, when, and what decision was made |
-| **Approval rationale** | Why the decision was made (especially for exceptions) |
-| **Escalation record** | When and why issues were escalated to higher authority |
-| **Remediation plan** | Planned actions, owners, and timelines for addressing issues |
-| **Sign-off** | Formal attestation that review was completed |
+| **검토 기록** | 누가 검토했는지, 언제, 어떤 결정이 내려졌는지 |
+| **승인 근거** | 왜 결정이 내려졌는지 (특히 예외의 경우) |
+| **에스컬레이션 기록** | 언제 왜 상위 권한으로 에스컬레이션되었는지 |
+| **해결 계획** | 문제 해결을 위한 계획된 조치, 담당자 및 일정 |
+| **승인** | 검토가 완료되었다는 공식 증명 |
 
-These records should be included in the Evidence Bundle per [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
+이러한 기록은 [최소 증거 요구사항](../artifacts/minimum-evidence.md)에 따라 증거 번들에 포함되어야 합니다.
 
-## Non-overclaim
+## 과대 주장 금지
 
-!!! warning "Important"
-    This protocol defines a **framework for documenting human oversight**. It does **not**:
+!!! warning "중요"
+    이 프로토콜은 **인간 감독을 문서화하기 위한 프레임워크**를 정의합니다. 다음은 **수행하지 않습니다**:
 
-    - Provide legal advice or regulatory interpretation
-    - Guarantee compliance with any regulation or standard
-    - Replace qualified human judgment with automated decisions
-    - Prescribe specific organizational processes
+    - 법률 자문 또는 규제 해석 제공
+    - 규정 또는 표준 준수 보장
+    - 자격을 갖춘 인간 판단을 자동화된 결정으로 대체
+    - 특정 조직 프로세스 규정
 
-    Organizations must adapt this framework to their specific context, risk profile, and regulatory requirements.
+    조직은 이 프레임워크를 특정 맥락, 리스크 프로파일 및 규제 요구사항에 맞게 조정해야 합니다.
 
-## Related pages
+## 관련 페이지
 
-- [Validator](../standard/current/07-validator.md) — automated validation rules and reference implementation
-- [Responsibility Boundary](responsibility-boundary.md) — what AIMO provides vs. adopter responsibilities
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level evidence checklist
-- [Trust Package](trust-package.md) — auditor-ready materials hub
+- [검증기](../standard/current/07-validator.md) — 자동화된 검증 규칙 및 참조 구현
+- [책임 경계](responsibility-boundary.md) — AIMO가 제공하는 것 vs. 채택자 책임
+- [최소 증거 요구사항](../artifacts/minimum-evidence.md) — MUST 수준 증거 체크리스트
+- [신뢰 패키지](trust-package.md) — 감사자 준비 자료 허브

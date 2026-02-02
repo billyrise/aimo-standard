@@ -1,20 +1,14 @@
 ---
-description: AIMO Standard examples - End-to-end and minimal sample bundles showing how to assemble evidence artifacts for AI governance audits.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/examples/index.md
-source_hash: aa2185aa686d7ef3
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准示例 - 展示如何组装AI治理审计证据工件的端到端和最小示例包。
 ---
 
-# Examples
+# 示例
 
-This section points to end-to-end and minimal examples that show how artifacts are assembled.
+本节指向展示如何组装工件的端到端和最小示例。
 
-- **Minimal bundle**: `examples/minimal/` in the repository (e.g., `sample_ev.json`, `sample_dictionary.json`).
-- **Evidence Bundle (minimal)**: `examples/evidence_bundle_minimal/` — root.json with optional request, review, change_log; see [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence](../artifacts/minimum-evidence.md).
-- **Schema alignment**: validate against `schemas/jsonschema/` and [Standard](../standard/current/index.md).
-- **Audit-ready packaging**: see the [Trust Package](../governance/trust-package.md).
+- **最小包**：仓库中的 `examples/minimal/`（例如 `sample_ev.json`、`sample_dictionary.json`）。
+- **证据包（最小）**：`examples/evidence_bundle_minimal/` — 带有可选 request、review、change_log 的 root.json；参见 [证据包](../artifacts/evidence-bundle.md) 和 [最低证据](../artifacts/minimum-evidence.md)。
+- **模式对齐**：针对 `schemas/jsonschema/` 和 [标准](../standard/current/index.md) 进行验证。
+- **审计就绪打包**：参见 [信任包](../governance/trust-package.md)。
 
-Detailed scenario coverage is added in later change units.
+详细的场景覆盖将在后续变更单元中添加。

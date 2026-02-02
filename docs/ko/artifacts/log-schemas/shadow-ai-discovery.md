@@ -1,74 +1,68 @@
 ---
-description: Shadow AI Discovery Log Schema - Vendor-neutral format for documenting detection, inventory, and remediation of unapproved AI usage in enterprises.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/shadow-ai-discovery.md
-source_hash: f9d93c82c96d509f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Shadow AI 검색 로그 스키마 - 기업에서 승인되지 않은 AI 사용의 탐지, 인벤토리 및 해결을 문서화하기 위한 벤더 중립 형식.
 ---
 
-# Shadow AI Discovery Log Schema
+# Shadow AI 검색 로그 스키마
 
-## Purpose
+## 목적
 
-This schema defines a vendor-neutral format for logs that document the detection, inventory, and remediation of **unapproved AI usage (Shadow AI)**. It enables organizations to:
+이 스키마는 **승인되지 않은 AI 사용(Shadow AI)**의 탐지, 인벤토리 및 해결을 문서화하는 로그를 위한 벤더 중립 형식을 정의합니다. 이를 통해 조직은 다음을 수행할 수 있습니다:
 
-- Maintain an auditable record of Shadow AI detection events
-- Normalize logs from various sources (CASB, proxy, IdP, EDR, SaaS audit logs) into a consistent format
-- Support evidence submission for compliance and audit purposes
+- Shadow AI 탐지 이벤트의 감사 가능한 기록 유지
+- 다양한 소스(CASB, 프록시, IdP, EDR, SaaS 감사 로그)의 로그를 일관된 형식으로 정규화
+- 컴플라이언스 및 감사 목적의 증거 제출 지원
 
-## Normalization principles
+## 정규화 원칙
 
-| Principle | Description |
+| 원칙 | 설명 |
 | --- | --- |
-| **Vendor-neutral** | No dependency on specific vendor log formats; applicable to Netskope, Zscaler, Microsoft Defender, and others |
-| **Minimal required fields** | Only essential fields are MUST; organizations can omit optional fields |
-| **Extensible** | `additionalProperties: true` allows vendor-specific or organization-specific extensions |
-| **Privacy-aware** | Fields are designed to reference (not embed) sensitive content |
+| **벤더 중립** | 특정 벤더 로그 형식에 종속되지 않음; Netskope, Zscaler, Microsoft Defender 등에 적용 가능 |
+| **최소 필수 필드** | 필수 필드만 MUST이며; 조직은 선택적 필드를 생략할 수 있음 |
+| **확장 가능** | `additionalProperties: true`는 벤더별 또는 조직별 확장을 허용 |
+| **개인정보 인식** | 필드는 민감한 콘텐츠를 포함하지 않고 참조하도록 설계됨 |
 
-## Required fields (MUST)
+## 필수 필드 (MUST)
 
-| Field | Type | Description | Example |
+| 필드 | 유형 | 설명 | 예시 |
 | --- | --- | --- | --- |
-| `event_time` | string (ISO8601) | Timestamp of the event | `2026-01-15T09:30:00Z` |
-| `actor_id` | string | User or service identifier | `user@example.com` |
-| `actor_type` | string | Type of actor | `user` or `service` |
-| `source_system` | string | System that detected the event | `proxy`, `casb`, `idp`, `edr`, `saas_audit` |
-| `ai_service` | string | AI product or domain accessed | `chat.openai.com`, `claude.ai` |
-| `action` | string | Action performed | `chat`, `upload`, `download`, `tool_execute`, `api_call` |
-| `data_classification` | string | Data classification level | `public`, `internal`, `confidential`, `restricted` |
-| `decision` | string | Policy decision applied | `allow`, `block`, `needs_review`, `unknown` |
-| `evidence_ref` | string | Reference to related evidence | `sha256:abc123...` or `urn:evidence:...` |
-| `record_id` | string | Unique identifier for this record | `evt-20260115-001` |
+| `event_time` | string (ISO8601) | 이벤트의 타임스탬프 | `2026-01-15T09:30:00Z` |
+| `actor_id` | string | 사용자 또는 서비스 식별자 | `user@example.com` |
+| `actor_type` | string | 행위자 유형 | `user` 또는 `service` |
+| `source_system` | string | 이벤트를 탐지한 시스템 | `proxy`, `casb`, `idp`, `edr`, `saas_audit` |
+| `ai_service` | string | 접근한 AI 제품 또는 도메인 | `chat.openai.com`, `claude.ai` |
+| `action` | string | 수행된 작업 | `chat`, `upload`, `download`, `tool_execute`, `api_call` |
+| `data_classification` | string | 데이터 분류 수준 | `public`, `internal`, `confidential`, `restricted` |
+| `decision` | string | 적용된 정책 결정 | `allow`, `block`, `needs_review`, `unknown` |
+| `evidence_ref` | string | 관련 증거에 대한 참조 | `sha256:abc123...` 또는 `urn:evidence:...` |
+| `record_id` | string | 이 레코드의 고유 식별자 | `evt-20260115-001` |
 
-## Optional fields (SHOULD/MAY)
+## 선택적 필드 (SHOULD/MAY)
 
-| Field | Type | Description |
+| 필드 | 유형 | 설명 |
 | --- | --- | --- |
-| `session_id` | string | Session identifier |
-| `device_id` | string | Device identifier |
-| `ip` | string | IP address |
-| `user_agent` | string | User agent string |
-| `department` | string | Organizational department |
-| `project_id` | string | Project identifier |
-| `prompt_category` | string | Category of the prompt/query |
-| `model_family` | string | AI model family (e.g., GPT-4, Claude) |
-| `destination` | string | Destination URL or endpoint |
-| `policy_id` | string | Policy that triggered the decision |
-| `remediation_ticket` | string | Remediation ticket reference |
+| `session_id` | string | 세션 식별자 |
+| `device_id` | string | 기기 식별자 |
+| `ip` | string | IP 주소 |
+| `user_agent` | string | 사용자 에이전트 문자열 |
+| `department` | string | 조직 부서 |
+| `project_id` | string | 프로젝트 식별자 |
+| `prompt_category` | string | 프롬프트/쿼리 카테고리 |
+| `model_family` | string | AI 모델 패밀리 (예: GPT-4, Claude) |
+| `destination` | string | 목적지 URL 또는 엔드포인트 |
+| `policy_id` | string | 결정을 트리거한 정책 |
+| `remediation_ticket` | string | 해결 티켓 참조 |
 
-## Privacy/Security notes
+## 개인정보/보안 참고사항
 
-!!! warning "Data handling"
-    - **Do not embed** PII, credentials, or prompt content directly in log fields.
-    - Use `evidence_ref` to reference separately stored sensitive content.
-    - Apply appropriate access controls to log storage.
-    - Consider data retention policies aligned with [Minimum Evidence Requirements](../minimum-evidence.md).
+!!! warning "데이터 처리"
+    - **PII, 자격 증명 또는 프롬프트 내용을** 로그 필드에 직접 **포함하지 마세요**.
+    - `evidence_ref`를 사용하여 별도로 저장된 민감한 콘텐츠를 참조하세요.
+    - 로그 저장소에 적절한 접근 통제를 적용하세요.
+    - [최소 증거 요구사항](../minimum-evidence.md)에 맞춘 데이터 보존 정책을 고려하세요.
 
 ## JSON Schema
 
-Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
+다운로드: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
 
 ```json
 {
@@ -95,9 +89,9 @@ Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-st
 }
 ```
 
-## Related pages
+## 관련 페이지
 
-- [Log Schemas index](index.md)
-- [Agent Activity Log](agent-activity.md)
-- [Minimum Evidence Requirements](../minimum-evidence.md)
-- [Taxonomy: IM-007 Shadow/Unmanaged](../../standard/current/03-taxonomy.md)
+- [로그 스키마 인덱스](index.md)
+- [에이전트 활동 로그](agent-activity.md)
+- [최소 증거 요구사항](../minimum-evidence.md)
+- [분류체계: IM-007 Shadow/미관리](../../standard/current/03-taxonomy.md)

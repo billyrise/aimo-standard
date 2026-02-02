@@ -1,59 +1,53 @@
 ---
-description: AIMO Evidence Pack templates and usage guide. Structure for documenting AI governance evidence with index management and audit-ready formatting.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/06-ev-template.md
-source_hash: bbdefcdcacf4fa95
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Template e guida all'uso dell'Evidence Pack AIMO. Struttura per documentare l'evidence di governance dell'IA con gestione dell'indice e formattazione pronta per l'audit.
 ---
 
-# EV Template
+# Template EV
 
-This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.
+Questa sezione definisce i template dell'Evidence Pack e il loro utilizzo. Un Evidence Pack è una raccolta di documentazione che dimostra governance e conformità per un sistema IA.
 
-## Key Principle: Index and Diff Management
+## Principio Chiave: Gestione dell'Indice e delle Differenze
 
-> **Important**: What matters is not the content of individual submissions, but the **index** and **diff management** across evidence items.
+> **Importante**: Ciò che conta non è il contenuto delle singole submission, ma la **gestione dell'indice** e delle **differenze** tra gli elementi di evidence.
 
-An Evidence Pack serves as an index linking AI systems to their governance artifacts. The value lies in:
+Un Evidence Pack serve come indice che collega i sistemi IA ai loro artefatti di governance. Il valore sta in:
 
-1. **Traceability**: Linking decisions, approvals, and changes across time
-2. **Auditability**: Enabling auditors to navigate the evidence structure
-3. **Maintainability**: Tracking what changed, when, and why
+1. **Tracciabilità**: Collegare decisioni, approvazioni e modifiche nel tempo
+2. **Verificabilità**: Abilitare gli auditor a navigare la struttura dell'evidence
+3. **Manutenibilità**: Tracciare cosa è cambiato, quando e perché
 
-## MVP Evidence Set (EV-01 to EV-07)
+## Set di Evidence MVP (EV-01 a EV-07)
 
-The following seven evidence types form the **minimum viable set** for demonstrating AI governance:
+I seguenti sette tipi di evidence formano il **set minimo vitale** per dimostrare la governance dell'IA:
 
-| ID | Evidence Type | Code | Purpose |
+| ID | Tipo di Evidence | Codice | Scopo |
 | --- | --- | --- | --- |
-| EV-01 | System Overview | EV-001 | Document the AI system and its purpose |
-| EV-02 | Data Flow | EV-002 | Map data movement through the system |
-| EV-03 | Inventory | EV-003 | Maintain catalog of AI assets |
-| EV-04 | Risk & Impact Assessment | EV-004 | Assess and document risks |
-| EV-05 | Controls & Approvals | EV-005 | Document controls and approval records |
-| EV-06 | Logging & Monitoring | EV-006 | Define logging and monitoring setup |
-| EV-07 | Incident & Exception | EV-007 | Track incidents and exceptions |
+| EV-01 | Panoramica del Sistema | EV-001 | Documentare il sistema IA e il suo scopo |
+| EV-02 | Flusso dei Dati | EV-002 | Mappare il movimento dei dati attraverso il sistema |
+| EV-03 | Inventario | EV-003 | Mantenere il catalogo degli asset IA |
+| EV-04 | Valutazione Rischi & Impatto | EV-004 | Valutare e documentare i rischi |
+| EV-05 | Controlli & Approvazioni | EV-005 | Documentare controlli e record di approvazione |
+| EV-06 | Logging & Monitoraggio | EV-006 | Definire la configurazione di logging e monitoraggio |
+| EV-07 | Incidenti & Eccezioni | EV-007 | Tracciare incidenti ed eccezioni |
 
-## Evidence Pack Manifest
+## Manifest dell'Evidence Pack
 
-Each Evidence Pack MUST include a manifest file containing:
+Ogni Evidence Pack DEVE includere un file manifest contenente:
 
-### Mandatory Metadata
+### Metadati Obbligatori
 
-| Field | Description | Required |
+| Campo | Descrizione | Richiesto |
 | --- | --- | --- |
-| `pack_id` | Unique identifier (e.g., EP-EXAMPLE-001) | Yes |
-| `pack_version` | SemVer version of the pack | Yes |
-| `taxonomy_version` | Version of AIMO taxonomy used | Yes |
-| `created_date` | Pack creation date | Yes |
-| `last_updated` | Last update date | Yes |
-| `owner` | Responsible party | Yes |
+| `pack_id` | Identificatore univoco (es. EP-EXAMPLE-001) | Sì |
+| `pack_version` | Versione SemVer del pack | Sì |
+| `taxonomy_version` | Versione della tassonomia AIMO usata | Sì |
+| `created_date` | Data di creazione del pack | Sì |
+| `last_updated` | Data dell'ultimo aggiornamento | Sì |
+| `owner` | Parte responsabile | Sì |
 
-### AIMO Codes (8 Dimensions)
+### Codici AIMO (8 Dimensioni)
 
-Each Evidence Pack MUST include codes from all 8 dimensions:
+Ogni Evidence Pack DEVE includere codici da tutte le 8 dimensioni:
 
 ```json
 {
@@ -70,7 +64,7 @@ Each Evidence Pack MUST include codes from all 8 dimensions:
 }
 ```
 
-### Evidence Files List
+### Lista dei File di Evidence
 
 ```json
 {
@@ -86,26 +80,26 @@ Each Evidence Pack MUST include codes from all 8 dimensions:
 }
 ```
 
-## Template Structure
+## Struttura del Template
 
-Each evidence template includes:
+Ogni template di evidence include:
 
-1. **Mandatory Metadata Block** - pack_id, version, taxonomy_version, dates, owner
-2. **AIMO Codes Table** - All 8 dimensions with applicable codes
-3. **Content Sections** - Domain-specific documentation sections
-4. **References** - Links to related evidence
-5. **Revision History** - Change tracking
+1. **Blocco di Metadati Obbligatori** - pack_id, versione, taxonomy_version, date, owner
+2. **Tabella Codici AIMO** - Tutte le 8 dimensioni con codici applicabili
+3. **Sezioni di Contenuto** - Sezioni di documentazione specifiche per dominio
+4. **Riferimenti** - Link a evidence correlata
+5. **Cronologia delle Revisioni** - Tracciamento delle modifiche
 
-### Template Header Example
+### Esempio di Header del Template
 
 ```markdown
-# EV-01: System Overview
+# EV-01: Panoramica del Sistema
 
 ---
 
-## Mandatory Metadata
+## Metadati Obbligatori
 
-| Field | Value |
+| Campo | Valore |
 | --- | --- |
 | **pack_id** | `EP-EXAMPLE-001` |
 | **pack_version** | `0.1.0` |
@@ -116,9 +110,9 @@ Each evidence template includes:
 
 ---
 
-## AIMO Codes (8 Dimensions)
+## Codici AIMO (8 Dimensioni)
 
-| Dimension | Code(s) | Label |
+| Dimensione | Codice/i | Etichetta |
 | --- | --- | --- |
 | **FS** | `FS-001` | End-user Productivity |
 | **UC** | `UC-001` | General Q&A |
@@ -130,11 +124,11 @@ Each evidence template includes:
 | **EV** | `EV-001` | System Overview |
 ```
 
-## Downloads
+## Download
 
-### Templates
+### Template
 
-Evidence Pack templates are available in:
+I template dell'Evidence Pack sono disponibili in:
 
 - `source_pack/04_evidence_pack/templates/EV-01_system_overview.md`
 - `source_pack/04_evidence_pack/templates/EV-02_data_flow.md`
@@ -144,28 +138,28 @@ Evidence Pack templates are available in:
 - `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md`
 - `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md`
 
-### Schemas and Examples
+### Schemi ed Esempi
 
 - Schema: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
-- Example: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
+- Esempio: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-See [Releases](../../releases/index.md) for downloadable packages.
+Vedere [Release](../../releases/index.md) per pacchetti scaricabili.
 
-## Distribution Model
+## Modello di Distribuzione
 
-> **Note**: The primary distribution targets are **audit firms and system integrators** (template distributors), not individual enterprises.
+> **Nota**: I target di distribuzione primari sono **società di audit e system integrator** (distributori di template), non singole aziende.
 
-The templates are designed to be:
+I template sono progettati per essere:
 
-1. Adopted by auditors and consultants as standard artifacts
-2. Distributed to enterprises with source attribution preserved
-3. Versioned alongside the AIMO Standard
+1. Adottati da auditor e consulenti come artefatti standard
+2. Distribuiti alle aziende con attribuzione della fonte preservata
+3. Versionati insieme allo Standard AIMO
 
-Enterprises receive templates through their auditors, consultants, or internal governance teams who maintain the linkage to the standard version.
+Le aziende ricevono i template tramite i loro auditor, consulenti o team di governance interni che mantengono il collegamento alla versione dello standard.
 
-## References
+## Riferimenti
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions
-- [Codes](./04-codes.md) - Code format
-- [Validator](./07-validator.md) - Validation rules
-- [Evidence Bundle](../../artifacts/evidence-bundle.md) - Bundle structure
+- [Tassonomia](./03-taxonomy.md) - Definizioni delle dimensioni
+- [Codici](./04-codes.md) - Formato dei codici
+- [Validator](./07-validator.md) - Regole di validazione
+- [Evidence Bundle](../../artifacts/evidence-bundle.md) - Struttura del bundle

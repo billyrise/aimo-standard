@@ -1,76 +1,70 @@
 ---
-description: AIMO Standard security policy - Vulnerability reporting, disclosure procedures, and security considerations for AI governance implementations.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/security.md
-source_hash: 035ba54290c8cf46
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Standard Sicherheitsrichtlinie - Schwachstellenmeldung, Offenlegungsverfahren und Sicherheitsüberlegungen für KI-Governance-Implementierungen.
 ---
 
-# Security
+# Sicherheit
 
-This page documents the security policy for AIMO Standard, including vulnerability reporting and disclosure procedures.
+Diese Seite dokumentiert die Sicherheitsrichtlinie für den AIMO Standard, einschließlich Schwachstellenmeldung und Offenlegungsverfahren.
 
-## Scope
+## Geltungsbereich
 
-### In Scope
+### Im Geltungsbereich
 
-- Validator reference implementation (`validator/`)
-- Build and release tooling (`tooling/`)
-- JSON schemas (`schemas/`)
-- Documentation website infrastructure
+- Validator-Referenzimplementierung (`validator/`)
+- Build- und Release-Tooling (`tooling/`)
+- JSON-Schemas (`schemas/`)
+- Dokumentations-Website-Infrastruktur
 
-### Out of Scope
+### Außerhalb des Geltungsbereichs
 
-- Specification content (normative text is not a security artifact)
-- Adopter implementations using AIMO Standard
-- External dependencies (report to upstream maintainers)
+- Spezifikationsinhalt (normativer Text ist kein Sicherheitsartefakt)
+- Anwenderimplementierungen, die den AIMO Standard verwenden
+- Externe Abhängigkeiten (an Upstream-Maintainer melden)
 
-## Supported Versions
+## Unterstützte Versionen
 
-| Version | Supported |
+| Version | Unterstützt |
 | ------- | --------- |
-| latest (dev) | Yes |
-| Tagged releases (vX.Y.Z) | Yes (latest 2 minor versions) |
-| Older releases | No (upgrade recommended) |
+| latest (dev) | Ja |
+| Getaggte Releases (vX.Y.Z) | Ja (neueste 2 Minor-Versionen) |
+| Ältere Releases | Nein (Upgrade empfohlen) |
 
-## Reporting a Vulnerability
+## Eine Schwachstelle melden
 
-**Do not** open a public GitHub issue for security vulnerabilities.
+Eröffnen Sie **kein** öffentliches GitHub-Issue für Sicherheitsschwachstellen.
 
-### Process
+### Prozess
 
-1. Report privately via GitHub's private vulnerability reporting
-2. Include: description, reproduction steps, affected versions, impact
-3. Allow time for assessment and fix development
+1. Privat über GitHubs private Schwachstellenmeldung melden
+2. Enthalten: Beschreibung, Reproduktionsschritte, betroffene Versionen, Auswirkung
+3. Zeit für Bewertung und Fix-Entwicklung einräumen
 
-### Timeline
+### Zeitplan
 
-| Phase | Timeline |
+| Phase | Zeitplan |
 | ----- | -------- |
-| Acknowledgment | 72 hours |
-| Initial assessment | 7 days |
-| Coordinated disclosure | 90 days max |
+| Bestätigung | 72 Stunden |
+| Erstbewertung | 7 Tage |
+| Koordinierte Offenlegung | maximal 90 Tage |
 
-## Disclosure Policy
+## Offenlegungsrichtlinie
 
-1. Vulnerabilities are reported privately
-2. Fixes are developed before public disclosure
-3. Security advisories are published after fixes are available
-4. Reporters are credited (unless anonymity requested)
+1. Schwachstellen werden privat gemeldet
+2. Fixes werden vor öffentlicher Offenlegung entwickelt
+3. Sicherheitshinweise werden veröffentlicht, nachdem Fixes verfügbar sind
+4. Melder werden genannt (außer bei Wunsch nach Anonymität)
 
-## Security Measures
+## Sicherheitsmaßnahmen
 
-- CI/CD checks on all changes
-- Signed releases with SHA-256 checksums
-- Mandatory PR review before merge
+- CI/CD-Prüfungen bei allen Änderungen
+- Signierte Releases mit SHA-256-Prüfsummen
+- Obligatorische PR-Überprüfung vor Merge
 
-## Full Policy
+## Vollständige Richtlinie
 
-See [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) for the complete security policy.
+Siehe [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) für die vollständige Sicherheitsrichtlinie.
 
-## Related Pages
+## Verwandte Seiten
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
+- [Trust Package](trust-package.md) — Prüfungsbereite Materialien
+- [Governance](index.md) — Projekt-Governance

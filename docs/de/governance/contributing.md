@@ -1,108 +1,102 @@
 ---
-description: AIMO Standard contribution guide - How to contribute code, documentation, and translations. Issue and PR guidelines.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/contributing.md
-source_hash: 09ff722418d2f2b4
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Standard Beitragsleitfaden - Wie man Code, Dokumentation und Übersetzungen beiträgt. Issue- und PR-Richtlinien.
 ---
 
-# Contributing
+# Beitragen
 
-This page provides guidelines for contributing to AIMO Standard.
+Diese Seite bietet Richtlinien für Beiträge zum AIMO Standard.
 
-## Quick Start
+## Schnellstart
 
-1. Fork the repository
-2. Create a feature branch
-3. Make changes following the guidelines below
-4. Run quality checks
-5. Submit a pull request
+1. Repository forken
+2. Feature-Branch erstellen
+3. Änderungen gemäß den folgenden Richtlinien vornehmen
+4. Qualitätsprüfungen ausführen
+5. Pull Request einreichen
 
-## Key Principles
+## Grundprinzipien
 
-| Principle | Description |
+| Prinzip | Beschreibung |
 | --------- | ----------- |
-| English is canonical | Edit `docs/en/` first, then update `docs/ja/` |
-| SSOT | This repository is the single source of truth |
-| No manual edits to generated files | Edit sources, regenerate, commit |
-| All changes via PR | Even maintainers use pull requests |
+| Englisch ist kanonisch | Zuerst `docs/en/` bearbeiten, dann `docs/ja/` aktualisieren |
+| SSOT | Dieses Repository ist die einzige Quelle der Wahrheit |
+| Keine manuellen Bearbeitungen generierter Dateien | Quellen bearbeiten, regenerieren, committen |
+| Alle Änderungen via PR | Auch Maintainer verwenden Pull Requests |
 
-## Quality Checks
+## Qualitätsprüfungen
 
-Before submitting a PR, run:
+Vor dem Einreichen eines PRs ausführen:
 
 ```bash
-# Activate virtual environment
+# Virtuelle Umgebung aktivieren
 source .venv/bin/activate
 
-# Run lints
+# Lints ausführen
 python tooling/checks/lint_i18n.py
 python tooling/checks/lint_schema.py
 python tooling/audit/baseline_audit.py --check
 
-# Build documentation
+# Dokumentation erstellen
 mkdocs build --strict
 ```
 
-## Change Types
+## Änderungstypen
 
-| Type | Examples | Review Requirements |
+| Typ | Beispiele | Review-Anforderungen |
 | ---- | -------- | ------------------- |
-| Normative | Schema changes, requirements | Maintainer + discussion |
-| Non-normative | Typos, clarifications | Maintainer approval |
-| i18n | Translations | Structure must match EN |
-| Tooling | CI/CD, scripts | Maintainer approval |
+| Normativ | Schema-Änderungen, Anforderungen | Maintainer + Diskussion |
+| Nicht-normativ | Tippfehler, Klarstellungen | Maintainer-Genehmigung |
+| i18n | Übersetzungen | Struktur muss EN entsprechen |
+| Tooling | CI/CD, Skripte | Maintainer-Genehmigung |
 
-## i18n Guidelines
+## i18n-Richtlinien
 
-### Update Order
+### Update-Reihenfolge
 
-1. Edit English source (`docs/en/...`)
-2. Update Japanese translation (`docs/ja/...`)
-3. Run `lint_i18n.py` to verify consistency
-4. Commit both together
+1. Englische Quelle bearbeiten (`docs/en/...`)
+2. Japanische Übersetzung aktualisieren (`docs/ja/...`)
+3. `lint_i18n.py` ausführen, um Konsistenz zu überprüfen
+4. Beide zusammen committen
 
-### Structure Requirements
+### Strukturanforderungen
 
-- Same file names in both languages
-- Same heading hierarchy
-- Same page count per section
+- Gleiche Dateinamen in beiden Sprachen
+- Gleiche Überschriftenhierarchie
+- Gleiche Seitenanzahl pro Abschnitt
 
-## PR Checklist
+## PR-Checkliste
 
-When submitting a PR, verify:
+Beim Einreichen eines PRs überprüfen:
 
-- [ ] Change type identified (docs / schema / examples / tooling)
-- [ ] Breaking change assessment completed
-- [ ] i18n: EN and JA updated together (if applicable)
-- [ ] Quality checks pass
-- [ ] Related issues linked
+- [ ] Änderungstyp identifiziert (docs / schema / examples / tooling)
+- [ ] Breaking-Change-Bewertung abgeschlossen
+- [ ] i18n: EN und JA zusammen aktualisiert (falls zutreffend)
+- [ ] Qualitätsprüfungen bestanden
+- [ ] Verwandte Issues verknüpft
 
 ## Breaking Changes
 
-Breaking changes require:
+Breaking Changes erfordern:
 
-1. Issue discussion before implementation
-2. Version bump per [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)
-3. Changelog entry with migration guidance
+1. Issue-Diskussion vor der Implementierung
+2. Versionserhöhung gemäß [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)
+3. Changelog-Eintrag mit Migrationsanleitung
 
-## Conformance Claim Updates
+## Konformitätsanspruchs-Updates
 
-To add or modify conformance claims:
+Um Konformitätsansprüche hinzuzufügen oder zu ändern:
 
-1. Update the coverage map YAML
-2. Update corresponding documentation pages
-3. Run validator tests
-4. Document the mapping rationale
+1. Coverage Map YAML aktualisieren
+2. Entsprechende Dokumentationsseiten aktualisieren
+3. Validator-Tests ausführen
+4. Zuordnungsbegründung dokumentieren
 
-## Full Guidelines
+## Vollständige Richtlinien
 
-See [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) for the root-level guide.
+Siehe [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) für den Leitfaden auf Root-Ebene.
 
-## Related Pages
+## Verwandte Seiten
 
-- [Governance](index.md) — Project governance
-- [Localization Guide](../contributing/localization.md) — i18n details
-- [Responsibility Boundary](responsibility-boundary.md) — What AIMO provides
+- [Governance](index.md) — Projekt-Governance
+- [Lokalisierungsleitfaden](../contributing/localization.md) — i18n-Details
+- [Verantwortungsgrenze](responsibility-boundary.md) — Was AIMO bereitstellt

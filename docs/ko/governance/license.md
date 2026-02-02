@@ -1,82 +1,76 @@
 ---
-description: AIMO Standard license - Apache 2.0 licensing terms for specification, documentation, and machine-readable artifacts.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/license.md
-source_hash: a2411f1391e474a7
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 라이선스 - 사양, 문서 및 기계 판독 가능 산출물에 대한 Apache 2.0 라이선스 조건.
 ---
 
-# License
+# 라이선스
 
-This page documents the licensing terms for AIMO Standard materials.
+이 페이지는 AIMO 표준 자료의 라이선스 조건을 문서화합니다.
 
-## License Type
+## 라이선스 유형
 
-AIMO Standard is licensed under the **Apache License, Version 2.0**.
+AIMO 표준은 **Apache License, Version 2.0** 하에 라이선스됩니다.
 
-- SPDX Identifier: `Apache-2.0`
-- Full text: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- SPDX 식별자: `Apache-2.0`
+- 전문: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
-## Scope
+## 범위
 
-### What is Covered
+### 적용 대상
 
-| Material | License | Location |
+| 자료 | 라이선스 | 위치 |
 | -------- | ------- | -------- |
-| Documentation | Apache-2.0 | `docs/` |
-| JSON Schemas | Apache-2.0 | `schemas/` |
-| Templates | Apache-2.0 | `templates/` |
-| Examples | Apache-2.0 | `examples/` |
-| Validator | Apache-2.0 | `validator/` |
-| Tooling | Apache-2.0 | `tooling/` |
-| PDF releases | Apache-2.0 | GitHub Releases |
-| Artifacts ZIP | Apache-2.0 | GitHub Releases |
+| 문서 | Apache-2.0 | `docs/` |
+| JSON 스키마 | Apache-2.0 | `schemas/` |
+| 템플릿 | Apache-2.0 | `templates/` |
+| 예제 | Apache-2.0 | `examples/` |
+| 검증기 | Apache-2.0 | `validator/` |
+| 도구 | Apache-2.0 | `tooling/` |
+| PDF 릴리스 | Apache-2.0 | GitHub Releases |
+| 산출물 ZIP | Apache-2.0 | GitHub Releases |
 
-### What You Can Do
+### 할 수 있는 것
 
-Under Apache-2.0, you may:
+Apache-2.0 하에서 다음을 할 수 있습니다:
 
-- Use the materials for any purpose (commercial or non-commercial)
-- Modify and create derivative works
-- Distribute original or modified versions
-- Include in proprietary products
+- 모든 목적(상업적 또는 비상업적)으로 자료 사용
+- 수정 및 파생 저작물 생성
+- 원본 또는 수정된 버전 배포
+- 독점 제품에 포함
 
-### Requirements
+### 요구사항
 
-When using AIMO Standard materials:
+AIMO 표준 자료 사용 시:
 
-1. Include the license notice in distributions
-2. Provide attribution (see [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
-3. State significant modifications (if any)
-4. Do not use trademarks without permission (see [Trademarks](trademarks.md))
+1. 배포에 라이선스 고지 포함
+2. 저작자 표시 제공 ([NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) 참조)
+3. 중요한 수정이 있는 경우 명시
+4. 허가 없이 상표 사용 금지 ([상표](trademarks.md) 참조)
 
-## NOTICE File
+## NOTICE 파일
 
-The [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) file contains required attribution information.
+[NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) 파일에는 필수 저작자 표시 정보가 포함되어 있습니다.
 
-## Third-Party Components
+## 제3자 컴포넌트
 
-AIMO Standard may include or reference third-party components. Each component retains its original license.
+AIMO 표준에는 제3자 컴포넌트가 포함되거나 참조될 수 있습니다. 각 컴포넌트는 원래 라이선스를 유지합니다.
 
 ## FAQ
 
-**Q: Can I use AIMO Standard in commercial products?**
-A: Yes, Apache-2.0 permits commercial use.
+**Q: AIMO 표준을 상업 제품에서 사용할 수 있나요?**
+A: 예, Apache-2.0은 상업적 사용을 허용합니다.
 
-**Q: Do I need to open-source my implementation?**
-A: No, Apache-2.0 does not require derivative works to be open-sourced.
+**Q: 내 구현을 오픈 소스로 공개해야 하나요?**
+A: 아니요, Apache-2.0은 파생 저작물의 오픈 소스 공개를 요구하지 않습니다.
 
-**Q: Can I modify the schemas?**
-A: Yes, but you must note modifications and cannot claim conformance with modified schemas.
+**Q: 스키마를 수정할 수 있나요?**
+A: 예, 하지만 수정 사항을 명시해야 하며 수정된 스키마로 적합성을 주장할 수 없습니다.
 
-## License Files
+## 라이선스 파일
 
-- [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) — License text
-- [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) — Attribution
+- [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) — 라이선스 텍스트
+- [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) — 저작자 표시
 
-## Related Pages
+## 관련 페이지
 
-- [Trademarks](trademarks.md) — Trademark usage
-- [Governance](index.md) — Project governance
+- [상표](trademarks.md) — 상표 사용
+- [거버넌스](index.md) — 프로젝트 거버넌스

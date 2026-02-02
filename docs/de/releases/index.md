@@ -1,104 +1,98 @@
 ---
-description: AIMO Standard releases - Download versioned PDFs, artifacts, and checksums. Changelog, migration guides, and build provenance attestations.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/releases/index.md
-source_hash: ea7b2cac2a7960cc
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Standard Releases - Versionierte PDFs, Artefakte und Prüfsummen herunterladen. Changelog, Migrationsleitfäden und Build-Provenienz-Attestierungen.
 ---
 
 # Releases
 
-This section is a hub for versioned releases, changelog, migration, and distribution artifacts.
+Dieser Abschnitt ist ein Hub für versionierte Releases, Changelog, Migration und Verteilungsartefakte.
 
-## Download Latest Release
+## Neuestes Release herunterladen
 
 **[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)**
 
-## Release Assets
+## Release-Assets
 
-Each official release (`vX.Y.Z` tag) includes:
+Jedes offizielle Release (`vX.Y.Z`-Tag) enthält:
 
-| Asset | Description |
+| Asset | Beschreibung |
 | --- | --- |
-| `trust_package.pdf` | English Trust Package — auditor-ready assurance materials |
-| `trust_package.ja.pdf` | Japanese Trust Package |
-| `aimo-standard-artifacts.zip` | Schemas, templates, examples, validator rules |
-| `SHA256SUMS.txt` | SHA-256 checksums for all assets |
+| `trust_package.pdf` | Englisches Trust Package — prüfungsbereite Assurance-Materialien |
+| `trust_package.ja.pdf` | Japanisches Trust Package |
+| `aimo-standard-artifacts.zip` | Schemas, Templates, Beispiele, Validator-Regeln |
+| `SHA256SUMS.txt` | SHA-256-Prüfsummen für alle Assets |
 
-### Verifying Downloads
+### Downloads verifizieren
 
-After downloading, verify file integrity using checksums:
+Nach dem Download Dateiintegrität mit Prüfsummen verifizieren:
 
 === "Linux"
 
     ```bash
-    # Download the checksums file
+    # Prüfsummen-Datei herunterladen
     curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
 
-    # Verify a specific file
+    # Bestimmte Datei verifizieren
     sha256sum -c SHA256SUMS.txt --ignore-missing
 
-    # Or verify manually:
+    # Oder manuell verifizieren:
     sha256sum trust_package.pdf
-    # Compare output with SHA256SUMS.txt
+    # Ausgabe mit SHA256SUMS.txt vergleichen
     ```
 
 === "macOS"
 
     ```bash
-    # Download the checksums file
+    # Prüfsummen-Datei herunterladen
     curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
 
-    # Verify a specific file
+    # Bestimmte Datei verifizieren
     shasum -a 256 -c SHA256SUMS.txt
 
-    # Or verify manually:
+    # Oder manuell verifizieren:
     shasum -a 256 trust_package.pdf
-    # Compare output with SHA256SUMS.txt
+    # Ausgabe mit SHA256SUMS.txt vergleichen
     ```
 
 === "Windows (PowerShell)"
 
     ```powershell
-    # Download the checksums file
+    # Prüfsummen-Datei herunterladen
     Invoke-WebRequest -Uri "https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
 
-    # Verify a specific file
+    # Bestimmte Datei verifizieren
     Get-FileHash .\trust_package.pdf -Algorithm SHA256
 
-    # Compare the Hash output with SHA256SUMS.txt
+    # Hash-Ausgabe mit SHA256SUMS.txt vergleichen
     Get-Content .\SHA256SUMS.txt
     ```
 
-## Artifacts Zip Contents
+## Artefakte-ZIP-Inhalte
 
-The `aimo-standard-artifacts.zip` contains:
+Das `aimo-standard-artifacts.zip` enthält:
 
-- `schemas/jsonschema/*` — JSON Schemas for validation
-- `templates/ev/*` — Evidence templates (JSON + Markdown)
-- `examples/*` — Sample evidence bundles
-- `coverage_map/coverage_map.yaml` — External standards mapping
-- `validator/rules/*` — Validation rule definitions
+- `schemas/jsonschema/*` — JSON Schemas zur Validierung
+- `templates/ev/*` — Evidence-Templates (JSON + Markdown)
+- `examples/*` — Beispiel-Evidence-Bundles
+- `coverage_map/coverage_map.yaml` — Zuordnung zu externen Standards
+- `validator/rules/*` — Validierungsregel-Definitionen
 - `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, etc.
 
-## Resources
+## Ressourcen
 
-- **Version History Table**: [Standard > Versions](../standard/versions/index.md) — version table with direct links to all release assets (PDF, ZIP, SHA256)
-- **Changelog (spec)**: [Standard > Current > Changelog](../standard/current/08-changelog.md) — normative and non-normative change history.
-- **Release process**: tagging `vX.Y.Z`, CI build, PDF under `dist/`, checksums, GitHub Release assets. See [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) and [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) in the repository.
-- **Migration guide**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — upgrade paths for breaking changes.
+- **Versionshistorie-Tabelle**: [Standard > Versionen](../standard/versions/index.md) — Versionstabelle mit direkten Links zu allen Release-Assets (PDF, ZIP, SHA256)
+- **Changelog (Spezifikation)**: [Standard > Aktuell > Changelog](../standard/current/08-changelog.md) — normative und nicht-normative Änderungshistorie.
+- **Release-Prozess**: Tagging `vX.Y.Z`, CI-Build, PDF unter `dist/`, Prüfsummen, GitHub Release-Assets. Siehe [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) und [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) im Repository.
+- **Migrationsleitfaden**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — Upgrade-Pfade für Breaking Changes.
 
-For governance and versioning policy, see [Governance](../governance/index.md).
+Für Governance- und Versionierungsrichtlinie siehe [Governance](../governance/index.md).
 
-## Preparing your submission package
+## Einreichungspaket vorbereiten
 
-When preparing evidence for audit submission:
+Bei der Vorbereitung von Evidence für Audit-Einreichung:
 
-1. **Create your Evidence Bundle**: Follow [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) to create EV records, Dictionary, Summary, and Change Log.
-2. **Run the Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix all errors before proceeding.
-3. **Generate Checksums**: Create SHA-256 checksums for verification:
+1. **Evidence Bundle erstellen**: Folgen Sie [Evidence Bundle](../artifacts/evidence-bundle.md) und [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md), um EV-Datensätze, Dictionary, Summary und Change Log zu erstellen.
+2. **Validator ausführen**: Führen Sie `python validator/src/validate.py bundle/root.json` aus, um strukturelle Konsistenz zu prüfen. Beheben Sie alle Fehler vor dem Fortfahren.
+3. **Prüfsummen generieren**: SHA-256-Prüfsummen zur Verifizierung erstellen:
 
     === "Linux"
 
@@ -120,28 +114,28 @@ When preparing evidence for audit submission:
             "$hash  $($_.Name)"
         } | Out-File SHA256SUMS.txt -Encoding UTF8
         ```
-4. **Package**: Create a zip archive of your bundle directory.
-5. **Document version alignment**: Note which AIMO Standard release (e.g., `v1.0.0`) your evidence aligns with.
-6. **Deliver**: Provide the package, checksums, and version reference to your auditor.
+4. **Verpacken**: ZIP-Archiv Ihres Bundle-Verzeichnisses erstellen.
+5. **Versionsausrichtung dokumentieren**: Notieren Sie, mit welchem AIMO Standard Release (z.B. `v1.0.0`) Ihr Evidence ausgerichtet ist.
+6. **Übergeben**: Stellen Sie das Paket, Prüfsummen und Versionsreferenz Ihrem Prüfer bereit.
 
-For the complete preparation guide, see [Trust Package](../governance/trust-package.md).
+Für den vollständigen Vorbereitungsleitfaden siehe [Trust Package](../governance/trust-package.md).
 
-## For auditors: Verification procedure
+## Für Prüfer: Verifizierungsverfahren
 
-Auditors receiving evidence submissions should verify integrity and structure:
+Prüfer, die Evidence-Einreichungen erhalten, sollten Integrität und Struktur verifizieren:
 
-1. **Verify checksums**: Run checksum verification (Linux: `sha256sum -c`, macOS: `shasum -a 256 -c`, Windows: `Get-FileHash`) to confirm file integrity
-2. **Run validator**: Execute `python validator/src/validate.py bundle/root.json` to check structure
-3. **Confirm version**: Verify the stated AIMO Standard version exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
+1. **Prüfsummen verifizieren**: Prüfsummenverifizierung ausführen (Linux: `sha256sum -c`, macOS: `shasum -a 256 -c`, Windows: `Get-FileHash`), um Dateiintegrität zu bestätigen
+2. **Validator ausführen**: `python validator/src/validate.py bundle/root.json` ausführen, um Struktur zu prüfen
+3. **Version bestätigen**: Verifizieren, dass die angegebene AIMO Standard-Version unter [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) existiert
 
-!!! tip "Obtain tools independently"
-    Auditors should download the validator and schemas directly from the official AIMO Standard release, not from the submitting party.
+!!! tip "Tools unabhängig beziehen"
+    Prüfer sollten Validator und Schemas direkt vom offiziellen AIMO Standard Release herunterladen, nicht von der einreichenden Partei.
 
-For the full verification procedure, see [Trust Package](../governance/trust-package.md).
+Für das vollständige Verifizierungsverfahren siehe [Trust Package](../governance/trust-package.md).
 
-## Non-overclaim statement
+## Keine-Überbeanspruchung-Erklärung
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "Wichtig"
+    Der AIMO Standard unterstützt **Erklärbarkeit und Evidence-Bereitschaft**. Er bietet **keine** Rechtsberatung, garantiert keine Compliance und zertifiziert keine Konformität mit Vorschriften oder Frameworks. Anwender müssen Ansprüche gegen maßgebliche Texte verifizieren und bei Bedarf professionelle Beratung einholen.
 
-See [Responsibility Boundary](../governance/responsibility-boundary.md) for scope, assumptions, and adopter responsibilities.
+Siehe [Verantwortungsgrenze](../governance/responsibility-boundary.md) für Umfang, Annahmen und Anwenderverantwortlichkeiten.

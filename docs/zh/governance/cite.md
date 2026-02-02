@@ -1,26 +1,20 @@
 ---
-description: AIMO Standard citation guide - How to cite in academic papers, audit reports, and proposals. CITATION.cff and BibTeX formats.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/cite.md
-source_hash: 61f98ae47d24c36d
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准引用指南 - 如何在学术论文、审计报告和提案中引用。CITATION.cff 和 BibTeX 格式。
 ---
 
-# How to Cite
+# 如何引用
 
-This page provides citation guidance for AIMO Standard in academic papers, audit reports, and proposals.
+本页提供在学术论文、审计报告和提案中引用 AIMO 标准的指南。
 
 ## CITATION.cff
 
-The repository includes a [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) file following the Citation File Format standard.
+仓库包含一个遵循 Citation File Format 标准的 [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) 文件。
 
-GitHub automatically displays citation information from this file.
+GitHub 会自动显示此文件中的引用信息。
 
-## Recommended Citation
+## 推荐引用
 
-### Short Form (Inline)
+### 简短形式（行内）
 
 > AIMO Standard Contributors. (2026). AIMO Standard. https://standard.aimoaas.com/
 
@@ -31,55 +25,55 @@ GitHub automatically displays citation information from this file.
   author = {{AIMO Standard Contributors}},
   title = {AIMO Standard},
   url = {https://standard.aimoaas.com/},
-  version = {0.0.1},
+  version = {0.0.2},
   year = {2026}
 }
 ```
 
-### APA Style
+### APA 风格
 
-> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.0.1) [Software]. https://standard.aimoaas.com/
+> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.0.2) [Software]. https://standard.aimoaas.com/
 
-## Version-Specific Citation
+## 特定版本引用
 
-When citing a specific version:
+引用特定版本时：
 
-> AIMO Standard Contributors. (2026). AIMO Standard v0.0.1. https://github.com/billyrise/aimo-standard/releases/tag/v0.0.1
+> AIMO Standard Contributors. (2026). AIMO Standard v0.0.2. https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2
 
-## Audit Documentation
+## 审计文档
 
-For audit reports and compliance documentation:
+对于审计报告和合规文档：
 
-| Field | Value |
+| 字段 | 值 |
 | ----- | ----- |
-| Standard Name | AIMO Standard |
-| Version | (specify the version used, e.g., v0.0.1) |
-| Website | https://standard.aimoaas.com/ |
-| Repository | https://github.com/billyrise/aimo-standard |
-| Release | https://github.com/billyrise/aimo-standard/releases |
+| 标准名称 | AIMO Standard |
+| 版本 | （指定使用的版本，例如 v0.0.1） |
+| 网站 | https://standard.aimoaas.com/ |
+| 仓库 | https://github.com/billyrise/aimo-standard |
+| 发布 | https://github.com/billyrise/aimo-standard/releases |
 
-## URL Guidance
+## URL 指南
 
-### Canonical URLs
+### 规范URL
 
-Use these URLs in official documentation:
+在官方文档中使用这些URL：
 
-| Purpose | URL |
+| 用途 | URL |
 | ------- | --- |
-| Latest documentation | https://standard.aimoaas.com/latest/ |
-| Specific version | https://standard.aimoaas.com/0.0.1/ |
-| GitHub releases | https://github.com/billyrise/aimo-standard/releases |
+| 最新文档 | https://standard.aimoaas.com/latest/ |
+| 特定版本 | https://standard.aimoaas.com/0.0.2/ |
+| GitHub 发布 | https://github.com/billyrise/aimo-standard/releases |
 
-!!! note "Site Path Format"
-    Site paths use version numbers without the `v` prefix. For version `v0.0.1`, use `/0.0.1/` in URLs.
+!!! note "站点路径格式"
+    站点路径使用不带 `v` 前缀的版本号。对于版本 `v0.0.1`，在URL中使用 `/0.0.1/`。
 
-### Avoid
+### 避免使用
 
-- GitHub Pages mirror URLs (temporary)
-- Branch-specific URLs (may change)
+- GitHub Pages 镜像URL（临时）
+- 分支特定URL（可能会更改）
 
-## Related Pages
+## 相关页面
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
-- [License](license.md) — Licensing terms
+- [信任包](trust-package.md) — 审计师就绪材料
+- [治理](index.md) — 项目治理
+- [许可证](license.md) — 许可条款

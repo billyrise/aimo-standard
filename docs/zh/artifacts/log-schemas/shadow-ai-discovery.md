@@ -1,74 +1,68 @@
 ---
-description: Shadow AI Discovery Log Schema - Vendor-neutral format for documenting detection, inventory, and remediation of unapproved AI usage in enterprises.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/shadow-ai-discovery.md
-source_hash: f9d93c82c96d509f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: 影子AI发现日志模式 - 用于记录企业中未经批准的AI使用的检测、清点和整改的厂商中立格式。
 ---
 
-# Shadow AI Discovery Log Schema
+# 影子AI发现日志模式
 
-## Purpose
+## 用途
 
-This schema defines a vendor-neutral format for logs that document the detection, inventory, and remediation of **unapproved AI usage (Shadow AI)**. It enables organizations to:
+此模式定义了一种厂商中立的日志格式，用于记录**未经批准的AI使用（影子AI）**的检测、清点和整改。它使组织能够：
 
-- Maintain an auditable record of Shadow AI detection events
-- Normalize logs from various sources (CASB, proxy, IdP, EDR, SaaS audit logs) into a consistent format
-- Support evidence submission for compliance and audit purposes
+- 维护影子AI检测事件的可审计记录
+- 将来自各种来源（CASB、代理、IdP、EDR、SaaS审计日志）的日志标准化为一致的格式
+- 支持合规和审计目的的证据提交
 
-## Normalization principles
+## 标准化原则
 
-| Principle | Description |
+| 原则 | 描述 |
 | --- | --- |
-| **Vendor-neutral** | No dependency on specific vendor log formats; applicable to Netskope, Zscaler, Microsoft Defender, and others |
-| **Minimal required fields** | Only essential fields are MUST; organizations can omit optional fields |
-| **Extensible** | `additionalProperties: true` allows vendor-specific or organization-specific extensions |
-| **Privacy-aware** | Fields are designed to reference (not embed) sensitive content |
+| **厂商中立** | 不依赖特定厂商的日志格式；适用于 Netskope、Zscaler、Microsoft Defender 等 |
+| **最小必需字段** | 只有必要字段是 MUST；组织可以省略可选字段 |
+| **可扩展** | `additionalProperties: true` 允许厂商特定或组织特定的扩展 |
+| **隐私意识** | 字段设计为引用（而非嵌入）敏感内容 |
 
-## Required fields (MUST)
+## 必需字段（MUST）
 
-| Field | Type | Description | Example |
+| 字段 | 类型 | 描述 | 示例 |
 | --- | --- | --- | --- |
-| `event_time` | string (ISO8601) | Timestamp of the event | `2026-01-15T09:30:00Z` |
-| `actor_id` | string | User or service identifier | `user@example.com` |
-| `actor_type` | string | Type of actor | `user` or `service` |
-| `source_system` | string | System that detected the event | `proxy`, `casb`, `idp`, `edr`, `saas_audit` |
-| `ai_service` | string | AI product or domain accessed | `chat.openai.com`, `claude.ai` |
-| `action` | string | Action performed | `chat`, `upload`, `download`, `tool_execute`, `api_call` |
-| `data_classification` | string | Data classification level | `public`, `internal`, `confidential`, `restricted` |
-| `decision` | string | Policy decision applied | `allow`, `block`, `needs_review`, `unknown` |
-| `evidence_ref` | string | Reference to related evidence | `sha256:abc123...` or `urn:evidence:...` |
-| `record_id` | string | Unique identifier for this record | `evt-20260115-001` |
+| `event_time` | string (ISO8601) | 事件时间戳 | `2026-01-15T09:30:00Z` |
+| `actor_id` | string | 用户或服务标识符 | `user@example.com` |
+| `actor_type` | string | 行为者类型 | `user` 或 `service` |
+| `source_system` | string | 检测事件的系统 | `proxy`, `casb`, `idp`, `edr`, `saas_audit` |
+| `ai_service` | string | 访问的AI产品或域名 | `chat.openai.com`, `claude.ai` |
+| `action` | string | 执行的操作 | `chat`, `upload`, `download`, `tool_execute`, `api_call` |
+| `data_classification` | string | 数据分类级别 | `public`, `internal`, `confidential`, `restricted` |
+| `decision` | string | 应用的策略决策 | `allow`, `block`, `needs_review`, `unknown` |
+| `evidence_ref` | string | 相关证据的引用 | `sha256:abc123...` 或 `urn:evidence:...` |
+| `record_id` | string | 此记录的唯一标识符 | `evt-20260115-001` |
 
-## Optional fields (SHOULD/MAY)
+## 可选字段（SHOULD/MAY）
 
-| Field | Type | Description |
+| 字段 | 类型 | 描述 |
 | --- | --- | --- |
-| `session_id` | string | Session identifier |
-| `device_id` | string | Device identifier |
-| `ip` | string | IP address |
-| `user_agent` | string | User agent string |
-| `department` | string | Organizational department |
-| `project_id` | string | Project identifier |
-| `prompt_category` | string | Category of the prompt/query |
-| `model_family` | string | AI model family (e.g., GPT-4, Claude) |
-| `destination` | string | Destination URL or endpoint |
-| `policy_id` | string | Policy that triggered the decision |
-| `remediation_ticket` | string | Remediation ticket reference |
+| `session_id` | string | 会话标识符 |
+| `device_id` | string | 设备标识符 |
+| `ip` | string | IP地址 |
+| `user_agent` | string | 用户代理字符串 |
+| `department` | string | 组织部门 |
+| `project_id` | string | 项目标识符 |
+| `prompt_category` | string | 提示词/查询的类别 |
+| `model_family` | string | AI模型系列（例如 GPT-4、Claude） |
+| `destination` | string | 目标URL或端点 |
+| `policy_id` | string | 触发决策的策略 |
+| `remediation_ticket` | string | 整改工单引用 |
 
-## Privacy/Security notes
+## 隐私/安全注意事项
 
-!!! warning "Data handling"
-    - **Do not embed** PII, credentials, or prompt content directly in log fields.
-    - Use `evidence_ref` to reference separately stored sensitive content.
-    - Apply appropriate access controls to log storage.
-    - Consider data retention policies aligned with [Minimum Evidence Requirements](../minimum-evidence.md).
+!!! warning "数据处理"
+    - **不要直接在日志字段中嵌入** PII、凭证或提示词内容。
+    - 使用 `evidence_ref` 引用单独存储的敏感内容。
+    - 对日志存储应用适当的访问控制。
+    - 考虑与 [最低证据要求](../minimum-evidence.md) 对齐的数据保留策略。
 
 ## JSON Schema
 
-Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
+下载：[shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
 
 ```json
 {
@@ -95,9 +89,9 @@ Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-st
 }
 ```
 
-## Related pages
+## 相关页面
 
-- [Log Schemas index](index.md)
-- [Agent Activity Log](agent-activity.md)
-- [Minimum Evidence Requirements](../minimum-evidence.md)
-- [Taxonomy: IM-007 Shadow/Unmanaged](../../standard/current/03-taxonomy.md)
+- [日志模式索引](index.md)
+- [代理活动日志](agent-activity.md)
+- [最低证据要求](../minimum-evidence.md)
+- [分类法：IM-007 影子/非托管](../../standard/current/03-taxonomy.md)

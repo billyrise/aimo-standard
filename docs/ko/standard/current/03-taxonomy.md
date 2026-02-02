@@ -1,238 +1,232 @@
 ---
-description: AIMO Taxonomy - 8-dimension classification system with 91 codes for categorizing AI systems. Covers functional scope, use cases, data types, channels, integration, risks, outcomes, and evidence.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/03-taxonomy.md
-source_hash: fdf0a7d87be25a0f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 분류체계 - AI 시스템 분류를 위한 8개 차원과 91개 코드의 분류 시스템. 기능 범위, 사용 사례, 데이터 유형, 채널, 통합, 리스크, 결과 및 증거를 다룹니다.
 ---
 
-# Taxonomy
+# 분류체계
 
-The AIMO Taxonomy provides a structured classification system for categorizing AI systems, their uses, and associated governance requirements. It consists of **8 dimensions** with **91 codes** that enable consistent classification and evidence management across organizations.
+AIMO 분류체계는 AI 시스템, 그 사용 및 관련 거버넌스 요구사항을 분류하기 위한 구조화된 분류 시스템을 제공합니다. 조직 전반에 걸쳐 일관된 분류 및 증거 관리를 가능하게 하는 **8개 차원**과 **91개 코드**로 구성됩니다.
 
-## Purpose
+## 목적
 
-The taxonomy serves three primary purposes from an audit perspective:
+분류체계는 감사 관점에서 세 가지 주요 목적을 수행합니다:
 
-1. **Explainability**: Provides a common vocabulary for describing AI use cases across the organization, supporting clear communication with auditors and stakeholders.
+1. **설명 가능성**: 조직 전반에 걸쳐 AI 사용 사례를 설명하기 위한 공통 어휘를 제공하여 감사자 및 이해관계자와의 명확한 커뮤니케이션을 지원합니다.
 
-2. **Evidence Readiness**: Enables systematic documentation of AI systems using a standardized classification, making evidence collection and review more efficient.
+2. **증거 준비**: 표준화된 분류를 사용하여 AI 시스템을 체계적으로 문서화할 수 있게 하여 증거 수집 및 검토를 더 효율적으로 만듭니다.
 
-3. **Comparability**: Allows organizations to compare AI use cases across different contexts using consistent terminology.
+3. **비교 가능성**: 조직이 일관된 용어를 사용하여 다양한 맥락에서 AI 사용 사례를 비교할 수 있게 합니다.
 
-## What It Is Not (Non-Overclaim)
+## 이것이 아닌 것 (과대 주장 금지)
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. See [Responsibility Boundary](../../governance/responsibility-boundary.md) for details.
+!!! warning "중요"
+    AIMO 표준은 **설명 가능성 및 증거 준비**를 지원합니다. 법률 자문을 제공하거나, 컴플라이언스를 보장하거나, 어떤 규정 또는 프레임워크에 대한 적합성을 인증하지 **않습니다**. 자세한 내용은 [책임 경계](../../governance/responsibility-boundary.md)를 참조하세요.
 
-The taxonomy is a classification system only. It does not:
+분류체계는 분류 시스템일 뿐입니다. 다음은 수행하지 않습니다:
 
-- Guarantee compliance with any law or regulation
-- Replace professional legal, security, or compliance advice
-- Certify conformity to external frameworks (ISO, NIST, EU AI Act, etc.)
-- Provide risk assessments or control recommendations
+- 법률 또는 규정 준수 보장
+- 전문적인 법률, 보안 또는 컴플라이언스 자문 대체
+- 외부 프레임워크(ISO, NIST, EU AI Act 등)에 대한 적합성 인증
+- 리스크 평가 또는 통제 권고 제공
 
-## Examples of AI/agentic-specific risks (why an AI-specific standard is needed)
+## AI/에이전틱 특정 리스크 예시 (AI 특정 표준이 필요한 이유)
 
-Traditional security controls (e.g., ISMS) alone often fail to capture LLM/agent-specific failure modes and autonomous agent deviations (e.g., unintended tool execution, recursive loops) in an **audit-explainable** manner.
-AIMO Taxonomy provides a shared language to classify these AI-specific risks and connect them to evidence requirements and remediation workflows.
+전통적인 보안 통제(예: ISMS)만으로는 LLM/에이전트 특정 실패 모드와 자율 에이전트 편차(예: 의도치 않은 도구 실행, 재귀 루프)를 **감사 설명 가능한** 방식으로 캡처하지 못하는 경우가 많습니다.
+AIMO 분류체계는 이러한 AI 특정 리스크를 분류하고 증거 요구사항 및 해결 워크플로우에 연결하는 공유 언어를 제공합니다.
 
-(Reference examples for differentiation. The codes below are illustrative placeholders; the official code system follows the Standard definitions.)
-- AG-01 Runaway Loop / Recursion
-- AG-02 Unauthorized Tool Use (confused deputy-style misuse)
-- AG-03 Privilege Boundary Drift
+(차별화를 위한 참조 예시. 아래 코드는 설명 목적의 플레이스홀더입니다; 공식 코드 시스템은 표준 정의를 따릅니다.)
+- AG-01 폭주 루프 / 재귀
+- AG-02 무단 도구 사용 (혼란된 대리인 스타일 오용)
+- AG-03 권한 경계 드리프트
 
-## Dimensions Overview
+## 차원 개요
 
-AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-letter prefix.
+AIMO는 AI 사용 사례를 분류하기 위해 8개 차원을 사용합니다. 각 차원에는 고유한 2자리 접두사가 있습니다.
 
-| ID | Name | Code Count | Description |
+| ID | 이름 | 코드 수 | 설명 |
 | --- | --- | --- | --- |
-| **FS** | Functional Scope | 6 | Which business function is supported |
-| **UC** | Use Case Class | 30 | What type of task is performed |
-| **DT** | Data Type | 10 | What data classifications are involved |
-| **CH** | Channel | 8 | How users access the AI |
-| **IM** | Integration Mode | 7 | How AI connects to enterprise systems |
-| **RS** | Risk Surface | 8 | What risks are associated |
-| **OB** | Outcome / Benefit | 7 | What benefits are expected |
-| **EV** | Evidence Type | 15 | What evidence is required |
+| **FS** | 기능 범위 | 6 | 어떤 비즈니스 기능이 지원되는지 |
+| **UC** | 사용 사례 분류 | 30 | 어떤 유형의 작업이 수행되는지 |
+| **DT** | 데이터 유형 | 10 | 어떤 데이터 분류가 관련되는지 |
+| **CH** | 채널 | 8 | 사용자가 AI에 접근하는 방법 |
+| **IM** | 통합 모드 | 7 | AI가 기업 시스템에 연결되는 방법 |
+| **RS** | 리스크 표면 | 8 | 관련된 리스크 |
+| **OB** | 결과 / 혜택 | 7 | 기대되는 혜택 |
+| **EV** | 증거 유형 | 15 | 필요한 증거 |
 
-**Total: 91 codes across 8 dimensions**
+**총계: 8개 차원에 걸쳐 91개 코드**
 
-### Usage Rules
+### 사용 규칙
 
-| Dimension | Selection | Audit Implication |
+| 차원 | 선택 | 감사 영향 |
 | --- | --- | --- |
-| FS, IM | Exactly 1 | Primary classification for responsibility assignment |
-| UC, DT, CH, RS, EV | 1 or more | Complete enumeration required for risk coverage |
-| OB | 0 or more | Optional; documents expected business value |
+| FS, IM | 정확히 1개 | 책임 할당을 위한 기본 분류 |
+| UC, DT, CH, RS, EV | 1개 이상 | 리스크 범위를 위한 완전한 열거 필요 |
+| OB | 0개 이상 | 선택적; 기대되는 비즈니스 가치 문서화 |
 
-## Dimension Definitions
+## 차원 정의
 
-### FS: Functional Scope
+### FS: 기능 범위
 
-Categorizes AI use by the business function it supports. **Select exactly one.**
+AI 사용을 지원하는 비즈니스 기능별로 분류합니다. **정확히 하나를 선택합니다.**
 
-| Code | Label | Definition |
+| 코드 | 레이블 | 정의 |
 | --- | --- | --- |
-| FS-001 | End-user Productivity | AI used to improve productivity of internal end users (writing, search, summarization, meeting notes). |
-| FS-002 | Customer-facing Features | AI embedded in product/service features provided to customers. |
-| FS-003 | Developer Tooling | AI used to assist software development and engineering tasks. |
-| FS-004 | IT Operations | AI used for IT operations and system administration (monitoring, incident handling). |
-| FS-005 | Security Operations | AI used for security monitoring/response (SOC, detection, triage). |
-| FS-006 | Governance & Compliance | AI used to support governance/compliance activities (policy, audit evidence). |
+| FS-001 | 최종 사용자 생산성 | 내부 최종 사용자의 생산성 향상에 사용되는 AI (작성, 검색, 요약, 회의 메모). |
+| FS-002 | 고객 대면 기능 | 고객에게 제공되는 제품/서비스 기능에 내장된 AI. |
+| FS-003 | 개발자 도구 | 소프트웨어 개발 및 엔지니어링 작업을 지원하는 데 사용되는 AI. |
+| FS-004 | IT 운영 | IT 운영 및 시스템 관리에 사용되는 AI (모니터링, 인시던트 처리). |
+| FS-005 | 보안 운영 | 보안 모니터링/대응에 사용되는 AI (SOC, 탐지, 분류). |
+| FS-006 | 거버넌스 및 컴플라이언스 | 거버넌스/컴플라이언스 활동을 지원하는 데 사용되는 AI (정책, 감사 증거). |
 
-### UC: Use Case Class
+### UC: 사용 사례 분류
 
-Categorizes AI use by the type of task or interaction. **Select one or more.** Full list includes 30 codes; representative examples below.
+작업 또는 상호 작용 유형별로 AI 사용을 분류합니다. **하나 이상을 선택합니다.** 전체 목록에는 30개 코드가 포함되며; 아래는 대표적인 예시입니다.
 
-| Code | Label | Definition |
+| 코드 | 레이블 | 정의 |
 | --- | --- | --- |
-| UC-001 | General Q&A | General question answering and conversational use. |
-| UC-002 | Summarization | Summarizing documents, meetings, or messages. |
-| UC-003 | Translation | Translation between languages. |
-| UC-004 | Content Drafting | Generating drafts for emails, documents, or reports. |
-| UC-005 | Code Generation | Generating code or scripts. |
-| UC-006 | Code Review | Reviewing code for issues and improvements. |
-| UC-009 | Search/RAG | RAG-based retrieval and question answering. |
-| UC-010 | Agentic Automation | Autonomous or semi-autonomous agents executing actions. |
+| UC-001 | 일반 Q&A | 일반 질문 응답 및 대화형 사용. |
+| UC-002 | 요약 | 문서, 회의 또는 메시지 요약. |
+| UC-003 | 번역 | 언어 간 번역. |
+| UC-004 | 콘텐츠 작성 | 이메일, 문서 또는 보고서 초안 생성. |
+| UC-005 | 코드 생성 | 코드 또는 스크립트 생성. |
+| UC-006 | 코드 리뷰 | 문제 및 개선 사항에 대한 코드 검토. |
+| UC-009 | 검색/RAG | RAG 기반 검색 및 질문 응답. |
+| UC-010 | 에이전틱 자동화 | 작업을 실행하는 자율 또는 반자율 에이전트. |
 
-See [Dictionary](./05-dictionary.md) for the complete list of 30 UC codes.
+30개 UC 코드의 전체 목록은 [딕셔너리](./05-dictionary.md)를 참조하세요.
 
-### DT: Data Type
+### DT: 데이터 유형
 
-Categorizes the sensitivity and classification of data involved. **Select one or more.**
+관련된 데이터의 민감도 및 분류를 분류합니다. **하나 이상을 선택합니다.**
 
-| Code | Label | Definition |
+| 코드 | 레이블 | 정의 |
 | --- | --- | --- |
-| DT-001 | Public | Data that is publicly available and intended for public disclosure. |
-| DT-002 | Internal | Non-public internal business data. |
-| DT-003 | Confidential | Highly sensitive internal data requiring restricted access. |
-| DT-004 | Personal Data | Personal data as defined by applicable privacy laws. |
-| DT-005 | Sensitive Personal Data | Special category/sensitive personal data. |
-| DT-006 | Credentials | Authentication secrets and credentials. |
-| DT-007 | Source Code | Source code and related artifacts. |
-| DT-008 | Customer Data | Customer-provided or customer-related data. |
-| DT-009 | Operational Logs | Operational or system logs used for monitoring and troubleshooting. |
-| DT-010 | Security Telemetry | Security telemetry such as alerts and detections. |
+| DT-001 | 공개 | 공개적으로 이용 가능하고 공개를 위한 데이터. |
+| DT-002 | 내부 | 비공개 내부 비즈니스 데이터. |
+| DT-003 | 기밀 | 제한된 접근이 필요한 매우 민감한 내부 데이터. |
+| DT-004 | 개인 데이터 | 해당 개인정보 보호법에 정의된 개인 데이터. |
+| DT-005 | 민감한 개인 데이터 | 특수 범주/민감한 개인 데이터. |
+| DT-006 | 자격 증명 | 인증 비밀 및 자격 증명. |
+| DT-007 | 소스 코드 | 소스 코드 및 관련 산출물. |
+| DT-008 | 고객 데이터 | 고객이 제공하거나 고객과 관련된 데이터. |
+| DT-009 | 운영 로그 | 모니터링 및 문제 해결에 사용되는 운영 또는 시스템 로그. |
+| DT-010 | 보안 텔레메트리 | 경고 및 탐지와 같은 보안 텔레메트리. |
 
-### CH: Channel
+### CH: 채널
 
-Categorizes how users access or interact with the AI. **Select one or more.**
+사용자가 AI에 접근하거나 상호 작용하는 방법을 분류합니다. **하나 이상을 선택합니다.**
 
-| Code | Label | Definition |
+| 코드 | 레이블 | 정의 |
 | --- | --- | --- |
-| CH-001 | Web UI | Use via a web user interface. |
-| CH-002 | API | Use via programmatic API integration. |
-| CH-003 | IDE Plugin | Use via IDE/editor plugin. |
-| CH-004 | ChatOps | Use via chat platforms (Slack/Teams) integrations. |
-| CH-005 | Desktop App | Use via native desktop application. |
-| CH-006 | Mobile App | Use via native mobile application. |
-| CH-007 | Email | Use via email interface or email-based automation. |
-| CH-008 | Command Line | Use via command-line interface. |
+| CH-001 | 웹 UI | 웹 사용자 인터페이스를 통한 사용. |
+| CH-002 | API | 프로그래밍 방식 API 통합을 통한 사용. |
+| CH-003 | IDE 플러그인 | IDE/편집기 플러그인을 통한 사용. |
+| CH-004 | ChatOps | 채팅 플랫폼(Slack/Teams) 통합을 통한 사용. |
+| CH-005 | 데스크톱 앱 | 네이티브 데스크톱 애플리케이션을 통한 사용. |
+| CH-006 | 모바일 앱 | 네이티브 모바일 애플리케이션을 통한 사용. |
+| CH-007 | 이메일 | 이메일 인터페이스 또는 이메일 기반 자동화를 통한 사용. |
+| CH-008 | 명령줄 | 명령줄 인터페이스를 통한 사용. |
 
-### IM: Integration Mode
+### IM: 통합 모드
 
-Categorizes how AI is integrated into enterprise systems. **Select exactly one.**
+AI가 기업 시스템에 통합되는 방법을 분류합니다. **정확히 하나를 선택합니다.**
 
-| Code | Label | Definition |
+| 코드 | 레이블 | 정의 |
 | --- | --- | --- |
-| IM-001 | Standalone | Used standalone without integration into enterprise systems. |
-| IM-002 | SaaS Integrated | SaaS application integrates AI features. |
-| IM-003 | Enterprise App Embedded | AI embedded into internal enterprise applications. |
-| IM-004 | RPA/Workflow | AI invoked within workflow automation or RPA. |
-| IM-005 | On-prem / Private | AI hosted in private/on-prem environment. |
-| IM-006 | Managed Service | Use via managed service with enterprise controls. |
-| IM-007 | Shadow / Unmanaged | Use outside of approved governance controls. |
+| IM-001 | 독립형 | 기업 시스템에 통합 없이 독립적으로 사용. |
+| IM-002 | SaaS 통합 | SaaS 애플리케이션이 AI 기능을 통합. |
+| IM-003 | 기업 앱 내장 | 내부 기업 애플리케이션에 내장된 AI. |
+| IM-004 | RPA/워크플로우 | 워크플로우 자동화 또는 RPA 내에서 호출되는 AI. |
+| IM-005 | 온프레미스 / 프라이빗 | 프라이빗/온프레미스 환경에서 호스팅되는 AI. |
+| IM-006 | 관리형 서비스 | 기업 통제가 있는 관리형 서비스를 통한 사용. |
+| IM-007 | Shadow / 미관리 | 승인된 거버넌스 통제 외부에서의 사용. |
 
-### RS: Risk Surface
+### RS: 리스크 표면
 
-Categorizes the types of risks associated with the AI use. **Select one or more.**
+AI 사용과 관련된 리스크 유형을 분류합니다. **하나 이상을 선택합니다.**
 
-| Code | Label | Definition |
+| 코드 | 레이블 | 정의 |
 | --- | --- | --- |
-| RS-001 | Data Leakage | Risk of unintended data disclosure. |
-| RS-002 | Security Abuse | Risk that the system is abused for malicious purposes. |
-| RS-003 | Compliance Breach | Risk of violating laws/regulations/policies. |
-| RS-004 | IP Infringement | Risk of infringing copyright/patent/trade secrets. |
-| RS-005 | Model Misuse | Risk from inappropriate model use or over-reliance. |
-| RS-006 | Bias/Fairness | Risk of unfair or biased outcomes. |
-| RS-007 | Safety | Risk of harmful content or unsafe recommendations. |
-| RS-008 | Third-party Risk | Vendors, sub-processors, and model provider risks. |
+| RS-001 | 데이터 유출 | 의도치 않은 데이터 공개 리스크. |
+| RS-002 | 보안 남용 | 시스템이 악의적 목적으로 남용되는 리스크. |
+| RS-003 | 컴플라이언스 위반 | 법률/규정/정책 위반 리스크. |
+| RS-004 | IP 침해 | 저작권/특허/영업 비밀 침해 리스크. |
+| RS-005 | 모델 오용 | 부적절한 모델 사용 또는 과의존으로 인한 리스크. |
+| RS-006 | 편향/공정성 | 불공정하거나 편향된 결과의 리스크. |
+| RS-007 | 안전 | 유해한 콘텐츠 또는 안전하지 않은 권장의 리스크. |
+| RS-008 | 제3자 리스크 | 벤더, 하위 처리자 및 모델 제공자 리스크. |
 
-### OB: Outcome / Benefit
+### OB: 결과 / 혜택
 
-Categorizes the expected outcomes or benefits from AI use. **Optional; select zero or more.**
+AI 사용에서 기대되는 결과 또는 혜택을 분류합니다. **선택적; 0개 이상을 선택합니다.**
 
-| Code | Label | Definition |
+| 코드 | 레이블 | 정의 |
 | --- | --- | --- |
-| OB-001 | Efficiency | Improves time/cost efficiency. |
-| OB-002 | Quality | Improves quality/accuracy of outputs. |
-| OB-003 | Revenue | Contributes to revenue growth. |
-| OB-004 | Risk Reduction | Reduces operational/security/compliance risk. |
-| OB-005 | Innovation | Enables new capabilities or innovations. |
-| OB-006 | Customer Satisfaction | Improves customer satisfaction. |
-| OB-007 | Employee Experience | Improves employee experience. |
+| OB-001 | 효율성 | 시간/비용 효율성 향상. |
+| OB-002 | 품질 | 출력의 품질/정확성 향상. |
+| OB-003 | 수익 | 수익 성장에 기여. |
+| OB-004 | 리스크 감소 | 운영/보안/컴플라이언스 리스크 감소. |
+| OB-005 | 혁신 | 새로운 기능 또는 혁신 가능. |
+| OB-006 | 고객 만족 | 고객 만족도 향상. |
+| OB-007 | 직원 경험 | 직원 경험 향상. |
 
-### EV: Evidence Type
+### EV: 증거 유형
 
-Categorizes the types of evidence required or collected. **Select one or more.**
+필요하거나 수집된 증거 유형을 분류합니다. **하나 이상을 선택합니다.**
 
-| Code | Label | Definition |
+| 코드 | 레이블 | 정의 |
 | --- | --- | --- |
-| EV-001 | Request Record | Evidence that an AI use/service was requested and described. |
-| EV-002 | Review/Approval Record | Evidence that a review/approval was performed. |
-| EV-003 | Exception Record | Evidence that an exception was granted and tracked. |
-| EV-004 | Renewal/Re-evaluation Record | Evidence that renewal or re-evaluation occurred. |
-| EV-005 | Change Log Entry | Evidence of changes and their approvals. |
-| EV-006 | Integrity Proof | Evidence of integrity (hash, signature, WORM). |
-| EV-007 | Access Log | Evidence of access control and access history. |
-| EV-008 | Model/Service Inventory | Inventory record of models/services used. |
-| EV-009 | Risk Assessment | Documented risk assessment for the use/service. |
-| EV-010 | Control Mapping | Control mapping evidence to external frameworks. |
-| EV-011 | Training/Guidance | Evidence of training or guidance provided to users. |
-| EV-012 | Monitoring Evidence | Evidence of monitoring and ongoing oversight. |
-| EV-013 | Incident Record | Evidence of incident handling related to AI use. |
-| EV-014 | Third-party Assessment | Evidence of vendor or third-party assessment. |
-| EV-015 | Attestation/Sign-off | Formal attestation or sign-off record. |
+| EV-001 | 요청 레코드 | AI 사용/서비스가 요청되고 설명되었다는 증거. |
+| EV-002 | 검토/승인 레코드 | 검토/승인이 수행되었다는 증거. |
+| EV-003 | 예외 레코드 | 예외가 부여되고 추적되었다는 증거. |
+| EV-004 | 갱신/재평가 레코드 | 갱신 또는 재평가가 발생했다는 증거. |
+| EV-005 | 변경 로그 항목 | 변경 및 그 승인에 대한 증거. |
+| EV-006 | 무결성 증명 | 무결성에 대한 증거 (해시, 서명, WORM). |
+| EV-007 | 접근 로그 | 접근 통제 및 접근 이력에 대한 증거. |
+| EV-008 | 모델/서비스 인벤토리 | 사용된 모델/서비스의 인벤토리 레코드. |
+| EV-009 | 리스크 평가 | 사용/서비스에 대한 문서화된 리스크 평가. |
+| EV-010 | 통제 매핑 | 외부 프레임워크에 대한 통제 매핑 증거. |
+| EV-011 | 교육/지침 | 사용자에게 제공된 교육 또는 지침에 대한 증거. |
+| EV-012 | 모니터링 증거 | 모니터링 및 지속적인 감독에 대한 증거. |
+| EV-013 | 인시던트 레코드 | AI 사용과 관련된 인시던트 처리에 대한 증거. |
+| EV-014 | 제3자 평가 | 벤더 또는 제3자 평가에 대한 증거. |
+| EV-015 | 증명/승인 | 공식 증명 또는 승인 레코드. |
 
-## How to Use
+## 사용 방법
 
-### Relationship with Evidence
+### 증거와의 관계
 
-Each Evidence (EV) document references codes from multiple dimensions to classify the AI system or use case being documented. The 8-dimension classification enables:
+각 증거(EV) 문서는 문서화되는 AI 시스템 또는 사용 사례를 분류하기 위해 여러 차원의 코드를 참조합니다. 8차원 분류는 다음을 가능하게 합니다:
 
-- **Consistent categorization** across the organization
-- **Risk-based filtering** by dimension values
-- **Framework mapping** via Coverage Map
+- 조직 전반에 걸친 **일관된 분류**
+- 차원 값에 의한 **리스크 기반 필터링**
+- 커버리지 맵을 통한 **프레임워크 매핑**
 
-### Referencing the Dictionary
+### 딕셔너리 참조
 
-For complete code definitions including scope notes and examples, refer to the [Dictionary](./05-dictionary.md).
+범위 노트 및 예시를 포함한 완전한 코드 정의는 [딕셔너리](./05-dictionary.md)를 참조하세요.
 
-### Example Classification
+### 분류 예시
 
 ```
-FS: FS-001 (End-user Productivity)
-UC: UC-001 (General Q&A), UC-002 (Summarization)
-DT: DT-002 (Internal), DT-004 (Personal Data)
-CH: CH-001 (Web UI)
-IM: IM-002 (SaaS Integrated)
-RS: RS-001 (Data Leakage), RS-003 (Compliance Breach)
-OB: OB-001 (Efficiency)
-EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
+FS: FS-001 (최종 사용자 생산성)
+UC: UC-001 (일반 Q&A), UC-002 (요약)
+DT: DT-002 (내부), DT-004 (개인 데이터)
+CH: CH-001 (웹 UI)
+IM: IM-002 (SaaS 통합)
+RS: RS-001 (데이터 유출), RS-003 (컴플라이언스 위반)
+OB: OB-001 (효율성)
+EV: EV-001 (요청 레코드), EV-002 (검토/승인 레코드)
 ```
 
-## SSOT Reference
+## SSOT 참조
 
-!!! info "Source of Truth"
-    The authoritative definition is `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+!!! info "진실 공급원"
+    권위 있는 정의는 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`입니다. 이 페이지는 설명 목적입니다. 업데이트 워크플로우는 [현지화 가이드](../../contributing/localization.md)를 참조하세요.
 
-## Related Pages
+## 관련 페이지
 
-- [Codes](./04-codes.md) - Code format, naming conventions, and lifecycle
-- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
-- [Evidence Templates](./06-ev-template.md) - How to use codes in evidence
-- [Responsibility Boundary](../../governance/responsibility-boundary.md) - Non-overclaim statement
+- [코드](./04-codes.md) - 코드 형식, 명명 규칙 및 생명주기
+- [딕셔너리](./05-dictionary.md) - 완전한 코드 목록 및 열 정의
+- [증거 템플릿](./06-ev-template.md) - 증거에서 코드를 사용하는 방법
+- [책임 경계](../../governance/responsibility-boundary.md) - 과대 주장 금지 선언

@@ -1,23 +1,17 @@
 ---
-description: Overview of AIMO Standard. Defines shared taxonomy, code system, dictionary, evidence templates, and validator checks for AI governance audits.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/01-overview.md
-source_hash: eb2cd49f7182909c
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准概述。定义用于AI治理审计的共享分类法、代码系统、字典、证据模板和验证器检查。
 ---
 
-# Overview
+# 概述
 
-AIMO Standard defines:
-- a shared taxonomy
-- a code system
-- an initial dictionary
-- an EV template
-- validator checks (spec + minimal reference implementation)
+AIMO 标准定义了：
+- 共享分类法
+- 代码系统
+- 初始字典
+- EV 模板
+- 验证器检查（规范 + 最小参考实现）
 
-This repository publishes:
-- human-readable spec (HTML)
-- machine-readable artifacts (schemas/templates/examples)
-- official PDF releases
+此仓库发布：
+- 人类可读的规范（HTML）
+- 机器可读的工件（模式/模板/示例）
+- 官方 PDF 发布

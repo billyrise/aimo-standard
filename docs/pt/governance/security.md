@@ -1,76 +1,70 @@
 ---
-description: AIMO Standard security policy - Vulnerability reporting, disclosure procedures, and security considerations for AI governance implementations.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/security.md
-source_hash: 035ba54290c8cf46
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Política de segurança do AIMO Standard - Relatório de vulnerabilidades, procedimentos de divulgação e considerações de segurança para implementações de governança de IA.
 ---
 
-# Security
+# Segurança
 
-This page documents the security policy for AIMO Standard, including vulnerability reporting and disclosure procedures.
+Esta página documenta a política de segurança do AIMO Standard, incluindo relatório de vulnerabilidades e procedimentos de divulgação.
 
-## Scope
+## Escopo
 
-### In Scope
+### Em Escopo
 
-- Validator reference implementation (`validator/`)
-- Build and release tooling (`tooling/`)
+- Implementação de referência do Validador (`validator/`)
+- Ferramentas de build e release (`tooling/`)
 - JSON schemas (`schemas/`)
-- Documentation website infrastructure
+- Infraestrutura do website de documentação
 
-### Out of Scope
+### Fora de Escopo
 
-- Specification content (normative text is not a security artifact)
-- Adopter implementations using AIMO Standard
-- External dependencies (report to upstream maintainers)
+- Conteúdo da especificação (texto normativo não é artefato de segurança)
+- Implementações de adotantes usando AIMO Standard
+- Dependências externas (reporte aos mantenedores upstream)
 
-## Supported Versions
+## Versões Suportadas
 
-| Version | Supported |
+| Versão | Suportada |
 | ------- | --------- |
-| latest (dev) | Yes |
-| Tagged releases (vX.Y.Z) | Yes (latest 2 minor versions) |
-| Older releases | No (upgrade recommended) |
+| latest (dev) | Sim |
+| Releases com tag (vX.Y.Z) | Sim (últimas 2 versões minor) |
+| Releases mais antigas | Não (upgrade recomendado) |
 
-## Reporting a Vulnerability
+## Reportando uma Vulnerabilidade
 
-**Do not** open a public GitHub issue for security vulnerabilities.
+**Não** abra uma issue pública no GitHub para vulnerabilidades de segurança.
 
-### Process
+### Processo
 
-1. Report privately via GitHub's private vulnerability reporting
-2. Include: description, reproduction steps, affected versions, impact
-3. Allow time for assessment and fix development
+1. Reporte privadamente via relatório de vulnerabilidade privado do GitHub
+2. Inclua: descrição, passos de reprodução, versões afetadas, impacto
+3. Permita tempo para avaliação e desenvolvimento de correção
 
-### Timeline
+### Cronograma
 
-| Phase | Timeline |
+| Fase | Cronograma |
 | ----- | -------- |
-| Acknowledgment | 72 hours |
-| Initial assessment | 7 days |
-| Coordinated disclosure | 90 days max |
+| Confirmação | 72 horas |
+| Avaliação inicial | 7 dias |
+| Divulgação coordenada | 90 dias máx |
 
-## Disclosure Policy
+## Política de Divulgação
 
-1. Vulnerabilities are reported privately
-2. Fixes are developed before public disclosure
-3. Security advisories are published after fixes are available
-4. Reporters are credited (unless anonymity requested)
+1. Vulnerabilidades são reportadas privadamente
+2. Correções são desenvolvidas antes da divulgação pública
+3. Avisos de segurança são publicados após correções estarem disponíveis
+4. Reportantes são creditados (a menos que anonimato seja solicitado)
 
-## Security Measures
+## Medidas de Segurança
 
-- CI/CD checks on all changes
-- Signed releases with SHA-256 checksums
-- Mandatory PR review before merge
+- Verificações de CI/CD em todas as alterações
+- Releases assinados com checksums SHA-256
+- Revisão de PR obrigatória antes de merge
 
-## Full Policy
+## Política Completa
 
-See [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) for the complete security policy.
+Veja [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) para a política de segurança completa.
 
-## Related Pages
+## Páginas Relacionadas
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
+- [Trust Package](trust-package.md) — Materiais prontos para auditoria
+- [Governança](index.md) — Governança do projeto

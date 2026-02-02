@@ -1,92 +1,86 @@
 ---
-description: AIMO trademark guidelines - Usage rules for AIMO marks, conformance badge requirements, and branding guidelines.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/trademarks.md
-source_hash: db2914d62c048a0b
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 商標指引 - AIMO 標誌的使用規則、符合性徽章要求和品牌指引。
 ---
 
-# Trademarks
+# 商標
 
-This page documents trademark usage guidelines for AIMO-related marks.
+本頁記錄 AIMO 相關標誌的商標使用指引。
 
-## Covered Marks
+## 涵蓋的標誌
 
-| Mark | Type |
+| 標誌 | 類型 |
 | ---- | ---- |
-| AIMO | Word mark |
-| AIMO Standard | Word mark |
-| AIMOaaS | Word mark |
-| Certified AIMO | Word mark (reserved) |
+| AIMO | 文字標誌 |
+| AIMO Standard | 文字標誌 |
+| AIMOaaS | 文字標誌 |
+| Certified AIMO | 文字標誌（保留） |
 
-## Trademark Ownership
+## 商標所有權
 
-**AIMOaaS is a trademark of RISEby inc. (trademark application pending).**
+**AIMOaaS 是 RISEby inc. 的商標（商標申請中）。**
 
-## Marking Guidance
+## 標記指引
 
-While trademark applications are pending:
+商標申請期間：
 
-- **Permitted**: "trademark application pending", "TM" symbol (optional)
-- **Prohibited**: "Registered trademark", ® symbol, registration numbers
+- **允許**：「商標申請中」、「TM」符號（選用）
+- **禁止**：「註冊商標」、® 符號、註冊號
 
-See the full policy for details.
+請參閱完整政策了解詳情。
 
-## Permitted Uses
+## 允許的使用
 
-### Descriptive References
+### 描述性參照
 
-You may use AIMO marks to describe compatibility:
+您可以使用 AIMO 標誌來描述相容性：
 
-- "Compatible with AIMO Standard"
-- "Implements AIMO Standard v0.0.1"
-- "Exports evidence in AIMO Standard format"
+- 「Compatible with AIMO Standard」
+- 「Implements AIMO Standard v0.0.1」
+- 「Exports evidence in AIMO Standard format」
 
-**Requirements**:
+**要求**：
 
-1. Meet all MUST requirements in the specification
-2. Pass the official validator without rule modifications
-3. State the specific version
+1. 符合規格中的所有 MUST 要求
+2. 通過官方驗證器且無規則修改
+3. 說明特定版本
 
-### Academic Use
+### 學術使用
 
-You may cite AIMO Standard in:
+您可以在以下內容中引用 AIMO 標準：
 
-- Academic papers
-- Research publications
-- Training materials (with attribution)
+- 學術論文
+- 研究出版物
+- 培訓材料（附署名）
 
-See [How to Cite](cite.md) for citation format.
+請參閱[如何引用](cite.md)了解引用格式。
 
-## Prohibited Uses
+## 禁止的使用
 
-| Prohibited | Reason |
+| 禁止 | 原因 |
 | ---------- | ------ |
-| Using "AIMO" as your product/company name | Creates confusion |
-| Claiming "Certified AIMO" without certification | No certification program exists |
-| Using marks in domain names | Conflicts with official resources |
-| Implying official endorsement | Misleads users |
+| 使用「AIMO」作為您的產品/公司名稱 | 造成混淆 |
+| 在沒有認證的情況下聲稱「Certified AIMO」 | 不存在認證計畫 |
+| 在網域名稱中使用標誌 | 與官方資源衝突 |
+| 暗示官方背書 | 誤導使用者 |
 
-## Conformance Claims
+## 符合性聲明
 
-### What You Can Claim
+### 您可以聲明的內容
 
-> "This product implements AIMO Standard v0.0.1."
+> 「This product implements AIMO Standard v0.0.1.」
 
-### What You Cannot Claim
+### 您不能聲明的內容
 
-- "AIMO Certified" (no certification program)
-- "Official AIMO implementation" (unless maintainer)
-- "Endorsed by AIMO Standard"
+- 「AIMO Certified」（無認證計畫）
+- 「Official AIMO implementation」（除非是維護者）
+- 「Endorsed by AIMO Standard」
 
-## Full Policy
+## 完整政策
 
-See [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) for the complete trademark policy.
+請參閱 [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) 了解完整的商標政策。
 
-## Related Pages
+## 相關頁面
 
-- [License](license.md) — Licensing terms
-- [How to Cite](cite.md) — Citation guidance
-- [Governance](index.md) — Project governance
+- [授權](license.md) — 授權條款
+- [如何引用](cite.md) — 引用指引
+- [治理](index.md) — 專案治理

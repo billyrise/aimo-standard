@@ -1,59 +1,53 @@
 ---
-description: Coverage Map methodology - How AIMO maps to external frameworks. Usage in audits, relationship to Evidence Bundle, and traceability approach.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/methodology.md
-source_hash: c495d78e6f93ef50
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: 覆盖映射方法论 - AIMO 如何映射到外部框架。在审计中的使用、与证据包的关系以及可追溯性方法。
 ---
 
-# Methodology
+# 方法论
 
-> Note: This methodology supports traceability and evidence readiness. It does not guarantee compliance with any specific regulation/standard.
+> 注意：此方法论支持可追溯性和证据就绪。它不保证符合任何特定法规/标准。
 
-This page explains what the Coverage Map is and is not, how to use it in audit, and how it relates to the Evidence Bundle and Minimum Evidence Requirements.
+本页解释覆盖映射是什么和不是什么、如何在审计中使用它，以及它与证据包和最低证据要求的关系。
 
-## What the mapping is
+## 映射是什么
 
-- An **informative** mapping from external framework/regulation references (by topic) to AIMO evidence, Evidence Bundle TOC items, Minimum Evidence lifecycle groups, artifacts, and validator checks.
-- A support tool for **explainability**: which AIMO evidence and artifacts can help demonstrate or explain alignment with a given external requirement (without claiming conformity).
+- 从外部框架/法规引用（按主题）到 AIMO 证据、证据包目录项、最低证据生命周期组、工件和验证器检查的**参考性**映射。
+- 支持**可解释性**的工具：哪些 AIMO 证据和工件可以帮助展示或解释与给定外部要求的对齐（而非声称合规）。
 
-## What the mapping is not
+## 映射不是什么
 
-- **Not** a guarantee of compliance with any framework or regulation.
-- **Not** legal advice or a substitute for verification against authoritative texts.
-- **Not** exhaustive; it is a practical subset for audit-readiness and explainability.
+- **不是**对任何框架或法规合规的保证。
+- **不是**法律建议或权威文本验证的替代品。
+- **不是**详尽无遗的；它是审计就绪和可解释性的实用子集。
 
-## How to use it in audit
+## 如何在审计中使用
 
-Use the flow: **requirement → evidence → artifact → validation**.
+使用流程：**要求 → 证据 → 工件 → 验证**。
 
-1. **Requirement**: Identify the external framework reference and topic (e.g. ISO 42001 documentation, EU AI Act record-keeping).
-2. **Evidence**: See which AIMO Evidence Bundle items and Minimum Evidence lifecycle groups (request, review, exception, renewal, change_log, integrity) support explainability for that requirement.
-3. **Artifact**: Locate the artifacts (schemas, templates, examples) that implement or illustrate that evidence.
-4. **Validation**: Use the validator and schema checks referenced to verify structural consistency.
+1. **要求**：识别外部框架引用和主题（例如 ISO 42001 文档、欧盟AI法案记录保存）。
+2. **证据**：查看哪些 AIMO 证据包项目和最低证据生命周期组（request、review、exception、renewal、change_log、integrity）支持该要求的可解释性。
+3. **工件**：定位实现或说明该证据的工件（模式、模板、示例）。
+4. **验证**：使用引用的验证器和模式检查来验证结构一致性。
 
-Readers must verify against the authoritative text of each framework or regulation.
+读者必须根据每个框架或法规的权威文本进行验证。
 
-## Relationship to Evidence Bundle and Minimum Evidence Requirements
+## 与证据包和最低证据要求的关系
 
-- **[Evidence Bundle](../artifacts/evidence-bundle.md)**: Defines the bundle structure, TOC, and traceability. Coverage Map rows reference Evidence Bundle sections (e.g. EV, Dictionary, Summary, change_log, request, review, exception, renewal).
-- **[Minimum Evidence Requirements](../artifacts/minimum-evidence.md)**: Defines MUST-level lifecycle groups (request, review, exception, renewal, change_log, integrity). Coverage Map rows reference these groups in `minimum_evidence_refs`.
+- **[证据包](../artifacts/evidence-bundle.md)**：定义包结构、目录和可追溯性。覆盖映射行引用证据包部分（如 EV、Dictionary、Summary、change_log、request、review、exception、renewal）。
+- **[最低证据要求](../artifacts/minimum-evidence.md)**：定义 MUST 级别的生命周期组（request、review、exception、renewal、change_log、integrity）。覆盖映射行在 `minimum_evidence_refs` 中引用这些组。
 
-Use the Coverage Map to see which Evidence Bundle items and Minimum Evidence groups support explainability for a given external requirement.
+使用覆盖映射来查看哪些证据包项目和最低证据组支持给定外部要求的可解释性。
 
-## Non-overclaim statement
+## 不过度声明声明
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "重要提示"
+    AIMO 标准支持**可解释性和证据就绪**。它**不**提供法律建议、保证合规或认证符合任何法规或框架。采用者必须根据权威文本验证声明，并在适当时获取专业建议。
 
-See [Responsibility Boundary](../governance/responsibility-boundary.md) for scope, assumptions, and adopter responsibilities.
+参见 [责任边界](../governance/responsibility-boundary.md) 了解范围、假设和采用者责任。
 
-## Audit journey
+## 审计旅程
 
-From this page, continue to:
+从此页面继续：
 
-1. **Framework mappings**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Validate**: [Validator](../validator/index.md) — run structural checks
-3. **Download**: [Releases](../releases/index.md) — get release assets
+1. **框架映射**：[ISO 42001](iso-42001.md)、[NIST AI RMF](nist-ai-rmf.md)、[欧盟AI法案](eu-ai-act.md)、[ISMS](isms.md)
+2. **验证**：[验证器](../validator/index.md) — 运行结构检查
+3. **下载**：[发布](../releases/index.md) — 获取发布资产

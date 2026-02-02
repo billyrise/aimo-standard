@@ -1,41 +1,36 @@
 ---
-description: AIMO Standard version history. Official frozen releases with auditor-ready PDFs, machine-readable artifacts, checksums, and build provenance attestations.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/versions/index.md
-source_hash: c3487d09fc163218
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Histórico de versões do AIMO Standard. Releases oficiais congelados com PDFs prontos para auditoria, artefatos legíveis por máquina, checksums e atestações de proveniência de build.
 ---
 
-# Versions
+# Versões
 
-Official releases are frozen snapshots published with auditor-ready PDFs and machine-readable artifacts.
+Releases oficiais são snapshots congelados publicados com PDFs prontos para auditoria e artefatos legíveis por máquina.
 
-## Latest Release
+## Release Mais Recente
 
-!!! success "Current Version"
-    **v0.0.1** (2026-02-02) — [View Documentation](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.1)
+!!! success "Versão Atual"
+    **v0.0.2** (2026-02-02) — [Ver Documentação](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2)
 
-## Version History
+## Histórico de Versões
 
-| Version | Date | Release Notes | PDF (EN) | PDF (JA) | Artifacts | Checksums |
+| Versão | Data | Notas de Release | PDF (EN) | PDF (JA) | Artefatos | Checksums |
 | :------ | :--- | :------------ | :------- | :------- | :-------- | :-------- |
+| **v0.0.2** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
 | **v0.0.1** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
 
-!!! note "Data Source"
-    This version table is synchronized with [GitHub Releases](https://github.com/billyrise/aimo-standard/releases). Each release tag (`vX.Y.Z`) corresponds to a frozen snapshot of the specification.
+!!! note "Fonte de Dados"
+    Esta tabela de versões está sincronizada com [GitHub Releases](https://github.com/billyrise/aimo-standard/releases). Cada tag de release (`vX.Y.Z`) corresponde a um snapshot congelado da especificação.
 
-## Verification Procedure
+## Procedimento de Verificação
 
-Auditors and implementers should verify download integrity using SHA-256 checksums:
+Auditores e implementadores devem verificar integridade de download usando checksums SHA-256:
 
-### 1. Download Release Assets
+### 1. Baixar Ativos de Release
 
 === "Linux / macOS"
 
     ```bash
-    # Download all assets for a specific version
+    # Baixar todos os ativos para uma versão específica
     VERSION=v0.0.1
     BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
@@ -48,7 +43,7 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 === "Windows (PowerShell)"
 
     ```powershell
-    # Download all assets for a specific version
+    # Baixar todos os ativos para uma versão específica
     $VERSION = "v0.0.1"
     $BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
 
@@ -58,15 +53,15 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
     Invoke-WebRequest -Uri "$BASE_URL/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
     ```
 
-### 2. Verify Checksums
+### 2. Verificar Checksums
 
 === "Linux"
 
     ```bash
-    # Verify all downloaded files against checksums
+    # Verificar todos os arquivos baixados contra checksums
     sha256sum -c SHA256SUMS.txt
 
-    # Expected output (all should show "OK"):
+    # Saída esperada (todos devem mostrar "OK"):
     # trust_package.pdf: OK
     # trust_package.ja.pdf: OK
     # aimo-standard-artifacts.zip: OK
@@ -75,10 +70,10 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 === "macOS"
 
     ```bash
-    # Verify all downloaded files against checksums
+    # Verificar todos os arquivos baixados contra checksums
     shasum -a 256 -c SHA256SUMS.txt
 
-    # Expected output (all should show "OK"):
+    # Saída esperada (todos devem mostrar "OK"):
     # trust_package.pdf: OK
     # trust_package.ja.pdf: OK
     # aimo-standard-artifacts.zip: OK
@@ -87,69 +82,69 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 === "Windows (PowerShell)"
 
     ```powershell
-    # Verify each file
+    # Verificar cada arquivo
     Get-FileHash .\trust_package.pdf -Algorithm SHA256
     Get-FileHash .\trust_package.ja.pdf -Algorithm SHA256
     Get-FileHash .\aimo-standard-artifacts.zip -Algorithm SHA256
 
-    # Compare Hash output with SHA256SUMS.txt
+    # Comparar saída de Hash com SHA256SUMS.txt
     Get-Content .\SHA256SUMS.txt
     ```
 
-### 3. Manual Verification (Alternative)
+### 3. Verificação Manual (Alternativa)
 
 === "Linux"
 
     ```bash
-    # Compute hash for a specific file
+    # Calcular hash para um arquivo específico
     sha256sum trust_package.pdf
 
-    # Compare output with SHA256SUMS.txt
+    # Comparar saída com SHA256SUMS.txt
     cat SHA256SUMS.txt
     ```
 
 === "macOS"
 
     ```bash
-    # Compute hash for a specific file
+    # Calcular hash para um arquivo específico
     shasum -a 256 trust_package.pdf
 
-    # Compare output with SHA256SUMS.txt
+    # Comparar saída com SHA256SUMS.txt
     cat SHA256SUMS.txt
     ```
 
 === "Windows (PowerShell)"
 
     ```powershell
-    # Compute hash for a specific file
+    # Calcular hash para um arquivo específico
     Get-FileHash .\trust_package.pdf -Algorithm SHA256
 
-    # View checksums file
+    # Ver arquivo de checksums
     Get-Content .\SHA256SUMS.txt
     ```
 
-!!! tip "For Auditors"
-    Always obtain the checksums file directly from the official GitHub Release, not from the submitting party. This ensures independent verification.
+!!! tip "Para Auditores"
+    Sempre obtenha o arquivo de checksums diretamente do GitHub Release oficial, não da parte submissora. Isso garante verificação independente.
 
-### 4. Verify Build Provenance (Attestation)
+### 4. Verificar Proveniência de Build (Atestação)
 
-All release assets include cryptographically signed build provenance attestations generated by GitHub Actions. This allows you to verify that assets were built in the official repository without tampering.
+Todos os ativos de release incluem atestações de proveniência de build assinadas criptograficamente geradas pelo GitHub Actions. Isso permite verificar que ativos foram construídos no repositório oficial sem adulteração.
 
-**Prerequisites**: Install [GitHub CLI](https://cli.github.com/) (`gh`)
+**Pré-requisitos**: Instale [GitHub CLI](https://cli.github.com/) (`gh`)
 
 ```bash
-# Download release assets using GitHub CLI
+# Baixar ativos de release usando GitHub CLI
 VERSION=v0.0.1
 gh release download "$VERSION" --repo billyrise/aimo-standard
 
-# Verify attestation for each asset
+# Verificar atestação para cada ativo
 gh attestation verify trust_package.pdf --repo billyrise/aimo-standard
 gh attestation verify trust_package.ja.pdf --repo billyrise/aimo-standard
 gh attestation verify aimo-standard-artifacts.zip --repo billyrise/aimo-standard
 gh attestation verify SHA256SUMS.txt --repo billyrise/aimo-standard
 ```
 
-**Expected output** (success):
+**Saída esperada** (sucesso):
 
 ```
 Loaded digest sha256:abc123... for file trust_package.pdf
@@ -157,85 +152,85 @@ Loaded 1 attestation from GitHub API
 ✓ Verification succeeded!
 ```
 
-**Offline verification** (air-gapped environments):
+**Verificação offline** (ambientes air-gapped):
 
 ```bash
-# First, download the trusted root (requires network once)
+# Primeiro, baixe a trusted root (requer rede uma vez)
 gh attestation trusted-root > trusted-root.jsonl
 
-# Then verify offline
+# Depois verifique offline
 gh attestation verify trust_package.pdf \
   --repo billyrise/aimo-standard \
   --custom-trusted-root trusted-root.jsonl
 ```
 
-!!! info "What attestation proves"
-    Build provenance attestation cryptographically proves that the release assets were:
+!!! info "O que atestação prova"
+    Atestação de proveniência de build prova criptograficamente que os ativos de release foram:
 
-    1. Built by GitHub Actions (not a developer's local machine)
-    2. Built from the official `billyrise/aimo-standard` repository
-    3. Built from the exact commit associated with the release tag
-    4. Not modified after the build completed
+    1. Construídos pelo GitHub Actions (não pela máquina local de um desenvolvedor)
+    2. Construídos do repositório oficial `billyrise/aimo-standard`
+    3. Construídos do commit exato associado à tag de release
+    4. Não modificados após o build ser concluído
 
-## Compatibility
+## Compatibilidade
 
-AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
+AIMO Standard segue [Semantic Versioning](https://semver.org/) (SemVer):
 
-| Change Type | Version Bump | Impact |
+| Tipo de Mudança | Bump de Versão | Impacto |
 | :---------- | :----------- | :----- |
-| **MAJOR** | X.0.0 | Breaking changes — migration required |
-| **MINOR** | 0.X.0 | Backward-compatible additions |
-| **PATCH** | 0.0.X | Fixes and clarifications |
+| **MAJOR** | X.0.0 | Breaking changes — migração necessária |
+| **MINOR** | 0.X.0 | Adições backward-compatible |
+| **PATCH** | 0.0.X | Correções e esclarecimentos |
 
-For the complete versioning policy, see [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md).
+Para a política de versionamento completa, veja [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md).
 
-## Migration
+## Migração
 
-When upgrading between versions with breaking changes:
+Ao fazer upgrade entre versões com breaking changes:
 
-1. Check the [Changelog](../current/08-changelog.md) for breaking changes
-2. Review the [Migration Guide](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) for specific upgrade paths
-3. Update your Evidence Bundle to align with the new schema requirements
-4. Re-run the validator to verify compliance
+1. Verifique o [Changelog](../current/08-changelog.md) para breaking changes
+2. Revise o [Guia de Migração](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) para caminhos de upgrade específicos
+3. Atualize seu Pacote de Evidências para alinhar com os novos requisitos de schema
+4. Re-execute o validador para verificar conformidade
 
 !!! warning "Breaking Changes"
-    MAJOR version updates may require changes to existing Evidence Bundles. Always review the migration guide before upgrading.
+    Atualizações de versão MAJOR podem requerer mudanças em Pacotes de Evidências existentes. Sempre revise o guia de migração antes de fazer upgrade.
 
-## Versioned Documentation Snapshots
+## Snapshots de Documentação Versionados
 
-Each release creates a frozen documentation snapshot accessible at:
+Cada release cria um snapshot de documentação congelado acessível em:
 
-- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.0.1/`)
+- Produção: `https://standard.aimoaas.com/{version}/` (ex: `/0.0.1/`)
 - GitHub Pages: `https://billyrise.github.io/aimo-standard/{version}/`
 
-### URL Types and Their Meaning
+### Tipos de URL e Seus Significados
 
-| URL Pattern | Description | For Audit Citations? |
+| Padrão de URL | Descrição | Para Citações de Auditoria? |
 |-------------|-------------|---------------------|
-| `/X.Y.Z/` (e.g., `/0.0.1/`) | **Frozen release** — immutable snapshot | **Yes** (preferred) |
-| `/latest/` | **Alias** — redirects to most recent release | Yes (resolves to `/X.Y.Z/`) |
-| `/dev/` | **Preview** — unreleased main branch content | **No** (not for citations) |
+| `/X.Y.Z/` (ex: `/0.0.1/`) | **Release congelado** — snapshot imutável | **Sim** (preferido) |
+| `/latest/` | **Alias** — redireciona para release mais recente | Sim (resolve para `/X.Y.Z/`) |
+| `/dev/` | **Preview** — conteúdo não lançado da branch main | **Não** (não para citações) |
 
-!!! warning "Understanding `/latest/` vs `/dev/`"
-    - **`/latest/`** is an alias (redirect) to the most recent **released** version. It is safe for citations as it resolves to a frozen snapshot.
-    - **`/dev/`** reflects the current `main` branch and may contain **unreleased changes**. Never cite `/dev/` in audit reports.
+!!! warning "Entendendo `/latest/` vs `/dev/`"
+    - **`/latest/`** é um alias (redirect) para a versão mais recente **lançada**. É seguro para citações pois resolve para um snapshot congelado.
+    - **`/dev/`** reflete a branch `main` atual e pode conter **mudanças não lançadas**. Nunca cite `/dev/` em relatórios de auditoria.
 
 ### FAQ
 
-??? question "Why is `/latest/` not a version number?"
-    `/latest/` is a convenience alias that always redirects to the most recent stable release (e.g., `/0.0.1/`). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.
+??? question "Por que `/latest/` não é um número de versão?"
+    `/latest/` é um alias de conveniência que sempre redireciona para o release estável mais recente (ex: `/0.0.1/`). Isso permite que usuários salvem um único URL enquanto automaticamente obtêm a versão atual. Para auditorias formais requerendo imutabilidade, cite a URL de versão explícita.
 
-??? question "Which URL should auditors cite?"
-    - **Formal audits (immutability required)**: Use `/X.Y.Z/` (e.g., `https://standard.aimoaas.com/0.0.1/standard/current/`)
-    - **General references**: `/latest/` is acceptable as it redirects to the current release
-    - **Never cite**: `/dev/` (unreleased, subject to change)
+??? question "Qual URL auditores devem citar?"
+    - **Auditorias formais (imutabilidade necessária)**: Use `/X.Y.Z/` (ex: `https://standard.aimoaas.com/0.0.1/standard/current/`)
+    - **Referências gerais**: `/latest/` é aceitável pois redireciona para o release atual
+    - **Nunca cite**: `/dev/` (não lançado, sujeito a mudanças)
 
-??? question "What if `/latest/` shows different content than expected?"
-    This would be a deployment bug. If you suspect `/latest/` differs from the most recent [GitHub Release](https://github.com/billyrise/aimo-standard/releases), please [report an issue](https://github.com/billyrise/aimo-standard/issues). The `/latest/` alias should always redirect to the most recent tagged release.
+??? question "E se `/latest/` mostrar conteúdo diferente do esperado?"
+    Isso seria um bug de deployment. Se você suspeita que `/latest/` difere do [GitHub Release](https://github.com/billyrise/aimo-standard/releases) mais recente, por favor [reporte uma issue](https://github.com/billyrise/aimo-standard/issues). O alias `/latest/` deve sempre redirecionar para o release com tag mais recente.
 
-## Resources
+## Recursos
 
-- **[Releases Hub](../../releases/index.md)** — Submission preparation, auditor verification, non-overclaim statement
-- **[Trust Package](../../governance/trust-package.md)** — Auditor-ready assurance materials
-- **[Changelog (detailed)](../current/08-changelog.md)** — Full change history with deprecation tracking
-- **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Complete versioning policy
+- **[Hub de Releases](../../releases/index.md)** — Preparação de submissão, verificação de auditor, declaração de não-sobrereivindicação
+- **[Trust Package](../../governance/trust-package.md)** — Materiais de garantia prontos para auditoria
+- **[Changelog (detalhado)](../current/08-changelog.md)** — Histórico completo de mudanças com rastreamento de depreciação
+- **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Política de versionamento completa

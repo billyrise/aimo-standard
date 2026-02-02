@@ -1,20 +1,14 @@
 ---
-description: AIMO Standard examples - End-to-end and minimal sample bundles showing how to assemble evidence artifacts for AI governance audits.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/examples/index.md
-source_hash: aa2185aa686d7ef3
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 예제 - AI 거버넌스 감사를 위해 증거 산출물을 조합하는 방법을 보여주는 엔드투엔드 및 최소 샘플 번들.
 ---
 
-# Examples
+# 예제
 
-This section points to end-to-end and minimal examples that show how artifacts are assembled.
+이 섹션은 산출물이 어떻게 조합되는지 보여주는 엔드투엔드 및 최소 예제를 안내합니다.
 
-- **Minimal bundle**: `examples/minimal/` in the repository (e.g., `sample_ev.json`, `sample_dictionary.json`).
-- **Evidence Bundle (minimal)**: `examples/evidence_bundle_minimal/` — root.json with optional request, review, change_log; see [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence](../artifacts/minimum-evidence.md).
-- **Schema alignment**: validate against `schemas/jsonschema/` and [Standard](../standard/current/index.md).
-- **Audit-ready packaging**: see the [Trust Package](../governance/trust-package.md).
+- **최소 번들**: 저장소의 `examples/minimal/` (예: `sample_ev.json`, `sample_dictionary.json`).
+- **증거 번들 (최소)**: `examples/evidence_bundle_minimal/` — 선택적 request, review, change_log가 있는 root.json; [증거 번들](../artifacts/evidence-bundle.md) 및 [최소 증거](../artifacts/minimum-evidence.md) 참조.
+- **스키마 정합**: `schemas/jsonschema/` 및 [표준](../standard/current/index.md)에 대해 검증.
+- **감사 준비 패키징**: [신뢰 패키지](../governance/trust-package.md) 참조.
 
-Detailed scenario coverage is added in later change units.
+상세 시나리오 범위는 이후 변경 단위에서 추가됩니다.

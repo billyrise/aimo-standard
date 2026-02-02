@@ -1,100 +1,98 @@
 ---
-description: AIMO localization guide - i18n structure, maintenance workflow, and SSOT principles for multilingual documentation.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/contributing/localization.md
-source_hash: 2c74d8175f3266d6
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Guía de localización de AIMO - estructura i18n, flujo de trabajo de mantenimiento y principios SSOT para documentación multilingüe.
 ---
 
-# Localization Guide
+# Guía de Localización
 
-This page documents the localization (i18n) structure, maintenance workflow, and SSOT (Single Source of Truth) principles for the AIMO Standard documentation.
+Esta página documenta la estructura de localización (i18n), flujo de trabajo de mantenimiento y principios SSOT (Single Source of Truth) para la documentación del AIMO Standard.
 
-## Language Purity Policy
+## Política de Pureza de Idioma
 
-**Each language page should contain only that language's content.**
+**Cada página de idioma debe contener solo el contenido de ese idioma.**
 
-| Rule | Description |
+| Regla | Descripción |
 | --- | --- |
-| **EN pages** | Must not contain CJK characters or references to language-specific columns (e.g., `_ja` suffixes) |
-| **JA pages** | Must not explain EN-specific terminology as if it were the canonical structure |
-| **Exceptions** | Listed in `MIXED_LANGUAGE_ALLOWLIST` in `tooling/checks/lint_i18n.py` |
+| **Páginas EN** | No deben contener caracteres CJK ni referencias a columnas específicas de idioma (ej., sufijos `_ja`) |
+| **Páginas JA** | No deben explicar terminología específica de EN como si fuera la estructura canónica |
+| **Excepciones** | Listadas en `MIXED_LANGUAGE_ALLOWLIST` en `tooling/checks/lint_i18n.py` |
 
-This policy ensures:
-1. Readers see only their selected language
-2. Adding new languages doesn't require updating existing pages
-3. CI can automatically detect violations
+Esta política asegura:
+1. Los lectores ven solo su idioma seleccionado
+2. Agregar nuevos idiomas no requiere actualizar páginas existentes
+3. CI puede detectar automáticamente violaciones
 
-## Language Structure
+## Estructura de Idiomas
 
-The AIMO Standard documentation uses a **folder-based i18n structure**:
+La documentación del AIMO Standard usa una **estructura i18n basada en carpetas**:
 
 ```
 docs/
-├── en/           # English (canonical)
-├── ja/           # Japanese
-├── es/           # Future: Spanish
-├── de/           # Future: German
-├── ko/           # Future: Korean
-├── zh-hans/      # Future: Simplified Chinese
-└── zh-hant/      # Future: Traditional Chinese
+├── en/           # Inglés (canónico)
+├── ja/           # Japonés (日本語)
+├── es/           # Español (Español)
+├── fr/           # Francés (Français)
+├── de/           # Alemán (Deutsch)
+├── pt/           # Portugués (Português)
+├── it/           # Italiano (Italiano)
+├── zh/           # Chino Simplificado (简体中文)
+├── zh-TW/        # Chino Tradicional (繁體中文)
+└── ko/           # Coreano (한국어)
 ```
 
-- **English is canonical**: The `docs/en/` folder is the authoritative source for documentation content.
-- **Other languages mirror the structure**: Each language folder (`ja/`, etc.) maintains the same file structure as `en/`.
-- **Same file names**: All languages use `.md` extension (no language suffix in filenames).
+- **El inglés es canónico**: La carpeta `docs/en/` es la fuente autoritativa para el contenido de documentación.
+- **Otros idiomas reflejan la estructura**: Cada carpeta de idioma (`ja/`, etc.) mantiene la misma estructura de archivos que `en/`.
+- **Mismos nombres de archivo**: Todos los idiomas usan extensión `.md` (sin sufijo de idioma en nombres de archivo).
+- **Fallback a inglés**: Las traducciones faltantes automáticamente recurren al contenido en inglés.
 
-## Taxonomy Data Model
+## Modelo de Datos de Taxonomía
 
-The taxonomy uses a **language-neutral canonical structure** with separate translation packs:
+La taxonomía usa una **estructura canónica neutral al idioma** con paquetes de traducción separados:
 
 ```
 data/
 └── taxonomy/
-    ├── canonical.yaml           # Language-neutral (codes, status, lifecycle)
+    ├── canonical.yaml           # Neutral al idioma (códigos, estado, ciclo de vida)
     └── i18n/
-        ├── en.yaml              # English labels and definitions
-        ├── ja.yaml              # Japanese labels and definitions
-        └── {lang}.yaml          # Additional languages (empty template)
+        ├── en.yaml              # Etiquetas y definiciones en inglés
+        ├── ja.yaml              # Etiquetas y definiciones en japonés
+        └── {lang}.yaml          # Idiomas adicionales (plantilla vacía)
 ```
 
-### Canonical Structure (`canonical.yaml`)
+### Estructura Canónica (`canonical.yaml`)
 
-Contains language-neutral data:
+Contiene datos neutrales al idioma:
 
-- Code identifiers (e.g., `FS-001`, `UC-001`)
-- Status (`active`, `deprecated`, `removed`)
-- Lifecycle metadata (`introduced_in`, `deprecated_in`, `removed_in`, `replaced_by`)
-- Scope notes and examples (in English, as technical references)
+- Identificadores de código (ej., `FS-001`, `UC-001`)
+- Estado (`active`, `deprecated`, `removed`)
+- Metadatos de ciclo de vida (`introduced_in`, `deprecated_in`, `removed_in`, `replaced_by`)
+- Notas de alcance y ejemplos (en inglés, como referencias técnicas)
 
-### Translation Packs (`i18n/*.yaml`)
+### Paquetes de Traducción (`i18n/*.yaml`)
 
-Each language pack contains:
+Cada paquete de idioma contiene:
 
-- Dimension names (e.g., "Functional Scope")
-- Code labels (e.g., "End-user Productivity")
-- Code definitions
+- Nombres de dimensión (ej., "Functional Scope")
+- Etiquetas de código (ej., "End-user Productivity")
+- Definiciones de código
 
-**Fallback**: If a translation is missing, the system uses English.
+**Fallback**: Si falta una traducción, el sistema usa inglés.
 
-## SSOT Principle
+## Principio SSOT
 
-AIMO uses a **SSOT-first architecture** for taxonomy data:
+AIMO usa una **arquitectura SSOT-first** para datos de taxonomía:
 
-| Asset Type | SSOT Location | Description |
+| Tipo de Activo | Ubicación SSOT | Descripción |
 | --- | --- | --- |
-| **Taxonomy (structure)** | `data/taxonomy/canonical.yaml` | Language-neutral structure (SSOT) |
-| **Taxonomy (i18n)** | `data/taxonomy/i18n/*.yaml` | Per-language translations (SSOT) |
-| **Coverage Map** | `coverage_map/coverage_map.yaml` | Framework-to-evidence mapping |
-| **Schemas** | `schemas/jsonschema/` | JSON validation schemas |
+| **Taxonomía (estructura)** | `data/taxonomy/canonical.yaml` | Estructura neutral al idioma (SSOT) |
+| **Taxonomía (i18n)** | `data/taxonomy/i18n/*.yaml` | Traducciones por idioma (SSOT) |
+| **Mapa de Cobertura** | `coverage_map/coverage_map.yaml` | Mapeo de framework a evidencia |
+| **Esquemas** | `schemas/jsonschema/` | Esquemas de validación JSON |
 
-### Derived Files
+### Archivos Derivados
 
-The following files are **generated** from the SSOT and should NOT be edited manually:
+Los siguientes archivos son **generados** desde el SSOT y NO deben editarse manualmente:
 
-| File | Generated From | Generator |
+| Archivo | Generado Desde | Generador |
 | --- | --- | --- |
 | `artifacts/taxonomy/{version}/{lang}/taxonomy_dictionary.csv` | canonical + i18n | `build_artifacts.py` |
 | `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` | canonical + i18n | `build_artifacts.py` |
@@ -104,77 +102,135 @@ The following files are **generated** from the SSOT and should NOT be edited man
 | `source_pack/03_taxonomy/dimensions_en_ja.md` | canonical + i18n | `build_artifacts.py` |
 | `source_pack/03_taxonomy/taxonomy_dictionary.json` | canonical + i18n | `build_artifacts.py` |
 
-### Language Codes (BCP47)
+### Códigos de Idioma (BCP47)
 
-AIMO uses BCP47 language codes:
+AIMO usa códigos de idioma BCP47:
 
-| Code | Language |
-| --- | --- |
-| `en` | English |
-| `ja` | Japanese (日本語) |
-| `es` | Spanish (Español) |
-| `de` | German (Deutsch) |
-| `ko` | Korean (한국어) |
-| `zh-Hans` | Simplified Chinese (简体中文) |
-| `zh-Hant` | Traditional Chinese (繁體中文) |
+| Código | Idioma | Estado |
+| --- | --- | --- |
+| `en` | Inglés | Canónico (fuente) |
+| `ja` | Japonés (日本語) | Activo |
+| `es` | Español (Español) | Activo |
+| `fr` | Francés (Français) | Activo |
+| `de` | Alemán (Deutsch) | Activo |
+| `pt` | Portugués (Português) | Activo |
+| `it` | Italiano (Italiano) | Activo |
+| `zh` | Chino Simplificado (简体中文) | Activo |
+| `zh-TW` | Chino Tradicional (繁體中文) | Activo |
+| `ko` | Coreano (한국어) | Activo |
 
-### Legacy CSV Files (Frozen)
+### Archivos CSV Legacy (Congelados)
 
-The legacy EN/JA mixed CSV files in `source_pack/03_taxonomy/legacy/` are:
+Los archivos CSV legacy mixtos EN/JA en `source_pack/03_taxonomy/legacy/` están:
 
-- **Frozen at 21 columns** — no new language columns will be added
-- **Maintained for backward compatibility** — existing integrations can continue to use them
-- **CI-enforced** — adding `label_es`, `definition_de`, etc. will fail the build
+- **Congelados en 21 columnas** — no se agregarán nuevas columnas de idioma
+- **Mantenidos para compatibilidad hacia atrás** — integraciones existentes pueden continuar usándolos
+- **Aplicado por CI** — agregar `label_es`, `definition_de`, etc. fallará el build
 
-For new languages, use the per-language artifacts in `artifacts/taxonomy/{version}/{lang}/`.
+Para nuevos idiomas, use los artefactos por idioma en `artifacts/taxonomy/{version}/{lang}/`.
 
-## Update Workflows
+## Seguimiento de Frescura de Traducción
 
-### Taxonomy Updates (New SSOT-First Workflow)
+AIMO usa un sistema de **Seguimiento de Frescura de Traducción** para mantener consistencia entre inglés (fuente) y contenido traducido.
 
-1. Edit the SSOT in `data/taxonomy/`:
-   - Structure changes → `canonical.yaml`
-   - English translations → `i18n/en.yaml`
-   - Japanese translations → `i18n/ja.yaml`
-2. Run validation: `python tooling/checks/lint_taxonomy_ssot.py`
-3. Regenerate all derived files: `python tooling/taxonomy/build_artifacts.py --version current --langs en ja`
-4. Update documentation pages as needed
-5. Commit all changes together
+### Cómo Funciona
 
-### Coverage Map Updates
+1. Cada archivo traducido contiene metadatos que rastrean de qué versión de la fuente en inglés fue traducido
+2. Cuando el contenido en inglés se actualiza, el sistema detecta traducciones desactualizadas
+3. CI advierte sobre traducciones desactualizadas pero no bloquea (las traducciones pueden quedar atrás)
 
-1. Edit `coverage_map/coverage_map.yaml` (the SSOT)
-2. Update the corresponding framework page tables (`docs/en/coverage-map/*.md`)
-3. Update Japanese translations (`docs/ja/coverage-map/*.md`)
-4. Commit all changes together
+### Metadatos de Traducción
 
-### Documentation Updates
+Los archivos traducidos incluyen metadatos en frontmatter:
 
-1. Edit the English source (`docs/en/...`)
-2. Update the corresponding Japanese file (`docs/ja/...`)
-3. Run `python tooling/checks/lint_i18n.py` to verify heading consistency
-4. Run `mkdocs build --strict` to verify build
-5. Commit all changes together
+```yaml
+---
+# TRANSLATION METADATA - DO NOT REMOVE
+source_file: en/standard/current/01-overview.md
+source_hash: abc123def456
+translation_date: 2026-02-02
+translator: human|machine|hybrid
+translation_status: current|outdated|needs_review
+---
+```
 
-## Adding a New Language (5 Steps)
+### Usando la Herramienta de Sincronización
 
-To add a new language (e.g., Spanish):
+```bash
+# Verificar todas las traducciones para frescura
+python tooling/i18n/sync_translations.py --check
 
-### Step 1: Generate Taxonomy Pack
+# Verificar idioma específico
+python tooling/i18n/sync_translations.py --check --lang ja
+
+# Generar reporte de traducción
+python tooling/i18n/sync_translations.py --report
+
+# Inicializar nuevo idioma (copiar EN como base)
+python tooling/i18n/sync_translations.py --init-lang es
+
+# Actualizar metadatos después de completar traducción
+python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
+```
+
+Para especificación técnica detallada, consulte `tooling/i18n/TRANSLATION_SYNC_SPEC.md`.
+
+## Flujos de Trabajo de Actualización
+
+### Actualizaciones de Taxonomía (Nuevo Flujo de Trabajo SSOT-First)
+
+1. Edite el SSOT en `data/taxonomy/`:
+   - Cambios de estructura → `canonical.yaml`
+   - Traducciones en inglés → `i18n/en.yaml`
+   - Traducciones en japonés → `i18n/ja.yaml`
+2. Ejecute validación: `python tooling/checks/lint_taxonomy_ssot.py`
+3. Regenere todos los archivos derivados: `python tooling/taxonomy/build_artifacts.py --version current --langs en ja`
+4. Actualice páginas de documentación según sea necesario
+5. Haga commit de todos los cambios juntos
+
+### Actualizaciones del Mapa de Cobertura
+
+1. Edite `coverage_map/coverage_map.yaml` (el SSOT)
+2. Actualice las tablas de página de framework correspondientes (`docs/en/coverage-map/*.md`)
+3. Actualice traducciones al japonés (`docs/ja/coverage-map/*.md`)
+4. Haga commit de todos los cambios juntos
+
+### Actualizaciones de Documentación
+
+1. Edite la fuente en inglés (`docs/en/...`)
+2. Actualice traducciones según sea necesario (o márquelas para actualización posterior)
+3. Ejecute `python tooling/i18n/sync_translations.py --check` para ver traducciones desactualizadas
+4. Ejecute `python tooling/checks/lint_i18n.py` para verificar consistencia de encabezados
+5. Ejecute `mkdocs build --strict` para verificar el build
+6. Haga commit de todos los cambios juntos
+
+!!! note "Prioridad de Traducción"
+    No todas las traducciones necesitan actualizarse inmediatamente. Las páginas Nivel 1 (críticas) deben priorizarse:
+    
+    - `index.md`
+    - `standard/current/*.md`
+    - `governance/index.md`
+    - `releases/index.md`
+
+## Agregar un Nuevo Idioma (5 Pasos)
+
+Para agregar un nuevo idioma (ej., Español):
+
+### Paso 1: Generar Paquete de Taxonomía
 
 ```bash
 python tooling/taxonomy/build_i18n_taxonomy.py --add-lang es --lang-name "Español"
 ```
 
-Creates `data/taxonomy/i18n/es.yaml` with English references as comments.
+Crea `data/taxonomy/i18n/es.yaml` con referencias en inglés como comentarios.
 
-### Step 2: Create Docs Folder
+### Paso 2: Crear Carpeta de Docs
 
 ```bash
 mkdir -p docs/es && cp -r docs/en/* docs/es/
 ```
 
-### Step 3: Update mkdocs.yml
+### Paso 3: Actualizar mkdocs.yml
 
 ```yaml
 plugins:
@@ -185,54 +241,54 @@ plugins:
           build: true
 ```
 
-### Step 4: Translate
+### Paso 4: Traducir
 
-- Translate `data/taxonomy/i18n/es.yaml`
-- Translate files in `docs/es/`
+- Traduzca `data/taxonomy/i18n/es.yaml`
+- Traduzca archivos en `docs/es/`
 
-### Step 5: Verify
+### Paso 5: Verificar
 
 ```bash
 python tooling/checks/lint_i18n.py && mkdocs build --strict
 ```
 
-!!! success "Done"
-    New language is now available at `/dev/es/`
+!!! success "Listo"
+    El nuevo idioma está ahora disponible en `/dev/es/`
 
-## File Naming Conventions
+## Convenciones de Nomenclatura de Archivos
 
-| Pattern | Example | Description |
+| Patrón | Ejemplo | Descripción |
 | --- | --- | --- |
-| `index.md` | `docs/en/governance/index.md` | Section landing page |
-| `{topic}.md` | `docs/en/governance/trust-package.md` | Topic page |
-| `{NN}-{topic}.md` | `docs/en/standard/current/03-taxonomy.md` | Numbered specification page |
+| `index.md` | `docs/en/governance/index.md` | Página de inicio de sección |
+| `{tema}.md` | `docs/en/governance/trust-package.md` | Página de tema |
+| `{NN}-{tema}.md` | `docs/en/standard/current/03-taxonomy.md` | Página de especificación numerada |
 
-## Quality Checks
+## Verificaciones de Calidad
 
-Run these checks before committing:
+Ejecute estas verificaciones antes de hacer commit:
 
 ```bash
-# i18n structure, heading consistency, and deprecated phrase detection
+# Estructura i18n, consistencia de encabezados y detección de frases obsoletas
 python tooling/checks/lint_i18n.py
 
-# Schema and manifest lints
+# Lints de esquema y manifiesto
 python tooling/checks/lint_schema.py
 python tooling/checks/lint_manifest.py
 
-# Taxonomy SSOT lints
+# Lints de SSOT de taxonomía
 python tooling/checks/lint_taxonomy_ssot.py --required-langs en
 python tooling/checks/lint_legacy_csv.py
 python tooling/checks/lint_taxonomy_dictionary.py
 python tooling/checks/lint_taxonomy_json.py
 
-# Taxonomy artifacts up to date
+# Artefactos de taxonomía actualizados
 python tooling/taxonomy/build_artifacts.py --check
 
-# Build verification
+# Verificación de build
 mkdocs build --strict
 ```
 
-## Related Pages
+## Páginas Relacionadas
 
-- [Releases](../releases/index.md) — Downloadable packages
-- [Governance](../governance/index.md) — Project governance
+- [Versiones](../releases/index.md) — Paquetes descargables
+- [Gobernanza](../governance/index.md) — Gobernanza del proyecto

@@ -1,37 +1,31 @@
 ---
-description: AIMO Standard conformance levels. How organizations claim compliance, evidence requirements, and what each conformance level means for AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/conformance/index.md
-source_hash: a78c3afc07d1ed70
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 적합성 수준. 조직이 컴플라이언스를 주장하는 방법, 증거 요구사항, 각 적합성 수준이 AI 거버넌스에 의미하는 바.
 ---
 
-# Conformance
+# 적합성
 
-This section defines how organizations claim compliance with the AIMO Standard and what evidence is expected.
+이 섹션은 조직이 AIMO 표준과의 컴플라이언스를 주장하는 방법과 예상되는 증거를 정의합니다.
 
-## Purpose
+## 목적
 
-- **What you can claim**: Alignment with the AIMO Standard's evidence structure and traceability requirements.
-- **What you cannot claim**: Legal compliance, certification, or regulatory approval. See [Responsibility Boundary](../governance/responsibility-boundary.md).
+- **주장할 수 있는 것**: AIMO 표준의 증거 구조 및 추적성 요구사항과의 정합.
+- **주장할 수 없는 것**: 법적 컴플라이언스, 인증 또는 규제 승인. [책임 경계](../governance/responsibility-boundary.md)를 참조하세요.
 
-## Expected Evidence
+## 예상 증거
 
-To demonstrate conformance, organizations must provide:
+적합성을 입증하기 위해 조직은 다음을 제공해야 합니다:
 
-1. **Evidence Bundle**: Structured EV records per [Artifacts](../artifacts/index.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-2. **Validator Results**: Passing output from the validator — see [Validator](../validator/index.md).
-3. **Version Reference**: Explicit AIMO Standard version — see [Versions](../standard/versions/index.md).
+1. **증거 번들**: [산출물](../artifacts/index.md) 및 [최소 증거 요구사항](../artifacts/minimum-evidence.md)에 따른 구조화된 EV 레코드.
+2. **검증기 결과**: 검증기의 통과 출력 — [검증기](../validator/index.md) 참조.
+3. **버전 참조**: 명시적 AIMO 표준 버전 — [버전](../standard/versions/index.md) 참조.
 
-## Non-overclaim
+## 과대 주장 금지
 
-!!! warning "Important"
-    Conformance to the AIMO Standard demonstrates **evidence readiness and traceability**, not legal compliance or certification. See [Responsibility Boundary](../governance/responsibility-boundary.md).
+!!! warning "중요"
+    AIMO 표준 적합성은 **증거 준비 및 추적성**을 입증하며, 법적 컴플라이언스나 인증이 아닙니다. [책임 경계](../governance/responsibility-boundary.md)를 참조하세요.
 
-## Related Pages
+## 관련 페이지
 
-- [Trust Package](../governance/trust-package.md) — Consolidated entry point for auditors
-- [Standard (Current)](../standard/current/index.md) — Normative requirements
-- [Artifacts](../artifacts/index.md) — Evidence structure
+- [신뢰 패키지](../governance/trust-package.md) — 감사자를 위한 통합 진입점
+- [표준 (현재)](../standard/current/index.md) — 규범적 요구사항
+- [산출물](../artifacts/index.md) — 증거 구조

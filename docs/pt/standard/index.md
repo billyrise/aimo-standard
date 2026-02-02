@@ -1,37 +1,31 @@
 ---
-description: AIMO Standard specification hub. Access current version, version history, conformance levels, and coverage maps for AI governance frameworks.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/index.md
-source_hash: 2b2eb03653dfba87
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Hub de especificação do AIMO Standard. Acesse versão atual, histórico de versões, níveis de conformidade e mapas de cobertura para frameworks de governança de IA.
 ---
 
-# Standard
+# Padrão
 
-This section contains the AIMO Standard specification and related resources.
+Esta seção contém a especificação do AIMO Standard e recursos relacionados.
 
-## Current Version
+## Versão Atual
 
-The [Current](current/index.md) section contains the latest working version of the specification:
+A seção [Atual](current/index.md) contém a versão de trabalho mais recente da especificação:
 
-- [Overview](current/01-overview.md) — Purpose and goals
-- [Scope](current/02-scope.md) — What is in and out of scope
-- [Taxonomy](current/03-taxonomy.md) — 8-dimension classification system
-- [Codes](current/04-codes.md) — Code identifiers and structure
-- [Dictionary](current/05-dictionary.md) — Terms and definitions
-- [EV Template](current/06-ev-template.md) — Evidence record structure
-- [Validator](current/07-validator.md) — Validation rules specification
-- [Changelog](current/08-changelog.md) — Normative and non-normative changes
+- [Visão Geral](current/01-overview.md) — Propósito e objetivos
+- [Escopo](current/02-scope.md) — O que está dentro e fora do escopo
+- [Taxonomia](current/03-taxonomy.md) — Sistema de classificação de 8 dimensões
+- [Códigos](current/04-codes.md) — Identificadores de código e estrutura
+- [Dicionário](current/05-dictionary.md) — Termos e definições
+- [Template EV](current/06-ev-template.md) — Estrutura de registro de evidências
+- [Validador](current/07-validator.md) — Especificação de regras de validação
+- [Changelog](current/08-changelog.md) — Mudanças normativas e não-normativas
 
-## Past Versions
+## Versões Anteriores
 
-For official frozen releases and versioned snapshots, see [Versions](versions/index.md).
+Para releases oficiais congelados e snapshots versionados, veja [Versões](versions/index.md).
 
-## Related Sections
+## Seções Relacionadas
 
-- **[Conformance](../conformance/index.md)** — How to comply with the standard and conformance levels
-- **[Coverage Map](../coverage-map/index.md)** — Mapping to external frameworks (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+- **[Conformidade](../conformance/index.md)** — Como cumprir com o padrão e níveis de conformidade
+- **[Mapa de Cobertura](../coverage-map/index.md)** — Mapeamento para frameworks externos (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 
-For downloadable release assets and PDFs, see [Releases](../releases/index.md).
+Para ativos de release para download e PDFs, veja [Releases](../releases/index.md).

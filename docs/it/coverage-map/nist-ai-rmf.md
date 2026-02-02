@@ -1,43 +1,37 @@
 ---
-description: AIMO Standard to NIST AI RMF mapping. Traceability between AIMO taxonomy codes and NIST AI Risk Management Framework functions.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/nist-ai-rmf.md
-source_hash: 8d7264d7d20933f9
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Mappatura dello Standard AIMO verso NIST AI RMF. Tracciabilità tra i codici della tassonomia AIMO e le funzioni del NIST AI Risk Management Framework.
 ---
 
-# NIST AI RMF mapping
+# Mappatura NIST AI RMF
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> Scorciatoie di tracciabilità: Tassonomia → Requisiti Minimi di Evidence → Validator → Protocollo di Supervisione Umana.
 
-- [Taxonomy](../standard/current/03-taxonomy.md)
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- [Log Schemas](../artifacts/log-schemas/index.md)
+- [Tassonomia](../standard/current/03-taxonomy.md)
+- [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md)
+- [Schemi Log](../artifacts/log-schemas/index.md)
 - [Validator](../validator/index.md)
-- [Human Oversight Protocol](../governance/human-oversight-protocol.md)
+- [Protocollo di Supervisione Umana](../governance/human-oversight-protocol.md)
 
-This page maps selected NIST AI Risk Management Framework (Govern, Map, Measure, Manage) themes to AIMO evidence and artifacts. It is for explainability only; it does not guarantee conformity to the NIST AI RMF. Verify against the NIST publication.
+Questa pagina mappa temi selezionati del NIST AI Risk Management Framework (Govern, Map, Measure, Manage) verso evidence e artefatti AIMO. È solo per la spiegabilità; non garantisce la conformità al NIST AI RMF. Verificare contro la pubblicazione NIST.
 
 
-## Mapping table
+## Tabella di mappatura
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| Riferimento framework / argomento | Evidence AIMO / dove in AIMO | Evidence Bundle / Requisiti Minimi | Artefatti & validazione | Note |
 | --- | --- | --- | --- | --- |
-| Govern 1.1 – Policies | [Scope](../standard/current/02-scope.md), [Taxonomy](../standard/current/03-taxonomy.md) | Dictionary, Summary, review; review | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against NIST publication. |
-| Govern 1.2 – Roles and responsibilities | [Minimum Evidence](../artifacts/minimum-evidence.md) | request, review | templates/ev/ev_template.md | Informative; verify against NIST publication. |
-| Govern 2.1 – Accountability | [Evidence Bundle](../artifacts/evidence-bundle.md) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | Informative; verify against NIST publication. |
-| Govern 3.1 – Risk management | [Scope](../standard/current/02-scope.md) | request, review, exception | templates/ev/ | Informative; verify against NIST publication. |
-| Govern 4.1 – Culture | [Overview](../standard/current/01-overview.md) | Summary, review; review | — | Informative; verify against NIST publication. |
-| Map 1.1 – Context mapping | [Scope](../standard/current/02-scope.md), [Dictionary](../standard/current/05-dictionary.md) | Dictionary, Summary; request | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against NIST publication. |
-| Map 2.1 – Data and documentation | [EV Template](../standard/current/06-ev-template.md) | EV, Dictionary, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informative; verify against NIST publication. |
-| Map 3.1 – Data governance | [Dictionary](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against NIST publication. |
-| Measure 1.1 – Performance and impact | [EV Template](../standard/current/06-ev-template.md) | EV | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informative; verify against NIST publication. |
-| Measure 2.1 – Monitoring | [Minimum Evidence](../artifacts/minimum-evidence.md) | EV, change_log; change_log, integrity | templates/ev/ | Informative; verify against NIST publication. |
-| Measure 3.1 – Testing and validation | [Validator](../standard/current/07-validator.md) | EV | validator/rules/, validator/src/; schema_validate_ev | Informative; verify against NIST publication. |
-| Manage 1.1 – Allocation of resources | [Overview](../standard/current/01-overview.md) | Summary, review; review | — | Informative; verify against NIST publication. |
-| Manage 2.1 – Incidents and responses | [Minimum Evidence](../artifacts/minimum-evidence.md) | exception, renewal, change_log | templates/ev/ev_template.md | Informative; verify against NIST publication. |
-| Manage 3.1 – Change management | [Evidence Bundle](../artifacts/evidence-bundle.md) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | Informative; verify against NIST publication. |
-| Manage 4.1 – Review and update | [Minimum Evidence](../artifacts/minimum-evidence.md) | renewal, review; review, renewal | templates/ev/ | Informative; verify against NIST publication. |
-| Manage 5.1 – Communication | [Evidence Bundle](../artifacts/evidence-bundle.md) | Summary, change_log; change_log | templates/ev/ | Informative; verify against NIST publication. |
+| Govern 1.1 – Politiche | [Ambito](../standard/current/02-scope.md), [Tassonomia](../standard/current/03-taxonomy.md) | Dizionario, Riepilogo, revisione; revisione | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informativo; verificare contro la pubblicazione NIST. |
+| Govern 1.2 – Ruoli e responsabilità | [Requisiti Minimi](../artifacts/minimum-evidence.md) | richiesta, revisione | templates/ev/ev_template.md | Informativo; verificare contro la pubblicazione NIST. |
+| Govern 2.1 – Responsabilità | [Evidence Bundle](../artifacts/evidence-bundle.md) | EV, richiesta, revisione, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | Informativo; verificare contro la pubblicazione NIST. |
+| Govern 3.1 – Gestione del rischio | [Ambito](../standard/current/02-scope.md) | richiesta, revisione, eccezione | templates/ev/ | Informativo; verificare contro la pubblicazione NIST. |
+| Govern 4.1 – Cultura | [Panoramica](../standard/current/01-overview.md) | Riepilogo, revisione; revisione | — | Informativo; verificare contro la pubblicazione NIST. |
+| Map 1.1 – Mappatura del contesto | [Ambito](../standard/current/02-scope.md), [Dizionario](../standard/current/05-dictionary.md) | Dizionario, Riepilogo; richiesta | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informativo; verificare contro la pubblicazione NIST. |
+| Map 2.1 – Dati e documentazione | [Template EV](../standard/current/06-ev-template.md) | EV, Dizionario, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informativo; verificare contro la pubblicazione NIST. |
+| Map 3.1 – Governance dei dati | [Dizionario](../standard/current/05-dictionary.md) | Dizionario, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informativo; verificare contro la pubblicazione NIST. |
+| Measure 1.1 – Performance e impatto | [Template EV](../standard/current/06-ev-template.md) | EV | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informativo; verificare contro la pubblicazione NIST. |
+| Measure 2.1 – Monitoraggio | [Requisiti Minimi](../artifacts/minimum-evidence.md) | EV, change_log; change_log, integrità | templates/ev/ | Informativo; verificare contro la pubblicazione NIST. |
+| Measure 3.1 – Test e validazione | [Validator](../standard/current/07-validator.md) | EV | validator/rules/, validator/src/; schema_validate_ev | Informativo; verificare contro la pubblicazione NIST. |
+| Manage 1.1 – Allocazione delle risorse | [Panoramica](../standard/current/01-overview.md) | Riepilogo, revisione; revisione | — | Informativo; verificare contro la pubblicazione NIST. |
+| Manage 2.1 – Incidenti e risposte | [Requisiti Minimi](../artifacts/minimum-evidence.md) | eccezione, rinnovo, change_log | templates/ev/ev_template.md | Informativo; verificare contro la pubblicazione NIST. |
+| Manage 3.1 – Gestione delle modifiche | [Evidence Bundle](../artifacts/evidence-bundle.md) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | Informativo; verificare contro la pubblicazione NIST. |
+| Manage 4.1 – Revisione e aggiornamento | [Requisiti Minimi](../artifacts/minimum-evidence.md) | rinnovo, revisione; revisione, rinnovo | templates/ev/ | Informativo; verificare contro la pubblicazione NIST. |
+| Manage 5.1 – Comunicazione | [Evidence Bundle](../artifacts/evidence-bundle.md) | Riepilogo, change_log; change_log | templates/ev/ | Informativo; verificare contro la pubblicazione NIST. |

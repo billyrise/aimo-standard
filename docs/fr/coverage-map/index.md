@@ -1,42 +1,36 @@
 ---
-description: AIMO Coverage Map - Traceability between AIMO Standard and major regulations (ISO 42001, NIST AI RMF, EU AI Act, ISMS) for audit readiness.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/index.md
-source_hash: 4cc217bc21f8b662
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Carte de couverture AIMO - Traçabilité entre le standard AIMO et les principales réglementations (ISO 42001, NIST AI RMF, EU AI Act, ISMS) pour la préparation aux audits.
 ---
 
-# Coverage Map
+# Carte de couverture
 
-## Important: Scope of this Coverage Map (No automatic compliance)
+## Important : Portée de cette carte de couverture (pas de conformité automatique)
 
-This Coverage Map provides **traceability** between AIMO Standard elements and major regulations/standards to accelerate audit explanations and evidence readiness.
-**It does NOT automatically guarantee compliance** with any specific regulation or standard.
-Applicable obligations vary by role (e.g., provider/deployer), use case, risk classification, transition timelines, and authoritative interpretations/certification schemes.
+Cette carte de couverture fournit une **traçabilité** entre les éléments du standard AIMO et les principales réglementations/normes pour accélérer les explications d'audit et la préparation des preuves.
+**Elle ne garantit PAS automatiquement la conformité** à une réglementation ou norme spécifique.
+Les obligations applicables varient selon le rôle (ex. fournisseur/déployeur), le cas d'usage, la classification de risque, les délais de transition et les interprétations faisant autorité/schémas de certification.
 
-## How to use this map (traceability workflow)
+## Comment utiliser cette carte (flux de travail de traçabilité)
 
-1. Start from the external requirement (e.g., ISO/NIST/EU AI Act/ISMS) and find the mapped AIMO Standard elements.
-2. Use the linked AIMO elements to identify required artifacts and minimum evidence requirements.
-3. Validate completeness and consistency using the Validator, and apply human review where required (see [Human Oversight Protocol](../governance/human-oversight-protocol.md)).
+1. Partez de l'exigence externe (ex. ISO/NIST/EU AI Act/ISMS) et trouvez les éléments AIMO correspondants.
+2. Utilisez les éléments AIMO liés pour identifier les artefacts requis et les exigences minimales de preuves.
+3. Validez la complétude et la cohérence en utilisant le validateur, et appliquez une revue humaine là où c'est requis (voir [Protocole de surveillance humaine](../governance/human-oversight-protocol.md)).
 
-**Key resources:**
+**Ressources clés :**
 
-- [Taxonomy](../standard/current/03-taxonomy.md) — classification codes
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist
-- [Evidence Bundle](../artifacts/evidence-bundle.md) — bundle structure and TOC
-- [Log Schemas](../artifacts/log-schemas/index.md) — Shadow AI / agent activity evidence
-- [Validator](../validator/index.md) — structural consistency checks
-- [Human Oversight Protocol](../governance/human-oversight-protocol.md) — machine vs. human review boundary
+- [Taxonomie](../standard/current/03-taxonomy.md) — codes de classification
+- [Exigences minimales de preuves](../artifacts/minimum-evidence.md) — liste de contrôle OBLIGATOIRE
+- [Lot de preuves](../artifacts/evidence-bundle.md) — structure du lot et TDM
+- [Schémas de journaux](../artifacts/log-schemas/index.md) — preuves Shadow AI / activité des agents
+- [Validateur](../validator/index.md) — vérifications de cohérence structurelle
+- [Protocole de surveillance humaine](../governance/human-oversight-protocol.md) — limite entre revue machine et humaine
 
 ---
 
-This section maps AIMO Standard evidence and artifacts to external frameworks and regulations for audit explainability. It does **not** guarantee compliance or provide legal advice.
+Cette section met en correspondance les preuves et artefacts du standard AIMO avec les cadres et réglementations externes pour l'explicabilité d'audit. Elle ne garantit **pas** la conformité et ne fournit pas d'avis juridique.
 
-- **[Methodology](methodology.md)**: what the mapping is and is not; how to use it; update policy; relationship to [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-- **ISO/IEC 42001**: [ISO/IEC 42001 mapping](iso-42001.md) — AI management system themes.
-- **NIST AI RMF**: [NIST AI RMF mapping](nist-ai-rmf.md) — Govern, Map, Measure, Manage.
-- **EU AI Act**: [EU AI Act mapping](eu-ai-act.md) — high-level documentation and record-keeping (not legal interpretation).
-- **ISMS view**: [ISMS mapping](isms.md) — ISO/IEC 27001/27002 themes (change management, access control, logging, evidence integrity).
+- **[Méthodologie](methodology.md)** : ce qu'est et n'est pas la correspondance ; comment l'utiliser ; politique de mise à jour ; relation avec le [Lot de preuves](../artifacts/evidence-bundle.md) et les [Exigences minimales de preuves](../artifacts/minimum-evidence.md).
+- **ISO/IEC 42001** : [Correspondance ISO/IEC 42001](iso-42001.md) — thèmes du système de management de l'IA.
+- **NIST AI RMF** : [Correspondance NIST AI RMF](nist-ai-rmf.md) — Govern, Map, Measure, Manage.
+- **EU AI Act** : [Correspondance EU AI Act](eu-ai-act.md) — documentation et tenue de registres de haut niveau (pas d'interprétation juridique).
+- **Vue ISMS** : [Correspondance ISMS](isms.md) — thèmes ISO/IEC 27001/27002 (gestion des changements, contrôle d'accès, journalisation, intégrité des preuves).

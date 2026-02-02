@@ -1,60 +1,54 @@
 ---
-description: AIMO Standard governance hub - Project governance, security policies, licensing, citation guidelines, and contribution rules.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/index.md
-source_hash: cc8aa10b5e5da43a
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 標準治理中心 - 專案治理、安全政策、授權、引用指引和貢獻規則。
 ---
 
-# Governance
+# 治理
 
-This section is the hub for project governance, security, licensing, citation, and contribution guidelines.
+本節是專案治理、安全、授權、引用和貢獻指引的中心。
 
-Start here for auditor-ready materials: **[Trust Package](trust-package.md)**.
+從這裡開始取得稽核員就緒材料：**[信任套件](trust-package.md)**。
 
-## Governance Pages
+## 治理頁面
 
-| Page | Description |
+| 頁面 | 說明 |
 | ---- | ----------- |
-| [Trust Package](trust-package.md) | Auditor-ready materials hub |
-| [Responsibility Boundary](responsibility-boundary.md) | What AIMO provides and does not provide |
-| [Security](security.md) | Vulnerability reporting and security policy |
-| [License](license.md) | Licensing terms (Apache-2.0) |
-| [Trademarks](trademarks.md) | Trademark usage guidelines |
-| [How to Cite](cite.md) | Citation guidance for papers and audits |
-| [Contributing](contributing.md) | How to contribute to AIMO Standard |
-| [SEO & Canonical Policy](seo-canonical-policy.md) | URL canonicalization guidance |
+| [信任套件](trust-package.md) | 稽核員就緒材料中心 |
+| [責任邊界](responsibility-boundary.md) | AIMO 提供和不提供的內容 |
+| [安全](security.md) | 漏洞報告和安全政策 |
+| [授權](license.md) | 授權條款（Apache-2.0） |
+| [商標](trademarks.md) | 商標使用指引 |
+| [如何引用](cite.md) | 論文和稽核的引用指引 |
+| [貢獻](contributing.md) | 如何貢獻 AIMO 標準 |
+| [SEO 與規範政策](seo-canonical-policy.md) | URL 規範化指引 |
 
-## Repository Policy Files
+## 儲存庫政策檔案
 
-The following files live in the repository root and contain authoritative policies:
+以下檔案位於儲存庫根目錄，包含權威政策：
 
-| File | Description |
+| 檔案 | 說明 |
 | ---- | ----------- |
-| [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) | SSOT, change process, normative vs non-normative |
-| [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) | Full security policy |
-| [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) | Apache-2.0 license |
-| [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) | Attribution notice |
-| [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) | Full trademark policy |
-| [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) | Machine-readable citation |
-| [CODE_OF_CONDUCT.md](https://github.com/billyrise/aimo-standard/blob/main/CODE_OF_CONDUCT.md) | Community guidelines |
-| [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) | Contribution quick start |
-| [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) | SemVer policy |
+| [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) | SSOT、變更流程、規範性與非規範性 |
+| [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) | 完整安全政策 |
+| [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) | Apache-2.0 授權 |
+| [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) | 署名聲明 |
+| [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) | 完整商標政策 |
+| [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) | 機器可讀引用 |
+| [CODE_OF_CONDUCT.md](https://github.com/billyrise/aimo-standard/blob/main/CODE_OF_CONDUCT.md) | 社群準則 |
+| [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) | 貢獻快速入門 |
+| [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) | SemVer 政策 |
 
-## Audit Journey
+## 稽核旅程
 
-For auditors and compliance reviewers, the recommended reading order:
+對於稽核員和合規審查者，建議的閱讀順序：
 
-1. **[Trust Package](trust-package.md)** — Overview of audit-ready materials
-2. **[Responsibility Boundary](responsibility-boundary.md)** — Scope and adopter responsibilities
-3. **[Security](security.md)** — Security posture and disclosure policy
-4. **[License](license.md)** — Licensing terms for adoption
-5. **[How to Cite](cite.md)** — Citation for audit documentation
+1. **[信任套件](trust-package.md)** — 稽核就緒材料概述
+2. **[責任邊界](responsibility-boundary.md)** — 範圍和採用者責任
+3. **[安全](security.md)** — 安全態勢和揭露政策
+4. **[授權](license.md)** — 採用的授權條款
+5. **[如何引用](cite.md)** — 稽核文件的引用
 
-## Related Pages
+## 相關頁面
 
-- [Releases](../releases/index.md) — Release snapshots and changelog
-- [Conformance](../conformance/index.md) — Conformance levels
-- [Localization Guide](../contributing/localization.md) — i18n workflow
+- [發布](../releases/index.md) — 發布快照和變更日誌
+- [符合性](../conformance/index.md) — 符合性等級
+- [在地化指南](../contributing/localization.md) — i18n 工作流程

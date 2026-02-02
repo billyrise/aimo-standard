@@ -1,46 +1,40 @@
 ---
-description: AIMO Log Schemas - Vendor-neutral log formats for AI evidence. Includes Shadow AI discovery and agent activity monitoring schemas.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/index.md
-source_hash: ae0a3df4c6ceacbc
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 日志模式 - 用于AI证据的厂商中立日志格式。包括影子AI发现和代理活动监控模式。
 ---
 
-# Log Schemas
+# 日志模式
 
-## What this is
+## 这是什么
 
-This section defines **normalized log formats** for evidence that can be included in an Evidence Bundle. These schemas provide a vendor-neutral structure for logs related to AI usage monitoring and agentic operations.
+本节定义了可包含在证据包中的证据的**标准化日志格式**。这些模式为与AI使用监控和代理式操作相关的日志提供厂商中立的结构。
 
-## When to use
+## 何时使用
 
-- **Shadow AI visibility**: Documenting detection, inventory, and remediation of unapproved AI usage.
-- **Agentic operation audits**: Explaining autonomous agent privilege exercise, tool execution, and recursive operations.
-- **Incident reproducibility**: Providing structured evidence for incident investigation and root cause analysis.
+- **影子AI可见性**：记录未经批准的AI使用的检测、清点和整改。
+- **代理式操作审计**：解释自主代理的权限行使、工具执行和递归操作。
+- **事件可重现性**：为事件调查和根因分析提供结构化证据。
 
-## What it is NOT
+## 这不是什么
 
-!!! warning "Important"
-    These schemas define **log formats for evidence submission**. They do NOT:
+!!! warning "重要提示"
+    这些模式定义的是**用于证据提交的日志格式**。它们不会：
 
-    - Automatically collect logs from your systems
-    - Provide log aggregation or monitoring tools
-    - Guarantee compliance with any regulation or standard
-    - Replace vendor-specific logging implementations
+    - 自动从您的系统收集日志
+    - 提供日志聚合或监控工具
+    - 保证符合任何法规或标准
+    - 替代厂商特定的日志实现
 
-    Organizations must implement their own log collection pipelines and normalize logs to these schemas for evidence submission.
+    组织必须实施自己的日志收集管道，并将日志标准化为这些模式以进行证据提交。
 
-## Schemas
+## 模式
 
-| Schema | Purpose | Download |
+| 模式 | 用途 | 下载 |
 | --- | --- | --- |
-| [Shadow AI Discovery Log](shadow-ai-discovery.md) | Unapproved AI usage detection and inventory | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [Agent Activity Log](agent-activity.md) | Agentic AI privilege exercise and tool execution | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [影子AI发现日志](shadow-ai-discovery.md) | 未经批准的AI使用检测和清点 | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [代理活动日志](agent-activity.md) | 代理式AI权限行使和工具执行 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
-## Related pages
+## 相关页面
 
-- [Minimum Evidence Requirements](../minimum-evidence.md) — MUST-level evidence checklist
-- [Evidence Bundle](../evidence-bundle.md) — Bundle structure and TOC
-- [Taxonomy](../../standard/current/03-taxonomy.md) — Classification codes (including UC-010 Agentic Automation, IM-007 Shadow/Unmanaged)
+- [最低证据要求](../minimum-evidence.md) — MUST 级别证据清单
+- [证据包](../evidence-bundle.md) — 包结构和目录
+- [分类法](../../standard/current/03-taxonomy.md) — 分类代码（包括 UC-010 代理式自动化、IM-007 影子/非托管）

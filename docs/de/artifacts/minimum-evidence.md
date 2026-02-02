@@ -1,118 +1,112 @@
 ---
-description: AIMO minimum evidence requirements. MUST-level checklist by lifecycle (request, review, approval, change, renewal) for AI governance evidence readiness.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/minimum-evidence.md
-source_hash: 5d79ad7e1597b7fc
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Mindestanforderungen an Evidence. MUSS-Checkliste nach Lifecycle (Antrag, Prüfung, Genehmigung, Änderung, Verlängerung) für die KI-Governance-Evidence-Bereitschaft.
 ---
 
-# Minimum Evidence Requirements
+# Mindestanforderungen an Evidence
 
-This page defines the minimum evidence requirements as a MUST-level checklist, grouped by lifecycle. It supports explainability and evidence readiness; it does not provide legal advice or guarantee compliance.
+Diese Seite definiert die Mindestanforderungen an Evidence als MUSS-Checkliste, gruppiert nach Lifecycle. Sie unterstützt Erklärbarkeit und Evidence-Bereitschaft; sie bietet keine Rechtsberatung und garantiert keine Compliance.
 
-## 1) Request
+## 1) Antrag
 
-- **MUST fields**: identifier, timestamp(s), actor/role, scope (what is requested), rationale (why).
-- **MUST linkages**: request id referenced by review and by EV items that record the use.
-- **What it proves**: that use was requested and scoped before approval and use.
+- **MUSS-Felder**: Identifikator, Zeitstempel, Akteur/Rolle, Umfang (was beantragt wird), Begründung (warum).
+- **MUSS-Verknüpfungen**: Antrags-ID wird von Prüfung und von EV-Elementen referenziert, die die Nutzung aufzeichnen.
+- **Was es beweist**: dass die Nutzung vor Genehmigung und Nutzung beantragt und eingegrenzt wurde.
 
-## 2) Review / Approval
+## 2) Prüfung / Genehmigung
 
-- **MUST fields**: identifier, timestamp(s), actor/role, decision (approved/rejected/conditional), scope, rationale, reference to request.
-- **MUST linkages**: review id referenced by EV and by any exception or renewal that follows.
-- **What it proves**: that a defined review and approval occurred before use (or exception).
+- **MUSS-Felder**: Identifikator, Zeitstempel, Akteur/Rolle, Entscheidung (genehmigt/abgelehnt/bedingt), Umfang, Begründung, Verweis auf Antrag.
+- **MUSS-Verknüpfungen**: Prüfungs-ID wird von EV und von jeder folgenden Ausnahme oder Verlängerung referenziert.
+- **Was es beweist**: dass eine definierte Prüfung und Genehmigung vor der Nutzung (oder Ausnahme) erfolgte.
 
-## 3) Exception
+## 3) Ausnahme
 
-- **MUST fields**: identifier, timestamp(s), scope, expiry (or deadline), compensating controls, rationale, reference to review/request.
-- **MUST linkages**: exception → compensating controls; exception → expiry; exception → renewal (when re-evaluation is due).
-- **What it proves**: that deviations are time-bound, have compensating controls, and are linked to renewal.
+- **MUSS-Felder**: Identifikator, Zeitstempel, Umfang, Ablauf (oder Frist), kompensierende Kontrollen, Begründung, Verweis auf Prüfung/Antrag.
+- **MUSS-Verknüpfungen**: Ausnahme → kompensierende Kontrollen; Ausnahme → Ablauf; Ausnahme → Verlängerung (wenn Neubewertung fällig ist).
+- **Was es beweist**: dass Abweichungen zeitlich begrenzt sind, kompensierende Kontrollen haben und mit Verlängerung verknüpft sind.
 
-## 4) Renewal / Re-evaluation
+## 4) Verlängerung / Neubewertung
 
-- **MUST fields**: identifier, timestamp(s), actor/role, decision (renewed/revoked/conditional), references to prior exception/request/review/EV.
-- **MUST linkages**: renewal references the exception or approval being renewed; EV items can reference renewal id.
-- **What it proves**: that exceptions and approvals are re-evaluated and renewed or revoked on a defined basis.
+- **MUSS-Felder**: Identifikator, Zeitstempel, Akteur/Rolle, Entscheidung (verlängert/widerrufen/bedingt), Verweise auf vorherige Ausnahme/Antrag/Prüfung/EV.
+- **MUSS-Verknüpfungen**: Verlängerung referenziert die Ausnahme oder Genehmigung, die verlängert wird; EV-Elemente können Verlängerungs-ID referenzieren.
+- **Was es beweist**: dass Ausnahmen und Genehmigungen auf definierter Basis neu bewertet und verlängert oder widerrufen werden.
 
-## 5) Change Log
+## 5) Änderungsprotokoll
 
-- **MUST fields**: identifier, timestamp, actor/role, change description, references (e.g. to EV, request, review, exception, renewal affected).
-- **MUST linkages**: change log entries reference the artifacts they modify or that trigger the change.
-- **What it proves**: that changes to the bundle or its contents are recorded and traceable.
+- **MUSS-Felder**: Identifikator, Zeitstempel, Akteur/Rolle, Änderungsbeschreibung, Referenzen (z.B. zu betroffenen EV, Antrag, Prüfung, Ausnahme, Verlängerung).
+- **MUSS-Verknüpfungen**: Änderungsprotokoll-Einträge referenzieren die Artefakte, die sie modifizieren oder die die Änderung auslösen.
+- **Was es beweist**: dass Änderungen am Bundle oder dessen Inhalten aufgezeichnet und nachverfolgbar sind.
 
-## 6) Integrity & Access
+## 6) Integrität & Zugriff
 
-Evidence integrity and access control are essential for audit reliance. While AIMO does not prescribe specific technical controls, adopters should document how these expectations are met.
+Evidence-Integrität und Zugriffskontrolle sind essentiell für die Audit-Vertrauenswürdigkeit. Obwohl AIMO keine spezifischen technischen Kontrollen vorschreibt, sollten Anwender dokumentieren, wie diese Erwartungen erfüllt werden.
 
-### Access control guidance
+### Anleitung zur Zugriffskontrolle
 
-| Aspect | Guidance |
+| Aspekt | Anleitung |
 | --- | --- |
-| **Role-based access** | Define roles (e.g., evidence creator, reviewer, auditor, admin) and document who can create, read, update, or delete evidence. |
-| **Least privilege** | Grant minimum necessary access; restrict write access to authorized personnel. |
-| **Access logging** | Log access events (who, when, what) for audit trail purposes. |
-| **Separation of duties** | Where practical, separate evidence creation from approval roles. |
+| **Rollenbasierter Zugriff** | Definieren Sie Rollen (z.B. Evidence-Ersteller, Prüfer, Auditor, Admin) und dokumentieren Sie, wer Evidence erstellen, lesen, aktualisieren oder löschen kann. |
+| **Minimale Berechtigung** | Gewähren Sie minimalen notwendigen Zugriff; beschränken Sie Schreibzugriff auf autorisiertes Personal. |
+| **Zugriffsprotokollierung** | Protokollieren Sie Zugriffsereignisse (wer, wann, was) für Audit-Trail-Zwecke. |
+| **Funktionstrennung** | Trennen Sie, wo praktikabel, Evidence-Erstellung von Genehmigungsrollen. |
 
-### Retention guidance
+### Anleitung zur Aufbewahrung
 
-| Aspect | Guidance |
+| Aspekt | Anleitung |
 | --- | --- |
-| **Retention period** | Define and document retention periods based on regulatory requirements and organizational policy (e.g., 5-7 years for financial audits). |
-| **Retention schedule** | Maintain a schedule showing what evidence is retained, for how long, and when it can be disposed. |
-| **Legal hold** | Support legal hold processes that suspend normal retention/deletion for litigation or investigation. |
+| **Aufbewahrungsfrist** | Definieren und dokumentieren Sie Aufbewahrungsfristen basierend auf regulatorischen Anforderungen und Organisationsrichtlinien (z.B. 5-7 Jahre für Finanzaudits). |
+| **Aufbewahrungsplan** | Führen Sie einen Plan, der zeigt, welches Evidence aufbewahrt wird, wie lange und wann es entsorgt werden kann. |
+| **Legal Hold** | Unterstützen Sie Legal-Hold-Prozesse, die normale Aufbewahrung/Löschung für Rechtsstreitigkeiten oder Untersuchungen aussetzen. |
 
-### Immutability options
+### Unveränderlichkeitsoptionen
 
-| Option | Description |
+| Option | Beschreibung |
 | --- | --- |
-| **Cryptographic hashing** | Generate SHA-256 (or stronger) hashes for evidence files; store hashes separately for verification. |
-| **WORM storage** | Use Write-Once-Read-Many storage for evidence archives to prevent modification. |
-| **Append-only logs** | Use append-only audit logs for change tracking. |
-| **Digital signatures** | Sign evidence bundles to prove authorship and detect tampering. |
+| **Kryptographisches Hashing** | Generieren Sie SHA-256 (oder stärkere) Hashes für Evidence-Dateien; speichern Sie Hashes separat zur Verifizierung. |
+| **WORM-Speicher** | Verwenden Sie Write-Once-Read-Many-Speicher für Evidence-Archive, um Modifikation zu verhindern. |
+| **Append-Only-Logs** | Verwenden Sie Append-Only-Audit-Logs für Änderungsverfolgung. |
+| **Digitale Signaturen** | Signieren Sie Evidence Bundles, um Urheberschaft nachzuweisen und Manipulation zu erkennen. |
 
-### Audit trail expectations
+### Erwartungen an den Audit-Trail
 
-| Element | What to document |
+| Element | Was zu dokumentieren ist |
 | --- | --- |
-| **Change log** | Record who changed what, when, and why (see Change Log lifecycle group). |
-| **Access log** | Record who accessed evidence, when, and for what purpose. |
-| **System logs** | Retain relevant system logs (authentication, authorization) that support evidence integrity claims. |
-| **Verification records** | Document periodic integrity verification (hash checks, audit reviews). |
+| **Änderungsprotokoll** | Aufzeichnen, wer was wann und warum geändert hat (siehe Änderungsprotokoll-Lifecycle-Gruppe). |
+| **Zugriffsprotokoll** | Aufzeichnen, wer wann und zu welchem Zweck auf Evidence zugegriffen hat. |
+| **Systemprotokolle** | Relevante Systemprotokolle aufbewahren (Authentifizierung, Autorisierung), die Evidence-Integritätsaussagen unterstützen. |
+| **Verifizierungsaufzeichnungen** | Periodische Integritätsverifizierung dokumentieren (Hash-Prüfungen, Audit-Reviews). |
 
-### What it proves
+### Was es beweist
 
-- **Evidence is preserved**: integrity mechanisms (hashing, WORM, signatures) demonstrate that evidence has not been tampered with.
-- **Access is controlled**: access logs and role definitions show who had access and that least privilege was applied.
-- **Audit reliance is supported**: together, these elements give auditors confidence in the reliability of evidence.
+- **Evidence wird aufbewahrt**: Integritätsmechanismen (Hashing, WORM, Signaturen) zeigen, dass Evidence nicht manipuliert wurde.
+- **Zugriff wird kontrolliert**: Zugriffsprotokolle und Rollendefinitionen zeigen, wer Zugriff hatte und dass minimale Berechtigung angewendet wurde.
+- **Audit-Vertrauenswürdigkeit wird unterstützt**: Zusammen geben diese Elemente Prüfern Vertrauen in die Zuverlässigkeit des Evidence.
 
-### Recommended operational profiles
+### Empfohlene Betriebsprofile
 
-Choose a profile based on your risk tolerance and regulatory requirements. These are recommendations, not mandates.
+Wählen Sie ein Profil basierend auf Ihrer Risikotoleranz und regulatorischen Anforderungen. Dies sind Empfehlungen, keine Vorschriften.
 
-| Aspect | Lightweight | Standard | Strict |
+| Aspekt | Leichtgewichtig | Standard | Streng |
 | --- | --- | --- | --- |
-| **Use case** | Internal pilots, low-risk AI | Production systems, moderate risk | Regulated industries, high-risk AI |
-| **Retention period** | 1-2 years | 5-7 years | 7-10+ years or regulatory minimum |
-| **Immutability** | SHA-256 hashes | SHA-256 + append-only logs | WORM storage + digital signatures |
-| **Access control** | Role-based (basic) | Role-based + access logging | Separation of duties + full audit trail |
-| **Audit trail** | Change log only | Change log + access log | Full system logs + periodic verification |
-| **Verification frequency** | On-demand | Quarterly | Monthly or continuous |
-| **Validator usage** | Optional | Required before submission | Required + automated CI checks |
+| **Anwendungsfall** | Interne Piloten, risikoarme KI | Produktionssysteme, moderates Risiko | Regulierte Branchen, hochriskante KI |
+| **Aufbewahrungsfrist** | 1-2 Jahre | 5-7 Jahre | 7-10+ Jahre oder regulatorisches Minimum |
+| **Unveränderlichkeit** | SHA-256-Hashes | SHA-256 + Append-Only-Logs | WORM-Speicher + digitale Signaturen |
+| **Zugriffskontrolle** | Rollenbasiert (einfach) | Rollenbasiert + Zugriffsprotokollierung | Funktionstrennung + vollständiger Audit-Trail |
+| **Audit-Trail** | Nur Änderungsprotokoll | Änderungsprotokoll + Zugriffsprotokoll | Vollständige Systemprotokolle + periodische Verifizierung |
+| **Verifizierungshäufigkeit** | Bei Bedarf | Vierteljährlich | Monatlich oder kontinuierlich |
+| **Validator-Nutzung** | Optional | Erforderlich vor Einreichung | Erforderlich + automatisierte CI-Prüfungen |
 
-!!! note "Retention periods are examples"
-    Retention periods shown are illustrative. Organizations must determine retention based on applicable laws, contracts, industry requirements, and internal policies.
+!!! note "Aufbewahrungsfristen sind Beispiele"
+    Die gezeigten Aufbewahrungsfristen sind illustrativ. Organisationen müssen die Aufbewahrung basierend auf geltenden Gesetzen, Verträgen, Branchenanforderungen und internen Richtlinien bestimmen.
 
-!!! tip "How to choose"
-    - **Lightweight**: Suitable for experimentation, internal tools, or low-stakes applications where formal audits are unlikely.
-    - **Standard**: Recommended for most production deployments where audits may occur but are not continuous.
-    - **Strict**: Required for regulated industries (finance, healthcare, government) or AI systems with significant risk impact.
+!!! tip "Wie Sie wählen"
+    - **Leichtgewichtig**: Geeignet für Experimente, interne Tools oder Anwendungen mit geringem Risiko, bei denen formelle Audits unwahrscheinlich sind.
+    - **Standard**: Empfohlen für die meisten Produktionsbereitstellungen, bei denen Audits auftreten können, aber nicht kontinuierlich sind.
+    - **Streng**: Erforderlich für regulierte Branchen (Finanzen, Gesundheitswesen, Behörden) oder KI-Systeme mit signifikanter Risikoauswirkung.
 
-## Important note
+## Wichtiger Hinweis
 
-This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.
+Diese Mindestanforderungen unterstützen Erklärbarkeit und Evidence-Bereitschaft; sie bieten selbst keine Rechtsberatung und garantieren keine Compliance.
 
-See [Evidence Bundle](evidence-bundle.md) for bundle structure and TOC; see [EV Template](../standard/current/06-ev-template.md) and schemas for field-level alignment.
+Siehe [Evidence Bundle](evidence-bundle.md) für Bundle-Struktur und TOC; siehe [EV-Template](../standard/current/06-ev-template.md) und Schemas für Feldebenen-Ausrichtung.
 
-See also: [Log Schemas](log-schemas/index.md) — normalized log formats for Shadow AI discovery and agent activity evidence.
+Siehe auch: [Log Schemas](log-schemas/index.md) — normalisierte Log-Formate für Shadow AI-Erkennung und Agentenaktivitäts-Evidence.

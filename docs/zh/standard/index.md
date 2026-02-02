@@ -1,37 +1,31 @@
 ---
-description: AIMO Standard specification hub. Access current version, version history, conformance levels, and coverage maps for AI governance frameworks.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/index.md
-source_hash: 2b2eb03653dfba87
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准规范中心。访问当前版本、版本历史、符合性级别和AI治理框架的覆盖映射。
 ---
 
-# Standard
+# 标准
 
-This section contains the AIMO Standard specification and related resources.
+本节包含 AIMO 标准规范和相关资源。
 
-## Current Version
+## 当前版本
 
-The [Current](current/index.md) section contains the latest working version of the specification:
+[当前](current/index.md) 部分包含规范的最新工作版本：
 
-- [Overview](current/01-overview.md) — Purpose and goals
-- [Scope](current/02-scope.md) — What is in and out of scope
-- [Taxonomy](current/03-taxonomy.md) — 8-dimension classification system
-- [Codes](current/04-codes.md) — Code identifiers and structure
-- [Dictionary](current/05-dictionary.md) — Terms and definitions
-- [EV Template](current/06-ev-template.md) — Evidence record structure
-- [Validator](current/07-validator.md) — Validation rules specification
-- [Changelog](current/08-changelog.md) — Normative and non-normative changes
+- [概述](current/01-overview.md) — 目的和目标
+- [范围](current/02-scope.md) — 什么在范围内和范围外
+- [分类法](current/03-taxonomy.md) — 8维分类系统
+- [代码](current/04-codes.md) — 代码标识符和结构
+- [字典](current/05-dictionary.md) — 术语和定义
+- [EV 模板](current/06-ev-template.md) — 证据记录结构
+- [验证器](current/07-validator.md) — 验证规则规范
+- [变更日志](current/08-changelog.md) — 规范性和非规范性变更
 
-## Past Versions
+## 历史版本
 
-For official frozen releases and versioned snapshots, see [Versions](versions/index.md).
+有关官方冻结版本和版本化快照，请参阅 [版本](versions/index.md)。
 
-## Related Sections
+## 相关章节
 
-- **[Conformance](../conformance/index.md)** — How to comply with the standard and conformance levels
-- **[Coverage Map](../coverage-map/index.md)** — Mapping to external frameworks (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+- **[符合性](../conformance/index.md)** — 如何符合标准和符合性级别
+- **[覆盖映射](../coverage-map/index.md)** — 与外部框架的映射（ISO 42001、NIST AI RMF、欧盟AI法案、ISMS）
 
-For downloadable release assets and PDFs, see [Releases](../releases/index.md).
+有关可下载的发布资产和 PDF，请参阅 [发布](../releases/index.md)。

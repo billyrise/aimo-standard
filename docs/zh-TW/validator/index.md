@@ -1,40 +1,34 @@
 ---
-description: AIMO Validator hub - Validation tooling quickstart. Install, run, and interpret results in 30 seconds. Evidence pack validation and compliance checks.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/validator/index.md
-source_hash: cd550ba293855924
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 驗證器中心 - 驗證工具快速入門。在 30 秒內安裝、執行和解讀結果。證據包驗證和合規性檢查。
 ---
 
-# Validator
+# 驗證器
 
-This page is a hub for validation tooling and rules. The normative specification for the validator and its rules is in the Standard.
+本頁是驗證工具和規則的中心。驗證器及其規則的規範性規格在標準中。
 
-## Quickstart (30 seconds)
+## 快速入門（30 秒）
 
-**1. Prerequisites**
+**1. 先決條件**
 
 ```bash
-pip install jsonschema   # if not already installed
+pip install jsonschema   # 如果尚未安裝
 ```
 
-**2. Run validation against a sample bundle**
+**2. 對樣本套件執行驗證**
 
 ```bash
 python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 ```
 
-**3. Read the report and fix errors/warnings**
+**3. 閱讀報告並修復錯誤/警告**
 
-Example output (success):
+範例輸出（成功）：
 
 ```
 OK
 ```
 
-Example output (failure):
+範例輸出（失敗）：
 
 ```
 Schema validation failed:
@@ -43,29 +37,29 @@ Schema validation failed:
 <root>: 'evidence' is a required property
 ```
 
-Exit codes: `0` = success, `1` = validation errors, `2` = usage error.
+退出碼：`0` = 成功、`1` = 驗證錯誤、`2` = 使用錯誤。
 
 ---
 
-## What it checks
+## 它檢查什麼
 
-- **Schema validation**: root object, dictionary, and evidence conform to JSON Schema
-- **Dictionary consistency**: all codes exist in taxonomy dictionary
-- **Code status**: warns for deprecated codes, errors for removed codes
+- **結構描述驗證**：root 物件、字典和證據符合 JSON Schema
+- **字典一致性**：所有代碼存在於分類字典中
+- **代碼狀態**：對已棄用的代碼發出警告，對已移除的代碼發出錯誤
 
-## What it does NOT check
+## 它不檢查什麼
 
-- **Content accuracy**: validator checks structure, not meaning
-- **Compliance guarantee**: passing validation does not guarantee regulatory compliance
-- **Human judgment**: context-dependent decisions require human review (see [Human Oversight Protocol](../governance/human-oversight-protocol.md))
-- **Automatic log collection**: validator validates submitted evidence; it does not collect logs
+- **內容準確性**：驗證器檢查結構，而非含義
+- **合規保證**：通過驗證不保證法規合規性
+- **人工判斷**：依賴情境的決策需要人工審查（請參閱[人工監督協議](../governance/human-oversight-protocol.md)）
+- **自動日誌收集**：驗證器驗證提交的證據；它不收集日誌
 
 ---
 
-## Resources
+## 資源
 
-- **Specification**: [Standard > Current > Validator](../standard/current/07-validator.md) — rules, reference checks, and how validation relates to evidence.
-- **Rules and implementation**: repository `validator/rules/` (checks), `validator/src/` (reference implementation). Run and CI usage are described in the spec.
-- **Interpretation**: what a validation "fail" means for auditors (explained in the spec).
+- **規格**：[標準 > 當前 > 驗證器](../standard/current/07-validator.md) — 規則、參考檢查，以及驗證如何與證據相關。
+- **規則和實作**：儲存庫 `validator/rules/`（檢查）、`validator/src/`（參考實作）。執行和 CI 使用在規格中說明。
+- **解讀**：驗證「失敗」對稽核員意味著什麼（在規格中解釋）。
 
-For conformance and artifact usage, see [Conformance](../conformance/index.md) and [Artifacts](../artifacts/index.md).
+如需符合性和人工產物使用，請參閱[符合性](../conformance/index.md)和[人工產物](../artifacts/index.md)。

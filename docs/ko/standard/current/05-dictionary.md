@@ -1,208 +1,202 @@
 ---
-description: AIMO Dictionary - Authoritative list of 91 taxonomy codes across 8 dimensions. Complete definitions, labels, and lifecycle information for AI classification.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/05-dictionary.md
-source_hash: 386723f659bcb2e9
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 딕셔너리 - 8개 차원에 걸친 91개 분류체계 코드의 권위 있는 목록. AI 분류를 위한 완전한 정의, 레이블 및 생명주기 정보.
 ---
 
-# Dictionary
+# 딕셔너리
 
-The AIMO Dictionary is the authoritative list of all valid codes within the taxonomy. It provides complete definitions for each code including labels, descriptions, and lifecycle information.
+AIMO 딕셔너리는 분류체계 내의 모든 유효한 코드의 권위 있는 목록입니다. 레이블, 설명 및 생명주기 정보를 포함하여 각 코드에 대한 완전한 정의를 제공합니다.
 
-## What is Dictionary
+## 딕셔너리란
 
-The dictionary provides a complete, machine-readable set of all AIMO taxonomy codes. It contains:
+딕셔너리는 모든 AIMO 분류체계 코드의 완전한 기계 판독 가능 세트를 제공합니다. 포함된 내용:
 
-- All 91 codes across 8 dimensions
-- Labels and definitions (with translations in language packs)
-- Lifecycle metadata (status, version introduced, deprecated, removed)
-- Scope notes and examples for code usage
+- 8개 차원에 걸친 모든 91개 코드
+- 레이블 및 정의 (언어 팩에서 번역 포함)
+- 생명주기 메타데이터 (상태, 도입 버전, 폐기, 제거)
+- 코드 사용에 대한 범위 노트 및 예시
 
-The dictionary enables:
+딕셔너리가 가능하게 하는 것:
 
-1. **Evidence Templates**: Codes are used in EV templates to classify AI systems
-2. **Validator**: The validator checks that all codes exist in the dictionary
-3. **Coverage Map**: Codes enable mapping to external frameworks and regulations
+1. **증거 템플릿**: 코드는 AI 시스템을 분류하기 위해 EV 템플릿에서 사용됩니다
+2. **검증기**: 검증기는 모든 코드가 딕셔너리에 존재하는지 확인합니다
+3. **커버리지 맵**: 코드는 외부 프레임워크 및 규정에 대한 매핑을 가능하게 합니다
 
-!!! info "Single Source of Truth (SSOT)"
-    The SSOT for the dictionary is:
+!!! info "단일 진실 공급원 (SSOT)"
+    딕셔너리의 SSOT는:
 
-    - **Structure**: `data/taxonomy/canonical.yaml` (codes, status, lifecycle)
-    - **Translations**: `data/taxonomy/i18n/*.yaml` (labels, definitions per language)
+    - **구조**: `data/taxonomy/canonical.yaml` (코드, 상태, 생명주기)
+    - **번역**: `data/taxonomy/i18n/*.yaml` (언어별 레이블, 정의)
 
-    CSV files are **generated artifacts** for distribution. See [Releases](../../releases/index.md) for downloads.
+    CSV 파일은 배포를 위한 **생성된 산출물**입니다. 다운로드는 [릴리스](../../releases/index.md)를 참조하세요.
 
-## Column Schema
+## 열 스키마
 
-The canonical dictionary uses **18 columns** (language-neutral structure):
+정본 딕셔너리는 **18개 열**(언어 중립 구조)을 사용합니다:
 
-### Identification Columns (5)
+### 식별 열 (5개)
 
-| # | Column | Required | Description | Example |
+| # | 열 | 필수 | 설명 | 예시 |
 | --- | --- | --- | --- | --- |
-| 1 | `standard_id` | Yes | Standard identifier | `AIMO-STD` |
-| 2 | `standard_version` | Yes | SemVer format | `0.1.0` |
-| 3 | `dimension_id` | Yes | Two-letter dimension ID | `FS`, `UC`, `DT` |
-| 4 | `dimension_name` | Yes | Dimension name | `Functional Scope` |
-| 5 | `code` | Yes | Full code | `UC-001` |
+| 1 | `standard_id` | 예 | 표준 식별자 | `AIMO-STD` |
+| 2 | `standard_version` | 예 | SemVer 형식 | `0.1.0` |
+| 3 | `dimension_id` | 예 | 2자리 차원 ID | `FS`, `UC`, `DT` |
+| 4 | `dimension_name` | 예 | 차원 이름 | `Functional Scope` |
+| 5 | `code` | 예 | 전체 코드 | `UC-001` |
 
-### Label and Definition Columns (4)
+### 레이블 및 정의 열 (4개)
 
-| # | Column | Required | Description | Example |
+| # | 열 | 필수 | 설명 | 예시 |
 | --- | --- | --- | --- | --- |
-| 6 | `label` | Yes | Code label (max 50 chars) | `General Q&A` |
-| 7 | `definition` | Yes | Code definition (1-2 sentences) | `General question answering...` |
-| 8 | `scope_notes` | No | Usage scope clarification | `Low to medium risk...` |
-| 9 | `examples` | No | Pipe-separated examples | `chatbot\|recommendation` |
+| 6 | `label` | 예 | 코드 레이블 (최대 50자) | `General Q&A` |
+| 7 | `definition` | 예 | 코드 정의 (1-2문장) | `General question answering...` |
+| 8 | `scope_notes` | 아니요 | 사용 범위 명확화 | `Low to medium risk...` |
+| 9 | `examples` | 아니요 | 파이프로 구분된 예시 | `chatbot\|recommendation` |
 
-!!! note "Translations"
-    The canonical data model separates translations into language packs (`data/taxonomy/i18n/*.yaml`). Each language pack provides localized `dimension_name`, `label`, and `definition` values. See [Localization Guide](../../contributing/localization.md) for details.
+!!! note "번역"
+    정본 데이터 모델은 번역을 언어 팩(`data/taxonomy/i18n/*.yaml`)으로 분리합니다. 각 언어 팩은 현지화된 `dimension_name`, `label` 및 `definition` 값을 제공합니다. 자세한 내용은 [현지화 가이드](../../contributing/localization.md)를 참조하세요.
 
-### Lifecycle Columns (6)
+### 생명주기 열 (6개)
 
-| # | Column | Required | Description | Example |
+| # | 열 | 필수 | 설명 | 예시 |
 | --- | --- | --- | --- | --- |
-| 10 | `status` | Yes | `active`, `deprecated`, `removed` | `active` |
-| 11 | `introduced_in` | Yes | Version when added | `0.1.0` |
-| 12 | `deprecated_in` | No | Version when deprecated | `1.2.0` |
-| 13 | `removed_in` | No | Version when removed | `2.0.0` |
-| 14 | `replaced_by` | No | Replacement code | `UC-015` |
-| 15 | `backward_compatible` | Yes | `true` or `false` | `true` |
+| 10 | `status` | 예 | `active`, `deprecated`, `removed` | `active` |
+| 11 | `introduced_in` | 예 | 추가된 버전 | `0.1.0` |
+| 12 | `deprecated_in` | 아니요 | 폐기된 버전 | `1.2.0` |
+| 13 | `removed_in` | 아니요 | 제거된 버전 | `2.0.0` |
+| 14 | `replaced_by` | 아니요 | 대체 코드 | `UC-015` |
+| 15 | `backward_compatible` | 예 | `true` 또는 `false` | `true` |
 
-### Governance Columns (3)
+### 거버넌스 열 (3개)
 
-| # | Column | Required | Description | Example |
+| # | 열 | 필수 | 설명 | 예시 |
 | --- | --- | --- | --- | --- |
-| 16 | `references` | No | External references | ISO/IEC 42001 |
-| 17 | `owner` | No | Responsible party | `AIMO WG` |
-| 18 | `last_reviewed_date` | No | Last review (YYYY-MM-DD) | `2026-01-19` |
+| 16 | `references` | 아니요 | 외부 참조 | ISO/IEC 42001 |
+| 17 | `owner` | 아니요 | 책임 당사자 | `AIMO WG` |
+| 18 | `last_reviewed_date` | 아니요 | 마지막 검토 (YYYY-MM-DD) | `2026-01-19` |
 
-## Initial Entries
+## 초기 항목
 
-The current dictionary version is **v0.1.0** and contains:
+현재 딕셔너리 버전은 **v0.1.0**이며 다음을 포함합니다:
 
-| Dimension | Name | Active Codes | Deprecated | Total |
+| 차원 | 이름 | 활성 코드 | 폐기됨 | 총계 |
 | --- | --- | --- | --- | --- |
-| FS | Functional Scope | 6 | 0 | 6 |
-| UC | Use Case Class | 30 | 0 | 30 |
-| DT | Data Type | 10 | 0 | 10 |
-| CH | Channel | 8 | 0 | 8 |
-| IM | Integration Mode | 7 | 0 | 7 |
-| RS | Risk Surface | 8 | 0 | 8 |
-| OB | Outcome / Benefit | 7 | 0 | 7 |
-| EV | Evidence Type | 15 | 0 | 15 |
-| **Total** | | **91** | **0** | **91** |
+| FS | 기능 범위 | 6 | 0 | 6 |
+| UC | 사용 사례 분류 | 30 | 0 | 30 |
+| DT | 데이터 유형 | 10 | 0 | 10 |
+| CH | 채널 | 8 | 0 | 8 |
+| IM | 통합 모드 | 7 | 0 | 7 |
+| RS | 리스크 표면 | 8 | 0 | 8 |
+| OB | 결과 / 혜택 | 7 | 0 | 7 |
+| EV | 증거 유형 | 15 | 0 | 15 |
+| **총계** | | **91** | **0** | **91** |
 
-!!! note "Complete Code Listings"
-    The complete list of 91 codes is available in the generated CSV artifacts. This documentation page provides column definitions and usage guidance. For detailed code definitions:
+!!! note "완전한 코드 목록"
+    91개 코드의 완전한 목록은 생성된 CSV 산출물에서 이용 가능합니다. 이 문서 페이지는 열 정의 및 사용 지침을 제공합니다. 상세 코드 정의는:
 
-    - **Download**: See [Releases](../../releases/index.md) for per-language CSV files
-    - **Per-language CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
-    - **Legacy EN/JA mixed CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (frozen, for backward compatibility only)
+    - **다운로드**: 언어별 CSV 파일은 [릴리스](../../releases/index.md) 참조
+    - **언어별 CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
+    - **레거시 EN/JA 혼합 CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (동결, 이전 호환성 전용)
 
-## Update Policy
+## 업데이트 정책
 
-### Adding New Codes
+### 새 코드 추가
 
-1. Assign the next available number within the dimension (e.g., `UC-031` after `UC-030`)
-2. Set `status` to `active`
-3. Set `introduced_in` to the current version
-4. Set `backward_compatible` to `true`
-5. Provide label and definition (add translations to language packs)
+1. 차원 내에서 다음 사용 가능한 번호 할당 (예: `UC-030` 다음 `UC-031`)
+2. `status`를 `active`로 설정
+3. `introduced_in`을 현재 버전으로 설정
+4. `backward_compatible`을 `true`로 설정
+5. 레이블 및 정의 제공 (언어 팩에 번역 추가)
 
-### Modifying Existing Codes
+### 기존 코드 수정
 
-| Change Type | Allowed | Version Impact |
+| 변경 유형 | 허용됨 | 버전 영향 |
 | --- | --- | --- |
-| Definition clarification | Yes | PATCH |
-| Scope notes update | Yes | PATCH |
-| Label change (meaning preserved) | Yes | MINOR |
-| Meaning change | No | Create new code instead |
+| 정의 명확화 | 예 | PATCH |
+| 범위 노트 업데이트 | 예 | PATCH |
+| 레이블 변경 (의미 보존) | 예 | MINOR |
+| 의미 변경 | 아니요 | 대신 새 코드 생성 |
 
-### Deprecating Codes
+### 코드 폐기
 
-1. Set `status` to `deprecated`
-2. Set `deprecated_in` to current version
-3. Set `replaced_by` to the new code (if applicable)
-4. Code remains functional for backward compatibility
-5. Document the reason in scope_notes
+1. `status`를 `deprecated`로 설정
+2. `deprecated_in`을 현재 버전으로 설정
+3. `replaced_by`를 새 코드로 설정 (해당하는 경우)
+4. 코드는 이전 호환성을 위해 기능 유지
+5. scope_notes에 이유 문서화
 
-### Removing Codes
+### 코드 제거
 
-1. Deprecate for at least one MINOR version first
-2. Set `status` to `removed`
-3. Set `removed_in` to current MAJOR version
-4. Code is no longer valid for new evidence
+1. 먼저 최소 하나의 MINOR 버전 동안 폐기
+2. `status`를 `removed`로 설정
+3. `removed_in`을 현재 MAJOR 버전으로 설정
+4. 코드는 더 이상 새 증거에 유효하지 않음
 
-### Compatibility Policy
+### 호환성 정책
 
-| Action | Version Impact | Backward Compatible |
+| 조치 | 버전 영향 | 이전 호환 |
 | --- | --- | --- |
-| Add new code | MINOR | Yes |
-| Deprecate code | MINOR | Yes |
-| Clarify definition | PATCH | Yes |
-| Remove code | MAJOR | No |
-| Change code meaning | Not allowed | - |
+| 새 코드 추가 | MINOR | 예 |
+| 코드 폐기 | MINOR | 예 |
+| 정의 명확화 | PATCH | 예 |
+| 코드 제거 | MAJOR | 아니요 |
+| 코드 의미 변경 | 허용되지 않음 | - |
 
-## How to Use
+## 사용 방법
 
-### In Evidence Templates
+### 증거 템플릿에서
 
-Each EV template includes an 8-dimension codes table:
+각 EV 템플릿에는 8차원 코드 테이블이 포함됩니다:
 
 ```markdown
-## AIMO Codes (8 Dimensions)
+## AIMO 코드 (8개 차원)
 
-| Dimension | Code(s) | Label |
+| 차원 | 코드 | 레이블 |
 | --- | --- | --- |
-| **FS** | `FS-001` | End-user Productivity |
-| **UC** | `UC-001`, `UC-002` | General Q&A, Summarization |
-| **DT** | `DT-002`, `DT-004` | Internal, Personal Data |
-| **CH** | `CH-001` | Web UI |
-| **IM** | `IM-002` | SaaS Integrated |
-| **RS** | `RS-001`, `RS-003` | Data Leakage, Compliance Breach |
-| **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **FS** | `FS-001` | 최종 사용자 생산성 |
+| **UC** | `UC-001`, `UC-002` | 일반 Q&A, 요약 |
+| **DT** | `DT-002`, `DT-004` | 내부, 개인 데이터 |
+| **CH** | `CH-001` | 웹 UI |
+| **IM** | `IM-002` | SaaS 통합 |
+| **RS** | `RS-001`, `RS-003` | 데이터 유출, 컴플라이언스 위반 |
+| **OB** | `OB-001` | 효율성 |
+| **EV** | `EV-001`, `EV-002` | 요청 레코드, 검토/승인 레코드 |
 ```
 
-### In Validator
+### 검증기에서
 
-The validator checks:
+검증기가 확인하는 것:
 
-1. All codes referenced in evidence exist in the dictionary
-2. Code format matches the expected pattern (`PREFIX-###`)
-3. Deprecated codes trigger warnings
-4. Removed codes are rejected
+1. 증거에서 참조된 모든 코드가 딕셔너리에 존재
+2. 코드 형식이 예상 패턴(`PREFIX-###`)과 일치
+3. 폐기된 코드가 경고 트리거
+4. 제거된 코드가 거부됨
 
-### Extension Guidelines
+### 확장 지침
 
-Organizations MAY extend the dictionary with custom codes:
+조직은 사용자 정의 코드로 딕셔너리를 확장할 수 있습니다(MAY):
 
-**Extension Prefix:**
+**확장 접두사:**
 
 ```
 X-<ORG>-<DIM>-<TOKEN>
 ```
 
-Example: `X-ACME-UC-901` for ACME Corporation's custom use case code.
+예: ACME Corporation의 사용자 정의 사용 사례 코드로 `X-ACME-UC-901`.
 
-**Extension Rules:**
+**확장 규칙:**
 
-1. Custom codes MUST NOT conflict with standard codes
-2. Custom codes SHOULD be documented in a local extension dictionary
-3. When exchanging evidence with external parties, use only standard codes
+1. 사용자 정의 코드는 표준 코드와 충돌하면 안 됩니다(MUST NOT)
+2. 사용자 정의 코드는 로컬 확장 딕셔너리에 문서화되어야 합니다(SHOULD)
+3. 외부 당사자와 증거를 교환할 때는 표준 코드만 사용
 
-## Downloads
+## 다운로드
 
-See [Releases](../../releases/index.md) for downloadable packages containing the dictionary and related files.
+딕셔너리 및 관련 파일이 포함된 다운로드 가능 패키지는 [릴리스](../../releases/index.md)를 참조하세요.
 
-## Related Pages
+## 관련 페이지
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions and code tables
-- [Codes](./04-codes.md) - Code format, naming, and lifecycle
-- [Evidence Templates](./06-ev-template.md) - How codes are used in templates
-- [Validator](./07-validator.md) - Code validation rules
-- [Changelog](./08-changelog.md) - Version history
+- [분류체계](./03-taxonomy.md) - 차원 정의 및 코드 테이블
+- [코드](./04-codes.md) - 코드 형식, 명명 및 생명주기
+- [증거 템플릿](./06-ev-template.md) - 템플릿에서 코드가 사용되는 방법
+- [검증기](./07-validator.md) - 코드 검증 규칙
+- [변경로그](./08-changelog.md) - 버전 이력

@@ -1,101 +1,95 @@
 ---
-description: AIMO Human Oversight Protocol - Boundary between automated validation and human review. Machine vs. human judgment responsibilities in AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/human-oversight-protocol.md
-source_hash: 0a95f9e625c9d49f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 人工监督协议 - 自动化验证与人工审查之间的边界。AI治理中机器与人工判断的责任。
 ---
 
-# Human Oversight Protocol
+# 人工监督协议
 
-This page defines the boundary between what automated validation (Validator) can check and what requires human review (Human-in-the-Loop). It clarifies the responsibilities for machine vs. human judgment in AI governance evidence processes.
+本页定义了自动化验证（验证器）可以检查的内容与需要人工审查（人在回路中）的内容之间的边界。它澄清了AI治理证据流程中机器与人工判断的责任。
 
-## Purpose
+## 目的
 
-Automated validation tools can efficiently check structural and syntactic correctness, but cannot replace human judgment for context-dependent decisions. This protocol:
+自动化验证工具可以高效地检查结构和语法正确性，但无法替代依赖上下文的决策中的人工判断。此协议：
 
-- Clarifies what the Validator can and cannot verify
-- Defines the scope of human review required for effective governance
-- Supports audit explanations by documenting the human oversight process
-- Provides a framework for organizations implementing AI governance workflows
+- 澄清验证器可以和不能验证的内容
+- 定义有效治理所需的人工审查范围
+- 通过记录人工监督流程来支持审计解释
+- 为实施AI治理工作流程的组织提供框架
 
-## What automated validation can do (Validator scope)
+## 自动化验证可以做什么（验证器范围）
 
-The AIMO Validator and similar automated tools can check:
+AIMO 验证器和类似的自动化工具可以检查：
 
-| Capability | Description |
+| 能力 | 描述 |
 | --- | --- |
-| **Completeness of required fields/documents** | Verify that all mandatory fields are present in manifests, EV records, and other artifacts |
-| **Structural consistency** | Validate references, IDs, and cross-links between artifacts (e.g., request_id → review_id) |
-| **Schema validation** | Check that JSON/YAML artifacts conform to defined schemas |
-| **Code format validation** | Verify that taxonomy codes match expected patterns (e.g., `UC-001`) |
-| **Integrity checks** | Validate hash format and presence (not recomputation against content) |
-| **Dictionary validation** | Confirm that codes exist in the taxonomy dictionary |
+| **必需字段/文档的完整性** | 验证清单、EV记录和其他工件中是否存在所有必需字段 |
+| **结构一致性** | 验证工件之间的引用、ID和交叉链接（例如 request_id → review_id） |
+| **模式验证** | 检查 JSON/YAML 工件是否符合定义的模式 |
+| **代码格式验证** | 验证分类法代码是否匹配预期模式（例如 `UC-001`） |
+| **完整性检查** | 验证哈希格式和存在性（不重新计算内容） |
+| **字典验证** | 确认代码存在于分类法字典中 |
 
-See [Validator](../standard/current/07-validator.md) for detailed validation rules and reference implementation.
+请参阅 [验证器](../standard/current/07-validator.md) 了解详细的验证规则和参考实现。
 
-## What requires human review (Human-in-the-Loop scope)
+## 需要人工审查的内容（人在回路中范围）
 
-The following areas require human judgment and cannot be automated:
+以下领域需要人工判断，无法自动化：
 
-| Capability | Description |
+| 能力 | 描述 |
 | --- | --- |
-| **Context-dependent risk judgment** | Assessing business, ethical, and operational risks based on organizational context |
-| **Exception approval rationale** | Evaluating whether an exception is justified and compensating controls are adequate |
-| **Remediation decision-making** | Prioritizing fixes, allocating resources, and determining timelines |
-| **Policy trade-offs** | Balancing competing requirements (e.g., speed vs. thoroughness, cost vs. risk) |
-| **Residual risk acceptance** | Deciding whether remaining risks are acceptable after controls |
-| **Cross-domain impact assessment** | Evaluating implications for legal, HR, operations, and other functions |
-| **Content accuracy verification** | Confirming that evidence content is factually correct and complete |
-| **Stakeholder communication** | Explaining decisions to auditors, regulators, and leadership |
+| **依赖上下文的风险判断** | 根据组织背景评估业务、道德和运营风险 |
+| **例外批准理由** | 评估例外是否合理以及补偿控制是否充分 |
+| **整改决策** | 确定修复优先级、分配资源和确定时间表 |
+| **政策权衡** | 平衡竞争需求（例如速度与彻底性、成本与风险） |
+| **残余风险接受** | 决定控制后剩余的风险是否可接受 |
+| **跨领域影响评估** | 评估对法律、人力资源、运营和其他职能的影响 |
+| **内容准确性验证** | 确认证据内容事实正确且完整 |
+| **利益相关者沟通** | 向审计师、监管机构和领导层解释决策 |
 
-## Responsibility boundary
+## 责任边界
 
-| Aspect | Validator (Machine) | Human Reviewer |
+| 方面 | 验证器（机器） | 人工审查员 |
 | --- | --- | --- |
-| **Structure** | ✓ Can verify | Review if flagged |
-| **Completeness** | ✓ Can verify fields | Verify content adequacy |
-| **Format** | ✓ Can verify | — |
-| **Risk judgment** | ✗ Cannot assess | ✓ Must assess |
-| **Exception approval** | ✗ Cannot decide | ✓ Must decide |
-| **Remediation priority** | ✗ Cannot prioritize | ✓ Must prioritize |
-| **Legal interpretation** | ✗ Cannot interpret | ✓ Must verify with counsel |
-| **Audit conclusion** | ✗ Cannot conclude | ✓ Auditor responsibility |
+| **结构** | ✓ 可以验证 | 如果标记则审查 |
+| **完整性** | ✓ 可以验证字段 | 验证内容充分性 |
+| **格式** | ✓ 可以验证 | — |
+| **风险判断** | ✗ 无法评估 | ✓ 必须评估 |
+| **例外批准** | ✗ 无法决定 | ✓ 必须决定 |
+| **整改优先级** | ✗ 无法确定优先级 | ✓ 必须确定优先级 |
+| **法律解释** | ✗ 无法解释 | ✓ 必须与法律顾问核实 |
+| **审计结论** | ✗ 无法得出结论 | ✓ 审计师责任 |
 
-!!! note "Complementary roles"
-    Validator and human review are **complementary**, not alternatives. Validator ensures structural consistency before human review; human review ensures contextual appropriateness.
+!!! note "互补角色"
+    验证器和人工审查是**互补的**，而非替代品。验证器确保人工审查前的结构一致性；人工审查确保上下文适当性。
 
-## Evidence expectations
+## 证据期望
 
-Organizations implementing human oversight should document:
+实施人工监督的组织应记录：
 
-| Evidence Type | Description |
+| 证据类型 | 描述 |
 | --- | --- |
-| **Review record** | Who reviewed, when, and what decision was made |
-| **Approval rationale** | Why the decision was made (especially for exceptions) |
-| **Escalation record** | When and why issues were escalated to higher authority |
-| **Remediation plan** | Planned actions, owners, and timelines for addressing issues |
-| **Sign-off** | Formal attestation that review was completed |
+| **审查记录** | 谁审查了、何时审查、做出了什么决定 |
+| **批准理由** | 为什么做出该决定（特别是对于例外） |
+| **升级记录** | 何时以及为什么将问题升级到更高级别 |
+| **整改计划** | 计划的行动、负责人和解决问题的时间表 |
+| **签字** | 正式证明审查已完成 |
 
-These records should be included in the Evidence Bundle per [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
+这些记录应按照 [最低证据要求](../artifacts/minimum-evidence.md) 包含在证据包中。
 
-## Non-overclaim
+## 不过度声明
 
-!!! warning "Important"
-    This protocol defines a **framework for documenting human oversight**. It does **not**:
+!!! warning "重要提示"
+    此协议定义了**记录人工监督的框架**。它**不**：
 
-    - Provide legal advice or regulatory interpretation
-    - Guarantee compliance with any regulation or standard
-    - Replace qualified human judgment with automated decisions
-    - Prescribe specific organizational processes
+    - 提供法律建议或监管解释
+    - 保证符合任何法规或标准
+    - 用自动化决策替代合格的人工判断
+    - 规定特定的组织流程
 
-    Organizations must adapt this framework to their specific context, risk profile, and regulatory requirements.
+    组织必须根据其特定背景、风险状况和监管要求调整此框架。
 
-## Related pages
+## 相关页面
 
-- [Validator](../standard/current/07-validator.md) — automated validation rules and reference implementation
-- [Responsibility Boundary](responsibility-boundary.md) — what AIMO provides vs. adopter responsibilities
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level evidence checklist
-- [Trust Package](trust-package.md) — auditor-ready materials hub
+- [验证器](../standard/current/07-validator.md) — 自动化验证规则和参考实现
+- [责任边界](responsibility-boundary.md) — AIMO 提供什么与采用者责任
+- [最低证据要求](../artifacts/minimum-evidence.md) — MUST 级别证据清单
+- [信任包](trust-package.md) — 审计师就绪材料中心

@@ -1,37 +1,31 @@
 ---
-description: AIMO Standard conformance levels. How organizations claim compliance, evidence requirements, and what each conformance level means for AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/conformance/index.md
-source_hash: a78c3afc07d1ed70
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Niveles de conformidad de AIMO Standard. Cómo las organizaciones reclaman cumplimiento, requisitos de evidencia y qué significa cada nivel de conformidad para la gobernanza de IA.
 ---
 
-# Conformance
+# Conformidad
 
-This section defines how organizations claim compliance with the AIMO Standard and what evidence is expected.
+Esta sección define cómo las organizaciones reclaman cumplimiento con el AIMO Standard y qué evidencia se espera.
 
-## Purpose
+## Propósito
 
-- **What you can claim**: Alignment with the AIMO Standard's evidence structure and traceability requirements.
-- **What you cannot claim**: Legal compliance, certification, or regulatory approval. See [Responsibility Boundary](../governance/responsibility-boundary.md).
+- **Qué puede reclamar**: Alineación con la estructura de evidencia y requisitos de trazabilidad del AIMO Standard.
+- **Qué no puede reclamar**: Cumplimiento legal, certificación o aprobación regulatoria. Consulte [Límite de Responsabilidad](../governance/responsibility-boundary.md).
 
-## Expected Evidence
+## Evidencia Esperada
 
-To demonstrate conformance, organizations must provide:
+Para demostrar conformidad, las organizaciones deben proporcionar:
 
-1. **Evidence Bundle**: Structured EV records per [Artifacts](../artifacts/index.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-2. **Validator Results**: Passing output from the validator — see [Validator](../validator/index.md).
-3. **Version Reference**: Explicit AIMO Standard version — see [Versions](../standard/versions/index.md).
+1. **Paquete de Evidencia**: Registros EV estructurados según [Artefactos](../artifacts/index.md) y [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md).
+2. **Resultados del Validador**: Salida aprobada del validador — consulte [Validador](../validator/index.md).
+3. **Referencia de Versión**: Versión explícita del AIMO Standard — consulte [Versiones](../standard/versions/index.md).
 
-## Non-overclaim
+## No sobre-reclamar
 
-!!! warning "Important"
-    Conformance to the AIMO Standard demonstrates **evidence readiness and traceability**, not legal compliance or certification. See [Responsibility Boundary](../governance/responsibility-boundary.md).
+!!! warning "Importante"
+    La conformidad con el AIMO Standard demuestra **preparación de evidencia y trazabilidad**, no cumplimiento legal ni certificación. Consulte [Límite de Responsabilidad](../governance/responsibility-boundary.md).
 
-## Related Pages
+## Páginas Relacionadas
 
-- [Trust Package](../governance/trust-package.md) — Consolidated entry point for auditors
-- [Standard (Current)](../standard/current/index.md) — Normative requirements
-- [Artifacts](../artifacts/index.md) — Evidence structure
+- [Paquete de Confianza](../governance/trust-package.md) — Punto de entrada consolidado para auditores
+- [Estándar (Actual)](../standard/current/index.md) — Requisitos normativos
+- [Artefactos](../artifacts/index.md) — Estructura de evidencia

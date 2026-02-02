@@ -1,46 +1,40 @@
 ---
-description: AIMO Log Schemas - Vendor-neutral log formats for AI evidence. Includes Shadow AI discovery and agent activity monitoring schemas.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/index.md
-source_hash: ae0a3df4c6ceacbc
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Log Schemas - Herstellerneutrale Log-Formate für KI-Evidence. Beinhaltet Shadow AI-Erkennung und Agentenaktivitätsüberwachungs-Schemas.
 ---
 
 # Log Schemas
 
-## What this is
+## Was ist das
 
-This section defines **normalized log formats** for evidence that can be included in an Evidence Bundle. These schemas provide a vendor-neutral structure for logs related to AI usage monitoring and agentic operations.
+Dieser Abschnitt definiert **normalisierte Log-Formate** für Evidence, das in einem Evidence Bundle enthalten sein kann. Diese Schemas bieten eine herstellerneutrale Struktur für Protokolle im Zusammenhang mit KI-Nutzungsüberwachung und agentenbasierten Operationen.
 
-## When to use
+## Wann zu verwenden
 
-- **Shadow AI visibility**: Documenting detection, inventory, and remediation of unapproved AI usage.
-- **Agentic operation audits**: Explaining autonomous agent privilege exercise, tool execution, and recursive operations.
-- **Incident reproducibility**: Providing structured evidence for incident investigation and root cause analysis.
+- **Shadow AI-Sichtbarkeit**: Dokumentation von Erkennung, Inventarisierung und Behebung nicht genehmigter KI-Nutzung.
+- **Agentenbasierte Operationsaudits**: Erklärung von autonomer Agentenberechtigungsausübung, Tool-Ausführung und rekursiven Operationen.
+- **Incident-Reproduzierbarkeit**: Bereitstellung strukturierter Evidence für Incident-Untersuchung und Ursachenanalyse.
 
-## What it is NOT
+## Was es NICHT ist
 
-!!! warning "Important"
-    These schemas define **log formats for evidence submission**. They do NOT:
+!!! warning "Wichtig"
+    Diese Schemas definieren **Log-Formate für die Evidence-Einreichung**. Sie:
 
-    - Automatically collect logs from your systems
-    - Provide log aggregation or monitoring tools
-    - Guarantee compliance with any regulation or standard
-    - Replace vendor-specific logging implementations
+    - Sammeln NICHT automatisch Protokolle aus Ihren Systemen
+    - Stellen KEINE Log-Aggregations- oder Überwachungstools bereit
+    - Garantieren KEINE Compliance mit Vorschriften oder Standards
+    - Ersetzen KEINE herstellerspezifischen Protokollierungsimplementierungen
 
-    Organizations must implement their own log collection pipelines and normalize logs to these schemas for evidence submission.
+    Organisationen müssen ihre eigenen Log-Sammelpipelines implementieren und Protokolle für die Evidence-Einreichung auf diese Schemas normalisieren.
 
 ## Schemas
 
-| Schema | Purpose | Download |
+| Schema | Zweck | Download |
 | --- | --- | --- |
-| [Shadow AI Discovery Log](shadow-ai-discovery.md) | Unapproved AI usage detection and inventory | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [Agent Activity Log](agent-activity.md) | Agentic AI privilege exercise and tool execution | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Shadow AI Discovery Log](shadow-ai-discovery.md) | Erkennung und Inventarisierung nicht genehmigter KI-Nutzung | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [Agent Activity Log](agent-activity.md) | Agentenbasierte KI-Berechtigungsausübung und Tool-Ausführung | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
-## Related pages
+## Verwandte Seiten
 
-- [Minimum Evidence Requirements](../minimum-evidence.md) — MUST-level evidence checklist
-- [Evidence Bundle](../evidence-bundle.md) — Bundle structure and TOC
-- [Taxonomy](../../standard/current/03-taxonomy.md) — Classification codes (including UC-010 Agentic Automation, IM-007 Shadow/Unmanaged)
+- [Mindestanforderungen an Evidence](../minimum-evidence.md) — MUSS-Evidence-Checkliste
+- [Evidence Bundle](../evidence-bundle.md) — Bundle-Struktur und TOC
+- [Taxonomie](../../standard/current/03-taxonomy.md) — Klassifizierungscodes (einschließlich UC-010 Agentic Automation, IM-007 Shadow/Unmanaged)

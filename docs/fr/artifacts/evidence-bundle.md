@@ -1,65 +1,59 @@
 ---
-description: AIMO Evidence Bundle structure. Audit package format with TOC, traceability, and artifacts for AI governance compliance and auditor delivery.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/evidence-bundle.md
-source_hash: 30766517fd9d310d
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Structure du lot de preuves AIMO. Format de package d'audit avec table des matières, traçabilité et artefacts pour la conformité en gouvernance IA et la livraison aux auditeurs.
 ---
 
-# Evidence Bundle
+# Lot de preuves
 
-An **Evidence Bundle** is an audit package: a structured set of artifacts that supports explainability and traceability for AI governance. It is not a product feature but a deliverable format for auditors and compliance.
+Un **lot de preuves** est un package d'audit : un ensemble structuré d'artefacts qui soutient l'explicabilité et la traçabilité pour la gouvernance de l'IA. Ce n'est pas une fonctionnalité produit mais un format livrable pour les auditeurs et la conformité.
 
-## Bundle structure and naming
+## Structure et nommage du lot
 
-- **Bundle root naming**: use a consistent pattern such as `{org}_{system}_{period}_{version}` (e.g. `acme_ai-usage_2026-Q1_v1`).
-- **Required files**: at least one Evidence (EV) set aligned with the [EV Template](../standard/current/06-ev-template.md), a [Dictionary](../standard/current/05-dictionary.md), a short **Summary** (executive summary of the bundle), and a **Change Log** (or reference to it) for changes to the bundle or its contents.
-- **Optional attachments**: logs, review records, exception approvals, renewal records; keep naming consistent and referrable from the main EV/Dictionary.
+- **Nommage de la racine du lot** : utilisez un modèle cohérent tel que `{org}_{system}_{period}_{version}` (ex. `acme_ai-usage_2026-Q1_v1`).
+- **Fichiers requis** : au moins un ensemble de preuves (EV) aligné avec le [modèle EV](../standard/current/06-ev-template.md), un [dictionnaire](../standard/current/05-dictionary.md), un bref **résumé** (synthèse exécutive du lot), et un **journal des modifications** (ou référence à celui-ci) pour les changements apportés au lot ou à son contenu.
+- **Pièces jointes optionnelles** : journaux, enregistrements de revue, approbations d'exceptions, enregistrements de renouvellement ; gardez un nommage cohérent et référençable depuis le document EV/dictionnaire principal.
 
-## Table of contents (TOC)
+## Table des matières (TDM)
 
-| Section | Artifact | Required? | Purpose | Minimum fields | Validation |
+| Section | Artefact | Requis ? | Objectif | Champs minimums | Validation |
 | --- | --- | --- | --- | --- | --- |
-| Evidence | EV records (JSON/array) | Yes | Record of what happened; link to request/review/exception/renewal | id, timestamp, source, summary; optional lifecycle refs | [Validator](../validator/index.md), aimo-ev.schema.json |
-| Dictionary | dictionary.json | Yes | Keys/labels/descriptions for codes and dimensions | entries (key, label, description) | aimo-dictionary.schema.json |
-| Summary | summary (doc or field) | Yes | One-page overview for auditors | scope, period, key decisions, exceptions | — |
-| Change log | change_log or reference | Yes | Audit trail of bundle/content changes | id, timestamp, actor, change description, references | — |
-| Request | request record(s) | If applicable | Application/request for use | id, timestamp, actor/role, scope, rationale | — |
-| Review/Approval | review record(s) | If applicable | Review and approval outcome | id, timestamp, actor/role, decision, references | — |
-| Exception | exception record(s) | If applicable | Exception with compensating controls and expiry | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
-| Renewal | renewal record(s) | If applicable | Re-evaluation and renewal | id, timestamp, actor/role, decision, references to prior exception/EV | — |
+| Preuve | Enregistrements EV (JSON/tableau) | Oui | Enregistrement de ce qui s'est passé ; lien vers demande/revue/exception/renouvellement | id, timestamp, source, summary ; refs lifecycle optionnelles | [Validateur](../validator/index.md), aimo-ev.schema.json |
+| Dictionnaire | dictionary.json | Oui | Clés/libellés/descriptions pour les codes et dimensions | entries (key, label, description) | aimo-dictionary.schema.json |
+| Résumé | summary (doc ou champ) | Oui | Aperçu d'une page pour les auditeurs | scope, period, key decisions, exceptions | — |
+| Journal des modifications | change_log ou référence | Oui | Piste d'audit des modifications du lot/contenu | id, timestamp, actor, change description, references | — |
+| Demande | enregistrement(s) de demande | Si applicable | Demande/requête d'utilisation | id, timestamp, actor/role, scope, rationale | — |
+| Revue/Approbation | enregistrement(s) de revue | Si applicable | Résultat de la revue et de l'approbation | id, timestamp, actor/role, decision, references | — |
+| Exception | enregistrement(s) d'exception | Si applicable | Exception avec contrôles compensatoires et expiration | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
+| Renouvellement | enregistrement(s) de renouvellement | Si applicable | Réévaluation et renouvellement | id, timestamp, actor/role, decision, references to prior exception/EV | — |
 
-## Traceability
+## Traçabilité
 
-- **Stable IDs**: every record (EV, request, review, exception, renewal, change log entry) MUST have a stable, unique identifier.
-- **Cross-references**: link Request → Review → Exception (if any) → Renewal and link EV items to these via reference fields (e.g. `request_id`, `review_id`, `exception_id`, `renewal_id`).
-- **Linkage**: ensure auditors can follow a chain from an AI use (or exception) to the request, approval, any exception and its compensating controls and expiry, and renewal.
+- **ID stables** : chaque enregistrement (EV, demande, revue, exception, renouvellement, entrée du journal des modifications) DOIT avoir un identifiant unique et stable.
+- **Références croisées** : liez Demande → Revue → Exception (le cas échéant) → Renouvellement et liez les éléments EV à ceux-ci via des champs de référence (ex. `request_id`, `review_id`, `exception_id`, `renewal_id`).
+- **Liaison** : assurez-vous que les auditeurs peuvent suivre une chaîne depuis une utilisation de l'IA (ou exception) jusqu'à la demande, l'approbation, toute exception et ses contrôles compensatoires et expiration, et le renouvellement.
 
-## How auditors use this
+## Comment les auditeurs utilisent ceci
 
-Auditors use the Evidence Bundle to verify that AI use is requested, reviewed, and approved; that exceptions are time-bound and have compensating controls and renewal; and that changes are logged. The TOC and traceability rules let them locate required artifacts and follow IDs and references across request, review, exception, renewal, and EV records. The Summary gives a quick overview; the Change Log supports change control and accountability.
+Les auditeurs utilisent le lot de preuves pour vérifier que l'utilisation de l'IA est demandée, revue et approuvée ; que les exceptions sont limitées dans le temps et ont des contrôles compensatoires et un renouvellement ; et que les modifications sont journalisées. La TDM et les règles de traçabilité leur permettent de localiser les artefacts requis et de suivre les ID et références entre les enregistrements de demande, revue, exception, renouvellement et EV. Le résumé donne un aperçu rapide ; le journal des modifications soutient le contrôle des changements et la responsabilité.
 
-See [Minimum Evidence Requirements](minimum-evidence.md) for MUST-level fields and lifecycle groups.
+Voir [Exigences minimales de preuves](minimum-evidence.md) pour les champs OBLIGATOIRES et les groupes de cycle de vie.
 
-## Operational guidance
+## Orientations opérationnelles
 
-!!! info "Integrity and access control"
-    While AIMO does not prescribe specific controls, adopters should document:
+!!! info "Intégrité et contrôle d'accès"
+    Bien que AIMO ne prescrive pas de contrôles spécifiques, les adopteurs doivent documenter :
     
-    - **Access roles**: who can create, read, update, or delete evidence
-    - **Retention policy**: how long evidence is retained and under what schedule
-    - **Integrity mechanisms**: hashing, WORM storage, or digital signatures used
-    - **Audit trail**: logs of access and changes to the bundle
+    - **Rôles d'accès** : qui peut créer, lire, mettre à jour ou supprimer des preuves
+    - **Politique de rétention** : combien de temps les preuves sont conservées et selon quel calendrier
+    - **Mécanismes d'intégrité** : hachage, stockage WORM ou signatures numériques utilisés
+    - **Piste d'audit** : journaux d'accès et de modifications du lot
     
-    See [Minimum Evidence Requirements > Integrity & Access](minimum-evidence.md#6-integrity-access) for detailed guidance.
+    Voir [Exigences minimales de preuves > Intégrité et accès](minimum-evidence.md#6-integrity-access) pour des orientations détaillées.
 
-## Audit journey
+## Parcours d'audit
 
-From this page, the typical audit journey continues:
+Depuis cette page, le parcours d'audit typique continue :
 
-1. **Next**: [Minimum Evidence Requirements](minimum-evidence.md) — MUST-level checklist by lifecycle
-2. **Then**: [Coverage Map](../coverage-map/index.md) — mapping to external frameworks
-3. **Validate**: [Validator](../validator/index.md) — run structural checks
-4. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums
+1. **Suivant** : [Exigences minimales de preuves](minimum-evidence.md) — liste de contrôle OBLIGATOIRE par cycle de vie
+2. **Ensuite** : [Carte de couverture](../coverage-map/index.md) — correspondance avec les cadres externes
+3. **Valider** : [Validateur](../validator/index.md) — exécuter les vérifications structurelles
+4. **Télécharger** : [Versions](../releases/index.md) — obtenir les actifs de version et vérifier les sommes de contrôle

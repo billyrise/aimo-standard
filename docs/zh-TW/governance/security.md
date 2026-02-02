@@ -1,76 +1,70 @@
 ---
-description: AIMO Standard security policy - Vulnerability reporting, disclosure procedures, and security considerations for AI governance implementations.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/security.md
-source_hash: 035ba54290c8cf46
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 標準安全政策 - 漏洞報告、揭露程序，以及 AI 治理實作的安全考量。
 ---
 
-# Security
+# 安全
 
-This page documents the security policy for AIMO Standard, including vulnerability reporting and disclosure procedures.
+本頁記錄 AIMO 標準的安全政策，包括漏洞報告和揭露程序。
 
-## Scope
+## 範圍
 
-### In Scope
+### 範圍內
 
-- Validator reference implementation (`validator/`)
-- Build and release tooling (`tooling/`)
-- JSON schemas (`schemas/`)
-- Documentation website infrastructure
+- 驗證器參考實作（`validator/`）
+- 建置和發布工具（`tooling/`）
+- JSON 結構描述（`schemas/`）
+- 文件網站基礎設施
 
-### Out of Scope
+### 範圍外
 
-- Specification content (normative text is not a security artifact)
-- Adopter implementations using AIMO Standard
-- External dependencies (report to upstream maintainers)
+- 規格內容（規範性文本不是安全人工產物）
+- 使用 AIMO 標準的採用者實作
+- 外部相依性（向上游維護者報告）
 
-## Supported Versions
+## 支援的版本
 
-| Version | Supported |
+| 版本 | 支援 |
 | ------- | --------- |
-| latest (dev) | Yes |
-| Tagged releases (vX.Y.Z) | Yes (latest 2 minor versions) |
-| Older releases | No (upgrade recommended) |
+| latest (dev) | 是 |
+| 標記的發布（vX.Y.Z） | 是（最近 2 個次要版本） |
+| 較舊的發布 | 否（建議升級） |
 
-## Reporting a Vulnerability
+## 報告漏洞
 
-**Do not** open a public GitHub issue for security vulnerabilities.
+**請勿**為安全漏洞開啟公開的 GitHub issue。
 
-### Process
+### 流程
 
-1. Report privately via GitHub's private vulnerability reporting
-2. Include: description, reproduction steps, affected versions, impact
-3. Allow time for assessment and fix development
+1. 透過 GitHub 的私密漏洞報告功能進行私密報告
+2. 包含：說明、重現步驟、受影響的版本、影響
+3. 允許時間進行評估和修復開發
 
-### Timeline
+### 時程
 
-| Phase | Timeline |
+| 階段 | 時程 |
 | ----- | -------- |
-| Acknowledgment | 72 hours |
-| Initial assessment | 7 days |
-| Coordinated disclosure | 90 days max |
+| 確認 | 72 小時 |
+| 初步評估 | 7 天 |
+| 協調揭露 | 最多 90 天 |
 
-## Disclosure Policy
+## 揭露政策
 
-1. Vulnerabilities are reported privately
-2. Fixes are developed before public disclosure
-3. Security advisories are published after fixes are available
-4. Reporters are credited (unless anonymity requested)
+1. 漏洞私密報告
+2. 在公開揭露前開發修復
+3. 在修復可用後發布安全公告
+4. 報告者獲得署名（除非要求匿名）
 
-## Security Measures
+## 安全措施
 
-- CI/CD checks on all changes
-- Signed releases with SHA-256 checksums
-- Mandatory PR review before merge
+- 所有變更的 CI/CD 檢查
+- 帶有 SHA-256 校驗和的簽名發布
+- 合併前的強制 PR 審查
 
-## Full Policy
+## 完整政策
 
-See [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) for the complete security policy.
+請參閱 [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) 了解完整的安全政策。
 
-## Related Pages
+## 相關頁面
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
+- [信任套件](trust-package.md) — 稽核員就緒材料
+- [治理](index.md) — 專案治理

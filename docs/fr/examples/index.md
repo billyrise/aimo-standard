@@ -1,20 +1,14 @@
 ---
-description: AIMO Standard examples - End-to-end and minimal sample bundles showing how to assemble evidence artifacts for AI governance audits.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/examples/index.md
-source_hash: aa2185aa686d7ef3
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Exemples du standard AIMO - Lots d'échantillons de bout en bout et minimaux montrant comment assembler les artefacts de preuves pour les audits de gouvernance IA.
 ---
 
-# Examples
+# Exemples
 
-This section points to end-to-end and minimal examples that show how artifacts are assembled.
+Cette section pointe vers des exemples de bout en bout et minimaux qui montrent comment les artefacts sont assemblés.
 
-- **Minimal bundle**: `examples/minimal/` in the repository (e.g., `sample_ev.json`, `sample_dictionary.json`).
-- **Evidence Bundle (minimal)**: `examples/evidence_bundle_minimal/` — root.json with optional request, review, change_log; see [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence](../artifacts/minimum-evidence.md).
-- **Schema alignment**: validate against `schemas/jsonschema/` and [Standard](../standard/current/index.md).
-- **Audit-ready packaging**: see the [Trust Package](../governance/trust-package.md).
+- **Lot minimal** : `examples/minimal/` dans le dépôt (ex. `sample_ev.json`, `sample_dictionary.json`).
+- **Lot de preuves (minimal)** : `examples/evidence_bundle_minimal/` — root.json avec demande, revue, change_log optionnels ; voir [Lot de preuves](../artifacts/evidence-bundle.md) et [Preuves minimales](../artifacts/minimum-evidence.md).
+- **Alignement des schémas** : validez par rapport à `schemas/jsonschema/` et [Standard](../standard/current/index.md).
+- **Packaging prêt pour l'audit** : voir le [Package de confiance](../governance/trust-package.md).
 
-Detailed scenario coverage is added in later change units.
+La couverture détaillée des scénarios est ajoutée dans les unités de changement ultérieures.

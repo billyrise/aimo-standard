@@ -1,59 +1,53 @@
 ---
-description: Coverage Map methodology - How AIMO maps to external frameworks. Usage in audits, relationship to Evidence Bundle, and traceability approach.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/methodology.md
-source_hash: c495d78e6f93ef50
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Metodologia della Mappa di Copertura - Come AIMO si mappa ai framework esterni. Utilizzo negli audit, relazione con l'Evidence Bundle e approccio alla tracciabilità.
 ---
 
-# Methodology
+# Metodologia
 
-> Note: This methodology supports traceability and evidence readiness. It does not guarantee compliance with any specific regulation/standard.
+> Nota: Questa metodologia supporta la tracciabilità e la prontezza dell'evidence. Non garantisce la conformità con alcuna specifica normativa/standard.
 
-This page explains what the Coverage Map is and is not, how to use it in audit, and how it relates to the Evidence Bundle and Minimum Evidence Requirements.
+Questa pagina spiega cosa è e cosa non è la Mappa di Copertura, come usarla nell'audit e come si relaziona con l'Evidence Bundle e i Requisiti Minimi di Evidence.
 
-## What the mapping is
+## Cosa è la mappatura
 
-- An **informative** mapping from external framework/regulation references (by topic) to AIMO evidence, Evidence Bundle TOC items, Minimum Evidence lifecycle groups, artifacts, and validator checks.
-- A support tool for **explainability**: which AIMO evidence and artifacts can help demonstrate or explain alignment with a given external requirement (without claiming conformity).
+- Una mappatura **informativa** dai riferimenti di framework/normative esterne (per argomento) verso evidence AIMO, elementi TOC dell'Evidence Bundle, gruppi del ciclo di vita dei Requisiti Minimi di Evidence, artefatti e controlli del validator.
+- Uno strumento di supporto per la **spiegabilità**: quale evidence e artefatti AIMO possono aiutare a dimostrare o spiegare l'allineamento con un dato requisito esterno (senza dichiarare conformità).
 
-## What the mapping is not
+## Cosa non è la mappatura
 
-- **Not** a guarantee of compliance with any framework or regulation.
-- **Not** legal advice or a substitute for verification against authoritative texts.
-- **Not** exhaustive; it is a practical subset for audit-readiness and explainability.
+- **Non** è una garanzia di conformità con alcun framework o normativa.
+- **Non** è consulenza legale o un sostituto della verifica contro i testi autorevoli.
+- **Non** è esaustiva; è un sottoinsieme pratico per la prontezza all'audit e la spiegabilità.
 
-## How to use it in audit
+## Come usarla nell'audit
 
-Use the flow: **requirement → evidence → artifact → validation**.
+Usare il flusso: **requisito → evidence → artefatto → validazione**.
 
-1. **Requirement**: Identify the external framework reference and topic (e.g. ISO 42001 documentation, EU AI Act record-keeping).
-2. **Evidence**: See which AIMO Evidence Bundle items and Minimum Evidence lifecycle groups (request, review, exception, renewal, change_log, integrity) support explainability for that requirement.
-3. **Artifact**: Locate the artifacts (schemas, templates, examples) that implement or illustrate that evidence.
-4. **Validation**: Use the validator and schema checks referenced to verify structural consistency.
+1. **Requisito**: Identificare il riferimento del framework esterno e l'argomento (es. documentazione ISO 42001, conservazione dei registri EU AI Act).
+2. **Evidence**: Vedere quali elementi dell'Evidence Bundle AIMO e gruppi del ciclo di vita dei Requisiti Minimi di Evidence (richiesta, revisione, eccezione, rinnovo, change_log, integrità) supportano la spiegabilità per quel requisito.
+3. **Artefatto**: Localizzare gli artefatti (schemi, template, esempi) che implementano o illustrano quell'evidence.
+4. **Validazione**: Usare il validator e i controlli di schema referenziati per verificare la coerenza strutturale.
 
-Readers must verify against the authoritative text of each framework or regulation.
+I lettori devono verificare contro il testo autorevole di ogni framework o normativa.
 
-## Relationship to Evidence Bundle and Minimum Evidence Requirements
+## Relazione con Evidence Bundle e Requisiti Minimi di Evidence
 
-- **[Evidence Bundle](../artifacts/evidence-bundle.md)**: Defines the bundle structure, TOC, and traceability. Coverage Map rows reference Evidence Bundle sections (e.g. EV, Dictionary, Summary, change_log, request, review, exception, renewal).
-- **[Minimum Evidence Requirements](../artifacts/minimum-evidence.md)**: Defines MUST-level lifecycle groups (request, review, exception, renewal, change_log, integrity). Coverage Map rows reference these groups in `minimum_evidence_refs`.
+- **[Evidence Bundle](../artifacts/evidence-bundle.md)**: Definisce la struttura del bundle, il TOC e la tracciabilità. Le righe della Mappa di Copertura referenziano le sezioni dell'Evidence Bundle (es. EV, Dizionario, Riepilogo, change_log, richiesta, revisione, eccezione, rinnovo).
+- **[Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md)**: Definisce i gruppi del ciclo di vita MUST-level (richiesta, revisione, eccezione, rinnovo, change_log, integrità). Le righe della Mappa di Copertura referenziano questi gruppi in `minimum_evidence_refs`.
 
-Use the Coverage Map to see which Evidence Bundle items and Minimum Evidence groups support explainability for a given external requirement.
+Usare la Mappa di Copertura per vedere quali elementi dell'Evidence Bundle e gruppi dei Requisiti Minimi supportano la spiegabilità per un dato requisito esterno.
 
-## Non-overclaim statement
+## Dichiarazione di non sovra-dichiarazione
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "Importante"
+    Lo Standard AIMO supporta **spiegabilità e prontezza dell'evidence**. **Non** fornisce consulenza legale, garantisce conformità o certifica la conformità a qualsiasi normativa o framework. Gli adottanti devono verificare le dichiarazioni contro i testi autorevoli e ottenere consulenza professionale quando appropriato.
 
-See [Responsibility Boundary](../governance/responsibility-boundary.md) for scope, assumptions, and adopter responsibilities.
+Vedere [Confini di Responsabilità](../governance/responsibility-boundary.md) per ambito, assunzioni e responsabilità degli adottanti.
 
-## Audit journey
+## Percorso di audit
 
-From this page, continue to:
+Da questa pagina, continuare verso:
 
-1. **Framework mappings**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Validate**: [Validator](../validator/index.md) — run structural checks
-3. **Download**: [Releases](../releases/index.md) — get release assets
+1. **Mappature framework**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
+2. **Validazione**: [Validator](../validator/index.md) — eseguire controlli strutturali
+3. **Download**: [Release](../releases/index.md) — ottenere gli asset di release

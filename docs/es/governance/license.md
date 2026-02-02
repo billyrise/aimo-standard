@@ -1,82 +1,76 @@
 ---
-description: AIMO Standard license - Apache 2.0 licensing terms for specification, documentation, and machine-readable artifacts.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/license.md
-source_hash: a2411f1391e474a7
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Licencia de AIMO Standard - Términos de licencia Apache 2.0 para especificación, documentación y artefactos legibles por máquina.
 ---
 
-# License
+# Licencia
 
-This page documents the licensing terms for AIMO Standard materials.
+Esta página documenta los términos de licencia para materiales del AIMO Standard.
 
-## License Type
+## Tipo de Licencia
 
-AIMO Standard is licensed under the **Apache License, Version 2.0**.
+AIMO Standard está licenciado bajo la **Apache License, Versión 2.0**.
 
-- SPDX Identifier: `Apache-2.0`
-- Full text: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- Identificador SPDX: `Apache-2.0`
+- Texto completo: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
-## Scope
+## Alcance
 
-### What is Covered
+### Qué Está Cubierto
 
-| Material | License | Location |
+| Material | Licencia | Ubicación |
 | -------- | ------- | -------- |
-| Documentation | Apache-2.0 | `docs/` |
+| Documentación | Apache-2.0 | `docs/` |
 | JSON Schemas | Apache-2.0 | `schemas/` |
-| Templates | Apache-2.0 | `templates/` |
-| Examples | Apache-2.0 | `examples/` |
-| Validator | Apache-2.0 | `validator/` |
+| Plantillas | Apache-2.0 | `templates/` |
+| Ejemplos | Apache-2.0 | `examples/` |
+| Validador | Apache-2.0 | `validator/` |
 | Tooling | Apache-2.0 | `tooling/` |
-| PDF releases | Apache-2.0 | GitHub Releases |
-| Artifacts ZIP | Apache-2.0 | GitHub Releases |
+| Versiones PDF | Apache-2.0 | GitHub Releases |
+| ZIP de Artefactos | Apache-2.0 | GitHub Releases |
 
-### What You Can Do
+### Qué Puede Hacer
 
-Under Apache-2.0, you may:
+Bajo Apache-2.0, usted puede:
 
-- Use the materials for any purpose (commercial or non-commercial)
-- Modify and create derivative works
-- Distribute original or modified versions
-- Include in proprietary products
+- Usar los materiales para cualquier propósito (comercial o no comercial)
+- Modificar y crear obras derivadas
+- Distribuir versiones originales o modificadas
+- Incluir en productos propietarios
 
-### Requirements
+### Requisitos
 
-When using AIMO Standard materials:
+Al usar materiales del AIMO Standard:
 
-1. Include the license notice in distributions
-2. Provide attribution (see [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
-3. State significant modifications (if any)
-4. Do not use trademarks without permission (see [Trademarks](trademarks.md))
+1. Incluir el aviso de licencia en distribuciones
+2. Proporcionar atribución (ver [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
+3. Indicar modificaciones significativas (si las hay)
+4. No usar marcas comerciales sin permiso (ver [Marcas Comerciales](trademarks.md))
 
-## NOTICE File
+## Archivo NOTICE
 
-The [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) file contains required attribution information.
+El archivo [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) contiene información de atribución requerida.
 
-## Third-Party Components
+## Componentes de Terceros
 
-AIMO Standard may include or reference third-party components. Each component retains its original license.
+AIMO Standard puede incluir o referenciar componentes de terceros. Cada componente retiene su licencia original.
 
 ## FAQ
 
-**Q: Can I use AIMO Standard in commercial products?**
-A: Yes, Apache-2.0 permits commercial use.
+**P: ¿Puedo usar AIMO Standard en productos comerciales?**
+R: Sí, Apache-2.0 permite uso comercial.
 
-**Q: Do I need to open-source my implementation?**
-A: No, Apache-2.0 does not require derivative works to be open-sourced.
+**P: ¿Necesito abrir el código fuente de mi implementación?**
+R: No, Apache-2.0 no requiere que las obras derivadas sean de código abierto.
 
-**Q: Can I modify the schemas?**
-A: Yes, but you must note modifications and cannot claim conformance with modified schemas.
+**P: ¿Puedo modificar los esquemas?**
+R: Sí, pero debe notar las modificaciones y no puede reclamar conformidad con esquemas modificados.
 
-## License Files
+## Archivos de Licencia
 
-- [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) — License text
-- [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) — Attribution
+- [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) — Texto de licencia
+- [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) — Atribución
 
-## Related Pages
+## Páginas Relacionadas
 
-- [Trademarks](trademarks.md) — Trademark usage
-- [Governance](index.md) — Project governance
+- [Marcas Comerciales](trademarks.md) — Uso de marcas comerciales
+- [Gobernanza](index.md) — Gobernanza del proyecto

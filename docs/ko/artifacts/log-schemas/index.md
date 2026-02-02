@@ -1,46 +1,40 @@
 ---
-description: AIMO Log Schemas - Vendor-neutral log formats for AI evidence. Includes Shadow AI discovery and agent activity monitoring schemas.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/index.md
-source_hash: ae0a3df4c6ceacbc
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 로그 스키마 - AI 증거를 위한 벤더 중립 로그 형식. Shadow AI 검색 및 에이전트 활동 모니터링 스키마 포함.
 ---
 
-# Log Schemas
+# 로그 스키마
 
-## What this is
+## 이것이 무엇인가
 
-This section defines **normalized log formats** for evidence that can be included in an Evidence Bundle. These schemas provide a vendor-neutral structure for logs related to AI usage monitoring and agentic operations.
+이 섹션은 증거 번들에 포함될 수 있는 증거를 위한 **정규화된 로그 형식**을 정의합니다. 이 스키마는 AI 사용 모니터링 및 에이전틱 운영과 관련된 로그를 위한 벤더 중립 구조를 제공합니다.
 
-## When to use
+## 사용 시기
 
-- **Shadow AI visibility**: Documenting detection, inventory, and remediation of unapproved AI usage.
-- **Agentic operation audits**: Explaining autonomous agent privilege exercise, tool execution, and recursive operations.
-- **Incident reproducibility**: Providing structured evidence for incident investigation and root cause analysis.
+- **Shadow AI 가시성**: 승인되지 않은 AI 사용의 탐지, 인벤토리 및 해결 문서화.
+- **에이전틱 운영 감사**: 자율 에이전트 권한 행사, 도구 실행 및 재귀 작업 설명.
+- **인시던트 재현성**: 인시던트 조사 및 근본 원인 분석을 위한 구조화된 증거 제공.
 
-## What it is NOT
+## 이것이 아닌 것
 
-!!! warning "Important"
-    These schemas define **log formats for evidence submission**. They do NOT:
+!!! warning "중요"
+    이 스키마는 **증거 제출을 위한 로그 형식**을 정의합니다. 다음은 수행하지 않습니다:
 
-    - Automatically collect logs from your systems
-    - Provide log aggregation or monitoring tools
-    - Guarantee compliance with any regulation or standard
-    - Replace vendor-specific logging implementations
+    - 시스템에서 자동으로 로그 수집
+    - 로그 집계 또는 모니터링 도구 제공
+    - 규정 또는 표준 준수 보장
+    - 벤더별 로깅 구현 대체
 
-    Organizations must implement their own log collection pipelines and normalize logs to these schemas for evidence submission.
+    조직은 자체 로그 수집 파이프라인을 구현하고 증거 제출을 위해 이 스키마로 로그를 정규화해야 합니다.
 
-## Schemas
+## 스키마
 
-| Schema | Purpose | Download |
+| 스키마 | 목적 | 다운로드 |
 | --- | --- | --- |
-| [Shadow AI Discovery Log](shadow-ai-discovery.md) | Unapproved AI usage detection and inventory | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [Agent Activity Log](agent-activity.md) | Agentic AI privilege exercise and tool execution | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Shadow AI 검색 로그](shadow-ai-discovery.md) | 승인되지 않은 AI 사용 탐지 및 인벤토리 | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [에이전트 활동 로그](agent-activity.md) | 에이전틱 AI 권한 행사 및 도구 실행 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
-## Related pages
+## 관련 페이지
 
-- [Minimum Evidence Requirements](../minimum-evidence.md) — MUST-level evidence checklist
-- [Evidence Bundle](../evidence-bundle.md) — Bundle structure and TOC
-- [Taxonomy](../../standard/current/03-taxonomy.md) — Classification codes (including UC-010 Agentic Automation, IM-007 Shadow/Unmanaged)
+- [최소 증거 요구사항](../minimum-evidence.md) — MUST 수준 증거 체크리스트
+- [증거 번들](../evidence-bundle.md) — 번들 구조 및 목차
+- [분류체계](../../standard/current/03-taxonomy.md) — 분류 코드 (UC-010 에이전틱 자동화, IM-007 Shadow/미관리 포함)

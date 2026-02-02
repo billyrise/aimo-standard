@@ -1,26 +1,20 @@
 ---
-description: AIMO Standard citation guide - How to cite in academic papers, audit reports, and proposals. CITATION.cff and BibTeX formats.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/cite.md
-source_hash: 61f98ae47d24c36d
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Guía de citación de AIMO Standard - Cómo citar en artículos académicos, reportes de auditoría y propuestas. Formatos CITATION.cff y BibTeX.
 ---
 
-# How to Cite
+# Cómo Citar
 
-This page provides citation guidance for AIMO Standard in academic papers, audit reports, and proposals.
+Esta página proporciona guía de citación para AIMO Standard en artículos académicos, reportes de auditoría y propuestas.
 
 ## CITATION.cff
 
-The repository includes a [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) file following the Citation File Format standard.
+El repositorio incluye un archivo [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) siguiendo el estándar Citation File Format.
 
-GitHub automatically displays citation information from this file.
+GitHub muestra automáticamente información de citación desde este archivo.
 
-## Recommended Citation
+## Citación Recomendada
 
-### Short Form (Inline)
+### Forma Corta (En línea)
 
 > AIMO Standard Contributors. (2026). AIMO Standard. https://standard.aimoaas.com/
 
@@ -31,55 +25,55 @@ GitHub automatically displays citation information from this file.
   author = {{AIMO Standard Contributors}},
   title = {AIMO Standard},
   url = {https://standard.aimoaas.com/},
-  version = {0.0.1},
+  version = {0.0.2},
   year = {2026}
 }
 ```
 
-### APA Style
+### Estilo APA
 
-> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.0.1) [Software]. https://standard.aimoaas.com/
+> AIMO Standard Contributors. (2026). *AIMO Standard* (Versión 0.0.2) [Software]. https://standard.aimoaas.com/
 
-## Version-Specific Citation
+## Citación de Versión Específica
 
-When citing a specific version:
+Al citar una versión específica:
 
-> AIMO Standard Contributors. (2026). AIMO Standard v0.0.1. https://github.com/billyrise/aimo-standard/releases/tag/v0.0.1
+> AIMO Standard Contributors. (2026). AIMO Standard v0.0.2. https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2
 
-## Audit Documentation
+## Documentación de Auditoría
 
-For audit reports and compliance documentation:
+Para reportes de auditoría y documentación de cumplimiento:
 
-| Field | Value |
+| Campo | Valor |
 | ----- | ----- |
-| Standard Name | AIMO Standard |
-| Version | (specify the version used, e.g., v0.0.1) |
-| Website | https://standard.aimoaas.com/ |
-| Repository | https://github.com/billyrise/aimo-standard |
-| Release | https://github.com/billyrise/aimo-standard/releases |
+| Nombre del Estándar | AIMO Standard |
+| Versión | (especifique la versión usada, ej., v0.0.1) |
+| Sitio Web | https://standard.aimoaas.com/ |
+| Repositorio | https://github.com/billyrise/aimo-standard |
+| Versiones | https://github.com/billyrise/aimo-standard/releases |
 
-## URL Guidance
+## Guía de URLs
 
-### Canonical URLs
+### URLs Canónicas
 
-Use these URLs in official documentation:
+Use estas URLs en documentación oficial:
 
-| Purpose | URL |
+| Propósito | URL |
 | ------- | --- |
-| Latest documentation | https://standard.aimoaas.com/latest/ |
-| Specific version | https://standard.aimoaas.com/0.0.1/ |
-| GitHub releases | https://github.com/billyrise/aimo-standard/releases |
+| Documentación más reciente | https://standard.aimoaas.com/latest/ |
+| Versión específica | https://standard.aimoaas.com/0.0.2/ |
+| Versiones de GitHub | https://github.com/billyrise/aimo-standard/releases |
 
-!!! note "Site Path Format"
-    Site paths use version numbers without the `v` prefix. For version `v0.0.1`, use `/0.0.1/` in URLs.
+!!! note "Formato de Ruta del Sitio"
+    Las rutas del sitio usan números de versión sin el prefijo `v`. Para la versión `v0.0.1`, use `/0.0.1/` en URLs.
 
-### Avoid
+### Evitar
 
-- GitHub Pages mirror URLs (temporary)
-- Branch-specific URLs (may change)
+- URLs espejo de GitHub Pages (temporal)
+- URLs específicas de rama (pueden cambiar)
 
-## Related Pages
+## Páginas Relacionadas
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
-- [License](license.md) — Licensing terms
+- [Paquete de Confianza](trust-package.md) — Materiales listos para auditores
+- [Gobernanza](index.md) — Gobernanza del proyecto
+- [Licencia](license.md) — Términos de licencia

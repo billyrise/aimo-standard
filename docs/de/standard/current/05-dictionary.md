@@ -1,208 +1,202 @@
 ---
-description: AIMO Dictionary - Authoritative list of 91 taxonomy codes across 8 dimensions. Complete definitions, labels, and lifecycle information for AI classification.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/05-dictionary.md
-source_hash: 386723f659bcb2e9
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Dictionary - Maßgebliche Liste von 91 Taxonomie-Codes über 8 Dimensionen. Vollständige Definitionen, Labels und Lifecycle-Informationen für KI-Klassifizierung.
 ---
 
 # Dictionary
 
-The AIMO Dictionary is the authoritative list of all valid codes within the taxonomy. It provides complete definitions for each code including labels, descriptions, and lifecycle information.
+Das AIMO Dictionary ist die maßgebliche Liste aller gültigen Codes innerhalb der Taxonomie. Es bietet vollständige Definitionen für jeden Code einschließlich Labels, Beschreibungen und Lifecycle-Informationen.
 
-## What is Dictionary
+## Was ist das Dictionary
 
-The dictionary provides a complete, machine-readable set of all AIMO taxonomy codes. It contains:
+Das Dictionary bietet einen vollständigen, maschinenlesbaren Satz aller AIMO Taxonomie-Codes. Es enthält:
 
-- All 91 codes across 8 dimensions
-- Labels and definitions (with translations in language packs)
-- Lifecycle metadata (status, version introduced, deprecated, removed)
-- Scope notes and examples for code usage
+- Alle 91 Codes über 8 Dimensionen
+- Labels und Definitionen (mit Übersetzungen in Sprachpaketen)
+- Lifecycle-Metadaten (Status, eingeführte Version, veraltet, entfernt)
+- Geltungsbereich-Hinweise und Beispiele für Code-Nutzung
 
-The dictionary enables:
+Das Dictionary ermöglicht:
 
-1. **Evidence Templates**: Codes are used in EV templates to classify AI systems
-2. **Validator**: The validator checks that all codes exist in the dictionary
-3. **Coverage Map**: Codes enable mapping to external frameworks and regulations
+1. **Evidence-Templates**: Codes werden in EV-Templates verwendet, um KI-Systeme zu klassifizieren
+2. **Validator**: Der Validator prüft, dass alle Codes im Dictionary existieren
+3. **Coverage Map**: Codes ermöglichen Zuordnung zu externen Frameworks und Vorschriften
 
 !!! info "Single Source of Truth (SSOT)"
-    The SSOT for the dictionary is:
+    Das SSOT für das Dictionary ist:
 
-    - **Structure**: `data/taxonomy/canonical.yaml` (codes, status, lifecycle)
-    - **Translations**: `data/taxonomy/i18n/*.yaml` (labels, definitions per language)
+    - **Struktur**: `data/taxonomy/canonical.yaml` (Codes, Status, Lifecycle)
+    - **Übersetzungen**: `data/taxonomy/i18n/*.yaml` (Labels, Definitionen pro Sprache)
 
-    CSV files are **generated artifacts** for distribution. See [Releases](../../releases/index.md) for downloads.
+    CSV-Dateien sind **generierte Artefakte** zur Distribution. Siehe [Releases](../../releases/index.md) für Downloads.
 
-## Column Schema
+## Spalten-Schema
 
-The canonical dictionary uses **18 columns** (language-neutral structure):
+Das kanonische Dictionary verwendet **18 Spalten** (sprachneutrale Struktur):
 
-### Identification Columns (5)
+### Identifikationsspalten (5)
 
-| # | Column | Required | Description | Example |
+| # | Spalte | Erforderlich | Beschreibung | Beispiel |
 | --- | --- | --- | --- | --- |
-| 1 | `standard_id` | Yes | Standard identifier | `AIMO-STD` |
-| 2 | `standard_version` | Yes | SemVer format | `0.1.0` |
-| 3 | `dimension_id` | Yes | Two-letter dimension ID | `FS`, `UC`, `DT` |
-| 4 | `dimension_name` | Yes | Dimension name | `Functional Scope` |
-| 5 | `code` | Yes | Full code | `UC-001` |
+| 1 | `standard_id` | Ja | Standard-Identifikator | `AIMO-STD` |
+| 2 | `standard_version` | Ja | SemVer-Format | `0.1.0` |
+| 3 | `dimension_id` | Ja | Zwei-Buchstaben-Dimensions-ID | `FS`, `UC`, `DT` |
+| 4 | `dimension_name` | Ja | Dimensionsname | `Functional Scope` |
+| 5 | `code` | Ja | Vollständiger Code | `UC-001` |
 
-### Label and Definition Columns (4)
+### Label- und Definitionsspalten (4)
 
-| # | Column | Required | Description | Example |
+| # | Spalte | Erforderlich | Beschreibung | Beispiel |
 | --- | --- | --- | --- | --- |
-| 6 | `label` | Yes | Code label (max 50 chars) | `General Q&A` |
-| 7 | `definition` | Yes | Code definition (1-2 sentences) | `General question answering...` |
-| 8 | `scope_notes` | No | Usage scope clarification | `Low to medium risk...` |
-| 9 | `examples` | No | Pipe-separated examples | `chatbot\|recommendation` |
+| 6 | `label` | Ja | Code-Label (max 50 Zeichen) | `General Q&A` |
+| 7 | `definition` | Ja | Code-Definition (1-2 Sätze) | `General question answering...` |
+| 8 | `scope_notes` | Nein | Geltungsbereich-Klarstellung | `Low to medium risk...` |
+| 9 | `examples` | Nein | Pipe-getrennte Beispiele | `chatbot\|recommendation` |
 
-!!! note "Translations"
-    The canonical data model separates translations into language packs (`data/taxonomy/i18n/*.yaml`). Each language pack provides localized `dimension_name`, `label`, and `definition` values. See [Localization Guide](../../contributing/localization.md) for details.
+!!! note "Übersetzungen"
+    Das kanonische Datenmodell trennt Übersetzungen in Sprachpakete (`data/taxonomy/i18n/*.yaml`). Jedes Sprachpaket bietet lokalisierte `dimension_name`, `label` und `definition`-Werte. Siehe [Lokalisierungsleitfaden](../../contributing/localization.md) für Details.
 
-### Lifecycle Columns (6)
+### Lifecycle-Spalten (6)
 
-| # | Column | Required | Description | Example |
+| # | Spalte | Erforderlich | Beschreibung | Beispiel |
 | --- | --- | --- | --- | --- |
-| 10 | `status` | Yes | `active`, `deprecated`, `removed` | `active` |
-| 11 | `introduced_in` | Yes | Version when added | `0.1.0` |
-| 12 | `deprecated_in` | No | Version when deprecated | `1.2.0` |
-| 13 | `removed_in` | No | Version when removed | `2.0.0` |
-| 14 | `replaced_by` | No | Replacement code | `UC-015` |
-| 15 | `backward_compatible` | Yes | `true` or `false` | `true` |
+| 10 | `status` | Ja | `active`, `deprecated`, `removed` | `active` |
+| 11 | `introduced_in` | Ja | Version, als hinzugefügt | `0.1.0` |
+| 12 | `deprecated_in` | Nein | Version, als veraltet | `1.2.0` |
+| 13 | `removed_in` | Nein | Version, als entfernt | `2.0.0` |
+| 14 | `replaced_by` | Nein | Ersetzungscode | `UC-015` |
+| 15 | `backward_compatible` | Ja | `true` oder `false` | `true` |
 
-### Governance Columns (3)
+### Governance-Spalten (3)
 
-| # | Column | Required | Description | Example |
+| # | Spalte | Erforderlich | Beschreibung | Beispiel |
 | --- | --- | --- | --- | --- |
-| 16 | `references` | No | External references | ISO/IEC 42001 |
-| 17 | `owner` | No | Responsible party | `AIMO WG` |
-| 18 | `last_reviewed_date` | No | Last review (YYYY-MM-DD) | `2026-01-19` |
+| 16 | `references` | Nein | Externe Referenzen | ISO/IEC 42001 |
+| 17 | `owner` | Nein | Verantwortliche Partei | `AIMO WG` |
+| 18 | `last_reviewed_date` | Nein | Letzte Überprüfung (JJJJ-MM-TT) | `2026-01-19` |
 
-## Initial Entries
+## Initiale Einträge
 
-The current dictionary version is **v0.1.0** and contains:
+Die aktuelle Dictionary-Version ist **v0.1.0** und enthält:
 
-| Dimension | Name | Active Codes | Deprecated | Total |
+| Dimension | Name | Aktive Codes | Veraltet | Gesamt |
 | --- | --- | --- | --- | --- |
-| FS | Functional Scope | 6 | 0 | 6 |
-| UC | Use Case Class | 30 | 0 | 30 |
-| DT | Data Type | 10 | 0 | 10 |
-| CH | Channel | 8 | 0 | 8 |
-| IM | Integration Mode | 7 | 0 | 7 |
-| RS | Risk Surface | 8 | 0 | 8 |
-| OB | Outcome / Benefit | 7 | 0 | 7 |
-| EV | Evidence Type | 15 | 0 | 15 |
-| **Total** | | **91** | **0** | **91** |
+| FS | Funktionaler Scope | 6 | 0 | 6 |
+| UC | Anwendungsfall-Klasse | 30 | 0 | 30 |
+| DT | Datentyp | 10 | 0 | 10 |
+| CH | Kanal | 8 | 0 | 8 |
+| IM | Integrationsmodus | 7 | 0 | 7 |
+| RS | Risikooberfläche | 8 | 0 | 8 |
+| OB | Ergebnis / Nutzen | 7 | 0 | 7 |
+| EV | Evidence-Typ | 15 | 0 | 15 |
+| **Gesamt** | | **91** | **0** | **91** |
 
-!!! note "Complete Code Listings"
-    The complete list of 91 codes is available in the generated CSV artifacts. This documentation page provides column definitions and usage guidance. For detailed code definitions:
+!!! note "Vollständige Code-Listen"
+    Die vollständige Liste von 91 Codes ist in den generierten CSV-Artefakten verfügbar. Diese Dokumentationsseite bietet Spaltendefinitionen und Nutzungsanleitungen. Für detaillierte Code-Definitionen:
 
-    - **Download**: See [Releases](../../releases/index.md) for per-language CSV files
-    - **Per-language CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
-    - **Legacy EN/JA mixed CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (frozen, for backward compatibility only)
+    - **Download**: Siehe [Releases](../../releases/index.md) für Pro-Sprache-CSV-Dateien
+    - **Pro-Sprache-CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
+    - **Legacy EN/JA gemischte CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (eingefroren, nur für Rückwärtskompatibilität)
 
-## Update Policy
+## Update-Richtlinie
 
-### Adding New Codes
+### Neue Codes hinzufügen
 
-1. Assign the next available number within the dimension (e.g., `UC-031` after `UC-030`)
-2. Set `status` to `active`
-3. Set `introduced_in` to the current version
-4. Set `backward_compatible` to `true`
-5. Provide label and definition (add translations to language packs)
+1. Die nächste verfügbare Nummer innerhalb der Dimension zuweisen (z.B. `UC-031` nach `UC-030`)
+2. `status` auf `active` setzen
+3. `introduced_in` auf die aktuelle Version setzen
+4. `backward_compatible` auf `true` setzen
+5. Label und Definition bereitstellen (Übersetzungen zu Sprachpaketen hinzufügen)
 
-### Modifying Existing Codes
+### Bestehende Codes modifizieren
 
-| Change Type | Allowed | Version Impact |
+| Änderungstyp | Erlaubt | Versionsauswirkung |
 | --- | --- | --- |
-| Definition clarification | Yes | PATCH |
-| Scope notes update | Yes | PATCH |
-| Label change (meaning preserved) | Yes | MINOR |
-| Meaning change | No | Create new code instead |
+| Definitionsklarstellung | Ja | PATCH |
+| Geltungsbereich-Hinweise-Update | Ja | PATCH |
+| Label-Änderung (Bedeutung erhalten) | Ja | MINOR |
+| Bedeutungsänderung | Nein | Neuen Code erstellen |
 
-### Deprecating Codes
+### Codes veralten
 
-1. Set `status` to `deprecated`
-2. Set `deprecated_in` to current version
-3. Set `replaced_by` to the new code (if applicable)
-4. Code remains functional for backward compatibility
-5. Document the reason in scope_notes
+1. `status` auf `deprecated` setzen
+2. `deprecated_in` auf aktuelle Version setzen
+3. `replaced_by` auf den neuen Code setzen (falls zutreffend)
+4. Code bleibt für Rückwärtskompatibilität funktional
+5. Grund in scope_notes dokumentieren
 
-### Removing Codes
+### Codes entfernen
 
-1. Deprecate for at least one MINOR version first
-2. Set `status` to `removed`
-3. Set `removed_in` to current MAJOR version
-4. Code is no longer valid for new evidence
+1. Zuerst für mindestens eine MINOR-Version veralten
+2. `status` auf `removed` setzen
+3. `removed_in` auf aktuelle MAJOR-Version setzen
+4. Code ist nicht mehr für neues Evidence gültig
 
-### Compatibility Policy
+### Kompatibilitätsrichtlinie
 
-| Action | Version Impact | Backward Compatible |
+| Aktion | Versionsauswirkung | Rückwärtskompatibel |
 | --- | --- | --- |
-| Add new code | MINOR | Yes |
-| Deprecate code | MINOR | Yes |
-| Clarify definition | PATCH | Yes |
-| Remove code | MAJOR | No |
-| Change code meaning | Not allowed | - |
+| Neuen Code hinzufügen | MINOR | Ja |
+| Code veralten | MINOR | Ja |
+| Definition klären | PATCH | Ja |
+| Code entfernen | MAJOR | Nein |
+| Code-Bedeutung ändern | Nicht erlaubt | - |
 
-## How to Use
+## Verwendung
 
-### In Evidence Templates
+### In Evidence-Templates
 
-Each EV template includes an 8-dimension codes table:
+Jedes EV-Template enthält eine 8-Dimensionen-Codes-Tabelle:
 
 ```markdown
-## AIMO Codes (8 Dimensions)
+## AIMO Codes (8 Dimensionen)
 
 | Dimension | Code(s) | Label |
 | --- | --- | --- |
-| **FS** | `FS-001` | End-user Productivity |
-| **UC** | `UC-001`, `UC-002` | General Q&A, Summarization |
-| **DT** | `DT-002`, `DT-004` | Internal, Personal Data |
-| **CH** | `CH-001` | Web UI |
-| **IM** | `IM-002` | SaaS Integrated |
-| **RS** | `RS-001`, `RS-003` | Data Leakage, Compliance Breach |
-| **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **FS** | `FS-001` | Endbenutzer-Produktivität |
+| **UC** | `UC-001`, `UC-002` | Allgemeine F&A, Zusammenfassung |
+| **DT** | `DT-002`, `DT-004` | Intern, Personenbezogene Daten |
+| **CH** | `CH-001` | Web-UI |
+| **IM** | `IM-002` | SaaS-integriert |
+| **RS** | `RS-001`, `RS-003` | Datenleck, Compliance-Verstoß |
+| **OB** | `OB-001` | Effizienz |
+| **EV** | `EV-001`, `EV-002` | Antragsdatensatz, Prüfungs-/Genehmigungsdatensatz |
 ```
 
-### In Validator
+### Im Validator
 
-The validator checks:
+Der Validator prüft:
 
-1. All codes referenced in evidence exist in the dictionary
-2. Code format matches the expected pattern (`PREFIX-###`)
-3. Deprecated codes trigger warnings
-4. Removed codes are rejected
+1. Alle in Evidence referenzierten Codes existieren im Dictionary
+2. Code-Format entspricht dem erwarteten Muster (`PRÄFIX-###`)
+3. Veraltete Codes lösen Warnungen aus
+4. Entfernte Codes werden abgelehnt
 
-### Extension Guidelines
+### Erweiterungsrichtlinien
 
-Organizations MAY extend the dictionary with custom codes:
+Organisationen KÖNNEN das Dictionary mit benutzerdefinierten Codes erweitern:
 
-**Extension Prefix:**
+**Erweiterungs-Präfix:**
 
 ```
 X-<ORG>-<DIM>-<TOKEN>
 ```
 
-Example: `X-ACME-UC-901` for ACME Corporation's custom use case code.
+Beispiel: `X-ACME-UC-901` für ACMEs benutzerdefinierten Anwendungsfall-Code.
 
-**Extension Rules:**
+**Erweiterungsregeln:**
 
-1. Custom codes MUST NOT conflict with standard codes
-2. Custom codes SHOULD be documented in a local extension dictionary
-3. When exchanging evidence with external parties, use only standard codes
+1. Benutzerdefinierte Codes DÜRFEN NICHT mit Standard-Codes kollidieren
+2. Benutzerdefinierte Codes SOLLTEN in einem lokalen Erweiterungs-Dictionary dokumentiert werden
+3. Beim Austausch von Evidence mit externen Parteien nur Standard-Codes verwenden
 
 ## Downloads
 
-See [Releases](../../releases/index.md) for downloadable packages containing the dictionary and related files.
+Siehe [Releases](../../releases/index.md) für herunterladbare Pakete mit Dictionary und zugehörigen Dateien.
 
-## Related Pages
+## Verwandte Seiten
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions and code tables
-- [Codes](./04-codes.md) - Code format, naming, and lifecycle
-- [Evidence Templates](./06-ev-template.md) - How codes are used in templates
-- [Validator](./07-validator.md) - Code validation rules
-- [Changelog](./08-changelog.md) - Version history
+- [Taxonomie](./03-taxonomy.md) - Dimensionsdefinitionen und Code-Tabellen
+- [Codes](./04-codes.md) - Code-Format, Benennung und Lifecycle
+- [Evidence-Templates](./06-ev-template.md) - Wie Codes in Templates verwendet werden
+- [Validator](./07-validator.md) - Code-Validierungsregeln
+- [Changelog](./08-changelog.md) - Versionshistorie

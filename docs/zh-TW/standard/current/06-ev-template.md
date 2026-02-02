@@ -1,59 +1,53 @@
 ---
-description: AIMO Evidence Pack templates and usage guide. Structure for documenting AI governance evidence with index management and audit-ready formatting.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/06-ev-template.md
-source_hash: bbdefcdcacf4fa95
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 證據包範本和使用指南。使用索引管理和稽核就緒格式記錄 AI 治理證據的結構。
 ---
 
-# EV Template
+# EV 範本
 
-This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.
+本節定義證據包範本及其使用。證據包是一組文件集合，展示 AI 系統的治理和合規性。
 
-## Key Principle: Index and Diff Management
+## 關鍵原則：索引和差異管理
 
-> **Important**: What matters is not the content of individual submissions, but the **index** and **diff management** across evidence items.
+> **重要**：重要的不是個別提交的內容，而是跨證據項目的**索引**和**差異管理**。
 
-An Evidence Pack serves as an index linking AI systems to their governance artifacts. The value lies in:
+證據包作為索引，將 AI 系統連結到其治理人工產物。價值在於：
 
-1. **Traceability**: Linking decisions, approvals, and changes across time
-2. **Auditability**: Enabling auditors to navigate the evidence structure
-3. **Maintainability**: Tracking what changed, when, and why
+1. **可追溯性**：連結跨時間的決策、核准和變更
+2. **可稽核性**：使稽核員能夠導覽證據結構
+3. **可維護性**：追蹤什麼變更了、何時以及為什麼
 
-## MVP Evidence Set (EV-01 to EV-07)
+## MVP 證據集（EV-01 到 EV-07）
 
-The following seven evidence types form the **minimum viable set** for demonstrating AI governance:
+以下七種證據類型形成展示 AI 治理的**最小可行集**：
 
-| ID | Evidence Type | Code | Purpose |
+| ID | 證據類型 | 代碼 | 用途 |
 | --- | --- | --- | --- |
-| EV-01 | System Overview | EV-001 | Document the AI system and its purpose |
-| EV-02 | Data Flow | EV-002 | Map data movement through the system |
-| EV-03 | Inventory | EV-003 | Maintain catalog of AI assets |
-| EV-04 | Risk & Impact Assessment | EV-004 | Assess and document risks |
-| EV-05 | Controls & Approvals | EV-005 | Document controls and approval records |
-| EV-06 | Logging & Monitoring | EV-006 | Define logging and monitoring setup |
-| EV-07 | Incident & Exception | EV-007 | Track incidents and exceptions |
+| EV-01 | 系統概述 | EV-001 | 記錄 AI 系統及其用途 |
+| EV-02 | 資料流 | EV-002 | 對應資料在系統中的移動 |
+| EV-03 | 清冊 | EV-003 | 維護 AI 資產目錄 |
+| EV-04 | 風險與影響評估 | EV-004 | 評估並記錄風險 |
+| EV-05 | 控制與核准 | EV-005 | 記錄控制和核准記錄 |
+| EV-06 | 日誌與監控 | EV-006 | 定義日誌和監控設定 |
+| EV-07 | 事件與例外 | EV-007 | 追蹤事件和例外 |
 
-## Evidence Pack Manifest
+## 證據包清單
 
-Each Evidence Pack MUST include a manifest file containing:
+每個證據包必須包含一個清單檔案，包含：
 
-### Mandatory Metadata
+### 必要中繼資料
 
-| Field | Description | Required |
+| 欄位 | 說明 | 必要 |
 | --- | --- | --- |
-| `pack_id` | Unique identifier (e.g., EP-EXAMPLE-001) | Yes |
-| `pack_version` | SemVer version of the pack | Yes |
-| `taxonomy_version` | Version of AIMO taxonomy used | Yes |
-| `created_date` | Pack creation date | Yes |
-| `last_updated` | Last update date | Yes |
-| `owner` | Responsible party | Yes |
+| `pack_id` | 唯一識別碼（例如 EP-EXAMPLE-001） | 是 |
+| `pack_version` | 套件的 SemVer 版本 | 是 |
+| `taxonomy_version` | 使用的 AIMO 分類法版本 | 是 |
+| `created_date` | 套件建立日期 | 是 |
+| `last_updated` | 最後更新日期 | 是 |
+| `owner` | 負責方 | 是 |
 
-### AIMO Codes (8 Dimensions)
+### AIMO 代碼（8 維度）
 
-Each Evidence Pack MUST include codes from all 8 dimensions:
+每個證據包必須包含所有 8 個維度的代碼：
 
 ```json
 {
@@ -70,7 +64,7 @@ Each Evidence Pack MUST include codes from all 8 dimensions:
 }
 ```
 
-### Evidence Files List
+### 證據檔案清單
 
 ```json
 {
@@ -86,26 +80,26 @@ Each Evidence Pack MUST include codes from all 8 dimensions:
 }
 ```
 
-## Template Structure
+## 範本結構
 
-Each evidence template includes:
+每個證據範本包含：
 
-1. **Mandatory Metadata Block** - pack_id, version, taxonomy_version, dates, owner
-2. **AIMO Codes Table** - All 8 dimensions with applicable codes
-3. **Content Sections** - Domain-specific documentation sections
-4. **References** - Links to related evidence
-5. **Revision History** - Change tracking
+1. **必要中繼資料區塊** - pack_id、version、taxonomy_version、日期、owner
+2. **AIMO 代碼表** - 所有 8 個維度及適用代碼
+3. **內容章節** - 領域特定的文件章節
+4. **參照** - 連結到相關證據
+5. **修訂歷史** - 變更追蹤
 
-### Template Header Example
+### 範本標頭範例
 
 ```markdown
-# EV-01: System Overview
+# EV-01: 系統概述
 
 ---
 
-## Mandatory Metadata
+## 必要中繼資料
 
-| Field | Value |
+| 欄位 | 值 |
 | --- | --- |
 | **pack_id** | `EP-EXAMPLE-001` |
 | **pack_version** | `0.1.0` |
@@ -116,25 +110,25 @@ Each evidence template includes:
 
 ---
 
-## AIMO Codes (8 Dimensions)
+## AIMO 代碼（8 維度）
 
-| Dimension | Code(s) | Label |
+| 維度 | 代碼 | 標籤 |
 | --- | --- | --- |
-| **FS** | `FS-001` | End-user Productivity |
-| **UC** | `UC-001` | General Q&A |
-| **DT** | `DT-002` | Internal |
+| **FS** | `FS-001` | 終端使用者生產力 |
+| **UC** | `UC-001` | 一般問答 |
+| **DT** | `DT-002` | 內部 |
 | **CH** | `CH-001` | Web UI |
-| **IM** | `IM-001` | Standalone |
-| **RS** | `RS-001` | Data Leakage |
-| **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001` | System Overview |
+| **IM** | `IM-001` | 獨立 |
+| **RS** | `RS-001` | 資料洩漏 |
+| **OB** | `OB-001` | 效率 |
+| **EV** | `EV-001` | 系統概述 |
 ```
 
-## Downloads
+## 下載
 
-### Templates
+### 範本
 
-Evidence Pack templates are available in:
+證據包範本可在以下位置取得：
 
 - `source_pack/04_evidence_pack/templates/EV-01_system_overview.md`
 - `source_pack/04_evidence_pack/templates/EV-02_data_flow.md`
@@ -144,28 +138,28 @@ Evidence Pack templates are available in:
 - `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md`
 - `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md`
 
-### Schemas and Examples
+### 結構描述和範例
 
-- Schema: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
-- Example: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
+- 結構描述：`source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
+- 範例：`source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-See [Releases](../../releases/index.md) for downloadable packages.
+請參閱[發布](../../releases/index.md)了解可下載的套件。
 
-## Distribution Model
+## 發布模型
 
-> **Note**: The primary distribution targets are **audit firms and system integrators** (template distributors), not individual enterprises.
+> **注意**：主要發布目標是**稽核公司和系統整合商**（範本發布者），而非個別企業。
 
-The templates are designed to be:
+範本設計為：
 
-1. Adopted by auditors and consultants as standard artifacts
-2. Distributed to enterprises with source attribution preserved
-3. Versioned alongside the AIMO Standard
+1. 被稽核員和顧問採用為標準人工產物
+2. 以保留來源署名的方式發布給企業
+3. 與 AIMO 標準一起進行版本控制
 
-Enterprises receive templates through their auditors, consultants, or internal governance teams who maintain the linkage to the standard version.
+企業透過其稽核員、顧問或維護與標準版本連結的內部治理團隊接收範本。
 
-## References
+## 參照
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions
-- [Codes](./04-codes.md) - Code format
-- [Validator](./07-validator.md) - Validation rules
-- [Evidence Bundle](../../artifacts/evidence-bundle.md) - Bundle structure
+- [分類法](./03-taxonomy.md) - 維度定義
+- [代碼](./04-codes.md) - 代碼格式
+- [驗證器](./07-validator.md) - 驗證規則
+- [證據包](../../artifacts/evidence-bundle.md) - 套件結構

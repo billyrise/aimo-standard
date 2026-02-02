@@ -1,104 +1,98 @@
 ---
-description: AIMO Standard releases - Download versioned PDFs, artifacts, and checksums. Changelog, migration guides, and build provenance attestations.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/releases/index.md
-source_hash: ea7b2cac2a7960cc
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准发布 - 下载版本化的PDF、工件和校验和。变更日志、迁移指南和构建来源证明。
 ---
 
-# Releases
+# 发布
 
-This section is a hub for versioned releases, changelog, migration, and distribution artifacts.
+本节是版本化发布、变更日志、迁移和分发工件的中心。
 
-## Download Latest Release
+## 下载最新发布
 
 **[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)**
 
-## Release Assets
+## 发布资产
 
-Each official release (`vX.Y.Z` tag) includes:
+每个官方发布（`vX.Y.Z` 标签）包括：
 
-| Asset | Description |
+| 资产 | 描述 |
 | --- | --- |
-| `trust_package.pdf` | English Trust Package — auditor-ready assurance materials |
-| `trust_package.ja.pdf` | Japanese Trust Package |
-| `aimo-standard-artifacts.zip` | Schemas, templates, examples, validator rules |
-| `SHA256SUMS.txt` | SHA-256 checksums for all assets |
+| `trust_package.pdf` | 英文信任包 — 审计师就绪的保证材料 |
+| `trust_package.ja.pdf` | 日文信任包 |
+| `aimo-standard-artifacts.zip` | 模式、模板、示例、验证器规则 |
+| `SHA256SUMS.txt` | 所有资产的 SHA-256 校验和 |
 
-### Verifying Downloads
+### 验证下载
 
-After downloading, verify file integrity using checksums:
+下载后，使用校验和验证文件完整性：
 
 === "Linux"
 
     ```bash
-    # Download the checksums file
+    # 下载校验和文件
     curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
 
-    # Verify a specific file
+    # 验证特定文件
     sha256sum -c SHA256SUMS.txt --ignore-missing
 
-    # Or verify manually:
+    # 或手动验证：
     sha256sum trust_package.pdf
-    # Compare output with SHA256SUMS.txt
+    # 将输出与 SHA256SUMS.txt 进行比较
     ```
 
 === "macOS"
 
     ```bash
-    # Download the checksums file
+    # 下载校验和文件
     curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
 
-    # Verify a specific file
+    # 验证特定文件
     shasum -a 256 -c SHA256SUMS.txt
 
-    # Or verify manually:
+    # 或手动验证：
     shasum -a 256 trust_package.pdf
-    # Compare output with SHA256SUMS.txt
+    # 将输出与 SHA256SUMS.txt 进行比较
     ```
 
 === "Windows (PowerShell)"
 
     ```powershell
-    # Download the checksums file
+    # 下载校验和文件
     Invoke-WebRequest -Uri "https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
 
-    # Verify a specific file
+    # 验证特定文件
     Get-FileHash .\trust_package.pdf -Algorithm SHA256
 
-    # Compare the Hash output with SHA256SUMS.txt
+    # 将 Hash 输出与 SHA256SUMS.txt 进行比较
     Get-Content .\SHA256SUMS.txt
     ```
 
-## Artifacts Zip Contents
+## 工件 Zip 内容
 
-The `aimo-standard-artifacts.zip` contains:
+`aimo-standard-artifacts.zip` 包含：
 
-- `schemas/jsonschema/*` — JSON Schemas for validation
-- `templates/ev/*` — Evidence templates (JSON + Markdown)
-- `examples/*` — Sample evidence bundles
-- `coverage_map/coverage_map.yaml` — External standards mapping
-- `validator/rules/*` — Validation rule definitions
-- `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, etc.
+- `schemas/jsonschema/*` — 用于验证的 JSON Schema
+- `templates/ev/*` — 证据模板（JSON + Markdown）
+- `examples/*` — 示例证据包
+- `coverage_map/coverage_map.yaml` — 外部标准映射
+- `validator/rules/*` — 验证规则定义
+- `VERSIONING.md`、`GOVERNANCE.md`、`SECURITY.md` 等
 
-## Resources
+## 资源
 
-- **Version History Table**: [Standard > Versions](../standard/versions/index.md) — version table with direct links to all release assets (PDF, ZIP, SHA256)
-- **Changelog (spec)**: [Standard > Current > Changelog](../standard/current/08-changelog.md) — normative and non-normative change history.
-- **Release process**: tagging `vX.Y.Z`, CI build, PDF under `dist/`, checksums, GitHub Release assets. See [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) and [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) in the repository.
-- **Migration guide**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — upgrade paths for breaking changes.
+- **版本历史表**：[标准 > 版本](../standard/versions/index.md) — 带有所有发布资产（PDF、ZIP、SHA256）直接链接的版本表
+- **变更日志（规范）**：[标准 > 当前 > 变更日志](../standard/current/08-changelog.md) — 规范性和非规范性变更历史。
+- **发布流程**：标记 `vX.Y.Z`、CI 构建、`dist/` 下的 PDF、校验和、GitHub Release 资产。参见仓库中的 [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) 和 [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)。
+- **迁移指南**：[MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — 破坏性变更的升级路径。
 
-For governance and versioning policy, see [Governance](../governance/index.md).
+有关治理和版本管理政策，请参阅 [治理](../governance/index.md)。
 
-## Preparing your submission package
+## 准备您的提交包
 
-When preparing evidence for audit submission:
+准备审计提交的证据时：
 
-1. **Create your Evidence Bundle**: Follow [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) to create EV records, Dictionary, Summary, and Change Log.
-2. **Run the Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix all errors before proceeding.
-3. **Generate Checksums**: Create SHA-256 checksums for verification:
+1. **创建您的证据包**：按照 [证据包](../artifacts/evidence-bundle.md) 和 [最低证据要求](../artifacts/minimum-evidence.md) 创建 EV 记录、字典、摘要和变更日志。
+2. **运行验证器**：执行 `python validator/src/validate.py bundle/root.json` 检查结构一致性。在继续之前修复所有错误。
+3. **生成校验和**：创建 SHA-256 校验和用于验证：
 
     === "Linux"
 
@@ -120,28 +114,28 @@ When preparing evidence for audit submission:
             "$hash  $($_.Name)"
         } | Out-File SHA256SUMS.txt -Encoding UTF8
         ```
-4. **Package**: Create a zip archive of your bundle directory.
-5. **Document version alignment**: Note which AIMO Standard release (e.g., `v1.0.0`) your evidence aligns with.
-6. **Deliver**: Provide the package, checksums, and version reference to your auditor.
+4. **打包**：创建您的包目录的 zip 存档。
+5. **记录版本对齐**：记录您的证据对齐的 AIMO 标准发布版本（例如 `v1.0.0`）。
+6. **交付**：将包、校验和和版本引用提供给您的审计师。
 
-For the complete preparation guide, see [Trust Package](../governance/trust-package.md).
+有关完整的准备指南，请参阅 [信任包](../governance/trust-package.md)。
 
-## For auditors: Verification procedure
+## 审计师：验证程序
 
-Auditors receiving evidence submissions should verify integrity and structure:
+收到证据提交的审计师应验证完整性和结构：
 
-1. **Verify checksums**: Run checksum verification (Linux: `sha256sum -c`, macOS: `shasum -a 256 -c`, Windows: `Get-FileHash`) to confirm file integrity
-2. **Run validator**: Execute `python validator/src/validate.py bundle/root.json` to check structure
-3. **Confirm version**: Verify the stated AIMO Standard version exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
+1. **验证校验和**：运行校验和验证（Linux：`sha256sum -c`、macOS：`shasum -a 256 -c`、Windows：`Get-FileHash`）以确认文件完整性
+2. **运行验证器**：执行 `python validator/src/validate.py bundle/root.json` 检查结构
+3. **确认版本**：验证声明的 AIMO 标准版本存在于 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
 
-!!! tip "Obtain tools independently"
-    Auditors should download the validator and schemas directly from the official AIMO Standard release, not from the submitting party.
+!!! tip "独立获取工具"
+    审计师应直接从官方 AIMO 标准发布下载验证器和模式，而不是从提交方获取。
 
-For the full verification procedure, see [Trust Package](../governance/trust-package.md).
+有关完整的验证程序，请参阅 [信任包](../governance/trust-package.md)。
 
-## Non-overclaim statement
+## 不过度声明声明
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "重要提示"
+    AIMO 标准支持**可解释性和证据就绪**。它**不**提供法律建议、保证合规或认证符合任何法规或框架。采用者必须根据权威文本验证声明，并在适当时获取专业建议。
 
-See [Responsibility Boundary](../governance/responsibility-boundary.md) for scope, assumptions, and adopter responsibilities.
+有关范围、假设和采用者责任，请参阅 [责任边界](../governance/responsibility-boundary.md)。

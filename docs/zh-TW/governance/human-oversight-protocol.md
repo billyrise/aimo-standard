@@ -1,101 +1,95 @@
 ---
-description: AIMO Human Oversight Protocol - Boundary between automated validation and human review. Machine vs. human judgment responsibilities in AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/human-oversight-protocol.md
-source_hash: 0a95f9e625c9d49f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 人工監督協議 - 自動化驗證和人工審查之間的邊界。AI 治理中機器與人工判斷的責任。
 ---
 
-# Human Oversight Protocol
+# 人工監督協議
 
-This page defines the boundary between what automated validation (Validator) can check and what requires human review (Human-in-the-Loop). It clarifies the responsibilities for machine vs. human judgment in AI governance evidence processes.
+本頁定義自動化驗證（驗證器）可以檢查的內容與需要人工審查（人機協作）的內容之間的邊界。它釐清 AI 治理證據流程中機器與人工判斷的責任。
 
-## Purpose
+## 目的
 
-Automated validation tools can efficiently check structural and syntactic correctness, but cannot replace human judgment for context-dependent decisions. This protocol:
+自動化驗證工具可以有效檢查結構和語法正確性，但無法取代依賴情境的決策所需的人工判斷。此協議：
 
-- Clarifies what the Validator can and cannot verify
-- Defines the scope of human review required for effective governance
-- Supports audit explanations by documenting the human oversight process
-- Provides a framework for organizations implementing AI governance workflows
+- 釐清驗證器可以和不能驗證的內容
+- 定義有效治理所需的人工審查範圍
+- 透過記錄人工監督流程來支援稽核說明
+- 為實施 AI 治理工作流程的組織提供框架
 
-## What automated validation can do (Validator scope)
+## 自動化驗證可以做的事（驗證器範圍）
 
-The AIMO Validator and similar automated tools can check:
+AIMO 驗證器和類似的自動化工具可以檢查：
 
-| Capability | Description |
+| 能力 | 說明 |
 | --- | --- |
-| **Completeness of required fields/documents** | Verify that all mandatory fields are present in manifests, EV records, and other artifacts |
-| **Structural consistency** | Validate references, IDs, and cross-links between artifacts (e.g., request_id → review_id) |
-| **Schema validation** | Check that JSON/YAML artifacts conform to defined schemas |
-| **Code format validation** | Verify that taxonomy codes match expected patterns (e.g., `UC-001`) |
-| **Integrity checks** | Validate hash format and presence (not recomputation against content) |
-| **Dictionary validation** | Confirm that codes exist in the taxonomy dictionary |
+| **必要欄位/文件的完整性** | 驗證清單、EV 記錄和其他人工產物中所有必要欄位是否存在 |
+| **結構一致性** | 驗證人工產物之間的參照、ID 和交叉連結（例如 request_id → review_id） |
+| **結構描述驗證** | 檢查 JSON/YAML 人工產物是否符合定義的結構描述 |
+| **代碼格式驗證** | 驗證分類代碼是否符合預期模式（例如 `UC-001`） |
+| **完整性檢查** | 驗證雜湊格式和存在（非針對內容重新計算） |
+| **字典驗證** | 確認代碼存在於分類字典中 |
 
-See [Validator](../standard/current/07-validator.md) for detailed validation rules and reference implementation.
+請參閱[驗證器](../standard/current/07-validator.md)了解詳細的驗證規則和參考實作。
 
-## What requires human review (Human-in-the-Loop scope)
+## 需要人工審查的內容（人機協作範圍）
 
-The following areas require human judgment and cannot be automated:
+以下領域需要人工判斷，無法自動化：
 
-| Capability | Description |
+| 能力 | 說明 |
 | --- | --- |
-| **Context-dependent risk judgment** | Assessing business, ethical, and operational risks based on organizational context |
-| **Exception approval rationale** | Evaluating whether an exception is justified and compensating controls are adequate |
-| **Remediation decision-making** | Prioritizing fixes, allocating resources, and determining timelines |
-| **Policy trade-offs** | Balancing competing requirements (e.g., speed vs. thoroughness, cost vs. risk) |
-| **Residual risk acceptance** | Deciding whether remaining risks are acceptable after controls |
-| **Cross-domain impact assessment** | Evaluating implications for legal, HR, operations, and other functions |
-| **Content accuracy verification** | Confirming that evidence content is factually correct and complete |
-| **Stakeholder communication** | Explaining decisions to auditors, regulators, and leadership |
+| **依賴情境的風險判斷** | 根據組織情境評估業務、倫理和營運風險 |
+| **例外核准理由** | 評估例外是否合理，補償控制是否充分 |
+| **補救決策** | 優先處理修復、分配資源和確定時程 |
+| **政策權衡** | 平衡競爭性要求（例如速度與徹底性、成本與風險） |
+| **殘餘風險接受** | 決定控制後的剩餘風險是否可接受 |
+| **跨領域影響評估** | 評估對法律、人力資源、營運和其他功能的影響 |
+| **內容準確性驗證** | 確認證據內容在事實上正確且完整 |
+| **利害關係人溝通** | 向稽核員、監管機構和領導層解釋決策 |
 
-## Responsibility boundary
+## 責任邊界
 
-| Aspect | Validator (Machine) | Human Reviewer |
+| 面向 | 驗證器（機器） | 人工審查者 |
 | --- | --- | --- |
-| **Structure** | ✓ Can verify | Review if flagged |
-| **Completeness** | ✓ Can verify fields | Verify content adequacy |
-| **Format** | ✓ Can verify | — |
-| **Risk judgment** | ✗ Cannot assess | ✓ Must assess |
-| **Exception approval** | ✗ Cannot decide | ✓ Must decide |
-| **Remediation priority** | ✗ Cannot prioritize | ✓ Must prioritize |
-| **Legal interpretation** | ✗ Cannot interpret | ✓ Must verify with counsel |
-| **Audit conclusion** | ✗ Cannot conclude | ✓ Auditor responsibility |
+| **結構** | ✓ 可以驗證 | 如被標記則審查 |
+| **完整性** | ✓ 可以驗證欄位 | 驗證內容充分性 |
+| **格式** | ✓ 可以驗證 | — |
+| **風險判斷** | ✗ 無法評估 | ✓ 必須評估 |
+| **例外核准** | ✗ 無法決定 | ✓ 必須決定 |
+| **補救優先順序** | ✗ 無法排定優先順序 | ✓ 必須排定優先順序 |
+| **法律解釋** | ✗ 無法解釋 | ✓ 必須與法律顧問確認 |
+| **稽核結論** | ✗ 無法得出結論 | ✓ 稽核員責任 |
 
-!!! note "Complementary roles"
-    Validator and human review are **complementary**, not alternatives. Validator ensures structural consistency before human review; human review ensures contextual appropriateness.
+!!! note "互補角色"
+    驗證器和人工審查是**互補的**，而非替代方案。驗證器在人工審查前確保結構一致性；人工審查確保情境適當性。
 
-## Evidence expectations
+## 證據期望
 
-Organizations implementing human oversight should document:
+實施人工監督的組織應記錄：
 
-| Evidence Type | Description |
+| 證據類型 | 說明 |
 | --- | --- |
-| **Review record** | Who reviewed, when, and what decision was made |
-| **Approval rationale** | Why the decision was made (especially for exceptions) |
-| **Escalation record** | When and why issues were escalated to higher authority |
-| **Remediation plan** | Planned actions, owners, and timelines for addressing issues |
-| **Sign-off** | Formal attestation that review was completed |
+| **審查記錄** | 誰審查、何時審查以及做了什麼決定 |
+| **核准理由** | 為什麼做出該決定（特別是對於例外） |
+| **上報記錄** | 何時以及為什麼將問題上報給更高權限 |
+| **補救計畫** | 計劃的行動、負責人和處理問題的時程 |
+| **簽核** | 正式證明審查已完成 |
 
-These records should be included in the Evidence Bundle per [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
+這些記錄應根據[最低證據要求](../artifacts/minimum-evidence.md)納入證據包中。
 
-## Non-overclaim
+## 不過度聲明
 
-!!! warning "Important"
-    This protocol defines a **framework for documenting human oversight**. It does **not**:
+!!! warning "重要"
+    此協議定義了**記錄人工監督的框架**。它**不會**：
 
-    - Provide legal advice or regulatory interpretation
-    - Guarantee compliance with any regulation or standard
-    - Replace qualified human judgment with automated decisions
-    - Prescribe specific organizational processes
+    - 提供法律建議或法規解釋
+    - 保證符合任何法規或標準
+    - 用自動化決策取代合格的人工判斷
+    - 規定特定的組織流程
 
-    Organizations must adapt this framework to their specific context, risk profile, and regulatory requirements.
+    組織必須根據其特定情境、風險概況和法規要求調整此框架。
 
-## Related pages
+## 相關頁面
 
-- [Validator](../standard/current/07-validator.md) — automated validation rules and reference implementation
-- [Responsibility Boundary](responsibility-boundary.md) — what AIMO provides vs. adopter responsibilities
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level evidence checklist
-- [Trust Package](trust-package.md) — auditor-ready materials hub
+- [驗證器](../standard/current/07-validator.md) — 自動化驗證規則和參考實作
+- [責任邊界](responsibility-boundary.md) — AIMO 提供的內容與採用者責任
+- [最低證據要求](../artifacts/minimum-evidence.md) — 必要層級證據檢查清單
+- [信任套件](trust-package.md) — 稽核員就緒材料中心

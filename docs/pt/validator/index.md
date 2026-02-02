@@ -1,40 +1,34 @@
 ---
-description: AIMO Validator hub - Validation tooling quickstart. Install, run, and interpret results in 30 seconds. Evidence pack validation and compliance checks.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/validator/index.md
-source_hash: cd550ba293855924
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Hub do Validador AIMO - Quickstart de ferramentas de validação. Instale, execute e interprete resultados em 30 segundos. Validação de evidence pack e verificações de conformidade.
 ---
 
-# Validator
+# Validador
 
-This page is a hub for validation tooling and rules. The normative specification for the validator and its rules is in the Standard.
+Esta página é um hub para ferramentas e regras de validação. A especificação normativa do validador e suas regras está no Padrão.
 
-## Quickstart (30 seconds)
+## Quickstart (30 segundos)
 
-**1. Prerequisites**
+**1. Pré-requisitos**
 
 ```bash
-pip install jsonschema   # if not already installed
+pip install jsonschema   # se não estiver instalado
 ```
 
-**2. Run validation against a sample bundle**
+**2. Execute validação contra um pacote de amostra**
 
 ```bash
 python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 ```
 
-**3. Read the report and fix errors/warnings**
+**3. Leia o relatório e corrija erros/avisos**
 
-Example output (success):
+Saída de exemplo (sucesso):
 
 ```
 OK
 ```
 
-Example output (failure):
+Saída de exemplo (falha):
 
 ```
 Schema validation failed:
@@ -43,29 +37,29 @@ Schema validation failed:
 <root>: 'evidence' is a required property
 ```
 
-Exit codes: `0` = success, `1` = validation errors, `2` = usage error.
+Códigos de saída: `0` = sucesso, `1` = erros de validação, `2` = erro de uso.
 
 ---
 
-## What it checks
+## O que verifica
 
-- **Schema validation**: root object, dictionary, and evidence conform to JSON Schema
-- **Dictionary consistency**: all codes exist in taxonomy dictionary
-- **Code status**: warns for deprecated codes, errors for removed codes
+- **Validação de schema**: objeto raiz, dicionário e evidências conformam a JSON Schema
+- **Consistência de dicionário**: todos os códigos existem no dicionário de taxonomia
+- **Status de código**: avisa para códigos deprecated, erros para códigos removidos
 
-## What it does NOT check
+## O que NÃO verifica
 
-- **Content accuracy**: validator checks structure, not meaning
-- **Compliance guarantee**: passing validation does not guarantee regulatory compliance
-- **Human judgment**: context-dependent decisions require human review (see [Human Oversight Protocol](../governance/human-oversight-protocol.md))
-- **Automatic log collection**: validator validates submitted evidence; it does not collect logs
+- **Precisão de conteúdo**: validador verifica estrutura, não significado
+- **Garantia de conformidade**: passar validação não garante conformidade regulatória
+- **Julgamento humano**: decisões dependentes de contexto requerem revisão humana (veja [Protocolo de Supervisão Humana](../governance/human-oversight-protocol.md))
+- **Coleta automática de logs**: validador valida evidências submetidas; não coleta logs
 
 ---
 
-## Resources
+## Recursos
 
-- **Specification**: [Standard > Current > Validator](../standard/current/07-validator.md) — rules, reference checks, and how validation relates to evidence.
-- **Rules and implementation**: repository `validator/rules/` (checks), `validator/src/` (reference implementation). Run and CI usage are described in the spec.
-- **Interpretation**: what a validation "fail" means for auditors (explained in the spec).
+- **Especificação**: [Padrão > Atual > Validador](../standard/current/07-validator.md) — regras, verificações de referência e como validação se relaciona com evidências.
+- **Regras e implementação**: repositório `validator/rules/` (checks), `validator/src/` (implementação de referência). Execução e uso de CI estão descritos na especificação.
+- **Interpretação**: o que uma "falha" de validação significa para auditores (explicado na especificação).
 
-For conformance and artifact usage, see [Conformance](../conformance/index.md) and [Artifacts](../artifacts/index.md).
+Para conformidade e uso de artefatos, veja [Conformidade](../conformance/index.md) e [Artefatos](../artifacts/index.md).

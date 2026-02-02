@@ -1,108 +1,102 @@
 ---
-description: AIMO Standard contribution guide - How to contribute code, documentation, and translations. Issue and PR guidelines.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/contributing.md
-source_hash: 09ff722418d2f2b4
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 기여 가이드 - 코드, 문서 및 번역 기여 방법. 이슈 및 PR 지침.
 ---
 
-# Contributing
+# 기여하기
 
-This page provides guidelines for contributing to AIMO Standard.
+이 페이지는 AIMO 표준에 기여하기 위한 지침을 제공합니다.
 
-## Quick Start
+## 빠른 시작
 
-1. Fork the repository
-2. Create a feature branch
-3. Make changes following the guidelines below
-4. Run quality checks
-5. Submit a pull request
+1. 저장소 포크
+2. 기능 브랜치 생성
+3. 아래 지침에 따라 변경
+4. 품질 검사 실행
+5. 풀 리퀘스트 제출
 
-## Key Principles
+## 핵심 원칙
 
-| Principle | Description |
+| 원칙 | 설명 |
 | --------- | ----------- |
-| English is canonical | Edit `docs/en/` first, then update `docs/ja/` |
-| SSOT | This repository is the single source of truth |
-| No manual edits to generated files | Edit sources, regenerate, commit |
-| All changes via PR | Even maintainers use pull requests |
+| 영어가 정본 | 먼저 `docs/en/`을 편집한 후 `docs/ja/` 업데이트 |
+| SSOT | 이 저장소가 단일 진실 공급원 |
+| 생성 파일 수동 편집 금지 | 소스 편집, 재생성, 커밋 |
+| 모든 변경은 PR을 통해 | 메인테이너도 풀 리퀘스트 사용 |
 
-## Quality Checks
+## 품질 검사
 
-Before submitting a PR, run:
+PR 제출 전 실행:
 
 ```bash
-# Activate virtual environment
+# 가상 환경 활성화
 source .venv/bin/activate
 
-# Run lints
+# 린트 실행
 python tooling/checks/lint_i18n.py
 python tooling/checks/lint_schema.py
 python tooling/audit/baseline_audit.py --check
 
-# Build documentation
+# 문서 빌드
 mkdocs build --strict
 ```
 
-## Change Types
+## 변경 유형
 
-| Type | Examples | Review Requirements |
+| 유형 | 예시 | 리뷰 요구사항 |
 | ---- | -------- | ------------------- |
-| Normative | Schema changes, requirements | Maintainer + discussion |
-| Non-normative | Typos, clarifications | Maintainer approval |
-| i18n | Translations | Structure must match EN |
-| Tooling | CI/CD, scripts | Maintainer approval |
+| 규범적 | 스키마 변경, 요구사항 | 메인테이너 + 토론 |
+| 비규범적 | 오타, 명확화 | 메인테이너 승인 |
+| i18n | 번역 | 구조가 EN과 일치해야 함 |
+| 도구 | CI/CD, 스크립트 | 메인테이너 승인 |
 
-## i18n Guidelines
+## i18n 지침
 
-### Update Order
+### 업데이트 순서
 
-1. Edit English source (`docs/en/...`)
-2. Update Japanese translation (`docs/ja/...`)
-3. Run `lint_i18n.py` to verify consistency
-4. Commit both together
+1. 영어 소스 편집 (`docs/en/...`)
+2. 일본어 번역 업데이트 (`docs/ja/...`)
+3. `lint_i18n.py` 실행하여 일관성 확인
+4. 둘 다 함께 커밋
 
-### Structure Requirements
+### 구조 요구사항
 
-- Same file names in both languages
-- Same heading hierarchy
-- Same page count per section
+- 양 언어에서 동일한 파일 이름
+- 동일한 제목 계층 구조
+- 섹션당 동일한 페이지 수
 
-## PR Checklist
+## PR 체크리스트
 
-When submitting a PR, verify:
+PR 제출 시 확인:
 
-- [ ] Change type identified (docs / schema / examples / tooling)
-- [ ] Breaking change assessment completed
-- [ ] i18n: EN and JA updated together (if applicable)
-- [ ] Quality checks pass
-- [ ] Related issues linked
+- [ ] 변경 유형 식별됨 (docs / schema / examples / tooling)
+- [ ] 호환성 깨는 변경 평가 완료
+- [ ] i18n: EN과 JA 함께 업데이트됨 (해당시)
+- [ ] 품질 검사 통과
+- [ ] 관련 이슈 연결됨
 
-## Breaking Changes
+## 호환성 깨는 변경
 
-Breaking changes require:
+호환성 깨는 변경은 다음이 필요합니다:
 
-1. Issue discussion before implementation
-2. Version bump per [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)
-3. Changelog entry with migration guidance
+1. 구현 전 이슈 토론
+2. [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)에 따른 버전 업
+3. 마이그레이션 지침이 포함된 변경로그 항목
 
-## Conformance Claim Updates
+## 적합성 주장 업데이트
 
-To add or modify conformance claims:
+적합성 주장을 추가 또는 수정하려면:
 
-1. Update the coverage map YAML
-2. Update corresponding documentation pages
-3. Run validator tests
-4. Document the mapping rationale
+1. 커버리지 맵 YAML 업데이트
+2. 해당 문서 페이지 업데이트
+3. 검증기 테스트 실행
+4. 매핑 근거 문서화
 
-## Full Guidelines
+## 전체 지침
 
-See [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) for the root-level guide.
+루트 수준 가이드는 [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md)를 참조하세요.
 
-## Related Pages
+## 관련 페이지
 
-- [Governance](index.md) — Project governance
-- [Localization Guide](../contributing/localization.md) — i18n details
-- [Responsibility Boundary](responsibility-boundary.md) — What AIMO provides
+- [거버넌스](index.md) — 프로젝트 거버넌스
+- [현지화 가이드](../contributing/localization.md) — i18n 세부사항
+- [책임 경계](responsibility-boundary.md) — AIMO가 제공하는 것

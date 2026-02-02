@@ -1,92 +1,86 @@
 ---
-description: AIMO trademark guidelines - Usage rules for AIMO marks, conformance badge requirements, and branding guidelines.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/trademarks.md
-source_hash: db2914d62c048a0b
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Markenrichtlinien - Nutzungsregeln für AIMO-Marken, Konformitäts-Badge-Anforderungen und Branding-Richtlinien.
 ---
 
-# Trademarks
+# Marken
 
-This page documents trademark usage guidelines for AIMO-related marks.
+Diese Seite dokumentiert die Richtlinien zur Markennutzung für AIMO-bezogene Marken.
 
-## Covered Marks
+## Abgedeckte Marken
 
-| Mark | Type |
+| Marke | Typ |
 | ---- | ---- |
-| AIMO | Word mark |
-| AIMO Standard | Word mark |
-| AIMOaaS | Word mark |
-| Certified AIMO | Word mark (reserved) |
+| AIMO | Wortmarke |
+| AIMO Standard | Wortmarke |
+| AIMOaaS | Wortmarke |
+| Certified AIMO | Wortmarke (reserviert) |
 
-## Trademark Ownership
+## Markeninhaberschaft
 
-**AIMOaaS is a trademark of RISEby inc. (trademark application pending).**
+**AIMOaaS ist eine Marke von RISEby inc. (Markenanmeldung anhängig).**
 
-## Marking Guidance
+## Kennzeichnungshinweise
 
-While trademark applications are pending:
+Während Markenanmeldungen anhängig sind:
 
-- **Permitted**: "trademark application pending", "TM" symbol (optional)
-- **Prohibited**: "Registered trademark", ® symbol, registration numbers
+- **Erlaubt**: "Markenanmeldung anhängig", "TM"-Symbol (optional)
+- **Verboten**: "Eingetragene Marke", ®-Symbol, Registrierungsnummern
 
-See the full policy for details.
+Siehe die vollständige Richtlinie für Details.
 
-## Permitted Uses
+## Erlaubte Verwendungen
 
-### Descriptive References
+### Beschreibende Verweise
 
-You may use AIMO marks to describe compatibility:
+Sie dürfen AIMO-Marken verwenden, um Kompatibilität zu beschreiben:
 
-- "Compatible with AIMO Standard"
-- "Implements AIMO Standard v0.0.1"
-- "Exports evidence in AIMO Standard format"
+- "Kompatibel mit AIMO Standard"
+- "Implementiert AIMO Standard v0.0.1"
+- "Exportiert Evidence im AIMO Standard-Format"
 
-**Requirements**:
+**Anforderungen**:
 
-1. Meet all MUST requirements in the specification
-2. Pass the official validator without rule modifications
-3. State the specific version
+1. Alle MUSS-Anforderungen in der Spezifikation erfüllen
+2. Den offiziellen Validator ohne Regelmodifikationen bestehen
+3. Die spezifische Version angeben
 
-### Academic Use
+### Akademische Verwendung
 
-You may cite AIMO Standard in:
+Sie dürfen den AIMO Standard zitieren in:
 
-- Academic papers
-- Research publications
-- Training materials (with attribution)
+- Akademischen Arbeiten
+- Forschungspublikationen
+- Schulungsmaterialien (mit Quellenangabe)
 
-See [How to Cite](cite.md) for citation format.
+Siehe [Zitierung](cite.md) für das Zitierformat.
 
-## Prohibited Uses
+## Verbotene Verwendungen
 
-| Prohibited | Reason |
+| Verboten | Grund |
 | ---------- | ------ |
-| Using "AIMO" as your product/company name | Creates confusion |
-| Claiming "Certified AIMO" without certification | No certification program exists |
-| Using marks in domain names | Conflicts with official resources |
-| Implying official endorsement | Misleads users |
+| "AIMO" als Ihren Produkt-/Firmennamen verwenden | Erzeugt Verwirrung |
+| "Certified AIMO" ohne Zertifizierung beanspruchen | Kein Zertifizierungsprogramm existiert |
+| Marken in Domainnamen verwenden | Konflikte mit offiziellen Ressourcen |
+| Offizielle Unterstützung implizieren | Irreführung der Benutzer |
 
-## Conformance Claims
+## Konformitätsansprüche
 
-### What You Can Claim
+### Was Sie beanspruchen können
 
-> "This product implements AIMO Standard v0.0.1."
+> "Dieses Produkt implementiert AIMO Standard v0.0.1."
 
-### What You Cannot Claim
+### Was Sie nicht beanspruchen können
 
-- "AIMO Certified" (no certification program)
-- "Official AIMO implementation" (unless maintainer)
-- "Endorsed by AIMO Standard"
+- "AIMO Certified" (kein Zertifizierungsprogramm)
+- "Offizielle AIMO-Implementierung" (außer als Maintainer)
+- "Vom AIMO Standard unterstützt"
 
-## Full Policy
+## Vollständige Richtlinie
 
-See [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) for the complete trademark policy.
+Siehe [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) für die vollständige Markenrichtlinie.
 
-## Related Pages
+## Verwandte Seiten
 
-- [License](license.md) — Licensing terms
-- [How to Cite](cite.md) — Citation guidance
-- [Governance](index.md) — Project governance
+- [Lizenz](license.md) — Lizenzbedingungen
+- [Zitierung](cite.md) — Zitierhinweise
+- [Governance](index.md) — Projekt-Governance

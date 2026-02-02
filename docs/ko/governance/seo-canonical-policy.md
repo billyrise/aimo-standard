@@ -1,75 +1,69 @@
 ---
-description: AIMO SEO and canonical URL policy - URL canonicalization strategy for search engines, auditors, and external references.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/seo-canonical-policy.md
-source_hash: 3932484358683f0c
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO SEO 및 정식 URL 정책 - 검색 엔진, 감사자 및 외부 참조를 위한 URL 정식화 전략.
 ---
 
-# SEO & Canonical Policy
+# SEO 및 정식 URL 정책
 
-This page documents how AIMO Standard manages URL canonicalization for search engines, auditors, and external references.
+이 페이지는 AIMO 표준이 검색 엔진, 감사자 및 외부 참조를 위해 URL 정식화를 관리하는 방법을 문서화합니다.
 
-## Production vs Mirror Sites
+## 프로덕션 vs 미러 사이트
 
-| Environment | URL | Role | Indexable |
+| 환경 | URL | 역할 | 색인 가능 |
 |-------------|-----|------|-----------|
-| **Production** | `https://standard.aimoaas.com/` | Canonical site for all purposes | Yes |
-| GitHub Pages | `https://billyrise.github.io/aimo-standard/` | Temporary mirror / CI preview | No (noindex) |
+| **프로덕션** | `https://standard.aimoaas.com/` | 모든 목적의 정식 사이트 | 예 |
+| GitHub Pages | `https://billyrise.github.io/aimo-standard/` | 임시 미러 / CI 미리보기 | 아니요 (noindex) |
 
-**Key principle**: Production (`standard.aimoaas.com`) is the authoritative URL. GitHub Pages serves as a temporary backup/mirror and should not be cited in audit reports or external references.
+**핵심 원칙**: 프로덕션(`standard.aimoaas.com`)이 권위 있는 URL입니다. GitHub Pages는 임시 백업/미러 역할을 하며 감사 보고서나 외부 참조에 인용되어서는 안 됩니다.
 
-## Canonical URL Strategy
+## 정식 URL 전략
 
-### How Canonical URLs Are Generated
+### 정식 URL 생성 방법
 
-AIMO Standard uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) with the following configuration:
+AIMO 표준은 다음 구성으로 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)을 사용합니다:
 
 ```yaml
 # mkdocs.yml
 site_url: https://standard.aimoaas.com/
 ```
 
-This `site_url` setting ensures:
+이 `site_url` 설정은 다음을 보장합니다:
 
-1. **`<link rel="canonical">`** — Each generated HTML page includes a canonical link pointing to the Production URL.
-2. **`sitemap.xml`** — All URLs in the sitemap reference Production.
-3. **`robots.txt`** — Sitemap reference points to Production.
-4. **`hreflang` alternates** — Language alternates use Production URLs.
+1. **`<link rel="canonical">`** — 생성된 각 HTML 페이지에 프로덕션 URL을 가리키는 정식 링크가 포함됩니다.
+2. **`sitemap.xml`** — 사이트맵의 모든 URL이 프로덕션을 참조합니다.
+3. **`robots.txt`** — 사이트맵 참조가 프로덕션을 가리킵니다.
+4. **`hreflang` 대체** — 언어 대체가 프로덕션 URL을 사용합니다.
 
-### Language-Specific Canonicals
+### 언어별 정식 URL
 
-| Language | URL Pattern | Example |
+| 언어 | URL 패턴 | 예시 |
 |----------|-------------|---------|
-| English (default) | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
-| Japanese | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
+| 영어 (기본) | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
+| 일본어 | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
 
-Each language version is self-canonical and includes `hreflang` alternates to the other language(s) plus `x-default` pointing to the English version.
+각 언어 버전은 자체 정식이며 다른 언어에 대한 `hreflang` 대체와 영어 버전을 가리키는 `x-default`를 포함합니다.
 
-### Versioned Documentation and Canonicals
+### 버전화된 문서와 정식 URL
 
-AIMO Standard uses [mike](https://github.com/jimporter/mike) for documentation versioning with `alias_type: redirect`:
+AIMO 표준은 `alias_type: redirect`로 문서 버전화를 위해 [mike](https://github.com/jimporter/mike)를 사용합니다:
 
-| Version | URL Pattern | Canonical Status | Indexable |
+| 버전 | URL 패턴 | 정식 상태 | 색인 가능 |
 |---------|-------------|------------------|-----------|
-| Versioned (e.g., `0.0.1`) | `https://standard.aimoaas.com/0.0.1/` | Canonical for that specific version | Yes |
-| `latest` (alias) | `https://standard.aimoaas.com/latest/` | **Redirects** to current release | Yes (via target) |
-| `dev` | `https://standard.aimoaas.com/dev/` | Preview only | **No** (noindex enforced) |
+| 버전화됨 (예: `0.0.1`) | `https://standard.aimoaas.com/0.0.1/` | 해당 특정 버전의 정식 | 예 |
+| `latest` (별칭) | `https://standard.aimoaas.com/latest/` | 현재 릴리스로 **리디렉션** | 예 (대상을 통해) |
+| `dev` | `https://standard.aimoaas.com/dev/` | 미리보기 전용 | **아니요** (noindex 강제) |
 
-**Critical distinctions:**
+**중요한 구분:**
 
-| Aspect | `/X.Y.Z/` | `/latest/` | `/dev/` |
+| 측면 | `/X.Y.Z/` | `/latest/` | `/dev/` |
 |--------|-----------|------------|---------|
-| Content | Frozen snapshot | Redirect to `/X.Y.Z/` | Main branch preview |
-| Mutable | Never | Pointer updates on release | Continuous |
-| For audits | **Yes (preferred)** | Yes (resolves to frozen) | **Never** |
-| SEO | Indexed | Indexed via target | noindex |
+| 내용 | 고정된 스냅샷 | `/X.Y.Z/`로 리디렉션 | main 브랜치 미리보기 |
+| 변경 가능 | 절대 안 됨 | 릴리스 시 포인터 업데이트 | 지속적 |
+| 감사용 | **예 (선호)** | 예 (고정으로 해결) | **절대 안 됨** |
+| SEO | 색인됨 | 대상을 통해 색인 | noindex |
 
-**How alias_type: redirect works:**
+**alias_type: redirect 작동 방식:**
 
-Instead of copying files, `/latest/` contains redirect pages pointing to the current release:
+파일을 복사하는 대신 `/latest/`에는 현재 릴리스를 가리키는 리디렉션 페이지가 포함됩니다:
 
 ```html
 <!-- /latest/index.html -->
@@ -77,57 +71,57 @@ Instead of copying files, `/latest/` contains redirect pages pointing to the cur
 <link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
 ```
 
-This ensures:
+이것은 다음을 보장합니다:
 
-1. **No content drift** — `/latest/` cannot diverge from the release it points to.
-2. **No duplicate content** — Search engines see one canonical source.
-3. **Atomic updates** — Changing the alias updates all pages at once.
+1. **내용 드리프트 없음** — `/latest/`가 가리키는 릴리스에서 분기될 수 없습니다.
+2. **중복 콘텐츠 없음** — 검색 엔진은 하나의 정식 소스를 봅니다.
+3. **원자적 업데이트** — 별칭 변경이 모든 페이지를 한 번에 업데이트합니다.
 
-!!! info "Git Tag vs. Site Path"
-    Git release tags use `v` prefix (e.g., `v0.0.1`), but site paths omit the `v` (e.g., `/0.0.1/`). This is standard practice for documentation versioning tools like mike.
+!!! info "Git 태그 vs. 사이트 경로"
+    Git 릴리스 태그는 `v` 접두사를 사용하지만 (예: `v0.0.1`), 사이트 경로는 `v`를 생략합니다 (예: `/0.0.1/`). 이것은 mike와 같은 문서 버전화 도구의 표준 관행입니다.
 
-## Auditor Guidance: Which URL to Cite
+## 감사자 지침: 인용할 URL
 
-When citing AIMO Standard in audit reports, compliance documentation, or external references:
+감사 보고서, 컴플라이언스 문서 또는 외부 참조에서 AIMO 표준을 인용할 때:
 
-### Recommended Citation URLs
+### 권장 인용 URL
 
-| Use Case | Recommended URL |
+| 사용 사례 | 권장 URL |
 |----------|-----------------|
-| Current stable specification | `https://standard.aimoaas.com/latest/standard/current/` |
-| Specific version (for audit) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
-| Governance & policies | `https://standard.aimoaas.com/latest/governance/` |
-| Trust Package | `https://standard.aimoaas.com/latest/governance/trust-package/` |
+| 현재 안정 사양 | `https://standard.aimoaas.com/latest/standard/current/` |
+| 특정 버전 (감사용) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
+| 거버넌스 및 정책 | `https://standard.aimoaas.com/latest/governance/` |
+| 신뢰 패키지 | `https://standard.aimoaas.com/latest/governance/trust-package/` |
 
-### Do NOT Cite
+### 인용하지 말아야 할 것
 
-- ~~`https://billyrise.github.io/aimo-standard/`~~ — Temporary mirror, not canonical
-- ~~`https://standard.aimoaas.com/dev/`~~ — Development version, subject to change
+- ~~`https://billyrise.github.io/aimo-standard/`~~ — 임시 미러, 정식 아님
+- ~~`https://standard.aimoaas.com/dev/`~~ — 개발 버전, 변경될 수 있음
 
-### Versioned Citation for Immutability
+### 불변성을 위한 버전화된 인용
 
-For formal audits requiring immutable references, use versioned snapshot URLs:
+불변 참조가 필요한 공식 감사의 경우 버전화된 스냅샷 URL을 사용하세요:
 
 ```
 https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 ```
 
-Versioned snapshots are frozen at release time and will not change.
+버전화된 스냅샷은 릴리스 시점에 고정되며 변경되지 않습니다.
 
-!!! note "URL Format"
-    Site paths use version numbers without the `v` prefix. For version `v1.0.0`, use `/1.0.0/` in URLs.
+!!! note "URL 형식"
+    사이트 경로는 `v` 접두사 없이 버전 번호를 사용합니다. 버전 `v1.0.0`의 경우 URL에서 `/1.0.0/`을 사용하세요.
 
-## Technical Implementation
+## 기술 구현
 
-### Generated HTML Example
+### 생성된 HTML 예시
 
-Every generated HTML page includes canonical and hreflang tags in the `<head>`:
+생성된 모든 HTML 페이지는 `<head>`에 정식 및 hreflang 태그를 포함합니다:
 
 ```html
-<!-- Canonical (always points to Production) -->
+<!-- 정식 (항상 프로덕션을 가리킴) -->
 <link rel="canonical" href="https://standard.aimoaas.com/latest/governance/">
 
-<!-- Language alternates -->
+<!-- 언어 대체 -->
 <link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/governance/">
 <link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/governance/">
 <link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/governance/">
@@ -142,66 +136,66 @@ Allow: /
 Sitemap: https://standard.aimoaas.com/sitemap.xml
 ```
 
-### Sitemap
+### 사이트맵
 
-The sitemap is generated by `mkdocs-static-i18n` plugin and includes:
+사이트맵은 `mkdocs-static-i18n` 플러그인에 의해 생성되며 다음을 포함합니다:
 
-- All Production URLs
-- `hreflang` alternates for each language
+- 모든 프로덕션 URL
+- 각 언어에 대한 `hreflang` 대체
 
-## Noindex Configuration
+## Noindex 구성
 
-### `/dev/` (Preview) — Mandatory Noindex
+### `/dev/` (미리보기) — 필수 Noindex
 
-The `/dev/` version contains unreleased content and MUST have noindex to prevent:
+`/dev/` 버전은 릴리스되지 않은 콘텐츠를 포함하며 다음을 방지하기 위해 noindex가 반드시 있어야 합니다:
 
-- Search engines indexing unstable content
-- Users finding `/dev/` via search and citing it in audits
-- Confusion between released and unreleased content
+- 검색 엔진이 불안정한 콘텐츠를 색인
+- 사용자가 검색을 통해 `/dev/`를 찾고 감사에 인용
+- 릴리스된 콘텐츠와 릴리스되지 않은 콘텐츠 간의 혼동
 
-**Implementation:**
+**구현:**
 
-The `deploy-dev.yml` workflow injects a noindex meta tag into all `/dev/` pages via theme override:
+`deploy-dev.yml` 워크플로우는 테마 오버라이드를 통해 모든 `/dev/` 페이지에 noindex 메타 태그를 삽입합니다:
 
 ```html
-<!-- Injected into /dev/ pages only -->
+<!-- /dev/ 페이지에만 삽입 -->
 <meta name="robots" content="noindex, nofollow">
 ```
 
-### GitHub Pages Mirror — Noindex
+### GitHub Pages 미러 — Noindex
 
-When deploying to GitHub Pages (the mirror site at `billyrise.github.io`), all pages should have noindex to prevent duplicate indexing:
+GitHub Pages (미러 사이트 `billyrise.github.io`)에 배포할 때 중복 색인을 방지하기 위해 모든 페이지에 noindex가 있어야 합니다:
 
 ```html
 <meta name="robots" content="noindex, nofollow">
 ```
 
-This ensures search engines always prioritize the Production canonical URLs at `standard.aimoaas.com`.
+이것은 검색 엔진이 항상 `standard.aimoaas.com`의 프로덕션 정식 URL을 우선시하도록 보장합니다.
 
-## Verification
+## 검증
 
-After each build, you can verify canonical URLs by:
+각 빌드 후 다음을 통해 정식 URL을 확인할 수 있습니다:
 
-1. **Inspecting generated HTML** — Check `site/` directory after `mkdocs build`
-2. **Using browser DevTools** — Inspect `<head>` section on deployed pages
-3. **Google Search Console** — Monitor which URLs are indexed
+1. **생성된 HTML 검사** — `mkdocs build` 후 `site/` 디렉토리 확인
+2. **브라우저 DevTools 사용** — 배포된 페이지의 `<head>` 섹션 검사
+3. **Google Search Console** — 어떤 URL이 색인되는지 모니터링
 
-Example verification command:
+예시 검증 명령:
 
 ```bash
 mkdocs build
 grep -r 'rel="canonical"' site/ | head -5
 ```
 
-Expected output should show Production URLs, e.g.:
+예상 출력은 프로덕션 URL을 표시해야 합니다, 예:
 
 ```
 site/index.html:<link rel="canonical" href="https://standard.aimoaas.com/">
 site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.com/governance/">
 ```
 
-## Related Documentation
+## 관련 문서
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Releases](../releases/index.md) — Version history and changelog
-- [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Version policy
+- [신뢰 패키지](trust-package.md) — 감사자 준비 자료
+- [릴리스](../releases/index.md) — 버전 이력 및 변경로그
+- [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 버전 정책

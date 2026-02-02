@@ -1,155 +1,149 @@
 ---
-description: AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/08-changelog.md
-source_hash: 1876c04a8b22d480
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 변경로그 및 버전 관리 정책. 버전 이력, 시맨틱 버전 관리 규칙 및 릴리스 간 마이그레이션 지침을 문서화합니다.
 ---
 
-# Changelog
+# 변경로그
 
-This section documents the versioning policy and change history for the AIMO Standard.
+이 섹션은 AIMO 표준의 버전 관리 정책 및 변경 이력을 문서화합니다.
 
-## Versioning Policy
+## 버전 관리 정책
 
-AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
+AIMO 표준은 [시맨틱 버전 관리](https://semver.org/) (SemVer)를 따릅니다:
 
-### Version Format: MAJOR.MINOR.PATCH
+### 버전 형식: MAJOR.MINOR.PATCH
 
-| Change Type | Version Bump | Examples |
+| 변경 유형 | 버전 범프 | 예시 |
 | --- | --- | --- |
-| **MAJOR** | X.0.0 | Breaking schema changes, code removal, required field changes |
-| **MINOR** | 0.X.0 | New codes, new optional fields, new dimensions (optional) |
-| **PATCH** | 0.0.X | Documentation fixes, definition clarifications, validator bug fixes |
+| **MAJOR** | X.0.0 | 호환성 깨는 스키마 변경, 코드 제거, 필수 필드 변경 |
+| **MINOR** | 0.X.0 | 새 코드, 새 선택적 필드, 새 차원 (선택적) |
+| **PATCH** | 0.0.X | 문서 수정, 정의 명확화, 검증기 버그 수정 |
 
-### Breaking vs. Compatible Changes
+### 호환성 깨는 vs. 호환 가능 변경
 
-**Breaking Changes (MAJOR):**
+**호환성 깨는 변경 (MAJOR):**
 
-- Removal of codes (after deprecation period)
-- Changes to required fields in schemas
-- Structural changes that invalidate existing documents
-- Changes to code format patterns
+- 코드 제거 (폐기 기간 후)
+- 스키마의 필수 필드 변경
+- 기존 문서를 무효화하는 구조적 변경
+- 코드 형식 패턴 변경
 
-**Backward Compatible Changes (MINOR):**
+**이전 호환 변경 (MINOR):**
 
-- Adding new codes to existing dimensions
-- Adding new optional fields to schemas
-- Adding new optional dimensions
-- Adding new evidence templates
+- 기존 차원에 새 코드 추가
+- 스키마에 새 선택적 필드 추가
+- 새 선택적 차원 추가
+- 새 증거 템플릿 추가
 
-**Non-breaking Changes (PATCH):**
+**비호환성 변경 (PATCH):**
 
-- Documentation corrections
-- Clarification of existing definitions
-- Translation improvements
-- Validator bug fixes
+- 문서 수정
+- 기존 정의 명확화
+- 번역 개선
+- 검증기 버그 수정
 
-## Deprecation Policy
+## 폐기 정책
 
-### Deprecation Process
+### 폐기 프로세스
 
-1. **Mark as Deprecated**: Code or feature is marked with `status: deprecated` and `deprecated_in: X.Y.Z`
-2. **Deprecation Period**: At least one MINOR version must pass before removal
-3. **Provide Replacement**: If applicable, `replaced_by` indicates the replacement
-4. **Remove in MAJOR**: Removal occurs in the next MAJOR version
+1. **폐기로 표시**: 코드 또는 기능이 `status: deprecated` 및 `deprecated_in: X.Y.Z`로 표시됨
+2. **폐기 기간**: 제거 전 최소 하나의 MINOR 버전이 경과해야 함
+3. **대체 제공**: 해당하는 경우 `replaced_by`가 대체를 나타냄
+4. **MAJOR에서 제거**: 제거는 다음 MAJOR 버전에서 발생
 
-### Example Lifecycle
+### 예시 생명주기
 
 ```
-v0.0.1: FS-007 introduced (status: active)
-v0.1.0: FS-007 deprecated (status: deprecated, replaced_by: FS-008)
-v0.2.0: FS-007 still available with deprecation warning
-v1.0.0: FS-007 removed (status: removed)
+v0.0.1: FS-007 도입 (status: active)
+v0.1.0: FS-007 폐기 (status: deprecated, replaced_by: FS-008)
+v0.2.0: FS-007 여전히 폐기 경고와 함께 사용 가능
+v1.0.0: FS-007 제거 (status: removed)
 ```
 
-### Using Deprecated Codes
+### 폐기된 코드 사용
 
-- Deprecated codes remain valid for validation
-- Validator SHOULD emit a warning for deprecated codes
-- New implementations SHOULD use replacement codes
-- Existing documents MAY continue using deprecated codes until migration
+- 폐기된 코드는 검증에 유효한 상태 유지
+- 검증기는 폐기된 코드에 대해 경고를 내보내야 함(SHOULD)
+- 새 구현은 대체 코드를 사용해야 함(SHOULD)
+- 기존 문서는 마이그레이션까지 폐기된 코드를 계속 사용할 수 있음(MAY)
 
-## Release Artifacts
+## 릴리스 산출물
 
-Each official release includes:
+각 공식 릴리스에는 다음이 포함됩니다:
 
-| Artifact | Description |
+| 산출물 | 설명 |
 | --- | --- |
-| Versioned site snapshot | `https://standard.aimoaas.com/0.0.1/` |
-| PDF specification | `trust_package.pdf` |
-| Asset package (ZIP) | Schemas, templates, dictionary |
-| Checksums | SHA-256 hashes for integrity |
-| Changelog | This document |
+| 버전화된 사이트 스냅샷 | `https://standard.aimoaas.com/0.0.1/` |
+| PDF 사양 | `trust_package.pdf` |
+| 자산 패키지 (ZIP) | 스키마, 템플릿, 딕셔너리 |
+| 체크섬 | 무결성을 위한 SHA-256 해시 |
+| 변경로그 | 이 문서 |
 
-## Change History
+## 변경 이력
 
-### Version 0.0.1 (2026-02-02)
+### 버전 0.0.1 (2026-02-02)
 
-**Summary:** Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.
+**요약:** 8차원 코드 시스템, 증거 팩 템플릿 및 포괄적인 거버넌스 문서가 포함된 AIMO 표준 초기 릴리스.
 
-#### Added
+#### 추가됨
 
-**Code System (8 Dimensions)**
+**코드 시스템 (8개 차원)**
 
-| Dimension | Codes Added | Description |
+| 차원 | 추가된 코드 | 설명 |
 | --- | --- | --- |
-| FS | FS-001 to FS-006 | Functional Scope |
-| UC | UC-001 to UC-010 | Use Case Class |
-| DT | DT-001 to DT-008 | Data Type |
-| CH | CH-001 to CH-006 | Channel |
-| IM | IM-001 to IM-005 | Integration Mode |
-| RS | RS-001 to RS-005 | Risk Surface |
-| OB | OB-001 to OB-005 | Outcome / Benefit |
-| EV | EV-001 to EV-007 | Evidence Type |
+| FS | FS-001 ~ FS-006 | 기능 범위 |
+| UC | UC-001 ~ UC-010 | 사용 사례 분류 |
+| DT | DT-001 ~ DT-008 | 데이터 유형 |
+| CH | CH-001 ~ CH-006 | 채널 |
+| IM | IM-001 ~ IM-005 | 통합 모드 |
+| RS | RS-001 ~ RS-005 | 리스크 표면 |
+| OB | OB-001 ~ OB-005 | 결과 / 혜택 |
+| EV | EV-001 ~ EV-007 | 증거 유형 |
 
-**Schemas**
+**스키마**
 
-- `taxonomy_pack.schema.json`: Taxonomy pack definition
-- `changelog.schema.json`: Changelog entries
-- `evidence_pack_manifest.schema.json`: Evidence Pack manifests
-- `shadow-ai-discovery.schema.json`: Shadow AI discovery evidence
-- `agent-activity.schema.json`: Agent activity evidence
+- `taxonomy_pack.schema.json`: 분류체계 팩 정의
+- `changelog.schema.json`: 변경로그 항목
+- `evidence_pack_manifest.schema.json`: 증거 팩 매니페스트
+- `shadow-ai-discovery.schema.json`: Shadow AI 검색 증거
+- `agent-activity.schema.json`: 에이전트 활동 증거
 
-**Evidence Pack Templates (MVP)**
+**증거 팩 템플릿 (MVP)**
 
-- EV-01: System Overview
-- EV-02: Data Flow
-- EV-03: AI Inventory
-- EV-04: Risk & Impact Assessment
-- EV-05: Controls & Approvals
-- EV-06: Logging & Monitoring
-- EV-07: Incident & Exception Handling
+- EV-01: 시스템 개요
+- EV-02: 데이터 흐름
+- EV-03: AI 인벤토리
+- EV-04: 리스크 및 영향 평가
+- EV-05: 통제 및 승인
+- EV-06: 로깅 및 모니터링
+- EV-07: 인시던트 및 예외 처리
 
-**Documentation**
+**문서**
 
-- Taxonomy documentation with 8-dimension definitions
-- Code System format specification
-- Dictionary CSV format specification
-- Versioning and change policy
-- Validator MVP requirements
-- Human Oversight Protocol
-- Coverage Map (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
-- Trust Package
+- 8차원 정의가 있는 분류체계 문서
+- 코드 시스템 형식 사양
+- 딕셔너리 CSV 형식 사양
+- 버전 관리 및 변경 정책
+- 검증기 MVP 요구사항
+- 인간 감독 프로토콜
+- 커버리지 맵 (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+- 신뢰 패키지
 
-#### Backward Compatibility
+#### 이전 호환성
 
-This is the initial release; no backward compatibility concerns.
+이것은 초기 릴리스이므로 이전 호환성 문제가 없습니다.
 
 ---
 
-## Machine-Readable Changelog
+## 기계 판독 가능 변경로그
 
-A machine-readable changelog is available:
+기계 판독 가능 변경로그가 있습니다:
 
 - `changelog/changelog.json`
 
-This file follows the `changelog.schema.json` schema and can be parsed programmatically.
+이 파일은 `changelog.schema.json` 스키마를 따르며 프로그래밍 방식으로 파싱할 수 있습니다.
 
-## References
+## 참조
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions
-- [Dictionary](./05-dictionary.md) - Code dictionary
-- [Versioning Policy](../../governance/index.md) - Versioning policy (see VERSIONING.md in repository root)
+- [분류체계](./03-taxonomy.md) - 차원 정의
+- [딕셔너리](./05-dictionary.md) - 코드 딕셔너리
+- [버전 관리 정책](../../governance/index.md) - 버전 관리 정책 (저장소 루트의 VERSIONING.md 참조)

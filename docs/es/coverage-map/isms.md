@@ -1,37 +1,31 @@
 ---
-description: AIMO Standard to ISMS (ISO 27001/27002) mapping. Traceability between AIMO taxonomy and information security management system controls.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/isms.md
-source_hash: 7b194f9afc8f784e
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Mapeo de AIMO Standard a ISMS (ISO 27001/27002). Trazabilidad entre taxonomía AIMO y controles del sistema de gestión de seguridad de la información.
 ---
 
-# ISMS view (ISO/IEC 27001/27002) mapping
+# Vista ISMS (ISO/IEC 27001/27002) mapeo
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> Atajos de trazabilidad: Taxonomía → Requisitos Mínimos de Evidencia → Validador → Protocolo de Supervisión Humana.
 
-- [Taxonomy](../standard/current/03-taxonomy.md)
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- [Log Schemas](../artifacts/log-schemas/index.md)
-- [Validator](../validator/index.md)
-- [Human Oversight Protocol](../governance/human-oversight-protocol.md)
+- [Taxonomía](../standard/current/03-taxonomy.md)
+- [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md)
+- [Esquemas de Registro](../artifacts/log-schemas/index.md)
+- [Validador](../validator/index.md)
+- [Protocolo de Supervisión Humana](../governance/human-oversight-protocol.md)
 
-This page maps selected ISO/IEC 27001/27002 themes (change management, access control, logging, evidence integrity) to AIMO evidence and artifacts. It is for explainability only; it does not guarantee conformity to ISO/IEC 27001 or 27002. Verify against the published standards.
+Esta página mapea temas seleccionados de ISO/IEC 27001/27002 (gestión de cambios, control de acceso, registro, integridad de evidencia) a evidencia y artefactos AIMO. Es solo para explicabilidad; no garantiza conformidad con ISO/IEC 27001 o 27002. Verifique contra los estándares publicados.
 
 
-## Mapping table
+## Tabla de mapeo
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| Referencia del marco / tema | Evidencia AIMO / dónde en AIMO | Paquete de Evidencia / Evidencia Mínima | Artefactos y validación | Notas |
 | --- | --- | --- | --- | --- |
-| A.5.24 – Information security in project management | [Scope](../standard/current/02-scope.md) | request, review | templates/ev/ | Informative; verify against official text. |
-| A.5.29 – Information security during disruption | [Minimum Evidence](../artifacts/minimum-evidence.md) | exception, renewal | templates/ev/ev_template.md | Informative; verify against official text. |
-| A.5.30 – ICT readiness for business continuity | [Overview](../standard/current/01-overview.md) | Summary; integrity | — | Informative; verify against official text. |
-| A.8.1 – Inventory of assets | [Dictionary](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against official text. |
-| A.8.2 – Information classification | [Taxonomy](../standard/current/03-taxonomy.md) | Dictionary; review | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against official text. |
-| A.8.3 – Access control | [Minimum Evidence](../artifacts/minimum-evidence.md) | —; integrity | — | Informative; verify against official text. |
-| A.8.15 – Logging | [EV Template](../standard/current/06-ev-template.md) | EV, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informative; verify against official text. |
-| A.8.16 – Monitoring activities | [Minimum Evidence](../artifacts/minimum-evidence.md) | EV, change_log; change_log, integrity | templates/ev/ | Informative; verify against official text. |
-| A.8.32 – Change management | [Evidence Bundle](../artifacts/evidence-bundle.md) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | Informative; verify against official text. |
-| A.8.33 – Test information | [Validator](../standard/current/07-validator.md) | EV | validator/rules/, validator/src/; schema_validate_ev | Informative; verify against official text. |
+| A.5.24 – Seguridad de la información en gestión de proyectos | [Alcance](../standard/current/02-scope.md) | solicitud, revisión | templates/ev/ | Informativo; verifique contra texto oficial. |
+| A.5.29 – Seguridad de la información durante interrupción | [Evidencia Mínima](../artifacts/minimum-evidence.md) | excepción, renovación | templates/ev/ev_template.md | Informativo; verifique contra texto oficial. |
+| A.5.30 – Preparación de TIC para continuidad del negocio | [Descripción General](../standard/current/01-overview.md) | Resumen; integridad | — | Informativo; verifique contra texto oficial. |
+| A.8.1 – Inventario de activos | [Diccionario](../standard/current/05-dictionary.md) | Diccionario, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informativo; verifique contra texto oficial. |
+| A.8.2 – Clasificación de información | [Taxonomía](../standard/current/03-taxonomy.md) | Diccionario; revisión | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informativo; verifique contra texto oficial. |
+| A.8.3 – Control de acceso | [Evidencia Mínima](../artifacts/minimum-evidence.md) | —; integridad | — | Informativo; verifique contra texto oficial. |
+| A.8.15 – Registro | [Plantilla EV](../standard/current/06-ev-template.md) | EV, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informativo; verifique contra texto oficial. |
+| A.8.16 – Actividades de monitoreo | [Evidencia Mínima](../artifacts/minimum-evidence.md) | EV, change_log; change_log, integridad | templates/ev/ | Informativo; verifique contra texto oficial. |
+| A.8.32 – Gestión de cambios | [Paquete de Evidencia](../artifacts/evidence-bundle.md) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | Informativo; verifique contra texto oficial. |
+| A.8.33 – Información de pruebas | [Validador](../standard/current/07-validator.md) | EV | validator/rules/, validator/src/; schema_validate_ev | Informativo; verifique contra texto oficial. |

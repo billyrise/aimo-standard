@@ -1,38 +1,32 @@
 ---
-description: AIMO Standard to EU AI Act mapping. Traceability between AIMO taxonomy codes and EU AI Act risk categories and requirements.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/eu-ai-act.md
-source_hash: 0cb113dcf0c1daa9
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Mapeamento AIMO Standard para EU AI Act. Rastreabilidade entre códigos de taxonomia AIMO e categorias de risco e requisitos do EU AI Act.
 ---
 
-# EU AI Act mapping
+# Mapeamento EU AI Act
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> Atalhos de rastreabilidade: Taxonomia → Requisitos Mínimos de Evidências → Validador → Protocolo de Supervisão Humana.
 
-- [Taxonomy](../standard/current/03-taxonomy.md)
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- [Log Schemas](../artifacts/log-schemas/index.md)
-- [Validator](../validator/index.md)
-- [Human Oversight Protocol](../governance/human-oversight-protocol.md)
+- [Taxonomia](../standard/current/03-taxonomy.md)
+- [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md)
+- [Schemas de Log](../artifacts/log-schemas/index.md)
+- [Validador](../validator/index.md)
+- [Protocolo de Supervisão Humana](../governance/human-oversight-protocol.md)
 
-This page maps selected EU AI Act themes (documentation, record-keeping, risk management, human oversight, transparency) to AIMO evidence and artifacts. It is high-level only and does **not** constitute legal advice or guarantee conformity. Verify against the official legal text.
+Esta página mapeia temas selecionados do EU AI Act (documentação, manutenção de registros, gestão de riscos, supervisão humana, transparência) para evidências e artefatos AIMO. É apenas de alto nível e **não** constitui aconselhamento jurídico nem garante conformidade. Verifique contra o texto legal oficial.
 
 
-## Mapping table
+## Tabela de mapeamento
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| Referência do framework / tópico | Evidência AIMO / onde no AIMO | Pacote de Evidências / Requisitos Mínimos de Evidências | Artefatos e validação | Notas |
 | --- | --- | --- | --- | --- |
-| Art 9 – Risk management (obligations) | [Scope](../standard/current/02-scope.md) | request, review, exception | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Art 10 – Data governance | [Dictionary](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | High-level only; not legal advice. Verify against official text. |
-| Art 11 – Documentation (high-risk) | [EV Template](../standard/current/06-ev-template.md), [Evidence Bundle](../artifacts/evidence-bundle.md) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; schema_validate_ev | High-level only; not legal advice. Verify against official text. |
-| Art 12 – Record-keeping | [Evidence Bundle](../artifacts/evidence-bundle.md), [Minimum Evidence](../artifacts/minimum-evidence.md) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | High-level only; not legal advice. Verify against official text. |
-| Art 13 – Transparency (user information) | [Scope](../standard/current/02-scope.md) | Summary, EV; review | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Art 14 – Human oversight | [Minimum Evidence](../artifacts/minimum-evidence.md) | review, exception; review, exception | templates/ev/ev_template.md | High-level only; not legal advice. Verify against official text. |
-| Art 17 – Risk management (high-risk) | [Scope](../standard/current/02-scope.md) | request, review, exception, renewal | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Art 26 – Transparency (limited risk) | [Scope](../standard/current/02-scope.md) | Summary, EV; review | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Art 29 – Documentation (general-purpose AI) | [EV Template](../standard/current/06-ev-template.md) | EV, Dictionary, Summary; request, review | schemas/jsonschema/; schema_validate_ev | High-level only; not legal advice. Verify against official text. |
-| Art 52 – Transparency (deployer) | [Minimum Evidence](../artifacts/minimum-evidence.md) | EV, Summary; review | templates/ev/ | High-level only; not legal advice. Verify against official text. |
-| Recitals – Accountability | [Evidence Bundle](../artifacts/evidence-bundle.md) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | High-level only; not legal advice. Verify against official text. |
+| Art 9 – Gestão de riscos (obrigações) | [Escopo](../standard/current/02-scope.md) | request, review, exception | templates/ev/ | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 10 – Governança de dados | [Dicionário](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 11 – Documentação (alto risco) | [Template EV](../standard/current/06-ev-template.md), [Pacote de Evidências](../artifacts/evidence-bundle.md) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; schema_validate_ev | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 12 – Manutenção de registros | [Pacote de Evidências](../artifacts/evidence-bundle.md), [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 13 – Transparência (informação ao usuário) | [Escopo](../standard/current/02-scope.md) | Summary, EV; review | templates/ev/ | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 14 – Supervisão humana | [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md) | review, exception; review, exception | templates/ev/ev_template.md | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 17 – Gestão de riscos (alto risco) | [Escopo](../standard/current/02-scope.md) | request, review, exception, renewal | templates/ev/ | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 26 – Transparência (risco limitado) | [Escopo](../standard/current/02-scope.md) | Summary, EV; review | templates/ev/ | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 29 – Documentação (IA de propósito geral) | [Template EV](../standard/current/06-ev-template.md) | EV, Dictionary, Summary; request, review | schemas/jsonschema/; schema_validate_ev | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Art 52 – Transparência (implantador) | [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md) | EV, Summary; review | templates/ev/ | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |
+| Considerandos – Responsabilidade | [Pacote de Evidências](../artifacts/evidence-bundle.md) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | Apenas alto nível; não é aconselhamento jurídico. Verifique contra texto oficial. |

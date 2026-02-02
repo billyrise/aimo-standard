@@ -1,49 +1,43 @@
 ---
-description: AIMO Standard - Open standard for AI governance and audit. Taxonomy with 8 dimensions and 91 codes for classifying AI use, evidence requirements, and validator for enterprise compliance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/index.md
-source_hash: 7b2b4ef78f06fcf5
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准 - AI治理和审计的开放标准。具有8个维度和91个代码的分类法，用于分类AI使用、证据要求和企业合规验证器。
 ---
 
-# AIMO Standard
+# AIMO 标准
 
-This site hosts the human-readable AIMO Standard specification.
+本站托管人类可读的 AIMO 标准规范。
 
-## Why agentic AI audits are needed now
+## 为什么现在需要代理式AI审计
 
-Enterprise AI risk is increasingly driven by **Shadow AI (unapproved AI use)** and **agentic AI (autonomous agents) with broad tool privileges**, making traditional ISMS/IT controls insufficient for traceability and audit explanations.
-AIMO Standard classifies AI usage with a shared language (Taxonomy), defines minimum evidence requirements, and enforces consistency via a Validator—accelerating auditability and remediation.
-Note: AIMO Standard does not provide legal advice or automatically guarantee compliance with any specific regulation/standard (see [Coverage Map](coverage-map/index.md)).
+企业AI风险越来越多地由**影子AI（未经批准的AI使用）**和**具有广泛工具权限的代理式AI（自主代理）**驱动，使传统的ISMS/IT控制不足以进行可追溯性和审计解释。
+AIMO 标准使用共享语言（分类法）对AI使用进行分类，定义最低证据要求，并通过验证器强制一致性——加速可审计性和整改。
+注意：AIMO 标准不提供法律建议，也不自动保证符合任何特定法规/标准（参见 [覆盖映射](coverage-map/index.md)）。
 
-- [Taxonomy](standard/current/03-taxonomy.md) (shared language)
-- [Minimum Evidence Requirements](artifacts/minimum-evidence.md)
-- [Validator](validator/index.md) (consistency checks)
+- [分类法](standard/current/03-taxonomy.md)（共享语言）
+- [最低证据要求](artifacts/minimum-evidence.md)
+- [验证器](validator/index.md)（一致性检查）
 
-**Top-level sections**
+**顶级章节**
 
-1. [Standard](standard/index.md) — Specification ([Current](standard/current/index.md) | [Versions](standard/versions/index.md)), [Conformance](conformance/index.md), [Coverage Map](coverage-map/index.md)
-2. [Artifacts](artifacts/index.md) — Taxonomy, code system, dictionary, evidence templates, schemas
-3. [Validator](validator/index.md) — Rules, reference checks, how to run
-4. [Examples](examples/index.md) — End-to-end and minimal samples
-5. [Releases](releases/index.md) — Changelog, migration, checksums, PDF
-6. [Governance](governance/index.md) — Versioning, security, license, trademarks, [Contributing](contributing/localization.md)
+1. [标准](standard/index.md) — 规范（[当前](standard/current/index.md) | [版本](standard/versions/index.md)）、[符合性](conformance/index.md)、[覆盖映射](coverage-map/index.md)
+2. [工件](artifacts/index.md) — 分类法、代码系统、字典、证据模板、模式
+3. [验证器](validator/index.md) — 规则、参考检查、如何运行
+4. [示例](examples/index.md) — 端到端和最小示例
+5. [发布](releases/index.md) — 变更日志、迁移、校验和、PDF
+6. [治理](governance/index.md) — 版本管理、安全、许可、商标、[贡献](contributing/localization.md)
 
-**Quick links by audience**
+**按受众的快速链接**
 
-- **For auditors**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Dictionary](standard/current/05-dictionary.md), [Evidence Bundle](artifacts/evidence-bundle.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Coverage Map](coverage-map/index.md), [Validator](validator/index.md), [Releases](releases/index.md)
-- **For security**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Governance](governance/index.md), [Validator](validator/index.md), [Standard > EV Template](standard/current/06-ev-template.md)
-- **For IT ops**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Releases](releases/index.md), [Validator](validator/index.md), [Examples](examples/index.md), [Conformance](conformance/index.md)
-- **For legal/procurement**: [Trust Package](governance/trust-package.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Coverage Map Methodology](coverage-map/methodology.md), [Releases](releases/index.md), [Governance](governance/index.md) (license, trademarks)
+- **审计师**：[信任包](governance/trust-package.md)、[分类法](standard/current/03-taxonomy.md)、[字典](standard/current/05-dictionary.md)、[证据包](artifacts/evidence-bundle.md)、[最低证据要求](artifacts/minimum-evidence.md)、[覆盖映射](coverage-map/index.md)、[验证器](validator/index.md)、[发布](releases/index.md)
+- **安全**：[信任包](governance/trust-package.md)、[分类法](standard/current/03-taxonomy.md)、[最低证据要求](artifacts/minimum-evidence.md)、[责任边界](governance/responsibility-boundary.md)、[治理](governance/index.md)、[验证器](validator/index.md)、[标准 > EV 模板](standard/current/06-ev-template.md)
+- **IT运维**：[信任包](governance/trust-package.md)、[分类法](standard/current/03-taxonomy.md)、[最低证据要求](artifacts/minimum-evidence.md)、[发布](releases/index.md)、[验证器](validator/index.md)、[示例](examples/index.md)、[符合性](conformance/index.md)
+- **法律/采购**：[信任包](governance/trust-package.md)、[责任边界](governance/responsibility-boundary.md)、[覆盖映射方法论](coverage-map/methodology.md)、[发布](releases/index.md)、[治理](governance/index.md)（许可、商标）
 
-**Audit journey** (2-click path):
+**审计旅程**（2次点击路径）：
 
-1. [Trust Package](governance/trust-package.md) — start here for auditor-ready materials
-2. [Taxonomy](standard/current/03-taxonomy.md) + [Dictionary](standard/current/05-dictionary.md) — understand the 8-dimension code system
-3. [Evidence Bundle](artifacts/evidence-bundle.md) — structure and TOC
-4. [Minimum Evidence Requirements](artifacts/minimum-evidence.md) — MUST-level checklist
-5. [Coverage Map](coverage-map/index.md) + [Methodology](coverage-map/methodology.md) — framework mappings
-6. [Validator](validator/index.md) — run structural checks
-7. [Releases](releases/index.md) — download assets and verify
+1. [信任包](governance/trust-package.md) — 从这里开始获取审计师就绪材料
+2. [分类法](standard/current/03-taxonomy.md) + [字典](standard/current/05-dictionary.md) — 理解8维代码系统
+3. [证据包](artifacts/evidence-bundle.md) — 结构和目录
+4. [最低证据要求](artifacts/minimum-evidence.md) — MUST 级别清单
+5. [覆盖映射](coverage-map/index.md) + [方法论](coverage-map/methodology.md) — 框架映射
+6. [验证器](validator/index.md) — 运行结构检查
+7. [发布](releases/index.md) — 下载资产并验证

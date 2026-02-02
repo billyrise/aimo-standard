@@ -1,76 +1,70 @@
 ---
-description: AIMO Standard security policy - Vulnerability reporting, disclosure procedures, and security considerations for AI governance implementations.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/security.md
-source_hash: 035ba54290c8cf46
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Politique de sécurité du standard AIMO - Signalement de vulnérabilités, procédures de divulgation et considérations de sécurité pour les implémentations de gouvernance IA.
 ---
 
-# Security
+# Sécurité
 
-This page documents the security policy for AIMO Standard, including vulnerability reporting and disclosure procedures.
+Cette page documente la politique de sécurité pour le standard AIMO, y compris le signalement de vulnérabilités et les procédures de divulgation.
 
-## Scope
+## Périmètre
 
-### In Scope
+### Dans le périmètre
 
-- Validator reference implementation (`validator/`)
-- Build and release tooling (`tooling/`)
-- JSON schemas (`schemas/`)
-- Documentation website infrastructure
+- Implémentation de référence du validateur (`validator/`)
+- Outillage de build et de release (`tooling/`)
+- Schémas JSON (`schemas/`)
+- Infrastructure du site de documentation
 
-### Out of Scope
+### Hors périmètre
 
-- Specification content (normative text is not a security artifact)
-- Adopter implementations using AIMO Standard
-- External dependencies (report to upstream maintainers)
+- Contenu de spécification (le texte normatif n'est pas un artefact de sécurité)
+- Implémentations des adopteurs utilisant le standard AIMO
+- Dépendances externes (signaler aux mainteneurs amont)
 
-## Supported Versions
+## Versions supportées
 
-| Version | Supported |
+| Version | Supportée |
 | ------- | --------- |
-| latest (dev) | Yes |
-| Tagged releases (vX.Y.Z) | Yes (latest 2 minor versions) |
-| Older releases | No (upgrade recommended) |
+| latest (dev) | Oui |
+| Versions taguées (vX.Y.Z) | Oui (2 dernières versions mineures) |
+| Anciennes versions | Non (mise à niveau recommandée) |
 
-## Reporting a Vulnerability
+## Signaler une vulnérabilité
 
-**Do not** open a public GitHub issue for security vulnerabilities.
+**Ne pas** ouvrir une issue GitHub publique pour les vulnérabilités de sécurité.
 
-### Process
+### Processus
 
-1. Report privately via GitHub's private vulnerability reporting
-2. Include: description, reproduction steps, affected versions, impact
-3. Allow time for assessment and fix development
+1. Signaler en privé via le signalement de vulnérabilité privé de GitHub
+2. Inclure : description, étapes de reproduction, versions affectées, impact
+3. Laisser le temps pour l'évaluation et le développement du correctif
 
-### Timeline
+### Délais
 
-| Phase | Timeline |
+| Phase | Délai |
 | ----- | -------- |
-| Acknowledgment | 72 hours |
-| Initial assessment | 7 days |
-| Coordinated disclosure | 90 days max |
+| Accusé de réception | 72 heures |
+| Évaluation initiale | 7 jours |
+| Divulgation coordonnée | 90 jours max |
 
-## Disclosure Policy
+## Politique de divulgation
 
-1. Vulnerabilities are reported privately
-2. Fixes are developed before public disclosure
-3. Security advisories are published after fixes are available
-4. Reporters are credited (unless anonymity requested)
+1. Les vulnérabilités sont signalées en privé
+2. Les correctifs sont développés avant la divulgation publique
+3. Les avis de sécurité sont publiés après que les correctifs sont disponibles
+4. Les rapporteurs sont crédités (sauf si l'anonymat est demandé)
 
-## Security Measures
+## Mesures de sécurité
 
-- CI/CD checks on all changes
-- Signed releases with SHA-256 checksums
-- Mandatory PR review before merge
+- Vérifications CI/CD sur tous les changements
+- Versions signées avec checksums SHA-256
+- Revue PR obligatoire avant merge
 
-## Full Policy
+## Politique complète
 
-See [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) for the complete security policy.
+Voir [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) pour la politique de sécurité complète.
 
-## Related Pages
+## Pages connexes
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
+- [Package de confiance](trust-package.md) — Matériaux prêts pour les auditeurs
+- [Gouvernance](index.md) — Gouvernance du projet

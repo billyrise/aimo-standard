@@ -1,15 +1,9 @@
 ---
-description: Current AIMO Standard specification. Includes overview, scope, taxonomy, codes, dictionary, evidence templates, and validator rules for AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/index.md
-source_hash: 7b332772b472660d
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Especificação atual do AIMO Standard. Inclui visão geral, escopo, taxonomia, códigos, dicionário, templates de evidências e regras do validador para governança de IA.
 ---
 
-# Current (Latest)
+# Atual (Mais Recente)
 
-This is the current working version of the AIMO Standard.
+Esta é a versão de trabalho atual do AIMO Standard.
 
-For official frozen releases, see: Standard > Versions.
+Para releases oficiais congelados, veja: Padrão > Versões.

@@ -1,238 +1,232 @@
 ---
-description: AIMO Taxonomy - 8-dimension classification system with 91 codes for categorizing AI systems. Covers functional scope, use cases, data types, channels, integration, risks, outcomes, and evidence.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/03-taxonomy.md
-source_hash: fdf0a7d87be25a0f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 分类法 - 具有91个代码的8维分类系统，用于对AI系统进行分类。涵盖功能范围、用例、数据类型、渠道、集成、风险、结果和证据。
 ---
 
-# Taxonomy
+# 分类法
 
-The AIMO Taxonomy provides a structured classification system for categorizing AI systems, their uses, and associated governance requirements. It consists of **8 dimensions** with **91 codes** that enable consistent classification and evidence management across organizations.
+AIMO 分类法提供了一个结构化的分类系统，用于对AI系统、其使用和相关治理要求进行分类。它由 **8个维度** 和 **91个代码** 组成，能够在组织内实现一致的分类和证据管理。
 
-## Purpose
+## 目的
 
-The taxonomy serves three primary purposes from an audit perspective:
+从审计角度来看，分类法有三个主要目的：
 
-1. **Explainability**: Provides a common vocabulary for describing AI use cases across the organization, supporting clear communication with auditors and stakeholders.
+1. **可解释性**：提供描述整个组织AI用例的通用词汇，支持与审计师和利益相关者的清晰沟通。
 
-2. **Evidence Readiness**: Enables systematic documentation of AI systems using a standardized classification, making evidence collection and review more efficient.
+2. **证据就绪**：使用标准化分类系统地记录AI系统，使证据收集和审查更加高效。
 
-3. **Comparability**: Allows organizations to compare AI use cases across different contexts using consistent terminology.
+3. **可比性**：允许组织使用一致的术语跨不同上下文比较AI用例。
 
-## What It Is Not (Non-Overclaim)
+## 这不是什么（不过度声明）
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. See [Responsibility Boundary](../../governance/responsibility-boundary.md) for details.
+!!! warning "重要提示"
+    AIMO 标准支持**可解释性和证据就绪**。它**不**提供法律建议、保证合规或认证符合任何法规或框架。详情请参阅 [责任边界](../../governance/responsibility-boundary.md)。
 
-The taxonomy is a classification system only. It does not:
+分类法仅是一个分类系统。它不：
 
-- Guarantee compliance with any law or regulation
-- Replace professional legal, security, or compliance advice
-- Certify conformity to external frameworks (ISO, NIST, EU AI Act, etc.)
-- Provide risk assessments or control recommendations
+- 保证符合任何法律或法规
+- 替代专业法律、安全或合规建议
+- 认证符合外部框架（ISO、NIST、欧盟AI法案等）
+- 提供风险评估或控制建议
 
-## Examples of AI/agentic-specific risks (why an AI-specific standard is needed)
+## AI/代理式特定风险示例（为什么需要AI特定标准）
 
-Traditional security controls (e.g., ISMS) alone often fail to capture LLM/agent-specific failure modes and autonomous agent deviations (e.g., unintended tool execution, recursive loops) in an **audit-explainable** manner.
-AIMO Taxonomy provides a shared language to classify these AI-specific risks and connect them to evidence requirements and remediation workflows.
+传统安全控制（例如ISMS）通常无法以**审计可解释**的方式捕获LLM/代理特定的故障模式和自主代理偏差（例如意外工具执行、递归循环）。
+AIMO 分类法提供了一种共享语言来分类这些AI特定风险，并将它们与证据要求和整改工作流程联系起来。
 
-(Reference examples for differentiation. The codes below are illustrative placeholders; the official code system follows the Standard definitions.)
-- AG-01 Runaway Loop / Recursion
-- AG-02 Unauthorized Tool Use (confused deputy-style misuse)
-- AG-03 Privilege Boundary Drift
+（用于区分的参考示例。以下代码是说明性占位符；官方代码系统遵循标准定义。）
+- AG-01 失控循环/递归
+- AG-02 未授权工具使用（混淆代理式滥用）
+- AG-03 权限边界漂移
 
-## Dimensions Overview
+## 维度概述
 
-AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-letter prefix.
+AIMO 使用8个维度对AI用例进行分类。每个维度都有唯一的2字母前缀。
 
-| ID | Name | Code Count | Description |
+| ID | 名称 | 代码数量 | 描述 |
 | --- | --- | --- | --- |
-| **FS** | Functional Scope | 6 | Which business function is supported |
-| **UC** | Use Case Class | 30 | What type of task is performed |
-| **DT** | Data Type | 10 | What data classifications are involved |
-| **CH** | Channel | 8 | How users access the AI |
-| **IM** | Integration Mode | 7 | How AI connects to enterprise systems |
-| **RS** | Risk Surface | 8 | What risks are associated |
-| **OB** | Outcome / Benefit | 7 | What benefits are expected |
-| **EV** | Evidence Type | 15 | What evidence is required |
+| **FS** | 功能范围 | 6 | 支持哪个业务功能 |
+| **UC** | 用例类别 | 30 | 执行什么类型的任务 |
+| **DT** | 数据类型 | 10 | 涉及什么数据分类 |
+| **CH** | 渠道 | 8 | 用户如何访问AI |
+| **IM** | 集成模式 | 7 | AI如何连接到企业系统 |
+| **RS** | 风险面 | 8 | 关联什么风险 |
+| **OB** | 结果/收益 | 7 | 期望什么收益 |
+| **EV** | 证据类型 | 15 | 需要什么证据 |
 
-**Total: 91 codes across 8 dimensions**
+**总计：8个维度下的91个代码**
 
-### Usage Rules
+### 使用规则
 
-| Dimension | Selection | Audit Implication |
+| 维度 | 选择 | 审计含义 |
 | --- | --- | --- |
-| FS, IM | Exactly 1 | Primary classification for responsibility assignment |
-| UC, DT, CH, RS, EV | 1 or more | Complete enumeration required for risk coverage |
-| OB | 0 or more | Optional; documents expected business value |
+| FS, IM | 恰好1个 | 用于责任分配的主要分类 |
+| UC, DT, CH, RS, EV | 1个或多个 | 风险覆盖需要完整枚举 |
+| OB | 0个或多个 | 可选；记录预期业务价值 |
 
-## Dimension Definitions
+## 维度定义
 
-### FS: Functional Scope
+### FS：功能范围
 
-Categorizes AI use by the business function it supports. **Select exactly one.**
+按AI支持的业务功能对AI使用进行分类。**选择恰好一个。**
 
-| Code | Label | Definition |
+| 代码 | 标签 | 定义 |
 | --- | --- | --- |
-| FS-001 | End-user Productivity | AI used to improve productivity of internal end users (writing, search, summarization, meeting notes). |
-| FS-002 | Customer-facing Features | AI embedded in product/service features provided to customers. |
-| FS-003 | Developer Tooling | AI used to assist software development and engineering tasks. |
-| FS-004 | IT Operations | AI used for IT operations and system administration (monitoring, incident handling). |
-| FS-005 | Security Operations | AI used for security monitoring/response (SOC, detection, triage). |
-| FS-006 | Governance & Compliance | AI used to support governance/compliance activities (policy, audit evidence). |
+| FS-001 | 最终用户生产力 | 用于提高内部最终用户生产力的AI（写作、搜索、摘要、会议记录）。 |
+| FS-002 | 面向客户的功能 | 嵌入在向客户提供的产品/服务功能中的AI。 |
+| FS-003 | 开发者工具 | 用于辅助软件开发和工程任务的AI。 |
+| FS-004 | IT运营 | 用于IT运营和系统管理的AI（监控、事件处理）。 |
+| FS-005 | 安全运营 | 用于安全监控/响应的AI（SOC、检测、分类）。 |
+| FS-006 | 治理与合规 | 用于支持治理/合规活动的AI（政策、审计证据）。 |
 
-### UC: Use Case Class
+### UC：用例类别
 
-Categorizes AI use by the type of task or interaction. **Select one or more.** Full list includes 30 codes; representative examples below.
+按任务或交互类型对AI使用进行分类。**选择一个或多个。** 完整列表包括30个代码；以下是代表性示例。
 
-| Code | Label | Definition |
+| 代码 | 标签 | 定义 |
 | --- | --- | --- |
-| UC-001 | General Q&A | General question answering and conversational use. |
-| UC-002 | Summarization | Summarizing documents, meetings, or messages. |
-| UC-003 | Translation | Translation between languages. |
-| UC-004 | Content Drafting | Generating drafts for emails, documents, or reports. |
-| UC-005 | Code Generation | Generating code or scripts. |
-| UC-006 | Code Review | Reviewing code for issues and improvements. |
-| UC-009 | Search/RAG | RAG-based retrieval and question answering. |
-| UC-010 | Agentic Automation | Autonomous or semi-autonomous agents executing actions. |
+| UC-001 | 通用问答 | 通用问答和对话使用。 |
+| UC-002 | 摘要 | 对文档、会议或消息进行摘要。 |
+| UC-003 | 翻译 | 语言之间的翻译。 |
+| UC-004 | 内容起草 | 为电子邮件、文档或报告生成草稿。 |
+| UC-005 | 代码生成 | 生成代码或脚本。 |
+| UC-006 | 代码审查 | 审查代码的问题和改进。 |
+| UC-009 | 搜索/RAG | 基于RAG的检索和问答。 |
+| UC-010 | 代理式自动化 | 执行操作的自主或半自主代理。 |
 
-See [Dictionary](./05-dictionary.md) for the complete list of 30 UC codes.
+请参阅 [字典](./05-dictionary.md) 获取30个UC代码的完整列表。
 
-### DT: Data Type
+### DT：数据类型
 
-Categorizes the sensitivity and classification of data involved. **Select one or more.**
+对涉及数据的敏感性和分类进行分类。**选择一个或多个。**
 
-| Code | Label | Definition |
+| 代码 | 标签 | 定义 |
 | --- | --- | --- |
-| DT-001 | Public | Data that is publicly available and intended for public disclosure. |
-| DT-002 | Internal | Non-public internal business data. |
-| DT-003 | Confidential | Highly sensitive internal data requiring restricted access. |
-| DT-004 | Personal Data | Personal data as defined by applicable privacy laws. |
-| DT-005 | Sensitive Personal Data | Special category/sensitive personal data. |
-| DT-006 | Credentials | Authentication secrets and credentials. |
-| DT-007 | Source Code | Source code and related artifacts. |
-| DT-008 | Customer Data | Customer-provided or customer-related data. |
-| DT-009 | Operational Logs | Operational or system logs used for monitoring and troubleshooting. |
-| DT-010 | Security Telemetry | Security telemetry such as alerts and detections. |
+| DT-001 | 公开 | 公开可用并打算公开披露的数据。 |
+| DT-002 | 内部 | 非公开的内部业务数据。 |
+| DT-003 | 机密 | 需要限制访问的高度敏感内部数据。 |
+| DT-004 | 个人数据 | 适用隐私法定义的个人数据。 |
+| DT-005 | 敏感个人数据 | 特殊类别/敏感个人数据。 |
+| DT-006 | 凭证 | 身份验证密钥和凭证。 |
+| DT-007 | 源代码 | 源代码和相关工件。 |
+| DT-008 | 客户数据 | 客户提供或客户相关的数据。 |
+| DT-009 | 运营日志 | 用于监控和故障排除的运营或系统日志。 |
+| DT-010 | 安全遥测 | 安全遥测，如警报和检测。 |
 
-### CH: Channel
+### CH：渠道
 
-Categorizes how users access or interact with the AI. **Select one or more.**
+对用户如何访问或与AI交互进行分类。**选择一个或多个。**
 
-| Code | Label | Definition |
+| 代码 | 标签 | 定义 |
 | --- | --- | --- |
-| CH-001 | Web UI | Use via a web user interface. |
-| CH-002 | API | Use via programmatic API integration. |
-| CH-003 | IDE Plugin | Use via IDE/editor plugin. |
-| CH-004 | ChatOps | Use via chat platforms (Slack/Teams) integrations. |
-| CH-005 | Desktop App | Use via native desktop application. |
-| CH-006 | Mobile App | Use via native mobile application. |
-| CH-007 | Email | Use via email interface or email-based automation. |
-| CH-008 | Command Line | Use via command-line interface. |
+| CH-001 | Web UI | 通过Web用户界面使用。 |
+| CH-002 | API | 通过编程API集成使用。 |
+| CH-003 | IDE 插件 | 通过IDE/编辑器插件使用。 |
+| CH-004 | ChatOps | 通过聊天平台（Slack/Teams）集成使用。 |
+| CH-005 | 桌面应用 | 通过原生桌面应用程序使用。 |
+| CH-006 | 移动应用 | 通过原生移动应用程序使用。 |
+| CH-007 | 电子邮件 | 通过电子邮件界面或基于电子邮件的自动化使用。 |
+| CH-008 | 命令行 | 通过命令行界面使用。 |
 
-### IM: Integration Mode
+### IM：集成模式
 
-Categorizes how AI is integrated into enterprise systems. **Select exactly one.**
+对AI如何集成到企业系统进行分类。**选择恰好一个。**
 
-| Code | Label | Definition |
+| 代码 | 标签 | 定义 |
 | --- | --- | --- |
-| IM-001 | Standalone | Used standalone without integration into enterprise systems. |
-| IM-002 | SaaS Integrated | SaaS application integrates AI features. |
-| IM-003 | Enterprise App Embedded | AI embedded into internal enterprise applications. |
-| IM-004 | RPA/Workflow | AI invoked within workflow automation or RPA. |
-| IM-005 | On-prem / Private | AI hosted in private/on-prem environment. |
-| IM-006 | Managed Service | Use via managed service with enterprise controls. |
-| IM-007 | Shadow / Unmanaged | Use outside of approved governance controls. |
+| IM-001 | 独立 | 独立使用，不集成到企业系统。 |
+| IM-002 | SaaS 集成 | SaaS应用程序集成AI功能。 |
+| IM-003 | 企业应用嵌入 | AI嵌入到内部企业应用程序中。 |
+| IM-004 | RPA/工作流 | 在工作流自动化或RPA中调用AI。 |
+| IM-005 | 本地/私有 | AI托管在私有/本地环境中。 |
+| IM-006 | 托管服务 | 通过具有企业控制的托管服务使用。 |
+| IM-007 | 影子/非托管 | 在批准的治理控制之外使用。 |
 
-### RS: Risk Surface
+### RS：风险面
 
-Categorizes the types of risks associated with the AI use. **Select one or more.**
+对与AI使用相关的风险类型进行分类。**选择一个或多个。**
 
-| Code | Label | Definition |
+| 代码 | 标签 | 定义 |
 | --- | --- | --- |
-| RS-001 | Data Leakage | Risk of unintended data disclosure. |
-| RS-002 | Security Abuse | Risk that the system is abused for malicious purposes. |
-| RS-003 | Compliance Breach | Risk of violating laws/regulations/policies. |
-| RS-004 | IP Infringement | Risk of infringing copyright/patent/trade secrets. |
-| RS-005 | Model Misuse | Risk from inappropriate model use or over-reliance. |
-| RS-006 | Bias/Fairness | Risk of unfair or biased outcomes. |
-| RS-007 | Safety | Risk of harmful content or unsafe recommendations. |
-| RS-008 | Third-party Risk | Vendors, sub-processors, and model provider risks. |
+| RS-001 | 数据泄露 | 意外数据披露的风险。 |
+| RS-002 | 安全滥用 | 系统被滥用于恶意目的的风险。 |
+| RS-003 | 合规违规 | 违反法律/法规/政策的风险。 |
+| RS-004 | 知识产权侵权 | 侵犯版权/专利/商业秘密的风险。 |
+| RS-005 | 模型滥用 | 不当使用模型或过度依赖的风险。 |
+| RS-006 | 偏见/公平性 | 不公平或有偏见结果的风险。 |
+| RS-007 | 安全性 | 有害内容或不安全建议的风险。 |
+| RS-008 | 第三方风险 | 供应商、子处理者和模型提供商风险。 |
 
-### OB: Outcome / Benefit
+### OB：结果/收益
 
-Categorizes the expected outcomes or benefits from AI use. **Optional; select zero or more.**
+对AI使用的预期结果或收益进行分类。**可选；选择零个或多个。**
 
-| Code | Label | Definition |
+| 代码 | 标签 | 定义 |
 | --- | --- | --- |
-| OB-001 | Efficiency | Improves time/cost efficiency. |
-| OB-002 | Quality | Improves quality/accuracy of outputs. |
-| OB-003 | Revenue | Contributes to revenue growth. |
-| OB-004 | Risk Reduction | Reduces operational/security/compliance risk. |
-| OB-005 | Innovation | Enables new capabilities or innovations. |
-| OB-006 | Customer Satisfaction | Improves customer satisfaction. |
-| OB-007 | Employee Experience | Improves employee experience. |
+| OB-001 | 效率 | 提高时间/成本效率。 |
+| OB-002 | 质量 | 提高输出的质量/准确性。 |
+| OB-003 | 收入 | 促进收入增长。 |
+| OB-004 | 风险降低 | 降低运营/安全/合规风险。 |
+| OB-005 | 创新 | 实现新功能或创新。 |
+| OB-006 | 客户满意度 | 提高客户满意度。 |
+| OB-007 | 员工体验 | 改善员工体验。 |
 
-### EV: Evidence Type
+### EV：证据类型
 
-Categorizes the types of evidence required or collected. **Select one or more.**
+对需要或收集的证据类型进行分类。**选择一个或多个。**
 
-| Code | Label | Definition |
+| 代码 | 标签 | 定义 |
 | --- | --- | --- |
-| EV-001 | Request Record | Evidence that an AI use/service was requested and described. |
-| EV-002 | Review/Approval Record | Evidence that a review/approval was performed. |
-| EV-003 | Exception Record | Evidence that an exception was granted and tracked. |
-| EV-004 | Renewal/Re-evaluation Record | Evidence that renewal or re-evaluation occurred. |
-| EV-005 | Change Log Entry | Evidence of changes and their approvals. |
-| EV-006 | Integrity Proof | Evidence of integrity (hash, signature, WORM). |
-| EV-007 | Access Log | Evidence of access control and access history. |
-| EV-008 | Model/Service Inventory | Inventory record of models/services used. |
-| EV-009 | Risk Assessment | Documented risk assessment for the use/service. |
-| EV-010 | Control Mapping | Control mapping evidence to external frameworks. |
-| EV-011 | Training/Guidance | Evidence of training or guidance provided to users. |
-| EV-012 | Monitoring Evidence | Evidence of monitoring and ongoing oversight. |
-| EV-013 | Incident Record | Evidence of incident handling related to AI use. |
-| EV-014 | Third-party Assessment | Evidence of vendor or third-party assessment. |
-| EV-015 | Attestation/Sign-off | Formal attestation or sign-off record. |
+| EV-001 | 请求记录 | AI使用/服务被请求和描述的证据。 |
+| EV-002 | 审查/批准记录 | 进行了审查/批准的证据。 |
+| EV-003 | 例外记录 | 例外被授予和跟踪的证据。 |
+| EV-004 | 续期/重新评估记录 | 发生续期或重新评估的证据。 |
+| EV-005 | 变更日志条目 | 变更及其批准的证据。 |
+| EV-006 | 完整性证明 | 完整性证据（哈希、签名、WORM）。 |
+| EV-007 | 访问日志 | 访问控制和访问历史的证据。 |
+| EV-008 | 模型/服务清单 | 使用的模型/服务的清单记录。 |
+| EV-009 | 风险评估 | 使用/服务的书面风险评估。 |
+| EV-010 | 控制映射 | 与外部框架的控制映射证据。 |
+| EV-011 | 培训/指导 | 向用户提供培训或指导的证据。 |
+| EV-012 | 监控证据 | 监控和持续监督的证据。 |
+| EV-013 | 事件记录 | 与AI使用相关的事件处理证据。 |
+| EV-014 | 第三方评估 | 供应商或第三方评估的证据。 |
+| EV-015 | 证明/签字 | 正式证明或签字记录。 |
 
-## How to Use
+## 如何使用
 
-### Relationship with Evidence
+### 与证据的关系
 
-Each Evidence (EV) document references codes from multiple dimensions to classify the AI system or use case being documented. The 8-dimension classification enables:
+每个证据（EV）文档引用来自多个维度的代码，以对正在记录的AI系统或用例进行分类。8维分类实现：
 
-- **Consistent categorization** across the organization
-- **Risk-based filtering** by dimension values
-- **Framework mapping** via Coverage Map
+- 整个组织的**一致分类**
+- 按维度值进行**基于风险的筛选**
+- 通过覆盖映射进行**框架映射**
 
-### Referencing the Dictionary
+### 参考字典
 
-For complete code definitions including scope notes and examples, refer to the [Dictionary](./05-dictionary.md).
+有关完整的代码定义，包括范围说明和示例，请参阅 [字典](./05-dictionary.md)。
 
-### Example Classification
+### 分类示例
 
 ```
-FS: FS-001 (End-user Productivity)
-UC: UC-001 (General Q&A), UC-002 (Summarization)
-DT: DT-002 (Internal), DT-004 (Personal Data)
+FS: FS-001 (最终用户生产力)
+UC: UC-001 (通用问答), UC-002 (摘要)
+DT: DT-002 (内部), DT-004 (个人数据)
 CH: CH-001 (Web UI)
-IM: IM-002 (SaaS Integrated)
-RS: RS-001 (Data Leakage), RS-003 (Compliance Breach)
-OB: OB-001 (Efficiency)
-EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
+IM: IM-002 (SaaS 集成)
+RS: RS-001 (数据泄露), RS-003 (合规违规)
+OB: OB-001 (效率)
+EV: EV-001 (请求记录), EV-002 (审查/批准记录)
 ```
 
-## SSOT Reference
+## SSOT 参考
 
-!!! info "Source of Truth"
-    The authoritative definition is `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+!!! info "事实来源"
+    权威定义是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本页是解释性的。有关更新工作流程，请参阅 [本地化指南](../../contributing/localization.md)。
 
-## Related Pages
+## 相关页面
 
-- [Codes](./04-codes.md) - Code format, naming conventions, and lifecycle
-- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
-- [Evidence Templates](./06-ev-template.md) - How to use codes in evidence
-- [Responsibility Boundary](../../governance/responsibility-boundary.md) - Non-overclaim statement
+- [代码](./04-codes.md) - 代码格式、命名约定和生命周期
+- [字典](./05-dictionary.md) - 完整的代码列表和列定义
+- [证据模板](./06-ev-template.md) - 如何在证据中使用代码
+- [责任边界](../../governance/responsibility-boundary.md) - 不过度声明声明

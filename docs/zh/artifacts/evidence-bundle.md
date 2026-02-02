@@ -1,65 +1,59 @@
 ---
-description: AIMO Evidence Bundle structure. Audit package format with TOC, traceability, and artifacts for AI governance compliance and auditor delivery.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/evidence-bundle.md
-source_hash: 30766517fd9d310d
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 证据包结构。包含目录、可追溯性和工件的审计包格式，用于AI治理合规和审计交付。
 ---
 
-# Evidence Bundle
+# 证据包
 
-An **Evidence Bundle** is an audit package: a structured set of artifacts that supports explainability and traceability for AI governance. It is not a product feature but a deliverable format for auditors and compliance.
+**证据包**是一个审计包：一组结构化的工件，支持AI治理的可解释性和可追溯性。它不是产品功能，而是面向审计师和合规的交付格式。
 
-## Bundle structure and naming
+## 包结构和命名
 
-- **Bundle root naming**: use a consistent pattern such as `{org}_{system}_{period}_{version}` (e.g. `acme_ai-usage_2026-Q1_v1`).
-- **Required files**: at least one Evidence (EV) set aligned with the [EV Template](../standard/current/06-ev-template.md), a [Dictionary](../standard/current/05-dictionary.md), a short **Summary** (executive summary of the bundle), and a **Change Log** (or reference to it) for changes to the bundle or its contents.
-- **Optional attachments**: logs, review records, exception approvals, renewal records; keep naming consistent and referrable from the main EV/Dictionary.
+- **包根目录命名**：使用一致的命名模式，如 `{org}_{system}_{period}_{version}`（例如 `acme_ai-usage_2026-Q1_v1`）。
+- **必需文件**：至少一个与 [EV 模板](../standard/current/06-ev-template.md) 对齐的证据（EV）集、一个 [字典](../standard/current/05-dictionary.md)、一个简短的 **摘要**（包的执行摘要）以及一个 **变更日志**（或其引用），用于记录包或其内容的变更。
+- **可选附件**：日志、审查记录、例外批准、续期记录；保持命名一致，并可从主 EV/字典中引用。
 
-## Table of contents (TOC)
+## 目录（TOC）
 
-| Section | Artifact | Required? | Purpose | Minimum fields | Validation |
+| 部分 | 工件 | 是否必需？ | 用途 | 最小字段 | 验证 |
 | --- | --- | --- | --- | --- | --- |
-| Evidence | EV records (JSON/array) | Yes | Record of what happened; link to request/review/exception/renewal | id, timestamp, source, summary; optional lifecycle refs | [Validator](../validator/index.md), aimo-ev.schema.json |
-| Dictionary | dictionary.json | Yes | Keys/labels/descriptions for codes and dimensions | entries (key, label, description) | aimo-dictionary.schema.json |
-| Summary | summary (doc or field) | Yes | One-page overview for auditors | scope, period, key decisions, exceptions | — |
-| Change log | change_log or reference | Yes | Audit trail of bundle/content changes | id, timestamp, actor, change description, references | — |
-| Request | request record(s) | If applicable | Application/request for use | id, timestamp, actor/role, scope, rationale | — |
-| Review/Approval | review record(s) | If applicable | Review and approval outcome | id, timestamp, actor/role, decision, references | — |
-| Exception | exception record(s) | If applicable | Exception with compensating controls and expiry | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
-| Renewal | renewal record(s) | If applicable | Re-evaluation and renewal | id, timestamp, actor/role, decision, references to prior exception/EV | — |
+| 证据 | EV 记录（JSON/数组） | 是 | 记录发生的事情；链接到请求/审查/例外/续期 | id, timestamp, source, summary; 可选生命周期引用 | [验证器](../validator/index.md), aimo-ev.schema.json |
+| 字典 | dictionary.json | 是 | 代码和维度的键/标签/描述 | entries (key, label, description) | aimo-dictionary.schema.json |
+| 摘要 | summary（文档或字段） | 是 | 面向审计师的一页概览 | scope, period, key decisions, exceptions | — |
+| 变更日志 | change_log 或引用 | 是 | 包/内容变更的审计跟踪 | id, timestamp, actor, change description, references | — |
+| 请求 | request 记录 | 如适用 | 使用申请/请求 | id, timestamp, actor/role, scope, rationale | — |
+| 审查/批准 | review 记录 | 如适用 | 审查和批准结果 | id, timestamp, actor/role, decision, references | — |
+| 例外 | exception 记录 | 如适用 | 带补偿控制和到期日的例外 | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
+| 续期 | renewal 记录 | 如适用 | 重新评估和续期 | id, timestamp, actor/role, decision, references to prior exception/EV | — |
 
-## Traceability
+## 可追溯性
 
-- **Stable IDs**: every record (EV, request, review, exception, renewal, change log entry) MUST have a stable, unique identifier.
-- **Cross-references**: link Request → Review → Exception (if any) → Renewal and link EV items to these via reference fields (e.g. `request_id`, `review_id`, `exception_id`, `renewal_id`).
-- **Linkage**: ensure auditors can follow a chain from an AI use (or exception) to the request, approval, any exception and its compensating controls and expiry, and renewal.
+- **稳定ID**：每条记录（EV、请求、审查、例外、续期、变更日志条目）必须具有稳定、唯一的标识符。
+- **交叉引用**：将 请求 → 审查 → 例外（如有）→ 续期 链接起来，并通过引用字段（如 `request_id`、`review_id`、`exception_id`、`renewal_id`）将 EV 条目链接到这些记录。
+- **链接**：确保审计师可以从AI使用（或例外）追溯到请求、批准、任何例外及其补偿控制和到期日，以及续期。
 
-## How auditors use this
+## 审计师如何使用
 
-Auditors use the Evidence Bundle to verify that AI use is requested, reviewed, and approved; that exceptions are time-bound and have compensating controls and renewal; and that changes are logged. The TOC and traceability rules let them locate required artifacts and follow IDs and references across request, review, exception, renewal, and EV records. The Summary gives a quick overview; the Change Log supports change control and accountability.
+审计师使用证据包来验证AI使用是经过请求、审查和批准的；例外是有时限的，并有补偿控制和续期；变更已记录。目录和可追溯性规则让他们能够定位所需工件，并跨请求、审查、例外、续期和 EV 记录追踪ID和引用。摘要提供快速概览；变更日志支持变更控制和问责。
 
-See [Minimum Evidence Requirements](minimum-evidence.md) for MUST-level fields and lifecycle groups.
+请参阅 [最低证据要求](minimum-evidence.md) 了解 MUST 级别字段和生命周期组。
 
-## Operational guidance
+## 操作指南
 
-!!! info "Integrity and access control"
-    While AIMO does not prescribe specific controls, adopters should document:
+!!! info "完整性和访问控制"
+    虽然 AIMO 不规定具体控制措施，但采用者应记录：
     
-    - **Access roles**: who can create, read, update, or delete evidence
-    - **Retention policy**: how long evidence is retained and under what schedule
-    - **Integrity mechanisms**: hashing, WORM storage, or digital signatures used
-    - **Audit trail**: logs of access and changes to the bundle
+    - **访问角色**：谁可以创建、读取、更新或删除证据
+    - **保留策略**：证据保留多长时间以及按什么计划
+    - **完整性机制**：使用的哈希、WORM 存储或数字签名
+    - **审计跟踪**：对包的访问和变更日志
     
-    See [Minimum Evidence Requirements > Integrity & Access](minimum-evidence.md#6-integrity-access) for detailed guidance.
+    请参阅 [最低证据要求 > 完整性与访问](minimum-evidence.md#6-integrity-access) 获取详细指南。
 
-## Audit journey
+## 审计旅程
 
-From this page, the typical audit journey continues:
+从此页面开始，典型的审计旅程继续：
 
-1. **Next**: [Minimum Evidence Requirements](minimum-evidence.md) — MUST-level checklist by lifecycle
-2. **Then**: [Coverage Map](../coverage-map/index.md) — mapping to external frameworks
-3. **Validate**: [Validator](../validator/index.md) — run structural checks
-4. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums
+1. **下一步**：[最低证据要求](minimum-evidence.md) — 按生命周期的 MUST 级别清单
+2. **然后**：[覆盖映射](../coverage-map/index.md) — 与外部框架的映射
+3. **验证**：[验证器](../validator/index.md) — 运行结构检查
+4. **下载**：[发布](../releases/index.md) — 获取发布资产并验证校验和

@@ -1,85 +1,79 @@
 ---
-description: AIMO Trust Package - Auditor-ready materials bundle. Minimum documentation for auditors, legal, and IT security to assess AI governance adoption readiness.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/trust-package.md
-source_hash: bb94ac221ae34a98
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 信任包 - 审计师就绪材料包。审计师、法律和IT安全评估AI治理采用就绪性所需的最低文档。
 ---
 
-# Trust Package (Assurance Package)
+# 信任包（保证包）
 
-This page bundles the minimum materials auditors, legal, and IT security need to assess adoption readiness.
-It is a hub only; detailed Evidence TOC and Coverage tables are maintained in their respective sections.
+本页汇集了审计师、法律和IT安全评估采用就绪性所需的最低材料。
+它只是一个中心；详细的证据目录和覆盖表在各自的部分中维护。
 
-## Download
+## 下载
 
-**[Download Trust Package PDF (Latest Release)](https://github.com/billyrise/aimo-standard/releases/latest)**
+**[下载信任包 PDF（最新发布）](https://github.com/billyrise/aimo-standard/releases/latest)**
 
-The Trust Package PDF consolidates auditor-ready materials into a single document. Each GitHub Release includes:
+信任包 PDF 将审计师就绪材料整合到单个文档中。每个 GitHub 发布包括：
 
-- `trust_package.pdf` — English Trust Package
-- `trust_package.ja.pdf` — Japanese Trust Package
-- `aimo-standard-artifacts.zip` — Schemas, templates, examples, validator rules
-- `SHA256SUMS.txt` — Checksums for verification
+- `trust_package.pdf` — 英文信任包
+- `trust_package.ja.pdf` — 日文信任包
+- `aimo-standard-artifacts.zip` — 模式、模板、示例、验证器规则
+- `SHA256SUMS.txt` — 用于验证的校验和
 
-## What you get
+## 您获得什么
 
-- **Conformance**: how to claim compliance and what levels mean — [Conformance](../conformance/index.md)
-- **Coverage Map**: mapping to external standards — [Coverage Map index](../coverage-map/index.md), [Coverage Map methodology](../coverage-map/methodology.md)
-- **Standard**: normative requirements and definitions — [Standard (Current)](../standard/current/index.md)
-- **Taxonomy**: 8-dimension classification system for AI governance — [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md)
-- **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](../artifacts/evidence-bundle.md)
-- **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- **Validator**: rules and reference checks — [Validator](../validator/index.md)
-- **Examples**: audit-ready sample bundles — [Examples](../examples/index.md)
-- **Releases**: change history and distribution — [Releases](../releases/index.md)
-- **Governance**: policies, security, licensing — [Governance](../governance/index.md)
+- **符合性**：如何声明合规以及级别的含义 — [符合性](../conformance/index.md)
+- **覆盖映射**：与外部标准的映射 — [覆盖映射索引](../coverage-map/index.md)、[覆盖映射方法论](../coverage-map/methodology.md)
+- **标准**：规范性要求和定义 — [标准（当前版本）](../standard/current/index.md)
+- **分类法**：AI治理的8维分类系统 — [分类法](../standard/current/03-taxonomy.md)、[代码](../standard/current/04-codes.md)、[字典](../standard/current/05-dictionary.md)
+- **证据包**：结构、目录、可追溯性 — [证据包](../artifacts/evidence-bundle.md)
+- **最低证据要求**：按生命周期的 MUST 级别清单 — [最低证据要求](../artifacts/minimum-evidence.md)
+- **验证器**：规则和参考检查 — [验证器](../validator/index.md)
+- **示例**：审计就绪的示例包 — [示例](../examples/index.md)
+- **发布**：变更历史和分发 — [发布](../releases/index.md)
+- **治理**：政策、安全、许可 — [治理](../governance/index.md)
 
-## Minimum set for audit-readiness
+## 审计就绪的最小集
 
-| Item | Where to find it | Outcome / what it proves |
+| 项目 | 在哪里找到 | 结果/证明什么 |
 | --- | --- | --- |
-| Conformance levels | [Conformance](../conformance/index.md) | How to claim compliance and the scope of evidence required |
-| Coverage mapping | [Coverage Map index](../coverage-map/index.md), [Coverage Map methodology](../coverage-map/methodology.md) | Explainability against external regulations and standards |
-| Taxonomy & Dictionary | [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md) | Classification system for AI systems (8 dimensions, 91 codes) |
-| Evidence artifacts | [Evidence Bundle](../artifacts/evidence-bundle.md), [Minimum Evidence](../artifacts/minimum-evidence.md), [EV Template](../standard/current/06-ev-template.md) | What data must exist to support traceability |
-| Validator checks | [Validator](../validator/index.md) | How to verify internal consistency and completeness |
-| Example bundle | [Examples](../examples/index.md) | What an audit-ready package looks like in practice |
-| Change control | [Releases](../releases/index.md), [Governance](../governance/index.md) | How updates are managed and communicated |
-| Security / License / Trademarks | [Governance](../governance/index.md) | Legal and security posture for adoption decisions |
+| 符合性级别 | [符合性](../conformance/index.md) | 如何声明合规以及所需证据的范围 |
+| 覆盖映射 | [覆盖映射索引](../coverage-map/index.md)、[覆盖映射方法论](../coverage-map/methodology.md) | 针对外部法规和标准的可解释性 |
+| 分类法与字典 | [分类法](../standard/current/03-taxonomy.md)、[代码](../standard/current/04-codes.md)、[字典](../standard/current/05-dictionary.md) | AI系统的分类系统（8个维度、91个代码） |
+| 证据工件 | [证据包](../artifacts/evidence-bundle.md)、[最低证据](../artifacts/minimum-evidence.md)、[EV 模板](../standard/current/06-ev-template.md) | 支持可追溯性必须存在的数据 |
+| 验证器检查 | [验证器](../validator/index.md) | 如何验证内部一致性和完整性 |
+| 示例包 | [示例](../examples/index.md) | 实践中审计就绪包的样子 |
+| 变更控制 | [发布](../releases/index.md)、[治理](../governance/index.md) | 如何管理和传达更新 |
+| 安全/许可证/商标 | [治理](../governance/index.md) | 采用决策的法律和安全态势 |
 
-## How to cite
+## 如何引用
 
-Use the repository README for citation guidance and context; governance links to the authoritative policies.
-See [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) and [Governance](../governance/index.md).
+使用仓库 README 获取引用指南和背景；治理链接到权威政策。
+请参阅 [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) 和 [治理](../governance/index.md)。
 
-## Artifacts zip contents
+## 工件 zip 内容
 
-The `aimo-standard-artifacts.zip` includes:
+`aimo-standard-artifacts.zip` 包括：
 
-- **Taxonomy (SSOT)**: `source_pack/03_taxonomy/` — Dictionary CSV (91 codes), YAML, code system
-- **JSON Schemas**: `schemas/jsonschema/` — Machine-readable validation schemas
-- **Templates**: `templates/ev/` — Evidence record templates (JSON + Markdown)
-- **Examples**: `examples/` — Minimal sample bundles for quick adoption
-- **Coverage Map**: `coverage_map/coverage_map.yaml` — Mapping to external standards
-- **Validator Rules**: `validator/rules/` — Validation rule definitions
-- **Governance docs**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt`, etc.
+- **分类法（SSOT）**：`source_pack/03_taxonomy/` — 字典 CSV（91个代码）、YAML、代码系统
+- **JSON 模式**：`schemas/jsonschema/` — 机器可读验证模式
+- **模板**：`templates/ev/` — 证据记录模板（JSON + Markdown）
+- **示例**：`examples/` — 用于快速采用的最小示例包
+- **覆盖映射**：`coverage_map/coverage_map.yaml` — 与外部标准的映射
+- **验证器规则**：`validator/rules/` — 验证规则定义
+- **治理文档**：`VERSIONING.md`、`GOVERNANCE.md`、`SECURITY.md`、`LICENSE.txt` 等
 
-## Responsibility boundary
+## 责任边界
 
-The AIMO Standard provides a structured evidence format and explainability framework. It does **not** provide legal advice, compliance certification, risk assessment, or audit execution.
+AIMO 标准提供结构化的证据格式和可解释性框架。它**不**提供法律建议、合规认证、风险评估或审计执行。
 
-For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](responsibility-boundary.md).
+有关完整的范围定义、假设和采用者责任，请参阅 [责任边界](responsibility-boundary.md)。
 
-## How to prepare a submission package
+## 如何准备提交包
 
-Follow these steps to prepare an audit-ready submission:
+按照以下步骤准备审计就绪的提交：
 
-1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-2. **Run Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix any errors before proceeding.
-3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
+1. **生成证据包**：按照 [证据包](../artifacts/evidence-bundle.md) 和 [最低证据要求](../artifacts/minimum-evidence.md) 创建 EV 记录、字典、摘要和变更日志。
+2. **运行验证器**：执行 `python validator/src/validate.py bundle/root.json` 检查结构一致性。在继续之前修复任何错误。
+3. **创建校验和**：为所有提交文件生成 SHA-256 校验和：
 
     === "Linux"
 
@@ -101,142 +95,142 @@ Follow these steps to prepare an audit-ready submission:
             "$hash  $($_.Name)"
         } | Out-File SHA256SUMS.txt -Encoding UTF8
         ```
-4. **Package Artifacts**: Create a zip archive of your evidence bundle:
+4. **打包工件**：创建证据包的 zip 存档：
    ```bash
    zip -r evidence_bundle.zip bundle_directory/
    ```
-5. **Reference Release Version**: Note which AIMO Standard version (e.g., `v1.0.0`) your bundle aligns with.
-6. **Deliver**: Provide the zip, checksums, and version reference to your auditor or compliance function.
+5. **引用发布版本**：记录您的包对齐的 AIMO 标准版本（例如 `v1.0.0`）。
+6. **交付**：将 zip、校验和和版本引用提供给您的审计师或合规职能部门。
 
-For release assets and verification, see [Releases](../releases/index.md).
+有关发布资产和验证，请参阅 [发布](../releases/index.md)。
 
-## Non-overclaim statement
+## 不过度声明声明
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "重要提示"
+    AIMO 标准支持**可解释性和证据就绪**。它**不**提供法律建议、保证合规或认证符合任何法规或框架。采用者必须根据权威文本验证声明，并在适当时获取专业建议。
 
-See [Responsibility Boundary](responsibility-boundary.md) for details on scope, assumptions, and adopter responsibilities.
+有关范围、假设和采用者责任的详情，请参阅 [责任边界](responsibility-boundary.md)。
 
-## For auditors: Verification procedure
+## 审计师：验证程序
 
-When receiving an evidence submission, auditors should verify integrity and structure using the following steps:
+收到证据提交时，审计师应使用以下步骤验证完整性和结构：
 
-!!! success "Build Provenance Available"
-    All release assets include cryptographically signed build attestations. See [Verification Procedure](../standard/versions/index.md#4-verify-build-provenance-attestation) for attestation verification steps.
+!!! success "构建来源可用"
+    所有发布资产包括加密签名的构建证明。请参阅 [验证程序](../standard/versions/index.md#4-verify-build-provenance-attestation) 了解证明验证步骤。
 
-### Step 1: Verify checksums (SHA-256)
+### 步骤 1：验证校验和（SHA-256）
 
 === "Linux"
 
     ```bash
-    # Download or receive SHA256SUMS.txt with the submission
-    # Verify all files match their recorded checksums
+    # 下载或接收随提交的 SHA256SUMS.txt
+    # 验证所有文件与其记录的校验和匹配
     sha256sum -c SHA256SUMS.txt
 
-    # Or verify individual files manually:
+    # 或手动验证单个文件：
     sha256sum evidence_bundle.zip
-    # Compare output against the value in SHA256SUMS.txt
+    # 将输出与 SHA256SUMS.txt 中的值进行比较
     ```
 
 === "macOS"
 
     ```bash
-    # Verify all files match their recorded checksums
+    # 验证所有文件与其记录的校验和匹配
     shasum -a 256 -c SHA256SUMS.txt
 
-    # Or verify individual files manually:
+    # 或手动验证单个文件：
     shasum -a 256 evidence_bundle.zip
-    # Compare output against the value in SHA256SUMS.txt
+    # 将输出与 SHA256SUMS.txt 中的值进行比较
     ```
 
 === "Windows (PowerShell)"
 
     ```powershell
-    # Verify individual files
+    # 验证单个文件
     Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
 
-    # Compare the Hash output with SHA256SUMS.txt
+    # 将 Hash 输出与 SHA256SUMS.txt 进行比较
     Get-Content .\SHA256SUMS.txt
     ```
 
-If any checksum fails, the submission should be rejected or re-requested.
+如果任何校验和失败，应拒绝或重新请求提交。
 
-### Step 2: Verify bundle structure (Validator)
+### 步骤 2：验证包结构（验证器）
 
-**Prerequisites** (one-time setup):
+**前提条件**（一次性设置）：
 
 ```bash
-# Clone the official AIMO Standard release
+# 克隆官方 AIMO 标准发布
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
 
-# IMPORTANT: Use the exact version stated in the submission
-# Replace VERSION with the submitter's declared version (e.g., v0.0.1)
-VERSION=v0.0.1  # ← Match the version in the submission
+# 重要：使用提交中声明的确切版本
+# 将 VERSION 替换为提交者声明的版本（例如 v0.0.1）
+VERSION=v0.0.1  # ← 匹配提交中的版本
 git checkout "$VERSION"
 
-# Set up Python environment
+# 设置 Python 环境
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-!!! warning "Version Matching"
-    Always use the exact AIMO Standard version stated in the submission. Using a different version may cause validation mismatches due to schema or rule changes between versions.
+!!! warning "版本匹配"
+    始终使用提交中声明的确切 AIMO 标准版本。使用不同版本可能会由于版本之间的模式或规则更改导致验证不匹配。
 
-**Run validation**:
+**运行验证**：
 
 ```bash
-# Extract the submitted bundle
+# 解压提交的包
 unzip evidence_bundle.zip -d bundle/
 
-# Run validator against the bundle's root.json
+# 对包的 root.json 运行验证器
 python validator/src/validate.py bundle/root.json
 
-# Expected output: "validation OK" or list of errors
+# 预期输出："validation OK" 或错误列表
 ```
 
-**Example** (using built-in sample):
+**示例**（使用内置样本）：
 
 ```bash
 python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 ```
 
-The validator checks:
+验证器检查：
 
-- Required files exist (EV records, Dictionary)
-- JSON files conform to schema
-- Cross-references (request_id, review_id, etc.) are valid
-- Timestamps are present and properly formatted
+- 必需文件存在（EV 记录、字典）
+- JSON 文件符合模式
+- 交叉引用（request_id、review_id 等）有效
+- 时间戳存在且格式正确
 
-### Step 3: Verify version alignment
+### 步骤 3：验证版本对齐
 
-Check that the submission references an official AIMO Standard release:
+检查提交是否引用了官方 AIMO 标准发布：
 
-1. Confirm the stated version (e.g., `v0.0.1`) exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
-2. Compare submitted schemas against the release artifacts
-3. Note any deviations from the official release
+1. 确认声明的版本（例如 `v0.0.1`）存在于 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
+2. 将提交的模式与发布工件进行比较
+3. 记录与官方发布的任何偏差
 
-### What to look for
+### 检查要点
 
-| Check | Pass Criteria | Fail Action |
+| 检查 | 通过标准 | 失败操作 |
 | --- | --- | --- |
-| Checksums match | All `sha256sum -c` checks pass | Reject or re-request |
-| Validator passes | No errors from `validate.py` | Request fixes before acceptance |
-| Version exists | Release tag exists on GitHub | Clarify version alignment |
-| Required fields present | EV records have id, timestamp, source, summary | Request completion |
-| Traceability intact | Cross-references resolve correctly | Request linkage fixes |
+| 校验和匹配 | 所有 `sha256sum -c` 检查通过 | 拒绝或重新请求 |
+| 验证器通过 | `validate.py` 无错误 | 在接受前请求修复 |
+| 版本存在 | 发布标签存在于 GitHub | 澄清版本对齐 |
+| 必需字段存在 | EV 记录有 id、timestamp、source、summary | 请求完成 |
+| 可追溯性完整 | 交叉引用正确解析 | 请求链接修复 |
 
-!!! info "Auditor independence"
-    Auditors should obtain the validator and schemas directly from the official AIMO Standard release, not from the submitting party, to ensure verification independence.
+!!! info "审计师独立性"
+    审计师应直接从官方 AIMO 标准发布获取验证器和模式，而不是从提交方获取，以确保验证独立性。
 
-## Audit journey
+## 审计旅程
 
-From this page, the recommended audit journey is:
+从此页面，推荐的审计旅程是：
 
-1. **Classification system**: [Taxonomy](../standard/current/03-taxonomy.md) + [Dictionary](../standard/current/05-dictionary.md) — understand the 8-dimension code system
-2. **Evidence structure**: [Evidence Bundle](../artifacts/evidence-bundle.md) — understand bundle TOC and traceability
-3. **Required evidence**: [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist by lifecycle
-4. **Framework alignment**: [Coverage Map](../coverage-map/index.md) + [Methodology](../coverage-map/methodology.md) — see how AIMO maps to external frameworks
-5. **Validation**: [Validator](../validator/index.md) — run structural consistency checks
-6. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums
+1. **分类系统**：[分类法](../standard/current/03-taxonomy.md) + [字典](../standard/current/05-dictionary.md) — 理解8维代码系统
+2. **证据结构**：[证据包](../artifacts/evidence-bundle.md) — 理解包目录和可追溯性
+3. **必需证据**：[最低证据要求](../artifacts/minimum-evidence.md) — 按生命周期的 MUST 级别清单
+4. **框架对齐**：[覆盖映射](../coverage-map/index.md) + [方法论](../coverage-map/methodology.md) — 了解 AIMO 如何映射到外部框架
+5. **验证**：[验证器](../validator/index.md) — 运行结构一致性检查
+6. **下载**：[发布](../releases/index.md) — 获取发布资产并验证校验和

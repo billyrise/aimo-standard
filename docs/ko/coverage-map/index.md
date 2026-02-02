@@ -1,42 +1,36 @@
 ---
-description: AIMO Coverage Map - Traceability between AIMO Standard and major regulations (ISO 42001, NIST AI RMF, EU AI Act, ISMS) for audit readiness.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/index.md
-source_hash: 4cc217bc21f8b662
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 커버리지 맵 - 감사 준비를 위한 AIMO 표준과 주요 규정(ISO 42001, NIST AI RMF, EU AI Act, ISMS) 간의 추적성.
 ---
 
-# Coverage Map
+# 커버리지 맵
 
-## Important: Scope of this Coverage Map (No automatic compliance)
+## 중요: 이 커버리지 맵의 범위 (자동 컴플라이언스 아님)
 
-This Coverage Map provides **traceability** between AIMO Standard elements and major regulations/standards to accelerate audit explanations and evidence readiness.
-**It does NOT automatically guarantee compliance** with any specific regulation or standard.
-Applicable obligations vary by role (e.g., provider/deployer), use case, risk classification, transition timelines, and authoritative interpretations/certification schemes.
+이 커버리지 맵은 감사 설명과 증거 준비를 가속화하기 위해 AIMO 표준 요소와 주요 규정/표준 간의 **추적성**을 제공합니다.
+**특정 규정 또는 표준에 대한 컴플라이언스를 자동으로 보장하지 않습니다**.
+적용 가능한 의무는 역할(예: 제공자/배포자), 사용 사례, 리스크 분류, 전환 일정, 권위 있는 해석/인증 체계에 따라 다릅니다.
 
-## How to use this map (traceability workflow)
+## 이 맵 사용 방법 (추적성 워크플로우)
 
-1. Start from the external requirement (e.g., ISO/NIST/EU AI Act/ISMS) and find the mapped AIMO Standard elements.
-2. Use the linked AIMO elements to identify required artifacts and minimum evidence requirements.
-3. Validate completeness and consistency using the Validator, and apply human review where required (see [Human Oversight Protocol](../governance/human-oversight-protocol.md)).
+1. 외부 요구사항(예: ISO/NIST/EU AI Act/ISMS)에서 시작하여 매핑된 AIMO 표준 요소를 찾습니다.
+2. 연결된 AIMO 요소를 사용하여 필요한 산출물 및 최소 증거 요구사항을 식별합니다.
+3. 검증기를 사용하여 완전성과 일관성을 검증하고, 필요한 경우 인간 검토를 적용합니다([인간 감독 프로토콜](../governance/human-oversight-protocol.md) 참조).
 
-**Key resources:**
+**주요 리소스:**
 
-- [Taxonomy](../standard/current/03-taxonomy.md) — classification codes
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist
-- [Evidence Bundle](../artifacts/evidence-bundle.md) — bundle structure and TOC
-- [Log Schemas](../artifacts/log-schemas/index.md) — Shadow AI / agent activity evidence
-- [Validator](../validator/index.md) — structural consistency checks
-- [Human Oversight Protocol](../governance/human-oversight-protocol.md) — machine vs. human review boundary
+- [분류체계](../standard/current/03-taxonomy.md) — 분류 코드
+- [최소 증거 요구사항](../artifacts/minimum-evidence.md) — MUST 수준 체크리스트
+- [증거 번들](../artifacts/evidence-bundle.md) — 번들 구조 및 목차
+- [로그 스키마](../artifacts/log-schemas/index.md) — Shadow AI / 에이전트 활동 증거
+- [검증기](../validator/index.md) — 구조적 일관성 검사
+- [인간 감독 프로토콜](../governance/human-oversight-protocol.md) — 기계 vs. 인간 검토 경계
 
 ---
 
-This section maps AIMO Standard evidence and artifacts to external frameworks and regulations for audit explainability. It does **not** guarantee compliance or provide legal advice.
+이 섹션은 감사 설명 가능성을 위해 AIMO 표준 증거 및 산출물을 외부 프레임워크 및 규정에 매핑합니다. 컴플라이언스를 보장하거나 법률 자문을 제공하지 **않습니다**.
 
-- **[Methodology](methodology.md)**: what the mapping is and is not; how to use it; update policy; relationship to [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-- **ISO/IEC 42001**: [ISO/IEC 42001 mapping](iso-42001.md) — AI management system themes.
-- **NIST AI RMF**: [NIST AI RMF mapping](nist-ai-rmf.md) — Govern, Map, Measure, Manage.
-- **EU AI Act**: [EU AI Act mapping](eu-ai-act.md) — high-level documentation and record-keeping (not legal interpretation).
-- **ISMS view**: [ISMS mapping](isms.md) — ISO/IEC 27001/27002 themes (change management, access control, logging, evidence integrity).
+- **[방법론](methodology.md)**: 매핑이 무엇이고 무엇이 아닌지; 사용 방법; 업데이트 정책; [증거 번들](../artifacts/evidence-bundle.md) 및 [최소 증거 요구사항](../artifacts/minimum-evidence.md)과의 관계.
+- **ISO/IEC 42001**: [ISO/IEC 42001 매핑](iso-42001.md) — AI 관리 시스템 주제.
+- **NIST AI RMF**: [NIST AI RMF 매핑](nist-ai-rmf.md) — Govern, Map, Measure, Manage.
+- **EU AI Act**: [EU AI Act 매핑](eu-ai-act.md) — 고수준 문서화 및 기록 보존 (법률 해석 아님).
+- **ISMS 뷰**: [ISMS 매핑](isms.md) — ISO/IEC 27001/27002 주제 (변경 관리, 접근 통제, 로깅, 증거 무결성).

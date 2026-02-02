@@ -1,82 +1,76 @@
 ---
-description: AIMO Standard license - Apache 2.0 licensing terms for specification, documentation, and machine-readable artifacts.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/license.md
-source_hash: a2411f1391e474a7
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准许可证 - 规范、文档和机器可读工件的 Apache 2.0 许可条款。
 ---
 
-# License
+# 许可证
 
-This page documents the licensing terms for AIMO Standard materials.
+本页记录 AIMO 标准材料的许可条款。
 
-## License Type
+## 许可类型
 
-AIMO Standard is licensed under the **Apache License, Version 2.0**.
+AIMO 标准根据 **Apache License, Version 2.0** 许可。
 
-- SPDX Identifier: `Apache-2.0`
-- Full text: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- SPDX 标识符：`Apache-2.0`
+- 完整文本：[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
-## Scope
+## 范围
 
-### What is Covered
+### 涵盖的内容
 
-| Material | License | Location |
+| 材料 | 许可证 | 位置 |
 | -------- | ------- | -------- |
-| Documentation | Apache-2.0 | `docs/` |
-| JSON Schemas | Apache-2.0 | `schemas/` |
-| Templates | Apache-2.0 | `templates/` |
-| Examples | Apache-2.0 | `examples/` |
-| Validator | Apache-2.0 | `validator/` |
-| Tooling | Apache-2.0 | `tooling/` |
-| PDF releases | Apache-2.0 | GitHub Releases |
-| Artifacts ZIP | Apache-2.0 | GitHub Releases |
+| 文档 | Apache-2.0 | `docs/` |
+| JSON 模式 | Apache-2.0 | `schemas/` |
+| 模板 | Apache-2.0 | `templates/` |
+| 示例 | Apache-2.0 | `examples/` |
+| 验证器 | Apache-2.0 | `validator/` |
+| 工具 | Apache-2.0 | `tooling/` |
+| PDF 发布 | Apache-2.0 | GitHub Releases |
+| 工件 ZIP | Apache-2.0 | GitHub Releases |
 
-### What You Can Do
+### 您可以做什么
 
-Under Apache-2.0, you may:
+在 Apache-2.0 下，您可以：
 
-- Use the materials for any purpose (commercial or non-commercial)
-- Modify and create derivative works
-- Distribute original or modified versions
-- Include in proprietary products
+- 将材料用于任何目的（商业或非商业）
+- 修改并创建衍生作品
+- 分发原始或修改版本
+- 包含在专有产品中
 
-### Requirements
+### 要求
 
-When using AIMO Standard materials:
+使用 AIMO 标准材料时：
 
-1. Include the license notice in distributions
-2. Provide attribution (see [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
-3. State significant modifications (if any)
-4. Do not use trademarks without permission (see [Trademarks](trademarks.md))
+1. 在分发中包含许可声明
+2. 提供归属（参见 [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt)）
+3. 声明重大修改（如有）
+4. 未经许可不得使用商标（参见 [商标](trademarks.md)）
 
-## NOTICE File
+## NOTICE 文件
 
-The [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) file contains required attribution information.
+[NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) 文件包含必需的归属信息。
 
-## Third-Party Components
+## 第三方组件
 
-AIMO Standard may include or reference third-party components. Each component retains its original license.
+AIMO 标准可能包含或引用第三方组件。每个组件保留其原始许可证。
 
-## FAQ
+## 常见问题
 
-**Q: Can I use AIMO Standard in commercial products?**
-A: Yes, Apache-2.0 permits commercial use.
+**问：我可以在商业产品中使用 AIMO 标准吗？**
+答：是的，Apache-2.0 允许商业使用。
 
-**Q: Do I need to open-source my implementation?**
-A: No, Apache-2.0 does not require derivative works to be open-sourced.
+**问：我需要开源我的实现吗？**
+答：不需要，Apache-2.0 不要求衍生作品开源。
 
-**Q: Can I modify the schemas?**
-A: Yes, but you must note modifications and cannot claim conformance with modified schemas.
+**问：我可以修改模式吗？**
+答：可以，但您必须注明修改，并且不能使用修改后的模式声称符合性。
 
-## License Files
+## 许可文件
 
-- [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) — License text
-- [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) — Attribution
+- [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) — 许可文本
+- [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) — 归属
 
-## Related Pages
+## 相关页面
 
-- [Trademarks](trademarks.md) — Trademark usage
-- [Governance](index.md) — Project governance
+- [商标](trademarks.md) — 商标使用
+- [治理](index.md) — 项目治理

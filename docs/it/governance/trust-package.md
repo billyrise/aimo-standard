@@ -1,85 +1,79 @@
 ---
-description: AIMO Trust Package - Auditor-ready materials bundle. Minimum documentation for auditors, legal, and IT security to assess AI governance adoption readiness.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/trust-package.md
-source_hash: bb94ac221ae34a98
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Trust Package AIMO - Bundle di materiali pronti per l'auditor. Documentazione minima per auditor, legale e sicurezza IT per valutare la prontezza all'adozione della governance dell'IA.
 ---
 
-# Trust Package (Assurance Package)
+# Trust Package (Pacchetto di Assicurazione)
 
-This page bundles the minimum materials auditors, legal, and IT security need to assess adoption readiness.
-It is a hub only; detailed Evidence TOC and Coverage tables are maintained in their respective sections.
+Questa pagina raggruppa i materiali minimi necessari ad auditor, legale e sicurezza IT per valutare la prontezza all'adozione.
+È solo un hub; il TOC dettagliato dell'Evidence e le tabelle di Coverage sono mantenuti nelle rispettive sezioni.
 
 ## Download
 
-**[Download Trust Package PDF (Latest Release)](https://github.com/billyrise/aimo-standard/releases/latest)**
+**[Scarica Trust Package PDF (Ultima Release)](https://github.com/billyrise/aimo-standard/releases/latest)**
 
-The Trust Package PDF consolidates auditor-ready materials into a single document. Each GitHub Release includes:
+Il Trust Package PDF consolida i materiali pronti per l'auditor in un singolo documento. Ogni Release GitHub include:
 
-- `trust_package.pdf` — English Trust Package
-- `trust_package.ja.pdf` — Japanese Trust Package
-- `aimo-standard-artifacts.zip` — Schemas, templates, examples, validator rules
-- `SHA256SUMS.txt` — Checksums for verification
+- `trust_package.pdf` — Trust Package inglese
+- `trust_package.ja.pdf` — Trust Package giapponese
+- `aimo-standard-artifacts.zip` — Schemi, template, esempi, regole del validator
+- `SHA256SUMS.txt` — Checksum per la verifica
 
-## What you get
+## Cosa ottieni
 
-- **Conformance**: how to claim compliance and what levels mean — [Conformance](../conformance/index.md)
-- **Coverage Map**: mapping to external standards — [Coverage Map index](../coverage-map/index.md), [Coverage Map methodology](../coverage-map/methodology.md)
-- **Standard**: normative requirements and definitions — [Standard (Current)](../standard/current/index.md)
-- **Taxonomy**: 8-dimension classification system for AI governance — [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md)
-- **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](../artifacts/evidence-bundle.md)
-- **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- **Validator**: rules and reference checks — [Validator](../validator/index.md)
-- **Examples**: audit-ready sample bundles — [Examples](../examples/index.md)
-- **Releases**: change history and distribution — [Releases](../releases/index.md)
-- **Governance**: policies, security, licensing — [Governance](../governance/index.md)
+- **Conformità**: come dichiarare la conformità e cosa significano i livelli — [Conformità](../conformance/index.md)
+- **Mappa di Copertura**: mappatura verso standard esterni — [Indice Mappa di Copertura](../coverage-map/index.md), [Metodologia Mappa di Copertura](../coverage-map/methodology.md)
+- **Standard**: requisiti e definizioni normative — [Standard (Corrente)](../standard/current/index.md)
+- **Tassonomia**: sistema di classificazione a 8 dimensioni per la governance dell'IA — [Tassonomia](../standard/current/03-taxonomy.md), [Codici](../standard/current/04-codes.md), [Dizionario](../standard/current/05-dictionary.md)
+- **Evidence Bundle**: struttura, TOC, tracciabilità — [Evidence Bundle](../artifacts/evidence-bundle.md)
+- **Requisiti Minimi di Evidence**: checklist MUST-level per ciclo di vita — [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md)
+- **Validator**: regole e controlli di riferimento — [Validator](../validator/index.md)
+- **Esempi**: bundle di esempio pronti per l'audit — [Esempi](../examples/index.md)
+- **Release**: cronologia delle modifiche e distribuzione — [Release](../releases/index.md)
+- **Governance**: politiche, sicurezza, licenze — [Governance](../governance/index.md)
 
-## Minimum set for audit-readiness
+## Set minimo per la prontezza all'audit
 
-| Item | Where to find it | Outcome / what it proves |
+| Elemento | Dove trovarlo | Risultato / cosa dimostra |
 | --- | --- | --- |
-| Conformance levels | [Conformance](../conformance/index.md) | How to claim compliance and the scope of evidence required |
-| Coverage mapping | [Coverage Map index](../coverage-map/index.md), [Coverage Map methodology](../coverage-map/methodology.md) | Explainability against external regulations and standards |
-| Taxonomy & Dictionary | [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md) | Classification system for AI systems (8 dimensions, 91 codes) |
-| Evidence artifacts | [Evidence Bundle](../artifacts/evidence-bundle.md), [Minimum Evidence](../artifacts/minimum-evidence.md), [EV Template](../standard/current/06-ev-template.md) | What data must exist to support traceability |
-| Validator checks | [Validator](../validator/index.md) | How to verify internal consistency and completeness |
-| Example bundle | [Examples](../examples/index.md) | What an audit-ready package looks like in practice |
-| Change control | [Releases](../releases/index.md), [Governance](../governance/index.md) | How updates are managed and communicated |
-| Security / License / Trademarks | [Governance](../governance/index.md) | Legal and security posture for adoption decisions |
+| Livelli di conformità | [Conformità](../conformance/index.md) | Come dichiarare la conformità e l'ambito dell'evidence richiesta |
+| Mappatura di copertura | [Indice Mappa di Copertura](../coverage-map/index.md), [Metodologia Mappa di Copertura](../coverage-map/methodology.md) | Spiegabilità verso normative e standard esterni |
+| Tassonomia & Dizionario | [Tassonomia](../standard/current/03-taxonomy.md), [Codici](../standard/current/04-codes.md), [Dizionario](../standard/current/05-dictionary.md) | Sistema di classificazione per i sistemi IA (8 dimensioni, 91 codici) |
+| Artefatti di evidence | [Evidence Bundle](../artifacts/evidence-bundle.md), [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md), [Template EV](../standard/current/06-ev-template.md) | Quali dati devono esistere per supportare la tracciabilità |
+| Controlli del validator | [Validator](../validator/index.md) | Come verificare la coerenza interna e la completezza |
+| Bundle di esempio | [Esempi](../examples/index.md) | Come appare in pratica un pacchetto pronto per l'audit |
+| Controllo delle modifiche | [Release](../releases/index.md), [Governance](../governance/index.md) | Come gli aggiornamenti sono gestiti e comunicati |
+| Sicurezza / Licenza / Marchi | [Governance](../governance/index.md) | Postura legale e di sicurezza per le decisioni di adozione |
 
-## How to cite
+## Come citare
 
-Use the repository README for citation guidance and context; governance links to the authoritative policies.
-See [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) and [Governance](../governance/index.md).
+Usare il README del repository per la guida alle citazioni e il contesto; la governance punta alle politiche autorevoli.
+Vedere [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) e [Governance](../governance/index.md).
 
-## Artifacts zip contents
+## Contenuto dello zip degli artefatti
 
-The `aimo-standard-artifacts.zip` includes:
+L'`aimo-standard-artifacts.zip` include:
 
-- **Taxonomy (SSOT)**: `source_pack/03_taxonomy/` — Dictionary CSV (91 codes), YAML, code system
-- **JSON Schemas**: `schemas/jsonschema/` — Machine-readable validation schemas
-- **Templates**: `templates/ev/` — Evidence record templates (JSON + Markdown)
-- **Examples**: `examples/` — Minimal sample bundles for quick adoption
-- **Coverage Map**: `coverage_map/coverage_map.yaml` — Mapping to external standards
-- **Validator Rules**: `validator/rules/` — Validation rule definitions
-- **Governance docs**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt`, etc.
+- **Tassonomia (SSOT)**: `source_pack/03_taxonomy/` — Dictionary CSV (91 codici), YAML, code system
+- **JSON Schemas**: `schemas/jsonschema/` — Schemi di validazione leggibili da macchina
+- **Template**: `templates/ev/` — Template di record di evidence (JSON + Markdown)
+- **Esempi**: `examples/` — Bundle di esempio minimi per un'adozione rapida
+- **Mappa di Copertura**: `coverage_map/coverage_map.yaml` — Mappatura verso standard esterni
+- **Regole del Validator**: `validator/rules/` — Definizioni delle regole di validazione
+- **Documenti di governance**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt`, ecc.
 
-## Responsibility boundary
+## Confini di responsabilità
 
-The AIMO Standard provides a structured evidence format and explainability framework. It does **not** provide legal advice, compliance certification, risk assessment, or audit execution.
+Lo Standard AIMO fornisce un formato di evidence strutturato e un framework di spiegabilità. **Non** fornisce consulenza legale, certificazione di conformità, valutazione del rischio o esecuzione di audit.
 
-For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](responsibility-boundary.md).
+Per la definizione completa dell'ambito, le assunzioni e le responsabilità degli adottanti, vedere [Confini di Responsabilità](responsibility-boundary.md).
 
-## How to prepare a submission package
+## Come preparare un pacchetto di submission
 
-Follow these steps to prepare an audit-ready submission:
+Seguire questi passaggi per preparare una submission pronta per l'audit:
 
-1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-2. **Run Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix any errors before proceeding.
-3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
+1. **Generare l'Evidence Bundle**: Creare record EV, Dizionario, Riepilogo e Change Log secondo [Evidence Bundle](../artifacts/evidence-bundle.md) e [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md).
+2. **Eseguire il Validator**: Eseguire `python validator/src/validate.py bundle/root.json` per controllare la coerenza strutturale. Correggere eventuali errori prima di procedere.
+3. **Creare i Checksum**: Generare checksum SHA-256 per tutti i file della submission:
 
     === "Linux"
 
@@ -101,142 +95,142 @@ Follow these steps to prepare an audit-ready submission:
             "$hash  $($_.Name)"
         } | Out-File SHA256SUMS.txt -Encoding UTF8
         ```
-4. **Package Artifacts**: Create a zip archive of your evidence bundle:
+4. **Impacchettare gli Artefatti**: Creare un archivio zip della directory dell'evidence bundle:
    ```bash
    zip -r evidence_bundle.zip bundle_directory/
    ```
-5. **Reference Release Version**: Note which AIMO Standard version (e.g., `v1.0.0`) your bundle aligns with.
-6. **Deliver**: Provide the zip, checksums, and version reference to your auditor or compliance function.
+5. **Referenziare la Versione di Release**: Annotare quale versione dello Standard AIMO (es. `v1.0.0`) il bundle è allineato.
+6. **Consegnare**: Fornire lo zip, i checksum e il riferimento alla versione al proprio auditor o funzione di conformità.
 
-For release assets and verification, see [Releases](../releases/index.md).
+Per gli asset di release e la verifica, vedere [Release](../releases/index.md).
 
-## Non-overclaim statement
+## Dichiarazione di non sovra-dichiarazione
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "Importante"
+    Lo Standard AIMO supporta **spiegabilità e prontezza dell'evidence**. **Non** fornisce consulenza legale, garantisce conformità o certifica la conformità a qualsiasi normativa o framework. Gli adottanti devono verificare le dichiarazioni contro i testi autorevoli e ottenere consulenza professionale quando appropriato.
 
-See [Responsibility Boundary](responsibility-boundary.md) for details on scope, assumptions, and adopter responsibilities.
+Vedere [Confini di Responsabilità](responsibility-boundary.md) per dettagli su ambito, assunzioni e responsabilità degli adottanti.
 
-## For auditors: Verification procedure
+## Per gli auditor: Procedura di verifica
 
-When receiving an evidence submission, auditors should verify integrity and structure using the following steps:
+Quando si riceve una submission di evidence, gli auditor dovrebbero verificare l'integrità e la struttura usando i seguenti passaggi:
 
-!!! success "Build Provenance Available"
-    All release assets include cryptographically signed build attestations. See [Verification Procedure](../standard/versions/index.md#4-verify-build-provenance-attestation) for attestation verification steps.
+!!! success "Build Provenance Disponibile"
+    Tutti gli asset di release includono attestazioni di build firmate crittograficamente. Vedere [Procedura di Verifica](../standard/versions/index.md#4-verify-build-provenance-attestation) per i passaggi di verifica delle attestazioni.
 
-### Step 1: Verify checksums (SHA-256)
+### Passaggio 1: Verificare i checksum (SHA-256)
 
 === "Linux"
 
     ```bash
-    # Download or receive SHA256SUMS.txt with the submission
-    # Verify all files match their recorded checksums
+    # Scaricare o ricevere SHA256SUMS.txt con la submission
+    # Verificare che tutti i file corrispondano ai checksum registrati
     sha256sum -c SHA256SUMS.txt
 
-    # Or verify individual files manually:
+    # O verificare singoli file manualmente:
     sha256sum evidence_bundle.zip
-    # Compare output against the value in SHA256SUMS.txt
+    # Confrontare l'output con il valore in SHA256SUMS.txt
     ```
 
 === "macOS"
 
     ```bash
-    # Verify all files match their recorded checksums
+    # Verificare che tutti i file corrispondano ai checksum registrati
     shasum -a 256 -c SHA256SUMS.txt
 
-    # Or verify individual files manually:
+    # O verificare singoli file manualmente:
     shasum -a 256 evidence_bundle.zip
-    # Compare output against the value in SHA256SUMS.txt
+    # Confrontare l'output con il valore in SHA256SUMS.txt
     ```
 
 === "Windows (PowerShell)"
 
     ```powershell
-    # Verify individual files
+    # Verificare singoli file
     Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
 
-    # Compare the Hash output with SHA256SUMS.txt
+    # Confrontare l'output Hash con SHA256SUMS.txt
     Get-Content .\SHA256SUMS.txt
     ```
 
-If any checksum fails, the submission should be rejected or re-requested.
+Se qualsiasi checksum fallisce, la submission dovrebbe essere rifiutata o ri-richiesta.
 
-### Step 2: Verify bundle structure (Validator)
+### Passaggio 2: Verificare la struttura del bundle (Validator)
 
-**Prerequisites** (one-time setup):
+**Prerequisiti** (setup una tantum):
 
 ```bash
-# Clone the official AIMO Standard release
+# Clonare la release ufficiale dello Standard AIMO
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
 
-# IMPORTANT: Use the exact version stated in the submission
-# Replace VERSION with the submitter's declared version (e.g., v0.0.1)
-VERSION=v0.0.1  # ← Match the version in the submission
+# IMPORTANTE: Usare la versione esatta indicata nella submission
+# Sostituire VERSION con la versione dichiarata dal mittente (es. v0.0.1)
+VERSION=v0.0.1  # ← Corrispondere alla versione nella submission
 git checkout "$VERSION"
 
-# Set up Python environment
+# Configurare l'ambiente Python
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-!!! warning "Version Matching"
-    Always use the exact AIMO Standard version stated in the submission. Using a different version may cause validation mismatches due to schema or rule changes between versions.
+!!! warning "Corrispondenza Versione"
+    Usare sempre la versione esatta dello Standard AIMO indicata nella submission. Usare una versione diversa può causare discrepanze nella validazione a causa di modifiche allo schema o alle regole tra le versioni.
 
-**Run validation**:
+**Eseguire la validazione**:
 
 ```bash
-# Extract the submitted bundle
+# Estrarre il bundle inviato
 unzip evidence_bundle.zip -d bundle/
 
-# Run validator against the bundle's root.json
+# Eseguire il validator contro il root.json del bundle
 python validator/src/validate.py bundle/root.json
 
-# Expected output: "validation OK" or list of errors
+# Output atteso: "validation OK" o lista di errori
 ```
 
-**Example** (using built-in sample):
+**Esempio** (usando il campione integrato):
 
 ```bash
 python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 ```
 
-The validator checks:
+Il validator controlla:
 
-- Required files exist (EV records, Dictionary)
-- JSON files conform to schema
-- Cross-references (request_id, review_id, etc.) are valid
-- Timestamps are present and properly formatted
+- I file richiesti esistono (record EV, Dizionario)
+- I file JSON sono conformi allo schema
+- I riferimenti incrociati (request_id, review_id, ecc.) sono validi
+- I timestamp sono presenti e formattati correttamente
 
-### Step 3: Verify version alignment
+### Passaggio 3: Verificare l'allineamento della versione
 
-Check that the submission references an official AIMO Standard release:
+Controllare che la submission referenzi una release ufficiale dello Standard AIMO:
 
-1. Confirm the stated version (e.g., `v0.0.1`) exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
-2. Compare submitted schemas against the release artifacts
-3. Note any deviations from the official release
+1. Confermare che la versione indicata (es. `v0.0.1`) esista su [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
+2. Confrontare gli schemi inviati con gli artefatti della release
+3. Annotare eventuali deviazioni dalla release ufficiale
 
-### What to look for
+### Cosa cercare
 
-| Check | Pass Criteria | Fail Action |
+| Controllo | Criteri di Successo | Azione in Caso di Fallimento |
 | --- | --- | --- |
-| Checksums match | All `sha256sum -c` checks pass | Reject or re-request |
-| Validator passes | No errors from `validate.py` | Request fixes before acceptance |
-| Version exists | Release tag exists on GitHub | Clarify version alignment |
-| Required fields present | EV records have id, timestamp, source, summary | Request completion |
-| Traceability intact | Cross-references resolve correctly | Request linkage fixes |
+| Checksum corrispondono | Tutti i controlli `sha256sum -c` passano | Rifiutare o ri-richiedere |
+| Validator passa | Nessun errore da `validate.py` | Richiedere correzioni prima dell'accettazione |
+| Versione esiste | Il tag di release esiste su GitHub | Chiarire l'allineamento della versione |
+| Campi richiesti presenti | I record EV hanno id, timestamp, source, summary | Richiedere completamento |
+| Tracciabilità intatta | I riferimenti incrociati si risolvono correttamente | Richiedere correzioni ai collegamenti |
 
-!!! info "Auditor independence"
-    Auditors should obtain the validator and schemas directly from the official AIMO Standard release, not from the submitting party, to ensure verification independence.
+!!! info "Indipendenza dell'auditor"
+    Gli auditor dovrebbero ottenere il validator e gli schemi direttamente dalla release ufficiale dello Standard AIMO, non dalla parte che invia, per assicurare l'indipendenza della verifica.
 
-## Audit journey
+## Percorso di audit
 
-From this page, the recommended audit journey is:
+Da questa pagina, il percorso di audit raccomandato è:
 
-1. **Classification system**: [Taxonomy](../standard/current/03-taxonomy.md) + [Dictionary](../standard/current/05-dictionary.md) — understand the 8-dimension code system
-2. **Evidence structure**: [Evidence Bundle](../artifacts/evidence-bundle.md) — understand bundle TOC and traceability
-3. **Required evidence**: [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist by lifecycle
-4. **Framework alignment**: [Coverage Map](../coverage-map/index.md) + [Methodology](../coverage-map/methodology.md) — see how AIMO maps to external frameworks
-5. **Validation**: [Validator](../validator/index.md) — run structural consistency checks
-6. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums
+1. **Sistema di classificazione**: [Tassonomia](../standard/current/03-taxonomy.md) + [Dizionario](../standard/current/05-dictionary.md) — comprendere il sistema di codici a 8 dimensioni
+2. **Struttura dell'evidence**: [Evidence Bundle](../artifacts/evidence-bundle.md) — comprendere il TOC del bundle e la tracciabilità
+3. **Evidence richiesta**: [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md) — checklist MUST-level per ciclo di vita
+4. **Allineamento ai framework**: [Mappa di Copertura](../coverage-map/index.md) + [Metodologia](../coverage-map/methodology.md) — vedere come AIMO si mappa ai framework esterni
+5. **Validazione**: [Validator](../validator/index.md) — eseguire controlli di coerenza strutturale
+6. **Download**: [Release](../releases/index.md) — ottenere gli asset di release e verificare i checksum

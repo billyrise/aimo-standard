@@ -1,22 +1,16 @@
 ---
-description: AIMO Standard artifacts hub. Machine-readable schemas, evidence bundle templates, log schemas for Shadow AI discovery and agent activity monitoring.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/index.md
-source_hash: 83902f5325974850
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Centre des artefacts du standard AIMO. Schémas lisibles par machine, modèles de lot de preuves, schémas de journaux pour la découverte de Shadow AI et la surveillance d'activité des agents.
 ---
 
-# Artifacts
+# Artefacts
 
-This section is a hub for machine-readable and human-readable artifacts that implement the AIMO Standard.
+Cette section est un centre pour les artefacts lisibles par machine et par l'humain qui implémentent le standard AIMO.
 
-- **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](evidence-bundle.md).
-- **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](minimum-evidence.md).
-- **Taxonomy / Codes / Dictionary**: [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md).
-- **Evidence templates**: [EV Template](../standard/current/06-ev-template.md) and related schemas.
-- **Schemas**: JSON Schema under `schemas/jsonschema/` in the repository.
-- **Examples**: minimal samples under [Examples](../examples/index.md).
+- **Lot de preuves** : structure, TDM, traçabilité — [Lot de preuves](evidence-bundle.md).
+- **Exigences minimales de preuves** : liste de contrôle OBLIGATOIRE par cycle de vie — [Exigences minimales de preuves](minimum-evidence.md).
+- **Taxonomie / Codes / Dictionnaire** : [Taxonomie](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionnaire](../standard/current/05-dictionary.md).
+- **Modèles de preuves** : [Modèle EV](../standard/current/06-ev-template.md) et schémas associés.
+- **Schémas** : JSON Schema sous `schemas/jsonschema/` dans le dépôt.
+- **Exemples** : échantillons minimaux sous [Exemples](../examples/index.md).
 
-For audit-ready packaging, see the [Trust Package](../governance/trust-package.md).
+Pour un packaging prêt pour l'audit, voir le [Package de confiance](../governance/trust-package.md).

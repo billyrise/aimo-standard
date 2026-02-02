@@ -1,49 +1,43 @@
 ---
-description: AIMO Standard - Open standard for AI governance and audit. Taxonomy with 8 dimensions and 91 codes for classifying AI use, evidence requirements, and validator for enterprise compliance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/index.md
-source_hash: 7b2b4ef78f06fcf5
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Standard - Padrão aberto para governança e auditoria de IA. Taxonomia com 8 dimensões e 91 códigos para classificação de uso de IA, requisitos de evidências e validador para conformidade empresarial.
 ---
 
 # AIMO Standard
 
-This site hosts the human-readable AIMO Standard specification.
+Este site hospeda a especificação legível do AIMO Standard.
 
-## Why agentic AI audits are needed now
+## Por que auditorias de IA agêntica são necessárias agora
 
-Enterprise AI risk is increasingly driven by **Shadow AI (unapproved AI use)** and **agentic AI (autonomous agents) with broad tool privileges**, making traditional ISMS/IT controls insufficient for traceability and audit explanations.
-AIMO Standard classifies AI usage with a shared language (Taxonomy), defines minimum evidence requirements, and enforces consistency via a Validator—accelerating auditability and remediation.
-Note: AIMO Standard does not provide legal advice or automatically guarantee compliance with any specific regulation/standard (see [Coverage Map](coverage-map/index.md)).
+O risco empresarial de IA é cada vez mais impulsionado por **Shadow AI (uso não aprovado de IA)** e **IA agêntica (agentes autônomos) com amplos privilégios de ferramentas**, tornando os controles tradicionais de ISMS/TI insuficientes para rastreabilidade e explicações de auditoria.
+O AIMO Standard classifica o uso de IA com uma linguagem compartilhada (Taxonomia), define requisitos mínimos de evidências e garante consistência via Validador — acelerando a auditabilidade e remediação.
+Nota: O AIMO Standard não fornece aconselhamento jurídico nem garante automaticamente conformidade com qualquer regulamentação/padrão específico (veja [Mapa de Cobertura](coverage-map/index.md)).
 
-- [Taxonomy](standard/current/03-taxonomy.md) (shared language)
-- [Minimum Evidence Requirements](artifacts/minimum-evidence.md)
-- [Validator](validator/index.md) (consistency checks)
+- [Taxonomia](standard/current/03-taxonomy.md) (linguagem compartilhada)
+- [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md)
+- [Validador](validator/index.md) (verificações de consistência)
 
-**Top-level sections**
+**Seções principais**
 
-1. [Standard](standard/index.md) — Specification ([Current](standard/current/index.md) | [Versions](standard/versions/index.md)), [Conformance](conformance/index.md), [Coverage Map](coverage-map/index.md)
-2. [Artifacts](artifacts/index.md) — Taxonomy, code system, dictionary, evidence templates, schemas
-3. [Validator](validator/index.md) — Rules, reference checks, how to run
-4. [Examples](examples/index.md) — End-to-end and minimal samples
-5. [Releases](releases/index.md) — Changelog, migration, checksums, PDF
-6. [Governance](governance/index.md) — Versioning, security, license, trademarks, [Contributing](contributing/localization.md)
+1. [Padrão](standard/index.md) — Especificação ([Atual](standard/current/index.md) | [Versões](standard/versions/index.md)), [Conformidade](conformance/index.md), [Mapa de Cobertura](coverage-map/index.md)
+2. [Artefatos](artifacts/index.md) — Taxonomia, sistema de códigos, dicionário, templates de evidências, schemas
+3. [Validador](validator/index.md) — Regras, verificações de referência, como executar
+4. [Exemplos](examples/index.md) — Amostras completas e mínimas
+5. [Releases](releases/index.md) — Changelog, migração, checksums, PDF
+6. [Governança](governance/index.md) — Versionamento, segurança, licença, marcas registradas, [Contribuição](contributing/localization.md)
 
-**Quick links by audience**
+**Links rápidos por audiência**
 
-- **For auditors**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Dictionary](standard/current/05-dictionary.md), [Evidence Bundle](artifacts/evidence-bundle.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Coverage Map](coverage-map/index.md), [Validator](validator/index.md), [Releases](releases/index.md)
-- **For security**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Governance](governance/index.md), [Validator](validator/index.md), [Standard > EV Template](standard/current/06-ev-template.md)
-- **For IT ops**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Releases](releases/index.md), [Validator](validator/index.md), [Examples](examples/index.md), [Conformance](conformance/index.md)
-- **For legal/procurement**: [Trust Package](governance/trust-package.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Coverage Map Methodology](coverage-map/methodology.md), [Releases](releases/index.md), [Governance](governance/index.md) (license, trademarks)
+- **Para auditores**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Dicionário](standard/current/05-dictionary.md), [Pacote de Evidências](artifacts/evidence-bundle.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Mapa de Cobertura](coverage-map/index.md), [Validador](validator/index.md), [Releases](releases/index.md)
+- **Para segurança**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Limite de Responsabilidade](governance/responsibility-boundary.md), [Governança](governance/index.md), [Validador](validator/index.md), [Padrão > Template EV](standard/current/06-ev-template.md)
+- **Para operações de TI**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Releases](releases/index.md), [Validador](validator/index.md), [Exemplos](examples/index.md), [Conformidade](conformance/index.md)
+- **Para jurídico/compras**: [Trust Package](governance/trust-package.md), [Limite de Responsabilidade](governance/responsibility-boundary.md), [Metodologia do Mapa de Cobertura](coverage-map/methodology.md), [Releases](releases/index.md), [Governança](governance/index.md) (licença, marcas registradas)
 
-**Audit journey** (2-click path):
+**Jornada de auditoria** (caminho de 2 cliques):
 
-1. [Trust Package](governance/trust-package.md) — start here for auditor-ready materials
-2. [Taxonomy](standard/current/03-taxonomy.md) + [Dictionary](standard/current/05-dictionary.md) — understand the 8-dimension code system
-3. [Evidence Bundle](artifacts/evidence-bundle.md) — structure and TOC
-4. [Minimum Evidence Requirements](artifacts/minimum-evidence.md) — MUST-level checklist
-5. [Coverage Map](coverage-map/index.md) + [Methodology](coverage-map/methodology.md) — framework mappings
-6. [Validator](validator/index.md) — run structural checks
-7. [Releases](releases/index.md) — download assets and verify
+1. [Trust Package](governance/trust-package.md) — comece aqui para materiais prontos para auditoria
+2. [Taxonomia](standard/current/03-taxonomy.md) + [Dicionário](standard/current/05-dictionary.md) — entenda o sistema de códigos de 8 dimensões
+3. [Pacote de Evidências](artifacts/evidence-bundle.md) — estrutura e sumário
+4. [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md) — checklist de nível DEVE
+5. [Mapa de Cobertura](coverage-map/index.md) + [Metodologia](coverage-map/methodology.md) — mapeamentos de frameworks
+6. [Validador](validator/index.md) — execute verificações estruturais
+7. [Releases](releases/index.md) — baixe ativos e verifique

@@ -1,75 +1,69 @@
 ---
-description: AIMO SEO and canonical URL policy - URL canonicalization strategy for search engines, auditors, and external references.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/seo-canonical-policy.md
-source_hash: 3932484358683f0c
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Política SEO y URL canónica de AIMO - Estrategia de canonicalización de URLs para motores de búsqueda, auditores y referencias externas.
 ---
 
-# SEO & Canonical Policy
+# Política SEO y Canónica
 
-This page documents how AIMO Standard manages URL canonicalization for search engines, auditors, and external references.
+Esta página documenta cómo AIMO Standard gestiona la canonicalización de URLs para motores de búsqueda, auditores y referencias externas.
 
-## Production vs Mirror Sites
+## Sitios de Producción vs Mirror
 
-| Environment | URL | Role | Indexable |
+| Entorno | URL | Rol | Indexable |
 |-------------|-----|------|-----------|
-| **Production** | `https://standard.aimoaas.com/` | Canonical site for all purposes | Yes |
-| GitHub Pages | `https://billyrise.github.io/aimo-standard/` | Temporary mirror / CI preview | No (noindex) |
+| **Producción** | `https://standard.aimoaas.com/` | Sitio canónico para todos los propósitos | Sí |
+| GitHub Pages | `https://billyrise.github.io/aimo-standard/` | Mirror temporal / preview de CI | No (noindex) |
 
-**Key principle**: Production (`standard.aimoaas.com`) is the authoritative URL. GitHub Pages serves as a temporary backup/mirror and should not be cited in audit reports or external references.
+**Principio clave**: Producción (`standard.aimoaas.com`) es la URL autoritativa. GitHub Pages sirve como backup/mirror temporal y no debe citarse en reportes de auditoría ni referencias externas.
 
-## Canonical URL Strategy
+## Estrategia de URL Canónica
 
-### How Canonical URLs Are Generated
+### Cómo se Generan las URLs Canónicas
 
-AIMO Standard uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) with the following configuration:
+AIMO Standard usa [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) con la siguiente configuración:
 
 ```yaml
 # mkdocs.yml
 site_url: https://standard.aimoaas.com/
 ```
 
-This `site_url` setting ensures:
+Esta configuración `site_url` asegura:
 
-1. **`<link rel="canonical">`** — Each generated HTML page includes a canonical link pointing to the Production URL.
-2. **`sitemap.xml`** — All URLs in the sitemap reference Production.
-3. **`robots.txt`** — Sitemap reference points to Production.
-4. **`hreflang` alternates** — Language alternates use Production URLs.
+1. **`<link rel="canonical">`** — Cada página HTML generada incluye un enlace canónico apuntando a la URL de Producción.
+2. **`sitemap.xml`** — Todas las URLs en el sitemap referencian Producción.
+3. **`robots.txt`** — Referencia del sitemap apunta a Producción.
+4. **Alternativas `hreflang`** — Alternativas de idioma usan URLs de Producción.
 
-### Language-Specific Canonicals
+### Canónicos Específicos por Idioma
 
-| Language | URL Pattern | Example |
+| Idioma | Patrón de URL | Ejemplo |
 |----------|-------------|---------|
-| English (default) | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
-| Japanese | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
+| Inglés (predeterminado) | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
+| Japonés | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
 
-Each language version is self-canonical and includes `hreflang` alternates to the other language(s) plus `x-default` pointing to the English version.
+Cada versión de idioma es auto-canónica e incluye alternativas `hreflang` a otro(s) idioma(s) más `x-default` apuntando a la versión en inglés.
 
-### Versioned Documentation and Canonicals
+### Documentación Versionada y Canónicos
 
-AIMO Standard uses [mike](https://github.com/jimporter/mike) for documentation versioning with `alias_type: redirect`:
+AIMO Standard usa [mike](https://github.com/jimporter/mike) para versionado de documentación con `alias_type: redirect`:
 
-| Version | URL Pattern | Canonical Status | Indexable |
+| Versión | Patrón de URL | Estado Canónico | Indexable |
 |---------|-------------|------------------|-----------|
-| Versioned (e.g., `0.0.1`) | `https://standard.aimoaas.com/0.0.1/` | Canonical for that specific version | Yes |
-| `latest` (alias) | `https://standard.aimoaas.com/latest/` | **Redirects** to current release | Yes (via target) |
-| `dev` | `https://standard.aimoaas.com/dev/` | Preview only | **No** (noindex enforced) |
+| Versionada (ej., `0.0.1`) | `https://standard.aimoaas.com/0.0.1/` | Canónica para esa versión específica | Sí |
+| `latest` (alias) | `https://standard.aimoaas.com/latest/` | **Redirige** a release actual | Sí (vía target) |
+| `dev` | `https://standard.aimoaas.com/dev/` | Solo preview | **No** (noindex aplicado) |
 
-**Critical distinctions:**
+**Distinciones críticas:**
 
-| Aspect | `/X.Y.Z/` | `/latest/` | `/dev/` |
+| Aspecto | `/X.Y.Z/` | `/latest/` | `/dev/` |
 |--------|-----------|------------|---------|
-| Content | Frozen snapshot | Redirect to `/X.Y.Z/` | Main branch preview |
-| Mutable | Never | Pointer updates on release | Continuous |
-| For audits | **Yes (preferred)** | Yes (resolves to frozen) | **Never** |
-| SEO | Indexed | Indexed via target | noindex |
+| Contenido | Snapshot congelado | Redirección a `/X.Y.Z/` | Preview de rama main |
+| Mutable | Nunca | Puntero actualiza en release | Continuo |
+| Para auditorías | **Sí (preferido)** | Sí (resuelve a congelado) | **Nunca** |
+| SEO | Indexado | Indexado vía target | noindex |
 
-**How alias_type: redirect works:**
+**Cómo funciona alias_type: redirect:**
 
-Instead of copying files, `/latest/` contains redirect pages pointing to the current release:
+En lugar de copiar archivos, `/latest/` contiene páginas de redirección apuntando al release actual:
 
 ```html
 <!-- /latest/index.html -->
@@ -77,57 +71,57 @@ Instead of copying files, `/latest/` contains redirect pages pointing to the cur
 <link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
 ```
 
-This ensures:
+Esto asegura:
 
-1. **No content drift** — `/latest/` cannot diverge from the release it points to.
-2. **No duplicate content** — Search engines see one canonical source.
-3. **Atomic updates** — Changing the alias updates all pages at once.
+1. **Sin deriva de contenido** — `/latest/` no puede divergir del release al que apunta.
+2. **Sin contenido duplicado** — Los motores de búsqueda ven una fuente canónica.
+3. **Actualizaciones atómicas** — Cambiar el alias actualiza todas las páginas a la vez.
 
-!!! info "Git Tag vs. Site Path"
-    Git release tags use `v` prefix (e.g., `v0.0.1`), but site paths omit the `v` (e.g., `/0.0.1/`). This is standard practice for documentation versioning tools like mike.
+!!! info "Git Tag vs. Ruta del Sitio"
+    Los tags de release de Git usan prefijo `v` (ej., `v0.0.1`), pero las rutas del sitio omiten el `v` (ej., `/0.0.1/`). Esta es práctica estándar para herramientas de versionado de documentación como mike.
 
-## Auditor Guidance: Which URL to Cite
+## Guía para Auditores: Qué URL Citar
 
-When citing AIMO Standard in audit reports, compliance documentation, or external references:
+Al citar AIMO Standard en reportes de auditoría, documentación de cumplimiento o referencias externas:
 
-### Recommended Citation URLs
+### URLs de Citación Recomendadas
 
-| Use Case | Recommended URL |
+| Caso de Uso | URL Recomendada |
 |----------|-----------------|
-| Current stable specification | `https://standard.aimoaas.com/latest/standard/current/` |
-| Specific version (for audit) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
-| Governance & policies | `https://standard.aimoaas.com/latest/governance/` |
-| Trust Package | `https://standard.aimoaas.com/latest/governance/trust-package/` |
+| Especificación estable actual | `https://standard.aimoaas.com/latest/standard/current/` |
+| Versión específica (para auditoría) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
+| Gobernanza y políticas | `https://standard.aimoaas.com/latest/governance/` |
+| Paquete de Confianza | `https://standard.aimoaas.com/latest/governance/trust-package/` |
 
-### Do NOT Cite
+### NO Citar
 
-- ~~`https://billyrise.github.io/aimo-standard/`~~ — Temporary mirror, not canonical
-- ~~`https://standard.aimoaas.com/dev/`~~ — Development version, subject to change
+- ~~`https://billyrise.github.io/aimo-standard/`~~ — Mirror temporal, no canónico
+- ~~`https://standard.aimoaas.com/dev/`~~ — Versión de desarrollo, sujeta a cambios
 
-### Versioned Citation for Immutability
+### Citación Versionada para Inmutabilidad
 
-For formal audits requiring immutable references, use versioned snapshot URLs:
+Para auditorías formales que requieren referencias inmutables, use URLs de snapshot versionado:
 
 ```
 https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 ```
 
-Versioned snapshots are frozen at release time and will not change.
+Los snapshots versionados están congelados en el momento del release y no cambiarán.
 
-!!! note "URL Format"
-    Site paths use version numbers without the `v` prefix. For version `v1.0.0`, use `/1.0.0/` in URLs.
+!!! note "Formato de URL"
+    Las rutas del sitio usan números de versión sin el prefijo `v`. Para la versión `v1.0.0`, use `/1.0.0/` en URLs.
 
-## Technical Implementation
+## Implementación Técnica
 
-### Generated HTML Example
+### Ejemplo de HTML Generado
 
-Every generated HTML page includes canonical and hreflang tags in the `<head>`:
+Cada página HTML generada incluye tags canónicos y hreflang en el `<head>`:
 
 ```html
-<!-- Canonical (always points to Production) -->
+<!-- Canonical (siempre apunta a Producción) -->
 <link rel="canonical" href="https://standard.aimoaas.com/latest/governance/">
 
-<!-- Language alternates -->
+<!-- Alternativas de idioma -->
 <link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/governance/">
 <link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/governance/">
 <link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/governance/">
@@ -144,64 +138,64 @@ Sitemap: https://standard.aimoaas.com/sitemap.xml
 
 ### Sitemap
 
-The sitemap is generated by `mkdocs-static-i18n` plugin and includes:
+El sitemap es generado por el plugin `mkdocs-static-i18n` e incluye:
 
-- All Production URLs
-- `hreflang` alternates for each language
+- Todas las URLs de Producción
+- Alternativas `hreflang` para cada idioma
 
-## Noindex Configuration
+## Configuración Noindex
 
-### `/dev/` (Preview) — Mandatory Noindex
+### `/dev/` (Preview) — Noindex Obligatorio
 
-The `/dev/` version contains unreleased content and MUST have noindex to prevent:
+La versión `/dev/` contiene contenido no publicado y DEBE tener noindex para prevenir:
 
-- Search engines indexing unstable content
-- Users finding `/dev/` via search and citing it in audits
-- Confusion between released and unreleased content
+- Que motores de búsqueda indexen contenido inestable
+- Que usuarios encuentren `/dev/` vía búsqueda y lo citen en auditorías
+- Confusión entre contenido publicado y no publicado
 
-**Implementation:**
+**Implementación:**
 
-The `deploy-dev.yml` workflow injects a noindex meta tag into all `/dev/` pages via theme override:
+El workflow `deploy-dev.yml` inyecta un meta tag noindex en todas las páginas `/dev/` vía override de tema:
 
 ```html
-<!-- Injected into /dev/ pages only -->
+<!-- Inyectado en páginas /dev/ solamente -->
 <meta name="robots" content="noindex, nofollow">
 ```
 
-### GitHub Pages Mirror — Noindex
+### Mirror de GitHub Pages — Noindex
 
-When deploying to GitHub Pages (the mirror site at `billyrise.github.io`), all pages should have noindex to prevent duplicate indexing:
+Al desplegar a GitHub Pages (el sitio mirror en `billyrise.github.io`), todas las páginas deben tener noindex para prevenir indexación duplicada:
 
 ```html
 <meta name="robots" content="noindex, nofollow">
 ```
 
-This ensures search engines always prioritize the Production canonical URLs at `standard.aimoaas.com`.
+Esto asegura que los motores de búsqueda siempre prioricen las URLs canónicas de Producción en `standard.aimoaas.com`.
 
-## Verification
+## Verificación
 
-After each build, you can verify canonical URLs by:
+Después de cada build, puede verificar URLs canónicas:
 
-1. **Inspecting generated HTML** — Check `site/` directory after `mkdocs build`
-2. **Using browser DevTools** — Inspect `<head>` section on deployed pages
-3. **Google Search Console** — Monitor which URLs are indexed
+1. **Inspeccionando HTML generado** — Verifique directorio `site/` después de `mkdocs build`
+2. **Usando DevTools del navegador** — Inspeccione sección `<head>` en páginas desplegadas
+3. **Google Search Console** — Monitoree qué URLs están indexadas
 
-Example verification command:
+Comando de verificación de ejemplo:
 
 ```bash
 mkdocs build
 grep -r 'rel="canonical"' site/ | head -5
 ```
 
-Expected output should show Production URLs, e.g.:
+La salida esperada debe mostrar URLs de Producción, ej.:
 
 ```
 site/index.html:<link rel="canonical" href="https://standard.aimoaas.com/">
 site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.com/governance/">
 ```
 
-## Related Documentation
+## Documentación Relacionada
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Releases](../releases/index.md) — Version history and changelog
-- [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Version policy
+- [Paquete de Confianza](trust-package.md) — Materiales listos para auditores
+- [Versiones](../releases/index.md) — Historial de versiones y changelog
+- [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Política de versiones

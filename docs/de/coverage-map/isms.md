@@ -1,37 +1,31 @@
 ---
-description: AIMO Standard to ISMS (ISO 27001/27002) mapping. Traceability between AIMO taxonomy and information security management system controls.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/isms.md
-source_hash: 7b194f9afc8f784e
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Standard zu ISMS (ISO 27001/27002)-Zuordnung. Nachverfolgbarkeit zwischen AIMO-Taxonomie und Informationssicherheits-Managementsystem-Kontrollen.
 ---
 
-# ISMS view (ISO/IEC 27001/27002) mapping
+# ISMS-Ansicht (ISO/IEC 27001/27002)-Zuordnung
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> Nachverfolgbarkeits-Shortcuts: Taxonomie → Mindestanforderungen an Evidence → Validator → Human Oversight Protocol.
 
-- [Taxonomy](../standard/current/03-taxonomy.md)
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
+- [Taxonomie](../standard/current/03-taxonomy.md)
+- [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md)
 - [Log Schemas](../artifacts/log-schemas/index.md)
 - [Validator](../validator/index.md)
 - [Human Oversight Protocol](../governance/human-oversight-protocol.md)
 
-This page maps selected ISO/IEC 27001/27002 themes (change management, access control, logging, evidence integrity) to AIMO evidence and artifacts. It is for explainability only; it does not guarantee conformity to ISO/IEC 27001 or 27002. Verify against the published standards.
+Diese Seite ordnet ausgewählte ISO/IEC 27001/27002-Themen (Änderungsmanagement, Zugriffskontrolle, Protokollierung, Evidence-Integrität) AIMO Evidence und Artefakten zu. Sie dient nur der Erklärbarkeit; sie garantiert keine Konformität mit ISO/IEC 27001 oder 27002. Überprüfen Sie gegen die veröffentlichten Standards.
 
 
-## Mapping table
+## Zuordnungstabelle
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| Framework-Referenz / Thema | AIMO Evidence / Wo in AIMO | Evidence Bundle / Mindestanforderungen | Artefakte & Validierung | Hinweise |
 | --- | --- | --- | --- | --- |
-| A.5.24 – Information security in project management | [Scope](../standard/current/02-scope.md) | request, review | templates/ev/ | Informative; verify against official text. |
-| A.5.29 – Information security during disruption | [Minimum Evidence](../artifacts/minimum-evidence.md) | exception, renewal | templates/ev/ev_template.md | Informative; verify against official text. |
-| A.5.30 – ICT readiness for business continuity | [Overview](../standard/current/01-overview.md) | Summary; integrity | — | Informative; verify against official text. |
-| A.8.1 – Inventory of assets | [Dictionary](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against official text. |
-| A.8.2 – Information classification | [Taxonomy](../standard/current/03-taxonomy.md) | Dictionary; review | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against official text. |
-| A.8.3 – Access control | [Minimum Evidence](../artifacts/minimum-evidence.md) | —; integrity | — | Informative; verify against official text. |
-| A.8.15 – Logging | [EV Template](../standard/current/06-ev-template.md) | EV, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informative; verify against official text. |
-| A.8.16 – Monitoring activities | [Minimum Evidence](../artifacts/minimum-evidence.md) | EV, change_log; change_log, integrity | templates/ev/ | Informative; verify against official text. |
-| A.8.32 – Change management | [Evidence Bundle](../artifacts/evidence-bundle.md) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | Informative; verify against official text. |
-| A.8.33 – Test information | [Validator](../standard/current/07-validator.md) | EV | validator/rules/, validator/src/; schema_validate_ev | Informative; verify against official text. |
+| A.5.24 – Informationssicherheit im Projektmanagement | [Scope](../standard/current/02-scope.md) | request, review | templates/ev/ | Informativ; gegen offiziellen Text prüfen. |
+| A.5.29 – Informationssicherheit bei Störungen | [Mindestanforderungen](../artifacts/minimum-evidence.md) | exception, renewal | templates/ev/ev_template.md | Informativ; gegen offiziellen Text prüfen. |
+| A.5.30 – IKT-Bereitschaft für Geschäftskontinuität | [Übersicht](../standard/current/01-overview.md) | Summary; integrity | — | Informativ; gegen offiziellen Text prüfen. |
+| A.8.1 – Inventar von Assets | [Dictionary](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informativ; gegen offiziellen Text prüfen. |
+| A.8.2 – Informationsklassifizierung | [Taxonomie](../standard/current/03-taxonomy.md) | Dictionary; review | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informativ; gegen offiziellen Text prüfen. |
+| A.8.3 – Zugriffskontrolle | [Mindestanforderungen](../artifacts/minimum-evidence.md) | —; integrity | — | Informativ; gegen offiziellen Text prüfen. |
+| A.8.15 – Protokollierung | [EV Template](../standard/current/06-ev-template.md) | EV, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informativ; gegen offiziellen Text prüfen. |
+| A.8.16 – Überwachungsaktivitäten | [Mindestanforderungen](../artifacts/minimum-evidence.md) | EV, change_log; change_log, integrity | templates/ev/ | Informativ; gegen offiziellen Text prüfen. |
+| A.8.32 – Änderungsmanagement | [Evidence Bundle](../artifacts/evidence-bundle.md) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | Informativ; gegen offiziellen Text prüfen. |
+| A.8.33 – Testinformationen | [Validator](../standard/current/07-validator.md) | EV | validator/rules/, validator/src/; schema_validate_ev | Informativ; gegen offiziellen Text prüfen. |

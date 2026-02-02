@@ -1,17 +1,11 @@
 ---
-description: Scope of AIMO Standard. Defines what the standard covers including AI classification, evidence requirements, and boundaries for enterprise governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/02-scope.md
-source_hash: d76faaddc726220f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 표준 범위. AI 분류, 증거 요구사항 및 기업 거버넌스 경계를 포함하여 표준이 다루는 내용을 정의합니다.
 ---
 
-# Scope
+# 범위
 
-This standard specifies artifacts and validation rules to enable consistent analysis and reporting.
+이 표준은 일관된 분석 및 보고를 가능하게 하는 산출물과 검증 규칙을 지정합니다.
 
-Out of scope:
-- proprietary inference logic
-- vendor-specific scoring/weighting implementations
+범위 외:
+- 독점 추론 로직
+- 벤더별 스코어링/가중치 구현

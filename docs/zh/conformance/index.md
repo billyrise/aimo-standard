@@ -1,37 +1,31 @@
 ---
-description: AIMO Standard conformance levels. How organizations claim compliance, evidence requirements, and what each conformance level means for AI governance.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/conformance/index.md
-source_hash: a78c3afc07d1ed70
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准符合性级别。组织如何声明合规、证据要求以及每个符合性级别对AI治理的含义。
 ---
 
-# Conformance
+# 符合性
 
-This section defines how organizations claim compliance with the AIMO Standard and what evidence is expected.
+本节定义组织如何声明符合 AIMO 标准以及预期的证据。
 
-## Purpose
+## 目的
 
-- **What you can claim**: Alignment with the AIMO Standard's evidence structure and traceability requirements.
-- **What you cannot claim**: Legal compliance, certification, or regulatory approval. See [Responsibility Boundary](../governance/responsibility-boundary.md).
+- **可以声明的内容**：与 AIMO 标准的证据结构和可追溯性要求保持一致。
+- **不能声明的内容**：法律合规、认证或监管批准。参见 [责任边界](../governance/responsibility-boundary.md)。
 
-## Expected Evidence
+## 预期证据
 
-To demonstrate conformance, organizations must provide:
+为证明符合性，组织必须提供：
 
-1. **Evidence Bundle**: Structured EV records per [Artifacts](../artifacts/index.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
-2. **Validator Results**: Passing output from the validator — see [Validator](../validator/index.md).
-3. **Version Reference**: Explicit AIMO Standard version — see [Versions](../standard/versions/index.md).
+1. **证据包**：按照 [工件](../artifacts/index.md) 和 [最低证据要求](../artifacts/minimum-evidence.md) 的结构化 EV 记录。
+2. **验证器结果**：验证器的通过输出 — 参见 [验证器](../validator/index.md)。
+3. **版本引用**：明确的 AIMO 标准版本 — 参见 [版本](../standard/versions/index.md)。
 
-## Non-overclaim
+## 不过度声明
 
-!!! warning "Important"
-    Conformance to the AIMO Standard demonstrates **evidence readiness and traceability**, not legal compliance or certification. See [Responsibility Boundary](../governance/responsibility-boundary.md).
+!!! warning "重要提示"
+    符合 AIMO 标准证明的是**证据就绪和可追溯性**，而非法律合规或认证。参见 [责任边界](../governance/responsibility-boundary.md)。
 
-## Related Pages
+## 相关页面
 
-- [Trust Package](../governance/trust-package.md) — Consolidated entry point for auditors
-- [Standard (Current)](../standard/current/index.md) — Normative requirements
-- [Artifacts](../artifacts/index.md) — Evidence structure
+- [信任包](../governance/trust-package.md) — 审计师的综合入口
+- [标准（当前版本）](../standard/current/index.md) — 规范性要求
+- [工件](../artifacts/index.md) — 证据结构

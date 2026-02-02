@@ -1,74 +1,68 @@
 ---
-description: Shadow AI Discovery Log Schema - Vendor-neutral format for documenting detection, inventory, and remediation of unapproved AI usage in enterprises.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/shadow-ai-discovery.md
-source_hash: f9d93c82c96d509f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Schéma de journal de découverte de Shadow AI - Format neutre vis-à-vis des fournisseurs pour documenter la détection, l'inventaire et la remédiation de l'utilisation non approuvée de l'IA en entreprise.
 ---
 
-# Shadow AI Discovery Log Schema
+# Schéma de journal de découverte de Shadow AI
 
-## Purpose
+## Objectif
 
-This schema defines a vendor-neutral format for logs that document the detection, inventory, and remediation of **unapproved AI usage (Shadow AI)**. It enables organizations to:
+Ce schéma définit un format neutre vis-à-vis des fournisseurs pour les journaux qui documentent la détection, l'inventaire et la remédiation de **l'utilisation non approuvée de l'IA (Shadow AI)**. Il permet aux organisations de :
 
-- Maintain an auditable record of Shadow AI detection events
-- Normalize logs from various sources (CASB, proxy, IdP, EDR, SaaS audit logs) into a consistent format
-- Support evidence submission for compliance and audit purposes
+- Maintenir un enregistrement auditable des événements de détection de Shadow AI
+- Normaliser les journaux de diverses sources (CASB, proxy, IdP, EDR, journaux d'audit SaaS) dans un format cohérent
+- Soutenir la soumission de preuves pour la conformité et les besoins d'audit
 
-## Normalization principles
+## Principes de normalisation
 
-| Principle | Description |
+| Principe | Description |
 | --- | --- |
-| **Vendor-neutral** | No dependency on specific vendor log formats; applicable to Netskope, Zscaler, Microsoft Defender, and others |
-| **Minimal required fields** | Only essential fields are MUST; organizations can omit optional fields |
-| **Extensible** | `additionalProperties: true` allows vendor-specific or organization-specific extensions |
-| **Privacy-aware** | Fields are designed to reference (not embed) sensitive content |
+| **Neutre vis-à-vis des fournisseurs** | Pas de dépendance aux formats de journaux de fournisseurs spécifiques ; applicable à Netskope, Zscaler, Microsoft Defender et autres |
+| **Champs requis minimaux** | Seuls les champs essentiels sont OBLIGATOIRES ; les organisations peuvent omettre les champs optionnels |
+| **Extensible** | `additionalProperties: true` permet des extensions spécifiques au fournisseur ou à l'organisation |
+| **Conscient de la confidentialité** | Les champs sont conçus pour référencer (pas intégrer) le contenu sensible |
 
-## Required fields (MUST)
+## Champs requis (OBLIGATOIRE)
 
-| Field | Type | Description | Example |
+| Champ | Type | Description | Exemple |
 | --- | --- | --- | --- |
-| `event_time` | string (ISO8601) | Timestamp of the event | `2026-01-15T09:30:00Z` |
-| `actor_id` | string | User or service identifier | `user@example.com` |
-| `actor_type` | string | Type of actor | `user` or `service` |
-| `source_system` | string | System that detected the event | `proxy`, `casb`, `idp`, `edr`, `saas_audit` |
-| `ai_service` | string | AI product or domain accessed | `chat.openai.com`, `claude.ai` |
-| `action` | string | Action performed | `chat`, `upload`, `download`, `tool_execute`, `api_call` |
-| `data_classification` | string | Data classification level | `public`, `internal`, `confidential`, `restricted` |
-| `decision` | string | Policy decision applied | `allow`, `block`, `needs_review`, `unknown` |
-| `evidence_ref` | string | Reference to related evidence | `sha256:abc123...` or `urn:evidence:...` |
-| `record_id` | string | Unique identifier for this record | `evt-20260115-001` |
+| `event_time` | string (ISO8601) | Horodatage de l'événement | `2026-01-15T09:30:00Z` |
+| `actor_id` | string | Identifiant utilisateur ou service | `user@example.com` |
+| `actor_type` | string | Type d'acteur | `user` ou `service` |
+| `source_system` | string | Système qui a détecté l'événement | `proxy`, `casb`, `idp`, `edr`, `saas_audit` |
+| `ai_service` | string | Produit ou domaine IA accédé | `chat.openai.com`, `claude.ai` |
+| `action` | string | Action effectuée | `chat`, `upload`, `download`, `tool_execute`, `api_call` |
+| `data_classification` | string | Niveau de classification des données | `public`, `internal`, `confidential`, `restricted` |
+| `decision` | string | Décision de politique appliquée | `allow`, `block`, `needs_review`, `unknown` |
+| `evidence_ref` | string | Référence aux preuves associées | `sha256:abc123...` ou `urn:evidence:...` |
+| `record_id` | string | Identifiant unique pour cet enregistrement | `evt-20260115-001` |
 
-## Optional fields (SHOULD/MAY)
+## Champs optionnels (DEVRAIT/PEUT)
 
-| Field | Type | Description |
+| Champ | Type | Description |
 | --- | --- | --- |
-| `session_id` | string | Session identifier |
-| `device_id` | string | Device identifier |
-| `ip` | string | IP address |
-| `user_agent` | string | User agent string |
-| `department` | string | Organizational department |
-| `project_id` | string | Project identifier |
-| `prompt_category` | string | Category of the prompt/query |
-| `model_family` | string | AI model family (e.g., GPT-4, Claude) |
-| `destination` | string | Destination URL or endpoint |
-| `policy_id` | string | Policy that triggered the decision |
-| `remediation_ticket` | string | Remediation ticket reference |
+| `session_id` | string | Identifiant de session |
+| `device_id` | string | Identifiant d'appareil |
+| `ip` | string | Adresse IP |
+| `user_agent` | string | Chaîne user agent |
+| `department` | string | Département organisationnel |
+| `project_id` | string | Identifiant de projet |
+| `prompt_category` | string | Catégorie du prompt/requête |
+| `model_family` | string | Famille de modèle IA (ex. GPT-4, Claude) |
+| `destination` | string | URL ou endpoint de destination |
+| `policy_id` | string | Politique qui a déclenché la décision |
+| `remediation_ticket` | string | Référence du ticket de remédiation |
 
-## Privacy/Security notes
+## Notes de confidentialité/sécurité
 
-!!! warning "Data handling"
-    - **Do not embed** PII, credentials, or prompt content directly in log fields.
-    - Use `evidence_ref` to reference separately stored sensitive content.
-    - Apply appropriate access controls to log storage.
-    - Consider data retention policies aligned with [Minimum Evidence Requirements](../minimum-evidence.md).
+!!! warning "Traitement des données"
+    - **Ne pas intégrer** de données personnelles, identifiants ou contenu de prompt directement dans les champs de journal.
+    - Utilisez `evidence_ref` pour référencer du contenu sensible stocké séparément.
+    - Appliquez des contrôles d'accès appropriés au stockage des journaux.
+    - Considérez des politiques de rétention des données alignées avec les [exigences minimales de preuves](../minimum-evidence.md).
 
-## JSON Schema
+## Schéma JSON
 
-Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
+Télécharger : [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
 
 ```json
 {
@@ -95,9 +89,9 @@ Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-st
 }
 ```
 
-## Related pages
+## Pages connexes
 
-- [Log Schemas index](index.md)
-- [Agent Activity Log](agent-activity.md)
-- [Minimum Evidence Requirements](../minimum-evidence.md)
-- [Taxonomy: IM-007 Shadow/Unmanaged](../../standard/current/03-taxonomy.md)
+- [Index des schémas de journaux](index.md)
+- [Journal d'activité des agents](agent-activity.md)
+- [Exigences minimales de preuves](../minimum-evidence.md)
+- [Taxonomie : IM-007 Shadow/Non géré](../../standard/current/03-taxonomy.md)

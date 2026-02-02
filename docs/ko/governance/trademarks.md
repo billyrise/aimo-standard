@@ -1,92 +1,86 @@
 ---
-description: AIMO trademark guidelines - Usage rules for AIMO marks, conformance badge requirements, and branding guidelines.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/trademarks.md
-source_hash: db2914d62c048a0b
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 상표 지침 - AIMO 마크 사용 규칙, 적합성 배지 요구사항 및 브랜딩 지침.
 ---
 
-# Trademarks
+# 상표
 
-This page documents trademark usage guidelines for AIMO-related marks.
+이 페이지는 AIMO 관련 마크에 대한 상표 사용 지침을 문서화합니다.
 
-## Covered Marks
+## 해당 마크
 
-| Mark | Type |
+| 마크 | 유형 |
 | ---- | ---- |
-| AIMO | Word mark |
-| AIMO Standard | Word mark |
-| AIMOaaS | Word mark |
-| Certified AIMO | Word mark (reserved) |
+| AIMO | 문자 마크 |
+| AIMO Standard | 문자 마크 |
+| AIMOaaS | 문자 마크 |
+| Certified AIMO | 문자 마크 (예약됨) |
 
-## Trademark Ownership
+## 상표 소유
 
-**AIMOaaS is a trademark of RISEby inc. (trademark application pending).**
+**AIMOaaS는 RISEby inc.의 상표입니다 (상표 출원 중).**
 
-## Marking Guidance
+## 마킹 지침
 
-While trademark applications are pending:
+상표 출원이 진행 중인 동안:
 
-- **Permitted**: "trademark application pending", "TM" symbol (optional)
-- **Prohibited**: "Registered trademark", ® symbol, registration numbers
+- **허용**: "상표 출원 중", "TM" 기호 (선택)
+- **금지**: "등록 상표", ® 기호, 등록 번호
 
-See the full policy for details.
+자세한 내용은 전체 정책을 참조하세요.
 
-## Permitted Uses
+## 허용된 사용
 
-### Descriptive References
+### 설명적 참조
 
-You may use AIMO marks to describe compatibility:
+호환성을 설명하기 위해 AIMO 마크를 사용할 수 있습니다:
 
-- "Compatible with AIMO Standard"
-- "Implements AIMO Standard v0.0.1"
-- "Exports evidence in AIMO Standard format"
+- "AIMO Standard와 호환"
+- "AIMO Standard v0.0.1 구현"
+- "AIMO Standard 형식으로 증거 내보내기"
 
-**Requirements**:
+**요구사항**:
 
-1. Meet all MUST requirements in the specification
-2. Pass the official validator without rule modifications
-3. State the specific version
+1. 사양의 모든 MUST 요구사항 충족
+2. 규칙 수정 없이 공식 검증기 통과
+3. 특정 버전 명시
 
-### Academic Use
+### 학술적 사용
 
-You may cite AIMO Standard in:
+다음에서 AIMO 표준을 인용할 수 있습니다:
 
-- Academic papers
-- Research publications
-- Training materials (with attribution)
+- 학술 논문
+- 연구 출판물
+- 교육 자료 (저작자 표시 포함)
 
-See [How to Cite](cite.md) for citation format.
+인용 형식은 [인용 방법](cite.md)을 참조하세요.
 
-## Prohibited Uses
+## 금지된 사용
 
-| Prohibited | Reason |
+| 금지 | 이유 |
 | ---------- | ------ |
-| Using "AIMO" as your product/company name | Creates confusion |
-| Claiming "Certified AIMO" without certification | No certification program exists |
-| Using marks in domain names | Conflicts with official resources |
-| Implying official endorsement | Misleads users |
+| 제품/회사 이름에 "AIMO" 사용 | 혼란 초래 |
+| 인증 없이 "Certified AIMO" 주장 | 인증 프로그램 없음 |
+| 도메인 이름에 마크 사용 | 공식 리소스와 충돌 |
+| 공식 승인 암시 | 사용자 오도 |
 
-## Conformance Claims
+## 적합성 주장
 
-### What You Can Claim
+### 주장할 수 있는 것
 
-> "This product implements AIMO Standard v0.0.1."
+> "이 제품은 AIMO Standard v0.0.1을 구현합니다."
 
-### What You Cannot Claim
+### 주장할 수 없는 것
 
-- "AIMO Certified" (no certification program)
-- "Official AIMO implementation" (unless maintainer)
-- "Endorsed by AIMO Standard"
+- "AIMO Certified" (인증 프로그램 없음)
+- "Official AIMO implementation" (메인테이너가 아닌 경우)
+- "AIMO Standard 승인"
 
-## Full Policy
+## 전체 정책
 
-See [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) for the complete trademark policy.
+전체 상표 정책은 [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md)를 참조하세요.
 
-## Related Pages
+## 관련 페이지
 
-- [License](license.md) — Licensing terms
-- [How to Cite](cite.md) — Citation guidance
-- [Governance](index.md) — Project governance
+- [라이선스](license.md) — 라이선스 조건
+- [인용 방법](cite.md) — 인용 지침
+- [거버넌스](index.md) — 프로젝트 거버넌스

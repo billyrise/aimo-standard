@@ -1,26 +1,20 @@
 ---
-description: AIMO Standard citation guide - How to cite in academic papers, audit reports, and proposals. CITATION.cff and BibTeX formats.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/governance/cite.md
-source_hash: 61f98ae47d24c36d
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Standard Zitierhinweise - Wie in akademischen Arbeiten, Auditberichten und Angeboten zitiert wird. CITATION.cff und BibTeX-Formate.
 ---
 
-# How to Cite
+# Zitierung
 
-This page provides citation guidance for AIMO Standard in academic papers, audit reports, and proposals.
+Diese Seite bietet Zitierhinweise für den AIMO Standard in akademischen Arbeiten, Auditberichten und Angeboten.
 
 ## CITATION.cff
 
-The repository includes a [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) file following the Citation File Format standard.
+Das Repository enthält eine [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff)-Datei nach dem Citation File Format-Standard.
 
-GitHub automatically displays citation information from this file.
+GitHub zeigt automatisch Zitierinformationen aus dieser Datei an.
 
-## Recommended Citation
+## Empfohlene Zitierung
 
-### Short Form (Inline)
+### Kurzform (Inline)
 
 > AIMO Standard Contributors. (2026). AIMO Standard. https://standard.aimoaas.com/
 
@@ -31,55 +25,55 @@ GitHub automatically displays citation information from this file.
   author = {{AIMO Standard Contributors}},
   title = {AIMO Standard},
   url = {https://standard.aimoaas.com/},
-  version = {0.0.1},
+  version = {0.0.2},
   year = {2026}
 }
 ```
 
-### APA Style
+### APA-Stil
 
-> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.0.1) [Software]. https://standard.aimoaas.com/
+> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.0.2) [Software]. https://standard.aimoaas.com/
 
-## Version-Specific Citation
+## Versionsspezifische Zitierung
 
-When citing a specific version:
+Bei Zitierung einer bestimmten Version:
 
-> AIMO Standard Contributors. (2026). AIMO Standard v0.0.1. https://github.com/billyrise/aimo-standard/releases/tag/v0.0.1
+> AIMO Standard Contributors. (2026). AIMO Standard v0.0.2. https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2
 
-## Audit Documentation
+## Audit-Dokumentation
 
-For audit reports and compliance documentation:
+Für Auditberichte und Compliance-Dokumentation:
 
-| Field | Value |
+| Feld | Wert |
 | ----- | ----- |
-| Standard Name | AIMO Standard |
-| Version | (specify the version used, e.g., v0.0.1) |
+| Standardname | AIMO Standard |
+| Version | (Geben Sie die verwendete Version an, z.B. v0.0.1) |
 | Website | https://standard.aimoaas.com/ |
 | Repository | https://github.com/billyrise/aimo-standard |
 | Release | https://github.com/billyrise/aimo-standard/releases |
 
-## URL Guidance
+## URL-Hinweise
 
-### Canonical URLs
+### Kanonische URLs
 
-Use these URLs in official documentation:
+Verwenden Sie diese URLs in offizieller Dokumentation:
 
-| Purpose | URL |
+| Zweck | URL |
 | ------- | --- |
-| Latest documentation | https://standard.aimoaas.com/latest/ |
-| Specific version | https://standard.aimoaas.com/0.0.1/ |
-| GitHub releases | https://github.com/billyrise/aimo-standard/releases |
+| Neueste Dokumentation | https://standard.aimoaas.com/latest/ |
+| Bestimmte Version | https://standard.aimoaas.com/0.0.2/ |
+| GitHub Releases | https://github.com/billyrise/aimo-standard/releases |
 
-!!! note "Site Path Format"
-    Site paths use version numbers without the `v` prefix. For version `v0.0.1`, use `/0.0.1/` in URLs.
+!!! note "Site-Pfad-Format"
+    Site-Pfade verwenden Versionsnummern ohne das `v`-Präfix. Für Version `v0.0.1` verwenden Sie `/0.0.1/` in URLs.
 
-### Avoid
+### Vermeiden
 
-- GitHub Pages mirror URLs (temporary)
-- Branch-specific URLs (may change)
+- GitHub Pages Mirror-URLs (temporär)
+- Branch-spezifische URLs (können sich ändern)
 
-## Related Pages
+## Verwandte Seiten
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
-- [License](license.md) — Licensing terms
+- [Trust Package](trust-package.md) — Prüfungsbereite Materialien
+- [Governance](index.md) — Projekt-Governance
+- [Lizenz](license.md) — Lizenzbedingungen

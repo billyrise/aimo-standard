@@ -1,122 +1,116 @@
 ---
-description: AIMO Validator - Ensures Evidence Packs conform to AIMO Standard schemas. Validation rules, error handling, and reference implementation for compliance checks.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/07-validator.md
-source_hash: d72cf764d049937a
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Validador AIMO - Asegura que los Paquetes de Evidencia conformen a los esquemas del AIMO Standard. Reglas de validación, manejo de errores e implementación de referencia para verificaciones de cumplimiento.
 ---
 
-# Validator
+# Validador
 
-The AIMO Validator ensures that Evidence Packs and related artifacts conform to the AIMO Standard schemas and requirements.
+El Validador AIMO asegura que los Paquetes de Evidencia y artefactos relacionados conformen a los esquemas y requisitos del AIMO Standard.
 
-See also: [Human Oversight Protocol](../../governance/human-oversight-protocol.md) — responsibility boundary for machine vs. human review.
+Consulte también: [Protocolo de Supervisión Humana](../../governance/human-oversight-protocol.md) — límite de responsabilidad para revisión máquina vs. humano.
 
-## Validator in practice
+## Validador en práctica
 
-For a 30-second quickstart (install, run, interpret output), see [Validator hub](../../validator/index.md).
+Para un inicio rápido de 30 segundos (instalar, ejecutar, interpretar salida), consulte [Centro del Validador](../../validator/index.md).
 
-## Validator MVP Requirements
+## Requisitos MVP del Validador
 
-The minimum viable validator MUST perform the following checks:
+El validador mínimo viable DEBE realizar las siguientes verificaciones:
 
-### 1. Required Field Validation
+### 1. Validación de Campos Requeridos
 
-Check that all mandatory fields are present:
+Verificar que todos los campos obligatorios estén presentes:
 
-| Artifact | Required Fields |
+| Artefacto | Campos Requeridos |
 | --- | --- |
-| Evidence Pack Manifest | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
-| Codes Object | FS, UC, DT, CH, IM, RS, EV (OB optional) |
-| Evidence File Entry | file_id, filename, ev_type, title |
+| Manifiesto del Paquete de Evidencia | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
+| Objeto de Códigos | FS, UC, DT, CH, IM, RS, EV (OB opcional) |
+| Entrada de Archivo de Evidencia | file_id, filename, ev_type, title |
 
-### 2. Dimension Code Validation
+### 2. Validación de Códigos de Dimensión
 
-Check that each required dimension has at least one code:
+Verificar que cada dimensión requerida tenga al menos un código:
 
-| Dimension | Requirement |
+| Dimensión | Requisito |
 | --- | --- |
-| FS (Functional Scope) | Exactly 1 code |
-| UC (Use Case Class) | At least 1 code |
-| DT (Data Type) | At least 1 code |
-| CH (Channel) | At least 1 code |
-| IM (Integration Mode) | Exactly 1 code |
-| RS (Risk Surface) | At least 1 code |
-| OB (Outcome / Benefit) | Optional (0 or more) |
-| EV (Evidence Type) | At least 1 code |
+| FS (Alcance Funcional) | Exactamente 1 código |
+| UC (Clase de Caso de Uso) | Al menos 1 código |
+| DT (Tipo de Datos) | Al menos 1 código |
+| CH (Canal) | Al menos 1 código |
+| IM (Modo de Integración) | Exactamente 1 código |
+| RS (Superficie de Riesgo) | Al menos 1 código |
+| OB (Resultado / Beneficio) | Opcional (0 o más) |
+| EV (Tipo de Evidencia) | Al menos 1 código |
 
-### 3. Dictionary Existence Check
+### 3. Verificación de Existencia en Diccionario
 
-Validate that all codes exist in the taxonomy dictionary:
+Validar que todos los códigos existan en el diccionario de taxonomía:
 
-- Load the taxonomy dictionary for the specified `taxonomy_version`
-- Verify each code in the manifest exists in the dictionary
-- Report invalid codes with their dimension and value
+- Cargar el diccionario de taxonomía para la `taxonomy_version` especificada
+- Verificar que cada código en el manifiesto exista en el diccionario
+- Reportar códigos inválidos con su dimensión y valor
 
-### 4. Code Format Validation
+### 4. Validación de Formato de Código
 
-Check that all codes match the expected format:
+Verificar que todos los códigos coincidan con el formato esperado:
 
 ```regex
 ^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
 ```
 
-### 5. Schema Validation
+### 5. Validación de Esquema
 
-Validate against JSON Schemas:
+Validar contra JSON Schemas:
 
-| Schema | Purpose |
+| Esquema | Propósito |
 | --- | --- |
-| `evidence_pack_manifest.schema.json` | Evidence Pack manifests |
-| `taxonomy_pack.schema.json` | Taxonomy pack definitions |
-| `changelog.schema.json` | Changelog entries |
+| `evidence_pack_manifest.schema.json` | Manifiestos de Paquetes de Evidencia |
+| `taxonomy_pack.schema.json` | Definiciones de paquetes de taxonomía |
+| `changelog.schema.json` | Entradas de registro de cambios |
 
-## Validation Rules
+## Reglas de Validación
 
-### Rule: Required Dimensions
+### Regla: Dimensiones Requeridas
 
 ```yaml
 rule_id: required_dimensions
-description: All required dimensions must have at least one code
+description: Todas las dimensiones requeridas deben tener al menos un código
 severity: error
 check: |
-  - FS: exactly 1
-  - UC: at least 1
-  - DT: at least 1
-  - CH: at least 1
-  - IM: exactly 1
-  - RS: at least 1
-  - EV: at least 1
+  - FS: exactamente 1
+  - UC: al menos 1
+  - DT: al menos 1
+  - CH: al menos 1
+  - IM: exactamente 1
+  - RS: al menos 1
+  - EV: al menos 1
 ```
 
-### Rule: Valid Codes
+### Regla: Códigos Válidos
 
 ```yaml
 rule_id: valid_codes
-description: All codes must exist in the taxonomy dictionary
+description: Todos los códigos deben existir en el diccionario de taxonomía
 severity: error
 check: |
-  For each code in manifest.codes:
-    - Code exists in dictionary for specified taxonomy_version
-    - Code status is 'active' (warn if 'deprecated')
+  Para cada código en manifest.codes:
+    - El código existe en el diccionario para la taxonomy_version especificada
+    - El estado del código es 'active' (advertencia si 'deprecated')
 ```
 
-### Rule: Code Format
+### Regla: Formato de Código
 
 ```yaml
 rule_id: code_format
-description: All codes must match the standard format
+description: Todos los códigos deben coincidir con el formato estándar
 severity: error
 pattern: "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$"
 ```
 
-### Rule: Version Format
+### Regla: Formato de Versión
 
 ```yaml
 rule_id: version_format
-description: Versions must be valid SemVer
+description: Las versiones deben ser SemVer válido
 severity: error
 pattern: "^\\d+\\.\\d+\\.\\d+$"
 fields:
@@ -124,91 +118,91 @@ fields:
   - taxonomy_version
 ```
 
-## Error Output Format
+## Formato de Salida de Errores
 
-Validation errors are reported in the following format:
-
-```
-<path>: <severity>: <message>
-```
-
-**Examples:**
+Los errores de validación se reportan en el siguiente formato:
 
 ```
-codes.FS: error: Required dimension 'FS' has no codes
-codes.UC[0]: error: Code 'UC-999' does not exist in dictionary v0.1.0
-pack_version: error: Invalid version format 'v1.0' (expected SemVer)
-codes.RS[1]: warning: Code 'RS-002' is deprecated in v0.2.0
+<ruta>: <severidad>: <mensaje>
 ```
 
-## What Validator Does NOT Check
+**Ejemplos:**
 
-The validator focuses on structural conformance, not content quality:
+```
+codes.FS: error: La dimensión requerida 'FS' no tiene códigos
+codes.UC[0]: error: El código 'UC-999' no existe en el diccionario v0.1.0
+pack_version: error: Formato de versión inválido 'v1.0' (esperado SemVer)
+codes.RS[1]: warning: El código 'RS-002' está deprecado en v0.2.0
+```
 
-| Aspect | Reason |
+## Qué NO Verifica el Validador
+
+El validador se enfoca en conformidad estructural, no calidad de contenido:
+
+| Aspecto | Razón |
 | --- | --- |
-| Content accuracy | Validator checks structure, not meaning |
-| Evidence completeness | Templates are guides, not enforced formats |
-| Cross-reference resolution | File existence not verified |
-| Timestamp validity | ISO-8601 not strictly validated |
-| ID uniqueness | Not currently enforced |
-| Integrity hashes | Adopter responsibility |
+| Precisión del contenido | El validador verifica estructura, no significado |
+| Completitud de evidencia | Las plantillas son guías, no formatos aplicados |
+| Resolución de referencias cruzadas | La existencia de archivos no se verifica |
+| Validez de timestamp | ISO-8601 no se valida estrictamente |
+| Unicidad de ID | No se aplica actualmente |
+| Hashes de integridad | Responsabilidad del adoptante |
 
-## Reference Implementation
+## Implementación de Referencia
 
-A reference implementation is provided in Python:
+Se proporciona una implementación de referencia en Python:
 
 ```
 validator/src/validate.py
 ```
 
-### Usage
+### Uso
 
 ```bash
 python validator/src/validate.py <manifest.json>
 ```
 
-### Example Output
+### Ejemplo de Salida
 
 ```
 Validating: evidence_pack_manifest.json
 Taxonomy version: 0.1.0
 
 Checking required dimensions...
-  FS: OK (1 code)
-  UC: OK (3 codes)
-  DT: OK (1 code)
-  CH: OK (1 code)
-  IM: OK (1 code)
-  RS: OK (3 codes)
-  OB: OK (2 codes)
-  EV: OK (7 codes)
+  FS: OK (1 código)
+  UC: OK (3 códigos)
+  DT: OK (1 código)
+  CH: OK (1 código)
+  IM: OK (1 código)
+  RS: OK (3 códigos)
+  OB: OK (2 códigos)
+  EV: OK (7 códigos)
 
 Checking code validity...
-  All codes valid.
+  Todos los códigos válidos.
 
 Validation: PASSED
 ```
 
-## Versioning Policy
+## Política de Versionado
 
-Validator rules follow SemVer:
+Las reglas del validador siguen SemVer:
 
-- **MAJOR**: Breaking rule changes (new required checks that fail existing valid packs)
-- **MINOR**: New optional checks, warnings, or informational messages
-- **PATCH**: Bug fixes that don't change validation outcomes
+- **MAJOR**: Cambios de reglas disruptivos (nuevas verificaciones requeridas que fallan paquetes válidos existentes)
+- **MINOR**: Nuevas verificaciones opcionales, advertencias o mensajes informativos
+- **PATCH**: Correcciones de bugs que no cambian resultados de validación
 
-## Schema References
+## Referencias de Esquema
 
-| Schema | Location |
+| Esquema | Ubicación |
 | --- | --- |
-| Evidence Pack Manifest | `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json` |
-| Taxonomy Pack | `source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json` |
-| Changelog | `source_pack/03_taxonomy/schemas/changelog.schema.json` |
+| Manifiesto de Paquete de Evidencia | `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json` |
+| Paquete de Taxonomía | `source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json` |
+| Registro de Cambios | `source_pack/03_taxonomy/schemas/changelog.schema.json` |
 
-## References
+## Referencias
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions
-- [Codes](./04-codes.md) - Code format
-- [Dictionary](./05-dictionary.md) - Code dictionary
-- [Validator Rules](../../validator/index.md) - Full rule documentation
+- [Taxonomía](./03-taxonomy.md) - Definiciones de dimensiones
+- [Códigos](./04-codes.md) - Formato de código
+- [Diccionario](./05-dictionary.md) - Diccionario de códigos
+- [Reglas del Validador](../../validator/index.md) - Documentación completa de reglas

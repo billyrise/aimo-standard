@@ -1,86 +1,80 @@
 ---
-description: Agent Activity Log Format - Vendor-neutral schema for agentic AI privilege exercise, tool execution, and recursive operation monitoring in enterprises.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/agent-activity.md
-source_hash: 295769d5ebeeb14f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: 代理活動日誌格式 - 用於企業中代理式 AI 權限執行、工具執行和遞迴操作監控的廠商中立結構描述。
 ---
 
-# Agent Activity Log Format
+# 代理活動日誌格式
 
-## Purpose
+## 用途
 
-This schema defines a vendor-neutral format for logs that document **agentic AI privilege exercise, tool execution, and recursive operations**. It enables organizations to:
+此結構描述定義了一種廠商中立的格式，用於記錄**代理式 AI 權限執行、工具執行和遞迴操作**的日誌。它使組織能夠：
 
-- Maintain an auditable record of autonomous agent actions
-- Track "who did what with what authority" for compliance and incident investigation
-- Support explainability for agentic AI operations in audit contexts
+- 維護自主代理行為的可稽核記錄
+- 追蹤「誰以什麼權限做了什麼」以用於合規性和事件調查
+- 在稽核情境中支援代理式 AI 操作的可解釋性
 
-## Event model
+## 事件模型
 
-The schema supports four event types that capture the agentic operation lifecycle:
+此結構描述支援四種事件類型，捕捉代理式操作生命週期：
 
-| Event Type | Description |
+| 事件類型 | 說明 |
 | --- | --- |
-| `agent_run` | Start or completion of an agent execution session |
-| `tool_call` | Agent invoking a tool or external action |
-| `tool_result` | Result returned from a tool invocation |
-| `escalation` | Agent requesting human intervention or elevated privileges |
+| `agent_run` | 代理執行工作階段的開始或完成 |
+| `tool_call` | 代理呼叫工具或外部動作 |
+| `tool_result` | 工具呼叫返回的結果 |
+| `escalation` | 代理請求人工介入或提升權限 |
 
-## Required fields (MUST)
+## 必要欄位（MUST）
 
-| Field | Type | Description | Example |
+| 欄位 | 類型 | 說明 | 範例 |
 | --- | --- | --- | --- |
-| `event_time` | string (ISO8601) | Timestamp of the event | `2026-01-15T09:30:00Z` |
-| `agent_id` | string | Identifier of the agent | `agent-coding-assistant-v2` |
-| `agent_version` | string | Version of the agent | `2.1.0` |
-| `run_id` | string | Unique identifier for this run/session | `run-20260115-abc123` |
-| `event_type` | string | Type of event | `agent_run`, `tool_call`, `tool_result`, `escalation` |
-| `actor_id` | string | Initiating user or service | `user@example.com` |
-| `tool_name` | string | Name of the tool invoked | `file_write`, `api_call`, `shell_exec` |
-| `tool_action` | string | Action performed by the tool | `create`, `read`, `update`, `delete`, `execute` |
-| `tool_target` | string | Target of the action | `/path/to/file`, `https://api.example.com` |
-| `auth_context` | string | Permission/role summary | `role:developer, scope:project-x` |
-| `input_ref` | string | Hash or URI to input (not the content itself) | `sha256:def456...` |
-| `output_ref` | string | Hash or URI to output (not the content itself) | `sha256:ghi789...` |
-| `decision` | string | Policy decision applied | `allow`, `block`, `needs_review`, `unknown` |
-| `evidence_ref` | string | Reference to related evidence | `urn:evidence:...` |
+| `event_time` | string (ISO8601) | 事件的時間戳記 | `2026-01-15T09:30:00Z` |
+| `agent_id` | string | 代理的識別碼 | `agent-coding-assistant-v2` |
+| `agent_version` | string | 代理的版本 | `2.1.0` |
+| `run_id` | string | 此次執行/工作階段的唯一識別碼 | `run-20260115-abc123` |
+| `event_type` | string | 事件類型 | `agent_run`、`tool_call`、`tool_result`、`escalation` |
+| `actor_id` | string | 發起的使用者或服務 | `user@example.com` |
+| `tool_name` | string | 呼叫的工具名稱 | `file_write`、`api_call`、`shell_exec` |
+| `tool_action` | string | 工具執行的動作 | `create`、`read`、`update`、`delete`、`execute` |
+| `tool_target` | string | 動作的目標 | `/path/to/file`、`https://api.example.com` |
+| `auth_context` | string | 權限/角色摘要 | `role:developer, scope:project-x` |
+| `input_ref` | string | 輸入的雜湊或 URI（非內容本身） | `sha256:def456...` |
+| `output_ref` | string | 輸出的雜湊或 URI（非內容本身） | `sha256:ghi789...` |
+| `decision` | string | 套用的政策決策 | `allow`、`block`、`needs_review`、`unknown` |
+| `evidence_ref` | string | 相關證據的參照 | `urn:evidence:...` |
 
-## Optional fields (SHOULD/MAY)
+## 選用欄位（SHOULD/MAY）
 
-| Field | Type | Description |
+| 欄位 | 類型 | 說明 |
 | --- | --- | --- |
-| `recursion_depth` | number | Current recursion depth for nested agent calls |
-| `retry_count` | number | Number of retries for this action |
-| `policy_id` | string | Policy that triggered the decision |
-| `prompt_template_id` | string | Prompt template identifier |
-| `model` | string | Model used for this action |
-| `latency_ms` | number | Latency in milliseconds |
-| `cost_estimate` | number | Estimated cost of this action |
-| `error_code` | string | Error code if the action failed |
+| `recursion_depth` | number | 巢狀代理呼叫的目前遞迴深度 |
+| `retry_count` | number | 此動作的重試次數 |
+| `policy_id` | string | 觸發決策的政策 |
+| `prompt_template_id` | string | 提示範本識別碼 |
+| `model` | string | 此動作使用的模型 |
+| `latency_ms` | number | 延遲時間（毫秒） |
+| `cost_estimate` | number | 此動作的估計成本 |
+| `error_code` | string | 動作失敗時的錯誤碼 |
 
-## Safety notes
+## 安全注意事項
 
-!!! warning "Agentic risk assumptions"
-    When logging agentic AI activity, assume the following risks:
+!!! warning "代理式風險假設"
+    記錄代理式 AI 活動時，請假設以下風險：
 
-    - **Prompt injection**: Malicious inputs may attempt to manipulate agent behavior
-    - **Over-privilege**: Agents may have broader permissions than intended for a specific task
-    - **Recursive loops**: Agents may enter unintended recursive execution patterns
-    - **Confused deputy**: Agents may be tricked into acting on behalf of unauthorized parties
+    - **提示注入**：惡意輸入可能嘗試操縱代理行為
+    - **過度權限**：代理可能擁有超出特定任務所需的更廣泛權限
+    - **遞迴迴圈**：代理可能進入非預期的遞迴執行模式
+    - **混淆代理人**：代理可能被欺騙而代表未授權方行動
 
-    The schema is designed to capture "who did what with what authority" to support post-incident analysis and audit explanations. It does not prevent these risks; organizations must implement appropriate guardrails.
+    此結構描述旨在捕捉「誰以什麼權限做了什麼」以支援事後事件分析和稽核說明。它不能防止這些風險；組織必須實施適當的防護措施。
 
-!!! warning "Data handling"
-    - **Do not embed** secrets, credentials, or sensitive content in `input_ref` or `output_ref`.
-    - Use hash references or secure URIs to separately stored content.
-    - Apply appropriate access controls and retention policies.
+!!! warning "資料處理"
+    - **請勿嵌入**機密、憑證或敏感內容到 `input_ref` 或 `output_ref`。
+    - 使用雜湊參照或安全 URI 指向單獨儲存的內容。
+    - 套用適當的存取控制和保留政策。
 
 ## JSON Schema
 
-Download: [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json)
+下載：[agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json)
 
 ```json
 {
@@ -111,9 +105,9 @@ Download: [agent-activity.schema.json](https://github.com/billyrise/aimo-standar
 }
 ```
 
-## Related pages
+## 相關頁面
 
-- [Log Schemas index](index.md)
-- [Shadow AI Discovery Log](shadow-ai-discovery.md)
-- [Minimum Evidence Requirements](../minimum-evidence.md)
-- [Taxonomy: UC-010 Agentic Automation](../../standard/current/03-taxonomy.md)
+- [日誌結構描述索引](index.md)
+- [Shadow AI 發現日誌](shadow-ai-discovery.md)
+- [最低證據要求](../minimum-evidence.md)
+- [分類法：UC-010 代理式自動化](../../standard/current/03-taxonomy.md)

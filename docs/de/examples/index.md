@@ -1,20 +1,14 @@
 ---
-description: AIMO Standard examples - End-to-end and minimal sample bundles showing how to assemble evidence artifacts for AI governance audits.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/examples/index.md
-source_hash: aa2185aa686d7ef3
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO Standard Beispiele - End-to-End- und minimale Beispiel-Bundles, die zeigen, wie Evidence-Artefakte für KI-Governance-Audits zusammengestellt werden.
 ---
 
-# Examples
+# Beispiele
 
-This section points to end-to-end and minimal examples that show how artifacts are assembled.
+Dieser Abschnitt verweist auf End-to-End- und minimale Beispiele, die zeigen, wie Artefakte zusammengestellt werden.
 
-- **Minimal bundle**: `examples/minimal/` in the repository (e.g., `sample_ev.json`, `sample_dictionary.json`).
-- **Evidence Bundle (minimal)**: `examples/evidence_bundle_minimal/` — root.json with optional request, review, change_log; see [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence](../artifacts/minimum-evidence.md).
-- **Schema alignment**: validate against `schemas/jsonschema/` and [Standard](../standard/current/index.md).
-- **Audit-ready packaging**: see the [Trust Package](../governance/trust-package.md).
+- **Minimales Bundle**: `examples/minimal/` im Repository (z.B. `sample_ev.json`, `sample_dictionary.json`).
+- **Evidence Bundle (minimal)**: `examples/evidence_bundle_minimal/` — root.json mit optionalem request, review, change_log; siehe [Evidence Bundle](../artifacts/evidence-bundle.md) und [Mindestanforderungen](../artifacts/minimum-evidence.md).
+- **Schema-Ausrichtung**: Validieren gegen `schemas/jsonschema/` und [Standard](../standard/current/index.md).
+- **Prüfungsfertige Pakete**: siehe das [Trust Package](../governance/trust-package.md).
 
-Detailed scenario coverage is added in later change units.
+Detaillierte Szenario-Abdeckung wird in späteren Änderungseinheiten hinzugefügt.

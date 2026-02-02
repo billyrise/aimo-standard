@@ -1,74 +1,68 @@
 ---
-description: Shadow AI Discovery Log Schema - Vendor-neutral format for documenting detection, inventory, and remediation of unapproved AI usage in enterprises.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/artifacts/log-schemas/shadow-ai-discovery.md
-source_hash: f9d93c82c96d509f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Shadow AI 發現日誌結構描述 - 用於記錄企業中未經核准 AI 使用的偵測、清查和補救的廠商中立格式。
 ---
 
-# Shadow AI Discovery Log Schema
+# Shadow AI 發現日誌結構描述
 
-## Purpose
+## 用途
 
-This schema defines a vendor-neutral format for logs that document the detection, inventory, and remediation of **unapproved AI usage (Shadow AI)**. It enables organizations to:
+此結構描述定義了一種廠商中立的格式，用於記錄**未經核准 AI 使用（Shadow AI）**的偵測、清查和補救。它使組織能夠：
 
-- Maintain an auditable record of Shadow AI detection events
-- Normalize logs from various sources (CASB, proxy, IdP, EDR, SaaS audit logs) into a consistent format
-- Support evidence submission for compliance and audit purposes
+- 維護 Shadow AI 偵測事件的可稽核記錄
+- 將來自各種來源（CASB、代理、IdP、EDR、SaaS 稽核日誌）的日誌標準化為一致的格式
+- 支援合規性和稽核目的的證據提交
 
-## Normalization principles
+## 標準化原則
 
-| Principle | Description |
+| 原則 | 說明 |
 | --- | --- |
-| **Vendor-neutral** | No dependency on specific vendor log formats; applicable to Netskope, Zscaler, Microsoft Defender, and others |
-| **Minimal required fields** | Only essential fields are MUST; organizations can omit optional fields |
-| **Extensible** | `additionalProperties: true` allows vendor-specific or organization-specific extensions |
-| **Privacy-aware** | Fields are designed to reference (not embed) sensitive content |
+| **廠商中立** | 不依賴特定廠商日誌格式；適用於 Netskope、Zscaler、Microsoft Defender 等 |
+| **最少必要欄位** | 只有必要欄位是 MUST；組織可省略選用欄位 |
+| **可擴展** | `additionalProperties: true` 允許廠商特定或組織特定的擴展 |
+| **隱私意識** | 欄位設計為參照（而非嵌入）敏感內容 |
 
-## Required fields (MUST)
+## 必要欄位（MUST）
 
-| Field | Type | Description | Example |
+| 欄位 | 類型 | 說明 | 範例 |
 | --- | --- | --- | --- |
-| `event_time` | string (ISO8601) | Timestamp of the event | `2026-01-15T09:30:00Z` |
-| `actor_id` | string | User or service identifier | `user@example.com` |
-| `actor_type` | string | Type of actor | `user` or `service` |
-| `source_system` | string | System that detected the event | `proxy`, `casb`, `idp`, `edr`, `saas_audit` |
-| `ai_service` | string | AI product or domain accessed | `chat.openai.com`, `claude.ai` |
-| `action` | string | Action performed | `chat`, `upload`, `download`, `tool_execute`, `api_call` |
-| `data_classification` | string | Data classification level | `public`, `internal`, `confidential`, `restricted` |
-| `decision` | string | Policy decision applied | `allow`, `block`, `needs_review`, `unknown` |
-| `evidence_ref` | string | Reference to related evidence | `sha256:abc123...` or `urn:evidence:...` |
-| `record_id` | string | Unique identifier for this record | `evt-20260115-001` |
+| `event_time` | string (ISO8601) | 事件的時間戳記 | `2026-01-15T09:30:00Z` |
+| `actor_id` | string | 使用者或服務識別碼 | `user@example.com` |
+| `actor_type` | string | 行為者類型 | `user` 或 `service` |
+| `source_system` | string | 偵測到事件的系統 | `proxy`、`casb`、`idp`、`edr`、`saas_audit` |
+| `ai_service` | string | 存取的 AI 產品或網域 | `chat.openai.com`、`claude.ai` |
+| `action` | string | 執行的動作 | `chat`、`upload`、`download`、`tool_execute`、`api_call` |
+| `data_classification` | string | 資料分類等級 | `public`、`internal`、`confidential`、`restricted` |
+| `decision` | string | 套用的政策決策 | `allow`、`block`、`needs_review`、`unknown` |
+| `evidence_ref` | string | 相關證據的參照 | `sha256:abc123...` 或 `urn:evidence:...` |
+| `record_id` | string | 此記錄的唯一識別碼 | `evt-20260115-001` |
 
-## Optional fields (SHOULD/MAY)
+## 選用欄位（SHOULD/MAY）
 
-| Field | Type | Description |
+| 欄位 | 類型 | 說明 |
 | --- | --- | --- |
-| `session_id` | string | Session identifier |
-| `device_id` | string | Device identifier |
-| `ip` | string | IP address |
-| `user_agent` | string | User agent string |
-| `department` | string | Organizational department |
-| `project_id` | string | Project identifier |
-| `prompt_category` | string | Category of the prompt/query |
-| `model_family` | string | AI model family (e.g., GPT-4, Claude) |
-| `destination` | string | Destination URL or endpoint |
-| `policy_id` | string | Policy that triggered the decision |
-| `remediation_ticket` | string | Remediation ticket reference |
+| `session_id` | string | 工作階段識別碼 |
+| `device_id` | string | 裝置識別碼 |
+| `ip` | string | IP 位址 |
+| `user_agent` | string | 使用者代理字串 |
+| `department` | string | 組織部門 |
+| `project_id` | string | 專案識別碼 |
+| `prompt_category` | string | 提示/查詢的類別 |
+| `model_family` | string | AI 模型系列（例如 GPT-4、Claude） |
+| `destination` | string | 目標 URL 或端點 |
+| `policy_id` | string | 觸發決策的政策 |
+| `remediation_ticket` | string | 補救工單參照 |
 
-## Privacy/Security notes
+## 隱私/安全注意事項
 
-!!! warning "Data handling"
-    - **Do not embed** PII, credentials, or prompt content directly in log fields.
-    - Use `evidence_ref` to reference separately stored sensitive content.
-    - Apply appropriate access controls to log storage.
-    - Consider data retention policies aligned with [Minimum Evidence Requirements](../minimum-evidence.md).
+!!! warning "資料處理"
+    - **請勿嵌入** PII、憑證或提示內容到日誌欄位中。
+    - 使用 `evidence_ref` 參照單獨儲存的敏感內容。
+    - 對日誌儲存套用適當的存取控制。
+    - 考慮與[最低證據要求](../minimum-evidence.md)一致的資料保留政策。
 
 ## JSON Schema
 
-Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
+下載：[shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
 
 ```json
 {
@@ -95,9 +89,9 @@ Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-st
 }
 ```
 
-## Related pages
+## 相關頁面
 
-- [Log Schemas index](index.md)
-- [Agent Activity Log](agent-activity.md)
-- [Minimum Evidence Requirements](../minimum-evidence.md)
-- [Taxonomy: IM-007 Shadow/Unmanaged](../../standard/current/03-taxonomy.md)
+- [日誌結構描述索引](index.md)
+- [代理活動日誌](agent-activity.md)
+- [最低證據要求](../minimum-evidence.md)
+- [分類法：IM-007 Shadow/未受管理](../../standard/current/03-taxonomy.md)

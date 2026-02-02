@@ -1,155 +1,149 @@
 ---
-description: AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/08-changelog.md
-source_hash: 1876c04a8b22d480
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 標準變更日誌和版本政策。記錄版本歷史、語意化版本規則，以及發布之間的遷移指引。
 ---
 
-# Changelog
+# 變更日誌
 
-This section documents the versioning policy and change history for the AIMO Standard.
+本節記錄 AIMO 標準的版本政策和變更歷史。
 
-## Versioning Policy
+## 版本政策
 
-AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
+AIMO 標準遵循[語意化版本控制](https://semver.org/)（SemVer）：
 
-### Version Format: MAJOR.MINOR.PATCH
+### 版本格式：MAJOR.MINOR.PATCH
 
-| Change Type | Version Bump | Examples |
+| 變更類型 | 版本提升 | 範例 |
 | --- | --- | --- |
-| **MAJOR** | X.0.0 | Breaking schema changes, code removal, required field changes |
-| **MINOR** | 0.X.0 | New codes, new optional fields, new dimensions (optional) |
-| **PATCH** | 0.0.X | Documentation fixes, definition clarifications, validator bug fixes |
+| **MAJOR** | X.0.0 | 破壞性結構描述變更、代碼移除、必要欄位變更 |
+| **MINOR** | 0.X.0 | 新代碼、新選用欄位、新維度（選用） |
+| **PATCH** | 0.0.X | 文件修復、定義澄清、驗證器錯誤修復 |
 
-### Breaking vs. Compatible Changes
+### 破壞性與相容變更
 
-**Breaking Changes (MAJOR):**
+**破壞性變更（MAJOR）：**
 
-- Removal of codes (after deprecation period)
-- Changes to required fields in schemas
-- Structural changes that invalidate existing documents
-- Changes to code format patterns
+- 移除代碼（在棄用期之後）
+- 結構描述中必要欄位的變更
+- 使現有文件無效的結構變更
+- 代碼格式模式的變更
 
-**Backward Compatible Changes (MINOR):**
+**向後相容變更（MINOR）：**
 
-- Adding new codes to existing dimensions
-- Adding new optional fields to schemas
-- Adding new optional dimensions
-- Adding new evidence templates
+- 向現有維度新增代碼
+- 向結構描述新增選用欄位
+- 新增選用維度
+- 新增證據範本
 
-**Non-breaking Changes (PATCH):**
+**非破壞性變更（PATCH）：**
 
-- Documentation corrections
-- Clarification of existing definitions
-- Translation improvements
-- Validator bug fixes
+- 文件更正
+- 現有定義的澄清
+- 翻譯改進
+- 驗證器錯誤修復
 
-## Deprecation Policy
+## 棄用政策
 
-### Deprecation Process
+### 棄用流程
 
-1. **Mark as Deprecated**: Code or feature is marked with `status: deprecated` and `deprecated_in: X.Y.Z`
-2. **Deprecation Period**: At least one MINOR version must pass before removal
-3. **Provide Replacement**: If applicable, `replaced_by` indicates the replacement
-4. **Remove in MAJOR**: Removal occurs in the next MAJOR version
+1. **標記為已棄用**：代碼或功能標記為 `status: deprecated` 和 `deprecated_in: X.Y.Z`
+2. **棄用期**：移除前至少必須經過一個 MINOR 版本
+3. **提供替代**：如適用，`replaced_by` 指示替代
+4. **在 MAJOR 中移除**：移除在下一個 MAJOR 版本發生
 
-### Example Lifecycle
+### 範例生命週期
 
 ```
-v0.0.1: FS-007 introduced (status: active)
-v0.1.0: FS-007 deprecated (status: deprecated, replaced_by: FS-008)
-v0.2.0: FS-007 still available with deprecation warning
-v1.0.0: FS-007 removed (status: removed)
+v0.0.1: FS-007 引入 (status: active)
+v0.1.0: FS-007 棄用 (status: deprecated, replaced_by: FS-008)
+v0.2.0: FS-007 仍可用並顯示棄用警告
+v1.0.0: FS-007 移除 (status: removed)
 ```
 
-### Using Deprecated Codes
+### 使用已棄用的代碼
 
-- Deprecated codes remain valid for validation
-- Validator SHOULD emit a warning for deprecated codes
-- New implementations SHOULD use replacement codes
-- Existing documents MAY continue using deprecated codes until migration
+- 已棄用的代碼對驗證仍然有效
+- 驗證器應對已棄用的代碼發出警告
+- 新實作應使用替代代碼
+- 現有文件可以繼續使用已棄用的代碼直到遷移
 
-## Release Artifacts
+## 發布人工產物
 
-Each official release includes:
+每個官方發布包含：
 
-| Artifact | Description |
+| 人工產物 | 說明 |
 | --- | --- |
-| Versioned site snapshot | `https://standard.aimoaas.com/0.0.1/` |
-| PDF specification | `trust_package.pdf` |
-| Asset package (ZIP) | Schemas, templates, dictionary |
-| Checksums | SHA-256 hashes for integrity |
-| Changelog | This document |
+| 版本化網站快照 | `https://standard.aimoaas.com/0.0.1/` |
+| PDF 規格 | `trust_package.pdf` |
+| 資產套件（ZIP） | 結構描述、範本、字典 |
+| 校驗和 | 完整性的 SHA-256 雜湊 |
+| 變更日誌 | 本文件 |
 
-## Change History
+## 變更歷史
 
-### Version 0.0.1 (2026-02-02)
+### 版本 0.0.1 (2026-02-02)
 
-**Summary:** Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.
+**摘要：**AIMO 標準的初始發布，包含 8 維度代碼系統、證據包範本和全面的治理文件。
 
-#### Added
+#### 新增
 
-**Code System (8 Dimensions)**
+**代碼系統（8 維度）**
 
-| Dimension | Codes Added | Description |
+| 維度 | 新增的代碼 | 說明 |
 | --- | --- | --- |
-| FS | FS-001 to FS-006 | Functional Scope |
-| UC | UC-001 to UC-010 | Use Case Class |
-| DT | DT-001 to DT-008 | Data Type |
-| CH | CH-001 to CH-006 | Channel |
-| IM | IM-001 to IM-005 | Integration Mode |
-| RS | RS-001 to RS-005 | Risk Surface |
-| OB | OB-001 to OB-005 | Outcome / Benefit |
-| EV | EV-001 to EV-007 | Evidence Type |
+| FS | FS-001 到 FS-006 | 功能範圍 |
+| UC | UC-001 到 UC-010 | 使用案例類別 |
+| DT | DT-001 到 DT-008 | 資料類型 |
+| CH | CH-001 到 CH-006 | 通道 |
+| IM | IM-001 到 IM-005 | 整合模式 |
+| RS | RS-001 到 RS-005 | 風險面 |
+| OB | OB-001 到 OB-005 | 成果 / 效益 |
+| EV | EV-001 到 EV-007 | 證據類型 |
 
-**Schemas**
+**結構描述**
 
-- `taxonomy_pack.schema.json`: Taxonomy pack definition
-- `changelog.schema.json`: Changelog entries
-- `evidence_pack_manifest.schema.json`: Evidence Pack manifests
-- `shadow-ai-discovery.schema.json`: Shadow AI discovery evidence
-- `agent-activity.schema.json`: Agent activity evidence
+- `taxonomy_pack.schema.json`：分類套件定義
+- `changelog.schema.json`：變更日誌條目
+- `evidence_pack_manifest.schema.json`：證據包清單
+- `shadow-ai-discovery.schema.json`：Shadow AI 發現證據
+- `agent-activity.schema.json`：代理活動證據
 
-**Evidence Pack Templates (MVP)**
+**證據包範本（MVP）**
 
-- EV-01: System Overview
-- EV-02: Data Flow
-- EV-03: AI Inventory
-- EV-04: Risk & Impact Assessment
-- EV-05: Controls & Approvals
-- EV-06: Logging & Monitoring
-- EV-07: Incident & Exception Handling
+- EV-01：系統概述
+- EV-02：資料流
+- EV-03：AI 清冊
+- EV-04：風險與影響評估
+- EV-05：控制與核准
+- EV-06：日誌與監控
+- EV-07：事件與例外處理
 
-**Documentation**
+**文件**
 
-- Taxonomy documentation with 8-dimension definitions
-- Code System format specification
-- Dictionary CSV format specification
-- Versioning and change policy
-- Validator MVP requirements
-- Human Oversight Protocol
-- Coverage Map (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
-- Trust Package
+- 具有 8 維度定義的分類法文件
+- 代碼系統格式規格
+- 字典 CSV 格式規格
+- 版本控制和變更政策
+- 驗證器 MVP 要求
+- 人工監督協議
+- 覆蓋範圍對應（ISO 42001、NIST AI RMF、歐盟 AI 法案、ISMS）
+- 信任套件
 
-#### Backward Compatibility
+#### 向後相容性
 
-This is the initial release; no backward compatibility concerns.
+這是初始發布；無向後相容性問題。
 
 ---
 
-## Machine-Readable Changelog
+## 機器可讀變更日誌
 
-A machine-readable changelog is available:
+機器可讀變更日誌可在以下位置取得：
 
 - `changelog/changelog.json`
 
-This file follows the `changelog.schema.json` schema and can be parsed programmatically.
+此檔案遵循 `changelog.schema.json` 結構描述，可以程式化解析。
 
-## References
+## 參照
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions
-- [Dictionary](./05-dictionary.md) - Code dictionary
-- [Versioning Policy](../../governance/index.md) - Versioning policy (see VERSIONING.md in repository root)
+- [分類法](./03-taxonomy.md) - 維度定義
+- [字典](./05-dictionary.md) - 代碼字典
+- [版本政策](../../governance/index.md) - 版本政策（請參閱儲存庫根目錄的 VERSIONING.md）

@@ -1,208 +1,202 @@
 ---
-description: AIMO Dictionary - Authoritative list of 91 taxonomy codes across 8 dimensions. Complete definitions, labels, and lifecycle information for AI classification.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/05-dictionary.md
-source_hash: 386723f659bcb2e9
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 字典 - 8 個維度中 91 個分類代碼的權威清單。AI 分類的完整定義、標籤和生命週期資訊。
 ---
 
-# Dictionary
+# 字典
 
-The AIMO Dictionary is the authoritative list of all valid codes within the taxonomy. It provides complete definitions for each code including labels, descriptions, and lifecycle information.
+AIMO 字典是分類法內所有有效代碼的權威清單。它提供每個代碼的完整定義，包括標籤、說明和生命週期資訊。
 
-## What is Dictionary
+## 什麼是字典
 
-The dictionary provides a complete, machine-readable set of all AIMO taxonomy codes. It contains:
+字典提供所有 AIMO 分類代碼的完整、機器可讀集合。它包含：
 
-- All 91 codes across 8 dimensions
-- Labels and definitions (with translations in language packs)
-- Lifecycle metadata (status, version introduced, deprecated, removed)
-- Scope notes and examples for code usage
+- 8 個維度中的所有 91 個代碼
+- 標籤和定義（語言套件中有翻譯）
+- 生命週期中繼資料（狀態、引入版本、棄用、移除）
+- 代碼使用的範圍說明和範例
 
-The dictionary enables:
+字典實現：
 
-1. **Evidence Templates**: Codes are used in EV templates to classify AI systems
-2. **Validator**: The validator checks that all codes exist in the dictionary
-3. **Coverage Map**: Codes enable mapping to external frameworks and regulations
+1. **證據範本**：代碼用於 EV 範本中分類 AI 系統
+2. **驗證器**：驗證器檢查所有代碼是否存在於字典中
+3. **覆蓋範圍對應**：代碼實現與外部框架和法規的對應
 
-!!! info "Single Source of Truth (SSOT)"
-    The SSOT for the dictionary is:
+!!! info "單一事實來源（SSOT）"
+    字典的 SSOT 是：
 
-    - **Structure**: `data/taxonomy/canonical.yaml` (codes, status, lifecycle)
-    - **Translations**: `data/taxonomy/i18n/*.yaml` (labels, definitions per language)
+    - **結構**：`data/taxonomy/canonical.yaml`（代碼、狀態、生命週期）
+    - **翻譯**：`data/taxonomy/i18n/*.yaml`（每種語言的標籤、定義）
 
-    CSV files are **generated artifacts** for distribution. See [Releases](../../releases/index.md) for downloads.
+    CSV 檔案是用於發布的**產生的人工產物**。請參閱[發布](../../releases/index.md)了解下載。
 
-## Column Schema
+## 欄位結構描述
 
-The canonical dictionary uses **18 columns** (language-neutral structure):
+規範字典使用 **18 欄**（語言中立結構）：
 
-### Identification Columns (5)
+### 識別欄位（5）
 
-| # | Column | Required | Description | Example |
+| # | 欄位 | 必要 | 說明 | 範例 |
 | --- | --- | --- | --- | --- |
-| 1 | `standard_id` | Yes | Standard identifier | `AIMO-STD` |
-| 2 | `standard_version` | Yes | SemVer format | `0.1.0` |
-| 3 | `dimension_id` | Yes | Two-letter dimension ID | `FS`, `UC`, `DT` |
-| 4 | `dimension_name` | Yes | Dimension name | `Functional Scope` |
-| 5 | `code` | Yes | Full code | `UC-001` |
+| 1 | `standard_id` | 是 | 標準識別碼 | `AIMO-STD` |
+| 2 | `standard_version` | 是 | SemVer 格式 | `0.1.0` |
+| 3 | `dimension_id` | 是 | 兩字母維度 ID | `FS`、`UC`、`DT` |
+| 4 | `dimension_name` | 是 | 維度名稱 | `Functional Scope` |
+| 5 | `code` | 是 | 完整代碼 | `UC-001` |
 
-### Label and Definition Columns (4)
+### 標籤和定義欄位（4）
 
-| # | Column | Required | Description | Example |
+| # | 欄位 | 必要 | 說明 | 範例 |
 | --- | --- | --- | --- | --- |
-| 6 | `label` | Yes | Code label (max 50 chars) | `General Q&A` |
-| 7 | `definition` | Yes | Code definition (1-2 sentences) | `General question answering...` |
-| 8 | `scope_notes` | No | Usage scope clarification | `Low to medium risk...` |
-| 9 | `examples` | No | Pipe-separated examples | `chatbot\|recommendation` |
+| 6 | `label` | 是 | 代碼標籤（最多 50 字元） | `General Q&A` |
+| 7 | `definition` | 是 | 代碼定義（1-2 句） | `General question answering...` |
+| 8 | `scope_notes` | 否 | 使用範圍澄清 | `Low to medium risk...` |
+| 9 | `examples` | 否 | 管道分隔的範例 | `chatbot\|recommendation` |
 
-!!! note "Translations"
-    The canonical data model separates translations into language packs (`data/taxonomy/i18n/*.yaml`). Each language pack provides localized `dimension_name`, `label`, and `definition` values. See [Localization Guide](../../contributing/localization.md) for details.
+!!! note "翻譯"
+    規範資料模型將翻譯分離到語言套件（`data/taxonomy/i18n/*.yaml`）。每個語言套件提供本地化的 `dimension_name`、`label` 和 `definition` 值。請參閱[在地化指南](../../contributing/localization.md)了解詳情。
 
-### Lifecycle Columns (6)
+### 生命週期欄位（6）
 
-| # | Column | Required | Description | Example |
+| # | 欄位 | 必要 | 說明 | 範例 |
 | --- | --- | --- | --- | --- |
-| 10 | `status` | Yes | `active`, `deprecated`, `removed` | `active` |
-| 11 | `introduced_in` | Yes | Version when added | `0.1.0` |
-| 12 | `deprecated_in` | No | Version when deprecated | `1.2.0` |
-| 13 | `removed_in` | No | Version when removed | `2.0.0` |
-| 14 | `replaced_by` | No | Replacement code | `UC-015` |
-| 15 | `backward_compatible` | Yes | `true` or `false` | `true` |
+| 10 | `status` | 是 | `active`、`deprecated`、`removed` | `active` |
+| 11 | `introduced_in` | 是 | 新增時的版本 | `0.1.0` |
+| 12 | `deprecated_in` | 否 | 棄用時的版本 | `1.2.0` |
+| 13 | `removed_in` | 否 | 移除時的版本 | `2.0.0` |
+| 14 | `replaced_by` | 否 | 替代代碼 | `UC-015` |
+| 15 | `backward_compatible` | 是 | `true` 或 `false` | `true` |
 
-### Governance Columns (3)
+### 治理欄位（3）
 
-| # | Column | Required | Description | Example |
+| # | 欄位 | 必要 | 說明 | 範例 |
 | --- | --- | --- | --- | --- |
-| 16 | `references` | No | External references | ISO/IEC 42001 |
-| 17 | `owner` | No | Responsible party | `AIMO WG` |
-| 18 | `last_reviewed_date` | No | Last review (YYYY-MM-DD) | `2026-01-19` |
+| 16 | `references` | 否 | 外部參照 | ISO/IEC 42001 |
+| 17 | `owner` | 否 | 負責方 | `AIMO WG` |
+| 18 | `last_reviewed_date` | 否 | 最後審查（YYYY-MM-DD） | `2026-01-19` |
 
-## Initial Entries
+## 初始條目
 
-The current dictionary version is **v0.1.0** and contains:
+目前字典版本是 **v0.1.0**，包含：
 
-| Dimension | Name | Active Codes | Deprecated | Total |
+| 維度 | 名稱 | 啟用代碼 | 已棄用 | 總計 |
 | --- | --- | --- | --- | --- |
-| FS | Functional Scope | 6 | 0 | 6 |
-| UC | Use Case Class | 30 | 0 | 30 |
-| DT | Data Type | 10 | 0 | 10 |
-| CH | Channel | 8 | 0 | 8 |
-| IM | Integration Mode | 7 | 0 | 7 |
-| RS | Risk Surface | 8 | 0 | 8 |
-| OB | Outcome / Benefit | 7 | 0 | 7 |
-| EV | Evidence Type | 15 | 0 | 15 |
-| **Total** | | **91** | **0** | **91** |
+| FS | 功能範圍 | 6 | 0 | 6 |
+| UC | 使用案例類別 | 30 | 0 | 30 |
+| DT | 資料類型 | 10 | 0 | 10 |
+| CH | 通道 | 8 | 0 | 8 |
+| IM | 整合模式 | 7 | 0 | 7 |
+| RS | 風險面 | 8 | 0 | 8 |
+| OB | 成果 / 效益 | 7 | 0 | 7 |
+| EV | 證據類型 | 15 | 0 | 15 |
+| **總計** | | **91** | **0** | **91** |
 
-!!! note "Complete Code Listings"
-    The complete list of 91 codes is available in the generated CSV artifacts. This documentation page provides column definitions and usage guidance. For detailed code definitions:
+!!! note "完整代碼清單"
+    完整的 91 個代碼清單可在產生的 CSV 人工產物中取得。本文件頁面提供欄位定義和使用指引。如需詳細的代碼定義：
 
-    - **Download**: See [Releases](../../releases/index.md) for per-language CSV files
-    - **Per-language CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
-    - **Legacy EN/JA mixed CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (frozen, for backward compatibility only)
+    - **下載**：請參閱[發布](../../releases/index.md)了解各語言 CSV 檔案
+    - **各語言 CSV**：`artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
+    - **舊版 EN/JA 混合 CSV**：`source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv`（凍結，僅用於向後相容性）
 
-## Update Policy
+## 更新政策
 
-### Adding New Codes
+### 新增代碼
 
-1. Assign the next available number within the dimension (e.g., `UC-031` after `UC-030`)
-2. Set `status` to `active`
-3. Set `introduced_in` to the current version
-4. Set `backward_compatible` to `true`
-5. Provide label and definition (add translations to language packs)
+1. 在維度內分配下一個可用號碼（例如 `UC-030` 之後是 `UC-031`）
+2. 將 `status` 設為 `active`
+3. 將 `introduced_in` 設為目前版本
+4. 將 `backward_compatible` 設為 `true`
+5. 提供標籤和定義（將翻譯新增到語言套件）
 
-### Modifying Existing Codes
+### 修改現有代碼
 
-| Change Type | Allowed | Version Impact |
+| 變更類型 | 允許 | 版本影響 |
 | --- | --- | --- |
-| Definition clarification | Yes | PATCH |
-| Scope notes update | Yes | PATCH |
-| Label change (meaning preserved) | Yes | MINOR |
-| Meaning change | No | Create new code instead |
+| 定義澄清 | 是 | PATCH |
+| 範圍說明更新 | 是 | PATCH |
+| 標籤變更（含義保留） | 是 | MINOR |
+| 含義變更 | 否 | 改為建立新代碼 |
 
-### Deprecating Codes
+### 棄用代碼
 
-1. Set `status` to `deprecated`
-2. Set `deprecated_in` to current version
-3. Set `replaced_by` to the new code (if applicable)
-4. Code remains functional for backward compatibility
-5. Document the reason in scope_notes
+1. 將 `status` 設為 `deprecated`
+2. 將 `deprecated_in` 設為目前版本
+3. 將 `replaced_by` 設為新代碼（如適用）
+4. 代碼仍然可用以保持向後相容性
+5. 在 scope_notes 中記錄原因
 
-### Removing Codes
+### 移除代碼
 
-1. Deprecate for at least one MINOR version first
-2. Set `status` to `removed`
-3. Set `removed_in` to current MAJOR version
-4. Code is no longer valid for new evidence
+1. 首先至少棄用一個 MINOR 版本
+2. 將 `status` 設為 `removed`
+3. 將 `removed_in` 設為目前 MAJOR 版本
+4. 代碼對新證據不再有效
 
-### Compatibility Policy
+### 相容性政策
 
-| Action | Version Impact | Backward Compatible |
+| 動作 | 版本影響 | 向後相容 |
 | --- | --- | --- |
-| Add new code | MINOR | Yes |
-| Deprecate code | MINOR | Yes |
-| Clarify definition | PATCH | Yes |
-| Remove code | MAJOR | No |
-| Change code meaning | Not allowed | - |
+| 新增代碼 | MINOR | 是 |
+| 棄用代碼 | MINOR | 是 |
+| 澄清定義 | PATCH | 是 |
+| 移除代碼 | MAJOR | 否 |
+| 變更代碼含義 | 不允許 | - |
 
-## How to Use
+## 如何使用
 
-### In Evidence Templates
+### 在證據範本中
 
-Each EV template includes an 8-dimension codes table:
+每個 EV 範本包含一個 8 維度代碼表：
 
 ```markdown
-## AIMO Codes (8 Dimensions)
+## AIMO 代碼（8 維度）
 
-| Dimension | Code(s) | Label |
+| 維度 | 代碼 | 標籤 |
 | --- | --- | --- |
-| **FS** | `FS-001` | End-user Productivity |
-| **UC** | `UC-001`, `UC-002` | General Q&A, Summarization |
-| **DT** | `DT-002`, `DT-004` | Internal, Personal Data |
+| **FS** | `FS-001` | 終端使用者生產力 |
+| **UC** | `UC-001`、`UC-002` | 一般問答、摘要 |
+| **DT** | `DT-002`、`DT-004` | 內部、個人資料 |
 | **CH** | `CH-001` | Web UI |
-| **IM** | `IM-002` | SaaS Integrated |
-| **RS** | `RS-001`, `RS-003` | Data Leakage, Compliance Breach |
-| **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **IM** | `IM-002` | SaaS 整合 |
+| **RS** | `RS-001`、`RS-003` | 資料洩漏、合規違反 |
+| **OB** | `OB-001` | 效率 |
+| **EV** | `EV-001`、`EV-002` | 請求記錄、審查/核准記錄 |
 ```
 
-### In Validator
+### 在驗證器中
 
-The validator checks:
+驗證器檢查：
 
-1. All codes referenced in evidence exist in the dictionary
-2. Code format matches the expected pattern (`PREFIX-###`)
-3. Deprecated codes trigger warnings
-4. Removed codes are rejected
+1. 證據中參照的所有代碼都存在於字典中
+2. 代碼格式符合預期模式（`PREFIX-###`）
+3. 已棄用的代碼觸發警告
+4. 已移除的代碼被拒絕
 
-### Extension Guidelines
+### 擴展指引
 
-Organizations MAY extend the dictionary with custom codes:
+組織可以使用自訂代碼擴展字典：
 
-**Extension Prefix:**
+**擴展前綴：**
 
 ```
 X-<ORG>-<DIM>-<TOKEN>
 ```
 
-Example: `X-ACME-UC-901` for ACME Corporation's custom use case code.
+範例：`X-ACME-UC-901` 用於 ACME 公司的自訂使用案例代碼。
 
-**Extension Rules:**
+**擴展規則：**
 
-1. Custom codes MUST NOT conflict with standard codes
-2. Custom codes SHOULD be documented in a local extension dictionary
-3. When exchanging evidence with external parties, use only standard codes
+1. 自訂代碼不得與標準代碼衝突
+2. 自訂代碼應記錄在本地擴展字典中
+3. 與外部方交換證據時，僅使用標準代碼
 
-## Downloads
+## 下載
 
-See [Releases](../../releases/index.md) for downloadable packages containing the dictionary and related files.
+請參閱[發布](../../releases/index.md)了解包含字典和相關檔案的可下載套件。
 
-## Related Pages
+## 相關頁面
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions and code tables
-- [Codes](./04-codes.md) - Code format, naming, and lifecycle
-- [Evidence Templates](./06-ev-template.md) - How codes are used in templates
-- [Validator](./07-validator.md) - Code validation rules
-- [Changelog](./08-changelog.md) - Version history
+- [分類法](./03-taxonomy.md) - 維度定義和代碼表
+- [代碼](./04-codes.md) - 代碼格式、命名和生命週期
+- [證據範本](./06-ev-template.md) - 如何在範本中使用代碼
+- [驗證器](./07-validator.md) - 代碼驗證規則
+- [變更日誌](./08-changelog.md) - 版本歷史

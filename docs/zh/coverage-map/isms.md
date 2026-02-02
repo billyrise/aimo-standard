@@ -1,37 +1,31 @@
 ---
-description: AIMO Standard to ISMS (ISO 27001/27002) mapping. Traceability between AIMO taxonomy and information security management system controls.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/coverage-map/isms.md
-source_hash: 7b194f9afc8f784e
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 标准与 ISMS（ISO 27001/27002）的映射。AIMO 分类法与信息安全管理系统控制之间的可追溯性。
 ---
 
-# ISMS view (ISO/IEC 27001/27002) mapping
+# ISMS 视图（ISO/IEC 27001/27002）映射
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> 可追溯性快捷方式：分类法 → 最低证据 → 验证器 → 人工监督协议。
 
-- [Taxonomy](../standard/current/03-taxonomy.md)
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- [Log Schemas](../artifacts/log-schemas/index.md)
-- [Validator](../validator/index.md)
-- [Human Oversight Protocol](../governance/human-oversight-protocol.md)
+- [分类法](../standard/current/03-taxonomy.md)
+- [最低证据要求](../artifacts/minimum-evidence.md)
+- [日志模式](../artifacts/log-schemas/index.md)
+- [验证器](../validator/index.md)
+- [人工监督协议](../governance/human-oversight-protocol.md)
 
-This page maps selected ISO/IEC 27001/27002 themes (change management, access control, logging, evidence integrity) to AIMO evidence and artifacts. It is for explainability only; it does not guarantee conformity to ISO/IEC 27001 or 27002. Verify against the published standards.
+本页将选定的 ISO/IEC 27001/27002 主题（变更管理、访问控制、日志、证据完整性）映射到 AIMO 证据和工件。这仅用于可解释性；不保证符合 ISO/IEC 27001 或 27002。请根据已发布的标准进行验证。
 
 
-## Mapping table
+## 映射表
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| 框架引用/主题 | AIMO 证据/在 AIMO 中的位置 | 证据包/最低证据 | 工件与验证 | 说明 |
 | --- | --- | --- | --- | --- |
-| A.5.24 – Information security in project management | [Scope](../standard/current/02-scope.md) | request, review | templates/ev/ | Informative; verify against official text. |
-| A.5.29 – Information security during disruption | [Minimum Evidence](../artifacts/minimum-evidence.md) | exception, renewal | templates/ev/ev_template.md | Informative; verify against official text. |
-| A.5.30 – ICT readiness for business continuity | [Overview](../standard/current/01-overview.md) | Summary; integrity | — | Informative; verify against official text. |
-| A.8.1 – Inventory of assets | [Dictionary](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against official text. |
-| A.8.2 – Information classification | [Taxonomy](../standard/current/03-taxonomy.md) | Dictionary; review | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | Informative; verify against official text. |
-| A.8.3 – Access control | [Minimum Evidence](../artifacts/minimum-evidence.md) | —; integrity | — | Informative; verify against official text. |
-| A.8.15 – Logging | [EV Template](../standard/current/06-ev-template.md) | EV, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | Informative; verify against official text. |
-| A.8.16 – Monitoring activities | [Minimum Evidence](../artifacts/minimum-evidence.md) | EV, change_log; change_log, integrity | templates/ev/ | Informative; verify against official text. |
-| A.8.32 – Change management | [Evidence Bundle](../artifacts/evidence-bundle.md) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | Informative; verify against official text. |
-| A.8.33 – Test information | [Validator](../standard/current/07-validator.md) | EV | validator/rules/, validator/src/; schema_validate_ev | Informative; verify against official text. |
+| A.5.24 – 项目管理中的信息安全 | [范围](../standard/current/02-scope.md) | request, review | templates/ev/ | 仅供参考；请根据官方文本验证。 |
+| A.5.29 – 中断期间的信息安全 | [最低证据](../artifacts/minimum-evidence.md) | exception, renewal | templates/ev/ev_template.md | 仅供参考；请根据官方文本验证。 |
+| A.5.30 – 业务连续性的ICT就绪 | [概述](../standard/current/01-overview.md) | Summary; integrity | — | 仅供参考；请根据官方文本验证。 |
+| A.8.1 – 资产清单 | [字典](../standard/current/05-dictionary.md) | Dictionary, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | 仅供参考；请根据官方文本验证。 |
+| A.8.2 – 信息分类 | [分类法](../standard/current/03-taxonomy.md) | Dictionary; review | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | 仅供参考；请根据官方文本验证。 |
+| A.8.3 – 访问控制 | [最低证据](../artifacts/minimum-evidence.md) | —; integrity | — | 仅供参考；请根据官方文本验证。 |
+| A.8.15 – 日志 | [EV 模板](../standard/current/06-ev-template.md) | EV, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | 仅供参考；请根据官方文本验证。 |
+| A.8.16 – 监控活动 | [最低证据](../artifacts/minimum-evidence.md) | EV, change_log; change_log, integrity | templates/ev/ | 仅供参考；请根据官方文本验证。 |
+| A.8.32 – 变更管理 | [证据包](../artifacts/evidence-bundle.md) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | 仅供参考；请根据官方文本验证。 |
+| A.8.33 – 测试信息 | [验证器](../standard/current/07-validator.md) | EV | validator/rules/, validator/src/; schema_validate_ev | 仅供参考；请根据官方文本验证。 |

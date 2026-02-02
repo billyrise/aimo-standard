@@ -1,120 +1,114 @@
 ---
-description: AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/04-codes.md
-source_hash: 4fbe61ae36d25e5e
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: AIMO 코드 시스템 형식 및 명명 규칙. 코드 구조(XX-NNN), 생명주기 상태, 버전 관리 및 분류체계 코드에 대한 폐기 정책을 정의합니다.
 ---
 
-# Codes
+# 코드
 
-This page defines the AIMO Code System format, naming conventions, and lifecycle management.
+이 페이지는 AIMO 코드 시스템 형식, 명명 규칙 및 생명주기 관리를 정의합니다.
 
-## Code Format
+## 코드 형식
 
-All AIMO codes follow the format: **`<PREFIX>-<TOKEN>`**
+모든 AIMO 코드는 다음 형식을 따릅니다: **`<PREFIX>-<TOKEN>`**
 
-| Component | Description | Format | Example |
+| 구성 요소 | 설명 | 형식 | 예시 |
 | --- | --- | --- | --- |
-| `<PREFIX>` | Dimension identifier | 2 uppercase letters | FS, UC, DT |
-| `-` | Separator | Hyphen | - |
-| `<TOKEN>` | Unique token within dimension | 3 digits (zero-padded) | 001, 002, 003 |
+| `<PREFIX>` | 차원 식별자 | 2개 대문자 | FS, UC, DT |
+| `-` | 구분자 | 하이픈 | - |
+| `<TOKEN>` | 차원 내 고유 토큰 | 3자리 숫자 (0 패딩) | 001, 002, 003 |
 
-### Examples
+### 예시
 
-- `FS-001` - Functional Scope: End-user Productivity
-- `UC-005` - Use Case Class: Code Generation
-- `DT-004` - Data Type: Personal Data
-- `CH-003` - Channel: IDE Plugin
-- `IM-002` - Integration Mode: SaaS Integrated
-- `RS-001` - Risk Surface: Data Leakage
-- `OB-001` - Outcome/Benefit: Efficiency
-- `EV-001` - Evidence Type: Request Record
+- `FS-001` - 기능 범위: 최종 사용자 생산성
+- `UC-005` - 사용 사례 분류: 코드 생성
+- `DT-004` - 데이터 유형: 개인 데이터
+- `CH-003` - 채널: IDE 플러그인
+- `IM-002` - 통합 모드: SaaS 통합
+- `RS-001` - 리스크 표면: 데이터 유출
+- `OB-001` - 결과/혜택: 효율성
+- `EV-001` - 증거 유형: 요청 레코드
 
-## Namespaces
+## 네임스페이스
 
-The AIMO taxonomy uses 8 dimension namespaces:
+AIMO 분류체계는 8개 차원 네임스페이스를 사용합니다:
 
-| ID | Name | Prefix | Code Count |
+| ID | 이름 | 접두사 | 코드 수 |
 | --- | --- | --- | --- |
-| **FS** | Functional Scope | `FS-` | 6 |
-| **UC** | Use Case Class | `UC-` | 30 |
-| **DT** | Data Type | `DT-` | 10 |
-| **CH** | Channel | `CH-` | 8 |
-| **IM** | Integration Mode | `IM-` | 7 |
-| **RS** | Risk Surface | `RS-` | 8 |
-| **OB** | Outcome / Benefit | `OB-` | 7 |
-| **EV** | Evidence Type | `EV-` | 15 |
+| **FS** | 기능 범위 | `FS-` | 6 |
+| **UC** | 사용 사례 분류 | `UC-` | 30 |
+| **DT** | 데이터 유형 | `DT-` | 10 |
+| **CH** | 채널 | `CH-` | 8 |
+| **IM** | 통합 모드 | `IM-` | 7 |
+| **RS** | 리스크 표면 | `RS-` | 8 |
+| **OB** | 결과 / 혜택 | `OB-` | 7 |
+| **EV** | 증거 유형 | `EV-` | 15 |
 
-**Total: 91 codes across 8 dimensions**
+**총계: 8개 차원에 걸쳐 91개 코드**
 
-### Namespace Rules
+### 네임스페이스 규칙
 
-1. **Prefix is fixed**: The two-letter dimension prefix (FS, UC, etc.) is permanent and will never change.
-2. **Zero-padding**: Tokens are always 3 digits, zero-padded (e.g., `001` not `1`).
-3. **Sequential assignment**: New codes are assigned the next available number within a dimension.
-4. **No reuse**: Removed codes are never reassigned to different meanings.
+1. **접두사는 고정**: 2자리 차원 접두사(FS, UC 등)는 영구적이며 절대 변경되지 않습니다.
+2. **0 패딩**: 토큰은 항상 3자리이며, 0으로 패딩됩니다(예: `1`이 아닌 `001`).
+3. **순차 할당**: 새 코드는 차원 내에서 다음 사용 가능한 번호가 할당됩니다.
+4. **재사용 없음**: 제거된 코드는 다른 의미에 재할당되지 않습니다.
 
-## Stability Rules
+## 안정성 규칙
 
-Code stability is a critical principle for audit traceability.
+코드 안정성은 감사 추적성을 위한 중요한 원칙입니다.
 
-### ID Immutability
+### ID 불변성
 
-- **Code IDs are immutable** — once assigned, a code ID never changes meaning
-- A code like `UC-001` will always mean "General Q&A" for its entire lifecycle
-- If the meaning needs to change, a new code is created instead
+- **코드 ID는 불변** — 할당되면 코드 ID는 의미를 변경하지 않습니다
+- `UC-001`과 같은 코드는 전체 생명주기 동안 항상 "일반 Q&A"를 의미합니다
+- 의미를 변경해야 하는 경우 대신 새 코드가 생성됩니다
 
-### No Reuse Policy
+### 재사용 금지 정책
 
-- Deprecated or removed codes are **never reassigned** to different meanings
-- This ensures historical evidence remains valid and traceable
-- Example: If `UC-010` is deprecated, a new use case gets `UC-031` (not `UC-010`)
+- 폐기되거나 제거된 코드는 **다른 의미에 재할당되지 않습니다**
+- 이것은 이력 증거가 유효하고 추적 가능한 상태로 유지되도록 보장합니다
+- 예: `UC-010`이 폐기되면 새 사용 사례는 `UC-031`을 받습니다(`UC-010`이 아님)
 
-### Deprecation Before Removal
+### 제거 전 폐기
 
-- Codes must be marked `deprecated` for at least one MINOR version before removal
-- Removal only occurs in MAJOR version increments
-- See [Lifecycle](#lifecycle) section for details
+- 코드는 제거 전 최소 하나의 MINOR 버전 동안 `deprecated`로 표시되어야 합니다
+- 제거는 MAJOR 버전 증분에서만 발생합니다
+- 자세한 내용은 [생명주기](#lifecycle) 섹션을 참조하세요
 
-## Usage
+## 사용
 
-### Required Dimensions
+### 필수 차원
 
-For each AI system or use case, you MUST specify at least one code from each required dimension:
+각 AI 시스템 또는 사용 사례에 대해 각 필수 차원에서 최소 하나의 코드를 지정해야 합니다(MUST):
 
-| Dimension | Selection | Notes |
+| 차원 | 선택 | 참고사항 |
 | --- | --- | --- |
-| FS | Exactly 1 | Primary business function |
-| UC | 1 or more | Task types performed |
-| DT | 1 or more | Data classifications |
-| CH | 1 or more | Access channels |
-| IM | Exactly 1 | Integration mode |
-| RS | 1 or more | Risk categories |
-| EV | 1 or more | Evidence types |
+| FS | 정확히 1개 | 기본 비즈니스 기능 |
+| UC | 1개 이상 | 수행되는 작업 유형 |
+| DT | 1개 이상 | 데이터 분류 |
+| CH | 1개 이상 | 접근 채널 |
+| IM | 정확히 1개 | 통합 모드 |
+| RS | 1개 이상 | 리스크 범주 |
+| EV | 1개 이상 | 증거 유형 |
 
-### Optional Dimensions
+### 선택적 차원
 
-| Dimension | Selection | Notes |
+| 차원 | 선택 | 참고사항 |
 | --- | --- | --- |
-| OB | 0 or more | Expected benefits (optional) |
+| OB | 0개 이상 | 기대되는 혜택 (선택적) |
 
-### Code Composition
+### 코드 조합
 
-When documenting an AI system, codes from multiple dimensions are combined. The **composition priority** determines the order when listing codes:
+AI 시스템을 문서화할 때 여러 차원의 코드가 조합됩니다. **조합 우선순위**는 코드를 나열할 때의 순서를 결정합니다:
 
-1. FS (Functional Scope)
-2. UC (Use Case Class)
-3. DT (Data Type)
-4. CH (Channel)
-5. IM (Integration Mode)
-6. RS (Risk Surface)
-7. OB (Outcome / Benefit)
-8. EV (Evidence Type)
+1. FS (기능 범위)
+2. UC (사용 사례 분류)
+3. DT (데이터 유형)
+4. CH (채널)
+5. IM (통합 모드)
+6. RS (리스크 표면)
+7. OB (결과 / 혜택)
+8. EV (증거 유형)
 
-**Example composition:**
+**조합 예시:**
 
 ```
 FS: FS-001
@@ -127,81 +121,81 @@ OB: OB-001
 EV: EV-001, EV-002
 ```
 
-## Lifecycle
+## 생명주기
 
-### Status Values
+### 상태 값
 
-| Status | Description | Validator Behavior |
+| 상태 | 설명 | 검증기 동작 |
 | --- | --- | --- |
-| `active` | Currently valid and in use | Accepted |
-| `deprecated` | Still valid but scheduled for removal | Accepted with warning |
-| `removed` | No longer valid; do not use | Rejected |
+| `active` | 현재 유효하고 사용 중 | 수락됨 |
+| `deprecated` | 여전히 유효하지만 제거 예정 | 경고와 함께 수락됨 |
+| `removed` | 더 이상 유효하지 않음; 사용하지 마세요 | 거부됨 |
 
-### Lifecycle Metadata Fields
+### 생명주기 메타데이터 필드
 
-The dictionary tracks lifecycle with these fields:
+딕셔너리는 다음 필드로 생명주기를 추적합니다:
 
-| Field | Required | Description | Example |
+| 필드 | 필수 | 설명 | 예시 |
 | --- | --- | --- | --- |
-| `status` | Yes | Current status | `active` |
-| `introduced_in` | Yes | Version when code was added | `0.1.0` |
-| `deprecated_in` | No | Version when marked deprecated | `1.2.0` |
-| `removed_in` | No | Version when removed | `2.0.0` |
-| `replaced_by` | No | Replacement code(s) | `UC-015` |
-| `backward_compatible` | Yes | Whether change breaks existing usage | `true` |
+| `status` | 예 | 현재 상태 | `active` |
+| `introduced_in` | 예 | 코드가 추가된 버전 | `0.1.0` |
+| `deprecated_in` | 아니요 | 폐기로 표시된 버전 | `1.2.0` |
+| `removed_in` | 아니요 | 제거된 버전 | `2.0.0` |
+| `replaced_by` | 아니요 | 대체 코드 | `UC-015` |
+| `backward_compatible` | 예 | 변경이 기존 사용을 깨는지 여부 | `true` |
 
-### Deprecation Rules
+### 폐기 규칙
 
-1. Codes MUST be marked `deprecated` for at least one MINOR version before removal
-2. Deprecated codes include `deprecated_in` version and `replaced_by` if applicable
-3. Removal occurs only in MAJOR version increments
-4. Deprecated codes remain valid for backward compatibility during the deprecation period
+1. 코드는 제거 전 최소 하나의 MINOR 버전 동안 `deprecated`로 표시되어야 합니다(MUST)
+2. 폐기된 코드에는 `deprecated_in` 버전 및 해당하는 경우 `replaced_by`가 포함됩니다
+3. 제거는 MAJOR 버전 증분에서만 발생합니다
+4. 폐기된 코드는 폐기 기간 동안 이전 호환성을 위해 유효한 상태로 유지됩니다
 
-**Example timeline:**
+**예시 타임라인:**
 
-| Version | Status | Action |
+| 버전 | 상태 | 조치 |
 | --- | --- | --- |
-| 0.1.0 | `active` | Code `UC-010` introduced |
-| 1.2.0 | `deprecated` | Marked deprecated, `replaced_by: UC-031` |
-| 2.0.0 | `removed` | No longer accepted by validator |
+| 0.1.0 | `active` | 코드 `UC-010` 도입 |
+| 1.2.0 | `deprecated` | 폐기로 표시됨, `replaced_by: UC-031` |
+| 2.0.0 | `removed` | 더 이상 검증기에서 수락되지 않음 |
 
-### Versioning
+### 버전 관리
 
-Code changes follow [Semantic Versioning](./08-changelog.md):
+코드 변경은 [시맨틱 버전 관리](./08-changelog.md)를 따릅니다:
 
-- **MAJOR**: Code removal or breaking changes
-- **MINOR**: New codes added, codes deprecated
-- **PATCH**: Definition clarifications only (no structural changes)
+- **MAJOR**: 코드 제거 또는 호환성 깨는 변경
+- **MINOR**: 새 코드 추가, 코드 폐기
+- **PATCH**: 정의 명확화만 (구조적 변경 없음)
 
-### Backward Compatibility
+### 이전 호환성
 
-The `backward_compatible` field indicates whether a change breaks existing usage:
+`backward_compatible` 필드는 변경이 기존 사용을 깨는지 여부를 나타냅니다:
 
-| Value | Meaning |
+| 값 | 의미 |
 | --- | --- |
-| `true` | Existing evidence using this code remains valid |
-| `false` | Existing evidence may need updates (MAJOR version change) |
+| `true` | 이 코드를 사용하는 기존 증거가 유효한 상태로 유지됨 |
+| `false` | 기존 증거에 업데이트가 필요할 수 있음 (MAJOR 버전 변경) |
 
-## Validation
+## 검증
 
-The validator checks:
+검증기가 확인하는 것:
 
-1. All required dimensions have at least one code
-2. Single-select dimensions have exactly one code
-3. All codes exist in the current taxonomy dictionary
-4. Code format matches `<PREFIX>-<TOKEN>` pattern (e.g., `UC-001`)
-5. Deprecated codes are flagged with warnings
+1. 모든 필수 차원에 최소 하나의 코드가 있음
+2. 단일 선택 차원에 정확히 하나의 코드가 있음
+3. 모든 코드가 현재 분류체계 딕셔너리에 존재함
+4. 코드 형식이 `<PREFIX>-<TOKEN>` 패턴과 일치함 (예: `UC-001`)
+5. 폐기된 코드에 경고 플래그 지정
 
-See [Validator](./07-validator.md) for implementation details.
+구현 세부사항은 [검증기](./07-validator.md)를 참조하세요.
 
-## SSOT Reference
+## SSOT 참조
 
-!!! info "Source of Truth"
-    The authoritative definition is `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+!!! info "진실 공급원"
+    권위 있는 정의는 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`입니다. 이 페이지는 설명 목적입니다. 업데이트 워크플로우는 [현지화 가이드](../../contributing/localization.md)를 참조하세요.
 
-## Related Pages
+## 관련 페이지
 
-- [Taxonomy](./03-taxonomy.md) - Full dimension definitions
-- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
-- [Validator](./07-validator.md) - Validation rules
-- [Changelog](./08-changelog.md) - Version history
+- [분류체계](./03-taxonomy.md) - 전체 차원 정의
+- [딕셔너리](./05-dictionary.md) - 완전한 코드 목록 및 열 정의
+- [검증기](./07-validator.md) - 검증 규칙
+- [변경로그](./08-changelog.md) - 버전 이력

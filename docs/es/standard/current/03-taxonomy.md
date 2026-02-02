@@ -1,238 +1,232 @@
 ---
-description: AIMO Taxonomy - 8-dimension classification system with 91 codes for categorizing AI systems. Covers functional scope, use cases, data types, channels, integration, risks, outcomes, and evidence.
-# TRANSLATION METADATA - DO NOT REMOVE
-source_file: en/standard/current/03-taxonomy.md
-source_hash: fdf0a7d87be25a0f
-translation_date: 2026-02-02
-translator: pending
-translation_status: needs_translation
+description: Taxonomía AIMO - Sistema de clasificación de 8 dimensiones con 91 códigos para categorizar sistemas de IA. Cubre alcance funcional, casos de uso, tipos de datos, canales, integración, riesgos, resultados y evidencia.
 ---
 
-# Taxonomy
+# Taxonomía
 
-The AIMO Taxonomy provides a structured classification system for categorizing AI systems, their uses, and associated governance requirements. It consists of **8 dimensions** with **91 codes** that enable consistent classification and evidence management across organizations.
+La Taxonomía AIMO proporciona un sistema de clasificación estructurado para categorizar sistemas de IA, sus usos y requisitos de gobernanza asociados. Consiste en **8 dimensiones** con **91 códigos** que permiten clasificación consistente y gestión de evidencia en las organizaciones.
 
-## Purpose
+## Propósito
 
-The taxonomy serves three primary purposes from an audit perspective:
+La taxonomía sirve tres propósitos principales desde una perspectiva de auditoría:
 
-1. **Explainability**: Provides a common vocabulary for describing AI use cases across the organization, supporting clear communication with auditors and stakeholders.
+1. **Explicabilidad**: Proporciona un vocabulario común para describir casos de uso de IA en la organización, soportando comunicación clara con auditores y stakeholders.
 
-2. **Evidence Readiness**: Enables systematic documentation of AI systems using a standardized classification, making evidence collection and review more efficient.
+2. **Preparación de Evidencia**: Permite documentación sistemática de sistemas de IA usando una clasificación estandarizada, haciendo la recopilación y revisión de evidencia más eficiente.
 
-3. **Comparability**: Allows organizations to compare AI use cases across different contexts using consistent terminology.
+3. **Comparabilidad**: Permite a las organizaciones comparar casos de uso de IA en diferentes contextos usando terminología consistente.
 
-## What It Is Not (Non-Overclaim)
+## Qué No Es (No Sobre-Reclamar)
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. See [Responsibility Boundary](../../governance/responsibility-boundary.md) for details.
+!!! warning "Importante"
+    El AIMO Standard soporta **explicabilidad y preparación de evidencia**. **No** proporciona asesoramiento legal, garantiza cumplimiento ni certifica conformidad con ninguna regulación o marco. Consulte [Límite de Responsabilidad](../../governance/responsibility-boundary.md) para detalles.
 
-The taxonomy is a classification system only. It does not:
+La taxonomía es solo un sistema de clasificación. No:
 
-- Guarantee compliance with any law or regulation
-- Replace professional legal, security, or compliance advice
-- Certify conformity to external frameworks (ISO, NIST, EU AI Act, etc.)
-- Provide risk assessments or control recommendations
+- Garantiza cumplimiento con ninguna ley o regulación
+- Reemplaza asesoramiento profesional legal, de seguridad o de cumplimiento
+- Certifica conformidad con marcos externos (ISO, NIST, EU AI Act, etc.)
+- Proporciona evaluaciones de riesgo o recomendaciones de control
 
-## Examples of AI/agentic-specific risks (why an AI-specific standard is needed)
+## Ejemplos de riesgos específicos de IA/agéntica (por qué se necesita un estándar específico de IA)
 
-Traditional security controls (e.g., ISMS) alone often fail to capture LLM/agent-specific failure modes and autonomous agent deviations (e.g., unintended tool execution, recursive loops) in an **audit-explainable** manner.
-AIMO Taxonomy provides a shared language to classify these AI-specific risks and connect them to evidence requirements and remediation workflows.
+Los controles de seguridad tradicionales (ej., ISMS) solos a menudo fallan en capturar modos de fallo específicos de LLM/agente y desviaciones de agentes autónomos (ej., ejecución no intencional de herramientas, bucles recursivos) de una manera **explicable para auditoría**.
+La Taxonomía AIMO proporciona un lenguaje compartido para clasificar estos riesgos específicos de IA y conectarlos con requisitos de evidencia y flujos de trabajo de remediación.
 
-(Reference examples for differentiation. The codes below are illustrative placeholders; the official code system follows the Standard definitions.)
-- AG-01 Runaway Loop / Recursion
-- AG-02 Unauthorized Tool Use (confused deputy-style misuse)
-- AG-03 Privilege Boundary Drift
+(Ejemplos de referencia para diferenciación. Los códigos a continuación son marcadores de posición ilustrativos; el sistema de códigos oficial sigue las definiciones del Estándar.)
+- AG-01 Bucle Desbocado / Recursión
+- AG-02 Uso No Autorizado de Herramientas (mal uso estilo deputy confundido)
+- AG-03 Deriva de Límite de Privilegios
 
-## Dimensions Overview
+## Descripción General de Dimensiones
 
-AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-letter prefix.
+AIMO usa 8 dimensiones para clasificar casos de uso de IA. Cada dimensión tiene un prefijo único de 2 letras.
 
-| ID | Name | Code Count | Description |
+| ID | Nombre | Conteo de Códigos | Descripción |
 | --- | --- | --- | --- |
-| **FS** | Functional Scope | 6 | Which business function is supported |
-| **UC** | Use Case Class | 30 | What type of task is performed |
-| **DT** | Data Type | 10 | What data classifications are involved |
-| **CH** | Channel | 8 | How users access the AI |
-| **IM** | Integration Mode | 7 | How AI connects to enterprise systems |
-| **RS** | Risk Surface | 8 | What risks are associated |
-| **OB** | Outcome / Benefit | 7 | What benefits are expected |
-| **EV** | Evidence Type | 15 | What evidence is required |
+| **FS** | Alcance Funcional | 6 | Qué función de negocio es soportada |
+| **UC** | Clase de Caso de Uso | 30 | Qué tipo de tarea se realiza |
+| **DT** | Tipo de Datos | 10 | Qué clasificaciones de datos están involucradas |
+| **CH** | Canal | 8 | Cómo acceden los usuarios a la IA |
+| **IM** | Modo de Integración | 7 | Cómo se conecta la IA a sistemas empresariales |
+| **RS** | Superficie de Riesgo | 8 | Qué riesgos están asociados |
+| **OB** | Resultado / Beneficio | 7 | Qué beneficios se esperan |
+| **EV** | Tipo de Evidencia | 15 | Qué evidencia se requiere |
 
-**Total: 91 codes across 8 dimensions**
+**Total: 91 códigos en 8 dimensiones**
 
-### Usage Rules
+### Reglas de Uso
 
-| Dimension | Selection | Audit Implication |
+| Dimensión | Selección | Implicación de Auditoría |
 | --- | --- | --- |
-| FS, IM | Exactly 1 | Primary classification for responsibility assignment |
-| UC, DT, CH, RS, EV | 1 or more | Complete enumeration required for risk coverage |
-| OB | 0 or more | Optional; documents expected business value |
+| FS, IM | Exactamente 1 | Clasificación primaria para asignación de responsabilidad |
+| UC, DT, CH, RS, EV | 1 o más | Enumeración completa requerida para cobertura de riesgo |
+| OB | 0 o más | Opcional; documenta valor de negocio esperado |
 
-## Dimension Definitions
+## Definiciones de Dimensiones
 
-### FS: Functional Scope
+### FS: Alcance Funcional
 
-Categorizes AI use by the business function it supports. **Select exactly one.**
+Categoriza el uso de IA por la función de negocio que soporta. **Seleccione exactamente uno.**
 
-| Code | Label | Definition |
+| Código | Etiqueta | Definición |
 | --- | --- | --- |
-| FS-001 | End-user Productivity | AI used to improve productivity of internal end users (writing, search, summarization, meeting notes). |
-| FS-002 | Customer-facing Features | AI embedded in product/service features provided to customers. |
-| FS-003 | Developer Tooling | AI used to assist software development and engineering tasks. |
-| FS-004 | IT Operations | AI used for IT operations and system administration (monitoring, incident handling). |
-| FS-005 | Security Operations | AI used for security monitoring/response (SOC, detection, triage). |
-| FS-006 | Governance & Compliance | AI used to support governance/compliance activities (policy, audit evidence). |
+| FS-001 | Productividad de Usuario Final | IA usada para mejorar productividad de usuarios finales internos (escritura, búsqueda, resumen, notas de reuniones). |
+| FS-002 | Características de Cara al Cliente | IA integrada en características de producto/servicio proporcionadas a clientes. |
+| FS-003 | Herramientas de Desarrollador | IA usada para asistir desarrollo de software y tareas de ingeniería. |
+| FS-004 | Operaciones de TI | IA usada para operaciones de TI y administración de sistemas (monitoreo, manejo de incidentes). |
+| FS-005 | Operaciones de Seguridad | IA usada para monitoreo/respuesta de seguridad (SOC, detección, triaje). |
+| FS-006 | Gobernanza y Cumplimiento | IA usada para soportar actividades de gobernanza/cumplimiento (política, evidencia de auditoría). |
 
-### UC: Use Case Class
+### UC: Clase de Caso de Uso
 
-Categorizes AI use by the type of task or interaction. **Select one or more.** Full list includes 30 codes; representative examples below.
+Categoriza el uso de IA por el tipo de tarea o interacción. **Seleccione uno o más.** La lista completa incluye 30 códigos; ejemplos representativos a continuación.
 
-| Code | Label | Definition |
+| Código | Etiqueta | Definición |
 | --- | --- | --- |
-| UC-001 | General Q&A | General question answering and conversational use. |
-| UC-002 | Summarization | Summarizing documents, meetings, or messages. |
-| UC-003 | Translation | Translation between languages. |
-| UC-004 | Content Drafting | Generating drafts for emails, documents, or reports. |
-| UC-005 | Code Generation | Generating code or scripts. |
-| UC-006 | Code Review | Reviewing code for issues and improvements. |
-| UC-009 | Search/RAG | RAG-based retrieval and question answering. |
-| UC-010 | Agentic Automation | Autonomous or semi-autonomous agents executing actions. |
+| UC-001 | Q&A General | Respuesta a preguntas generales y uso conversacional. |
+| UC-002 | Resumen | Resumir documentos, reuniones o mensajes. |
+| UC-003 | Traducción | Traducción entre idiomas. |
+| UC-004 | Redacción de Contenido | Generar borradores para correos, documentos o reportes. |
+| UC-005 | Generación de Código | Generar código o scripts. |
+| UC-006 | Revisión de Código | Revisar código para problemas y mejoras. |
+| UC-009 | Búsqueda/RAG | Recuperación basada en RAG y respuesta a preguntas. |
+| UC-010 | Automatización Agéntica | Agentes autónomos o semi-autónomos ejecutando acciones. |
 
-See [Dictionary](./05-dictionary.md) for the complete list of 30 UC codes.
+Consulte [Diccionario](./05-dictionary.md) para la lista completa de 30 códigos UC.
 
-### DT: Data Type
+### DT: Tipo de Datos
 
-Categorizes the sensitivity and classification of data involved. **Select one or more.**
+Categoriza la sensibilidad y clasificación de datos involucrados. **Seleccione uno o más.**
 
-| Code | Label | Definition |
+| Código | Etiqueta | Definición |
 | --- | --- | --- |
-| DT-001 | Public | Data that is publicly available and intended for public disclosure. |
-| DT-002 | Internal | Non-public internal business data. |
-| DT-003 | Confidential | Highly sensitive internal data requiring restricted access. |
-| DT-004 | Personal Data | Personal data as defined by applicable privacy laws. |
-| DT-005 | Sensitive Personal Data | Special category/sensitive personal data. |
-| DT-006 | Credentials | Authentication secrets and credentials. |
-| DT-007 | Source Code | Source code and related artifacts. |
-| DT-008 | Customer Data | Customer-provided or customer-related data. |
-| DT-009 | Operational Logs | Operational or system logs used for monitoring and troubleshooting. |
-| DT-010 | Security Telemetry | Security telemetry such as alerts and detections. |
+| DT-001 | Público | Datos públicamente disponibles y destinados a divulgación pública. |
+| DT-002 | Interno | Datos de negocio internos no públicos. |
+| DT-003 | Confidencial | Datos internos altamente sensibles que requieren acceso restringido. |
+| DT-004 | Datos Personales | Datos personales según lo definido por leyes de privacidad aplicables. |
+| DT-005 | Datos Personales Sensibles | Datos personales de categoría especial/sensible. |
+| DT-006 | Credenciales | Secretos de autenticación y credenciales. |
+| DT-007 | Código Fuente | Código fuente y artefactos relacionados. |
+| DT-008 | Datos de Cliente | Datos proporcionados por clientes o relacionados con clientes. |
+| DT-009 | Registros Operacionales | Registros operacionales o del sistema usados para monitoreo y resolución de problemas. |
+| DT-010 | Telemetría de Seguridad | Telemetría de seguridad como alertas y detecciones. |
 
-### CH: Channel
+### CH: Canal
 
-Categorizes how users access or interact with the AI. **Select one or more.**
+Categoriza cómo los usuarios acceden o interactúan con la IA. **Seleccione uno o más.**
 
-| Code | Label | Definition |
+| Código | Etiqueta | Definición |
 | --- | --- | --- |
-| CH-001 | Web UI | Use via a web user interface. |
-| CH-002 | API | Use via programmatic API integration. |
-| CH-003 | IDE Plugin | Use via IDE/editor plugin. |
-| CH-004 | ChatOps | Use via chat platforms (Slack/Teams) integrations. |
-| CH-005 | Desktop App | Use via native desktop application. |
-| CH-006 | Mobile App | Use via native mobile application. |
-| CH-007 | Email | Use via email interface or email-based automation. |
-| CH-008 | Command Line | Use via command-line interface. |
+| CH-001 | UI Web | Uso vía interfaz de usuario web. |
+| CH-002 | API | Uso vía integración programática de API. |
+| CH-003 | Plugin de IDE | Uso vía plugin de IDE/editor. |
+| CH-004 | ChatOps | Uso vía integraciones de plataformas de chat (Slack/Teams). |
+| CH-005 | App de Escritorio | Uso vía aplicación nativa de escritorio. |
+| CH-006 | App Móvil | Uso vía aplicación nativa móvil. |
+| CH-007 | Correo Electrónico | Uso vía interfaz de correo electrónico o automatización basada en correo. |
+| CH-008 | Línea de Comandos | Uso vía interfaz de línea de comandos. |
 
-### IM: Integration Mode
+### IM: Modo de Integración
 
-Categorizes how AI is integrated into enterprise systems. **Select exactly one.**
+Categoriza cómo la IA está integrada en sistemas empresariales. **Seleccione exactamente uno.**
 
-| Code | Label | Definition |
+| Código | Etiqueta | Definición |
 | --- | --- | --- |
-| IM-001 | Standalone | Used standalone without integration into enterprise systems. |
-| IM-002 | SaaS Integrated | SaaS application integrates AI features. |
-| IM-003 | Enterprise App Embedded | AI embedded into internal enterprise applications. |
-| IM-004 | RPA/Workflow | AI invoked within workflow automation or RPA. |
-| IM-005 | On-prem / Private | AI hosted in private/on-prem environment. |
-| IM-006 | Managed Service | Use via managed service with enterprise controls. |
-| IM-007 | Shadow / Unmanaged | Use outside of approved governance controls. |
+| IM-001 | Independiente | Usada de forma independiente sin integración en sistemas empresariales. |
+| IM-002 | SaaS Integrado | Aplicación SaaS integra características de IA. |
+| IM-003 | App Empresarial Embebida | IA embebida en aplicaciones empresariales internas. |
+| IM-004 | RPA/Workflow | IA invocada dentro de automatización de workflow o RPA. |
+| IM-005 | On-prem / Privado | IA alojada en entorno privado/on-prem. |
+| IM-006 | Servicio Gestionado | Uso vía servicio gestionado con controles empresariales. |
+| IM-007 | Shadow / No Gestionado | Uso fuera de controles de gobernanza aprobados. |
 
-### RS: Risk Surface
+### RS: Superficie de Riesgo
 
-Categorizes the types of risks associated with the AI use. **Select one or more.**
+Categoriza los tipos de riesgos asociados con el uso de IA. **Seleccione uno o más.**
 
-| Code | Label | Definition |
+| Código | Etiqueta | Definición |
 | --- | --- | --- |
-| RS-001 | Data Leakage | Risk of unintended data disclosure. |
-| RS-002 | Security Abuse | Risk that the system is abused for malicious purposes. |
-| RS-003 | Compliance Breach | Risk of violating laws/regulations/policies. |
-| RS-004 | IP Infringement | Risk of infringing copyright/patent/trade secrets. |
-| RS-005 | Model Misuse | Risk from inappropriate model use or over-reliance. |
-| RS-006 | Bias/Fairness | Risk of unfair or biased outcomes. |
-| RS-007 | Safety | Risk of harmful content or unsafe recommendations. |
-| RS-008 | Third-party Risk | Vendors, sub-processors, and model provider risks. |
+| RS-001 | Fuga de Datos | Riesgo de divulgación no intencional de datos. |
+| RS-002 | Abuso de Seguridad | Riesgo de que el sistema sea abusado para propósitos maliciosos. |
+| RS-003 | Violación de Cumplimiento | Riesgo de violar leyes/regulaciones/políticas. |
+| RS-004 | Infracción de PI | Riesgo de infringir derechos de autor/patente/secretos comerciales. |
+| RS-005 | Mal Uso de Modelo | Riesgo de uso inapropiado de modelo o dependencia excesiva. |
+| RS-006 | Sesgo/Equidad | Riesgo de resultados injustos o sesgados. |
+| RS-007 | Seguridad | Riesgo de contenido dañino o recomendaciones inseguras. |
+| RS-008 | Riesgo de Terceros | Riesgos de proveedores, subprocesadores y proveedores de modelos. |
 
-### OB: Outcome / Benefit
+### OB: Resultado / Beneficio
 
-Categorizes the expected outcomes or benefits from AI use. **Optional; select zero or more.**
+Categoriza los resultados o beneficios esperados del uso de IA. **Opcional; seleccione cero o más.**
 
-| Code | Label | Definition |
+| Código | Etiqueta | Definición |
 | --- | --- | --- |
-| OB-001 | Efficiency | Improves time/cost efficiency. |
-| OB-002 | Quality | Improves quality/accuracy of outputs. |
-| OB-003 | Revenue | Contributes to revenue growth. |
-| OB-004 | Risk Reduction | Reduces operational/security/compliance risk. |
-| OB-005 | Innovation | Enables new capabilities or innovations. |
-| OB-006 | Customer Satisfaction | Improves customer satisfaction. |
-| OB-007 | Employee Experience | Improves employee experience. |
+| OB-001 | Eficiencia | Mejora eficiencia de tiempo/costo. |
+| OB-002 | Calidad | Mejora calidad/precisión de salidas. |
+| OB-003 | Ingresos | Contribuye al crecimiento de ingresos. |
+| OB-004 | Reducción de Riesgo | Reduce riesgo operacional/de seguridad/de cumplimiento. |
+| OB-005 | Innovación | Habilita nuevas capacidades o innovaciones. |
+| OB-006 | Satisfacción del Cliente | Mejora satisfacción del cliente. |
+| OB-007 | Experiencia del Empleado | Mejora experiencia del empleado. |
 
-### EV: Evidence Type
+### EV: Tipo de Evidencia
 
-Categorizes the types of evidence required or collected. **Select one or more.**
+Categoriza los tipos de evidencia requerida o recopilada. **Seleccione uno o más.**
 
-| Code | Label | Definition |
+| Código | Etiqueta | Definición |
 | --- | --- | --- |
-| EV-001 | Request Record | Evidence that an AI use/service was requested and described. |
-| EV-002 | Review/Approval Record | Evidence that a review/approval was performed. |
-| EV-003 | Exception Record | Evidence that an exception was granted and tracked. |
-| EV-004 | Renewal/Re-evaluation Record | Evidence that renewal or re-evaluation occurred. |
-| EV-005 | Change Log Entry | Evidence of changes and their approvals. |
-| EV-006 | Integrity Proof | Evidence of integrity (hash, signature, WORM). |
-| EV-007 | Access Log | Evidence of access control and access history. |
-| EV-008 | Model/Service Inventory | Inventory record of models/services used. |
-| EV-009 | Risk Assessment | Documented risk assessment for the use/service. |
-| EV-010 | Control Mapping | Control mapping evidence to external frameworks. |
-| EV-011 | Training/Guidance | Evidence of training or guidance provided to users. |
-| EV-012 | Monitoring Evidence | Evidence of monitoring and ongoing oversight. |
-| EV-013 | Incident Record | Evidence of incident handling related to AI use. |
-| EV-014 | Third-party Assessment | Evidence of vendor or third-party assessment. |
-| EV-015 | Attestation/Sign-off | Formal attestation or sign-off record. |
+| EV-001 | Registro de Solicitud | Evidencia de que un uso/servicio de IA fue solicitado y descrito. |
+| EV-002 | Registro de Revisión/Aprobación | Evidencia de que una revisión/aprobación fue realizada. |
+| EV-003 | Registro de Excepción | Evidencia de que una excepción fue otorgada y rastreada. |
+| EV-004 | Registro de Renovación/Reevaluación | Evidencia de que renovación o reevaluación ocurrió. |
+| EV-005 | Entrada de Registro de Cambios | Evidencia de cambios y sus aprobaciones. |
+| EV-006 | Prueba de Integridad | Evidencia de integridad (hash, firma, WORM). |
+| EV-007 | Registro de Acceso | Evidencia de control de acceso e historial de acceso. |
+| EV-008 | Inventario de Modelo/Servicio | Registro de inventario de modelos/servicios usados. |
+| EV-009 | Evaluación de Riesgos | Evaluación de riesgos documentada para el uso/servicio. |
+| EV-010 | Mapeo de Controles | Evidencia de mapeo de controles a marcos externos. |
+| EV-011 | Capacitación/Guía | Evidencia de capacitación o guía proporcionada a usuarios. |
+| EV-012 | Evidencia de Monitoreo | Evidencia de monitoreo y supervisión continua. |
+| EV-013 | Registro de Incidente | Evidencia de manejo de incidentes relacionados con uso de IA. |
+| EV-014 | Evaluación de Terceros | Evidencia de evaluación de proveedor o tercero. |
+| EV-015 | Atestación/Firma | Registro de atestación o firma formal. |
 
-## How to Use
+## Cómo Usar
 
-### Relationship with Evidence
+### Relación con Evidencia
 
-Each Evidence (EV) document references codes from multiple dimensions to classify the AI system or use case being documented. The 8-dimension classification enables:
+Cada documento de Evidencia (EV) referencia códigos de múltiples dimensiones para clasificar el sistema o caso de uso de IA que se documenta. La clasificación de 8 dimensiones permite:
 
-- **Consistent categorization** across the organization
-- **Risk-based filtering** by dimension values
-- **Framework mapping** via Coverage Map
+- **Categorización consistente** en la organización
+- **Filtrado basado en riesgo** por valores de dimensión
+- **Mapeo de marcos** vía Mapa de Cobertura
 
-### Referencing the Dictionary
+### Referenciando el Diccionario
 
-For complete code definitions including scope notes and examples, refer to the [Dictionary](./05-dictionary.md).
+Para definiciones completas de códigos incluyendo notas de alcance y ejemplos, consulte el [Diccionario](./05-dictionary.md).
 
-### Example Classification
+### Ejemplo de Clasificación
 
 ```
-FS: FS-001 (End-user Productivity)
-UC: UC-001 (General Q&A), UC-002 (Summarization)
-DT: DT-002 (Internal), DT-004 (Personal Data)
-CH: CH-001 (Web UI)
-IM: IM-002 (SaaS Integrated)
-RS: RS-001 (Data Leakage), RS-003 (Compliance Breach)
-OB: OB-001 (Efficiency)
-EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
+FS: FS-001 (Productividad de Usuario Final)
+UC: UC-001 (Q&A General), UC-002 (Resumen)
+DT: DT-002 (Interno), DT-004 (Datos Personales)
+CH: CH-001 (UI Web)
+IM: IM-002 (SaaS Integrado)
+RS: RS-001 (Fuga de Datos), RS-003 (Violación de Cumplimiento)
+OB: OB-001 (Eficiencia)
+EV: EV-001 (Registro de Solicitud), EV-002 (Registro de Revisión/Aprobación)
 ```
 
-## SSOT Reference
+## Referencia SSOT
 
-!!! info "Source of Truth"
-    The authoritative definition is `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+!!! info "Fuente de Verdad"
+    La definición autoritativa es `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Esta página es explicativa. Consulte [Guía de Localización](../../contributing/localization.md) para flujos de trabajo de actualización.
 
-## Related Pages
+## Páginas Relacionadas
 
-- [Codes](./04-codes.md) - Code format, naming conventions, and lifecycle
-- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
-- [Evidence Templates](./06-ev-template.md) - How to use codes in evidence
-- [Responsibility Boundary](../../governance/responsibility-boundary.md) - Non-overclaim statement
+- [Códigos](./04-codes.md) - Formato de código, convenciones de nomenclatura y ciclo de vida
+- [Diccionario](./05-dictionary.md) - Listados completos de códigos y definiciones de columnas
+- [Plantillas de Evidencia](./06-ev-template.md) - Cómo usar códigos en evidencia
+- [Límite de Responsabilidad](../../governance/responsibility-boundary.md) - Declaración de no sobre-reclamación
