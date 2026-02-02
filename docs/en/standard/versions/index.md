@@ -31,7 +31,7 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 
     ```bash
     # Download all assets for a specific version
-    VERSION=v0.0.1
+    VERSION=v0.0.2
     BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
     curl -LO "${BASE_URL}/trust_package.pdf"
@@ -134,7 +134,7 @@ All release assets include cryptographically signed build provenance attestation
 
 ```bash
 # Download release assets using GitHub CLI
-VERSION=v0.0.1
+VERSION=v0.0.2
 gh release download "$VERSION" --repo billyrise/aimo-standard
 
 # Verify attestation for each asset
