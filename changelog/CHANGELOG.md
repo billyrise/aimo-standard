@@ -9,6 +9,17 @@ This changelog follows [Semantic Versioning](https://semver.org/) principles:
 
 ---
 
+## [0.0.3] - 2026-02-02
+
+### Summary
+Complete translations for all 8 new languages (312 files translated).
+
+### Changed
+- Translated all 39 documentation files to Spanish, French, German, Portuguese, Italian, Simplified Chinese, Traditional Chinese, and Korean
+- Total: 312 files translated (39 files × 8 languages)
+
+---
+
 ## [0.0.2] - 2026-02-02
 
 ### Summary

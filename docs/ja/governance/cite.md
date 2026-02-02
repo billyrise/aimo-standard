@@ -25,20 +25,20 @@ GitHub はこのファイルから引用情報を自動表示する。
   author = {{AIMO Standard Contributors}},
   title = {AIMO Standard},
   url = {https://standard.aimoaas.com/},
-  version = {0.0.2},
+  version = {0.0.3},
   year = {2026}
 }
 ```
 
 ### APA スタイル
 
-> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.0.2) [Software]. https://standard.aimoaas.com/
+> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.0.3) [Software]. https://standard.aimoaas.com/
 
 ## バージョン固有の引用
 
 特定バージョンを引用する場合：
 
-> AIMO Standard Contributors. (2026). AIMO Standard v0.0.2. https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2
+> AIMO Standard Contributors. (2026). AIMO Standard v0.0.3. https://github.com/billyrise/aimo-standard/releases/tag/v0.0.3
 
 ## 監査ドキュメント
 
@@ -61,7 +61,7 @@ GitHub はこのファイルから引用情報を自動表示する。
 | 用途 | URL |
 | ---- | --- |
 | 最新ドキュメント | https://standard.aimoaas.com/latest/ |
-| 特定バージョン | https://standard.aimoaas.com/0.0.2/ |
+| 特定バージョン | https://standard.aimoaas.com/0.0.3/ |
 | GitHub リリース | https://github.com/billyrise/aimo-standard/releases |
 
 !!! note "サイトパスのフォーマット"
