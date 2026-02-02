@@ -80,6 +80,10 @@ v1.0.0: FS-007 제거 (status: removed)
 
 ## 변경 이력
 
+### 미배포 (네임스페이스 및 규범 수정)
+
+**요약:** EV 코드 충돌 해결, EV(인덱스) vs Evidence Pack(payload) 명확화, /dev 감사 오인용 방지 강화. Evidence Pack 문서 유형: EP-01..EP-07; Taxonomy EV는 이벤트 유형으로 유지. EV↔Evidence Pack 규범적 관계 문서화. /dev 배너 및 canonical 추가.
+
 ### 버전 0.0.1 (2026-02-02)
 
 **요약:** 8차원 코드 시스템, 증거 팩 템플릿 및 포괄적인 거버넌스 문서가 포함된 AIMO 표준 초기 릴리스.

@@ -9,7 +9,7 @@ description: AIMO 증거 번들 구조. AI 거버넌스 컴플라이언스 및 �
 ## 번들 구조 및 명명
 
 - **번들 루트 명명**: `{org}_{system}_{period}_{version}`과 같은 일관된 패턴을 사용합니다 (예: `acme_ai-usage_2026-Q1_v1`).
-- **필수 파일**: [EV 템플릿](../standard/current/06-ev-template.md)에 맞춘 최소 하나의 증거(EV) 세트, [딕셔너리](../standard/current/05-dictionary.md), 간략한 **요약**(번들의 경영진 요약), 번들 또는 그 내용의 변경에 대한 **변경 로그**(또는 참조).
+- **필수 파일**: [Evidence Pack 템플릿(EP)](../standard/current/06-ev-template.md)에 맞춘 최소 하나의 증거(EV) 세트, [딕셔너리](../standard/current/05-dictionary.md), 간략한 **요약**(번들의 경영진 요약), 번들 또는 그 내용의 변경에 대한 **변경 로그**(또는 참조).
 - **선택적 첨부**: 로그, 검토 기록, 예외 승인, 갱신 기록; 일관된 명명을 유지하고 주요 EV/딕셔너리에서 참조 가능하게 합니다.
 
 ## 목차 (TOC)
@@ -24,6 +24,10 @@ description: AIMO 증거 번들 구조. AI 거버넌스 컴플라이언스 및 �
 | 검토/승인 | 검토 레코드 | 해당시 | 검토 및 승인 결과 | id, timestamp, actor/role, decision, references | — |
 | 예외 | 예외 레코드 | 해당시 | 보완 통제와 만료가 있는 예외 | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
 | 갱신 | 갱신 레코드 | 해당시 | 재평가 및 갱신 | id, timestamp, actor/role, decision, references to prior exception/EV | — |
+
+## 규범적 관계: EV 레코드(인덱스)와 Evidence Pack(payload)
+
+이중 구축 및 감사 모호성을 피하기 위해 다음은 **규범**입니다. (1) EV 레코드(JSON)는 **인덱스/원장**(기계 검증 가능한 추적성)입니다. (2) Evidence Pack 파일(EP-01..EP-07 및 매니페스트)은 **payload**입니다. (3) EV 레코드는 `evidence_file_ids`(예: EP-01) 및/또는 해시로 payload를 참조하는 것이 좋습니다(SHOULD). [Validator](../validator/index.md)는 참조 무결성을 검사합니다. (4) **최소 제출 세트**: EV JSON + Dictionary + Summary + Change Log + Evidence Pack(zip). 문서 유형 EP-01..EP-07은 [Evidence Pack 템플릿](../standard/current/06-ev-template.md)을 참조하세요.
 
 ## 추적성
 

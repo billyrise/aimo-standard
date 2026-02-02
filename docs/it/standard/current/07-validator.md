@@ -24,7 +24,7 @@ Controllare che tutti i campi obbligatori siano presenti:
 | --- | --- |
 | Manifest Evidence Pack | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
 | Oggetto Codes | FS, UC, DT, CH, IM, RS, EV (OB opzionale) |
-| Voce File Evidence | file_id, filename, ev_type, title |
+| Voce File Evidence | file_id (EP-01..EP-07), filename, title (ev_type / ev_codes opzionale) |
 
 ### 2. Validazione Codici Dimensione
 

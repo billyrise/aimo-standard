@@ -24,7 +24,7 @@ AIMO 驗證器確保證據包和相關人工產物符合 AIMO 標準結構描述
 | --- | --- |
 | 證據包清單 | pack_id、pack_version、taxonomy_version、created_date、last_updated、codes、evidence_files |
 | Codes 物件 | FS、UC、DT、CH、IM、RS、EV（OB 選用） |
-| 證據檔案條目 | file_id、filename、ev_type、title |
+| 證據檔案條目 | file_id（EP-01..EP-07）、filename、title（ev_type / ev_codes 可選） |
 
 ### 2. 維度代碼驗證
 

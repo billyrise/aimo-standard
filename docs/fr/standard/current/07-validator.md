@@ -24,7 +24,7 @@ Vérifier que tous les champs obligatoires sont présents :
 | --- | --- |
 | Manifeste du pack de preuves | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
 | Objet codes | FS, UC, DT, CH, IM, RS, EV (OB optionnel) |
-| Entrée de fichier de preuve | file_id, filename, ev_type, title |
+| Entrée de fichier de preuve | file_id (EP-01..EP-07), filename, title (ev_type / ev_codes optionnel) |
 
 ### 2. Validation des codes de dimension
 

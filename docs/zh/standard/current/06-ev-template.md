@@ -2,13 +2,17 @@
 description: AIMO 证据包模板和使用指南。用于记录AI治理证据的结构，包括索引管理和审计就绪格式。
 ---
 
-# EV 模板
+# Evidence Pack 模板（EP）
 
 本节定义证据包模板及其使用。证据包是一组文档的集合，用于展示AI系统的治理和合规。
 
+## 命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Evidence Type（EV）
+
+> **重要**：**EP-01..EP-07** 表示*文档类型*（证据包文件类型）。**EV-001、EV-002、…** 在[分类法](./03-taxonomy.md)中表示*事件/证据类型*（请求记录、审查/批准记录等）。请勿混用代码：EP 用于包结构，EV 用于生命周期证据分类。
+
 ## 关键原则：索引和差异管理
 
-> **重要**：重要的不是单个提交的内容，而是证据项之间的**索引**和**差异管理**。
+重要的不仅是单个提交的内容，而是证据项之间的**索引**和**差异管理**。
 
 证据包作为将AI系统链接到其治理工件的索引。其价值在于：
 
@@ -16,19 +20,19 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 2. **可审计性**：使审计师能够导航证据结构
 3. **可维护性**：跟踪什么变了、何时变的、为什么变
 
-## MVP 证据集（EV-01 到 EV-07）
+## MVP 证据集（EP-01 到 EP-07）
 
-以下七种证据类型构成展示AI治理的**最小可行集**：
+以下七种 **Evidence Pack 文档类型**（EP）构成展示AI治理的**最小可行集**。每种为文档模板；分类法 **EV** 代码（请求记录、审查/批准等）在包内及 `codes.EV` 中用于对*事件*证据进行分类。
 
-| ID | 证据类型 | 代码 | 目的 |
-| --- | --- | --- | --- |
-| EV-01 | 系统概述 | EV-001 | 记录AI系统及其目的 |
-| EV-02 | 数据流 | EV-002 | 映射系统中的数据移动 |
-| EV-03 | 清单 | EV-003 | 维护AI资产目录 |
-| EV-04 | 风险与影响评估 | EV-004 | 评估和记录风险 |
-| EV-05 | 控制与批准 | EV-005 | 记录控制和批准记录 |
-| EV-06 | 日志与监控 | EV-006 | 定义日志和监控设置 |
-| EV-07 | 事件与例外 | EV-007 | 跟踪事件和例外 |
+| ID | 文档类型 | 目的 |
+| --- | --- | --- |
+| EP-01 | 系统概述 | 记录AI系统及其目的 |
+| EP-02 | 数据流 | 映射系统中的数据移动 |
+| EP-03 | 清单 | 维护AI资产目录 |
+| EP-04 | 风险与影响评估 | 评估和记录风险 |
+| EP-05 | 控制与批准 | 记录控制和批准记录 |
+| EP-06 | 日志与监控 | 定义日志和监控设置 |
+| EP-07 | 事件与例外 | 跟踪事件和例外 |
 
 ## 证据包清单
 
@@ -47,7 +51,7 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 
 ### AIMO 代码（8个维度）
 
-每个证据包必须包含所有8个维度的代码：
+每个证据包必须包含所有8个维度的代码。**EV** 维度列出适用于本包的*分类法*证据类型（如请求记录、审查/批准），而非文档类型代码。文档类型由 `evidence_files[].file_id`（EP-01..EP-07）给出。
 
 ```json
 {
@@ -59,20 +63,21 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007"]
+    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
   }
 }
 ```
 
 ### 证据文件列表
 
+每条记录通过 **file_id**（EP-01..EP-07）标识包内文档。可选 **ev_codes** 可列出该文档支持的分类法 EV 代码（EV-xxx）。
+
 ```json
 {
   "evidence_files": [
     {
-      "file_id": "EV-01",
-      "filename": "EV-01_system_overview.md",
-      "ev_type": "EV-001",
+      "file_id": "EP-01",
+      "filename": "EP-01_system_overview.md",
       "title": "System Overview",
       "required": true
     }
@@ -93,7 +98,7 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 ### 模板头部示例
 
 ```markdown
-# EV-01: 系统概述
+# EP-01: 系统概述
 
 ---
 
@@ -121,22 +126,22 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 | **IM** | `IM-001` | 独立 |
 | **RS** | `RS-001` | 数据泄露 |
 | **OB** | `OB-001` | 效率 |
-| **EV** | `EV-001` | 系统概述 |
+| **EV** | `EV-001`, `EV-002` | 请求记录、审查/批准记录 |
 ```
 
 ## 下载
 
 ### 模板
 
-证据包模板可在以下位置获取：
+证据包模板在仓库中提供。清单中请使用 **file_id** EP-01..EP-07；文件名可为 EP-01_... 或兼容的 EV-01_...。
 
-- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md`
-- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md`
-- `source_pack/04_evidence_pack/templates/EV-03_inventory.md`
-- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md`
-- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md`
-- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md`
-- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md`
+- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
+- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
+- `source_pack/04_evidence_pack/templates/EV-03_inventory.md` → file_id **EP-03**
+- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md` → file_id **EP-04**
+- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md` → file_id **EP-05**
+- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
+- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
 
 ### 模式和示例
 

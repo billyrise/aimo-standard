@@ -2,13 +2,17 @@
 description: AIMO Evidence Pack templates and usage guide. Structure for documenting AI governance evidence with index management and audit-ready formatting.
 ---
 
-# EV Template
+# Evidence Pack Template (EP)
 
 This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.
 
+## Namespace: Evidence Pack document types (EP) vs Taxonomy Evidence Type (EV)
+
+> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **EV-001, EV-002, …** in the [Taxonomy](./03-taxonomy.md) identify *event/evidence types* (Request Record, Review/Approval, Exception, etc.). Codes must not be mixed: use EP for pack structure and EV for lifecycle evidence classification.
+
 ## Key Principle: Index and Diff Management
 
-> **Important**: What matters is not the content of individual submissions, but the **index** and **diff management** across evidence items.
+What matters is not the content of individual submissions alone, but the **index** and **diff management** across evidence items.
 
 An Evidence Pack serves as an index linking AI systems to their governance artifacts. The value lies in:
 
@@ -16,19 +20,19 @@ An Evidence Pack serves as an index linking AI systems to their governance artif
 2. **Auditability**: Enabling auditors to navigate the evidence structure
 3. **Maintainability**: Tracking what changed, when, and why
 
-## MVP Evidence Set (EV-01 to EV-07)
+## MVP Evidence Set (EP-01 to EP-07)
 
-The following seven evidence types form the **minimum viable set** for demonstrating AI governance:
+The following seven **Evidence Pack document types** (EP) form the **minimum viable set** for demonstrating AI governance. Each is a document template; taxonomy **EV** codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in `codes.EV` to classify *event* evidence.
 
-| ID | Evidence Type | Code | Purpose |
-| --- | --- | --- | --- |
-| EV-01 | System Overview | EV-001 | Document the AI system and its purpose |
-| EV-02 | Data Flow | EV-002 | Map data movement through the system |
-| EV-03 | Inventory | EV-003 | Maintain catalog of AI assets |
-| EV-04 | Risk & Impact Assessment | EV-004 | Assess and document risks |
-| EV-05 | Controls & Approvals | EV-005 | Document controls and approval records |
-| EV-06 | Logging & Monitoring | EV-006 | Define logging and monitoring setup |
-| EV-07 | Incident & Exception | EV-007 | Track incidents and exceptions |
+| ID | Document Type | Purpose |
+| --- | --- | --- |
+| EP-01 | System Overview | Document the AI system and its purpose |
+| EP-02 | Data Flow | Map data movement through the system |
+| EP-03 | Inventory | Maintain catalog of AI assets |
+| EP-04 | Risk & Impact Assessment | Assess and document risks |
+| EP-05 | Controls & Approvals | Document controls and approval records |
+| EP-06 | Logging & Monitoring | Define logging and monitoring setup |
+| EP-07 | Incident & Exception | Track incidents and exceptions |
 
 ## Evidence Pack Manifest
 
@@ -47,7 +51,7 @@ Each Evidence Pack MUST include a manifest file containing:
 
 ### AIMO Codes (8 Dimensions)
 
-Each Evidence Pack MUST include codes from all 8 dimensions:
+Each Evidence Pack MUST include codes from all 8 dimensions. The **EV** dimension lists *taxonomy* Evidence Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07).
 
 ```json
 {
@@ -59,20 +63,21 @@ Each Evidence Pack MUST include codes from all 8 dimensions:
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007"]
+    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
   }
 }
 ```
 
 ### Evidence Files List
 
+Each entry identifies a document in the pack by **file_id** (EP-01..EP-07). Optional **ev_codes** may list taxonomy EV codes (EV-xxx) that the document supports.
+
 ```json
 {
   "evidence_files": [
     {
-      "file_id": "EV-01",
-      "filename": "EV-01_system_overview.md",
-      "ev_type": "EV-001",
+      "file_id": "EP-01",
+      "filename": "EP-01_system_overview.md",
       "title": "System Overview",
       "required": true
     }
@@ -93,7 +98,7 @@ Each evidence template includes:
 ### Template Header Example
 
 ```markdown
-# EV-01: System Overview
+# EP-01: System Overview
 
 ---
 
@@ -121,22 +126,22 @@ Each evidence template includes:
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Data Leakage |
 | **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001` | System Overview |
+| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
 ```
 
 ## Downloads
 
 ### Templates
 
-Evidence Pack templates are available in:
+Evidence Pack templates are available in the repository. Use **file_id** EP-01..EP-07 in the manifest; filenames may be EP-01_... or legacy EV-01_... for backward compatibility.
 
-- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md`
-- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md`
-- `source_pack/04_evidence_pack/templates/EV-03_inventory.md`
-- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md`
-- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md`
-- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md`
-- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md`
+- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
+- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
+- `source_pack/04_evidence_pack/templates/EV-03_inventory.md` → file_id **EP-03**
+- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md` → file_id **EP-04**
+- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md` → file_id **EP-05**
+- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
+- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
 
 ### Schemas and Examples
 

@@ -38,7 +38,7 @@ AIMOバリデータは、Evidence Packおよび関連アーティファクトが
 | --- | --- |
 | Evidence Packマニフェスト | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
 | Codesオブジェクト | FS, UC, DT, CH, IM, RS, EV（OBは任意） |
-| Evidence Fileエントリ | file_id, filename, ev_type, title |
+| Evidence Fileエントリ | file_id（EP-01..EP-07）, filename, title（ev_type / ev_codes は任意） |
 
 ### 2. 次元コードバリデーション
 

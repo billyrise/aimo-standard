@@ -80,6 +80,16 @@ Each official release includes:
 
 ## Change History
 
+### Unreleased (namespace and normative fixes)
+
+**Summary:** Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.
+
+#### Changed
+
+- **Evidence Pack document types (EP namespace):** Evidence Pack file types use **EP-01..EP-07** (document type). Taxonomy **EV-001, EV-002, …** remain event/evidence types (Request Record, Review/Approval, etc.). See [Evidence Pack Template](./06-ev-template.md). Schema: `evidence_files[].file_id` pattern is `^EP-\\d{2}$`; `ev_type` is optional.
+- **Normative relationship:** [Evidence Bundle](../../artifacts/evidence-bundle.md) now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.
+- **/dev anti-miscitation:** Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.
+
 ### Version 0.0.1 (2026-02-02)
 
 **Summary:** Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.

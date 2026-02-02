@@ -2,13 +2,17 @@
 description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 및 감사 준비 형식으로 AI 거버넌스 증거를 문서화하기 위한 구조.
 ---
 
-# EV 템플릿
+# Evidence Pack 템플릿 (EP)
 
 이 섹션은 증거 팩 템플릿과 그 사용을 정의합니다. 증거 팩은 AI 시스템에 대한 거버넌스 및 컴플라이언스를 입증하는 문서 모음입니다.
 
+## 네임스페이스: Evidence Pack 문서 유형(EP) vs Taxonomy Evidence Type(EV)
+
+> **중요**: **EP-01..EP-07**은 *문서 유형*(증거 팩 파일 유형)을 나타냅니다. **EV-001, EV-002, …**는 [분류체계](./03-taxonomy.md)에서 *이벤트/증거 유형*(요청 레코드, 검토/승인 레코드 등)을 나타냅니다. 코드를 혼용하지 마세요. EP는 팩 구조, EV는 라이프사이클 증거 분류에 사용합니다.
+
 ## 핵심 원칙: 인덱스 및 차이 관리
 
-> **중요**: 중요한 것은 개별 제출물의 내용이 아니라 증거 항목 전반에 걸친 **인덱스** 및 **차이 관리**입니다.
+중요한 것은 개별 제출물의 내용만이 아니라 증거 항목 전반에 걸친 **인덱스** 및 **차이 관리**입니다.
 
 증거 팩은 AI 시스템을 거버넌스 산출물에 연결하는 인덱스 역할을 합니다. 가치는 다음에 있습니다:
 
@@ -16,19 +20,19 @@ description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 �
 2. **감사 가능성**: 감사자가 증거 구조를 탐색할 수 있게 함
 3. **유지 관리 가능성**: 무엇이 언제 왜 변경되었는지 추적
 
-## MVP 증거 세트 (EV-01 ~ EV-07)
+## MVP 증거 세트 (EP-01 ~ EP-07)
 
-다음 7가지 증거 유형이 AI 거버넌스를 입증하기 위한 **최소 실행 가능 세트**를 형성합니다:
+다음 7가지 **Evidence Pack 문서 유형**(EP)이 AI 거버넌스를 입증하기 위한 **최소 실행 가능 세트**를 형성합니다. 각각은 문서 템플릿이며, 분류체계 **EV** 코드(요청 레코드, 검토/승인 등)는 번들 내 다른 곳과 `codes.EV`에서 *이벤트* 증거 분류에 사용됩니다.
 
-| ID | 증거 유형 | 코드 | 목적 |
-| --- | --- | --- | --- |
-| EV-01 | 시스템 개요 | EV-001 | AI 시스템과 그 목적 문서화 |
-| EV-02 | 데이터 흐름 | EV-002 | 시스템을 통한 데이터 이동 매핑 |
-| EV-03 | 인벤토리 | EV-003 | AI 자산 카탈로그 유지 |
-| EV-04 | 리스크 및 영향 평가 | EV-004 | 리스크 평가 및 문서화 |
-| EV-05 | 통제 및 승인 | EV-005 | 통제 및 승인 레코드 문서화 |
-| EV-06 | 로깅 및 모니터링 | EV-006 | 로깅 및 모니터링 설정 정의 |
-| EV-07 | 인시던트 및 예외 | EV-007 | 인시던트 및 예외 추적 |
+| ID | 문서 유형 | 목적 |
+| --- | --- | --- |
+| EP-01 | 시스템 개요 | AI 시스템과 그 목적 문서화 |
+| EP-02 | 데이터 흐름 | 시스템을 통한 데이터 이동 매핑 |
+| EP-03 | 인벤토리 | AI 자산 카탈로그 유지 |
+| EP-04 | 리스크 및 영향 평가 | 리스크 평가 및 문서화 |
+| EP-05 | 통제 및 승인 | 통제 및 승인 레코드 문서화 |
+| EP-06 | 로깅 및 모니터링 | 로깅 및 모니터링 설정 정의 |
+| EP-07 | 인시던트 및 예외 | 인시던트 및 예외 추적 |
 
 ## 증거 팩 매니페스트
 
@@ -47,7 +51,7 @@ description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 �
 
 ### AIMO 코드 (8개 차원)
 
-각 증거 팩에는 8개 차원 모두의 코드가 포함되어야 합니다(MUST):
+각 증거 팩에는 8개 차원 모두의 코드가 포함되어야 합니다(MUST). **EV** 차원은 이 팩에 적용되는 *분류체계* 증거 유형(예: 요청 레코드, 검토/승인)을 나열합니다. 문서 유형 코드가 아닙니다. 문서 유형은 `evidence_files[].file_id`(EP-01..EP-07)로 지정됩니다.
 
 ```json
 {
@@ -59,20 +63,21 @@ description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 �
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007"]
+    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
   }
 }
 ```
 
 ### 증거 파일 목록
 
+각 항목은 **file_id**(EP-01..EP-07)로 팩 내 문서를 식별합니다. 선택적으로 **ev_codes**에 해당 문서가 지원하는 분류체계 EV 코드(EV-xxx)를 나열할 수 있습니다.
+
 ```json
 {
   "evidence_files": [
     {
-      "file_id": "EV-01",
-      "filename": "EV-01_system_overview.md",
-      "ev_type": "EV-001",
+      "file_id": "EP-01",
+      "filename": "EP-01_system_overview.md",
       "title": "System Overview",
       "required": true
     }
@@ -93,7 +98,7 @@ description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 �
 ### 템플릿 헤더 예시
 
 ```markdown
-# EV-01: 시스템 개요
+# EP-01: 시스템 개요
 
 ---
 
@@ -121,7 +126,7 @@ description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 �
 | **IM** | `IM-001` | 독립형 |
 | **RS** | `RS-001` | 데이터 유출 |
 | **OB** | `OB-001` | 효율성 |
-| **EV** | `EV-001` | 시스템 개요 |
+| **EV** | `EV-001`, `EV-002` | 요청 레코드, 검토/승인 레코드 |
 ```
 
 ## 다운로드
@@ -130,13 +135,15 @@ description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 �
 
 증거 팩 템플릿은 다음에서 이용 가능합니다:
 
-- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md`
-- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md`
-- `source_pack/04_evidence_pack/templates/EV-03_inventory.md`
-- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md`
-- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md`
-- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md`
-- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md`
+매니페스트에서 **file_id** EP-01..EP-07을 사용하세요. 파일명은 EP-01_... 또는 하위 호환용 EV-01_...를 사용할 수 있습니다.
+
+- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
+- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
+- `source_pack/04_evidence_pack/templates/EV-03_inventory.md` → file_id **EP-03**
+- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md` → file_id **EP-04**
+- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md` → file_id **EP-05**
+- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
+- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
 
 ### 스키마 및 예제
 

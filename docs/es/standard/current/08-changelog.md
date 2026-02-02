@@ -80,6 +80,10 @@ Cada release oficial incluye:
 
 ## Historial de Cambios
 
+### No publicado (correcciones de namespace y normativa)
+
+**Resumen:** Resolución de colisión de códigos EV, clarificación de EV (índice) vs Evidence Pack (payload), endurecimiento de /dev frente a citación errónea en auditoría. Tipos de documento del Evidence Pack usan EP-01..EP-07; Taxonomy EV permanece para tipos de evento. Relación normativa EV↔Evidence Pack documentada en Evidence Bundle. Banner y canonical para /dev.
+
 ### Versión 0.0.1 (2026-02-02)
 
 **Resumen:** Release inicial de AIMO Standard con sistema de códigos de 8 dimensiones, plantillas de Paquetes de Evidencia y documentación completa de gobernanza.

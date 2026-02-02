@@ -9,7 +9,7 @@ description: AIMO Evidence Bundle構造。TOC、追跡可能性、AIガバナン
 ## バンドル構造と命名
 
 - **バンドルルート命名**: `{org}_{system}_{period}_{version}` など一貫した形式を用いる（例: `acme_ai-usage_2026-Q1_v1`）。
-- **必須ファイル**: [EV Template](../standard/current/06-ev-template.md) に整合した証跡（EV）セット、[Dictionary](../standard/current/05-dictionary.md)、バンドル概要の **Summary**、およびバンドル・内容の変更を記録する **Change Log**（またはその参照）を少なくとも含める。
+- **必須ファイル**: [Evidence Pack テンプレート（EP）](../standard/current/06-ev-template.md) に整合した証跡（EV）セット、[Dictionary](../standard/current/05-dictionary.md)、バンドル概要の **Summary**、およびバンドル・内容の変更を記録する **Change Log**（またはその参照）を少なくとも含める。
 - **任意添付**: ログ、審査記録、例外承認、更新記録など。命名を統一し、EV/辞書から参照可能にすること。
 
 ## 目次（TOC）
@@ -24,6 +24,17 @@ description: AIMO Evidence Bundle構造。TOC、追跡可能性、AIガバナン
 | Review/Approval | 審査/承認記録 | 該当時 | 審査・承認結果 | id, timestamp, actor/role, decision, references | — |
 | Exception | 例外記録 | 該当時 | 代替統制・有効期限付き例外 | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
 | Renewal | 更新記録 | 該当時 | 再評価・更新 | id, timestamp, actor/role, decision, 先行 exception/EV への参照 | — |
+
+## 規範的関係：EV レコード（索引）と Evidence Pack（ペイロード）
+
+二重構築と監査上の曖昧さを避けるため、以下を**規範**とします。
+
+1. **EV レコード（JSON）**は**索引／台帳**であり、機械検証可能なトレーサビリティを提供します。実施内容（申請・審査・例外・更新・変更）を記録し、安定IDと相互参照を MUST で持ちます。
+2. **Evidence Pack ファイル**（EP-01..EP-07 のドキュメントとマニフェスト）は**ペイロード**であり、索引が参照する人間／ツール可読な証跡です。
+3. **リンク**: EV レコードは `evidence_file_ids`（例：EP-01, EP-02）および／または暗号学的ハッシュでペイロードを参照することを SHOULD とします。[Validator](../validator/index.md) は、これらの参照が存在する場合（例：参照された file_id が Evidence Pack マニフェストに存在し、任意のハッシュが一致すること）に参照整合性をチェックします。
+4. **監査提出の最小セット**: **EV JSON**（root/records）+ **Dictionary** + **Summary** + **Change Log** + **Evidence Pack**（マニフェスト＋ファイル、例：zip）。これら全体が適合の対象となります。
+
+実装者は単一の情報源を維持します。EV 索引がパックを参照し、パックは Taxonomy EV コード（申請記録、審査/承認記録など）の意味を再定義しません。[Evidence Pack テンプレート](../standard/current/06-ev-template.md) で EP-01..EP-07 のドキュメント種別を参照してください。
 
 ## 追跡可能性（Traceability）
 

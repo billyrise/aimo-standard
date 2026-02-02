@@ -80,6 +80,10 @@ v1.0.0: FS-007 移除 (status: removed)
 
 ## 變更歷史
 
+### 未發布（命名空間與規範修正）
+
+**摘要：** 解決 EV 代碼衝突，明確 EV（索引）與 Evidence Pack（payload）關係，強化 /dev 防稽核誤引用。Evidence Pack 文件類型：EP-01..EP-07；Taxonomy EV 保留為事件類型。EV↔Evidence Pack 規範關係已文件化。/dev 增加橫幅與 canonical。
+
 ### 版本 0.0.1 (2026-02-02)
 
 **摘要：**AIMO 標準的初始發布，包含 8 維度代碼系統、證據包範本和全面的治理文件。
