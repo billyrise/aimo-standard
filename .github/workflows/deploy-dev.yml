@@ -84,6 +84,7 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin gh-pages:gh-pages || true
+          git stash --include-untracked || true
           git checkout gh-pages
           
           # Generate redirect HTML pages inline (tooling not available on gh-pages)
@@ -124,6 +125,7 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin gh-pages:gh-pages || true
+          git stash --include-untracked || true
           git checkout gh-pages
           echo "standard.aimoaas.com" > CNAME
           git add CNAME
@@ -141,6 +143,7 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin gh-pages:gh-pages || true
+          git stash --include-untracked || true
           git checkout gh-pages
           
           echo "=== Ensuring root SEO files ==="
