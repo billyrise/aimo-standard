@@ -9,6 +9,41 @@ This changelog follows [Semantic Versioning](https://semver.org/) principles:
 
 ---
 
+## [0.0.2] - 2026-02-02
+
+### Summary
+Add multilingual support for 10 languages with translation freshness tracking system.
+
+### Added
+
+#### Multilingual Support (10 Languages)
+- **English** (en): Canonical source
+- **Japanese** (ja): Existing translation
+- **Spanish** (es): New language
+- **French** (fr): New language
+- **German** (de): New language
+- **Portuguese** (pt): New language
+- **Italian** (it): New language
+- **Simplified Chinese** (zh): New language
+- **Traditional Chinese** (zh-TW): New language
+- **Korean** (ko): New language
+
+#### Translation Tooling
+- `sync_translations.py`: Translation freshness tracking tool
+- `TRANSLATION_SYNC_SPEC.md`: Technical specification for translation workflow
+- Translation metadata in frontmatter for tracking source changes
+- Taxonomy i18n packs for all 10 languages
+
+#### Documentation
+- Updated localization guide with translation sync workflow
+- Extended `lint_i18n.py` to support all 10 languages
+
+### Changed
+- `mkdocs.yml`: Added 8 new language configurations
+- Language selector now shows all 10 languages
+
+---
+
 ## [0.0.1] - 2026-02-02
 
 ### Summary
