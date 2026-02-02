@@ -9,7 +9,7 @@ An **Evidence Bundle** is an audit package: a structured set of artifacts that s
 ## Bundle structure and naming
 
 - **Bundle root naming**: use a consistent pattern such as `{org}_{system}_{period}_{version}` (e.g. `acme_ai-usage_2026-Q1_v1`).
-- **Required files**: at least one Evidence (EV) set aligned with the [EV Template](../standard/current/06-ev-template.md), a [Dictionary](../standard/current/05-dictionary.md), a short **Summary** (executive summary of the bundle), and a **Change Log** (or reference to it) for changes to the bundle or its contents.
+- **Required files**: at least one Evidence (EV) set aligned with the [Evidence Pack Template (EP)](../standard/current/06-ev-template.md), a [Dictionary](../standard/current/05-dictionary.md), a short **Summary** (executive summary of the bundle), and a **Change Log** (or reference to it) for changes to the bundle or its contents.
 - **Optional attachments**: logs, review records, exception approvals, renewal records; keep naming consistent and referrable from the main EV/Dictionary.
 
 ## Table of contents (TOC)
@@ -24,6 +24,17 @@ An **Evidence Bundle** is an audit package: a structured set of artifacts that s
 | Review/Approval | review record(s) | If applicable | Review and approval outcome | id, timestamp, actor/role, decision, references | — |
 | Exception | exception record(s) | If applicable | Exception with compensating controls and expiry | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
 | Renewal | renewal record(s) | If applicable | Re-evaluation and renewal | id, timestamp, actor/role, decision, references to prior exception/EV | — |
+
+## Normative relationship: EV records (index) and Evidence Pack (payload)
+
+To avoid double-build and audit ambiguity, the following is **normative**:
+
+1. **EV records (JSON)** are the **index/ledger**: machine-verifiable traceability. They record what happened (request, review, exception, renewal, change) and MUST carry stable IDs and cross-references.
+2. **Evidence Pack files** (EP-01..EP-07 documents and manifest) are the **payload**: the human- and tool-readable evidence that the index points to.
+3. **Linkage**: EV records SHOULD reference payload via `evidence_file_ids` (e.g. EP-01, EP-02) and/or cryptographic hashes. The [Validator](../validator/index.md) checks referential integrity when these references are present (e.g. every referenced file_id exists in the Evidence Pack manifest and optional hash matches).
+4. **Minimum submission set** for audit: **EV JSON** (root/records) + **Dictionary** + **Summary** + **Change Log** + **Evidence Pack** (manifest + files, e.g. as a zip). All of these together form the conformance surface.
+
+Implementers maintain a single source of truth: the EV index references the pack; the pack does not redefine the meaning of taxonomy EV codes (Request Record, Review/Approval, etc.). See [Evidence Pack Template](../standard/current/06-ev-template.md) for EP-01..EP-07 document types.
 
 ## Traceability
 

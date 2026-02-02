@@ -2,13 +2,17 @@
 description: Plantillas y guía de uso de Paquetes de Evidencia AIMO. Estructura para documentar evidencia de gobernanza de IA con gestión de índice y formato listo para auditoría.
 ---
 
-# Plantilla EV
+# Plantilla Evidence Pack (EP)
 
 Esta sección define las plantillas de Paquetes de Evidencia y su uso. Un Paquete de Evidencia es una colección de documentación que demuestra gobernanza y cumplimiento para un sistema de IA.
 
+## Espacio de nombres: tipos de documento Evidence Pack (EP) vs Taxonomy Evidence Type (EV)
+
+> **Importante**: **EP-01..EP-07** identifican *tipos de documento* (tipos de archivo del Evidence Pack). **EV-001, EV-002, …** en la [Taxonomía](./03-taxonomy.md) identifican *tipos de evento/evidencia* (Registro de Solicitud, Registro de Revisión/Aprobación, etc.). No mezcle códigos: use EP para estructura del pack y EV para clasificación de evidencia del ciclo de vida.
+
 ## Principio Clave: Gestión de Índice y Diff
 
-> **Importante**: Lo que importa no es el contenido de envíos individuales, sino la **gestión de índice** y **diff** a través de elementos de evidencia.
+Lo que importa no es solo el contenido de envíos individuales, sino el **índice** y la **gestión de diff** entre elementos de evidencia.
 
 Un Paquete de Evidencia sirve como índice vinculando sistemas de IA a sus artefactos de gobernanza. El valor radica en:
 
@@ -16,19 +20,19 @@ Un Paquete de Evidencia sirve como índice vinculando sistemas de IA a sus artef
 2. **Auditabilidad**: Permitir a auditores navegar la estructura de evidencia
 3. **Mantenibilidad**: Rastrear qué cambió, cuándo y por qué
 
-## Conjunto Mínimo de Evidencia MVP (EV-01 a EV-07)
+## Conjunto Mínimo de Evidencia MVP (EP-01 a EP-07)
 
-Los siguientes siete tipos de evidencia forman el **conjunto mínimo viable** para demostrar gobernanza de IA:
+Los siguientes siete **tipos de documento Evidence Pack** (EP) forman el **conjunto mínimo viable** para demostrar gobernanza de IA. Cada uno es una plantilla de documento; los códigos **EV** de taxonomía (Registro de Solicitud, Revisión/Aprobación, etc.) se usan en el bundle y en `codes.EV` para clasificar evidencia de *eventos*.
 
-| ID | Tipo de Evidencia | Código | Propósito |
-| --- | --- | --- | --- |
-| EV-01 | Descripción del Sistema | EV-001 | Documentar el sistema de IA y su propósito |
-| EV-02 | Flujo de Datos | EV-002 | Mapear movimiento de datos a través del sistema |
-| EV-03 | Inventario | EV-003 | Mantener catálogo de activos de IA |
-| EV-04 | Evaluación de Riesgo e Impacto | EV-004 | Evaluar y documentar riesgos |
-| EV-05 | Controles y Aprobaciones | EV-005 | Documentar controles y registros de aprobación |
-| EV-06 | Registro y Monitoreo | EV-006 | Definir configuración de registro y monitoreo |
-| EV-07 | Incidente y Excepción | EV-007 | Rastrear incidentes y excepciones |
+| ID | Tipo de documento | Propósito |
+| --- | --- | --- |
+| EP-01 | Descripción del Sistema | Documentar el sistema de IA y su propósito |
+| EP-02 | Flujo de Datos | Mapear movimiento de datos a través del sistema |
+| EP-03 | Inventario | Mantener catálogo de activos de IA |
+| EP-04 | Evaluación de Riesgo e Impacto | Evaluar y documentar riesgos |
+| EP-05 | Controles y Aprobaciones | Documentar controles y registros de aprobación |
+| EP-06 | Registro y Monitoreo | Definir configuración de registro y monitoreo |
+| EP-07 | Incidente y Excepción | Rastrear incidentes y excepciones |
 
 ## Manifiesto del Paquete de Evidencia
 
@@ -47,7 +51,7 @@ Cada Paquete de Evidencia DEBE incluir un archivo de manifiesto que contenga:
 
 ### Códigos AIMO (8 Dimensiones)
 
-Cada Paquete de Evidencia DEBE incluir códigos de las 8 dimensiones:
+Cada Paquete de Evidencia DEBE incluir códigos de las 8 dimensiones. La dimensión **EV** lista los tipos de evidencia de *taxonomía* (p. ej. Registro de Solicitud, Revisión/Aprobación) aplicables a este pack—no códigos de tipo de documento. El tipo de documento viene dado por `evidence_files[].file_id` (EP-01..EP-07).
 
 ```json
 {
@@ -59,20 +63,21 @@ Cada Paquete de Evidencia DEBE incluir códigos de las 8 dimensiones:
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007"]
+    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
   }
 }
 ```
 
 ### Lista de Archivos de Evidencia
 
+Cada entrada identifica un documento del pack por **file_id** (EP-01..EP-07). Opcionalmente **ev_codes** puede listar códigos EV de taxonomía (EV-xxx) que el documento soporta.
+
 ```json
 {
   "evidence_files": [
     {
-      "file_id": "EV-01",
-      "filename": "EV-01_system_overview.md",
-      "ev_type": "EV-001",
+      "file_id": "EP-01",
+      "filename": "EP-01_system_overview.md",
       "title": "System Overview",
       "required": true
     }
@@ -93,7 +98,7 @@ Cada plantilla de evidencia incluye:
 ### Ejemplo de Encabezado de Plantilla
 
 ```markdown
-# EV-01: Descripción del Sistema
+# EP-01: Descripción del Sistema
 
 ---
 
@@ -121,22 +126,22 @@ Cada plantilla de evidencia incluye:
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Data Leakage |
 | **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001` | System Overview |
+| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
 ```
 
 ## Descargas
 
 ### Plantillas
 
-Las plantillas de Paquetes de Evidencia están disponibles en:
+Las plantillas de Evidence Pack están disponibles en el repositorio. Use **file_id** EP-01..EP-07 en el manifiesto; los nombres de archivo pueden ser EP-01_... o legacy EV-01_... por compatibilidad.
 
-- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md`
-- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md`
-- `source_pack/04_evidence_pack/templates/EV-03_inventory.md`
-- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md`
-- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md`
-- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md`
-- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md`
+- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
+- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
+- `source_pack/04_evidence_pack/templates/EV-03_inventory.md` → file_id **EP-03**
+- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md` → file_id **EP-04**
+- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md` → file_id **EP-05**
+- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
+- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
 
 ### Esquemas y Ejemplos
 

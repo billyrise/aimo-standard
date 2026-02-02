@@ -9,7 +9,7 @@ Un **Evidence Bundle** è un pacchetto di audit: un insieme strutturato di artef
 ## Struttura e denominazione del bundle
 
 - **Denominazione radice del bundle**: utilizzare un pattern coerente come `{org}_{system}_{period}_{version}` (es. `acme_ai-usage_2026-Q1_v1`).
-- **File obbligatori**: almeno un set di Evidence (EV) allineato con il [Template EV](../standard/current/06-ev-template.md), un [Dizionario](../standard/current/05-dictionary.md), un breve **Riepilogo** (sintesi esecutiva del bundle) e un **Change Log** (o riferimento ad esso) per le modifiche al bundle o ai suoi contenuti.
+- **File obbligatori**: almeno un set di Evidence (EV) allineato con il [Template Evidence Pack (EP)](../standard/current/06-ev-template.md), un [Dizionario](../standard/current/05-dictionary.md), un breve **Riepilogo** (sintesi esecutiva del bundle) e un **Change Log** (o riferimento ad esso) per le modifiche al bundle o ai suoi contenuti.
 - **Allegati opzionali**: log, record di revisione, approvazioni di eccezioni, record di rinnovo; mantenere una denominazione coerente e referenziabile dall'EV/Dizionario principale.
 
 ## Indice dei contenuti (TOC)
@@ -24,6 +24,10 @@ Un **Evidence Bundle** è un pacchetto di audit: un insieme strutturato di artef
 | Revisione/Approvazione | record di revisione | Se applicabile | Esito della revisione e approvazione | id, timestamp, actor/role, decision, references | — |
 | Eccezione | record di eccezione | Se applicabile | Eccezione con controlli compensativi e scadenza | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
 | Rinnovo | record di rinnovo | Se applicabile | Rivalutazione e rinnovo | id, timestamp, actor/role, decision, references to prior exception/EV | — |
+
+## Relazione normativa: record EV (indice) e Evidence Pack (payload)
+
+Per evitare doppia costruzione e ambiguità in audit, quanto segue è **normativo**: (1) I record EV (JSON) sono l'**indice/ledger** (tracciabilità verificabile da macchina). (2) I file Evidence Pack (EP-01..EP-07 e manifest) sono il **payload**. (3) I record EV DOVREBBERO riferire il payload tramite `evidence_file_ids` (es. EP-01) e/o hash; il [Validator](../validator/index.md) verifica l'integrità referenziale. (4) **Set minimo di sottomissione**: EV JSON + Dictionary + Summary + Change Log + Evidence Pack (zip). Vedi [Template Evidence Pack](../standard/current/06-ev-template.md) per i tipi di documento EP-01..EP-07.
 
 ## Tracciabilità
 

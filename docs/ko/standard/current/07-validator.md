@@ -24,7 +24,7 @@ AIMO 검증기는 증거 팩 및 관련 산출물이 AIMO 표준 스키마 및 �
 | --- | --- |
 | 증거 팩 매니페스트 | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
 | 코드 객체 | FS, UC, DT, CH, IM, RS, EV (OB 선택적) |
-| 증거 파일 항목 | file_id, filename, ev_type, title |
+| 증거 파일 항목 | file_id (EP-01..EP-07), filename, title (ev_type / ev_codes 선택) |
 
 ### 2. 차원 코드 검증
 

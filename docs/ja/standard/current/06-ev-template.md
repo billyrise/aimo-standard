@@ -2,13 +2,17 @@
 description: AIMO Evidence Packテンプレートと使用ガイド。索引管理と監査対応フォーマットでAIガバナンス証跡を文書化するための構造。
 ---
 
-# EVテンプレート
+# Evidence Pack テンプレート（EP）
 
 このセクションでは、Evidence Packテンプレートとその使用方法を定義します。Evidence Packは、AIシステムのガバナンスとコンプライアンスを示すドキュメントのコレクションです。
 
+## 名前空間：Evidence Pack ドキュメント種別（EP）と Taxonomy Evidence Type（EV）
+
+> **重要**: **EP-01..EP-07** は*ドキュメント種別*（Evidence Pack ファイル種別）を表します。**EV-001, EV-002, …** は [タクソノミー](./03-taxonomy.md) における*イベント／証跡種別*（申請記録、審査/承認記録、例外記録など）を表します。コードを混同しないでください。EP はパック構造、EV はライフサイクル証跡の分類に使用します。
+
 ## 重要原則：索引と差分管理
 
-> **重要**: 重要なのは個々の提出物の中身ではなく、証跡項目全体の**索引**と**差分管理**です。
+重要なのは個々の提出物の中身だけでなく、証跡項目全体の**索引**と**差分管理**です。
 
 Evidence Packは、AIシステムをそのガバナンスアーティファクトにリンクする索引として機能します。価値は以下にあります：
 
@@ -16,19 +20,19 @@ Evidence Packは、AIシステムをそのガバナンスアーティファク�
 2. **監査可能性**: 監査人が証跡構造をナビゲートできること
 3. **保守性**: 何が、いつ、なぜ変更されたかの追跡
 
-## MVP証跡セット（EV-01〜EV-07）
+## MVP 証跡セット（EP-01〜EP-07）
 
-以下の7つの証跡種別が、AIガバナンスを示すための**最小限の必要セット**を構成します：
+以下の7つの **Evidence Pack ドキュメント種別**（EP）が、AIガバナンスを示すための**最小限の必要セット**を構成します。各項目はドキュメントテンプレートです。Taxonomy の **EV** コード（申請記録、審査/承認記録など）は、バンドル内の他箇所および `codes.EV` で*イベント*証跡の分類に使用します。
 
-| ID | 証跡種別 | コード | 目的 |
-| --- | --- | --- | --- |
-| EV-01 | システム概要 | EV-001 | AIシステムとその目的の文書化 |
-| EV-02 | データフロー | EV-002 | システムを通じたデータの流れのマッピング |
-| EV-03 | 資産台帳 | EV-003 | AI資産のカタログ維持 |
-| EV-04 | リスク影響評価 | EV-004 | リスクの評価と文書化 |
-| EV-05 | 統制・承認 | EV-005 | 統制と承認記録の文書化 |
-| EV-06 | ログ・監視 | EV-006 | ログと監視の設定定義 |
-| EV-07 | インシデント・例外 | EV-007 | インシデントと例外の追跡 |
+| ID | ドキュメント種別 | 目的 |
+| --- | --- | --- |
+| EP-01 | システム概要 | AIシステムとその目的の文書化 |
+| EP-02 | データフロー | システムを通じたデータの流れのマッピング |
+| EP-03 | 資産台帳 | AI資産のカタログ維持 |
+| EP-04 | リスク影響評価 | リスクの評価と文書化 |
+| EP-05 | 統制・承認 | 統制と承認記録の文書化 |
+| EP-06 | ログ・監視 | ログと監視の設定定義 |
+| EP-07 | インシデント・例外 | インシデントと例外の追跡 |
 
 ## Evidence Packマニフェスト
 
@@ -47,7 +51,7 @@ Evidence Packは、AIシステムをそのガバナンスアーティファク�
 
 ### AIMOコード（8次元）
 
-各Evidence Packには8次元すべてからのコードが必須です：
+各Evidence Packには8次元すべてからのコードが必須です。**EV** 次元は、このパックに該当する*タクソノミー*の証跡種別（例：申請記録、審査/承認記録）を列挙します。ドキュメント種別コードではありません。ドキュメント種別は `evidence_files[].file_id`（EP-01..EP-07）で表します。
 
 ```json
 {
@@ -59,20 +63,21 @@ Evidence Packは、AIシステムをそのガバナンスアーティファク�
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007"]
+    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
   }
 }
 ```
 
 ### 証跡ファイルリスト
 
+各エントリは **file_id**（EP-01..EP-07）でパック内のドキュメントを識別します。任意で **ev_codes** に、そのドキュメントが対応するタクソノミー EV コード（EV-xxx）を列挙できます。
+
 ```json
 {
   "evidence_files": [
     {
-      "file_id": "EV-01",
-      "filename": "EV-01_system_overview.md",
-      "ev_type": "EV-001",
+      "file_id": "EP-01",
+      "filename": "EP-01_system_overview.md",
       "title": "System Overview",
       "required": true
     }
@@ -93,7 +98,7 @@ Evidence Packは、AIシステムをそのガバナンスアーティファク�
 ### テンプレートヘッダー例
 
 ```markdown
-# EV-01: システム概要
+# EP-01: システム概要
 
 ---
 
@@ -121,22 +126,22 @@ Evidence Packは、AIシステムをそのガバナンスアーティファク�
 | **IM** | `IM-001` | 単体利用 |
 | **RS** | `RS-001` | 情報漏えい |
 | **OB** | `OB-001` | 効率化 |
-| **EV** | `EV-001` | システム概要 |
+| **EV** | `EV-001`, `EV-002` | 申請記録、審査/承認記録 |
 ```
 
 ## ダウンロード
 
 ### テンプレート
 
-Evidence Packテンプレートは以下で利用可能です：
+Evidence Packテンプレートはリポジトリ内で利用可能です。マニフェストでは **file_id** に EP-01..EP-07 を使用してください。ファイル名は EP-01_... または後方互換の EV-01_... が利用できます。
 
-- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md`
-- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md`
-- `source_pack/04_evidence_pack/templates/EV-03_inventory.md`
-- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md`
-- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md`
-- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md`
-- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md`
+- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
+- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
+- `source_pack/04_evidence_pack/templates/EV-03_inventory.md` → file_id **EP-03**
+- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md` → file_id **EP-04**
+- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md` → file_id **EP-05**
+- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
+- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
 
 ### スキーマと例
 

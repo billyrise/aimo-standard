@@ -20,57 +20,50 @@
   },
   "evidence_files": [
     {
-      "file_id": "EV-01",
+      "file_id": "EP-01",
       "filename": "EV-01_system_overview.md",
-      "ev_type": "EV-001",
       "title": "System Overview",
       "description": "Overview of the AI system and its purpose",
       "required": true
     },
     {
-      "file_id": "EV-02",
+      "file_id": "EP-02",
       "filename": "EV-02_data_flow.md",
-      "ev_type": "EV-002",
       "title": "Data Flow",
       "description": "Data flow diagram and description",
       "required": true
     },
     {
-      "file_id": "EV-03",
+      "file_id": "EP-03",
       "filename": "EV-03_inventory.md",
-      "ev_type": "EV-003",
       "title": "AI Inventory",
       "description": "Inventory of AI systems and models used",
       "required": true
     },
     {
-      "file_id": "EV-04",
+      "file_id": "EP-04",
       "filename": "EV-04_risk_impact.md",
-      "ev_type": "EV-004",
       "title": "Risk & Impact Assessment",
       "description": "Risk and impact assessment documentation",
       "required": true
     },
     {
-      "file_id": "EV-05",
+      "file_id": "EP-05",
       "filename": "EV-05_controls_approvals.md",
-      "ev_type": "EV-005",
       "title": "Controls & Approvals",
       "description": "Control measures and approval records",
       "required": true
     },
     {
-      "file_id": "EV-06",
+      "file_id": "EP-06",
       "filename": "EV-06_logging_monitoring.md",
-      "ev_type": "EV-006",
       "title": "Logging & Monitoring",
       "description": "Logging and monitoring configuration",
       "required": true
     },
     {
-      "file_id": "EV-07",
+      "file_id": "EP-07",
       "filename": "EV-07_incident_exception.md",
-      "ev_type": "EV-007",
       "title": "Incident & Exception Handling",
       "description": "Incident and exception handling records",
       "required": true

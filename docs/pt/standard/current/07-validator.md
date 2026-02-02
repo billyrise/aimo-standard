@@ -24,7 +24,7 @@ Verificar que todos os campos obrigatórios estão presentes:
 | --- | --- |
 | Manifesto Evidence Pack | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
 | Objeto Codes | FS, UC, DT, CH, IM, RS, EV (OB opcional) |
-| Entrada de Arquivo de Evidência | file_id, filename, ev_type, title |
+| Entrada de Arquivo de Evidência | file_id (EP-01..EP-07), filename, title (ev_type / ev_codes opcional) |
 
 ### 2. Validação de Código de Dimensão
 

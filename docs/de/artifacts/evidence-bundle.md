@@ -9,7 +9,7 @@ Ein **Evidence Bundle** ist ein Auditpaket: eine strukturierte Sammlung von Arte
 ## Bundle-Struktur und Benennung
 
 - **Bundle-Stammbenennung**: Verwenden Sie ein konsistentes Muster wie `{org}_{system}_{zeitraum}_{version}` (z.B. `acme_ai-usage_2026-Q1_v1`).
-- **Erforderliche Dateien**: mindestens ein Evidence (EV)-Satz, der am [EV-Template](../standard/current/06-ev-template.md) ausgerichtet ist, ein [Dictionary](../standard/current/05-dictionary.md), eine kurze **Zusammenfassung** (Executive Summary des Bundles) und ein **Änderungsprotokoll** (oder Verweis darauf) für Änderungen am Bundle oder dessen Inhalten.
+- **Erforderliche Dateien**: mindestens ein Evidence (EV)-Satz, der am [Evidence Pack Template (EP)](../standard/current/06-ev-template.md) ausgerichtet ist, ein [Dictionary](../standard/current/05-dictionary.md), eine kurze **Zusammenfassung** (Executive Summary des Bundles) und ein **Änderungsprotokoll** (oder Verweis darauf) für Änderungen am Bundle oder dessen Inhalten.
 - **Optionale Anhänge**: Protokolle, Prüfaufzeichnungen, Ausnahmegenehmigungen, Verlängerungsaufzeichnungen; halten Sie die Benennung konsistent und referenzierbar vom Haupt-EV/Dictionary.
 
 ## Inhaltsverzeichnis (TOC)
@@ -24,6 +24,10 @@ Ein **Evidence Bundle** ist ein Auditpaket: eine strukturierte Sammlung von Arte
 | Prüfung/Genehmigung | Prüfdatensatz/-sätze | Falls zutreffend | Prüfungs- und Genehmigungsergebnis | id, timestamp, actor/role, Entscheidung, Referenzen | — |
 | Ausnahme | Ausnahmedatensatz/-sätze | Falls zutreffend | Ausnahme mit kompensierenden Kontrollen und Ablauf | id, timestamp, Umfang, Ablauf, kompensierende Kontrollen, Verlängerungsreferenz | — |
 | Verlängerung | Verlängerungsdatensatz/-sätze | Falls zutreffend | Neubewertung und Verlängerung | id, timestamp, actor/role, Entscheidung, Referenzen zu vorheriger Ausnahme/EV | — |
+
+## Normative Beziehung: EV-Datensätze (Index) und Evidence Pack (Payload)
+
+Um Doppelaufbau und Audit-Ambiguität zu vermeiden, gilt Folgendes als **normativ**: (1) EV-Datensätze (JSON) sind der **Index/Ledger** (maschinenprüfbare Nachverfolgbarkeit). (2) Evidence-Pack-Dateien (EP-01..EP-07 und Manifest) sind der **Payload**. (3) EV-Datensätze SOLLTEN den Payload per `evidence_file_ids` (z. B. EP-01) und/oder Hashes referenzieren; der [Validator](../validator/index.md) prüft die Referenzintegrität. (4) **Minimaler Einreichungssatz**: EV JSON + Dictionary + Summary + Change Log + Evidence Pack (zip). Siehe [Evidence Pack Template](../standard/current/06-ev-template.md) für Dokumenttypen EP-01..EP-07.
 
 ## Nachverfolgbarkeit
 

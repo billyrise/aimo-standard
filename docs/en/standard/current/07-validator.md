@@ -38,7 +38,7 @@ Check that all mandatory fields are present:
 | --- | --- |
 | Evidence Pack Manifest | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
 | Codes Object | FS, UC, DT, CH, IM, RS, EV (OB optional) |
-| Evidence File Entry | file_id, filename, ev_type, title |
+| Evidence File Entry | file_id (EP-01..EP-07), filename, title (ev_type / ev_codes optional) |
 
 ### 2. Dimension Code Validation
 

@@ -134,22 +134,27 @@
   "$defs": {
     "evidence_file": {
       "type": "object",
-      "required": ["file_id", "filename", "ev_type", "title"],
+      "required": ["file_id", "filename", "title"],
       "additionalProperties": false,
       "properties": {
         "file_id": {
           "type": "string",
-          "description": "Unique file identifier within the pack.",
-          "pattern": "^EV-\\d{2}$"
+          "description": "Evidence Pack document type (EP-01..EP-07). Do not use Taxonomy EV codes here.",
+          "pattern": "^EP-\\d{2}$"
         },
         "filename": {
           "type": "string",
-          "description": "Filename of the evidence document."
+          "description": "Filename of the evidence document (e.g. EP-01_system_overview.md or legacy EV-01_system_overview.md)."
         },
         "ev_type": {
           "type": "string",
-          "description": "Evidence type code (e.g., EV-001).",
+          "description": "Optional. Single Taxonomy Evidence Type code (EV-xxx) that this document evidences. Document type is file_id (EP-01..EP-07).",
           "pattern": "^EV-\\d{3}$"
+        },
+        "ev_codes": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^EV-\\d{3}$" },
+          "description": "Optional. Taxonomy Evidence Type codes (EV-xxx) that this document supports."
         },
         "title": {
           "type": "string",

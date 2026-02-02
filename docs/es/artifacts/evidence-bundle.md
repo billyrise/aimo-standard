@@ -9,7 +9,7 @@ Un **Paquete de Evidencia** es un paquete de auditoría: un conjunto estructurad
 ## Estructura y nomenclatura del paquete
 
 - **Nomenclatura de la raíz del paquete**: use un patrón consistente como `{org}_{sistema}_{período}_{versión}` (ej. `acme_ai-usage_2026-Q1_v1`).
-- **Archivos requeridos**: al menos un conjunto de Evidencia (EV) alineado con la [Plantilla EV](../standard/current/06-ev-template.md), un [Diccionario](../standard/current/05-dictionary.md), un breve **Resumen** (resumen ejecutivo del paquete), y un **Registro de Cambios** (o referencia a él) para cambios al paquete o su contenido.
+- **Archivos requeridos**: al menos un conjunto de Evidencia (EV) alineado con la [Plantilla Evidence Pack (EP)](../standard/current/06-ev-template.md), un [Diccionario](../standard/current/05-dictionary.md), un breve **Resumen** (resumen ejecutivo del paquete), y un **Registro de Cambios** (o referencia a él) para cambios al paquete o su contenido.
 - **Adjuntos opcionales**: registros, registros de revisión, aprobaciones de excepciones, registros de renovación; mantenga la nomenclatura consistente y referenciable desde el EV/Diccionario principal.
 
 ## Tabla de contenido (TOC)
@@ -24,6 +24,10 @@ Un **Paquete de Evidencia** es un paquete de auditoría: un conjunto estructurad
 | Revisión/Aprobación | registro(s) de revisión | Si aplica | Resultado de revisión y aprobación | id, timestamp, actor/rol, decisión, referencias | — |
 | Excepción | registro(s) de excepción | Si aplica | Excepción con controles compensatorios y vencimiento | id, timestamp, alcance, vencimiento, controles compensatorios, ref de renovación | — |
 | Renovación | registro(s) de renovación | Si aplica | Reevaluación y renovación | id, timestamp, actor/rol, decisión, referencias a excepción/EV anterior | — |
+
+## Relación normativa: registros EV (índice) y Evidence Pack (payload)
+
+Para evitar doble construcción y ambigüedad en auditoría, lo siguiente es **normativo**: (1) Los registros EV (JSON) son el **índice/ledger** (trazabilidad verificable por máquina). (2) Los archivos del Evidence Pack (EP-01..EP-07 y manifiesto) son el **payload**. (3) Los registros EV DEBERÍAN referenciar el payload mediante `evidence_file_ids` (ej. EP-01) y/o hashes; el [Validador](../validator/index.md) comprueba la integridad referencial. (4) **Conjunto mínimo de entrega**: EV JSON + Dictionary + Summary + Change Log + Evidence Pack (zip). Véase [Plantilla Evidence Pack](../standard/current/06-ev-template.md) para tipos de documento EP-01..EP-07.
 
 ## Trazabilidad
 

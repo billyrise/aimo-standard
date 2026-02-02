@@ -80,6 +80,16 @@ v1.0.0: FS-007 削除 (status: removed)
 
 ## 変更履歴
 
+### 未リリース（名前空間と規範の修正）
+
+**概要：** EV コード衝突の解消、EV（索引）と Evidence Pack（ペイロード）の明確化、/dev の監査誤引用防止の強化。
+
+#### 変更
+
+- **Evidence Pack ドキュメント種別（EP 名前空間）：** Evidence Pack のファイル種別は **EP-01..EP-07**（ドキュメント種別）を使用。Taxonomy の **EV-001, EV-002, …** はイベント／証跡種別（申請記録、審査/承認記録など）のまま。[Evidence Pack テンプレート](./06-ev-template.md) を参照。スキーマ：`evidence_files[].file_id` のパターンは `^EP-\\d{2}$`。`ev_type` は任意。
+- **規範的関係：** [Evidence Bundle](../../artifacts/evidence-bundle.md) に以下を規範として明記。EV レコード（JSON）は索引／台帳。Evidence Pack ファイルはペイロード。EV レコードは evidence_file_ids（例：EP-01）および／またはハッシュでペイロードを参照することを SHOULD。最小提出セット = EV JSON + Dictionary + Summary + Change Log + Evidence Pack。
+- **/dev 誤引用防止：** 開発プレビューページに赤帯バナーを表示。「Development Preview — Not for audit citation. Use /latest/ or a versioned URL.」/dev/ ページの canonical は /latest/ を指す。noindex は従来どおり。
+
 ### バージョン 0.0.1（2026-02-02）
 
 **概要：** 8次元コード体系、Evidence Packテンプレート、包括的なガバナンスドキュメントを含むAIMO Standardの初回リリース。

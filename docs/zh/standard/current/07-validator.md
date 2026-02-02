@@ -24,7 +24,7 @@ AIMO 验证器确保证据包和相关工件符合 AIMO 标准模式和要求。
 | --- | --- |
 | 证据包清单 | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
 | 代码对象 | FS, UC, DT, CH, IM, RS, EV（OB 可选） |
-| 证据文件条目 | file_id, filename, ev_type, title |
+| 证据文件条目 | file_id（EP-01..EP-07）, filename, title（ev_type / ev_codes 可选） |
 
 ### 2. 维度代码验证
 

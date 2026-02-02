@@ -9,7 +9,7 @@ description: AIMO 證據包結構。包含目錄、可追溯性和人工產物�
 ## 套件結構和命名
 
 - **套件根目錄命名**：使用一致的模式，例如 `{org}_{system}_{period}_{version}`（例如 `acme_ai-usage_2026-Q1_v1`）。
-- **必要檔案**：至少一組符合 [EV 範本](../standard/current/06-ev-template.md) 的證據（EV）集、一份[字典](../standard/current/05-dictionary.md)、一份簡短的**摘要**（套件的執行摘要）和一份**變更日誌**（或其參考）用於記錄套件或其內容的變更。
+- **必要檔案**：至少一組符合 [Evidence Pack 範本（EP）](../standard/current/06-ev-template.md) 的證據（EV）集、一份[字典](../standard/current/05-dictionary.md)、一份簡短的**摘要**（套件的執行摘要）和一份**變更日誌**（或其參考）用於記錄套件或其內容的變更。
 - **選用附件**：日誌、審查記錄、例外核准、續期記錄；保持命名一致且可從主要 EV/字典中參照。
 
 ## 目錄（TOC）
@@ -24,6 +24,10 @@ description: AIMO 證據包結構。包含目錄、可追溯性和人工產物�
 | 審查/核准 | review 記錄 | 如適用 | 審查和核准結果 | id、timestamp、actor/role、decision、references | — |
 | 例外 | exception 記錄 | 如適用 | 包含補償控制和到期日的例外 | id、timestamp、scope、expiry、compensating controls、renewal ref | — |
 | 續期 | renewal 記錄 | 如適用 | 重新評估和續期 | id、timestamp、actor/role、decision、references to prior exception/EV | — |
+
+## 規範關係：EV 記錄（索引）與 Evidence Pack（payload）
+
+為避免雙重建構與稽核歧義，以下為**規範**：(1) EV 記錄（JSON）為**索引/台帳**（可機器驗證的可追溯性）。(2) Evidence Pack 檔案（EP-01..EP-07 及清單）為 **payload**。(3) EV 記錄應透過 `evidence_file_ids`（如 EP-01）及/或雜湊參照 payload；[Validator](../validator/index.md) 檢查參照完整性。(4) **最小提交集**：EV JSON + Dictionary + Summary + Change Log + Evidence Pack（zip）。參見 [Evidence Pack 範本](../standard/current/06-ev-template.md) 了解 EP-01..EP-07 文件類型。
 
 ## 可追溯性
 

@@ -9,7 +9,7 @@ Un **lot de preuves** est un package d'audit : un ensemble structuré d'artefact
 ## Structure et nommage du lot
 
 - **Nommage de la racine du lot** : utilisez un modèle cohérent tel que `{org}_{system}_{period}_{version}` (ex. `acme_ai-usage_2026-Q1_v1`).
-- **Fichiers requis** : au moins un ensemble de preuves (EV) aligné avec le [modèle EV](../standard/current/06-ev-template.md), un [dictionnaire](../standard/current/05-dictionary.md), un bref **résumé** (synthèse exécutive du lot), et un **journal des modifications** (ou référence à celui-ci) pour les changements apportés au lot ou à son contenu.
+- **Fichiers requis** : au moins un ensemble de preuves (EV) aligné avec le [modèle Evidence Pack (EP)](../standard/current/06-ev-template.md), un [dictionnaire](../standard/current/05-dictionary.md), un bref **résumé** (synthèse exécutive du lot), et un **journal des modifications** (ou référence à celui-ci) pour les changements apportés au lot ou à son contenu.
 - **Pièces jointes optionnelles** : journaux, enregistrements de revue, approbations d'exceptions, enregistrements de renouvellement ; gardez un nommage cohérent et référençable depuis le document EV/dictionnaire principal.
 
 ## Table des matières (TDM)
@@ -24,6 +24,10 @@ Un **lot de preuves** est un package d'audit : un ensemble structuré d'artefact
 | Revue/Approbation | enregistrement(s) de revue | Si applicable | Résultat de la revue et de l'approbation | id, timestamp, actor/role, decision, references | — |
 | Exception | enregistrement(s) d'exception | Si applicable | Exception avec contrôles compensatoires et expiration | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
 | Renouvellement | enregistrement(s) de renouvellement | Si applicable | Réévaluation et renouvellement | id, timestamp, actor/role, decision, references to prior exception/EV | — |
+
+## Relation normative : enregistrements EV (index) et Evidence Pack (payload)
+
+Pour éviter la double construction et l'ambiguïté en audit, ce qui suit est **normatif** : (1) Les enregistrements EV (JSON) sont l'**index/registre** (traçabilité vérifiable par machine). (2) Les fichiers Evidence Pack (EP-01..EP-07 et manifeste) sont le **payload**. (3) Les enregistrements EV DEVRAIENT référencer le payload par `evidence_file_ids` (ex. EP-01) et/ou hachages ; le [Validateur](../validator/index.md) vérifie l'intégrité référentielle. (4) **Ensemble minimal de soumission** : EV JSON + Dictionary + Summary + Change Log + Evidence Pack (zip). Voir [Modèle Evidence Pack](../standard/current/06-ev-template.md) pour les types de document EP-01..EP-07.
 
 ## Traçabilité
 
