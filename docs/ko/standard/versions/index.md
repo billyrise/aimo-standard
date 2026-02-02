@@ -21,6 +21,39 @@ description: AIMO 표준 버전 이력. 감사자 준비 PDF, 기계 판독 가�
 !!! note "데이터 소스"
     이 버전 테이블은 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)와 동기화됩니다. 각 릴리스 태그(`vX.Y.Z`)는 사양의 고정 스냅샷에 해당합니다.
 
+## "latest"의 단일 정보원(SSOT)
+
+**"latest"의 권위 있는 정의**는 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)의 **latest** 태그(`releases/latest`)입니다. 사이트 경로 `/latest/`는 항상 해당 릴리스로 리디렉션됩니다. 별도의 "사이트 latest"는 없으며, 릴리스 워크플로우가 태그된 버전을 배포하고 한 단계로 `latest` 별칭을 설정합니다.
+
+| 소스 | 역할 |
+|--------|------|
+| **GitHub Release latest 태그** | SSOT — "현재 릴리스"의 유일한 정의 |
+| **버전 테이블** (이 페이지) | 릴리스 워크플로우를 통해 릴리스와 동기화; 배포 전 태그와 일치해야 함 |
+| **Changelog** | 규범적 변경 이력; 릴리스 노트가 참조 |
+| **사이트 `/latest/`** | GitHub Release latest와 동일한 버전으로 리디렉션 |
+
+릴리스 프로세스 세부사항은 [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) 및 [릴리스 워크플로우](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml)를 참조하세요. 버전 테이블과 Changelog는 릴리스 준비의 일부로 업데이트되어 배포된 버전과 항상 일치합니다.
+
+## 감사인용: 표준 URL 및 버전 고정
+
+감사 보고서에서 특정 버전을 인용하고 재현 가능성을 보장하려면:
+
+1. **표준 URL**: 해당 버전의 고정 문서 URL 사용, 예: `https://standard.aimoaas.com/0.0.3/` (사용한 버전으로 `0.0.3` 교체).
+2. **버전 고정**: [GitHub Release](https://github.com/billyrise/aimo-standard/releases) 페이지의 **릴리스 태그**(예: `v0.0.3`) 및 선택적으로 **커밋 해시**를 기록합니다. 이를 통해 사양 스냅샷이 릴리스 자산(PDF, ZIP, 체크섬)과 일치함을 독립적으로 검증할 수 있습니다.
+3. **증거 정렬**: 제출 시 evidence bundle이 정렬된 AIMO Standard 버전(예: `v0.0.3`)을 명시하고, 해당 릴리스에서 검증기와 스키마를 획득하세요.
+
+## 버전 계층
+
+AIMO Standard는 세 가지 버전 개념을 사용합니다. 현재 릴리스에서는 일치하며, 향후 릴리스에서는 독립적으로 버전 관리될 수 있습니다.
+
+| 계층 | 설명 | 표시 위치 |
+|------|-------------|--------------|
+| **Standard 버전** (사이트/릴리스) | 릴리스 태그 및 문서 스냅샷(예: `v0.0.3`). | 버전 테이블, GitHub Releases, `/X.Y.Z/` URL. |
+| **Taxonomy 스키마 버전** | 코드 시스템 및 taxonomy/스키마 정의의 버전. | 매니페스트의 `taxonomy_version`; 스키마 `$id` 또는 문서. |
+| **Dictionary 콘텐츠 버전** | 사전 항목(코드 및 정의)의 버전. | 사전 메타데이터; 0.0.x에서는 taxonomy와 동일. |
+
+"AIMO Standard vX.Y.Z"를 인용할 때 **Standard 버전**이 표준 스냅샷을 정의합니다. Validator 및 Minimum Evidence Requirements는 해당 릴리스의 산출물과 스키마를 참조합니다.
+
 ## 검증 절차
 
 감사자 및 구현자는 SHA-256 체크섬을 사용하여 다운로드 무결성을 확인해야 합니다:

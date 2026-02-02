@@ -22,6 +22,40 @@ Official releases are frozen snapshots published with auditor-ready PDFs and mac
 !!! note "Data Source"
     This version table is synchronized with [GitHub Releases](https://github.com/billyrise/aimo-standard/releases). Each release tag (`vX.Y.Z`) corresponds to a frozen snapshot of the specification.
 
+## Single source of truth (SSOT) for "latest"
+
+The **authoritative definition of "latest"** is the [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) **latest** tag (`releases/latest`). The site path `/latest/` is a redirect that always points to that release. There is no separate "site latest" — the release workflow deploys the tagged version and sets it as the `latest` alias in one step.
+
+| Source | Role |
+|--------|------|
+| **GitHub Release latest tag** | SSOT — the only definition of "current release" |
+| **Versions table** (this page) | Synchronized with releases via release workflow; must match the tag before deploy |
+| **Changelog** | Normative change history; release notes reference it |
+| **Site `/latest/`** | Redirect to the same version as GitHub Release latest |
+
+For release process details, see [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) and the [release workflow](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml). The Versions table and Changelog are updated as part of release preparation so that they always match the deployed version.
+
+## For auditors: Canonical URL and version pinning
+
+To cite a specific version in audit reports and ensure reproducibility:
+
+1. **Canonical URL**: Use the frozen documentation URL for that version, e.g.  
+   `https://standard.aimoaas.com/0.0.3/` (replace `0.0.3` with the version you used).
+2. **Version pinning**: Record the **release tag** (e.g. `v0.0.3`) and optionally the **commit hash** from the [GitHub Release](https://github.com/billyrise/aimo-standard/releases) page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).
+3. **Evidence alignment**: State in your submission which AIMO Standard version (e.g. `v0.0.3`) your evidence bundle aligns with, and obtain the validator and schemas from that same release.
+
+## Version layers
+
+AIMO Standard uses three version concepts. For the current release they are aligned; future releases may version them independently.
+
+| Layer | Description | Where it appears |
+|-------|-------------|------------------|
+| **Standard version** (site/release) | The release tag and documentation snapshot (e.g. `v0.0.3`). | Versions table, GitHub Releases, `/X.Y.Z/` URLs. |
+| **Taxonomy schema version** | Version of the code system and taxonomy/schema definitions. | `taxonomy_version` in manifests; schema `$id` or docs. |
+| **Dictionary content version** | Version of the dictionary entries (codes and definitions). | Dictionary metadata; same as taxonomy for 0.0.x. |
+
+When citing "AIMO Standard vX.Y.Z", the **Standard version** is the one that defines the canonical snapshot. The Validator and Minimum Evidence Requirements refer to the artifacts and schemas of that release.
+
 ## Verification Procedure
 
 Auditors and implementers should verify download integrity using SHA-256 checksums:

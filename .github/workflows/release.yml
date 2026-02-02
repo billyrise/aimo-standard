@@ -125,6 +125,12 @@ jobs:
           echo "=== Release Consistency Check ==="
           python tooling/checks/check_release_consistency.py
 
+      # Ensure all nav targets exist (no 404s for required pages)
+      - name: Internal link check (nav targets)
+        run: |
+          echo "=== Internal Link Check (nav targets must exist) ==="
+          python tooling/checks/check_internal_links.py --check
+
       - name: Build docs (mkdocs)
         run: python -m mkdocs build --strict
 

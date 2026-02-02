@@ -8,7 +8,15 @@ description: AIMO 표준 릴리스 - 버전화된 PDF, 산출물 및 체크섬 �
 
 ## 최신 릴리스 다운로드
 
-**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)**
+**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)** — "latest" 릴리스의 단일 정보원입니다. 사이트 경로 `/latest/`는 동일한 버전으로 리디렉션됩니다.
+
+## 검증 절차 (영구 웹 페이지)
+
+전체 **검증 절차**(자산 다운로드, 체크섬 검증, 빌드 출처 증명)는 PDF뿐만 아니라 영구 웹 페이지로도 제공됩니다:
+
+- **[Standard → 버전 → 검증 절차](../standard/versions/index.md)** — 단계별 체크섬 검증(Linux/macOS/Windows) 및 출처 증명.
+
+릴리스 자산을 검증하거나 감사 산출물에 검증 단계를 문서화할 때 이 페이지를 사용하세요.
 
 ## 릴리스 자산
 
@@ -131,7 +139,7 @@ description: AIMO 표준 릴리스 - 버전화된 PDF, 산출물 및 체크섬 �
 !!! tip "독립적으로 도구 획득"
     감사자는 검증기와 스키마를 제출 당사자가 아닌 공식 AIMO 표준 릴리스에서 직접 다운로드해야 합니다.
 
-전체 검증 절차는 [신뢰 패키지](../governance/trust-package.md)를 참조하세요.
+전체 검증 절차(체크섬, 증명, 단계별)는 **[Standard → 버전 → 검증 절차](../standard/versions/index.md)**를 참조하세요. 감사자 준비 자료는 [신뢰 패키지](../governance/trust-package.md)도 참조하세요.
 
 ## 과대 주장 금지 선언
 

@@ -32,7 +32,9 @@ mkdocs build --strict
 
 ## Key Principles
 
-- **English is canonical**: Edit `docs/en/` first, then update `docs/ja/`
+- **English is canonical**: Edit `docs/en/` first.
+- **Development: English only**: During day-to-day development, update **English docs only** (`docs/en/`). Do not update other locales until release.
+- **Translation at release**: When creating a new version (bumping version number, tagging `vX.Y.Z`), run **full translation to all other languages** (ja, es, fr, de, pt, it, zh, zh-TW, ko) so the release ships with all locales in sync. See release process (e.g. `.cursor/rules/02-release-process.md` or prepare-release workflow).
 - **SSOT**: This repository is the single source of truth
 - **No manual edits to generated files**: Edit sources, regenerate, commit
 - **All changes via PR**: Even maintainers use pull requests
@@ -48,10 +50,11 @@ mkdocs build --strict
 
 ## i18n Guidelines
 
-- English (`docs/en/`) is the authoritative source
-- Japanese (`docs/ja/`) must mirror the same structure
-- Keep the same heading hierarchy and page count
-- Run `lint_i18n.py` to verify consistency
+- English (`docs/en/`) is the authoritative source.
+- **During development**: Update only `docs/en/`. Other locales are updated at release time.
+- **At release**: Translate from English to all locales (ja, es, fr, de, pt, it, zh, zh-TW, ko); all must mirror the same structure and pass `lint_i18n.py`.
+- Keep the same heading hierarchy and page count across locales.
+- Run `lint_i18n.py` to verify consistency (required for release).
 
 ## Questions?
 

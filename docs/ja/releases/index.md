@@ -8,7 +8,15 @@ description: AIMO Standardリリース - バージョン別PDF、アーティフ
 
 ## 最新リリースのダウンロード
 
-**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)**
+**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)** — これが「latest」リリースの単一の真実の情報源です。サイトの `/latest/` は同じバージョンへリダイレクトします。
+
+## 検証手順（恒久ページ）
+
+監査人向けの**検証手順**（資産のダウンロード、チェックサム検証、ビルド来歴証明）は PDF に限定されず、恒久の Web ページでも参照できます。
+
+- **[Standard → Versions → 検証手順](../standard/versions/index.md)** — Linux/macOS/Windows でのステップごとのチェックサム検証とビルド来歴証明
+
+監査成果物で検証手順を記載する際はこのページを参照してください。
 
 ## リリースアセット
 
@@ -131,7 +139,7 @@ description: AIMO Standardリリース - バージョン別PDF、アーティフ
 !!! tip "ツールを独立に取得"
     監査人はバリデータとスキーマを、提出者からではなく、公式 AIMO Standard リリースから直接ダウンロードすべきである。
 
-完全な検証手順は [Trust Package](../governance/trust-package.md) を参照。
+完全な検証手順（チェックサム、証明、ステップごと）は **[Standard → Versions → 検証手順](../standard/versions/index.md)** を参照。監査対応資料は [Trust Package](../governance/trust-package.md) も参照。
 
 ## 非過剰主張ステートメント
 

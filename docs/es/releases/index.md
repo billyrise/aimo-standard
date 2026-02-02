@@ -8,7 +8,15 @@ Esta sección es un centro para versiones versionadas, registro de cambios, migr
 
 ## Descargar Última Versión
 
-**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)**
+**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)** — es la fuente única de verdad del release "latest". La ruta del sitio `/latest/` redirige a la misma versión.
+
+## Procedimiento de verificación (página permanente)
+
+El **procedimiento de verificación** completo (descarga de activos, verificación de checksums, attestación de procedencia) está disponible como página permanente, no solo en PDF:
+
+- **[Standard → Versions → Procedimiento de Verificación](../standard/versions/index.md)** — verificación paso a paso de checksums (Linux/macOS/Windows) y attestación de procedencia.
+
+Use esta página cuando necesite verificar activos de release o documentar los pasos de verificación en entregables de auditoría.
 
 ## Activos de Release
 
@@ -131,7 +139,7 @@ Los auditores que reciben envíos de evidencia deben verificar integridad y estr
 !!! tip "Obtenga herramientas de forma independiente"
     Los auditores deben descargar el validador y esquemas directamente del release oficial del AIMO Standard, no de la parte que envía.
 
-Para el procedimiento de verificación completo, consulte [Paquete de Confianza](../governance/trust-package.md).
+Para el procedimiento de verificación completo (checksums, attestación, paso a paso), consulte **[Standard → Versions → Procedimiento de Verificación](../standard/versions/index.md)**. Consulte también [Paquete de Confianza](../governance/trust-package.md) para materiales listos para auditores.
 
 ## Declaración de no sobre-reclamación
 

@@ -8,6 +8,20 @@ The AIMO Validator ensures that Evidence Packs and related artifacts conform to 
 
 See also: [Human Oversight Protocol](../../governance/human-oversight-protocol.md) — responsibility boundary for machine vs. human review.
 
+## What the Validator validates (required file set)
+
+The Validator checks the **Evidence Bundle** structure and related artifacts. For a minimal submission, the following are required:
+
+| Artifact | Purpose | Canonical location (per release) |
+|----------|---------|-----------------------------------|
+| **Evidence Pack Manifest** | Root manifest (`root.json` or equivalent) | Schemas: [evidence_pack_manifest.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/evidence_pack_manifest.schema.json); release ZIP: `schemas/jsonschema/` |
+| **Dictionary** | Taxonomy codes used in the manifest | [Evidence Bundle](../../artifacts/evidence-bundle.md) structure; [Dictionary](./05-dictionary.md) spec |
+| **Minimum Evidence Requirements** | Checklist for auditors and implementers | [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md) |
+
+The Validator does **not** guarantee legal or regulatory compliance; it checks structural conformance to the schemas and code system. For the full checklist of what evidence to include, see [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md).
+
+**Canonical URLs for a specific version**: Obtain schemas and the validator from the [GitHub Release](https://github.com/billyrise/aimo-standard/releases) for the version you are aligning with (e.g. `v0.0.3`). The release ZIP (`aimo-standard-artifacts.zip`) contains `schemas/jsonschema/`, templates, and validator rules.
+
 ## Validator in practice
 
 For a 30-second quickstart (install, run, interpret output), see [Validator hub](../../validator/index.md).
@@ -194,11 +208,11 @@ Validator rules follow SemVer:
 
 ## Schema References
 
-| Schema | Location |
-| --- | --- |
-| Evidence Pack Manifest | `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json` |
-| Taxonomy Pack | `source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json` |
-| Changelog | `source_pack/03_taxonomy/schemas/changelog.schema.json` |
+| Schema | Location (repository) | In release ZIP |
+| --- | --- | --- |
+| Evidence Pack Manifest | [schemas/jsonschema/evidence_pack_manifest.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/evidence_pack_manifest.schema.json) | `schemas/jsonschema/evidence_pack_manifest.schema.json` |
+| Taxonomy Pack | [schemas/jsonschema/aimo-dictionary.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/aimo-dictionary.schema.json) (dictionary); taxonomy pack in source_pack | `schemas/jsonschema/` |
+| Changelog | [schemas/jsonschema/](https://github.com/billyrise/aimo-standard/tree/main/schemas/jsonschema) (see repository) | `schemas/jsonschema/` |
 
 ## References
 
