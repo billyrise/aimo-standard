@@ -38,13 +38,10 @@ jobs:
       - name: Configure for dev deployment (noindex)
         run: |
           echo "Building for dev deployment - noindex will be applied"
-          # Add is_dev_deploy to mkdocs.yml extra section for template access
-          cat >> mkdocs.yml << 'EOF'
-          
-          # DEV DEPLOYMENT FLAG (auto-injected by deploy-dev.yml)
-          # This triggers noindex meta tag in theme override
-            is_dev_deploy: true
-          EOF
+          # Update is_dev_deploy to true in mkdocs.yml extra section
+          sed -i 's/is_dev_deploy: false/is_dev_deploy: true/' mkdocs.yml
+          echo "Updated is_dev_deploy to true"
+          grep is_dev_deploy mkdocs.yml
 
       - name: Build documentation
         run: python -m mkdocs build --strict

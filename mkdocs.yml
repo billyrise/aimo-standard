@@ -82,6 +82,8 @@ extra:
     alias: true
     # Default version for redirects
     default: latest
+  # Dev deployment flag (set to true by deploy-dev.yml for noindex)
+  is_dev_deploy: false
 
 nav:
   - index.md
