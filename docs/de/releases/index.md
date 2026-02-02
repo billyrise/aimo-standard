@@ -8,7 +8,15 @@ Dieser Abschnitt ist ein Hub für versionierte Releases, Changelog, Migration un
 
 ## Neuestes Release herunterladen
 
-**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)**
+**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)** — dies ist die einzige autoritative Quelle für das „latest“-Release. Der Site-Pfad `/latest/` leitet auf dieselbe Version weiter.
+
+## Verifizierungsverfahren (dauerhafte Webseite)
+
+Das vollständige **Verifizierungsverfahren** (Download der Assets, Prüfsummenverifizierung, Build-Provenienz-Attestierung) ist als dauerhafte Webseite verfügbar, nicht nur als PDF:
+
+- **[Standard → Versionen → Verifizierungsverfahren](../standard/versions/index.md)** — schrittweise Prüfsummenverifizierung (Linux/macOS/Windows) und Attestierung der Provenienz.
+
+Nutzen Sie diese Seite, wenn Sie Release-Assets verifizieren oder Verifizierungsschritte in Prüfungsdeliverables dokumentieren müssen.
 
 ## Release-Assets
 
@@ -131,7 +139,7 @@ Prüfer, die Evidence-Einreichungen erhalten, sollten Integrität und Struktur v
 !!! tip "Tools unabhängig beziehen"
     Prüfer sollten Validator und Schemas direkt vom offiziellen AIMO Standard Release herunterladen, nicht von der einreichenden Partei.
 
-Für das vollständige Verifizierungsverfahren siehe [Trust Package](../governance/trust-package.md).
+Für das vollständige Verifizierungsverfahren (Prüfsummen, Attestierung, Schritt-für-Schritt) siehe **[Standard → Versionen → Verifizierungsverfahren](../standard/versions/index.md)**. Siehe auch [Trust Package](../governance/trust-package.md) für prüfungsbereite Materialien.
 
 ## Keine-Überbeanspruchung-Erklärung
 

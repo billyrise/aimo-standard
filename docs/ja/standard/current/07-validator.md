@@ -8,6 +8,20 @@ AIMOバリデータは、Evidence Packおよび関連アーティファクトが
 
 関連：[人による監督プロトコル](../../governance/human-oversight-protocol.md) — 機械チェックと人の判断の責任境界。
 
+## バリデータが検証する対象（必須ファイルセット）
+
+バリデータは **Evidence Bundle** の構造と関連アーティファクトを検証します。最小限の提出には以下が必要です。
+
+| アーティファクト | 目的 | 正規の場所（リリースごと） |
+|------------------|------|----------------------------|
+| **Evidence Pack マニフェスト** | ルートマニフェスト（`root.json` 等） | スキーマ: [evidence_pack_manifest.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/evidence_pack_manifest.schema.json)；リリース ZIP: `schemas/jsonschema/` |
+| **Dictionary** | マニフェストで使用する taxonomy コード | [Evidence Bundle](../../artifacts/evidence-bundle.md) 構造；[Dictionary](./05-dictionary.md) 仕様 |
+| **Minimum Evidence Requirements** | 監査人・実装者向けチェックリスト | [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md) |
+
+バリデータは法的・規制上の適合を保証しません。構造がスキーマとコード体系に準拠しているかを検証します。含める証跡のチェックリストは [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md) を参照してください。
+
+**特定バージョンの正規 URL**：準拠するバージョン（例：`v0.0.3`）の [GitHub Release](https://github.com/billyrise/aimo-standard/releases) からスキーマとバリデータを取得してください。リリース ZIP（`aimo-standard-artifacts.zip`）には `schemas/jsonschema/`、テンプレート、バリデータルールが含まれます。
+
 ## 実運用でのValidator
 
 30秒クイックスタート（インストール、実行、出力の解釈）は [Validator ハブ](../../validator/index.md) を参照。

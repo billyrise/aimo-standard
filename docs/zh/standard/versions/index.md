@@ -21,6 +21,39 @@ description: AIMO 标准版本历史。带有审计师就绪 PDF、机器可读�
 !!! note "数据来源"
     此版本表与 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) 同步。每个发布标签（`vX.Y.Z`）对应规范的冻结快照。
 
+## “latest”的单一事实来源（SSOT）
+
+**“latest”的权威定义**是 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) 的 **latest** 标签（`releases/latest`）。站点路径 `/latest/` 始终重定向到该发布。不存在单独的“站点 latest”——发布工作流会部署带标签的版本并在一步中将其设为 `latest` 别名。
+
+| 来源 | 角色 |
+|--------|------|
+| **GitHub Release 的 latest 标签** | SSOT — “当前发布”的唯一定义 |
+| **版本表**（本页） | 通过发布工作流与发布同步；部署前必须与标签一致 |
+| **Changelog** | 规范性变更历史；发布说明引用它 |
+| **站点 `/latest/`** | 重定向到与 GitHub Release latest 相同的版本 |
+
+发布流程详情见 [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) 和 [release 工作流](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml)。版本表和 Changelog 作为发布准备的一部分进行更新，以始终与已部署版本一致。
+
+## 面向审计师：规范 URL 与版本固定
+
+在审计报告中引用特定版本并确保可重复性时：
+
+1. **规范 URL**：使用该版本的固定文档 URL，例如 `https://standard.aimoaas.com/0.0.3/`（将 `0.0.3` 替换为您使用的版本）。
+2. **版本固定**：记录 [GitHub Release](https://github.com/billyrise/aimo-standard/releases) 页面的**发布标签**（例如 `v0.0.3`）及可选的**提交哈希**。这样可独立验证规范快照与发布资产（PDF、ZIP、校验和）一致。
+3. **证据对齐**：在提交中说明您的 evidence bundle 所依据的 AIMO Standard 版本（例如 `v0.0.3`），并从同一发布获取验证器和模式。
+
+## 版本层
+
+AIMO Standard 使用三个版本概念。当前发布中它们一致；未来发布可能独立进行版本管理。
+
+| 层 | 说明 | 出现位置 |
+|------|-------------|--------------|
+| **Standard 版本**（站点/发布） | 发布标签和文档快照（例如 `v0.0.3`）。 | 版本表、GitHub Releases、`/X.Y.Z/` URL。 |
+| **Taxonomy 模式版本** | 代码体系与 taxonomy/模式定义的版本。 | 清单中的 `taxonomy_version`；模式的 `$id` 或文档。 |
+| **Dictionary 内容版本** | 字典条目（代码与定义）的版本。 | 字典元数据；0.0.x 中与 taxonomy 相同。 |
+
+引用“AIMO Standard vX.Y.Z”时，**Standard 版本**定义规范快照。Validator 和 Minimum Evidence Requirements 指该发布的工件和模式。
+
 ## 验证程序
 
 审计师和实施者应使用 SHA-256 校验和验证下载完整性：

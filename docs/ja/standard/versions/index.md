@@ -22,6 +22,39 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 !!! note "データソース"
     このバージョンテーブルは [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) と同期しています。各リリースタグ（`vX.Y.Z`）は仕様の固定スナップショットに対応します。
 
+## 「latest」の単一の真実の情報源（SSOT）
+
+**「latest」の正式な定義**は [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) の **latest** タグ（`releases/latest`）です。サイトの `/latest/` は常にそのリリースへリダイレクトします。「サイト側の latest」は存在せず、リリースワークフローがタグ付きバージョンをデプロイし、そのバージョンを `latest` エイリアスとして一度に設定します。
+
+| ソース | 役割 |
+|--------|------|
+| **GitHub Release の latest タグ** | SSOT — 「現行リリース」の唯一の定義 |
+| **バージョンテーブル**（本ページ） | リリースワークフローでリリースと同期。デプロイ前にタグと一致している必要あり |
+| **Changelog** | 規範的な変更履歴。リリースノートが参照 |
+| **サイトの `/latest/`** | GitHub Release の latest と同じバージョンへリダイレクト |
+
+リリース手順の詳細は [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) および [release ワークフロー](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml) を参照してください。バージョンテーブルと Changelog はリリース準備の一環で更新され、デプロイ済みバージョンと常に一致します。
+
+## 監査人向け：正規 URL とバージョン固定
+
+監査報告書で特定バージョンを引用し、再現性を確保するには：
+
+1. **正規 URL**：そのバージョンの固定ドキュメント URL を使用（例：`https://standard.aimoaas.com/0.0.3/`。使用したバージョンで `0.0.3` を置き換え）。
+2. **バージョン固定**：[GitHub Release](https://github.com/billyrise/aimo-standard/releases) ページの**リリースタグ**（例：`v0.0.3`）および任意で**コミットハッシュ**を記録。これにより、仕様スナップショットがリリース資産（PDF、ZIP、チェックサム）と一致することを独立に検証できます。
+3. **エビデンスの整合**：提出物に、準拠した AIMO Standard のバージョン（例：`v0.0.3`）を明記し、バリデータとスキーマは同一リリースから取得してください。
+
+## バージョン層
+
+AIMO Standard では三つのバージョン概念を使用します。現行リリースでは一致していますが、将来のリリースでは独立してバージョン管理する場合があります。
+
+| 層 | 説明 | 記載箇所 |
+|----|------|----------|
+| **Standard バージョン**（サイト/リリース） | リリースタグとドキュメントスナップショット（例：`v0.0.3`）。 | バージョンテーブル、GitHub Releases、`/X.Y.Z/` URL。 |
+| **Taxonomy スキーマバージョン** | コード体系と taxonomy/スキーマ定義のバージョン。 | マニフェストの `taxonomy_version`；スキーマの `$id` またはドキュメント。 |
+| **Dictionary コンテンツバージョン** | 辞書エントリ（コードと定義）のバージョン。 | 辞書メタデータ；0.0.x では taxonomy と同じ。 |
+
+「AIMO Standard vX.Y.Z」を引用する場合、**Standard バージョン**が正規スナップショットを定義します。Validator と Minimum Evidence Requirements は、そのリリースのアーティファクトとスキーマを参照します。
+
 ## 検証手順
 
 監査人および実装者は、SHA-256 チェックサムを使用してダウンロードの整合性を検証すべきです。

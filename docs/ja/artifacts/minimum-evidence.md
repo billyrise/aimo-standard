@@ -4,7 +4,9 @@ description: AIMO最小証跡要件。ライフサイクル別（申請、レビ
 
 # Minimum Evidence Requirements（最小証跡要件）
 
-本ページは、ライフサイクル別に整理した MUST レベルの最小証跡要件を定義する。説明可能性と証跡準備を支えるものであり、法的助言の提供や適合の保証は行わない。
+本ページは、監査人・実装者向けの **Minimum Evidence Requirements** チェックリストです。ライフサイクル別に整理した MUST レベルの最小証跡要件を定義します。説明可能性と証跡準備を支えるものであり、法的助言の提供や適合の保証は行いません。
+
+提出物の準備・レビュー時は [Evidence Bundle](evidence-bundle.md) と [Validator](../standard/current/07-validator.md) とあわせて本ページを参照してください。
 
 ## 1) Request（申請）
 

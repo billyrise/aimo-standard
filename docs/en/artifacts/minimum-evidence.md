@@ -4,7 +4,9 @@ description: AIMO minimum evidence requirements. MUST-level checklist by lifecyc
 
 # Minimum Evidence Requirements
 
-This page defines the minimum evidence requirements as a MUST-level checklist, grouped by lifecycle. It supports explainability and evidence readiness; it does not provide legal advice or guarantee compliance.
+This page is the **Minimum Evidence Requirements** checklist for auditors and implementers. It defines the minimum evidence requirements as a MUST-level checklist, grouped by lifecycle. It supports explainability and evidence readiness; it does not provide legal advice or guarantee compliance.
+
+Use this page together with [Evidence Bundle](evidence-bundle.md) and the [Validator](../standard/current/07-validator.md) when preparing or reviewing submissions.
 
 ## 1) Request
 

@@ -21,6 +21,39 @@ Los releases oficiales son snapshots congelados publicados con PDFs listos para 
 !!! note "Fuente de Datos"
     Esta tabla de versiones está sincronizada con [GitHub Releases](https://github.com/billyrise/aimo-standard/releases). Cada tag de release (`vX.Y.Z`) corresponde a un snapshot congelado de la especificación.
 
+## Fuente única de verdad (SSOT) para "latest"
+
+La **definición autorizada de "latest"** es el tag **latest** de [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) (`releases/latest`). La ruta del sitio `/latest/` redirige siempre a ese release. No existe un "latest del sitio" separado: el flujo de release despliega la versión etiquetada y la establece como alias `latest` en un solo paso.
+
+| Fuente | Rol |
+|--------|-----|
+| **Tag latest de GitHub Release** | SSOT — única definición de "release actual" |
+| **Tabla de versiones** (esta página) | Sincronizada con releases vía flujo de release; debe coincidir con el tag antes del despliegue |
+| **Changelog** | Historial de cambios normativo; las notas de release lo referencian |
+| **Sitio `/latest/`** | Redirección a la misma versión que GitHub Release latest |
+
+Para detalles del proceso de release, véase [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) y el [flujo de release](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml). La tabla de versiones y el Changelog se actualizan como parte de la preparación del release para que coincidan siempre con la versión desplegada.
+
+## Para auditores: URL canónica y fijación de versión
+
+Para citar una versión concreta en informes de auditoría y garantizar reproducibilidad:
+
+1. **URL canónica**: Use la URL de documentación fija de esa versión, p. ej. `https://standard.aimoaas.com/0.0.3/` (sustituya `0.0.3` por la versión utilizada).
+2. **Fijación de versión**: Registre el **tag de release** (p. ej. `v0.0.3`) y opcionalmente el **hash de commit** de la página [GitHub Release](https://github.com/billyrise/aimo-standard/releases). Así se puede verificar de forma independiente que el snapshot de la especificación coincide con los activos del release (PDF, ZIP, checksums).
+3. **Alineación de evidencia**: Indique en su envío con qué versión de AIMO Standard (p. ej. `v0.0.3`) se alinea su evidence bundle, y obtenga el validador y los esquemas del mismo release.
+
+## Capas de versión
+
+AIMO Standard utiliza tres conceptos de versión. En el release actual están alineados; en releases futuros pueden versionarse de forma independiente.
+
+| Capa | Descripción | Dónde aparece |
+|------|-------------|--------------|
+| **Versión Standard** (sitio/release) | El tag de release y el snapshot de documentación (p. ej. `v0.0.3`). | Tabla de versiones, GitHub Releases, URLs `/X.Y.Z/`. |
+| **Versión del esquema Taxonomy** | Versión del sistema de códigos y definiciones taxonomy/esquema. | `taxonomy_version` en manifiestos; `$id` del esquema o docs. |
+| **Versión del contenido Dictionary** | Versión de las entradas del diccionario (códigos y definiciones). | Metadatos del diccionario; igual que taxonomy en 0.0.x. |
+
+Al citar "AIMO Standard vX.Y.Z", la **versión Standard** es la que define el snapshot canónico. El Validator y los Minimum Evidence Requirements se refieren a los artefactos y esquemas de ese release.
+
 ## Procedimiento de Verificación
 
 Los auditores e implementadores deben verificar la integridad de descarga usando checksums SHA-256:
