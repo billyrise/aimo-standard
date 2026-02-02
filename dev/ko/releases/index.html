@@ -1957,6 +1957,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      검증 절차 (영구 웹 페이지)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       릴리스 자산
     </span>
   </a>
@@ -1965,7 +1974,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       다운로드 확인
     </span>
@@ -1988,7 +1997,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       리소스
     </span>
@@ -1997,7 +2006,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       제출 패키지 준비
     </span>
@@ -2006,7 +2015,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       감사자용: 검증 절차
     </span>
@@ -2015,7 +2024,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       과대 주장 금지 선언
     </span>
@@ -2058,8 +2067,14 @@
 <h1 id="_1">릴리스</h1>
 <p>이 섹션은 버전화된 릴리스, 변경로그, 마이그레이션 및 배포 산출물의 허브입니다.</p>
 <h2 id="_2">최신 릴리스 다운로드</h2>
-<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
-<h2 id="_3">릴리스 자산</h2>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong> — "latest" 릴리스의 단일 정보원입니다. 사이트 경로 <code>/latest/</code>는 동일한 버전으로 리디렉션됩니다.</p>
+<h2 id="_3">검증 절차 (영구 웹 페이지)</h2>
+<p>전체 <strong>검증 절차</strong>(자산 다운로드, 체크섬 검증, 빌드 출처 증명)는 PDF뿐만 아니라 영구 웹 페이지로도 제공됩니다:</p>
+<ul>
+<li><strong><a href="../standard/versions/">Standard → 버전 → 검증 절차</a></strong> — 단계별 체크섬 검증(Linux/macOS/Windows) 및 출처 증명.</li>
+</ul>
+<p>릴리스 자산을 검증하거나 감사 산출물에 검증 단계를 문서화할 때 이 페이지를 사용하세요.</p>
+<h2 id="_4">릴리스 자산</h2>
 <p>각 공식 릴리스(<code>vX.Y.Z</code> 태그)에는 다음이 포함됩니다:</p>
 <table>
 <thead>
@@ -2087,7 +2102,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_4">다운로드 확인</h3>
+<h3 id="_5">다운로드 확인</h3>
 <p>다운로드 후 체크섬을 사용하여 파일 무결성을 확인하세요:</p>
 <p>=== "Linux"</p>
 <pre><code>```bash
@@ -2137,7 +2152,7 @@ Get-Content .\SHA256SUMS.txt
 <li><code>validator/rules/*</code> — 검증 규칙 정의</li>
 <li><code>VERSIONING.md</code>, <code>GOVERNANCE.md</code>, <code>SECURITY.md</code> 등.</li>
 </ul>
-<h2 id="_5">리소스</h2>
+<h2 id="_6">리소스</h2>
 <ul>
 <li><strong>버전 이력 테이블</strong>: <a href="../standard/versions/">표준 &gt; 버전</a> — 모든 릴리스 자산(PDF, ZIP, SHA256)에 대한 직접 링크가 있는 버전 테이블</li>
 <li><strong>변경로그 (사양)</strong>: <a href="../standard/current/08-changelog/">표준 &gt; 현재 &gt; 변경로그</a> — 규범적 및 비규범적 변경 이력.</li>
@@ -2145,7 +2160,7 @@ Get-Content .\SHA256SUMS.txt
 <li><strong>마이그레이션 가이드</strong>: <a href="https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md">MIGRATION.md</a> — 호환성 깨는 변경에 대한 업그레이드 경로.</li>
 </ul>
 <p>거버넌스 및 버전 정책은 <a href="../governance/">거버넌스</a>를 참조하세요.</p>
-<h2 id="_6">제출 패키지 준비</h2>
+<h2 id="_7">제출 패키지 준비</h2>
 <p>감사 제출을 위해 증거를 준비할 때:</p>
 <ol>
 <li><strong>증거 번들 생성</strong>: <a href="../artifacts/evidence-bundle/">증거 번들</a> 및 <a href="../artifacts/minimum-evidence/">최소 증거 요구사항</a>에 따라 EV 레코드, 딕셔너리, 요약 및 변경 로그를 생성합니다.</li>
@@ -2178,7 +2193,7 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </li>
 </ol>
 <p>전체 준비 가이드는 <a href="../governance/trust-package/">신뢰 패키지</a>를 참조하세요.</p>
-<h2 id="_7">감사자용: 검증 절차</h2>
+<h2 id="_8">감사자용: 검증 절차</h2>
 <p>증거 제출을 받는 감사자는 무결성 및 구조를 확인해야 합니다:</p>
 <ol>
 <li><strong>체크섬 확인</strong>: 체크섬 검증(Linux: <code>sha256sum -c</code>, macOS: <code>shasum -a 256 -c</code>, Windows: <code>Get-FileHash</code>)을 실행하여 파일 무결성 확인</li>
@@ -2187,8 +2202,8 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </ol>
 <p>!!! tip "독립적으로 도구 획득"
     감사자는 검증기와 스키마를 제출 당사자가 아닌 공식 AIMO 표준 릴리스에서 직접 다운로드해야 합니다.</p>
-<p>전체 검증 절차는 <a href="../governance/trust-package/">신뢰 패키지</a>를 참조하세요.</p>
-<h2 id="_8">과대 주장 금지 선언</h2>
+<p>전체 검증 절차(체크섬, 증명, 단계별)는 <strong><a href="../standard/versions/">Standard → 버전 → 검증 절차</a></strong>를 참조하세요. 감사자 준비 자료는 <a href="../governance/trust-package/">신뢰 패키지</a>도 참조하세요.</p>
+<h2 id="_9">과대 주장 금지 선언</h2>
 <p>!!! warning "중요"
     AIMO 표준은 <strong>설명 가능성 및 증거 준비</strong>를 지원합니다. 법률 자문을 제공하거나, 컴플라이언스를 보장하거나, 어떤 규정 또는 프레임워크에 대한 적합성을 인증하지 <strong>않습니다</strong>. 채택자는 권위 있는 텍스트와 대조하여 주장을 확인하고 적절한 전문 자문을 받아야 합니다.</p>
 <p>범위, 가정 및 채택자 책임은 <a href="../governance/responsibility-boundary/">책임 경계</a>를 참조하세요.</p>

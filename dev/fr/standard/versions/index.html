@@ -1030,6 +1030,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#source-unique-de-verite-ssot-pour-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source unique de vérité (SSOT) pour « latest »
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-les-auditeurs-url-canonique-et-epinglage-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour les auditeurs : URL canonique et épinglage de version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#couches-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couches de version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#procedure-de-verification" class="md-nav__link">
     <span class="md-ellipsis">
       Procédure de vérification
@@ -2146,6 +2173,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#source-unique-de-verite-ssot-pour-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source unique de vérité (SSOT) pour « latest »
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-les-auditeurs-url-canonique-et-epinglage-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour les auditeurs : URL canonique et épinglage de version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#couches-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couches de version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#procedure-de-verification" class="md-nav__link">
     <span class="md-ellipsis">
       Procédure de vérification
@@ -2329,6 +2383,71 @@
 </table>
 <p>!!! note "Source de données"
     Ce tableau des versions est synchronisé avec <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a>. Chaque tag de version (<code>vX.Y.Z</code>) correspond à un instantané figé de la spécification.</p>
+<h2 id="source-unique-de-verite-ssot-pour-latest">Source unique de vérité (SSOT) pour « latest »</h2>
+<p>La <strong>définition faisant autorité de « latest »</strong> est le tag <strong>latest</strong> des <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a> (<code>releases/latest</code>). Le chemin du site <code>/latest/</code> redirige toujours vers ce release. Il n’y a pas de « latest site » séparé : le workflow de release déploie la version taguée et la définit comme alias <code>latest</code> en une seule étape.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tag latest de GitHub Release</strong></td>
+<td>SSOT — seule définition du « release actuel »</td>
+</tr>
+<tr>
+<td><strong>Tableau des versions</strong> (cette page)</td>
+<td>Synchronisé avec les releases via le workflow ; doit correspondre au tag avant déploiement</td>
+</tr>
+<tr>
+<td><strong>Changelog</strong></td>
+<td>Historique des changements normatif ; les notes de release s’y réfèrent</td>
+</tr>
+<tr>
+<td><strong>Site <code>/latest/</code></strong></td>
+<td>Redirection vers la même version que GitHub Release latest</td>
+</tr>
+</tbody>
+</table>
+<p>Pour les détails du processus de release, voir <a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> et le <a href="https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml">workflow release</a>. Le tableau des versions et le Changelog sont mis à jour dans le cadre de la préparation du release pour qu’ils correspondent toujours à la version déployée.</p>
+<h2 id="pour-les-auditeurs-url-canonique-et-epinglage-de-version">Pour les auditeurs : URL canonique et épinglage de version</h2>
+<p>Pour citer une version précise dans les rapports d’audit et assurer la reproductibilité :</p>
+<ol>
+<li><strong>URL canonique</strong> : Utilisez l’URL de documentation figée pour cette version, ex. <code>https://standard.aimoaas.com/0.0.3/</code> (remplacez <code>0.0.3</code> par la version utilisée).</li>
+<li><strong>Épinglage de version</strong> : Enregistrez le <strong>tag de release</strong> (ex. <code>v0.0.3</code>) et éventuellement le <strong>hash de commit</strong> depuis la page <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Release</a>. Cela permet de vérifier de manière indépendante que le snapshot de spécification correspond aux artefacts du release (PDF, ZIP, checksums).</li>
+<li><strong>Alignement des preuves</strong> : Indiquez dans votre soumission avec quelle version d’AIMO Standard (ex. <code>v0.0.3</code>) votre evidence bundle est aligné, et obtenez le validateur et les schémas depuis ce même release.</li>
+</ol>
+<h2 id="couches-de-version">Couches de version</h2>
+<p>AIMO Standard utilise trois concepts de version. Pour le release actuel ils sont alignés ; dans les releases futurs ils pourront être versionnés indépendamment.</p>
+<table>
+<thead>
+<tr>
+<th>Couche</th>
+<th>Description</th>
+<th>Où cela apparaît</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Version Standard</strong> (site/release)</td>
+<td>Le tag de release et le snapshot de documentation (ex. <code>v0.0.3</code>).</td>
+<td>Tableau des versions, GitHub Releases, URLs <code>/X.Y.Z/</code>.</td>
+</tr>
+<tr>
+<td><strong>Version du schéma Taxonomy</strong></td>
+<td>Version du système de codes et des définitions taxonomy/schéma.</td>
+<td><code>taxonomy_version</code> dans les manifestes ; <code>$id</code> du schéma ou docs.</td>
+</tr>
+<tr>
+<td><strong>Version du contenu Dictionary</strong></td>
+<td>Version des entrées du dictionnaire (codes et définitions).</td>
+<td>Métadonnées du dictionnaire ; identique à taxonomy pour 0.0.x.</td>
+</tr>
+</tbody>
+</table>
+<p>Lorsqu’on cite « AIMO Standard vX.Y.Z », la <strong>version Standard</strong> est celle qui définit le snapshot canonique. Le Validator et les Minimum Evidence Requirements se réfèrent aux artefacts et schémas de ce release.</p>
 <h2 id="procedure-de-verification">Procédure de vérification</h2>
 <p>Les auditeurs et implémenteurs doivent vérifier l'intégrité des téléchargements en utilisant les checksums SHA-256 :</p>
 <h3 id="1-telecharger-les-actifs-de-version">1. Télécharger les actifs de version</h3>

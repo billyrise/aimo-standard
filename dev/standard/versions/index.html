@@ -1025,6 +1025,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#single-source-of-truth-ssot-for-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single source of truth (SSOT) for "latest"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-auditors-canonical-url-and-version-pinning" class="md-nav__link">
+    <span class="md-ellipsis">
+      For auditors: Canonical URL and version pinning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version layers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verification-procedure" class="md-nav__link">
     <span class="md-ellipsis">
       Verification Procedure
@@ -2141,6 +2168,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#single-source-of-truth-ssot-for-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single source of truth (SSOT) for "latest"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-auditors-canonical-url-and-version-pinning" class="md-nav__link">
+    <span class="md-ellipsis">
+      For auditors: Canonical URL and version pinning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version layers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verification-procedure" class="md-nav__link">
     <span class="md-ellipsis">
       Verification Procedure
@@ -2333,13 +2387,79 @@
 </table>
 <p>!!! note "Data Source"
     This version table is synchronized with <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a>. Each release tag (<code>vX.Y.Z</code>) corresponds to a frozen snapshot of the specification.</p>
+<h2 id="single-source-of-truth-ssot-for-latest">Single source of truth (SSOT) for "latest"</h2>
+<p>The <strong>authoritative definition of "latest"</strong> is the <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a> <strong>latest</strong> tag (<code>releases/latest</code>). The site path <code>/latest/</code> is a redirect that always points to that release. There is no separate "site latest" — the release workflow deploys the tagged version and sets it as the <code>latest</code> alias in one step.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub Release latest tag</strong></td>
+<td>SSOT — the only definition of "current release"</td>
+</tr>
+<tr>
+<td><strong>Versions table</strong> (this page)</td>
+<td>Synchronized with releases via release workflow; must match the tag before deploy</td>
+</tr>
+<tr>
+<td><strong>Changelog</strong></td>
+<td>Normative change history; release notes reference it</td>
+</tr>
+<tr>
+<td><strong>Site <code>/latest/</code></strong></td>
+<td>Redirect to the same version as GitHub Release latest</td>
+</tr>
+</tbody>
+</table>
+<p>For release process details, see <a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> and the <a href="https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml">release workflow</a>. The Versions table and Changelog are updated as part of release preparation so that they always match the deployed version.</p>
+<h2 id="for-auditors-canonical-url-and-version-pinning">For auditors: Canonical URL and version pinning</h2>
+<p>To cite a specific version in audit reports and ensure reproducibility:</p>
+<ol>
+<li><strong>Canonical URL</strong>: Use the frozen documentation URL for that version, e.g.<br />
+<code>https://standard.aimoaas.com/0.0.3/</code> (replace <code>0.0.3</code> with the version you used).</li>
+<li><strong>Version pinning</strong>: Record the <strong>release tag</strong> (e.g. <code>v0.0.3</code>) and optionally the <strong>commit hash</strong> from the <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Release</a> page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).</li>
+<li><strong>Evidence alignment</strong>: State in your submission which AIMO Standard version (e.g. <code>v0.0.3</code>) your evidence bundle aligns with, and obtain the validator and schemas from that same release.</li>
+</ol>
+<h2 id="version-layers">Version layers</h2>
+<p>AIMO Standard uses three version concepts. For the current release they are aligned; future releases may version them independently.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Description</th>
+<th>Where it appears</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standard version</strong> (site/release)</td>
+<td>The release tag and documentation snapshot (e.g. <code>v0.0.3</code>).</td>
+<td>Versions table, GitHub Releases, <code>/X.Y.Z/</code> URLs.</td>
+</tr>
+<tr>
+<td><strong>Taxonomy schema version</strong></td>
+<td>Version of the code system and taxonomy/schema definitions.</td>
+<td><code>taxonomy_version</code> in manifests; schema <code>$id</code> or docs.</td>
+</tr>
+<tr>
+<td><strong>Dictionary content version</strong></td>
+<td>Version of the dictionary entries (codes and definitions).</td>
+<td>Dictionary metadata; same as taxonomy for 0.0.x.</td>
+</tr>
+</tbody>
+</table>
+<p>When citing "AIMO Standard vX.Y.Z", the <strong>Standard version</strong> is the one that defines the canonical snapshot. The Validator and Minimum Evidence Requirements refer to the artifacts and schemas of that release.</p>
 <h2 id="verification-procedure">Verification Procedure</h2>
 <p>Auditors and implementers should verify download integrity using SHA-256 checksums:</p>
 <h3 id="1-download-release-assets">1. Download Release Assets</h3>
 <p>=== "Linux / macOS"</p>
 <pre><code>```bash
 # Download all assets for a specific version
-VERSION=v0.0.2
+VERSION=v0.0.3
 BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
 curl -LO "${BASE_URL}/trust_package.pdf"
@@ -2428,7 +2548,7 @@ Get-Content .\SHA256SUMS.txt
 <p>All release assets include cryptographically signed build provenance attestations generated by GitHub Actions. This allows you to verify that assets were built in the official repository without tampering.</p>
 <p><strong>Prerequisites</strong>: Install <a href="https://cli.github.com/">GitHub CLI</a> (<code>gh</code>)</p>
 <pre><code class="language-bash"># Download release assets using GitHub CLI
-VERSION=v0.0.2
+VERSION=v0.0.3
 gh release download &quot;$VERSION&quot; --repo billyrise/aimo-standard
 
 # Verify attestation for each asset

@@ -1957,6 +1957,15 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
+      検証手順（恒久ページ）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       リリースアセット
     </span>
   </a>
@@ -1965,7 +1974,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       ダウンロードの検証
     </span>
@@ -1988,7 +1997,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       リソース
     </span>
@@ -1997,7 +2006,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       提出パッケージの準備
     </span>
@@ -2006,7 +2015,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       監査人向け：検証手順
     </span>
@@ -2015,7 +2024,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       非過剰主張ステートメント
     </span>
@@ -2058,8 +2067,14 @@
 <h1 id="releases">リリース（Releases）</h1>
 <p>本セクションは、バージョン付きリリース、changelog、移行、配布アーティファクトのハブです。</p>
 <h2 id="_1">最新リリースのダウンロード</h2>
-<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
-<h2 id="_2">リリースアセット</h2>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong> — これが「latest」リリースの単一の真実の情報源です。サイトの <code>/latest/</code> は同じバージョンへリダイレクトします。</p>
+<h2 id="_2">検証手順（恒久ページ）</h2>
+<p>監査人向けの<strong>検証手順</strong>（資産のダウンロード、チェックサム検証、ビルド来歴証明）は PDF に限定されず、恒久の Web ページでも参照できます。</p>
+<ul>
+<li><strong><a href="../standard/versions/">Standard → Versions → 検証手順</a></strong> — Linux/macOS/Windows でのステップごとのチェックサム検証とビルド来歴証明</li>
+</ul>
+<p>監査成果物で検証手順を記載する際はこのページを参照してください。</p>
+<h2 id="_3">リリースアセット</h2>
 <p>各公式リリース（<code>vX.Y.Z</code> タグ）には以下が含まれます：</p>
 <table>
 <thead>
@@ -2087,7 +2102,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_3">ダウンロードの検証</h3>
+<h3 id="_4">ダウンロードの検証</h3>
 <p>ダウンロード後、チェックサムでファイルの整合性を検証できます：</p>
 <p>=== "Linux"</p>
 <pre><code>```bash
@@ -2137,7 +2152,7 @@ Get-Content .\SHA256SUMS.txt
 <li><code>validator/rules/*</code> — 検証ルール定義</li>
 <li><code>VERSIONING.md</code>、<code>GOVERNANCE.md</code>、<code>SECURITY.md</code> など</li>
 </ul>
-<h2 id="_4">リソース</h2>
+<h2 id="_5">リソース</h2>
 <ul>
 <li><strong>バージョン履歴テーブル</strong>: <a href="../standard/versions/">Standard &gt; Versions</a> — 全リリースアセット（PDF、ZIP、SHA256）への直接リンク付きバージョンテーブル</li>
 <li><strong>Changelog（仕様）</strong>: <a href="../standard/current/08-changelog/">Standard &gt; Current &gt; Changelog</a> — 規範・非規範の変更履歴。</li>
@@ -2145,7 +2160,7 @@ Get-Content .\SHA256SUMS.txt
 <li><strong>移行ガイド</strong>: <a href="https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md">MIGRATION.md</a> — 破壊的変更のアップグレードパス。</li>
 </ul>
 <p>ガバナンスとバージョニングポリシーは <a href="../governance/">Governance</a> を参照。</p>
-<h2 id="_5">提出パッケージの準備</h2>
+<h2 id="_6">提出パッケージの準備</h2>
 <p>監査提出用の証跡を準備する際：</p>
 <ol>
 <li><strong>Evidence Bundle の作成</strong>: <a href="../artifacts/evidence-bundle/">Evidence Bundle</a> と <a href="../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> に従い、EV レコード、Dictionary、Summary、Change Log を作成する。</li>
@@ -2178,7 +2193,7 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </li>
 </ol>
 <p>完全な準備ガイドは <a href="../governance/trust-package/">Trust Package</a> を参照。</p>
-<h2 id="_6">監査人向け：検証手順</h2>
+<h2 id="_7">監査人向け：検証手順</h2>
 <p>証跡提出物を受領した監査人は、完全性と構造を検証すべきである：</p>
 <ol>
 <li><strong>チェックサム検証</strong>: チェックサム検証（Linux: <code>sha256sum -c</code>、macOS: <code>shasum -a 256 -c</code>、Windows: <code>Get-FileHash</code>）を実行してファイルの完全性を確認</li>
@@ -2187,8 +2202,8 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </ol>
 <p>!!! tip "ツールを独立に取得"
     監査人はバリデータとスキーマを、提出者からではなく、公式 AIMO Standard リリースから直接ダウンロードすべきである。</p>
-<p>完全な検証手順は <a href="../governance/trust-package/">Trust Package</a> を参照。</p>
-<h2 id="_7">非過剰主張ステートメント</h2>
+<p>完全な検証手順（チェックサム、証明、ステップごと）は <strong><a href="../standard/versions/">Standard → Versions → 検証手順</a></strong> を参照。監査対応資料は <a href="../governance/trust-package/">Trust Package</a> も参照。</p>
+<h2 id="_8">非過剰主張ステートメント</h2>
 <p>!!! warning "重要"
     AIMO Standard は<strong>説明可能性と証跡準備</strong>を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も<strong>行わない</strong>。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。</p>
 <p>スコープ、前提条件、採用者責任は <a href="../governance/responsibility-boundary/">責任境界</a> を参照。</p>

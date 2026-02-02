@@ -1030,6 +1030,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fuente-unica-de-verdad-ssot-para-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuente única de verdad (SSOT) para "latest"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-auditores-url-canonica-y-fijacion-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para auditores: URL canónica y fijación de versión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capas-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capas de versión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#procedimiento-de-verificacion" class="md-nav__link">
     <span class="md-ellipsis">
       Procedimiento de Verificación
@@ -2146,6 +2173,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fuente-unica-de-verdad-ssot-para-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuente única de verdad (SSOT) para "latest"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-auditores-url-canonica-y-fijacion-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para auditores: URL canónica y fijación de versión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capas-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capas de versión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#procedimiento-de-verificacion" class="md-nav__link">
     <span class="md-ellipsis">
       Procedimiento de Verificación
@@ -2329,6 +2383,71 @@
 </table>
 <p>!!! note "Fuente de Datos"
     Esta tabla de versiones está sincronizada con <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a>. Cada tag de release (<code>vX.Y.Z</code>) corresponde a un snapshot congelado de la especificación.</p>
+<h2 id="fuente-unica-de-verdad-ssot-para-latest">Fuente única de verdad (SSOT) para "latest"</h2>
+<p>La <strong>definición autorizada de "latest"</strong> es el tag <strong>latest</strong> de <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a> (<code>releases/latest</code>). La ruta del sitio <code>/latest/</code> redirige siempre a ese release. No existe un "latest del sitio" separado: el flujo de release despliega la versión etiquetada y la establece como alias <code>latest</code> en un solo paso.</p>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tag latest de GitHub Release</strong></td>
+<td>SSOT — única definición de "release actual"</td>
+</tr>
+<tr>
+<td><strong>Tabla de versiones</strong> (esta página)</td>
+<td>Sincronizada con releases vía flujo de release; debe coincidir con el tag antes del despliegue</td>
+</tr>
+<tr>
+<td><strong>Changelog</strong></td>
+<td>Historial de cambios normativo; las notas de release lo referencian</td>
+</tr>
+<tr>
+<td><strong>Sitio <code>/latest/</code></strong></td>
+<td>Redirección a la misma versión que GitHub Release latest</td>
+</tr>
+</tbody>
+</table>
+<p>Para detalles del proceso de release, véase <a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> y el <a href="https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml">flujo de release</a>. La tabla de versiones y el Changelog se actualizan como parte de la preparación del release para que coincidan siempre con la versión desplegada.</p>
+<h2 id="para-auditores-url-canonica-y-fijacion-de-version">Para auditores: URL canónica y fijación de versión</h2>
+<p>Para citar una versión concreta en informes de auditoría y garantizar reproducibilidad:</p>
+<ol>
+<li><strong>URL canónica</strong>: Use la URL de documentación fija de esa versión, p. ej. <code>https://standard.aimoaas.com/0.0.3/</code> (sustituya <code>0.0.3</code> por la versión utilizada).</li>
+<li><strong>Fijación de versión</strong>: Registre el <strong>tag de release</strong> (p. ej. <code>v0.0.3</code>) y opcionalmente el <strong>hash de commit</strong> de la página <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Release</a>. Así se puede verificar de forma independiente que el snapshot de la especificación coincide con los activos del release (PDF, ZIP, checksums).</li>
+<li><strong>Alineación de evidencia</strong>: Indique en su envío con qué versión de AIMO Standard (p. ej. <code>v0.0.3</code>) se alinea su evidence bundle, y obtenga el validador y los esquemas del mismo release.</li>
+</ol>
+<h2 id="capas-de-version">Capas de versión</h2>
+<p>AIMO Standard utiliza tres conceptos de versión. En el release actual están alineados; en releases futuros pueden versionarse de forma independiente.</p>
+<table>
+<thead>
+<tr>
+<th>Capa</th>
+<th>Descripción</th>
+<th>Dónde aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Versión Standard</strong> (sitio/release)</td>
+<td>El tag de release y el snapshot de documentación (p. ej. <code>v0.0.3</code>).</td>
+<td>Tabla de versiones, GitHub Releases, URLs <code>/X.Y.Z/</code>.</td>
+</tr>
+<tr>
+<td><strong>Versión del esquema Taxonomy</strong></td>
+<td>Versión del sistema de códigos y definiciones taxonomy/esquema.</td>
+<td><code>taxonomy_version</code> en manifiestos; <code>$id</code> del esquema o docs.</td>
+</tr>
+<tr>
+<td><strong>Versión del contenido Dictionary</strong></td>
+<td>Versión de las entradas del diccionario (códigos y definiciones).</td>
+<td>Metadatos del diccionario; igual que taxonomy en 0.0.x.</td>
+</tr>
+</tbody>
+</table>
+<p>Al citar "AIMO Standard vX.Y.Z", la <strong>versión Standard</strong> es la que define el snapshot canónico. El Validator y los Minimum Evidence Requirements se refieren a los artefactos y esquemas de ese release.</p>
 <h2 id="procedimiento-de-verificacion">Procedimiento de Verificación</h2>
 <p>Los auditores e implementadores deben verificar la integridad de descarga usando checksums SHA-256:</p>
 <h3 id="1-descargar-activos-de-release">1. Descargar Activos de Release</h3>

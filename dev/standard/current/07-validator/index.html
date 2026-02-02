@@ -960,6 +960,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-the-validator-validates-required-file-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      What the Validator validates (required file set)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#validator-in-practice" class="md-nav__link">
     <span class="md-ellipsis">
       Validator in practice
@@ -2199,6 +2208,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-the-validator-validates-required-file-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      What the Validator validates (required file set)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#validator-in-practice" class="md-nav__link">
     <span class="md-ellipsis">
       Validator in practice
@@ -2431,6 +2449,36 @@
 <h1 id="validator">Validator</h1>
 <p>The AIMO Validator ensures that Evidence Packs and related artifacts conform to the AIMO Standard schemas and requirements.</p>
 <p>See also: <a href="../../../governance/human-oversight-protocol/">Human Oversight Protocol</a> — responsibility boundary for machine vs. human review.</p>
+<h2 id="what-the-validator-validates-required-file-set">What the Validator validates (required file set)</h2>
+<p>The Validator checks the <strong>Evidence Bundle</strong> structure and related artifacts. For a minimal submission, the following are required:</p>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Purpose</th>
+<th>Canonical location (per release)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Evidence Pack Manifest</strong></td>
+<td>Root manifest (<code>root.json</code> or equivalent)</td>
+<td>Schemas: <a href="https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/evidence_pack_manifest.schema.json">evidence_pack_manifest.schema.json</a>; release ZIP: <code>schemas/jsonschema/</code></td>
+</tr>
+<tr>
+<td><strong>Dictionary</strong></td>
+<td>Taxonomy codes used in the manifest</td>
+<td><a href="../../../artifacts/evidence-bundle/">Evidence Bundle</a> structure; <a href="../05-dictionary/">Dictionary</a> spec</td>
+</tr>
+<tr>
+<td><strong>Minimum Evidence Requirements</strong></td>
+<td>Checklist for auditors and implementers</td>
+<td><a href="../../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a></td>
+</tr>
+</tbody>
+</table>
+<p>The Validator does <strong>not</strong> guarantee legal or regulatory compliance; it checks structural conformance to the schemas and code system. For the full checklist of what evidence to include, see <a href="../../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a>.</p>
+<p><strong>Canonical URLs for a specific version</strong>: Obtain schemas and the validator from the <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Release</a> for the version you are aligning with (e.g. <code>v0.0.3</code>). The release ZIP (<code>aimo-standard-artifacts.zip</code>) contains <code>schemas/jsonschema/</code>, templates, and validator rules.</p>
 <h2 id="validator-in-practice">Validator in practice</h2>
 <p>For a 30-second quickstart (install, run, interpret output), see <a href="../../../validator/">Validator hub</a>.</p>
 <h2 id="validator-mvp-requirements">Validator MVP Requirements</h2>
@@ -2660,21 +2708,25 @@ Validation: PASSED
 <thead>
 <tr>
 <th>Schema</th>
-<th>Location</th>
+<th>Location (repository)</th>
+<th>In release ZIP</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Evidence Pack Manifest</td>
-<td><code>source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json</code></td>
+<td><a href="https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/evidence_pack_manifest.schema.json">schemas/jsonschema/evidence_pack_manifest.schema.json</a></td>
+<td><code>schemas/jsonschema/evidence_pack_manifest.schema.json</code></td>
 </tr>
 <tr>
 <td>Taxonomy Pack</td>
-<td><code>source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json</code></td>
+<td><a href="https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/aimo-dictionary.schema.json">schemas/jsonschema/aimo-dictionary.schema.json</a> (dictionary); taxonomy pack in source_pack</td>
+<td><code>schemas/jsonschema/</code></td>
 </tr>
 <tr>
 <td>Changelog</td>
-<td><code>source_pack/03_taxonomy/schemas/changelog.schema.json</code></td>
+<td><a href="https://github.com/billyrise/aimo-standard/tree/main/schemas/jsonschema">schemas/jsonschema/</a> (see repository)</td>
+<td><code>schemas/jsonschema/</code></td>
 </tr>
 </tbody>
 </table>

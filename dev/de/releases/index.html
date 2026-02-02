@@ -1955,6 +1955,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verifizierungsverfahren-dauerhafte-webseite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifizierungsverfahren (dauerhafte Webseite)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#release-assets" class="md-nav__link">
     <span class="md-ellipsis">
       Release-Assets
@@ -2058,7 +2067,13 @@
 <h1 id="releases">Releases</h1>
 <p>Dieser Abschnitt ist ein Hub für versionierte Releases, Changelog, Migration und Verteilungsartefakte.</p>
 <h2 id="neuestes-release-herunterladen">Neuestes Release herunterladen</h2>
-<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong> — dies ist die einzige autoritative Quelle für das „latest“-Release. Der Site-Pfad <code>/latest/</code> leitet auf dieselbe Version weiter.</p>
+<h2 id="verifizierungsverfahren-dauerhafte-webseite">Verifizierungsverfahren (dauerhafte Webseite)</h2>
+<p>Das vollständige <strong>Verifizierungsverfahren</strong> (Download der Assets, Prüfsummenverifizierung, Build-Provenienz-Attestierung) ist als dauerhafte Webseite verfügbar, nicht nur als PDF:</p>
+<ul>
+<li><strong><a href="../standard/versions/">Standard → Versionen → Verifizierungsverfahren</a></strong> — schrittweise Prüfsummenverifizierung (Linux/macOS/Windows) und Attestierung der Provenienz.</li>
+</ul>
+<p>Nutzen Sie diese Seite, wenn Sie Release-Assets verifizieren oder Verifizierungsschritte in Prüfungsdeliverables dokumentieren müssen.</p>
 <h2 id="release-assets">Release-Assets</h2>
 <p>Jedes offizielle Release (<code>vX.Y.Z</code>-Tag) enthält:</p>
 <table>
@@ -2187,7 +2202,7 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </ol>
 <p>!!! tip "Tools unabhängig beziehen"
     Prüfer sollten Validator und Schemas direkt vom offiziellen AIMO Standard Release herunterladen, nicht von der einreichenden Partei.</p>
-<p>Für das vollständige Verifizierungsverfahren siehe <a href="../governance/trust-package/">Trust Package</a>.</p>
+<p>Für das vollständige Verifizierungsverfahren (Prüfsummen, Attestierung, Schritt-für-Schritt) siehe <strong><a href="../standard/versions/">Standard → Versionen → Verifizierungsverfahren</a></strong>. Siehe auch <a href="../governance/trust-package/">Trust Package</a> für prüfungsbereite Materialien.</p>
 <h2 id="keine-uberbeanspruchung-erklarung">Keine-Überbeanspruchung-Erklärung</h2>
 <p>!!! warning "Wichtig"
     Der AIMO Standard unterstützt <strong>Erklärbarkeit und Evidence-Bereitschaft</strong>. Er bietet <strong>keine</strong> Rechtsberatung, garantiert keine Compliance und zertifiziert keine Konformität mit Vorschriften oder Frameworks. Anwender müssen Ansprüche gegen maßgebliche Texte verifizieren und bei Bedarf professionelle Beratung einholen.</p>

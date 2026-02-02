@@ -1955,6 +1955,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#procedure-de-verification-page-permanente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procédure de vérification (page permanente)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#actifs-de-version" class="md-nav__link">
     <span class="md-ellipsis">
       Actifs de version
@@ -2058,7 +2067,13 @@
 <h1 id="versions">Versions</h1>
 <p>Cette section est un centre pour les versions versionnées, changelog, migration et artefacts de distribution.</p>
 <h2 id="telecharger-la-derniere-version">Télécharger la dernière version</h2>
-<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong> — c’est la source unique de vérité du release « latest ». Le chemin du site <code>/latest/</code> redirige vers la même version.</p>
+<h2 id="procedure-de-verification-page-permanente">Procédure de vérification (page permanente)</h2>
+<p>La <strong>procédure de vérification</strong> complète (téléchargement des actifs, vérification des checksums, attestation de provenance) est disponible en page permanente, pas seulement en PDF :</p>
+<ul>
+<li><strong><a href="../standard/versions/">Standard → Versions → Procédure de vérification</a></strong> — vérification pas à pas des checksums (Linux/macOS/Windows) et attestation de provenance.</li>
+</ul>
+<p>Utilisez cette page lorsque vous devez vérifier les actifs de release ou documenter les étapes de vérification dans les livrables d’audit.</p>
 <h2 id="actifs-de-version">Actifs de version</h2>
 <p>Chaque version officielle (tag <code>vX.Y.Z</code>) inclut :</p>
 <table>
@@ -2187,7 +2202,7 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </ol>
 <p>!!! tip "Obtenir les outils de manière indépendante"
     Les auditeurs doivent télécharger le validateur et les schémas directement de la version officielle du standard AIMO, pas de la partie soumettante.</p>
-<p>Pour la procédure de vérification complète, voir <a href="../governance/trust-package/">Package de confiance</a>.</p>
+<p>Pour la procédure de vérification complète (checksums, attestation, pas à pas), voir <strong><a href="../standard/versions/">Standard → Versions → Procédure de vérification</a></strong>. Voir aussi <a href="../governance/trust-package/">Package de confiance</a> pour les matériaux prêts pour les auditeurs.</p>
 <h2 id="declaration-de-non-declaration-excessive">Déclaration de non-déclaration excessive</h2>
 <p>!!! warning "Important"
     Le standard AIMO soutient <strong>l'explicabilité et la préparation des preuves</strong>. Il ne fournit <strong>pas</strong> d'avis juridique, ne garantit pas la conformité et ne certifie pas la conformité à une réglementation ou cadre. Les adopteurs doivent vérifier les déclarations par rapport aux textes faisant autorité et obtenir des conseils professionnels si nécessaire.</p>

@@ -1957,6 +1957,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      验证程序（永久网页）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       发布资产
     </span>
   </a>
@@ -1965,7 +1974,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       验证下载
     </span>
@@ -1988,7 +1997,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       资源
     </span>
@@ -1997,7 +2006,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       准备您的提交包
     </span>
@@ -2006,7 +2015,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       审计师：验证程序
     </span>
@@ -2015,7 +2024,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       不过度声明声明
     </span>
@@ -2058,8 +2067,14 @@
 <h1 id="_1">发布</h1>
 <p>本节是版本化发布、变更日志、迁移和分发工件的中心。</p>
 <h2 id="_2">下载最新发布</h2>
-<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
-<h2 id="_3">发布资产</h2>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong> — 此为“latest”发布的单一事实来源。站点路径 <code>/latest/</code> 会重定向到同一版本。</p>
+<h2 id="_3">验证程序（永久网页）</h2>
+<p>完整的<strong>验证程序</strong>（下载资产、校验和验证、构建来源证明）以永久网页形式提供，不仅限于 PDF：</p>
+<ul>
+<li><strong><a href="../standard/versions/">Standard → 版本 → 验证程序</a></strong> — 分步校验和验证（Linux/macOS/Windows）及来源证明。</li>
+</ul>
+<p>在需要验证发布资产或在审计交付物中记录验证步骤时，请使用本页。</p>
+<h2 id="_4">发布资产</h2>
 <p>每个官方发布（<code>vX.Y.Z</code> 标签）包括：</p>
 <table>
 <thead>
@@ -2087,7 +2102,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_4">验证下载</h3>
+<h3 id="_5">验证下载</h3>
 <p>下载后，使用校验和验证文件完整性：</p>
 <p>=== "Linux"</p>
 <pre><code>```bash
@@ -2137,7 +2152,7 @@ Get-Content .\SHA256SUMS.txt
 <li><code>validator/rules/*</code> — 验证规则定义</li>
 <li><code>VERSIONING.md</code>、<code>GOVERNANCE.md</code>、<code>SECURITY.md</code> 等</li>
 </ul>
-<h2 id="_5">资源</h2>
+<h2 id="_6">资源</h2>
 <ul>
 <li><strong>版本历史表</strong>：<a href="../standard/versions/">标准 &gt; 版本</a> — 带有所有发布资产（PDF、ZIP、SHA256）直接链接的版本表</li>
 <li><strong>变更日志（规范）</strong>：<a href="../standard/current/08-changelog/">标准 &gt; 当前 &gt; 变更日志</a> — 规范性和非规范性变更历史。</li>
@@ -2145,7 +2160,7 @@ Get-Content .\SHA256SUMS.txt
 <li><strong>迁移指南</strong>：<a href="https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md">MIGRATION.md</a> — 破坏性变更的升级路径。</li>
 </ul>
 <p>有关治理和版本管理政策，请参阅 <a href="../governance/">治理</a>。</p>
-<h2 id="_6">准备您的提交包</h2>
+<h2 id="_7">准备您的提交包</h2>
 <p>准备审计提交的证据时：</p>
 <ol>
 <li><strong>创建您的证据包</strong>：按照 <a href="../artifacts/evidence-bundle/">证据包</a> 和 <a href="../artifacts/minimum-evidence/">最低证据要求</a> 创建 EV 记录、字典、摘要和变更日志。</li>
@@ -2178,7 +2193,7 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </li>
 </ol>
 <p>有关完整的准备指南，请参阅 <a href="../governance/trust-package/">信任包</a>。</p>
-<h2 id="_7">审计师：验证程序</h2>
+<h2 id="_8">审计师：验证程序</h2>
 <p>收到证据提交的审计师应验证完整性和结构：</p>
 <ol>
 <li><strong>验证校验和</strong>：运行校验和验证（Linux：<code>sha256sum -c</code>、macOS：<code>shasum -a 256 -c</code>、Windows：<code>Get-FileHash</code>）以确认文件完整性</li>
@@ -2187,8 +2202,8 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </ol>
 <p>!!! tip "独立获取工具"
     审计师应直接从官方 AIMO 标准发布下载验证器和模式，而不是从提交方获取。</p>
-<p>有关完整的验证程序，请参阅 <a href="../governance/trust-package/">信任包</a>。</p>
-<h2 id="_8">不过度声明声明</h2>
+<p>有关完整的验证程序（校验和、证明、分步），请参阅 <strong><a href="../standard/versions/">Standard → 版本 → 验证程序</a></strong>。另见 <a href="../governance/trust-package/">信任包</a> 获取审计就绪材料。</p>
+<h2 id="_9">不过度声明声明</h2>
 <p>!!! warning "重要提示"
     AIMO 标准支持<strong>可解释性和证据就绪</strong>。它<strong>不</strong>提供法律建议、保证合规或认证符合任何法规或框架。采用者必须根据权威文本验证声明，并在适当时获取专业建议。</p>
 <p>有关范围、假设和采用者责任，请参阅 <a href="../governance/responsibility-boundary/">责任边界</a>。</p>

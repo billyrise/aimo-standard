@@ -1030,6 +1030,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#single-source-of-truth-ssot-fur-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Source of Truth (SSOT) für „latest“
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fur-prufer-kanonische-url-und-versionsfixierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Für Prüfer: Kanonische URL und Versionsfixierung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionsschichten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versionsschichten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verifizierungsverfahren" class="md-nav__link">
     <span class="md-ellipsis">
       Verifizierungsverfahren
@@ -2146,6 +2173,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#single-source-of-truth-ssot-fur-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Source of Truth (SSOT) für „latest“
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fur-prufer-kanonische-url-und-versionsfixierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Für Prüfer: Kanonische URL und Versionsfixierung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionsschichten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versionsschichten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verifizierungsverfahren" class="md-nav__link">
     <span class="md-ellipsis">
       Verifizierungsverfahren
@@ -2329,6 +2383,71 @@
 </table>
 <p>!!! note "Datenquelle"
     Diese Versionstabelle ist mit <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a> synchronisiert. Jedes Release-Tag (<code>vX.Y.Z</code>) entspricht einem eingefrorenen Snapshot der Spezifikation.</p>
+<h2 id="single-source-of-truth-ssot-fur-latest">Single Source of Truth (SSOT) für „latest“</h2>
+<p>Die <strong>maßgebliche Definition von „latest“</strong> ist der <strong>latest</strong>-Tag der <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Releases</a> (<code>releases/latest</code>). Der Pfad <code>/latest/</code> der Website leitet immer auf dieses Release weiter. Es gibt kein separates „Site-latest“ — der Release-Workflow deployt die getaggte Version und setzt sie in einem Schritt als <code>latest</code>-Alias.</p>
+<table>
+<thead>
+<tr>
+<th>Quelle</th>
+<th>Rolle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub-Release latest-Tag</strong></td>
+<td>SSOT — einzige Definition des „aktuellen Releases“</td>
+</tr>
+<tr>
+<td><strong>Versionstabelle</strong> (diese Seite)</td>
+<td>Über Release-Workflow mit Releases synchronisiert; muss vor dem Deploy mit dem Tag übereinstimmen</td>
+</tr>
+<tr>
+<td><strong>Changelog</strong></td>
+<td>Normative Änderungshistorie; Release-Notes verweisen darauf</td>
+</tr>
+<tr>
+<td><strong>Site <code>/latest/</code></strong></td>
+<td>Weiterleitung auf dieselbe Version wie GitHub Release latest</td>
+</tr>
+</tbody>
+</table>
+<p>Details zum Release-Prozess siehe <a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> und <a href="https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml">Release-Workflow</a>. Versionstabelle und Changelog werden als Teil der Release-Vorbereitung aktualisiert, sodass sie stets mit der deployten Version übereinstimmen.</p>
+<h2 id="fur-prufer-kanonische-url-und-versionsfixierung">Für Prüfer: Kanonische URL und Versionsfixierung</h2>
+<p>Um eine bestimmte Version in Prüfberichten zu zitieren und Reproduzierbarkeit zu gewährleisten:</p>
+<ol>
+<li><strong>Kanonische URL</strong>: Verwenden Sie die feste Dokumentations-URL für diese Version, z. B. <code>https://standard.aimoaas.com/0.0.3/</code> (ersetzen Sie <code>0.0.3</code> durch die von Ihnen verwendete Version).</li>
+<li><strong>Versionsfixierung</strong>: Dokumentieren Sie den <strong>Release-Tag</strong> (z. B. <code>v0.0.3</code>) und optional den <strong>Commit-Hash</strong> von der <a href="https://github.com/billyrise/aimo-standard/releases">GitHub-Release</a>-Seite. So kann unabhängig geprüft werden, dass der Spezifikations-Snapshot mit den Release-Assets (PDF, ZIP, Checksums) übereinstimmt.</li>
+<li><strong>Evidenz-Ausrichtung</strong>: Geben Sie in Ihrer Einreichung an, mit welcher AIMO-Standard-Version (z. B. <code>v0.0.3</code>) Ihr Evidence Bundle übereinstimmt, und beziehen Sie Validator und Schemas aus demselben Release.</li>
+</ol>
+<h2 id="versionsschichten">Versionsschichten</h2>
+<p>AIMO Standard verwendet drei Versionsbegriffe. Beim aktuellen Release sind sie vereinheitlicht; in künftigen Releases können sie unabhängig versioniert werden.</p>
+<table>
+<thead>
+<tr>
+<th>Schicht</th>
+<th>Beschreibung</th>
+<th>Wo es erscheint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standard-Version</strong> (Site/Release)</td>
+<td>Der Release-Tag und der Dokumentations-Snapshot (z. B. <code>v0.0.3</code>).</td>
+<td>Versionstabelle, GitHub Releases, <code>/X.Y.Z/</code>-URLs.</td>
+</tr>
+<tr>
+<td><strong>Taxonomy-Schema-Version</strong></td>
+<td>Version des Codesystems und der Taxonomy-/Schema-Definitionen.</td>
+<td><code>taxonomy_version</code> in Manifesten; Schema-<code>$id</code> oder Docs.</td>
+</tr>
+<tr>
+<td><strong>Dictionary-Inhaltsversion</strong></td>
+<td>Version der Dictionary-Einträge (Codes und Definitionen).</td>
+<td>Dictionary-Metadaten; bei 0.0.x identisch mit Taxonomy.</td>
+</tr>
+</tbody>
+</table>
+<p>Bei der Zitation von „AIMO Standard vX.Y.Z“ definiert die <strong>Standard-Version</strong> den kanonischen Snapshot. Validator und Minimum Evidence Requirements beziehen sich auf die Artefakte und Schemas dieses Releases.</p>
 <h2 id="verifizierungsverfahren">Verifizierungsverfahren</h2>
 <p>Prüfer und Implementierer sollten die Download-Integrität mit SHA-256-Prüfsummen verifizieren:</p>
 <h3 id="1-release-assets-herunterladen">1. Release-Assets herunterladen</h3>

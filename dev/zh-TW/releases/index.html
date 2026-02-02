@@ -1957,6 +1957,15 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
+      驗證程序（永久網頁）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       發布資產
     </span>
   </a>
@@ -1965,7 +1974,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       驗證下載
     </span>
@@ -1988,7 +1997,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       資源
     </span>
@@ -1997,7 +2006,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       準備您的提交套件
     </span>
@@ -2006,7 +2015,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       稽核員：驗證程序
     </span>
@@ -2015,7 +2024,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       不過度聲明聲明
     </span>
@@ -2058,8 +2067,14 @@
 <h1 id="_1">發布</h1>
 <p>本節是版本化發布、變更日誌、遷移和發布人工產物的中心。</p>
 <h2 id="_2">下載最新發布</h2>
-<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
-<h2 id="_3">發布資產</h2>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong> — 此為「latest」發布的單一事實來源。網站路徑 <code>/latest/</code> 會重新導向至同一版本。</p>
+<h2 id="_3">驗證程序（永久網頁）</h2>
+<p>完整的<strong>驗證程序</strong>（下載資產、校驗和驗證、建置來源證明）以永久網頁形式提供，不限於 PDF：</p>
+<ul>
+<li><strong><a href="../standard/versions/">Standard → 版本 → 驗證程序</a></strong> — 分步校驗和驗證（Linux/macOS/Windows）及來源證明。</li>
+</ul>
+<p>當需要驗證發布資產或在稽核交付物中記錄驗證步驟時，請使用本頁。</p>
+<h2 id="_4">發布資產</h2>
 <p>每個官方發布（<code>vX.Y.Z</code> 標籤）包含：</p>
 <table>
 <thead>
@@ -2087,7 +2102,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_4">驗證下載</h3>
+<h3 id="_5">驗證下載</h3>
 <p>下載後，使用校驗和驗證檔案完整性：</p>
 <p>=== "Linux"</p>
 <pre><code>```bash
@@ -2137,7 +2152,7 @@ Get-Content .\SHA256SUMS.txt
 <li><code>validator/rules/*</code> — 驗證規則定義</li>
 <li><code>VERSIONING.md</code>、<code>GOVERNANCE.md</code>、<code>SECURITY.md</code> 等。</li>
 </ul>
-<h2 id="_5">資源</h2>
+<h2 id="_6">資源</h2>
 <ul>
 <li><strong>版本歷史表</strong>：<a href="../standard/versions/">標準 &gt; 版本</a> — 版本表，包含所有發布資產的直接連結（PDF、ZIP、SHA256）</li>
 <li><strong>變更日誌（規格）</strong>：<a href="../standard/current/08-changelog/">標準 &gt; 當前 &gt; 變更日誌</a> — 規範性和非規範性變更歷史。</li>
@@ -2145,7 +2160,7 @@ Get-Content .\SHA256SUMS.txt
 <li><strong>遷移指南</strong>：<a href="https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md">MIGRATION.md</a> — 破壞性變更的升級路徑。</li>
 </ul>
 <p>如需治理和版本政策，請參閱<a href="../governance/">治理</a>。</p>
-<h2 id="_6">準備您的提交套件</h2>
+<h2 id="_7">準備您的提交套件</h2>
 <p>準備稽核提交的證據時：</p>
 <ol>
 <li><strong>建立您的證據包</strong>：按照<a href="../artifacts/evidence-bundle/">證據包</a>和<a href="../artifacts/minimum-evidence/">最低證據要求</a>建立 EV 記錄、字典、摘要和變更日誌。</li>
@@ -2178,7 +2193,7 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </li>
 </ol>
 <p>如需完整的準備指南，請參閱<a href="../governance/trust-package/">信任套件</a>。</p>
-<h2 id="_7">稽核員：驗證程序</h2>
+<h2 id="_8">稽核員：驗證程序</h2>
 <p>收到證據提交的稽核員應驗證完整性和結構：</p>
 <ol>
 <li><strong>驗證校驗和</strong>：執行校驗和驗證（Linux：<code>sha256sum -c</code>、macOS：<code>shasum -a 256 -c</code>、Windows：<code>Get-FileHash</code>）以確認檔案完整性</li>
@@ -2187,8 +2202,8 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </ol>
 <p>!!! tip "獨立取得工具"
     稽核員應直接從官方 AIMO 標準發布下載驗證器和結構描述，而非從提交方取得。</p>
-<p>如需完整的驗證程序，請參閱<a href="../governance/trust-package/">信任套件</a>。</p>
-<h2 id="_8">不過度聲明聲明</h2>
+<p>如需完整的驗證程序（校驗和、證明、分步），請參閱 <strong><a href="../standard/versions/">Standard → 版本 → 驗證程序</a></strong>。另見 <a href="../governance/trust-package/">信任套件</a> 取得稽核就緒材料。</p>
+<h2 id="_9">不過度聲明聲明</h2>
 <p>!!! warning "重要"
     AIMO 標準支援<strong>可解釋性和證據就緒</strong>。它<strong>不</strong>提供法律建議、保證合規性或認證符合任何法規或框架。採用者必須對照權威文本驗證聲明並視情況取得專業建議。</p>
 <p>請參閱<a href="../governance/responsibility-boundary/">責任邊界</a>了解範圍、假設和採用者責任。</p>

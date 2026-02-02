@@ -1955,6 +1955,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#procedura-di-verifica-pagina-permanente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedura di verifica (pagina permanente)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#asset-di-release" class="md-nav__link">
     <span class="md-ellipsis">
       Asset di Release
@@ -2058,7 +2067,13 @@
 <h1 id="release">Release</h1>
 <p>Questa sezione è un hub per le release versionati, changelog, migrazione e artefatti di distribuzione.</p>
 <h2 id="scarica-lultima-release">Scarica l'Ultima Release</h2>
-<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong> — è la fonte unica di verità del release "latest". Il percorso del sito <code>/latest/</code> reindirizza alla stessa versione.</p>
+<h2 id="procedura-di-verifica-pagina-permanente">Procedura di verifica (pagina permanente)</h2>
+<p>La <strong>procedura di verifica</strong> completa (download degli asset, verifica dei checksum, attestazione di provenienza) è disponibile come pagina permanente, non solo in PDF:</p>
+<ul>
+<li><strong><a href="../standard/versions/">Standard → Versioni → Procedura di Verifica</a></strong> — verifica passo-passo dei checksum (Linux/macOS/Windows) e attestazione di provenienza.</li>
+</ul>
+<p>Utilizzare questa pagina quando è necessario verificare gli asset di release o documentare i passaggi di verifica nei deliverable di audit.</p>
 <h2 id="asset-di-release">Asset di Release</h2>
 <p>Ogni release ufficiale (tag <code>vX.Y.Z</code>) include:</p>
 <table>
@@ -2187,7 +2202,7 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </ol>
 <p>!!! tip "Ottenere gli strumenti indipendentemente"
     Gli auditor dovrebbero scaricare il validator e gli schemi direttamente dalla release ufficiale dello Standard AIMO, non dalla parte che invia.</p>
-<p>Per la procedura completa di verifica, vedere <a href="../governance/trust-package/">Trust Package</a>.</p>
+<p>Per la procedura completa di verifica (checksum, attestazione, passo-passo), vedere <strong><a href="../standard/versions/">Standard → Versioni → Procedura di Verifica</a></strong>. Vedere anche <a href="../governance/trust-package/">Trust Package</a> per materiali pronti per l'auditor.</p>
 <h2 id="dichiarazione-di-non-sovra-dichiarazione">Dichiarazione di non sovra-dichiarazione</h2>
 <p>!!! warning "Importante"
     Lo Standard AIMO supporta <strong>spiegabilità e prontezza dell'evidence</strong>. <strong>Non</strong> fornisce consulenza legale, garantisce conformità o certifica la conformità a qualsiasi normativa o framework. Gli adottanti devono verificare le dichiarazioni contro i testi autorevoli e ottenere consulenza professionale quando appropriato.</p>

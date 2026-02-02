@@ -1950,6 +1950,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-procedure-permanent-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification procedure (permanent web page)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#release-assets" class="md-nav__link">
     <span class="md-ellipsis">
       Release Assets
@@ -2053,7 +2062,13 @@
 <h1 id="releases">Releases</h1>
 <p>This section is a hub for versioned releases, changelog, migration, and distribution artifacts.</p>
 <h2 id="download-latest-release">Download Latest Release</h2>
-<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong></p>
+<p><strong><a href="https://github.com/billyrise/aimo-standard/releases/latest">GitHub Releases</a></strong> — this is the single source of truth for "latest" release. The site path <code>/latest/</code> redirects to the same version.</p>
+<h2 id="verification-procedure-permanent-web-page">Verification procedure (permanent web page)</h2>
+<p>The full <strong>auditor verification procedure</strong> (download assets, verify checksums, optional build provenance) is available as a permanent page and is not PDF-only:</p>
+<ul>
+<li><strong><a href="../standard/versions/#verification-procedure">Standard → Versions → Verification Procedure</a></strong> — step-by-step checksum verification (Linux/macOS/Windows) and build provenance attestation.</li>
+</ul>
+<p>Use this page when you need to verify release assets or document your verification steps in audit deliverables.</p>
 <h2 id="release-assets">Release Assets</h2>
 <p>Each official release (<code>vX.Y.Z</code> tag) includes:</p>
 <table>
@@ -2182,7 +2197,7 @@ Get-ChildItem *.json, *.pdf | ForEach-Object {
 </ol>
 <p>!!! tip "Obtain tools independently"
     Auditors should download the validator and schemas directly from the official AIMO Standard release, not from the submitting party.</p>
-<p>For the full verification procedure, see <a href="../governance/trust-package/">Trust Package</a>.</p>
+<p>For the full verification procedure (checksums, attestation, step-by-step), see <strong><a href="../standard/versions/#verification-procedure">Standard → Versions → Verification Procedure</a></strong>. See also <a href="../governance/trust-package/">Trust Package</a> for auditor-ready materials.</p>
 <h2 id="non-overclaim-statement">Non-overclaim statement</h2>
 <p>!!! warning "Important"
     The AIMO Standard supports <strong>explainability and evidence readiness</strong>. It does <strong>not</strong> provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.</p>
