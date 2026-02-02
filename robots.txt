@@ -1,0 +1,11 @@
+# AIMO Standard robots.txt
+# Canonical site: https://standard.aimoaas.com/
+
+User-agent: *
+Allow: /
+
+# Disallow dev preview (unreleased content)
+Disallow: /dev/
+
+# Sitemap location
+Sitemap: https://standard.aimoaas.com/sitemap.xml
