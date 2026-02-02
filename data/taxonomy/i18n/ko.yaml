@@ -1,0 +1,308 @@
+# AIMO Taxonomy - 한국어 Labels and Definitions
+# Template generated for: ko
+#
+# Fill in the translations below. For untranslated items, leave empty
+# and the system will fall back to English.
+
+language: "ko"
+language_name: "한국어"
+generated_date: "2026-02-02"
+
+dimensions:
+  CH:
+    name: ""  # English: Channel
+    codes:
+      CH-001:
+        label: ""  # English: Web UI
+        definition: ""
+      CH-002:
+        label: ""  # English: API
+        definition: ""
+      CH-003:
+        label: ""  # English: IDE Plugin
+        definition: ""
+      CH-004:
+        label: ""  # English: ChatOps
+        definition: ""
+      CH-005:
+        label: ""  # English: Desktop App
+        definition: ""
+      CH-006:
+        label: ""  # English: Mobile App
+        definition: ""
+      CH-007:
+        label: ""  # English: Email
+        definition: ""
+      CH-008:
+        label: ""  # English: Command Line
+        definition: ""
+  DT:
+    name: ""  # English: Data Type
+    codes:
+      DT-001:
+        label: ""  # English: Public
+        definition: ""
+      DT-002:
+        label: ""  # English: Internal
+        definition: ""
+      DT-003:
+        label: ""  # English: Confidential
+        definition: ""
+      DT-004:
+        label: ""  # English: Personal Data
+        definition: ""
+      DT-005:
+        label: ""  # English: Sensitive Personal Data
+        definition: ""
+      DT-006:
+        label: ""  # English: Credentials
+        definition: ""
+      DT-007:
+        label: ""  # English: Source Code
+        definition: ""
+      DT-008:
+        label: ""  # English: Customer Data
+        definition: ""
+      DT-009:
+        label: ""  # English: Operational Logs
+        definition: ""
+      DT-010:
+        label: ""  # English: Security Telemetry
+        definition: ""
+  EV:
+    name: ""  # English: Evidence Type
+    codes:
+      EV-001:
+        label: ""  # English: Request Record
+        definition: ""
+      EV-002:
+        label: ""  # English: Review/Approval Record
+        definition: ""
+      EV-003:
+        label: ""  # English: Exception Record
+        definition: ""
+      EV-004:
+        label: ""  # English: Renewal/Re-evaluation Record
+        definition: ""
+      EV-005:
+        label: ""  # English: Change Log Entry
+        definition: ""
+      EV-006:
+        label: ""  # English: Integrity Proof
+        definition: ""
+      EV-007:
+        label: ""  # English: Access Log
+        definition: ""
+      EV-008:
+        label: ""  # English: Model/Service Inventory
+        definition: ""
+      EV-009:
+        label: ""  # English: Risk Assessment
+        definition: ""
+      EV-010:
+        label: ""  # English: Control Mapping
+        definition: ""
+      EV-011:
+        label: ""  # English: Training/Guidance
+        definition: ""
+      EV-012:
+        label: ""  # English: Monitoring Evidence
+        definition: ""
+      EV-013:
+        label: ""  # English: Incident Record
+        definition: ""
+      EV-014:
+        label: ""  # English: Third-party Assessment
+        definition: ""
+      EV-015:
+        label: ""  # English: Attestation/Sign-off
+        definition: ""
+  FS:
+    name: ""  # English: Functional Scope
+    codes:
+      FS-001:
+        label: ""  # English: End-user Productivity
+        definition: ""
+      FS-002:
+        label: ""  # English: Customer-facing Features
+        definition: ""
+      FS-003:
+        label: ""  # English: Developer Tooling
+        definition: ""
+      FS-004:
+        label: ""  # English: IT Operations
+        definition: ""
+      FS-005:
+        label: ""  # English: Security Operations
+        definition: ""
+      FS-006:
+        label: ""  # English: Governance & Compliance
+        definition: ""
+  IM:
+    name: ""  # English: Integration Mode
+    codes:
+      IM-001:
+        label: ""  # English: Standalone
+        definition: ""
+      IM-002:
+        label: ""  # English: SaaS Integrated
+        definition: ""
+      IM-003:
+        label: ""  # English: Enterprise App Embedded
+        definition: ""
+      IM-004:
+        label: ""  # English: RPA/Workflow
+        definition: ""
+      IM-005:
+        label: ""  # English: On-prem / Private
+        definition: ""
+      IM-006:
+        label: ""  # English: Managed Service
+        definition: ""
+      IM-007:
+        label: ""  # English: Shadow / Unmanaged
+        definition: ""
+  OB:
+    name: ""  # English: Outcome / Benefit
+    codes:
+      OB-001:
+        label: ""  # English: Efficiency
+        definition: ""
+      OB-002:
+        label: ""  # English: Quality
+        definition: ""
+      OB-003:
+        label: ""  # English: Revenue
+        definition: ""
+      OB-004:
+        label: ""  # English: Risk Reduction
+        definition: ""
+      OB-005:
+        label: ""  # English: Innovation
+        definition: ""
+      OB-006:
+        label: ""  # English: Customer Satisfaction
+        definition: ""
+      OB-007:
+        label: ""  # English: Employee Experience
+        definition: ""
+  RS:
+    name: ""  # English: Risk Surface
+    codes:
+      RS-001:
+        label: ""  # English: Data Leakage
+        definition: ""
+      RS-002:
+        label: ""  # English: Security Abuse
+        definition: ""
+      RS-003:
+        label: ""  # English: Compliance Breach
+        definition: ""
+      RS-004:
+        label: ""  # English: IP Infringement
+        definition: ""
+      RS-005:
+        label: ""  # English: Model Misuse
+        definition: ""
+      RS-006:
+        label: ""  # English: Bias/Fairness
+        definition: ""
+      RS-007:
+        label: ""  # English: Safety
+        definition: ""
+      RS-008:
+        label: ""  # English: Third-party Risk
+        definition: ""
+  UC:
+    name: ""  # English: Use Case Class
+    codes:
+      UC-001:
+        label: ""  # English: General Q&A
+        definition: ""
+      UC-002:
+        label: ""  # English: Summarization
+        definition: ""
+      UC-003:
+        label: ""  # English: Translation
+        definition: ""
+      UC-004:
+        label: ""  # English: Content Drafting
+        definition: ""
+      UC-005:
+        label: ""  # English: Code Generation
+        definition: ""
+      UC-006:
+        label: ""  # English: Code Review
+        definition: ""
+      UC-007:
+        label: ""  # English: Data Analysis
+        definition: ""
+      UC-008:
+        label: ""  # English: Classification/Tagging
+        definition: ""
+      UC-009:
+        label: ""  # English: Search/RAG
+        definition: ""
+      UC-010:
+        label: ""  # English: Agentic Automation
+        definition: ""
+      UC-011:
+        label: ""  # English: Security Triage
+        definition: ""
+      UC-012:
+        label: ""  # English: Policy/Control Mapping
+        definition: ""
+      UC-013:
+        label: ""  # English: Customer Support
+        definition: ""
+      UC-014:
+        label: ""  # English: Sales Enablement
+        definition: ""
+      UC-015:
+        label: ""  # English: HR Support
+        definition: ""
+      UC-016:
+        label: ""  # English: Finance Analysis
+        definition: ""
+      UC-017:
+        label: ""  # English: Legal Drafting
+        definition: ""
+      UC-018:
+        label: ""  # English: Procurement Support
+        definition: ""
+      UC-019:
+        label: ""  # English: IT Helpdesk
+        definition: ""
+      UC-020:
+        label: ""  # English: Documentation
+        definition: ""
+      UC-021:
+        label: ""  # English: Knowledge Base
+        definition: ""
+      UC-022:
+        label: ""  # English: Monitoring/Observability
+        definition: ""
+      UC-023:
+        label: ""  # English: Incident Response
+        definition: ""
+      UC-024:
+        label: ""  # English: Threat Modeling
+        definition: ""
+      UC-025:
+        label: ""  # English: Control Testing
+        definition: ""
+      UC-026:
+        label: ""  # English: Training/Learning
+        definition: ""
+      UC-027:
+        label: ""  # English: Marketing Content
+        definition: ""
+      UC-028:
+        label: ""  # English: Research
+        definition: ""
+      UC-029:
+        label: ""  # English: Decision Support
+        definition: ""
+      UC-030:
+        label: ""  # English: Other
+        definition: ""

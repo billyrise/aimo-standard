@@ -28,17 +28,21 @@ The AIMO Standard documentation uses a **folder-based i18n structure**:
 ```
 docs/
 ├── en/           # English (canonical)
-├── ja/           # Japanese
-├── es/           # Future: Spanish
-├── de/           # Future: German
-├── ko/           # Future: Korean
-├── zh-hans/      # Future: Simplified Chinese
-└── zh-hant/      # Future: Traditional Chinese
+├── ja/           # Japanese (日本語)
+├── es/           # Spanish (Español)
+├── fr/           # French (Français)
+├── de/           # German (Deutsch)
+├── pt/           # Portuguese (Português)
+├── it/           # Italian (Italiano)
+├── zh/           # Simplified Chinese (简体中文)
+├── zh-TW/        # Traditional Chinese (繁體中文)
+└── ko/           # Korean (한국어)
 ```
 
 - **English is canonical**: The `docs/en/` folder is the authoritative source for documentation content.
 - **Other languages mirror the structure**: Each language folder (`ja/`, etc.) maintains the same file structure as `en/`.
 - **Same file names**: All languages use `.md` extension (no language suffix in filenames).
+- **Fallback to English**: Missing translations automatically fall back to English content.
 
 ## Taxonomy Data Model
 
@@ -102,15 +106,18 @@ The following files are **generated** from the SSOT and should NOT be edited man
 
 AIMO uses BCP47 language codes:
 
-| Code | Language |
-| --- | --- |
-| `en` | English |
-| `ja` | Japanese (日本語) |
-| `es` | Spanish (Español) |
-| `de` | German (Deutsch) |
-| `ko` | Korean (한국어) |
-| `zh-Hans` | Simplified Chinese (简体中文) |
-| `zh-Hant` | Traditional Chinese (繁體中文) |
+| Code | Language | Status |
+| --- | --- | --- |
+| `en` | English | Canonical (source) |
+| `ja` | Japanese (日本語) | Active |
+| `es` | Spanish (Español) | Active |
+| `fr` | French (Français) | Active |
+| `de` | German (Deutsch) | Active |
+| `pt` | Portuguese (Português) | Active |
+| `it` | Italian (Italiano) | Active |
+| `zh` | Simplified Chinese (简体中文) | Active |
+| `zh-TW` | Traditional Chinese (繁體中文) | Active |
+| `ko` | Korean (한국어) | Active |
 
 ### Legacy CSV Files (Frozen)
 
@@ -121,6 +128,52 @@ The legacy EN/JA mixed CSV files in `source_pack/03_taxonomy/legacy/` are:
 - **CI-enforced** — adding `label_es`, `definition_de`, etc. will fail the build
 
 For new languages, use the per-language artifacts in `artifacts/taxonomy/{version}/{lang}/`.
+
+## Translation Freshness Tracking
+
+AIMO uses a **Translation Freshness Tracking** system to maintain consistency between English (source) and translated content.
+
+### How It Works
+
+1. Each translated file contains metadata tracking which version of the English source it was translated from
+2. When English content is updated, the system detects outdated translations
+3. CI warns about outdated translations but does not block (translations can lag behind)
+
+### Translation Metadata
+
+Translated files include frontmatter metadata:
+
+```yaml
+---
+# TRANSLATION METADATA - DO NOT REMOVE
+source_file: en/standard/current/01-overview.md
+source_hash: abc123def456
+translation_date: 2026-02-02
+translator: human|machine|hybrid
+translation_status: current|outdated|needs_review
+---
+```
+
+### Using the Sync Tool
+
+```bash
+# Check all translations for freshness
+python tooling/i18n/sync_translations.py --check
+
+# Check specific language
+python tooling/i18n/sync_translations.py --check --lang ja
+
+# Generate translation report
+python tooling/i18n/sync_translations.py --report
+
+# Initialize new language (copy EN as base)
+python tooling/i18n/sync_translations.py --init-lang es
+
+# Update metadata after completing translation
+python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
+```
+
+For detailed technical specification, see `tooling/i18n/TRANSLATION_SYNC_SPEC.md`.
 
 ## Update Workflows
 
@@ -145,10 +198,19 @@ For new languages, use the per-language artifacts in `artifacts/taxonomy/{versio
 ### Documentation Updates
 
 1. Edit the English source (`docs/en/...`)
-2. Update the corresponding Japanese file (`docs/ja/...`)
-3. Run `python tooling/checks/lint_i18n.py` to verify heading consistency
-4. Run `mkdocs build --strict` to verify build
-5. Commit all changes together
+2. Update translations as needed (or mark them for later update)
+3. Run `python tooling/i18n/sync_translations.py --check` to see outdated translations
+4. Run `python tooling/checks/lint_i18n.py` to verify heading consistency
+5. Run `mkdocs build --strict` to verify build
+6. Commit all changes together
+
+!!! note "Translation Priority"
+    Not all translations need to be updated immediately. Tier 1 (critical) pages should be prioritized:
+    
+    - `index.md`
+    - `standard/current/*.md`
+    - `governance/index.md`
+    - `releases/index.md`
 
 ## Adding a New Language (5 Steps)
 

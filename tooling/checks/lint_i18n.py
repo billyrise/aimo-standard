@@ -28,8 +28,23 @@ DOCS = ROOT / "docs"
 EN_DIR = DOCS / "en"
 JA_DIR = DOCS / "ja"
 
+# All supported languages with their directories
+SUPPORTED_LANGUAGES = {
+    "en": {"name": "English", "dir": DOCS / "en"},
+    "ja": {"name": "日本語", "dir": DOCS / "ja"},
+    "es": {"name": "Español", "dir": DOCS / "es"},
+    "fr": {"name": "Français", "dir": DOCS / "fr"},
+    "de": {"name": "Deutsch", "dir": DOCS / "de"},
+    "pt": {"name": "Português", "dir": DOCS / "pt"},
+    "it": {"name": "Italiano", "dir": DOCS / "it"},
+    "zh": {"name": "简体中文", "dir": DOCS / "zh"},
+    "zh-TW": {"name": "繁體中文", "dir": DOCS / "zh-TW"},
+    "ko": {"name": "한국어", "dir": DOCS / "ko"},
+}
+
 # Active languages (languages that should be fully validated)
-ACTIVE_LANGUAGES = ["en", "ja"]
+# All languages are now active
+ACTIVE_LANGUAGES = list(SUPPORTED_LANGUAGES.keys())
 
 # Required pages that MUST exist in all active languages
 # These are critical for the documentation to be functional
@@ -213,13 +228,23 @@ def check_required_pages(lang_dir: Path, lang: str) -> tuple[list[str], list[str
     """
     Check for required and recommended pages.
     Returns (missing_required, missing_recommended).
+    
+    Note: For non-EN/JA languages, missing pages are warnings (fallback to EN).
     """
     missing_required = []
     missing_recommended = []
 
+    # For EN, all required pages must exist
+    # For JA, required pages should exist (error)
+    # For other languages, missing pages fall back to EN (warning only)
+    is_strict = lang in ("en", "ja")
+
     for page in REQUIRED_PAGES:
         if not (lang_dir / page).exists():
-            missing_required.append(f"docs/{lang}/{page}")
+            if is_strict:
+                missing_required.append(f"docs/{lang}/{page}")
+            else:
+                missing_recommended.append(f"docs/{lang}/{page} (will fallback to EN)")
 
     for page in RECOMMENDED_PAGES:
         if not (lang_dir / page).exists():
@@ -240,21 +265,31 @@ def main():
     errors: list[str] = []
     warnings: list[str] = []
 
-    # Verify base directories exist
+    # Verify EN directory exists (required as canonical source)
     if not EN_DIR.exists():
         errors.append(f"EN directory not found: {EN_DIR.relative_to(ROOT)}")
         print("i18n lint FAILED:\n" + "\n".join(errors), file=sys.stderr)
         sys.exit(1)
 
+    # Verify JA directory exists (required for backward compatibility)
     if not JA_DIR.exists():
         errors.append(f"JA directory not found: {JA_DIR.relative_to(ROOT)}")
         print("i18n lint FAILED:\n" + "\n".join(errors), file=sys.stderr)
         sys.exit(1)
 
+    # Check which other language directories exist
+    existing_langs = ["en", "ja"]
+    for lang, info in SUPPORTED_LANGUAGES.items():
+        if lang not in existing_langs and info["dir"].exists():
+            existing_langs.append(lang)
+
     # === Check 1: Required Pages ===
     print("Checking required pages...")
-    for lang in ACTIVE_LANGUAGES:
-        lang_dir = DOCS / lang
+    for lang in existing_langs:
+        lang_info = SUPPORTED_LANGUAGES.get(lang)
+        if not lang_info:
+            continue
+        lang_dir = lang_info["dir"]
         missing_req, missing_rec = check_required_pages(lang_dir, lang)
 
         for page in missing_req:
@@ -331,37 +366,61 @@ def main():
 
     # === Check 3: Translation Coverage & Heading Consistency ===
     print("Checking translation coverage...")
-    for en_file in en_files:
-        rel_path = en_file.relative_to(EN_DIR)
-        ja_file = JA_DIR / rel_path
-
-        if not ja_file.exists():
-            # Missing translation - warn only (fallback to EN is acceptable)
-            warnings.append(f"[WARN] No JA translation: docs/ja/{rel_path} (fallback to EN)")
+    for lang in existing_langs:
+        if lang == "en":
+            continue  # Skip EN (it's the source)
+        
+        lang_info = SUPPORTED_LANGUAGES.get(lang)
+        if not lang_info:
             continue
+        lang_dir = lang_info["dir"]
+        lang_name = lang_info["name"]
+        
+        for en_file in en_files:
+            rel_path = en_file.relative_to(EN_DIR)
+            trans_file = lang_dir / rel_path
 
-        # Heading level consistency
-        en_headings = extract_headings(en_file)
-        ja_headings = extract_headings(ja_file)
+            if not trans_file.exists():
+                # Missing translation - warn only (fallback to EN is acceptable)
+                # Only warn for JA (established language), others are expected to be incomplete
+                if lang == "ja":
+                    warnings.append(f"[WARN] No {lang_name} translation: docs/{lang}/{rel_path} (fallback to EN)")
+                continue
 
-        en_levels = [lv for (lv, _) in en_headings]
-        ja_levels = [lv for (lv, _) in ja_headings]
+            # Heading level consistency (only check for JA for now)
+            if lang == "ja":
+                en_headings = extract_headings(en_file)
+                trans_headings = extract_headings(trans_file)
 
-        if en_levels != ja_levels:
-            warnings.append(
-                f"[WARN] Heading level mismatch: docs/en/{rel_path} vs docs/ja/{rel_path}\n"
-                f"       EN: {en_levels}\n"
-                f"       JA: {ja_levels}"
-            )
+                en_levels = [lv for (lv, _) in en_headings]
+                trans_levels = [lv for (lv, _) in trans_headings]
 
-    # === Check 4: Orphan JA Files ===
-    print("Checking for orphan JA files...")
-    ja_files = sorted(JA_DIR.rglob("*.md"))
-    for ja_file in ja_files:
-        rel_path = ja_file.relative_to(JA_DIR)
-        en_file = EN_DIR / rel_path
-        if not en_file.exists():
-            warnings.append(f"[WARN] Orphan JA file (no EN source): docs/ja/{rel_path}")
+                if en_levels != trans_levels:
+                    warnings.append(
+                        f"[WARN] Heading level mismatch: docs/en/{rel_path} vs docs/{lang}/{rel_path}\n"
+                        f"       EN: {en_levels}\n"
+                        f"       {lang.upper()}: {trans_levels}"
+                    )
+
+    # === Check 4: Orphan Files (files without EN source) ===
+    print("Checking for orphan files...")
+    for lang in existing_langs:
+        if lang == "en":
+            continue
+        
+        lang_info = SUPPORTED_LANGUAGES.get(lang)
+        if not lang_info:
+            continue
+        lang_dir = lang_info["dir"]
+        
+        lang_files = sorted(lang_dir.rglob("*.md"))
+        for lang_file in lang_files:
+            rel_path = lang_file.relative_to(lang_dir)
+            en_file = EN_DIR / rel_path
+            if not en_file.exists():
+                # Only warn for JA (established language)
+                if lang == "ja":
+                    warnings.append(f"[WARN] Orphan {lang.upper()} file (no EN source): docs/{lang}/{rel_path}")
 
     # === Report Results ===
     print()
