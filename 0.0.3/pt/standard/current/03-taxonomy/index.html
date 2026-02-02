@@ -1,0 +1,3099 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Taxonomia AIMO - Sistema de classificação de 8 dimensões com 91 códigos para categorizar sistemas de IA. Cobre escopo funcional, casos de uso, tipos de dados, canais, integração, riscos, resultados e evidências.">
+      
+      
+        <meta name="author" content="AIMO Standard Contributors">
+      
+      
+        <link rel="canonical" href="https://standard.aimoaas.com/latest/pt/standard/current/03-taxonomy/">
+      
+      
+        <link rel="prev" href="../02-scope/">
+      
+      
+        <link rel="next" href="../04-codes/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Taxonomy - AIMO Standard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/pt/standard/current/03-taxonomy/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja//pt/standard/current/03-taxonomy/">
+
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/pt/standard/current/03-taxonomy/">
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIMO Standard">
+<meta property="og:title" content="Taxonomy">
+<meta property="og:description" content="Taxonomia AIMO - Sistema de classificação de 8 dimensões com 91 códigos para categorizar sistemas de IA. Cobre escopo funcional, casos de uso, tipos de dados, canais, integração, riscos, resultados e evidências.">
+<meta property="og:url" content="https://standard.aimoaas.com/latest/pt/standard/current/03-taxonomy/">
+<meta property="og:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:locale:alternate" content="ja_JP">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Taxonomy">
+<meta name="twitter:description" content="Taxonomia AIMO - Sistema de classificação de 8 dimensões com 91 códigos para categorizar sistemas de IA. Cobre escopo funcional, casos de uso, tipos de dados, canais, integração, riscos, resultados e evidências.">
+<meta name="twitter:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
+
+
+
+<meta name="description" content="Taxonomia AIMO - Sistema de classificação de 8 dimensões com 91 códigos para categorizar sistemas de IA. Cobre escopo funcional, casos de uso, tipos de dados, canais, integração, riscos, resultados e evidências.">
+
+<meta name="author" content="AIMO Standard Contributors">
+<meta name="keywords" content="AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance, ISO 42001, NIST AI RMF, EU AI Act, evidence management">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AIMO Standard",
+  "url": "https://standard.aimoaas.com/latest",
+  "description": "Open standard for AI governance, audit evidence, and agentic AI risk management. Taxonomy with 8 dimensions and 91 codes for enterprise AI compliance.",
+  "inLanguage": ["en", "ja"],
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIMO Standard Contributors",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://standard.aimoaas.com/latest?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Taxonomy",
+  "description": "Taxonomia AIMO - Sistema de classificação de 8 dimensões com 91 códigos para categorizar sistemas de IA. Cobre escopo funcional, casos de uso, tipos de dados, canais, integração, riscos, resultados e evidências.",
+  "url": "https://standard.aimoaas.com/latest/pt/standard/current/03-taxonomy/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AIMO Standard",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIMO Standard Contributors",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI Governance",
+    "description": "Standards and frameworks for AI system governance and audit"
+  },
+  "keywords": "AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance"
+}
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://standard.aimoaas.com/latest"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pt",
+      "item": "https://standard.aimoaas.com/latestpt/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Standard",
+      "item": "https://standard.aimoaas.com/latestpt/standard/"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Current",
+      "item": "https://standard.aimoaas.com/latestpt/standard/current/"
+    },{
+      "@type": "ListItem",
+      "position": 5,
+      "name": "03 Taxonomy",
+      "item": "https://standard.aimoaas.com/latestpt/standard/current/03-taxonomy/"
+    }
+  ]
+}
+</script>
+
+
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#taxonomia" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../../" title="AIMO Standard" class="md-header__button md-logo" aria-label="AIMO Standard" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AIMO Standard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Taxonomy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../standard/current/03-taxonomy/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../ja/standard/current/03-taxonomy/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../es/standard/current/03-taxonomy/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../fr/standard/current/03-taxonomy/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../de/standard/current/03-taxonomy/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../it/standard/current/03-taxonomy/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../zh/standard/current/03-taxonomy/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../zh-TW/standard/current/03-taxonomy/" hreflang="zh-TW" class="md-select__link">
+              繁體中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../ko/standard/current/03-taxonomy/" hreflang="ko" class="md-select__link">
+              한국어
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/billyrise/aimo-standard" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AIMO Standard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Standard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../artifacts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Artifacts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../validator/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Validator
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../releases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Releases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../governance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Governance
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="AIMO Standard" class="md-nav__button md-logo" aria-label="AIMO Standard" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AIMO Standard
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/billyrise/aimo-standard" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AIMO Standard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Standard
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Standard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Current
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Taxonomy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Taxonomy
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propósito
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-nao-e-nao-sobrereivindicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que Não É (Não-Sobrereivindicação)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-de-riscos-especificos-de-iaagenticos-por-que-um-padrao-especifico-de-ia-e-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de riscos específicos de IA/agênticos (por que um padrão específico de IA é necessário)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral-das-dimensoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral das Dimensões
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visão Geral das Dimensões">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regras de Uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicoes-de-dimensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definições de Dimensão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definições de Dimensão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fs-escopo-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      FS: Escopo Funcional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-classe-de-caso-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC: Classe de Caso de Uso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dt-tipo-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      DT: Tipo de Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch-canal" class="md-nav__link">
+    <span class="md-ellipsis">
+      CH: Canal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im-modo-de-integracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      IM: Modo de Integração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rs-superficie-de-risco" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS: Superfície de Risco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob-resultado-beneficio" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB: Resultado / Benefício
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ev-tipo-de-evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      EV: Tipo de Evidência
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como Usar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como Usar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relacao-com-evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relação com Evidências
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenciando-o-dicionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referenciando o Dicionário
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-classificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo de Classificação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia-ssot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referência SSOT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paginas-relacionadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Páginas Relacionadas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Codes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-ev-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EV Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../conformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conformance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../coverage-map/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Coverage Map
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Coverage Map
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methodology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/iso-42001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42001
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/nist-ai-rmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NIST AI RMF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/eu-ai-act/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EU AI Act
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/isms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISMS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../artifacts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Artifacts
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Artifacts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/evidence-bundle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/minimum-evidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minimum Evidence Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../artifacts/log-schemas/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Log Schemas
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Log Schemas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/log-schemas/shadow-ai-discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shadow AI Discovery Log Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/log-schemas/agent-activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Activity Log Format
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../validator/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Validator
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Validator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../examples/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../releases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Releases
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../governance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Governance
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/trust-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trust Package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/human-oversight-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Human Oversight Protocol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/trademarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trademarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/cite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Cite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/seo-canonical-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SEO & Canonical Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Localization Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propósito
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-nao-e-nao-sobrereivindicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que Não É (Não-Sobrereivindicação)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-de-riscos-especificos-de-iaagenticos-por-que-um-padrao-especifico-de-ia-e-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de riscos específicos de IA/agênticos (por que um padrão específico de IA é necessário)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral-das-dimensoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão Geral das Dimensões
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visão Geral das Dimensões">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regras de Uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicoes-de-dimensao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definições de Dimensão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definições de Dimensão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fs-escopo-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      FS: Escopo Funcional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-classe-de-caso-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC: Classe de Caso de Uso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dt-tipo-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      DT: Tipo de Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch-canal" class="md-nav__link">
+    <span class="md-ellipsis">
+      CH: Canal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im-modo-de-integracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      IM: Modo de Integração
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rs-superficie-de-risco" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS: Superfície de Risco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob-resultado-beneficio" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB: Resultado / Benefício
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ev-tipo-de-evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      EV: Tipo de Evidência
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como Usar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como Usar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relacao-com-evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relação com Evidências
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referenciando-o-dicionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referenciando o Dicionário
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-classificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo de Classificação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia-ssot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referência SSOT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paginas-relacionadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Páginas Relacionadas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/billyrise/aimo-standard/edit/main/docs/en/pt/standard/current/03-taxonomy.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/billyrise/aimo-standard/raw/main/docs/en/pt/standard/current/03-taxonomy.md" title="Ver fonte desta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="taxonomia">Taxonomia</h1>
+<p>A Taxonomia AIMO fornece um sistema de classificação estruturado para categorizar sistemas de IA, seus usos e requisitos de governança associados. Consiste em <strong>8 dimensões</strong> com <strong>91 códigos</strong> que permitem classificação consistente e gestão de evidências entre organizações.</p>
+<h2 id="proposito">Propósito</h2>
+<p>A taxonomia serve três propósitos primários do ponto de vista de auditoria:</p>
+<ol>
+<li>
+<p><strong>Explicabilidade</strong>: Fornece um vocabulário comum para descrever casos de uso de IA em toda a organização, suportando comunicação clara com auditores e stakeholders.</p>
+</li>
+<li>
+<p><strong>Prontidão de Evidências</strong>: Permite documentação sistemática de sistemas de IA usando uma classificação padronizada, tornando coleta e revisão de evidências mais eficientes.</p>
+</li>
+<li>
+<p><strong>Comparabilidade</strong>: Permite que organizações comparem casos de uso de IA em diferentes contextos usando terminologia consistente.</p>
+</li>
+</ol>
+<h2 id="o-que-nao-e-nao-sobrereivindicacao">O que Não É (Não-Sobrereivindicação)</h2>
+<p>!!! warning "Importante"
+    O AIMO Standard suporta <strong>explicabilidade e prontidão de evidências</strong>. Ele <strong>não</strong> fornece aconselhamento jurídico, garante conformidade, nem certifica conformidade com qualquer regulamentação ou framework. Veja <a href="../../../governance/responsibility-boundary/">Limite de Responsabilidade</a> para detalhes.</p>
+<p>A taxonomia é apenas um sistema de classificação. Ela não:</p>
+<ul>
+<li>Garante conformidade com qualquer lei ou regulamentação</li>
+<li>Substitui aconselhamento jurídico, de segurança ou conformidade profissional</li>
+<li>Certifica conformidade com frameworks externos (ISO, NIST, EU AI Act, etc.)</li>
+<li>Fornece avaliações de risco ou recomendações de controle</li>
+</ul>
+<h2 id="exemplos-de-riscos-especificos-de-iaagenticos-por-que-um-padrao-especifico-de-ia-e-necessario">Exemplos de riscos específicos de IA/agênticos (por que um padrão específico de IA é necessário)</h2>
+<p>Controles de segurança tradicionais (ex: ISMS) sozinhos frequentemente falham em capturar modos de falha específicos de LLM/agente e desvios de agentes autônomos (ex: execução de ferramenta não intencional, loops recursivos) de maneira <strong>explicável para auditoria</strong>.
+A Taxonomia AIMO fornece uma linguagem compartilhada para classificar esses riscos específicos de IA e conectá-los a requisitos de evidências e fluxos de trabalho de remediação.</p>
+<p>(Exemplos de referência para diferenciação. Os códigos abaixo são placeholders ilustrativos; o sistema de códigos oficial segue as definições do Padrão.)
+- AG-01 Loop/Recursão Descontrolada
+- AG-02 Uso Não Autorizado de Ferramenta (uso indevido estilo confused deputy)
+- AG-03 Drift de Limite de Privilégio</p>
+<h2 id="visao-geral-das-dimensoes">Visão Geral das Dimensões</h2>
+<p>AIMO usa 8 dimensões para classificar casos de uso de IA. Cada dimensão tem um prefixo único de 2 letras.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Contagem de Códigos</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FS</strong></td>
+<td>Escopo Funcional</td>
+<td>6</td>
+<td>Qual função de negócio é suportada</td>
+</tr>
+<tr>
+<td><strong>UC</strong></td>
+<td>Classe de Caso de Uso</td>
+<td>30</td>
+<td>Que tipo de tarefa é realizada</td>
+</tr>
+<tr>
+<td><strong>DT</strong></td>
+<td>Tipo de Dados</td>
+<td>10</td>
+<td>Quais classificações de dados estão envolvidas</td>
+</tr>
+<tr>
+<td><strong>CH</strong></td>
+<td>Canal</td>
+<td>8</td>
+<td>Como usuários acessam a IA</td>
+</tr>
+<tr>
+<td><strong>IM</strong></td>
+<td>Modo de Integração</td>
+<td>7</td>
+<td>Como IA conecta a sistemas empresariais</td>
+</tr>
+<tr>
+<td><strong>RS</strong></td>
+<td>Superfície de Risco</td>
+<td>8</td>
+<td>Quais riscos estão associados</td>
+</tr>
+<tr>
+<td><strong>OB</strong></td>
+<td>Resultado / Benefício</td>
+<td>7</td>
+<td>Quais benefícios são esperados</td>
+</tr>
+<tr>
+<td><strong>EV</strong></td>
+<td>Tipo de Evidência</td>
+<td>15</td>
+<td>Quais evidências são necessárias</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 91 códigos em 8 dimensões</strong></p>
+<h3 id="regras-de-uso">Regras de Uso</h3>
+<table>
+<thead>
+<tr>
+<th>Dimensão</th>
+<th>Seleção</th>
+<th>Implicação para Auditoria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS, IM</td>
+<td>Exatamente 1</td>
+<td>Classificação primária para atribuição de responsabilidade</td>
+</tr>
+<tr>
+<td>UC, DT, CH, RS, EV</td>
+<td>1 ou mais</td>
+<td>Enumeração completa necessária para cobertura de risco</td>
+</tr>
+<tr>
+<td>OB</td>
+<td>0 ou mais</td>
+<td>Opcional; documenta valor de negócio esperado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="definicoes-de-dimensao">Definições de Dimensão</h2>
+<h3 id="fs-escopo-funcional">FS: Escopo Funcional</h3>
+<p>Categoriza uso de IA pela função de negócio que suporta. <strong>Selecione exatamente um.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Rótulo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS-001</td>
+<td>Produtividade do Usuário Final</td>
+<td>IA usada para melhorar produtividade de usuários finais internos (escrita, busca, sumarização, notas de reunião).</td>
+</tr>
+<tr>
+<td>FS-002</td>
+<td>Funcionalidades Voltadas ao Cliente</td>
+<td>IA incorporada em funcionalidades de produto/serviço fornecidas aos clientes.</td>
+</tr>
+<tr>
+<td>FS-003</td>
+<td>Ferramentas de Desenvolvedor</td>
+<td>IA usada para auxiliar desenvolvimento de software e tarefas de engenharia.</td>
+</tr>
+<tr>
+<td>FS-004</td>
+<td>Operações de TI</td>
+<td>IA usada para operações de TI e administração de sistemas (monitoramento, tratamento de incidentes).</td>
+</tr>
+<tr>
+<td>FS-005</td>
+<td>Operações de Segurança</td>
+<td>IA usada para monitoramento/resposta de segurança (SOC, detecção, triagem).</td>
+</tr>
+<tr>
+<td>FS-006</td>
+<td>Governança e Conformidade</td>
+<td>IA usada para suportar atividades de governança/conformidade (política, evidência de auditoria).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-classe-de-caso-de-uso">UC: Classe de Caso de Uso</h3>
+<p>Categoriza uso de IA pelo tipo de tarefa ou interação. <strong>Selecione um ou mais.</strong> Lista completa inclui 30 códigos; exemplos representativos abaixo.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Rótulo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UC-001</td>
+<td>Q&amp;A Geral</td>
+<td>Resposta a perguntas gerais e uso conversacional.</td>
+</tr>
+<tr>
+<td>UC-002</td>
+<td>Sumarização</td>
+<td>Sumarizar documentos, reuniões ou mensagens.</td>
+</tr>
+<tr>
+<td>UC-003</td>
+<td>Tradução</td>
+<td>Tradução entre idiomas.</td>
+</tr>
+<tr>
+<td>UC-004</td>
+<td>Rascunho de Conteúdo</td>
+<td>Gerar rascunhos para emails, documentos ou relatórios.</td>
+</tr>
+<tr>
+<td>UC-005</td>
+<td>Geração de Código</td>
+<td>Gerar código ou scripts.</td>
+</tr>
+<tr>
+<td>UC-006</td>
+<td>Revisão de Código</td>
+<td>Revisar código para problemas e melhorias.</td>
+</tr>
+<tr>
+<td>UC-009</td>
+<td>Busca/RAG</td>
+<td>Recuperação e resposta a perguntas baseada em RAG.</td>
+</tr>
+<tr>
+<td>UC-010</td>
+<td>Automação Agêntica</td>
+<td>Agentes autônomos ou semi-autônomos executando ações.</td>
+</tr>
+</tbody>
+</table>
+<p>Veja <a href="../05-dictionary/">Dicionário</a> para a lista completa de 30 códigos UC.</p>
+<h3 id="dt-tipo-de-dados">DT: Tipo de Dados</h3>
+<p>Categoriza a sensibilidade e classificação dos dados envolvidos. <strong>Selecione um ou mais.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Rótulo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DT-001</td>
+<td>Público</td>
+<td>Dados publicamente disponíveis e destinados a divulgação pública.</td>
+</tr>
+<tr>
+<td>DT-002</td>
+<td>Interno</td>
+<td>Dados de negócio internos não públicos.</td>
+</tr>
+<tr>
+<td>DT-003</td>
+<td>Confidencial</td>
+<td>Dados internos altamente sensíveis requerendo acesso restrito.</td>
+</tr>
+<tr>
+<td>DT-004</td>
+<td>Dados Pessoais</td>
+<td>Dados pessoais conforme definido por leis de privacidade aplicáveis.</td>
+</tr>
+<tr>
+<td>DT-005</td>
+<td>Dados Pessoais Sensíveis</td>
+<td>Dados pessoais de categoria especial/sensível.</td>
+</tr>
+<tr>
+<td>DT-006</td>
+<td>Credenciais</td>
+<td>Segredos de autenticação e credenciais.</td>
+</tr>
+<tr>
+<td>DT-007</td>
+<td>Código Fonte</td>
+<td>Código fonte e artefatos relacionados.</td>
+</tr>
+<tr>
+<td>DT-008</td>
+<td>Dados de Cliente</td>
+<td>Dados fornecidos pelo cliente ou relacionados ao cliente.</td>
+</tr>
+<tr>
+<td>DT-009</td>
+<td>Logs Operacionais</td>
+<td>Logs operacionais ou de sistema usados para monitoramento e troubleshooting.</td>
+</tr>
+<tr>
+<td>DT-010</td>
+<td>Telemetria de Segurança</td>
+<td>Telemetria de segurança como alertas e detecções.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch-canal">CH: Canal</h3>
+<p>Categoriza como usuários acessam ou interagem com a IA. <strong>Selecione um ou mais.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Rótulo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CH-001</td>
+<td>UI Web</td>
+<td>Uso via interface de usuário web.</td>
+</tr>
+<tr>
+<td>CH-002</td>
+<td>API</td>
+<td>Uso via integração de API programática.</td>
+</tr>
+<tr>
+<td>CH-003</td>
+<td>Plugin de IDE</td>
+<td>Uso via plugin de IDE/editor.</td>
+</tr>
+<tr>
+<td>CH-004</td>
+<td>ChatOps</td>
+<td>Uso via integrações de plataformas de chat (Slack/Teams).</td>
+</tr>
+<tr>
+<td>CH-005</td>
+<td>App Desktop</td>
+<td>Uso via aplicação desktop nativa.</td>
+</tr>
+<tr>
+<td>CH-006</td>
+<td>App Mobile</td>
+<td>Uso via aplicação mobile nativa.</td>
+</tr>
+<tr>
+<td>CH-007</td>
+<td>Email</td>
+<td>Uso via interface de email ou automação baseada em email.</td>
+</tr>
+<tr>
+<td>CH-008</td>
+<td>Linha de Comando</td>
+<td>Uso via interface de linha de comando.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="im-modo-de-integracao">IM: Modo de Integração</h3>
+<p>Categoriza como IA é integrada em sistemas empresariais. <strong>Selecione exatamente um.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Rótulo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IM-001</td>
+<td>Standalone</td>
+<td>Usado standalone sem integração em sistemas empresariais.</td>
+</tr>
+<tr>
+<td>IM-002</td>
+<td>SaaS Integrado</td>
+<td>Aplicação SaaS integra funcionalidades de IA.</td>
+</tr>
+<tr>
+<td>IM-003</td>
+<td>Incorporado em App Empresarial</td>
+<td>IA incorporada em aplicações empresariais internas.</td>
+</tr>
+<tr>
+<td>IM-004</td>
+<td>RPA/Workflow</td>
+<td>IA invocada dentro de automação de workflow ou RPA.</td>
+</tr>
+<tr>
+<td>IM-005</td>
+<td>On-prem / Privado</td>
+<td>IA hospedada em ambiente privado/on-prem.</td>
+</tr>
+<tr>
+<td>IM-006</td>
+<td>Serviço Gerenciado</td>
+<td>Uso via serviço gerenciado com controles empresariais.</td>
+</tr>
+<tr>
+<td>IM-007</td>
+<td>Shadow / Não Gerenciado</td>
+<td>Uso fora de controles de governança aprovados.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rs-superficie-de-risco">RS: Superfície de Risco</h3>
+<p>Categoriza os tipos de riscos associados ao uso de IA. <strong>Selecione um ou mais.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Rótulo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RS-001</td>
+<td>Vazamento de Dados</td>
+<td>Risco de divulgação não intencional de dados.</td>
+</tr>
+<tr>
+<td>RS-002</td>
+<td>Abuso de Segurança</td>
+<td>Risco de que o sistema seja abusado para propósitos maliciosos.</td>
+</tr>
+<tr>
+<td>RS-003</td>
+<td>Violação de Conformidade</td>
+<td>Risco de violar leis/regulamentações/políticas.</td>
+</tr>
+<tr>
+<td>RS-004</td>
+<td>Violação de PI</td>
+<td>Risco de infringir direitos autorais/patentes/segredos comerciais.</td>
+</tr>
+<tr>
+<td>RS-005</td>
+<td>Uso Indevido de Modelo</td>
+<td>Risco de uso inapropriado de modelo ou dependência excessiva.</td>
+</tr>
+<tr>
+<td>RS-006</td>
+<td>Viés/Justiça</td>
+<td>Risco de resultados injustos ou enviesados.</td>
+</tr>
+<tr>
+<td>RS-007</td>
+<td>Segurança</td>
+<td>Risco de conteúdo prejudicial ou recomendações inseguras.</td>
+</tr>
+<tr>
+<td>RS-008</td>
+<td>Risco de Terceiros</td>
+<td>Riscos de fornecedores, sub-processadores e provedores de modelo.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ob-resultado-beneficio">OB: Resultado / Benefício</h3>
+<p>Categoriza os resultados ou benefícios esperados do uso de IA. <strong>Opcional; selecione zero ou mais.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Rótulo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OB-001</td>
+<td>Eficiência</td>
+<td>Melhora eficiência de tempo/custo.</td>
+</tr>
+<tr>
+<td>OB-002</td>
+<td>Qualidade</td>
+<td>Melhora qualidade/precisão de outputs.</td>
+</tr>
+<tr>
+<td>OB-003</td>
+<td>Receita</td>
+<td>Contribui para crescimento de receita.</td>
+</tr>
+<tr>
+<td>OB-004</td>
+<td>Redução de Risco</td>
+<td>Reduz risco operacional/segurança/conformidade.</td>
+</tr>
+<tr>
+<td>OB-005</td>
+<td>Inovação</td>
+<td>Permite novas capacidades ou inovações.</td>
+</tr>
+<tr>
+<td>OB-006</td>
+<td>Satisfação do Cliente</td>
+<td>Melhora satisfação do cliente.</td>
+</tr>
+<tr>
+<td>OB-007</td>
+<td>Experiência do Funcionário</td>
+<td>Melhora experiência do funcionário.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ev-tipo-de-evidencia">EV: Tipo de Evidência</h3>
+<p>Categoriza os tipos de evidências necessárias ou coletadas. <strong>Selecione um ou mais.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Rótulo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EV-001</td>
+<td>Registro de Solicitação</td>
+<td>Evidência de que um uso/serviço de IA foi solicitado e descrito.</td>
+</tr>
+<tr>
+<td>EV-002</td>
+<td>Registro de Revisão/Aprovação</td>
+<td>Evidência de que uma revisão/aprovação foi realizada.</td>
+</tr>
+<tr>
+<td>EV-003</td>
+<td>Registro de Exceção</td>
+<td>Evidência de que uma exceção foi concedida e rastreada.</td>
+</tr>
+<tr>
+<td>EV-004</td>
+<td>Registro de Renovação/Reavaliação</td>
+<td>Evidência de que renovação ou reavaliação ocorreu.</td>
+</tr>
+<tr>
+<td>EV-005</td>
+<td>Entrada de Log de Alterações</td>
+<td>Evidência de alterações e suas aprovações.</td>
+</tr>
+<tr>
+<td>EV-006</td>
+<td>Prova de Integridade</td>
+<td>Evidência de integridade (hash, assinatura, WORM).</td>
+</tr>
+<tr>
+<td>EV-007</td>
+<td>Log de Acesso</td>
+<td>Evidência de controle de acesso e histórico de acesso.</td>
+</tr>
+<tr>
+<td>EV-008</td>
+<td>Inventário de Modelo/Serviço</td>
+<td>Registro de inventário de modelos/serviços usados.</td>
+</tr>
+<tr>
+<td>EV-009</td>
+<td>Avaliação de Risco</td>
+<td>Avaliação de risco documentada para o uso/serviço.</td>
+</tr>
+<tr>
+<td>EV-010</td>
+<td>Mapeamento de Controles</td>
+<td>Evidência de mapeamento de controles para frameworks externos.</td>
+</tr>
+<tr>
+<td>EV-011</td>
+<td>Treinamento/Orientação</td>
+<td>Evidência de treinamento ou orientação fornecida aos usuários.</td>
+</tr>
+<tr>
+<td>EV-012</td>
+<td>Evidência de Monitoramento</td>
+<td>Evidência de monitoramento e supervisão contínua.</td>
+</tr>
+<tr>
+<td>EV-013</td>
+<td>Registro de Incidente</td>
+<td>Evidência de tratamento de incidentes relacionados ao uso de IA.</td>
+</tr>
+<tr>
+<td>EV-014</td>
+<td>Avaliação de Terceiros</td>
+<td>Evidência de avaliação de fornecedor ou terceiros.</td>
+</tr>
+<tr>
+<td>EV-015</td>
+<td>Atestação/Sign-off</td>
+<td>Registro formal de atestação ou sign-off.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="como-usar">Como Usar</h2>
+<h3 id="relacao-com-evidencias">Relação com Evidências</h3>
+<p>Cada documento de Evidências (EV) referencia códigos de múltiplas dimensões para classificar o sistema ou caso de uso de IA sendo documentado. A classificação de 8 dimensões permite:</p>
+<ul>
+<li><strong>Categorização consistente</strong> em toda a organização</li>
+<li><strong>Filtragem baseada em risco</strong> por valores de dimensão</li>
+<li><strong>Mapeamento de framework</strong> via Mapa de Cobertura</li>
+</ul>
+<h3 id="referenciando-o-dicionario">Referenciando o Dicionário</h3>
+<p>Para definições completas de códigos incluindo notas de escopo e exemplos, consulte o <a href="../05-dictionary/">Dicionário</a>.</p>
+<h3 id="exemplo-de-classificacao">Exemplo de Classificação</h3>
+<pre><code>FS: FS-001 (Produtividade do Usuário Final)
+UC: UC-001 (Q&amp;A Geral), UC-002 (Sumarização)
+DT: DT-002 (Interno), DT-004 (Dados Pessoais)
+CH: CH-001 (UI Web)
+IM: IM-002 (SaaS Integrado)
+RS: RS-001 (Vazamento de Dados), RS-003 (Violação de Conformidade)
+OB: OB-001 (Eficiência)
+EV: EV-001 (Registro de Solicitação), EV-002 (Registro de Revisão/Aprovação)
+</code></pre>
+<h2 id="referencia-ssot">Referência SSOT</h2>
+<p>!!! info "Fonte de Verdade"
+    A definição autoritativa é <code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>. Esta página é explicativa. Veja <a href="../../../contributing/localization/">Guia de Localização</a> para fluxos de trabalho de atualização.</p>
+<h2 id="paginas-relacionadas">Páginas Relacionadas</h2>
+<ul>
+<li><a href="../04-codes/">Códigos</a> - Formato de código, convenções de nomenclatura e ciclo de vida</li>
+<li><a href="../05-dictionary/">Dicionário</a> - Listagens completas de códigos e definições de colunas</li>
+<li><a href="../06-ev-template/">Templates de Evidências</a> - Como usar códigos em evidências</li>
+<li><a href="../../../governance/responsibility-boundary/">Limite de Responsabilidade</a> - Declaração de não-sobrereivindicação</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 AIMO Standard Contributors
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "content.action.edit", "content.action.view"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
