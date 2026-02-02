@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="AIMO Validator - Ensures Evidence Packs conform to AIMO Standard schemas. Validation rules, error handling, and reference implementation for compliance checks.">
+        <meta name="description" content="Validador AIMO - Asegura que los Paquetes de Evidencia conformen a los esquemas del AIMO Standard. Reglas de validación, manejo de errores e implementación de referencia para verificaciones de cumplimiento.">
       
       
         <meta name="author" content="AIMO Standard Contributors">
@@ -85,7 +85,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIMO Standard">
 <meta property="og:title" content="Validator">
-<meta property="og:description" content="AIMO Validator - Ensures Evidence Packs conform to AIMO Standard schemas. Validation rules, error handling, and reference implementation for compliance checks.">
+<meta property="og:description" content="Validador AIMO - Asegura que los Paquetes de Evidencia conformen a los esquemas del AIMO Standard. Reglas de validación, manejo de errores e implementación de referencia para verificaciones de cumplimiento.">
 <meta property="og:url" content="https://standard.aimoaas.com/latest/es/standard/current/07-validator/">
 <meta property="og:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 <meta property="og:locale" content="en_US">
@@ -96,12 +96,12 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Validator">
-<meta name="twitter:description" content="AIMO Validator - Ensures Evidence Packs conform to AIMO Standard schemas. Validation rules, error handling, and reference implementation for compliance checks.">
+<meta name="twitter:description" content="Validador AIMO - Asegura que los Paquetes de Evidencia conformen a los esquemas del AIMO Standard. Reglas de validación, manejo de errores e implementación de referencia para verificaciones de cumplimiento.">
 <meta name="twitter:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 
 
 
-<meta name="description" content="AIMO Validator - Ensures Evidence Packs conform to AIMO Standard schemas. Validation rules, error handling, and reference implementation for compliance checks.">
+<meta name="description" content="Validador AIMO - Asegura que los Paquetes de Evidencia conformen a los esquemas del AIMO Standard. Reglas de validación, manejo de errores e implementación de referencia para verificaciones de cumplimiento.">
 
 <meta name="author" content="AIMO Standard Contributors">
 <meta name="keywords" content="AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance, ISO 42001, NIST AI RMF, EU AI Act, evidence management">
@@ -133,7 +133,7 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Validator",
-  "description": "AIMO Validator - Ensures Evidence Packs conform to AIMO Standard schemas. Validation rules, error handling, and reference implementation for compliance checks.",
+  "description": "Validador AIMO - Asegura que los Paquetes de Evidencia conformen a los esquemas del AIMO Standard. Reglas de validación, manejo de errores e implementación de referencia para verificaciones de cumplimiento.",
   "url": "https://standard.aimoaas.com/latest/es/standard/current/07-validator/",
   "inLanguage": "en",
   "isPartOf": {
@@ -209,7 +209,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#validator" class="md-skip">
+        <a href="#validador" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -965,64 +965,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#validator-in-practice" class="md-nav__link">
+  <a href="#validador-en-practica" class="md-nav__link">
     <span class="md-ellipsis">
-      Validator in practice
+      Validador en práctica
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#validator-mvp-requirements" class="md-nav__link">
+  <a href="#requisitos-mvp-del-validador" class="md-nav__link">
     <span class="md-ellipsis">
-      Validator MVP Requirements
+      Requisitos MVP del Validador
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Validator MVP Requirements">
+    <nav class="md-nav" aria-label="Requisitos MVP del Validador">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-required-field-validation" class="md-nav__link">
+  <a href="#1-validacion-de-campos-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Required Field Validation
+      1. Validación de Campos Requeridos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-dimension-code-validation" class="md-nav__link">
+  <a href="#2-validacion-de-codigos-de-dimension" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Dimension Code Validation
+      2. Validación de Códigos de Dimensión
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-dictionary-existence-check" class="md-nav__link">
+  <a href="#3-verificacion-de-existencia-en-diccionario" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Dictionary Existence Check
+      3. Verificación de Existencia en Diccionario
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-code-format-validation" class="md-nav__link">
+  <a href="#4-validacion-de-formato-de-codigo" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Code Format Validation
+      4. Validación de Formato de Código
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-schema-validation" class="md-nav__link">
+  <a href="#5-validacion-de-esquema" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Schema Validation
+      5. Validación de Esquema
     </span>
   </a>
   
@@ -1034,46 +1034,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validation-rules" class="md-nav__link">
+  <a href="#reglas-de-validacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation Rules
+      Reglas de Validación
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Validation Rules">
+    <nav class="md-nav" aria-label="Reglas de Validación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rule-required-dimensions" class="md-nav__link">
+  <a href="#regla-dimensiones-requeridas" class="md-nav__link">
     <span class="md-ellipsis">
-      Rule: Required Dimensions
+      Regla: Dimensiones Requeridas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rule-valid-codes" class="md-nav__link">
+  <a href="#regla-codigos-validos" class="md-nav__link">
     <span class="md-ellipsis">
-      Rule: Valid Codes
+      Regla: Códigos Válidos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rule-code-format" class="md-nav__link">
+  <a href="#regla-formato-de-codigo" class="md-nav__link">
     <span class="md-ellipsis">
-      Rule: Code Format
+      Regla: Formato de Código
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rule-version-format" class="md-nav__link">
+  <a href="#regla-formato-de-version" class="md-nav__link">
     <span class="md-ellipsis">
-      Rule: Version Format
+      Regla: Formato de Versión
     </span>
   </a>
   
@@ -1085,46 +1085,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-output-format" class="md-nav__link">
+  <a href="#formato-de-salida-de-errores" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Output Format
+      Formato de Salida de Errores
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-validator-does-not-check" class="md-nav__link">
+  <a href="#que-no-verifica-el-validador" class="md-nav__link">
     <span class="md-ellipsis">
-      What Validator Does NOT Check
+      Qué NO Verifica el Validador
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reference-implementation" class="md-nav__link">
+  <a href="#implementacion-de-referencia" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference Implementation
+      Implementación de Referencia
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Reference Implementation">
+    <nav class="md-nav" aria-label="Implementación de Referencia">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#uso" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Uso
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-output" class="md-nav__link">
+  <a href="#ejemplo-de-salida" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Output
+      Ejemplo de Salida
     </span>
   </a>
   
@@ -1136,27 +1136,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#versioning-policy" class="md-nav__link">
+  <a href="#politica-de-versionado" class="md-nav__link">
     <span class="md-ellipsis">
-      Versioning Policy
+      Política de Versionado
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#schema-references" class="md-nav__link">
+  <a href="#referencias-de-esquema" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema References
+      Referencias de Esquema
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#referencias" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      Referencias
     </span>
   </a>
   
@@ -2204,64 +2204,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#validator-in-practice" class="md-nav__link">
+  <a href="#validador-en-practica" class="md-nav__link">
     <span class="md-ellipsis">
-      Validator in practice
+      Validador en práctica
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#validator-mvp-requirements" class="md-nav__link">
+  <a href="#requisitos-mvp-del-validador" class="md-nav__link">
     <span class="md-ellipsis">
-      Validator MVP Requirements
+      Requisitos MVP del Validador
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Validator MVP Requirements">
+    <nav class="md-nav" aria-label="Requisitos MVP del Validador">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-required-field-validation" class="md-nav__link">
+  <a href="#1-validacion-de-campos-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Required Field Validation
+      1. Validación de Campos Requeridos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-dimension-code-validation" class="md-nav__link">
+  <a href="#2-validacion-de-codigos-de-dimension" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Dimension Code Validation
+      2. Validación de Códigos de Dimensión
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-dictionary-existence-check" class="md-nav__link">
+  <a href="#3-verificacion-de-existencia-en-diccionario" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Dictionary Existence Check
+      3. Verificación de Existencia en Diccionario
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-code-format-validation" class="md-nav__link">
+  <a href="#4-validacion-de-formato-de-codigo" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Code Format Validation
+      4. Validación de Formato de Código
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-schema-validation" class="md-nav__link">
+  <a href="#5-validacion-de-esquema" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Schema Validation
+      5. Validación de Esquema
     </span>
   </a>
   
@@ -2273,46 +2273,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validation-rules" class="md-nav__link">
+  <a href="#reglas-de-validacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation Rules
+      Reglas de Validación
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Validation Rules">
+    <nav class="md-nav" aria-label="Reglas de Validación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rule-required-dimensions" class="md-nav__link">
+  <a href="#regla-dimensiones-requeridas" class="md-nav__link">
     <span class="md-ellipsis">
-      Rule: Required Dimensions
+      Regla: Dimensiones Requeridas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rule-valid-codes" class="md-nav__link">
+  <a href="#regla-codigos-validos" class="md-nav__link">
     <span class="md-ellipsis">
-      Rule: Valid Codes
+      Regla: Códigos Válidos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rule-code-format" class="md-nav__link">
+  <a href="#regla-formato-de-codigo" class="md-nav__link">
     <span class="md-ellipsis">
-      Rule: Code Format
+      Regla: Formato de Código
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rule-version-format" class="md-nav__link">
+  <a href="#regla-formato-de-version" class="md-nav__link">
     <span class="md-ellipsis">
-      Rule: Version Format
+      Regla: Formato de Versión
     </span>
   </a>
   
@@ -2324,46 +2324,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-output-format" class="md-nav__link">
+  <a href="#formato-de-salida-de-errores" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Output Format
+      Formato de Salida de Errores
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-validator-does-not-check" class="md-nav__link">
+  <a href="#que-no-verifica-el-validador" class="md-nav__link">
     <span class="md-ellipsis">
-      What Validator Does NOT Check
+      Qué NO Verifica el Validador
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reference-implementation" class="md-nav__link">
+  <a href="#implementacion-de-referencia" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference Implementation
+      Implementación de Referencia
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Reference Implementation">
+    <nav class="md-nav" aria-label="Implementación de Referencia">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#uso" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Uso
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-output" class="md-nav__link">
+  <a href="#ejemplo-de-salida" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Output
+      Ejemplo de Salida
     </span>
   </a>
   
@@ -2375,27 +2375,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#versioning-policy" class="md-nav__link">
+  <a href="#politica-de-versionado" class="md-nav__link">
     <span class="md-ellipsis">
-      Versioning Policy
+      Política de Versionado
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#schema-references" class="md-nav__link">
+  <a href="#referencias-de-esquema" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema References
+      Referencias de Esquema
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#referencias" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      Referencias
     </span>
   </a>
   
@@ -2433,262 +2433,262 @@
   
 
 
-<h1 id="validator">Validator</h1>
-<p>The AIMO Validator ensures that Evidence Packs and related artifacts conform to the AIMO Standard schemas and requirements.</p>
-<p>See also: <a href="../../../governance/human-oversight-protocol/">Human Oversight Protocol</a> — responsibility boundary for machine vs. human review.</p>
-<h2 id="validator-in-practice">Validator in practice</h2>
-<p>For a 30-second quickstart (install, run, interpret output), see <a href="../../../validator/">Validator hub</a>.</p>
-<h2 id="validator-mvp-requirements">Validator MVP Requirements</h2>
-<p>The minimum viable validator MUST perform the following checks:</p>
-<h3 id="1-required-field-validation">1. Required Field Validation</h3>
-<p>Check that all mandatory fields are present:</p>
+<h1 id="validador">Validador</h1>
+<p>El Validador AIMO asegura que los Paquetes de Evidencia y artefactos relacionados conformen a los esquemas y requisitos del AIMO Standard.</p>
+<p>Consulte también: <a href="../../../governance/human-oversight-protocol/">Protocolo de Supervisión Humana</a> — límite de responsabilidad para revisión máquina vs. humano.</p>
+<h2 id="validador-en-practica">Validador en práctica</h2>
+<p>Para un inicio rápido de 30 segundos (instalar, ejecutar, interpretar salida), consulte <a href="../../../validator/">Centro del Validador</a>.</p>
+<h2 id="requisitos-mvp-del-validador">Requisitos MVP del Validador</h2>
+<p>El validador mínimo viable DEBE realizar las siguientes verificaciones:</p>
+<h3 id="1-validacion-de-campos-requeridos">1. Validación de Campos Requeridos</h3>
+<p>Verificar que todos los campos obligatorios estén presentes:</p>
 <table>
 <thead>
 <tr>
-<th>Artifact</th>
-<th>Required Fields</th>
+<th>Artefacto</th>
+<th>Campos Requeridos</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Evidence Pack Manifest</td>
+<td>Manifiesto del Paquete de Evidencia</td>
 <td>pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files</td>
 </tr>
 <tr>
-<td>Codes Object</td>
-<td>FS, UC, DT, CH, IM, RS, EV (OB optional)</td>
+<td>Objeto de Códigos</td>
+<td>FS, UC, DT, CH, IM, RS, EV (OB opcional)</td>
 </tr>
 <tr>
-<td>Evidence File Entry</td>
+<td>Entrada de Archivo de Evidencia</td>
 <td>file_id, filename, ev_type, title</td>
 </tr>
 </tbody>
 </table>
-<h3 id="2-dimension-code-validation">2. Dimension Code Validation</h3>
-<p>Check that each required dimension has at least one code:</p>
+<h3 id="2-validacion-de-codigos-de-dimension">2. Validación de Códigos de Dimensión</h3>
+<p>Verificar que cada dimensión requerida tenga al menos un código:</p>
 <table>
 <thead>
 <tr>
-<th>Dimension</th>
-<th>Requirement</th>
+<th>Dimensión</th>
+<th>Requisito</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>FS (Functional Scope)</td>
-<td>Exactly 1 code</td>
+<td>FS (Alcance Funcional)</td>
+<td>Exactamente 1 código</td>
 </tr>
 <tr>
-<td>UC (Use Case Class)</td>
-<td>At least 1 code</td>
+<td>UC (Clase de Caso de Uso)</td>
+<td>Al menos 1 código</td>
 </tr>
 <tr>
-<td>DT (Data Type)</td>
-<td>At least 1 code</td>
+<td>DT (Tipo de Datos)</td>
+<td>Al menos 1 código</td>
 </tr>
 <tr>
-<td>CH (Channel)</td>
-<td>At least 1 code</td>
+<td>CH (Canal)</td>
+<td>Al menos 1 código</td>
 </tr>
 <tr>
-<td>IM (Integration Mode)</td>
-<td>Exactly 1 code</td>
+<td>IM (Modo de Integración)</td>
+<td>Exactamente 1 código</td>
 </tr>
 <tr>
-<td>RS (Risk Surface)</td>
-<td>At least 1 code</td>
+<td>RS (Superficie de Riesgo)</td>
+<td>Al menos 1 código</td>
 </tr>
 <tr>
-<td>OB (Outcome / Benefit)</td>
-<td>Optional (0 or more)</td>
+<td>OB (Resultado / Beneficio)</td>
+<td>Opcional (0 o más)</td>
 </tr>
 <tr>
-<td>EV (Evidence Type)</td>
-<td>At least 1 code</td>
+<td>EV (Tipo de Evidencia)</td>
+<td>Al menos 1 código</td>
 </tr>
 </tbody>
 </table>
-<h3 id="3-dictionary-existence-check">3. Dictionary Existence Check</h3>
-<p>Validate that all codes exist in the taxonomy dictionary:</p>
+<h3 id="3-verificacion-de-existencia-en-diccionario">3. Verificación de Existencia en Diccionario</h3>
+<p>Validar que todos los códigos existan en el diccionario de taxonomía:</p>
 <ul>
-<li>Load the taxonomy dictionary for the specified <code>taxonomy_version</code></li>
-<li>Verify each code in the manifest exists in the dictionary</li>
-<li>Report invalid codes with their dimension and value</li>
+<li>Cargar el diccionario de taxonomía para la <code>taxonomy_version</code> especificada</li>
+<li>Verificar que cada código en el manifiesto exista en el diccionario</li>
+<li>Reportar códigos inválidos con su dimensión y valor</li>
 </ul>
-<h3 id="4-code-format-validation">4. Code Format Validation</h3>
-<p>Check that all codes match the expected format:</p>
+<h3 id="4-validacion-de-formato-de-codigo">4. Validación de Formato de Código</h3>
+<p>Verificar que todos los códigos coincidan con el formato esperado:</p>
 <pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
 </code></pre>
-<h3 id="5-schema-validation">5. Schema Validation</h3>
-<p>Validate against JSON Schemas:</p>
+<h3 id="5-validacion-de-esquema">5. Validación de Esquema</h3>
+<p>Validar contra JSON Schemas:</p>
 <table>
 <thead>
 <tr>
-<th>Schema</th>
-<th>Purpose</th>
+<th>Esquema</th>
+<th>Propósito</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>evidence_pack_manifest.schema.json</code></td>
-<td>Evidence Pack manifests</td>
+<td>Manifiestos de Paquetes de Evidencia</td>
 </tr>
 <tr>
 <td><code>taxonomy_pack.schema.json</code></td>
-<td>Taxonomy pack definitions</td>
+<td>Definiciones de paquetes de taxonomía</td>
 </tr>
 <tr>
 <td><code>changelog.schema.json</code></td>
-<td>Changelog entries</td>
+<td>Entradas de registro de cambios</td>
 </tr>
 </tbody>
 </table>
-<h2 id="validation-rules">Validation Rules</h2>
-<h3 id="rule-required-dimensions">Rule: Required Dimensions</h3>
+<h2 id="reglas-de-validacion">Reglas de Validación</h2>
+<h3 id="regla-dimensiones-requeridas">Regla: Dimensiones Requeridas</h3>
 <pre><code class="language-yaml">rule_id: required_dimensions
-description: All required dimensions must have at least one code
+description: Todas las dimensiones requeridas deben tener al menos un código
 severity: error
 check: |
-  - FS: exactly 1
-  - UC: at least 1
-  - DT: at least 1
-  - CH: at least 1
-  - IM: exactly 1
-  - RS: at least 1
-  - EV: at least 1
+  - FS: exactamente 1
+  - UC: al menos 1
+  - DT: al menos 1
+  - CH: al menos 1
+  - IM: exactamente 1
+  - RS: al menos 1
+  - EV: al menos 1
 </code></pre>
-<h3 id="rule-valid-codes">Rule: Valid Codes</h3>
+<h3 id="regla-codigos-validos">Regla: Códigos Válidos</h3>
 <pre><code class="language-yaml">rule_id: valid_codes
-description: All codes must exist in the taxonomy dictionary
+description: Todos los códigos deben existir en el diccionario de taxonomía
 severity: error
 check: |
-  For each code in manifest.codes:
-    - Code exists in dictionary for specified taxonomy_version
-    - Code status is 'active' (warn if 'deprecated')
+  Para cada código en manifest.codes:
+    - El código existe en el diccionario para la taxonomy_version especificada
+    - El estado del código es 'active' (advertencia si 'deprecated')
 </code></pre>
-<h3 id="rule-code-format">Rule: Code Format</h3>
+<h3 id="regla-formato-de-codigo">Regla: Formato de Código</h3>
 <pre><code class="language-yaml">rule_id: code_format
-description: All codes must match the standard format
+description: Todos los códigos deben coincidir con el formato estándar
 severity: error
 pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$&quot;
 </code></pre>
-<h3 id="rule-version-format">Rule: Version Format</h3>
+<h3 id="regla-formato-de-version">Regla: Formato de Versión</h3>
 <pre><code class="language-yaml">rule_id: version_format
-description: Versions must be valid SemVer
+description: Las versiones deben ser SemVer válido
 severity: error
 pattern: &quot;^\\d+\\.\\d+\\.\\d+$&quot;
 fields:
   - pack_version
   - taxonomy_version
 </code></pre>
-<h2 id="error-output-format">Error Output Format</h2>
-<p>Validation errors are reported in the following format:</p>
-<pre><code>&lt;path&gt;: &lt;severity&gt;: &lt;message&gt;
+<h2 id="formato-de-salida-de-errores">Formato de Salida de Errores</h2>
+<p>Los errores de validación se reportan en el siguiente formato:</p>
+<pre><code>&lt;ruta&gt;: &lt;severidad&gt;: &lt;mensaje&gt;
 </code></pre>
-<p><strong>Examples:</strong></p>
-<pre><code>codes.FS: error: Required dimension 'FS' has no codes
-codes.UC[0]: error: Code 'UC-999' does not exist in dictionary v0.1.0
-pack_version: error: Invalid version format 'v1.0' (expected SemVer)
-codes.RS[1]: warning: Code 'RS-002' is deprecated in v0.2.0
+<p><strong>Ejemplos:</strong></p>
+<pre><code>codes.FS: error: La dimensión requerida 'FS' no tiene códigos
+codes.UC[0]: error: El código 'UC-999' no existe en el diccionario v0.1.0
+pack_version: error: Formato de versión inválido 'v1.0' (esperado SemVer)
+codes.RS[1]: warning: El código 'RS-002' está deprecado en v0.2.0
 </code></pre>
-<h2 id="what-validator-does-not-check">What Validator Does NOT Check</h2>
-<p>The validator focuses on structural conformance, not content quality:</p>
+<h2 id="que-no-verifica-el-validador">Qué NO Verifica el Validador</h2>
+<p>El validador se enfoca en conformidad estructural, no calidad de contenido:</p>
 <table>
 <thead>
 <tr>
-<th>Aspect</th>
-<th>Reason</th>
+<th>Aspecto</th>
+<th>Razón</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Content accuracy</td>
-<td>Validator checks structure, not meaning</td>
+<td>Precisión del contenido</td>
+<td>El validador verifica estructura, no significado</td>
 </tr>
 <tr>
-<td>Evidence completeness</td>
-<td>Templates are guides, not enforced formats</td>
+<td>Completitud de evidencia</td>
+<td>Las plantillas son guías, no formatos aplicados</td>
 </tr>
 <tr>
-<td>Cross-reference resolution</td>
-<td>File existence not verified</td>
+<td>Resolución de referencias cruzadas</td>
+<td>La existencia de archivos no se verifica</td>
 </tr>
 <tr>
-<td>Timestamp validity</td>
-<td>ISO-8601 not strictly validated</td>
+<td>Validez de timestamp</td>
+<td>ISO-8601 no se valida estrictamente</td>
 </tr>
 <tr>
-<td>ID uniqueness</td>
-<td>Not currently enforced</td>
+<td>Unicidad de ID</td>
+<td>No se aplica actualmente</td>
 </tr>
 <tr>
-<td>Integrity hashes</td>
-<td>Adopter responsibility</td>
+<td>Hashes de integridad</td>
+<td>Responsabilidad del adoptante</td>
 </tr>
 </tbody>
 </table>
-<h2 id="reference-implementation">Reference Implementation</h2>
-<p>A reference implementation is provided in Python:</p>
+<h2 id="implementacion-de-referencia">Implementación de Referencia</h2>
+<p>Se proporciona una implementación de referencia en Python:</p>
 <pre><code>validator/src/validate.py
 </code></pre>
-<h3 id="usage">Usage</h3>
+<h3 id="uso">Uso</h3>
 <pre><code class="language-bash">python validator/src/validate.py &lt;manifest.json&gt;
 </code></pre>
-<h3 id="example-output">Example Output</h3>
+<h3 id="ejemplo-de-salida">Ejemplo de Salida</h3>
 <pre><code>Validating: evidence_pack_manifest.json
 Taxonomy version: 0.1.0
 
 Checking required dimensions...
-  FS: OK (1 code)
-  UC: OK (3 codes)
-  DT: OK (1 code)
-  CH: OK (1 code)
-  IM: OK (1 code)
-  RS: OK (3 codes)
-  OB: OK (2 codes)
-  EV: OK (7 codes)
+  FS: OK (1 código)
+  UC: OK (3 códigos)
+  DT: OK (1 código)
+  CH: OK (1 código)
+  IM: OK (1 código)
+  RS: OK (3 códigos)
+  OB: OK (2 códigos)
+  EV: OK (7 códigos)
 
 Checking code validity...
-  All codes valid.
+  Todos los códigos válidos.
 
 Validation: PASSED
 </code></pre>
-<h2 id="versioning-policy">Versioning Policy</h2>
-<p>Validator rules follow SemVer:</p>
+<h2 id="politica-de-versionado">Política de Versionado</h2>
+<p>Las reglas del validador siguen SemVer:</p>
 <ul>
-<li><strong>MAJOR</strong>: Breaking rule changes (new required checks that fail existing valid packs)</li>
-<li><strong>MINOR</strong>: New optional checks, warnings, or informational messages</li>
-<li><strong>PATCH</strong>: Bug fixes that don't change validation outcomes</li>
+<li><strong>MAJOR</strong>: Cambios de reglas disruptivos (nuevas verificaciones requeridas que fallan paquetes válidos existentes)</li>
+<li><strong>MINOR</strong>: Nuevas verificaciones opcionales, advertencias o mensajes informativos</li>
+<li><strong>PATCH</strong>: Correcciones de bugs que no cambian resultados de validación</li>
 </ul>
-<h2 id="schema-references">Schema References</h2>
+<h2 id="referencias-de-esquema">Referencias de Esquema</h2>
 <table>
 <thead>
 <tr>
-<th>Schema</th>
-<th>Location</th>
+<th>Esquema</th>
+<th>Ubicación</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Evidence Pack Manifest</td>
+<td>Manifiesto de Paquete de Evidencia</td>
 <td><code>source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json</code></td>
 </tr>
 <tr>
-<td>Taxonomy Pack</td>
+<td>Paquete de Taxonomía</td>
 <td><code>source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json</code></td>
 </tr>
 <tr>
-<td>Changelog</td>
+<td>Registro de Cambios</td>
 <td><code>source_pack/03_taxonomy/schemas/changelog.schema.json</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="references">References</h2>
+<h2 id="referencias">Referencias</h2>
 <ul>
-<li><a href="../03-taxonomy/">Taxonomy</a> - Dimension definitions</li>
-<li><a href="../04-codes/">Codes</a> - Code format</li>
-<li><a href="../05-dictionary/">Dictionary</a> - Code dictionary</li>
-<li><a href="../../../validator/">Validator Rules</a> - Full rule documentation</li>
+<li><a href="../03-taxonomy/">Taxonomía</a> - Definiciones de dimensiones</li>
+<li><a href="../04-codes/">Códigos</a> - Formato de código</li>
+<li><a href="../05-dictionary/">Diccionario</a> - Diccionario de códigos</li>
+<li><a href="../../../validator/">Reglas del Validador</a> - Documentación completa de reglas</li>
 </ul>
 
 

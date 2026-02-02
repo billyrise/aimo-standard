@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="AIMO localization guide - i18n structure, maintenance workflow, and SSOT principles for multilingual documentation.">
+        <meta name="description" content="AIMO Lokalisierungsleitfaden - i18n-Struktur, Wartungsworkflow und SSOT-Prinzipien für mehrsprachige Dokumentation.">
       
       
         <meta name="author" content="AIMO Standard Contributors">
@@ -83,7 +83,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIMO Standard">
 <meta property="og:title" content="Localization Guide">
-<meta property="og:description" content="AIMO localization guide - i18n structure, maintenance workflow, and SSOT principles for multilingual documentation.">
+<meta property="og:description" content="AIMO Lokalisierungsleitfaden - i18n-Struktur, Wartungsworkflow und SSOT-Prinzipien für mehrsprachige Dokumentation.">
 <meta property="og:url" content="https://standard.aimoaas.com/latest/de/contributing/localization/">
 <meta property="og:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 <meta property="og:locale" content="en_US">
@@ -94,12 +94,12 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Localization Guide">
-<meta name="twitter:description" content="AIMO localization guide - i18n structure, maintenance workflow, and SSOT principles for multilingual documentation.">
+<meta name="twitter:description" content="AIMO Lokalisierungsleitfaden - i18n-Struktur, Wartungsworkflow und SSOT-Prinzipien für mehrsprachige Dokumentation.">
 <meta name="twitter:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 
 
 
-<meta name="description" content="AIMO localization guide - i18n structure, maintenance workflow, and SSOT principles for multilingual documentation.">
+<meta name="description" content="AIMO Lokalisierungsleitfaden - i18n-Struktur, Wartungsworkflow und SSOT-Prinzipien für mehrsprachige Dokumentation.">
 
 <meta name="author" content="AIMO Standard Contributors">
 <meta name="keywords" content="AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance, ISO 42001, NIST AI RMF, EU AI Act, evidence management">
@@ -131,7 +131,7 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Localization Guide",
-  "description": "AIMO localization guide - i18n structure, maintenance workflow, and SSOT principles for multilingual documentation.",
+  "description": "AIMO Lokalisierungsleitfaden - i18n-Struktur, Wartungsworkflow und SSOT-Prinzipien für mehrsprachige Dokumentation.",
   "url": "https://standard.aimoaas.com/latest/de/contributing/localization/",
   "inLanguage": "en",
   "isPartOf": {
@@ -202,7 +202,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#localization-guide" class="md-skip">
+        <a href="#lokalisierungsleitfaden" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -1949,46 +1949,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#language-purity-policy" class="md-nav__link">
+  <a href="#sprachreinhaltungsrichtlinie" class="md-nav__link">
     <span class="md-ellipsis">
-      Language Purity Policy
+      Sprachreinhaltungsrichtlinie
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#language-structure" class="md-nav__link">
+  <a href="#sprachstruktur" class="md-nav__link">
     <span class="md-ellipsis">
-      Language Structure
+      Sprachstruktur
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#taxonomy-data-model" class="md-nav__link">
+  <a href="#taxonomie-datenmodell" class="md-nav__link">
     <span class="md-ellipsis">
-      Taxonomy Data Model
+      Taxonomie-Datenmodell
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Taxonomy Data Model">
+    <nav class="md-nav" aria-label="Taxonomie-Datenmodell">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#canonical-structure-canonicalyaml" class="md-nav__link">
+  <a href="#kanonische-struktur-canonicalyaml" class="md-nav__link">
     <span class="md-ellipsis">
-      Canonical Structure (canonical.yaml)
+      Kanonische Struktur (canonical.yaml)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#translation-packs-i18nyaml" class="md-nav__link">
+  <a href="#ubersetzungspakete-i18nyaml" class="md-nav__link">
     <span class="md-ellipsis">
-      Translation Packs (i18n/*.yaml)
+      Übersetzungspakete (i18n/*.yaml)
     </span>
   </a>
   
@@ -2000,37 +2000,79 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssot-principle" class="md-nav__link">
+  <a href="#ssot-prinzip" class="md-nav__link">
     <span class="md-ellipsis">
-      SSOT Principle
+      SSOT-Prinzip
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SSOT Principle">
+    <nav class="md-nav" aria-label="SSOT-Prinzip">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#derived-files" class="md-nav__link">
+  <a href="#abgeleitete-dateien" class="md-nav__link">
     <span class="md-ellipsis">
-      Derived Files
+      Abgeleitete Dateien
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#language-codes-bcp47" class="md-nav__link">
+  <a href="#sprachcodes-bcp47" class="md-nav__link">
     <span class="md-ellipsis">
-      Language Codes (BCP47)
+      Sprachcodes (BCP47)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#legacy-csv-files-frozen" class="md-nav__link">
+  <a href="#legacy-csv-dateien-eingefroren" class="md-nav__link">
     <span class="md-ellipsis">
-      Legacy CSV Files (Frozen)
+      Legacy-CSV-Dateien (Eingefroren)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersetzungsaktualitats-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersetzungsaktualitäts-Tracking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Übersetzungsaktualitäts-Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wie-es-funktioniert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wie es funktioniert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubersetzungsmetadaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersetzungsmetadaten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwendung-des-sync-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verwendung des Sync-Tools
     </span>
   </a>
   
@@ -2044,17 +2086,17 @@
         <li class="md-nav__item">
   <a href="#update-workflows" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Workflows
+      Update-Workflows
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Update Workflows">
+    <nav class="md-nav" aria-label="Update-Workflows">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#taxonomy-updates-new-ssot-first-workflow" class="md-nav__link">
+  <a href="#taxonomie-updates-neuer-ssot-first-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Taxonomy Updates (New SSOT-First Workflow)
+      Taxonomie-Updates (Neuer SSOT-First-Workflow)
     </span>
   </a>
   
@@ -2063,16 +2105,16 @@
           <li class="md-nav__item">
   <a href="#coverage-map-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Coverage Map Updates
+      Coverage Map-Updates
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#documentation-updates" class="md-nav__link">
+  <a href="#dokumentations-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentation Updates
+      Dokumentations-Updates
     </span>
   </a>
   
@@ -2084,55 +2126,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-a-new-language-5-steps" class="md-nav__link">
+  <a href="#hinzufugen-einer-neuen-sprache-5-schritte" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding a New Language (5 Steps)
+      Hinzufügen einer neuen Sprache (5 Schritte)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Adding a New Language (5 Steps)">
+    <nav class="md-nav" aria-label="Hinzufügen einer neuen Sprache (5 Schritte)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-generate-taxonomy-pack" class="md-nav__link">
+  <a href="#schritt-1-taxonomiepaket-generieren" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Generate Taxonomy Pack
+      Schritt 1: Taxonomiepaket generieren
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-create-docs-folder" class="md-nav__link">
+  <a href="#schritt-2-docs-ordner-erstellen" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Create Docs Folder
+      Schritt 2: Docs-Ordner erstellen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-update-mkdocsyml" class="md-nav__link">
+  <a href="#schritt-3-mkdocsyml-aktualisieren" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Update mkdocs.yml
+      Schritt 3: mkdocs.yml aktualisieren
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-translate" class="md-nav__link">
+  <a href="#schritt-4-ubersetzen" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Translate
+      Schritt 4: Übersetzen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-verify" class="md-nav__link">
+  <a href="#schritt-5-uberprufen" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 5: Verify
+      Schritt 5: Überprüfen
     </span>
   </a>
   
@@ -2144,27 +2186,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-naming-conventions" class="md-nav__link">
+  <a href="#dateibenennungskonventionen" class="md-nav__link">
     <span class="md-ellipsis">
-      File Naming Conventions
+      Dateibenennungskonventionen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quality-checks" class="md-nav__link">
+  <a href="#qualitatsprufungen" class="md-nav__link">
     <span class="md-ellipsis">
-      Quality Checks
+      Qualitätsprüfungen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-pages" class="md-nav__link">
+  <a href="#verwandte-seiten" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Pages
+      Verwandte Seiten
     </span>
   </a>
   
@@ -2213,46 +2255,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#language-purity-policy" class="md-nav__link">
+  <a href="#sprachreinhaltungsrichtlinie" class="md-nav__link">
     <span class="md-ellipsis">
-      Language Purity Policy
+      Sprachreinhaltungsrichtlinie
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#language-structure" class="md-nav__link">
+  <a href="#sprachstruktur" class="md-nav__link">
     <span class="md-ellipsis">
-      Language Structure
+      Sprachstruktur
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#taxonomy-data-model" class="md-nav__link">
+  <a href="#taxonomie-datenmodell" class="md-nav__link">
     <span class="md-ellipsis">
-      Taxonomy Data Model
+      Taxonomie-Datenmodell
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Taxonomy Data Model">
+    <nav class="md-nav" aria-label="Taxonomie-Datenmodell">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#canonical-structure-canonicalyaml" class="md-nav__link">
+  <a href="#kanonische-struktur-canonicalyaml" class="md-nav__link">
     <span class="md-ellipsis">
-      Canonical Structure (canonical.yaml)
+      Kanonische Struktur (canonical.yaml)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#translation-packs-i18nyaml" class="md-nav__link">
+  <a href="#ubersetzungspakete-i18nyaml" class="md-nav__link">
     <span class="md-ellipsis">
-      Translation Packs (i18n/*.yaml)
+      Übersetzungspakete (i18n/*.yaml)
     </span>
   </a>
   
@@ -2264,37 +2306,79 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssot-principle" class="md-nav__link">
+  <a href="#ssot-prinzip" class="md-nav__link">
     <span class="md-ellipsis">
-      SSOT Principle
+      SSOT-Prinzip
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SSOT Principle">
+    <nav class="md-nav" aria-label="SSOT-Prinzip">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#derived-files" class="md-nav__link">
+  <a href="#abgeleitete-dateien" class="md-nav__link">
     <span class="md-ellipsis">
-      Derived Files
+      Abgeleitete Dateien
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#language-codes-bcp47" class="md-nav__link">
+  <a href="#sprachcodes-bcp47" class="md-nav__link">
     <span class="md-ellipsis">
-      Language Codes (BCP47)
+      Sprachcodes (BCP47)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#legacy-csv-files-frozen" class="md-nav__link">
+  <a href="#legacy-csv-dateien-eingefroren" class="md-nav__link">
     <span class="md-ellipsis">
-      Legacy CSV Files (Frozen)
+      Legacy-CSV-Dateien (Eingefroren)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubersetzungsaktualitats-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersetzungsaktualitäts-Tracking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Übersetzungsaktualitäts-Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wie-es-funktioniert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wie es funktioniert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubersetzungsmetadaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übersetzungsmetadaten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwendung-des-sync-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verwendung des Sync-Tools
     </span>
   </a>
   
@@ -2308,17 +2392,17 @@
         <li class="md-nav__item">
   <a href="#update-workflows" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Workflows
+      Update-Workflows
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Update Workflows">
+    <nav class="md-nav" aria-label="Update-Workflows">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#taxonomy-updates-new-ssot-first-workflow" class="md-nav__link">
+  <a href="#taxonomie-updates-neuer-ssot-first-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Taxonomy Updates (New SSOT-First Workflow)
+      Taxonomie-Updates (Neuer SSOT-First-Workflow)
     </span>
   </a>
   
@@ -2327,16 +2411,16 @@
           <li class="md-nav__item">
   <a href="#coverage-map-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Coverage Map Updates
+      Coverage Map-Updates
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#documentation-updates" class="md-nav__link">
+  <a href="#dokumentations-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentation Updates
+      Dokumentations-Updates
     </span>
   </a>
   
@@ -2348,55 +2432,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-a-new-language-5-steps" class="md-nav__link">
+  <a href="#hinzufugen-einer-neuen-sprache-5-schritte" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding a New Language (5 Steps)
+      Hinzufügen einer neuen Sprache (5 Schritte)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Adding a New Language (5 Steps)">
+    <nav class="md-nav" aria-label="Hinzufügen einer neuen Sprache (5 Schritte)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-generate-taxonomy-pack" class="md-nav__link">
+  <a href="#schritt-1-taxonomiepaket-generieren" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Generate Taxonomy Pack
+      Schritt 1: Taxonomiepaket generieren
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-create-docs-folder" class="md-nav__link">
+  <a href="#schritt-2-docs-ordner-erstellen" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Create Docs Folder
+      Schritt 2: Docs-Ordner erstellen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-update-mkdocsyml" class="md-nav__link">
+  <a href="#schritt-3-mkdocsyml-aktualisieren" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Update mkdocs.yml
+      Schritt 3: mkdocs.yml aktualisieren
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-translate" class="md-nav__link">
+  <a href="#schritt-4-ubersetzen" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Translate
+      Schritt 4: Übersetzen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-verify" class="md-nav__link">
+  <a href="#schritt-5-uberprufen" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 5: Verify
+      Schritt 5: Überprüfen
     </span>
   </a>
   
@@ -2408,27 +2492,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-naming-conventions" class="md-nav__link">
+  <a href="#dateibenennungskonventionen" class="md-nav__link">
     <span class="md-ellipsis">
-      File Naming Conventions
+      Dateibenennungskonventionen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quality-checks" class="md-nav__link">
+  <a href="#qualitatsprufungen" class="md-nav__link">
     <span class="md-ellipsis">
-      Quality Checks
+      Qualitätsprüfungen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-pages" class="md-nav__link">
+  <a href="#verwandte-seiten" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Pages
+      Verwandte Seiten
     </span>
   </a>
   
@@ -2466,118 +2550,122 @@
   
 
 
-<h1 id="localization-guide">Localization Guide</h1>
-<p>This page documents the localization (i18n) structure, maintenance workflow, and SSOT (Single Source of Truth) principles for the AIMO Standard documentation.</p>
-<h2 id="language-purity-policy">Language Purity Policy</h2>
-<p><strong>Each language page should contain only that language's content.</strong></p>
+<h1 id="lokalisierungsleitfaden">Lokalisierungsleitfaden</h1>
+<p>Diese Seite dokumentiert die Lokalisierungs-(i18n-)Struktur, den Wartungsworkflow und die SSOT-(Single Source of Truth-)Prinzipien für die AIMO Standard-Dokumentation.</p>
+<h2 id="sprachreinhaltungsrichtlinie">Sprachreinhaltungsrichtlinie</h2>
+<p><strong>Jede Sprachseite sollte nur Inhalte in dieser Sprache enthalten.</strong></p>
 <table>
 <thead>
 <tr>
-<th>Rule</th>
-<th>Description</th>
+<th>Regel</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EN pages</strong></td>
-<td>Must not contain CJK characters or references to language-specific columns (e.g., <code>_ja</code> suffixes)</td>
+<td><strong>EN-Seiten</strong></td>
+<td>Dürfen keine CJK-Zeichen oder Verweise auf sprachspezifische Spalten (z.B. <code>_ja</code>-Suffixe) enthalten</td>
 </tr>
 <tr>
-<td><strong>JA pages</strong></td>
-<td>Must not explain EN-specific terminology as if it were the canonical structure</td>
+<td><strong>JA-Seiten</strong></td>
+<td>Dürfen EN-spezifische Terminologie nicht so erklären, als wäre sie die kanonische Struktur</td>
 </tr>
 <tr>
-<td><strong>Exceptions</strong></td>
-<td>Listed in <code>MIXED_LANGUAGE_ALLOWLIST</code> in <code>tooling/checks/lint_i18n.py</code></td>
+<td><strong>Ausnahmen</strong></td>
+<td>Aufgelistet in <code>MIXED_LANGUAGE_ALLOWLIST</code> in <code>tooling/checks/lint_i18n.py</code></td>
 </tr>
 </tbody>
 </table>
-<p>This policy ensures:
-1. Readers see only their selected language
-2. Adding new languages doesn't require updating existing pages
-3. CI can automatically detect violations</p>
-<h2 id="language-structure">Language Structure</h2>
-<p>The AIMO Standard documentation uses a <strong>folder-based i18n structure</strong>:</p>
+<p>Diese Richtlinie stellt sicher:
+1. Leser sehen nur ihre ausgewählte Sprache
+2. Das Hinzufügen neuer Sprachen erfordert keine Aktualisierung bestehender Seiten
+3. CI kann Verstöße automatisch erkennen</p>
+<h2 id="sprachstruktur">Sprachstruktur</h2>
+<p>Die AIMO Standard-Dokumentation verwendet eine <strong>ordnerbasierte i18n-Struktur</strong>:</p>
 <pre><code>docs/
-├── en/           # English (canonical)
-├── ja/           # Japanese
-├── es/           # Future: Spanish
-├── de/           # Future: German
-├── ko/           # Future: Korean
-├── zh-hans/      # Future: Simplified Chinese
-└── zh-hant/      # Future: Traditional Chinese
+├── en/           # Englisch (kanonisch)
+├── ja/           # Japanisch (日本語)
+├── es/           # Spanisch (Español)
+├── fr/           # Französisch (Français)
+├── de/           # Deutsch (Deutsch)
+├── pt/           # Portugiesisch (Português)
+├── it/           # Italienisch (Italiano)
+├── zh/           # Vereinfachtes Chinesisch (简体中文)
+├── zh-TW/        # Traditionelles Chinesisch (繁體中文)
+└── ko/           # Koreanisch (한국어)
 </code></pre>
 <ul>
-<li><strong>English is canonical</strong>: The <code>docs/en/</code> folder is the authoritative source for documentation content.</li>
-<li><strong>Other languages mirror the structure</strong>: Each language folder (<code>ja/</code>, etc.) maintains the same file structure as <code>en/</code>.</li>
-<li><strong>Same file names</strong>: All languages use <code>.md</code> extension (no language suffix in filenames).</li>
+<li><strong>Englisch ist kanonisch</strong>: Der Ordner <code>docs/en/</code> ist die autoritative Quelle für Dokumentationsinhalte.</li>
+<li><strong>Andere Sprachen spiegeln die Struktur</strong>: Jeder Sprachordner (<code>ja/</code>, etc.) behält die gleiche Dateistruktur wie <code>en/</code> bei.</li>
+<li><strong>Gleiche Dateinamen</strong>: Alle Sprachen verwenden die Erweiterung <code>.md</code> (kein Sprachsuffix in Dateinamen).</li>
+<li><strong>Fallback auf Englisch</strong>: Fehlende Übersetzungen fallen automatisch auf englische Inhalte zurück.</li>
 </ul>
-<h2 id="taxonomy-data-model">Taxonomy Data Model</h2>
-<p>The taxonomy uses a <strong>language-neutral canonical structure</strong> with separate translation packs:</p>
+<h2 id="taxonomie-datenmodell">Taxonomie-Datenmodell</h2>
+<p>Die Taxonomie verwendet eine <strong>sprachneutrale kanonische Struktur</strong> mit separaten Übersetzungspaketen:</p>
 <pre><code>data/
 └── taxonomy/
-    ├── canonical.yaml           # Language-neutral (codes, status, lifecycle)
+    ├── canonical.yaml           # Sprachneutral (Codes, Status, Lifecycle)
     └── i18n/
-        ├── en.yaml              # English labels and definitions
-        ├── ja.yaml              # Japanese labels and definitions
-        └── {lang}.yaml          # Additional languages (empty template)
+        ├── en.yaml              # Englische Labels und Definitionen
+        ├── ja.yaml              # Japanische Labels und Definitionen
+        └── {lang}.yaml          # Zusätzliche Sprachen (leere Vorlage)
 </code></pre>
-<h3 id="canonical-structure-canonicalyaml">Canonical Structure (<code>canonical.yaml</code>)</h3>
-<p>Contains language-neutral data:</p>
+<h3 id="kanonische-struktur-canonicalyaml">Kanonische Struktur (<code>canonical.yaml</code>)</h3>
+<p>Enthält sprachneutrale Daten:</p>
 <ul>
-<li>Code identifiers (e.g., <code>FS-001</code>, <code>UC-001</code>)</li>
+<li>Code-Identifikatoren (z.B. <code>FS-001</code>, <code>UC-001</code>)</li>
 <li>Status (<code>active</code>, <code>deprecated</code>, <code>removed</code>)</li>
-<li>Lifecycle metadata (<code>introduced_in</code>, <code>deprecated_in</code>, <code>removed_in</code>, <code>replaced_by</code>)</li>
-<li>Scope notes and examples (in English, as technical references)</li>
+<li>Lifecycle-Metadaten (<code>introduced_in</code>, <code>deprecated_in</code>, <code>removed_in</code>, <code>replaced_by</code>)</li>
+<li>Geltungsbereich-Hinweise und Beispiele (auf Englisch, als technische Referenzen)</li>
 </ul>
-<h3 id="translation-packs-i18nyaml">Translation Packs (<code>i18n/*.yaml</code>)</h3>
-<p>Each language pack contains:</p>
+<h3 id="ubersetzungspakete-i18nyaml">Übersetzungspakete (<code>i18n/*.yaml</code>)</h3>
+<p>Jedes Sprachpaket enthält:</p>
 <ul>
-<li>Dimension names (e.g., "Functional Scope")</li>
-<li>Code labels (e.g., "End-user Productivity")</li>
-<li>Code definitions</li>
+<li>Dimensionsnamen (z.B. "Functional Scope")</li>
+<li>Code-Labels (z.B. "End-user Productivity")</li>
+<li>Code-Definitionen</li>
 </ul>
-<p><strong>Fallback</strong>: If a translation is missing, the system uses English.</p>
-<h2 id="ssot-principle">SSOT Principle</h2>
-<p>AIMO uses a <strong>SSOT-first architecture</strong> for taxonomy data:</p>
+<p><strong>Fallback</strong>: Wenn eine Übersetzung fehlt, verwendet das System Englisch.</p>
+<h2 id="ssot-prinzip">SSOT-Prinzip</h2>
+<p>AIMO verwendet eine <strong>SSOT-first-Architektur</strong> für Taxonomiedaten:</p>
 <table>
 <thead>
 <tr>
-<th>Asset Type</th>
-<th>SSOT Location</th>
-<th>Description</th>
+<th>Asset-Typ</th>
+<th>SSOT-Speicherort</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Taxonomy (structure)</strong></td>
+<td><strong>Taxonomie (Struktur)</strong></td>
 <td><code>data/taxonomy/canonical.yaml</code></td>
-<td>Language-neutral structure (SSOT)</td>
+<td>Sprachneutrale Struktur (SSOT)</td>
 </tr>
 <tr>
-<td><strong>Taxonomy (i18n)</strong></td>
+<td><strong>Taxonomie (i18n)</strong></td>
 <td><code>data/taxonomy/i18n/*.yaml</code></td>
-<td>Per-language translations (SSOT)</td>
+<td>Pro-Sprache-Übersetzungen (SSOT)</td>
 </tr>
 <tr>
 <td><strong>Coverage Map</strong></td>
 <td><code>coverage_map/coverage_map.yaml</code></td>
-<td>Framework-to-evidence mapping</td>
+<td>Framework-zu-Evidence-Zuordnung</td>
 </tr>
 <tr>
 <td><strong>Schemas</strong></td>
 <td><code>schemas/jsonschema/</code></td>
-<td>JSON validation schemas</td>
+<td>JSON-Validierungsschemas</td>
 </tr>
 </tbody>
 </table>
-<h3 id="derived-files">Derived Files</h3>
-<p>The following files are <strong>generated</strong> from the SSOT and should NOT be edited manually:</p>
+<h3 id="abgeleitete-dateien">Abgeleitete Dateien</h3>
+<p>Die folgenden Dateien werden aus dem SSOT <strong>generiert</strong> und sollten NICHT manuell bearbeitet werden:</p>
 <table>
 <thead>
 <tr>
-<th>File</th>
-<th>Generated From</th>
+<th>Datei</th>
+<th>Generiert aus</th>
 <th>Generator</th>
 </tr>
 </thead>
@@ -2619,91 +2707,158 @@
 </tr>
 </tbody>
 </table>
-<h3 id="language-codes-bcp47">Language Codes (BCP47)</h3>
-<p>AIMO uses BCP47 language codes:</p>
+<h3 id="sprachcodes-bcp47">Sprachcodes (BCP47)</h3>
+<p>AIMO verwendet BCP47-Sprachcodes:</p>
 <table>
 <thead>
 <tr>
 <th>Code</th>
-<th>Language</th>
+<th>Sprache</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>en</code></td>
-<td>English</td>
+<td>Englisch</td>
+<td>Kanonisch (Quelle)</td>
 </tr>
 <tr>
 <td><code>ja</code></td>
-<td>Japanese (日本語)</td>
+<td>Japanisch (日本語)</td>
+<td>Aktiv</td>
 </tr>
 <tr>
 <td><code>es</code></td>
-<td>Spanish (Español)</td>
+<td>Spanisch (Español)</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td><code>fr</code></td>
+<td>Französisch (Français)</td>
+<td>Aktiv</td>
 </tr>
 <tr>
 <td><code>de</code></td>
-<td>German (Deutsch)</td>
+<td>Deutsch (Deutsch)</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td><code>pt</code></td>
+<td>Portugiesisch (Português)</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td><code>it</code></td>
+<td>Italienisch (Italiano)</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td><code>zh</code></td>
+<td>Vereinfachtes Chinesisch (简体中文)</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td><code>zh-TW</code></td>
+<td>Traditionelles Chinesisch (繁體中文)</td>
+<td>Aktiv</td>
 </tr>
 <tr>
 <td><code>ko</code></td>
-<td>Korean (한국어)</td>
-</tr>
-<tr>
-<td><code>zh-Hans</code></td>
-<td>Simplified Chinese (简体中文)</td>
-</tr>
-<tr>
-<td><code>zh-Hant</code></td>
-<td>Traditional Chinese (繁體中文)</td>
+<td>Koreanisch (한국어)</td>
+<td>Aktiv</td>
 </tr>
 </tbody>
 </table>
-<h3 id="legacy-csv-files-frozen">Legacy CSV Files (Frozen)</h3>
-<p>The legacy EN/JA mixed CSV files in <code>source_pack/03_taxonomy/legacy/</code> are:</p>
+<h3 id="legacy-csv-dateien-eingefroren">Legacy-CSV-Dateien (Eingefroren)</h3>
+<p>Die Legacy-EN/JA-gemischten CSV-Dateien in <code>source_pack/03_taxonomy/legacy/</code> sind:</p>
 <ul>
-<li><strong>Frozen at 21 columns</strong> — no new language columns will be added</li>
-<li><strong>Maintained for backward compatibility</strong> — existing integrations can continue to use them</li>
-<li><strong>CI-enforced</strong> — adding <code>label_es</code>, <code>definition_de</code>, etc. will fail the build</li>
+<li><strong>Eingefroren auf 21 Spalten</strong> — keine neuen Sprachspalten werden hinzugefügt</li>
+<li><strong>Für Rückwärtskompatibilität gepflegt</strong> — bestehende Integrationen können sie weiterhin verwenden</li>
+<li><strong>CI-durchgesetzt</strong> — das Hinzufügen von <code>label_es</code>, <code>definition_de</code>, etc. lässt den Build fehlschlagen</li>
 </ul>
-<p>For new languages, use the per-language artifacts in <code>artifacts/taxonomy/{version}/{lang}/</code>.</p>
-<h2 id="update-workflows">Update Workflows</h2>
-<h3 id="taxonomy-updates-new-ssot-first-workflow">Taxonomy Updates (New SSOT-First Workflow)</h3>
+<p>Für neue Sprachen verwenden Sie die Pro-Sprache-Artefakte in <code>artifacts/taxonomy/{version}/{lang}/</code>.</p>
+<h2 id="ubersetzungsaktualitats-tracking">Übersetzungsaktualitäts-Tracking</h2>
+<p>AIMO verwendet ein <strong>Übersetzungsaktualitäts-Tracking</strong>-System, um die Konsistenz zwischen englischen (Quell-) und übersetzten Inhalten zu wahren.</p>
+<h3 id="wie-es-funktioniert">Wie es funktioniert</h3>
 <ol>
-<li>Edit the SSOT in <code>data/taxonomy/</code>:</li>
-<li>Structure changes → <code>canonical.yaml</code></li>
-<li>English translations → <code>i18n/en.yaml</code></li>
-<li>Japanese translations → <code>i18n/ja.yaml</code></li>
-<li>Run validation: <code>python tooling/checks/lint_taxonomy_ssot.py</code></li>
-<li>Regenerate all derived files: <code>python tooling/taxonomy/build_artifacts.py --version current --langs en ja</code></li>
-<li>Update documentation pages as needed</li>
-<li>Commit all changes together</li>
+<li>Jede übersetzte Datei enthält Metadaten, die verfolgen, von welcher Version der englischen Quelle sie übersetzt wurde</li>
+<li>Wenn englische Inhalte aktualisiert werden, erkennt das System veraltete Übersetzungen</li>
+<li>CI warnt vor veralteten Übersetzungen, blockiert aber nicht (Übersetzungen können hinterherhinken)</li>
 </ol>
-<h3 id="coverage-map-updates">Coverage Map Updates</h3>
+<h3 id="ubersetzungsmetadaten">Übersetzungsmetadaten</h3>
+<p>Übersetzte Dateien enthalten Frontmatter-Metadaten:</p>
+<pre><code class="language-yaml">---
+# TRANSLATION METADATA - DO NOT REMOVE
+source_file: en/standard/current/01-overview.md
+source_hash: abc123def456
+translation_date: 2026-02-02
+translator: human|machine|hybrid
+translation_status: current|outdated|needs_review
+---
+</code></pre>
+<h3 id="verwendung-des-sync-tools">Verwendung des Sync-Tools</h3>
+<pre><code class="language-bash"># Alle Übersetzungen auf Aktualität prüfen
+python tooling/i18n/sync_translations.py --check
+
+# Bestimmte Sprache prüfen
+python tooling/i18n/sync_translations.py --check --lang ja
+
+# Übersetzungsbericht generieren
+python tooling/i18n/sync_translations.py --report
+
+# Neue Sprache initialisieren (EN als Basis kopieren)
+python tooling/i18n/sync_translations.py --init-lang es
+
+# Metadaten nach Abschluss der Übersetzung aktualisieren
+python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
+</code></pre>
+<p>Für detaillierte technische Spezifikation siehe <code>tooling/i18n/TRANSLATION_SYNC_SPEC.md</code>.</p>
+<h2 id="update-workflows">Update-Workflows</h2>
+<h3 id="taxonomie-updates-neuer-ssot-first-workflow">Taxonomie-Updates (Neuer SSOT-First-Workflow)</h3>
 <ol>
-<li>Edit <code>coverage_map/coverage_map.yaml</code> (the SSOT)</li>
-<li>Update the corresponding framework page tables (<code>docs/en/coverage-map/*.md</code>)</li>
-<li>Update Japanese translations (<code>docs/ja/coverage-map/*.md</code>)</li>
-<li>Commit all changes together</li>
+<li>Bearbeiten Sie das SSOT in <code>data/taxonomy/</code>:</li>
+<li>Strukturänderungen → <code>canonical.yaml</code></li>
+<li>Englische Übersetzungen → <code>i18n/en.yaml</code></li>
+<li>Japanische Übersetzungen → <code>i18n/ja.yaml</code></li>
+<li>Validierung ausführen: <code>python tooling/checks/lint_taxonomy_ssot.py</code></li>
+<li>Alle abgeleiteten Dateien regenerieren: <code>python tooling/taxonomy/build_artifacts.py --version current --langs en ja</code></li>
+<li>Dokumentationsseiten nach Bedarf aktualisieren</li>
+<li>Alle Änderungen zusammen committen</li>
 </ol>
-<h3 id="documentation-updates">Documentation Updates</h3>
+<h3 id="coverage-map-updates">Coverage Map-Updates</h3>
 <ol>
-<li>Edit the English source (<code>docs/en/...</code>)</li>
-<li>Update the corresponding Japanese file (<code>docs/ja/...</code>)</li>
-<li>Run <code>python tooling/checks/lint_i18n.py</code> to verify heading consistency</li>
-<li>Run <code>mkdocs build --strict</code> to verify build</li>
-<li>Commit all changes together</li>
+<li>Bearbeiten Sie <code>coverage_map/coverage_map.yaml</code> (das SSOT)</li>
+<li>Aktualisieren Sie die entsprechenden Framework-Seitentabellen (<code>docs/en/coverage-map/*.md</code>)</li>
+<li>Aktualisieren Sie japanische Übersetzungen (<code>docs/ja/coverage-map/*.md</code>)</li>
+<li>Alle Änderungen zusammen committen</li>
 </ol>
-<h2 id="adding-a-new-language-5-steps">Adding a New Language (5 Steps)</h2>
-<p>To add a new language (e.g., Spanish):</p>
-<h3 id="step-1-generate-taxonomy-pack">Step 1: Generate Taxonomy Pack</h3>
+<h3 id="dokumentations-updates">Dokumentations-Updates</h3>
+<ol>
+<li>Bearbeiten Sie die englische Quelle (<code>docs/en/...</code>)</li>
+<li>Aktualisieren Sie Übersetzungen nach Bedarf (oder markieren Sie sie für spätere Aktualisierung)</li>
+<li>Führen Sie <code>python tooling/i18n/sync_translations.py --check</code> aus, um veraltete Übersetzungen zu sehen</li>
+<li>Führen Sie <code>python tooling/checks/lint_i18n.py</code> aus, um Überschriftenkonsistenz zu überprüfen</li>
+<li>Führen Sie <code>mkdocs build --strict</code> aus, um den Build zu überprüfen</li>
+<li>Alle Änderungen zusammen committen</li>
+</ol>
+<p>!!! note "Übersetzungspriorität"
+    Nicht alle Übersetzungen müssen sofort aktualisiert werden. Tier 1 (kritische) Seiten sollten priorisiert werden:</p>
+<pre><code>- `index.md`
+- `standard/current/*.md`
+- `governance/index.md`
+- `releases/index.md`
+</code></pre>
+<h2 id="hinzufugen-einer-neuen-sprache-5-schritte">Hinzufügen einer neuen Sprache (5 Schritte)</h2>
+<p>Um eine neue Sprache hinzuzufügen (z.B. Spanisch):</p>
+<h3 id="schritt-1-taxonomiepaket-generieren">Schritt 1: Taxonomiepaket generieren</h3>
 <pre><code class="language-bash">python tooling/taxonomy/build_i18n_taxonomy.py --add-lang es --lang-name &quot;Español&quot;
 </code></pre>
-<p>Creates <code>data/taxonomy/i18n/es.yaml</code> with English references as comments.</p>
-<h3 id="step-2-create-docs-folder">Step 2: Create Docs Folder</h3>
+<p>Erstellt <code>data/taxonomy/i18n/es.yaml</code> mit englischen Referenzen als Kommentare.</p>
+<h3 id="schritt-2-docs-ordner-erstellen">Schritt 2: Docs-Ordner erstellen</h3>
 <pre><code class="language-bash">mkdir -p docs/es &amp;&amp; cp -r docs/en/* docs/es/
 </code></pre>
-<h3 id="step-3-update-mkdocsyml">Step 3: Update mkdocs.yml</h3>
+<h3 id="schritt-3-mkdocsyml-aktualisieren">Schritt 3: mkdocs.yml aktualisieren</h3>
 <pre><code class="language-yaml">plugins:
   - i18n:
       languages:
@@ -2711,68 +2866,68 @@
           name: Español
           build: true
 </code></pre>
-<h3 id="step-4-translate">Step 4: Translate</h3>
+<h3 id="schritt-4-ubersetzen">Schritt 4: Übersetzen</h3>
 <ul>
-<li>Translate <code>data/taxonomy/i18n/es.yaml</code></li>
-<li>Translate files in <code>docs/es/</code></li>
+<li>Übersetzen Sie <code>data/taxonomy/i18n/es.yaml</code></li>
+<li>Übersetzen Sie Dateien in <code>docs/es/</code></li>
 </ul>
-<h3 id="step-5-verify">Step 5: Verify</h3>
+<h3 id="schritt-5-uberprufen">Schritt 5: Überprüfen</h3>
 <pre><code class="language-bash">python tooling/checks/lint_i18n.py &amp;&amp; mkdocs build --strict
 </code></pre>
-<p>!!! success "Done"
-    New language is now available at <code>/dev/es/</code></p>
-<h2 id="file-naming-conventions">File Naming Conventions</h2>
+<p>!!! success "Fertig"
+    Neue Sprache ist jetzt verfügbar unter <code>/dev/es/</code></p>
+<h2 id="dateibenennungskonventionen">Dateibenennungskonventionen</h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Example</th>
-<th>Description</th>
+<th>Muster</th>
+<th>Beispiel</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>index.md</code></td>
 <td><code>docs/en/governance/index.md</code></td>
-<td>Section landing page</td>
+<td>Abschnitts-Landingpage</td>
 </tr>
 <tr>
 <td><code>{topic}.md</code></td>
 <td><code>docs/en/governance/trust-package.md</code></td>
-<td>Topic page</td>
+<td>Themenseite</td>
 </tr>
 <tr>
 <td><code>{NN}-{topic}.md</code></td>
 <td><code>docs/en/standard/current/03-taxonomy.md</code></td>
-<td>Numbered specification page</td>
+<td>Nummerierte Spezifikationsseite</td>
 </tr>
 </tbody>
 </table>
-<h2 id="quality-checks">Quality Checks</h2>
-<p>Run these checks before committing:</p>
-<pre><code class="language-bash"># i18n structure, heading consistency, and deprecated phrase detection
+<h2 id="qualitatsprufungen">Qualitätsprüfungen</h2>
+<p>Führen Sie diese Prüfungen vor dem Committen aus:</p>
+<pre><code class="language-bash"># i18n-Struktur, Überschriftenkonsistenz und veraltete Phrasenerkennung
 python tooling/checks/lint_i18n.py
 
-# Schema and manifest lints
+# Schema- und Manifest-Lints
 python tooling/checks/lint_schema.py
 python tooling/checks/lint_manifest.py
 
-# Taxonomy SSOT lints
+# Taxonomie-SSOT-Lints
 python tooling/checks/lint_taxonomy_ssot.py --required-langs en
 python tooling/checks/lint_legacy_csv.py
 python tooling/checks/lint_taxonomy_dictionary.py
 python tooling/checks/lint_taxonomy_json.py
 
-# Taxonomy artifacts up to date
+# Taxonomie-Artefakte aktuell
 python tooling/taxonomy/build_artifacts.py --check
 
-# Build verification
+# Build-Verifizierung
 mkdocs build --strict
 </code></pre>
-<h2 id="related-pages">Related Pages</h2>
+<h2 id="verwandte-seiten">Verwandte Seiten</h2>
 <ul>
-<li><a href="../../releases/">Releases</a> — Downloadable packages</li>
-<li><a href="../../governance/">Governance</a> — Project governance</li>
+<li><a href="../../releases/">Releases</a> — Herunterladbare Pakete</li>
+<li><a href="../../governance/">Governance</a> — Projekt-Governance</li>
 </ul>
 
 

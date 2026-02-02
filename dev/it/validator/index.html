@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="AIMO Validator hub - Validation tooling quickstart. Install, run, and interpret results in 30 seconds. Evidence pack validation and compliance checks.">
+        <meta name="description" content="Hub del Validator AIMO - Quickstart del tooling di validazione. Installare, eseguire e interpretare i risultati in 30 secondi. Validazione dell'evidence pack e controlli di conformità.">
       
       
         <meta name="author" content="AIMO Standard Contributors">
@@ -85,7 +85,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIMO Standard">
 <meta property="og:title" content="Validator">
-<meta property="og:description" content="AIMO Validator hub - Validation tooling quickstart. Install, run, and interpret results in 30 seconds. Evidence pack validation and compliance checks.">
+<meta property="og:description" content="Hub del Validator AIMO - Quickstart del tooling di validazione. Installare, eseguire e interpretare i risultati in 30 secondi. Validazione dell'evidence pack e controlli di conformità.">
 <meta property="og:url" content="https://standard.aimoaas.com/latest/it/validator/">
 <meta property="og:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 <meta property="og:locale" content="en_US">
@@ -96,12 +96,12 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Validator">
-<meta name="twitter:description" content="AIMO Validator hub - Validation tooling quickstart. Install, run, and interpret results in 30 seconds. Evidence pack validation and compliance checks.">
+<meta name="twitter:description" content="Hub del Validator AIMO - Quickstart del tooling di validazione. Installare, eseguire e interpretare i risultati in 30 secondi. Validazione dell'evidence pack e controlli di conformità.">
 <meta name="twitter:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 
 
 
-<meta name="description" content="AIMO Validator hub - Validation tooling quickstart. Install, run, and interpret results in 30 seconds. Evidence pack validation and compliance checks.">
+<meta name="description" content="Hub del Validator AIMO - Quickstart del tooling di validazione. Installare, eseguire e interpretare i risultati in 30 secondi. Validazione dell'evidence pack e controlli di conformità.">
 
 <meta name="author" content="AIMO Standard Contributors">
 <meta name="keywords" content="AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance, ISO 42001, NIST AI RMF, EU AI Act, evidence management">
@@ -133,7 +133,7 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Validator",
-  "description": "AIMO Validator hub - Validation tooling quickstart. Install, run, and interpret results in 30 seconds. Evidence pack validation and compliance checks.",
+  "description": "Hub del Validator AIMO - Quickstart del tooling di validazione. Installare, eseguire e interpretare i risultati in 30 secondi. Validazione dell'evidence pack e controlli di conformità.",
   "url": "https://standard.aimoaas.com/latest/it/validator/",
   "inLanguage": "en",
   "isPartOf": {
@@ -402,7 +402,7 @@
   
     
   
-  AIMO Standard
+  Standard AIMO
 
       </a>
     </li>
@@ -600,7 +600,7 @@
   
   
   <span class="md-ellipsis">
-    AIMO Standard
+    Standard AIMO
     
   </span>
   
@@ -1946,36 +1946,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quickstart-30-seconds" class="md-nav__link">
+  <a href="#quickstart-30-secondi" class="md-nav__link">
     <span class="md-ellipsis">
-      Quickstart (30 seconds)
+      Quickstart (30 secondi)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-it-checks" class="md-nav__link">
+  <a href="#cosa-controlla" class="md-nav__link">
     <span class="md-ellipsis">
-      What it checks
+      Cosa controlla
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-it-does-not-check" class="md-nav__link">
+  <a href="#cosa-non-controlla" class="md-nav__link">
     <span class="md-ellipsis">
-      What it does NOT check
+      Cosa NON controlla
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
+  <a href="#risorse" class="md-nav__link">
     <span class="md-ellipsis">
-      Resources
+      Risorse
     </span>
   </a>
   
@@ -2014,47 +2014,47 @@
 
 
 <h1 id="validator">Validator</h1>
-<p>This page is a hub for validation tooling and rules. The normative specification for the validator and its rules is in the Standard.</p>
-<h2 id="quickstart-30-seconds">Quickstart (30 seconds)</h2>
-<p><strong>1. Prerequisites</strong></p>
-<pre><code class="language-bash">pip install jsonschema   # if not already installed
+<p>Questa pagina è un hub per il tooling di validazione e le regole. La specifica normativa per il validator e le sue regole è nello Standard.</p>
+<h2 id="quickstart-30-secondi">Quickstart (30 secondi)</h2>
+<p><strong>1. Prerequisiti</strong></p>
+<pre><code class="language-bash">pip install jsonschema   # se non già installato
 </code></pre>
-<p><strong>2. Run validation against a sample bundle</strong></p>
+<p><strong>2. Eseguire la validazione contro un bundle di esempio</strong></p>
 <pre><code class="language-bash">python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 </code></pre>
-<p><strong>3. Read the report and fix errors/warnings</strong></p>
-<p>Example output (success):</p>
+<p><strong>3. Leggere il report e correggere errori/avvisi</strong></p>
+<p>Esempio di output (successo):</p>
 <pre><code>OK
 </code></pre>
-<p>Example output (failure):</p>
+<p>Esempio di output (fallimento):</p>
 <pre><code>Schema validation failed:
 &lt;root&gt;: 'version' is a required property
 &lt;root&gt;: 'dictionary' is a required property
 &lt;root&gt;: 'evidence' is a required property
 </code></pre>
-<p>Exit codes: <code>0</code> = success, <code>1</code> = validation errors, <code>2</code> = usage error.</p>
+<p>Codici di uscita: <code>0</code> = successo, <code>1</code> = errori di validazione, <code>2</code> = errore d'uso.</p>
 <hr />
-<h2 id="what-it-checks">What it checks</h2>
+<h2 id="cosa-controlla">Cosa controlla</h2>
 <ul>
-<li><strong>Schema validation</strong>: root object, dictionary, and evidence conform to JSON Schema</li>
-<li><strong>Dictionary consistency</strong>: all codes exist in taxonomy dictionary</li>
-<li><strong>Code status</strong>: warns for deprecated codes, errors for removed codes</li>
+<li><strong>Validazione schema</strong>: l'oggetto root, il dizionario e l'evidence sono conformi allo JSON Schema</li>
+<li><strong>Coerenza del dizionario</strong>: tutti i codici esistono nel dizionario della tassonomia</li>
+<li><strong>Stato dei codici</strong>: avvisa per codici deprecati, errore per codici rimossi</li>
 </ul>
-<h2 id="what-it-does-not-check">What it does NOT check</h2>
+<h2 id="cosa-non-controlla">Cosa NON controlla</h2>
 <ul>
-<li><strong>Content accuracy</strong>: validator checks structure, not meaning</li>
-<li><strong>Compliance guarantee</strong>: passing validation does not guarantee regulatory compliance</li>
-<li><strong>Human judgment</strong>: context-dependent decisions require human review (see <a href="../governance/human-oversight-protocol/">Human Oversight Protocol</a>)</li>
-<li><strong>Automatic log collection</strong>: validator validates submitted evidence; it does not collect logs</li>
+<li><strong>Accuratezza del contenuto</strong>: il validator controlla la struttura, non il significato</li>
+<li><strong>Garanzia di conformità</strong>: passare la validazione non garantisce la conformità normativa</li>
+<li><strong>Giudizio umano</strong>: le decisioni dipendenti dal contesto richiedono revisione umana (vedere <a href="../governance/human-oversight-protocol/">Protocollo di Supervisione Umana</a>)</li>
+<li><strong>Raccolta automatica dei log</strong>: il validator valida l'evidence presentata; non raccoglie log</li>
 </ul>
 <hr />
-<h2 id="resources">Resources</h2>
+<h2 id="risorse">Risorse</h2>
 <ul>
-<li><strong>Specification</strong>: <a href="../standard/current/07-validator/">Standard &gt; Current &gt; Validator</a> — rules, reference checks, and how validation relates to evidence.</li>
-<li><strong>Rules and implementation</strong>: repository <code>validator/rules/</code> (checks), <code>validator/src/</code> (reference implementation). Run and CI usage are described in the spec.</li>
-<li><strong>Interpretation</strong>: what a validation "fail" means for auditors (explained in the spec).</li>
+<li><strong>Specifica</strong>: <a href="../standard/current/07-validator/">Standard &gt; Corrente &gt; Validator</a> — regole, controlli di riferimento e come la validazione si relaziona all'evidence.</li>
+<li><strong>Regole e implementazione</strong>: nel repository <code>validator/rules/</code> (controlli), <code>validator/src/</code> (implementazione di riferimento). Esecuzione e uso CI sono descritti nella specifica.</li>
+<li><strong>Interpretazione</strong>: cosa significa un "fail" di validazione per gli auditor (spiegato nella specifica).</li>
 </ul>
-<p>For conformance and artifact usage, see <a href="../conformance/">Conformance</a> and <a href="../artifacts/">Artifacts</a>.</p>
+<p>Per conformità e uso degli artefatti, vedere <a href="../conformance/">Conformità</a> e <a href="../artifacts/">Artefatti</a>.</p>
 
 
 

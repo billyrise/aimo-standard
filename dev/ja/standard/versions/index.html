@@ -2335,7 +2335,7 @@
 <p>=== "Linux / macOS"</p>
 <pre><code>```bash
 # 特定バージョンの全アセットをダウンロード
-VERSION=v0.0.1
+VERSION=v0.0.2
 BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
 curl -LO "${BASE_URL}/trust_package.pdf"
@@ -2424,7 +2424,7 @@ Get-Content .\SHA256SUMS.txt
 <p>すべてのリリースアセットには GitHub Actions によって生成された暗号署名付きビルド来歴証明（attestation）が含まれています。これにより、アセットが公式リポジトリで改ざんなくビルドされたことを検証できます。</p>
 <p><strong>前提条件</strong>: <a href="https://cli.github.com/">GitHub CLI</a> (<code>gh</code>) のインストール</p>
 <pre><code class="language-bash"># GitHub CLI でリリースアセットをダウンロード
-VERSION=v0.0.1
+VERSION=v0.0.2
 gh release download &quot;$VERSION&quot; --repo billyrise/aimo-standard
 
 # 各アセットの attestation を検証

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.">
+        <meta name="description" content="AIMO Code-System Format und Namenskonventionen. Definiert Code-Struktur (XX-NNN), Lifecycle-Zustände, Versionierung und Deprecation-Richtlinien für Taxonomie-Codes.">
       
       
         <meta name="author" content="AIMO Standard Contributors">
@@ -85,7 +85,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIMO Standard">
 <meta property="og:title" content="Codes">
-<meta property="og:description" content="AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.">
+<meta property="og:description" content="AIMO Code-System Format und Namenskonventionen. Definiert Code-Struktur (XX-NNN), Lifecycle-Zustände, Versionierung und Deprecation-Richtlinien für Taxonomie-Codes.">
 <meta property="og:url" content="https://standard.aimoaas.com/latest/de/standard/current/04-codes/">
 <meta property="og:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 <meta property="og:locale" content="en_US">
@@ -96,12 +96,12 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Codes">
-<meta name="twitter:description" content="AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.">
+<meta name="twitter:description" content="AIMO Code-System Format und Namenskonventionen. Definiert Code-Struktur (XX-NNN), Lifecycle-Zustände, Versionierung und Deprecation-Richtlinien für Taxonomie-Codes.">
 <meta name="twitter:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 
 
 
-<meta name="description" content="AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.">
+<meta name="description" content="AIMO Code-System Format und Namenskonventionen. Definiert Code-Struktur (XX-NNN), Lifecycle-Zustände, Versionierung und Deprecation-Richtlinien für Taxonomie-Codes.">
 
 <meta name="author" content="AIMO Standard Contributors">
 <meta name="keywords" content="AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance, ISO 42001, NIST AI RMF, EU AI Act, evidence management">
@@ -133,7 +133,7 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Codes",
-  "description": "AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.",
+  "description": "AIMO Code-System Format und Namenskonventionen. Definiert Code-Struktur (XX-NNN), Lifecycle-Zustände, Versionierung und Deprecation-Richtlinien für Taxonomie-Codes.",
   "url": "https://standard.aimoaas.com/latest/de/standard/current/04-codes/",
   "inLanguage": "en",
   "isPartOf": {
@@ -898,17 +898,17 @@
         <li class="md-nav__item">
   <a href="#code-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Format
+      Code-Format
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Code Format">
+    <nav class="md-nav" aria-label="Code-Format">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#beispiele" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Beispiele
     </span>
   </a>
   
@@ -920,19 +920,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#namespaces" class="md-nav__link">
+  <a href="#namensraume" class="md-nav__link">
     <span class="md-ellipsis">
-      Namespaces
+      Namensräume
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Namespaces">
+    <nav class="md-nav" aria-label="Namensräume">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#namespace-rules" class="md-nav__link">
+  <a href="#namensraum-regeln" class="md-nav__link">
     <span class="md-ellipsis">
-      Namespace Rules
+      Namensraum-Regeln
     </span>
   </a>
   
@@ -944,37 +944,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stability-rules" class="md-nav__link">
+  <a href="#stabilitatsregeln" class="md-nav__link">
     <span class="md-ellipsis">
-      Stability Rules
+      Stabilitätsregeln
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Stability Rules">
+    <nav class="md-nav" aria-label="Stabilitätsregeln">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#id-immutability" class="md-nav__link">
+  <a href="#id-unveranderlichkeit" class="md-nav__link">
     <span class="md-ellipsis">
-      ID Immutability
+      ID-Unveränderlichkeit
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#no-reuse-policy" class="md-nav__link">
+  <a href="#keine-wiederverwendung-richtlinie" class="md-nav__link">
     <span class="md-ellipsis">
-      No Reuse Policy
+      Keine-Wiederverwendung-Richtlinie
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deprecation-before-removal" class="md-nav__link">
+  <a href="#deprecation-vor-entfernung" class="md-nav__link">
     <span class="md-ellipsis">
-      Deprecation Before Removal
+      Deprecation vor Entfernung
     </span>
   </a>
   
@@ -986,37 +986,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#verwendung" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Verwendung
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Verwendung">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-dimensions" class="md-nav__link">
+  <a href="#erforderliche-dimensionen" class="md-nav__link">
     <span class="md-ellipsis">
-      Required Dimensions
+      Erforderliche Dimensionen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-dimensions" class="md-nav__link">
+  <a href="#optionale-dimensionen" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional Dimensions
+      Optionale Dimensionen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#code-composition" class="md-nav__link">
+  <a href="#code-komposition" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Composition
+      Code-Komposition
     </span>
   </a>
   
@@ -1038,45 +1038,45 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#status-values" class="md-nav__link">
+  <a href="#statuswerte" class="md-nav__link">
     <span class="md-ellipsis">
-      Status Values
+      Statuswerte
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lifecycle-metadata-fields" class="md-nav__link">
+  <a href="#lifecycle-metadatenfelder" class="md-nav__link">
     <span class="md-ellipsis">
-      Lifecycle Metadata Fields
+      Lifecycle-Metadatenfelder
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deprecation-rules" class="md-nav__link">
+  <a href="#deprecation-regeln" class="md-nav__link">
     <span class="md-ellipsis">
-      Deprecation Rules
+      Deprecation-Regeln
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#versioning" class="md-nav__link">
+  <a href="#versionierung" class="md-nav__link">
     <span class="md-ellipsis">
-      Versioning
+      Versionierung
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#backward-compatibility" class="md-nav__link">
+  <a href="#ruckwartskompatibilitat" class="md-nav__link">
     <span class="md-ellipsis">
-      Backward Compatibility
+      Rückwärtskompatibilität
     </span>
   </a>
   
@@ -1088,27 +1088,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
+  <a href="#validierung" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation
+      Validierung
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssot-reference" class="md-nav__link">
+  <a href="#ssot-referenz" class="md-nav__link">
     <span class="md-ellipsis">
-      SSOT Reference
+      SSOT-Referenz
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-pages" class="md-nav__link">
+  <a href="#verwandte-seiten" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Pages
+      Verwandte Seiten
     </span>
   </a>
   
@@ -2227,17 +2227,17 @@
         <li class="md-nav__item">
   <a href="#code-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Format
+      Code-Format
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Code Format">
+    <nav class="md-nav" aria-label="Code-Format">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#beispiele" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Beispiele
     </span>
   </a>
   
@@ -2249,19 +2249,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#namespaces" class="md-nav__link">
+  <a href="#namensraume" class="md-nav__link">
     <span class="md-ellipsis">
-      Namespaces
+      Namensräume
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Namespaces">
+    <nav class="md-nav" aria-label="Namensräume">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#namespace-rules" class="md-nav__link">
+  <a href="#namensraum-regeln" class="md-nav__link">
     <span class="md-ellipsis">
-      Namespace Rules
+      Namensraum-Regeln
     </span>
   </a>
   
@@ -2273,37 +2273,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stability-rules" class="md-nav__link">
+  <a href="#stabilitatsregeln" class="md-nav__link">
     <span class="md-ellipsis">
-      Stability Rules
+      Stabilitätsregeln
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Stability Rules">
+    <nav class="md-nav" aria-label="Stabilitätsregeln">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#id-immutability" class="md-nav__link">
+  <a href="#id-unveranderlichkeit" class="md-nav__link">
     <span class="md-ellipsis">
-      ID Immutability
+      ID-Unveränderlichkeit
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#no-reuse-policy" class="md-nav__link">
+  <a href="#keine-wiederverwendung-richtlinie" class="md-nav__link">
     <span class="md-ellipsis">
-      No Reuse Policy
+      Keine-Wiederverwendung-Richtlinie
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deprecation-before-removal" class="md-nav__link">
+  <a href="#deprecation-vor-entfernung" class="md-nav__link">
     <span class="md-ellipsis">
-      Deprecation Before Removal
+      Deprecation vor Entfernung
     </span>
   </a>
   
@@ -2315,37 +2315,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#verwendung" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Verwendung
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Verwendung">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-dimensions" class="md-nav__link">
+  <a href="#erforderliche-dimensionen" class="md-nav__link">
     <span class="md-ellipsis">
-      Required Dimensions
+      Erforderliche Dimensionen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-dimensions" class="md-nav__link">
+  <a href="#optionale-dimensionen" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional Dimensions
+      Optionale Dimensionen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#code-composition" class="md-nav__link">
+  <a href="#code-komposition" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Composition
+      Code-Komposition
     </span>
   </a>
   
@@ -2367,45 +2367,45 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#status-values" class="md-nav__link">
+  <a href="#statuswerte" class="md-nav__link">
     <span class="md-ellipsis">
-      Status Values
+      Statuswerte
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lifecycle-metadata-fields" class="md-nav__link">
+  <a href="#lifecycle-metadatenfelder" class="md-nav__link">
     <span class="md-ellipsis">
-      Lifecycle Metadata Fields
+      Lifecycle-Metadatenfelder
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deprecation-rules" class="md-nav__link">
+  <a href="#deprecation-regeln" class="md-nav__link">
     <span class="md-ellipsis">
-      Deprecation Rules
+      Deprecation-Regeln
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#versioning" class="md-nav__link">
+  <a href="#versionierung" class="md-nav__link">
     <span class="md-ellipsis">
-      Versioning
+      Versionierung
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#backward-compatibility" class="md-nav__link">
+  <a href="#ruckwartskompatibilitat" class="md-nav__link">
     <span class="md-ellipsis">
-      Backward Compatibility
+      Rückwärtskompatibilität
     </span>
   </a>
   
@@ -2417,27 +2417,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
+  <a href="#validierung" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation
+      Validierung
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssot-reference" class="md-nav__link">
+  <a href="#ssot-referenz" class="md-nav__link">
     <span class="md-ellipsis">
-      SSOT Reference
+      SSOT-Referenz
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-pages" class="md-nav__link">
+  <a href="#verwandte-seiten" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Pages
+      Verwandte Seiten
     </span>
   </a>
   
@@ -2476,219 +2476,219 @@
 
 
 <h1 id="codes">Codes</h1>
-<p>This page defines the AIMO Code System format, naming conventions, and lifecycle management.</p>
-<h2 id="code-format">Code Format</h2>
-<p>All AIMO codes follow the format: <strong><code>&lt;PREFIX&gt;-&lt;TOKEN&gt;</code></strong></p>
+<p>Diese Seite definiert das AIMO Code-System Format, Namenskonventionen und Lifecycle-Management.</p>
+<h2 id="code-format">Code-Format</h2>
+<p>Alle AIMO-Codes folgen dem Format: <strong><code>&lt;PRÄFIX&gt;-&lt;TOKEN&gt;</code></strong></p>
 <table>
 <thead>
 <tr>
-<th>Component</th>
-<th>Description</th>
+<th>Komponente</th>
+<th>Beschreibung</th>
 <th>Format</th>
-<th>Example</th>
+<th>Beispiel</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;PREFIX&gt;</code></td>
-<td>Dimension identifier</td>
-<td>2 uppercase letters</td>
+<td><code>&lt;PRÄFIX&gt;</code></td>
+<td>Dimensions-Identifikator</td>
+<td>2 Großbuchstaben</td>
 <td>FS, UC, DT</td>
 </tr>
 <tr>
 <td><code>-</code></td>
-<td>Separator</td>
-<td>Hyphen</td>
+<td>Trennzeichen</td>
+<td>Bindestrich</td>
 <td>-</td>
 </tr>
 <tr>
 <td><code>&lt;TOKEN&gt;</code></td>
-<td>Unique token within dimension</td>
-<td>3 digits (zero-padded)</td>
+<td>Eindeutiges Token innerhalb der Dimension</td>
+<td>3 Ziffern (nullgefüllt)</td>
 <td>001, 002, 003</td>
 </tr>
 </tbody>
 </table>
-<h3 id="examples">Examples</h3>
+<h3 id="beispiele">Beispiele</h3>
 <ul>
-<li><code>FS-001</code> - Functional Scope: End-user Productivity</li>
-<li><code>UC-005</code> - Use Case Class: Code Generation</li>
-<li><code>DT-004</code> - Data Type: Personal Data</li>
-<li><code>CH-003</code> - Channel: IDE Plugin</li>
-<li><code>IM-002</code> - Integration Mode: SaaS Integrated</li>
-<li><code>RS-001</code> - Risk Surface: Data Leakage</li>
-<li><code>OB-001</code> - Outcome/Benefit: Efficiency</li>
-<li><code>EV-001</code> - Evidence Type: Request Record</li>
+<li><code>FS-001</code> - Funktionaler Scope: Endbenutzer-Produktivität</li>
+<li><code>UC-005</code> - Anwendungsfall-Klasse: Code-Generierung</li>
+<li><code>DT-004</code> - Datentyp: Personenbezogene Daten</li>
+<li><code>CH-003</code> - Kanal: IDE-Plugin</li>
+<li><code>IM-002</code> - Integrationsmodus: SaaS-integriert</li>
+<li><code>RS-001</code> - Risikooberfläche: Datenleck</li>
+<li><code>OB-001</code> - Ergebnis/Nutzen: Effizienz</li>
+<li><code>EV-001</code> - Evidence-Typ: Antragsdatensatz</li>
 </ul>
-<h2 id="namespaces">Namespaces</h2>
-<p>The AIMO taxonomy uses 8 dimension namespaces:</p>
+<h2 id="namensraume">Namensräume</h2>
+<p>Die AIMO Taxonomie verwendet 8 Dimensions-Namensräume:</p>
 <table>
 <thead>
 <tr>
 <th>ID</th>
 <th>Name</th>
-<th>Prefix</th>
-<th>Code Count</th>
+<th>Präfix</th>
+<th>Code-Anzahl</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>FS</strong></td>
-<td>Functional Scope</td>
+<td>Funktionaler Scope</td>
 <td><code>FS-</code></td>
 <td>6</td>
 </tr>
 <tr>
 <td><strong>UC</strong></td>
-<td>Use Case Class</td>
+<td>Anwendungsfall-Klasse</td>
 <td><code>UC-</code></td>
 <td>30</td>
 </tr>
 <tr>
 <td><strong>DT</strong></td>
-<td>Data Type</td>
+<td>Datentyp</td>
 <td><code>DT-</code></td>
 <td>10</td>
 </tr>
 <tr>
 <td><strong>CH</strong></td>
-<td>Channel</td>
+<td>Kanal</td>
 <td><code>CH-</code></td>
 <td>8</td>
 </tr>
 <tr>
 <td><strong>IM</strong></td>
-<td>Integration Mode</td>
+<td>Integrationsmodus</td>
 <td><code>IM-</code></td>
 <td>7</td>
 </tr>
 <tr>
 <td><strong>RS</strong></td>
-<td>Risk Surface</td>
+<td>Risikooberfläche</td>
 <td><code>RS-</code></td>
 <td>8</td>
 </tr>
 <tr>
 <td><strong>OB</strong></td>
-<td>Outcome / Benefit</td>
+<td>Ergebnis / Nutzen</td>
 <td><code>OB-</code></td>
 <td>7</td>
 </tr>
 <tr>
 <td><strong>EV</strong></td>
-<td>Evidence Type</td>
+<td>Evidence-Typ</td>
 <td><code>EV-</code></td>
 <td>15</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Total: 91 codes across 8 dimensions</strong></p>
-<h3 id="namespace-rules">Namespace Rules</h3>
+<p><strong>Gesamt: 91 Codes über 8 Dimensionen</strong></p>
+<h3 id="namensraum-regeln">Namensraum-Regeln</h3>
 <ol>
-<li><strong>Prefix is fixed</strong>: The two-letter dimension prefix (FS, UC, etc.) is permanent and will never change.</li>
-<li><strong>Zero-padding</strong>: Tokens are always 3 digits, zero-padded (e.g., <code>001</code> not <code>1</code>).</li>
-<li><strong>Sequential assignment</strong>: New codes are assigned the next available number within a dimension.</li>
-<li><strong>No reuse</strong>: Removed codes are never reassigned to different meanings.</li>
+<li><strong>Präfix ist fest</strong>: Das zwei-Buchstaben-Dimensions-Präfix (FS, UC, etc.) ist permanent und wird sich nie ändern.</li>
+<li><strong>Nullfüllung</strong>: Tokens sind immer 3 Ziffern, nullgefüllt (z.B. <code>001</code> nicht <code>1</code>).</li>
+<li><strong>Sequenzielle Zuweisung</strong>: Neue Codes erhalten die nächste verfügbare Nummer innerhalb einer Dimension.</li>
+<li><strong>Keine Wiederverwendung</strong>: Entfernte Codes werden nie für andere Bedeutungen neu zugewiesen.</li>
 </ol>
-<h2 id="stability-rules">Stability Rules</h2>
-<p>Code stability is a critical principle for audit traceability.</p>
-<h3 id="id-immutability">ID Immutability</h3>
+<h2 id="stabilitatsregeln">Stabilitätsregeln</h2>
+<p>Code-Stabilität ist ein kritisches Prinzip für Audit-Nachverfolgbarkeit.</p>
+<h3 id="id-unveranderlichkeit">ID-Unveränderlichkeit</h3>
 <ul>
-<li><strong>Code IDs are immutable</strong> — once assigned, a code ID never changes meaning</li>
-<li>A code like <code>UC-001</code> will always mean "General Q&amp;A" for its entire lifecycle</li>
-<li>If the meaning needs to change, a new code is created instead</li>
+<li><strong>Code-IDs sind unveränderlich</strong> — einmal zugewiesen, ändert eine Code-ID nie ihre Bedeutung</li>
+<li>Ein Code wie <code>UC-001</code> wird immer "Allgemeine F&amp;A" für seinen gesamten Lifecycle bedeuten</li>
+<li>Wenn die Bedeutung geändert werden muss, wird stattdessen ein neuer Code erstellt</li>
 </ul>
-<h3 id="no-reuse-policy">No Reuse Policy</h3>
+<h3 id="keine-wiederverwendung-richtlinie">Keine-Wiederverwendung-Richtlinie</h3>
 <ul>
-<li>Deprecated or removed codes are <strong>never reassigned</strong> to different meanings</li>
-<li>This ensures historical evidence remains valid and traceable</li>
-<li>Example: If <code>UC-010</code> is deprecated, a new use case gets <code>UC-031</code> (not <code>UC-010</code>)</li>
+<li>Veraltete oder entfernte Codes werden <strong>nie</strong> für andere Bedeutungen neu zugewiesen</li>
+<li>Dies stellt sicher, dass historisches Evidence gültig und nachverfolgbar bleibt</li>
+<li>Beispiel: Wenn <code>UC-010</code> veraltet ist, erhält ein neuer Anwendungsfall <code>UC-031</code> (nicht <code>UC-010</code>)</li>
 </ul>
-<h3 id="deprecation-before-removal">Deprecation Before Removal</h3>
+<h3 id="deprecation-vor-entfernung">Deprecation vor Entfernung</h3>
 <ul>
-<li>Codes must be marked <code>deprecated</code> for at least one MINOR version before removal</li>
-<li>Removal only occurs in MAJOR version increments</li>
-<li>See <a href="#lifecycle">Lifecycle</a> section for details</li>
+<li>Codes müssen für mindestens eine MINOR-Version als <code>deprecated</code> markiert werden, bevor sie entfernt werden</li>
+<li>Entfernung erfolgt nur bei MAJOR-Versionserhöhungen</li>
+<li>Siehe Abschnitt <a href="#lifecycle">Lifecycle</a> für Details</li>
 </ul>
-<h2 id="usage">Usage</h2>
-<h3 id="required-dimensions">Required Dimensions</h3>
-<p>For each AI system or use case, you MUST specify at least one code from each required dimension:</p>
+<h2 id="verwendung">Verwendung</h2>
+<h3 id="erforderliche-dimensionen">Erforderliche Dimensionen</h3>
+<p>Für jedes KI-System oder jeden Anwendungsfall MÜSSEN Sie mindestens einen Code aus jeder erforderlichen Dimension angeben:</p>
 <table>
 <thead>
 <tr>
 <th>Dimension</th>
-<th>Selection</th>
-<th>Notes</th>
+<th>Auswahl</th>
+<th>Hinweise</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>FS</td>
-<td>Exactly 1</td>
-<td>Primary business function</td>
+<td>Genau 1</td>
+<td>Primäre Geschäftsfunktion</td>
 </tr>
 <tr>
 <td>UC</td>
-<td>1 or more</td>
-<td>Task types performed</td>
+<td>1 oder mehr</td>
+<td>Ausgeführte Aufgabentypen</td>
 </tr>
 <tr>
 <td>DT</td>
-<td>1 or more</td>
-<td>Data classifications</td>
+<td>1 oder mehr</td>
+<td>Datenklassifizierungen</td>
 </tr>
 <tr>
 <td>CH</td>
-<td>1 or more</td>
-<td>Access channels</td>
+<td>1 oder mehr</td>
+<td>Zugriffskanäle</td>
 </tr>
 <tr>
 <td>IM</td>
-<td>Exactly 1</td>
-<td>Integration mode</td>
+<td>Genau 1</td>
+<td>Integrationsmodus</td>
 </tr>
 <tr>
 <td>RS</td>
-<td>1 or more</td>
-<td>Risk categories</td>
+<td>1 oder mehr</td>
+<td>Risikokategorien</td>
 </tr>
 <tr>
 <td>EV</td>
-<td>1 or more</td>
-<td>Evidence types</td>
+<td>1 oder mehr</td>
+<td>Evidence-Typen</td>
 </tr>
 </tbody>
 </table>
-<h3 id="optional-dimensions">Optional Dimensions</h3>
+<h3 id="optionale-dimensionen">Optionale Dimensionen</h3>
 <table>
 <thead>
 <tr>
 <th>Dimension</th>
-<th>Selection</th>
-<th>Notes</th>
+<th>Auswahl</th>
+<th>Hinweise</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>OB</td>
-<td>0 or more</td>
-<td>Expected benefits (optional)</td>
+<td>0 oder mehr</td>
+<td>Erwartete Vorteile (optional)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="code-composition">Code Composition</h3>
-<p>When documenting an AI system, codes from multiple dimensions are combined. The <strong>composition priority</strong> determines the order when listing codes:</p>
+<h3 id="code-komposition">Code-Komposition</h3>
+<p>Bei der Dokumentation eines KI-Systems werden Codes aus mehreren Dimensionen kombiniert. Die <strong>Kompositionspriorität</strong> bestimmt die Reihenfolge bei der Auflistung von Codes:</p>
 <ol>
-<li>FS (Functional Scope)</li>
-<li>UC (Use Case Class)</li>
-<li>DT (Data Type)</li>
-<li>CH (Channel)</li>
-<li>IM (Integration Mode)</li>
-<li>RS (Risk Surface)</li>
-<li>OB (Outcome / Benefit)</li>
-<li>EV (Evidence Type)</li>
+<li>FS (Funktionaler Scope)</li>
+<li>UC (Anwendungsfall-Klasse)</li>
+<li>DT (Datentyp)</li>
+<li>CH (Kanal)</li>
+<li>IM (Integrationsmodus)</li>
+<li>RS (Risikooberfläche)</li>
+<li>OB (Ergebnis / Nutzen)</li>
+<li>EV (Evidence-Typ)</li>
 </ol>
-<p><strong>Example composition:</strong></p>
+<p><strong>Beispielkomposition:</strong></p>
 <pre><code>FS: FS-001
 UC: UC-001, UC-002
 DT: DT-002, DT-004
@@ -2699,163 +2699,163 @@ OB: OB-001
 EV: EV-001, EV-002
 </code></pre>
 <h2 id="lifecycle">Lifecycle</h2>
-<h3 id="status-values">Status Values</h3>
+<h3 id="statuswerte">Statuswerte</h3>
 <table>
 <thead>
 <tr>
 <th>Status</th>
-<th>Description</th>
-<th>Validator Behavior</th>
+<th>Beschreibung</th>
+<th>Validator-Verhalten</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>active</code></td>
-<td>Currently valid and in use</td>
-<td>Accepted</td>
+<td>Derzeit gültig und in Verwendung</td>
+<td>Akzeptiert</td>
 </tr>
 <tr>
 <td><code>deprecated</code></td>
-<td>Still valid but scheduled for removal</td>
-<td>Accepted with warning</td>
+<td>Noch gültig, aber zur Entfernung vorgesehen</td>
+<td>Akzeptiert mit Warnung</td>
 </tr>
 <tr>
 <td><code>removed</code></td>
-<td>No longer valid; do not use</td>
-<td>Rejected</td>
+<td>Nicht mehr gültig; nicht verwenden</td>
+<td>Abgelehnt</td>
 </tr>
 </tbody>
 </table>
-<h3 id="lifecycle-metadata-fields">Lifecycle Metadata Fields</h3>
-<p>The dictionary tracks lifecycle with these fields:</p>
+<h3 id="lifecycle-metadatenfelder">Lifecycle-Metadatenfelder</h3>
+<p>Das Dictionary verfolgt den Lifecycle mit diesen Feldern:</p>
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>Required</th>
-<th>Description</th>
-<th>Example</th>
+<th>Feld</th>
+<th>Erforderlich</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>status</code></td>
-<td>Yes</td>
-<td>Current status</td>
+<td>Ja</td>
+<td>Aktueller Status</td>
 <td><code>active</code></td>
 </tr>
 <tr>
 <td><code>introduced_in</code></td>
-<td>Yes</td>
-<td>Version when code was added</td>
+<td>Ja</td>
+<td>Version, als Code hinzugefügt wurde</td>
 <td><code>0.1.0</code></td>
 </tr>
 <tr>
 <td><code>deprecated_in</code></td>
-<td>No</td>
-<td>Version when marked deprecated</td>
+<td>Nein</td>
+<td>Version, als als veraltet markiert</td>
 <td><code>1.2.0</code></td>
 </tr>
 <tr>
 <td><code>removed_in</code></td>
-<td>No</td>
-<td>Version when removed</td>
+<td>Nein</td>
+<td>Version, als entfernt</td>
 <td><code>2.0.0</code></td>
 </tr>
 <tr>
 <td><code>replaced_by</code></td>
-<td>No</td>
-<td>Replacement code(s)</td>
+<td>Nein</td>
+<td>Ersetzungscode(s)</td>
 <td><code>UC-015</code></td>
 </tr>
 <tr>
 <td><code>backward_compatible</code></td>
-<td>Yes</td>
-<td>Whether change breaks existing usage</td>
+<td>Ja</td>
+<td>Ob Änderung bestehende Nutzung bricht</td>
 <td><code>true</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="deprecation-rules">Deprecation Rules</h3>
+<h3 id="deprecation-regeln">Deprecation-Regeln</h3>
 <ol>
-<li>Codes MUST be marked <code>deprecated</code> for at least one MINOR version before removal</li>
-<li>Deprecated codes include <code>deprecated_in</code> version and <code>replaced_by</code> if applicable</li>
-<li>Removal occurs only in MAJOR version increments</li>
-<li>Deprecated codes remain valid for backward compatibility during the deprecation period</li>
+<li>Codes MÜSSEN für mindestens eine MINOR-Version als <code>deprecated</code> markiert werden, bevor sie entfernt werden</li>
+<li>Veraltete Codes enthalten <code>deprecated_in</code>-Version und <code>replaced_by</code>, falls zutreffend</li>
+<li>Entfernung erfolgt nur bei MAJOR-Versionserhöhungen</li>
+<li>Veraltete Codes bleiben während des Deprecation-Zeitraums für Rückwärtskompatibilität gültig</li>
 </ol>
-<p><strong>Example timeline:</strong></p>
+<p><strong>Beispielzeitlinie:</strong></p>
 <table>
 <thead>
 <tr>
 <th>Version</th>
 <th>Status</th>
-<th>Action</th>
+<th>Aktion</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0.1.0</td>
 <td><code>active</code></td>
-<td>Code <code>UC-010</code> introduced</td>
+<td>Code <code>UC-010</code> eingeführt</td>
 </tr>
 <tr>
 <td>1.2.0</td>
 <td><code>deprecated</code></td>
-<td>Marked deprecated, <code>replaced_by: UC-031</code></td>
+<td>Als veraltet markiert, <code>replaced_by: UC-031</code></td>
 </tr>
 <tr>
 <td>2.0.0</td>
 <td><code>removed</code></td>
-<td>No longer accepted by validator</td>
+<td>Nicht mehr vom Validator akzeptiert</td>
 </tr>
 </tbody>
 </table>
-<h3 id="versioning">Versioning</h3>
-<p>Code changes follow <a href="../08-changelog/">Semantic Versioning</a>:</p>
+<h3 id="versionierung">Versionierung</h3>
+<p>Code-Änderungen folgen <a href="../08-changelog/">Semantic Versioning</a>:</p>
 <ul>
-<li><strong>MAJOR</strong>: Code removal or breaking changes</li>
-<li><strong>MINOR</strong>: New codes added, codes deprecated</li>
-<li><strong>PATCH</strong>: Definition clarifications only (no structural changes)</li>
+<li><strong>MAJOR</strong>: Code-Entfernung oder Breaking Changes</li>
+<li><strong>MINOR</strong>: Neue Codes hinzugefügt, Codes veraltet</li>
+<li><strong>PATCH</strong>: Nur Definitionsklarstellungen (keine strukturellen Änderungen)</li>
 </ul>
-<h3 id="backward-compatibility">Backward Compatibility</h3>
-<p>The <code>backward_compatible</code> field indicates whether a change breaks existing usage:</p>
+<h3 id="ruckwartskompatibilitat">Rückwärtskompatibilität</h3>
+<p>Das <code>backward_compatible</code>-Feld zeigt an, ob eine Änderung bestehende Nutzung bricht:</p>
 <table>
 <thead>
 <tr>
-<th>Value</th>
-<th>Meaning</th>
+<th>Wert</th>
+<th>Bedeutung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>true</code></td>
-<td>Existing evidence using this code remains valid</td>
+<td>Bestehendes Evidence mit diesem Code bleibt gültig</td>
 </tr>
 <tr>
 <td><code>false</code></td>
-<td>Existing evidence may need updates (MAJOR version change)</td>
+<td>Bestehendes Evidence benötigt möglicherweise Updates (MAJOR-Versionsänderung)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="validation">Validation</h2>
-<p>The validator checks:</p>
+<h2 id="validierung">Validierung</h2>
+<p>Der Validator prüft:</p>
 <ol>
-<li>All required dimensions have at least one code</li>
-<li>Single-select dimensions have exactly one code</li>
-<li>All codes exist in the current taxonomy dictionary</li>
-<li>Code format matches <code>&lt;PREFIX&gt;-&lt;TOKEN&gt;</code> pattern (e.g., <code>UC-001</code>)</li>
-<li>Deprecated codes are flagged with warnings</li>
+<li>Alle erforderlichen Dimensionen haben mindestens einen Code</li>
+<li>Einzel-Auswahl-Dimensionen haben genau einen Code</li>
+<li>Alle Codes existieren im aktuellen Taxonomie-Dictionary</li>
+<li>Code-Format entspricht dem Muster <code>&lt;PRÄFIX&gt;-&lt;TOKEN&gt;</code> (z.B. <code>UC-001</code>)</li>
+<li>Veraltete Codes werden mit Warnungen gekennzeichnet</li>
 </ol>
-<p>See <a href="../07-validator/">Validator</a> for implementation details.</p>
-<h2 id="ssot-reference">SSOT Reference</h2>
-<p>!!! info "Source of Truth"
-    The authoritative definition is <code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>. This page is explanatory. See <a href="../../../contributing/localization/">Localization Guide</a> for update workflows.</p>
-<h2 id="related-pages">Related Pages</h2>
+<p>Siehe <a href="../07-validator/">Validator</a> für Implementierungsdetails.</p>
+<h2 id="ssot-referenz">SSOT-Referenz</h2>
+<p>!!! info "Quelle der Wahrheit"
+    Die maßgebliche Definition ist <code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>. Diese Seite ist erklärend. Siehe <a href="../../../contributing/localization/">Lokalisierungsleitfaden</a> für Update-Workflows.</p>
+<h2 id="verwandte-seiten">Verwandte Seiten</h2>
 <ul>
-<li><a href="../03-taxonomy/">Taxonomy</a> - Full dimension definitions</li>
-<li><a href="../05-dictionary/">Dictionary</a> - Complete code listings and column definitions</li>
-<li><a href="../07-validator/">Validator</a> - Validation rules</li>
-<li><a href="../08-changelog/">Changelog</a> - Version history</li>
+<li><a href="../03-taxonomy/">Taxonomie</a> - Vollständige Dimensionsdefinitionen</li>
+<li><a href="../05-dictionary/">Dictionary</a> - Vollständige Code-Listen und Spaltendefinitionen</li>
+<li><a href="../07-validator/">Validator</a> - Validierungsregeln</li>
+<li><a href="../08-changelog/">Changelog</a> - Versionshistorie</li>
 </ul>
 
 
