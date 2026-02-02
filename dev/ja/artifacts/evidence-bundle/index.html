@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -1335,6 +1335,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ev-evidence-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      規範的関係：EV レコード（索引）と Evidence Pack（ペイロード）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#traceability" class="md-nav__link">
     <span class="md-ellipsis">
       追跡可能性（Traceability）
@@ -2068,6 +2077,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ev-evidence-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      規範的関係：EV レコード（索引）と Evidence Pack（ペイロード）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#traceability" class="md-nav__link">
     <span class="md-ellipsis">
       追跡可能性（Traceability）
@@ -2115,6 +2133,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2140,7 +2164,7 @@
 <h2 id="_1">バンドル構造と命名</h2>
 <ul>
 <li><strong>バンドルルート命名</strong>: <code>{org}_{system}_{period}_{version}</code> など一貫した形式を用いる（例: <code>acme_ai-usage_2026-Q1_v1</code>）。</li>
-<li><strong>必須ファイル</strong>: <a href="../../standard/current/06-ev-template/">EV Template</a> に整合した証跡（EV）セット、<a href="../../standard/current/05-dictionary/">Dictionary</a>、バンドル概要の <strong>Summary</strong>、およびバンドル・内容の変更を記録する <strong>Change Log</strong>（またはその参照）を少なくとも含める。</li>
+<li><strong>必須ファイル</strong>: <a href="../../standard/current/06-ev-template/">Evidence Pack テンプレート（EP）</a> に整合した証跡（EV）セット、<a href="../../standard/current/05-dictionary/">Dictionary</a>、バンドル概要の <strong>Summary</strong>、およびバンドル・内容の変更を記録する <strong>Change Log</strong>（またはその参照）を少なくとも含める。</li>
 <li><strong>任意添付</strong>: ログ、審査記録、例外承認、更新記録など。命名を統一し、EV/辞書から参照可能にすること。</li>
 </ul>
 <h2 id="toc">目次（TOC）</h2>
@@ -2222,6 +2246,15 @@
 </tr>
 </tbody>
 </table>
+<h2 id="ev-evidence-pack">規範的関係：EV レコード（索引）と Evidence Pack（ペイロード）</h2>
+<p>二重構築と監査上の曖昧さを避けるため、以下を<strong>規範</strong>とします。</p>
+<ol>
+<li><strong>EV レコード（JSON）</strong>は<strong>索引／台帳</strong>であり、機械検証可能なトレーサビリティを提供します。実施内容（申請・審査・例外・更新・変更）を記録し、安定IDと相互参照を MUST で持ちます。</li>
+<li><strong>Evidence Pack ファイル</strong>（EP-01..EP-07 のドキュメントとマニフェスト）は<strong>ペイロード</strong>であり、索引が参照する人間／ツール可読な証跡です。</li>
+<li><strong>リンク</strong>: EV レコードは <code>evidence_file_ids</code>（例：EP-01, EP-02）および／または暗号学的ハッシュでペイロードを参照することを SHOULD とします。<a href="../../validator/">Validator</a> は、これらの参照が存在する場合（例：参照された file_id が Evidence Pack マニフェストに存在し、任意のハッシュが一致すること）に参照整合性をチェックします。</li>
+<li><strong>監査提出の最小セット</strong>: <strong>EV JSON</strong>（root/records）+ <strong>Dictionary</strong> + <strong>Summary</strong> + <strong>Change Log</strong> + <strong>Evidence Pack</strong>（マニフェスト＋ファイル、例：zip）。これら全体が適合の対象となります。</li>
+</ol>
+<p>実装者は単一の情報源を維持します。EV 索引がパックを参照し、パックは Taxonomy EV コード（申請記録、審査/承認記録など）の意味を再定義しません。<a href="../../standard/current/06-ev-template/">Evidence Pack テンプレート</a> で EP-01..EP-07 のドキュメント種別を参照してください。</p>
 <h2 id="traceability">追跡可能性（Traceability）</h2>
 <ul>
 <li><strong>安定ID</strong>: 各レコード（EV、request、review、exception、renewal、change log エントリ）は安定した一意の識別子を MUST で持つ。</li>
@@ -2265,6 +2298,7 @@
 
 
                 
+
               </article>
             </div>
           

@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -1335,6 +1335,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#normative-beziehung-ev-datensatze-index-und-evidence-pack-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normative Beziehung: EV-Datensätze (Index) und Evidence Pack (Payload)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nachverfolgbarkeit" class="md-nav__link">
     <span class="md-ellipsis">
       Nachverfolgbarkeit
@@ -2068,6 +2077,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#normative-beziehung-ev-datensatze-index-und-evidence-pack-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normative Beziehung: EV-Datensätze (Index) und Evidence Pack (Payload)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nachverfolgbarkeit" class="md-nav__link">
     <span class="md-ellipsis">
       Nachverfolgbarkeit
@@ -2115,6 +2133,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2140,7 +2164,7 @@
 <h2 id="bundle-struktur-und-benennung">Bundle-Struktur und Benennung</h2>
 <ul>
 <li><strong>Bundle-Stammbenennung</strong>: Verwenden Sie ein konsistentes Muster wie <code>{org}_{system}_{zeitraum}_{version}</code> (z.B. <code>acme_ai-usage_2026-Q1_v1</code>).</li>
-<li><strong>Erforderliche Dateien</strong>: mindestens ein Evidence (EV)-Satz, der am <a href="../../standard/current/06-ev-template/">EV-Template</a> ausgerichtet ist, ein <a href="../../standard/current/05-dictionary/">Dictionary</a>, eine kurze <strong>Zusammenfassung</strong> (Executive Summary des Bundles) und ein <strong>Änderungsprotokoll</strong> (oder Verweis darauf) für Änderungen am Bundle oder dessen Inhalten.</li>
+<li><strong>Erforderliche Dateien</strong>: mindestens ein Evidence (EV)-Satz, der am <a href="../../standard/current/06-ev-template/">Evidence Pack Template (EP)</a> ausgerichtet ist, ein <a href="../../standard/current/05-dictionary/">Dictionary</a>, eine kurze <strong>Zusammenfassung</strong> (Executive Summary des Bundles) und ein <strong>Änderungsprotokoll</strong> (oder Verweis darauf) für Änderungen am Bundle oder dessen Inhalten.</li>
 <li><strong>Optionale Anhänge</strong>: Protokolle, Prüfaufzeichnungen, Ausnahmegenehmigungen, Verlängerungsaufzeichnungen; halten Sie die Benennung konsistent und referenzierbar vom Haupt-EV/Dictionary.</li>
 </ul>
 <h2 id="inhaltsverzeichnis-toc">Inhaltsverzeichnis (TOC)</h2>
@@ -2222,6 +2246,8 @@
 </tr>
 </tbody>
 </table>
+<h2 id="normative-beziehung-ev-datensatze-index-und-evidence-pack-payload">Normative Beziehung: EV-Datensätze (Index) und Evidence Pack (Payload)</h2>
+<p>Um Doppelaufbau und Audit-Ambiguität zu vermeiden, gilt Folgendes als <strong>normativ</strong>: (1) EV-Datensätze (JSON) sind der <strong>Index/Ledger</strong> (maschinenprüfbare Nachverfolgbarkeit). (2) Evidence-Pack-Dateien (EP-01..EP-07 und Manifest) sind der <strong>Payload</strong>. (3) EV-Datensätze SOLLTEN den Payload per <code>evidence_file_ids</code> (z. B. EP-01) und/oder Hashes referenzieren; der <a href="../../validator/">Validator</a> prüft die Referenzintegrität. (4) <strong>Minimaler Einreichungssatz</strong>: EV JSON + Dictionary + Summary + Change Log + Evidence Pack (zip). Siehe <a href="../../standard/current/06-ev-template/">Evidence Pack Template</a> für Dokumenttypen EP-01..EP-07.</p>
 <h2 id="nachverfolgbarkeit">Nachverfolgbarkeit</h2>
 <ul>
 <li><strong>Stabile IDs</strong>: Jeder Datensatz (EV, Antrag, Prüfung, Ausnahme, Verlängerung, Änderungsprotokoll-Eintrag) MUSS einen stabilen, eindeutigen Identifikator haben.</li>
@@ -2265,6 +2291,7 @@ Siehe [Mindestanforderungen an Evidence &gt; Integrität &amp; Zugriff](minimum-
 
 
                 
+
               </article>
             </div>
           

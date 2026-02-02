@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -209,7 +209,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#template-ev" class="md-skip">
+        <a href="#template-evidence-pack-ep" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -942,6 +942,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#namespace-tipos-de-documento-evidence-pack-ep-vs-taxonomy-evidence-type-ev" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: tipos de documento Evidence Pack (EP) vs Taxonomy Evidence Type (EV)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#principio-chave-gestao-de-indice-e-diff" class="md-nav__link">
     <span class="md-ellipsis">
       Princípio Chave: Gestão de Índice e Diff
@@ -951,9 +960,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conjunto-mvp-de-evidencias-ev-01-a-ev-07" class="md-nav__link">
+  <a href="#conjunto-mvp-de-evidencias-ep-01-a-ep-07" class="md-nav__link">
     <span class="md-ellipsis">
-      Conjunto MVP de Evidências (EV-01 a EV-07)
+      Conjunto MVP de Evidências (EP-01 a EP-07)
     </span>
   </a>
   
@@ -2141,6 +2150,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#namespace-tipos-de-documento-evidence-pack-ep-vs-taxonomy-evidence-type-ev" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace: tipos de documento Evidence Pack (EP) vs Taxonomy Evidence Type (EV)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#principio-chave-gestao-de-indice-e-diff" class="md-nav__link">
     <span class="md-ellipsis">
       Princípio Chave: Gestão de Índice e Diff
@@ -2150,9 +2168,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conjunto-mvp-de-evidencias-ev-01-a-ev-07" class="md-nav__link">
+  <a href="#conjunto-mvp-de-evidencias-ep-01-a-ep-07" class="md-nav__link">
     <span class="md-ellipsis">
-      Conjunto MVP de Evidências (EV-01 a EV-07)
+      Conjunto MVP de Evidências (EP-01 a EP-07)
     </span>
   </a>
   
@@ -2287,6 +2305,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2307,70 +2331,64 @@
   
 
 
-<h1 id="template-ev">Template EV</h1>
+<h1 id="template-evidence-pack-ep">Template Evidence Pack (EP)</h1>
 <p>Esta seção define os templates de Evidence Pack e seu uso. Um Evidence Pack é uma coleção de documentação que demonstra governança e conformidade para um sistema de IA.</p>
-<h2 id="principio-chave-gestao-de-indice-e-diff">Princípio Chave: Gestão de Índice e Diff</h2>
+<h2 id="namespace-tipos-de-documento-evidence-pack-ep-vs-taxonomy-evidence-type-ev">Namespace: tipos de documento Evidence Pack (EP) vs Taxonomy Evidence Type (EV)</h2>
 <blockquote>
-<p><strong>Importante</strong>: O que importa não é o conteúdo de submissões individuais, mas o <strong>índice</strong> e <strong>gestão de diff</strong> entre itens de evidência.</p>
+<p><strong>Importante</strong>: <strong>EP-01..EP-07</strong> identificam <em>tipos de documento</em> (tipos de arquivo Evidence Pack). <strong>EV-001, EV-002, …</strong> na <a href="../03-taxonomy/">Taxonomia</a> identificam <em>tipos de evento/evidência</em> (Registro de Solicitação, Registro de Revisão/Aprovação, etc.). Não misture códigos: use EP para estrutura do pack e EV para classificação de evidência do ciclo de vida.</p>
 </blockquote>
+<h2 id="principio-chave-gestao-de-indice-e-diff">Princípio Chave: Gestão de Índice e Diff</h2>
+<p>O que importa não é apenas o conteúdo de submissões individuais, mas o <strong>índice</strong> e a <strong>gestão de diff</strong> entre itens de evidência.</p>
 <p>Um Evidence Pack serve como um índice vinculando sistemas de IA aos seus artefatos de governança. O valor está em:</p>
 <ol>
 <li><strong>Rastreabilidade</strong>: Vinculando decisões, aprovações e mudanças ao longo do tempo</li>
 <li><strong>Auditabilidade</strong>: Permitindo que auditores naveguem pela estrutura de evidências</li>
 <li><strong>Manutenibilidade</strong>: Rastreando o que mudou, quando e por quê</li>
 </ol>
-<h2 id="conjunto-mvp-de-evidencias-ev-01-a-ev-07">Conjunto MVP de Evidências (EV-01 a EV-07)</h2>
-<p>Os seguintes sete tipos de evidência formam o <strong>conjunto mínimo viável</strong> para demonstrar governança de IA:</p>
+<h2 id="conjunto-mvp-de-evidencias-ep-01-a-ep-07">Conjunto MVP de Evidências (EP-01 a EP-07)</h2>
+<p>Os seguintes sete <strong>tipos de documento Evidence Pack</strong> (EP) formam o <strong>conjunto mínimo viável</strong> para demonstrar governança de IA. Cada um é um template de documento; os códigos <strong>EV</strong> da taxonomia (Registro de Solicitação, Revisão/Aprovação, etc.) são usados em outros lugares no bundle e em <code>codes.EV</code> para classificar evidência de <em>eventos</em>.</p>
 <table>
 <thead>
 <tr>
 <th>ID</th>
-<th>Tipo de Evidência</th>
-<th>Código</th>
+<th>Tipo de documento</th>
 <th>Propósito</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>EV-01</td>
+<td>EP-01</td>
 <td>Visão Geral do Sistema</td>
-<td>EV-001</td>
 <td>Documentar o sistema de IA e seu propósito</td>
 </tr>
 <tr>
-<td>EV-02</td>
+<td>EP-02</td>
 <td>Fluxo de Dados</td>
-<td>EV-002</td>
 <td>Mapear movimento de dados pelo sistema</td>
 </tr>
 <tr>
-<td>EV-03</td>
+<td>EP-03</td>
 <td>Inventário</td>
-<td>EV-003</td>
 <td>Manter catálogo de ativos de IA</td>
 </tr>
 <tr>
-<td>EV-04</td>
+<td>EP-04</td>
 <td>Avaliação de Risco e Impacto</td>
-<td>EV-004</td>
 <td>Avaliar e documentar riscos</td>
 </tr>
 <tr>
-<td>EV-05</td>
+<td>EP-05</td>
 <td>Controles e Aprovações</td>
-<td>EV-005</td>
 <td>Documentar controles e registros de aprovação</td>
 </tr>
 <tr>
-<td>EV-06</td>
+<td>EP-06</td>
 <td>Logging e Monitoramento</td>
-<td>EV-006</td>
 <td>Definir configuração de logging e monitoramento</td>
 </tr>
 <tr>
-<td>EV-07</td>
+<td>EP-07</td>
 <td>Incidentes e Exceções</td>
-<td>EV-007</td>
 <td>Rastrear incidentes e exceções</td>
 </tr>
 </tbody>
@@ -2420,7 +2438,7 @@
 </tbody>
 </table>
 <h3 id="codigos-aimo-8-dimensoes">Códigos AIMO (8 Dimensões)</h3>
-<p>Cada Evidence Pack DEVE incluir códigos de todas as 8 dimensões:</p>
+<p>Cada Evidence Pack DEVE incluir códigos de todas as 8 dimensões. A dimensão <strong>EV</strong> lista os tipos de evidência de <em>taxonomia</em> (ex.: Registro de Solicitação, Revisão/Aprovação) aplicáveis a este pack—não códigos de tipo de documento. O tipo de documento é dado por <code>evidence_files[].file_id</code> (EP-01..EP-07).</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2430,17 +2448,17 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-003&quot;, &quot;EV-004&quot;, &quot;EV-005&quot;, &quot;EV-006&quot;, &quot;EV-007&quot;]
+    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
   }
 }
 </code></pre>
 <h3 id="lista-de-arquivos-de-evidencia">Lista de Arquivos de Evidência</h3>
+<p>Cada entrada identifica um documento no pack por <strong>file_id</strong> (EP-01..EP-07). Opcionalmente <strong>ev_codes</strong> pode listar códigos EV de taxonomia (EV-xxx) que o documento suporta.</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
-      &quot;file_id&quot;: &quot;EV-01&quot;,
-      &quot;filename&quot;: &quot;EV-01_system_overview.md&quot;,
-      &quot;ev_type&quot;: &quot;EV-001&quot;,
+      &quot;file_id&quot;: &quot;EP-01&quot;,
+      &quot;filename&quot;: &quot;EP-01_system_overview.md&quot;,
       &quot;title&quot;: &quot;System Overview&quot;,
       &quot;required&quot;: true
     }
@@ -2457,7 +2475,7 @@
 <li><strong>Histórico de Revisões</strong> - Rastreamento de mudanças</li>
 </ol>
 <h3 id="exemplo-de-cabecalho-de-template">Exemplo de Cabeçalho de Template</h3>
-<pre><code class="language-markdown"># EV-01: Visão Geral do Sistema
+<pre><code class="language-markdown"># EP-01: Visão Geral do Sistema
 
 ---
 
@@ -2485,19 +2503,19 @@
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Vazamento de Dados |
 | **OB** | `OB-001` | Eficiência |
-| **EV** | `EV-001` | Visão Geral do Sistema |
+| **EV** | `EV-001`, `EV-002` | Registro de Solicitação, Registro de Revisão/Aprovação |
 </code></pre>
 <h2 id="downloads">Downloads</h2>
 <h3 id="templates">Templates</h3>
-<p>Templates de Evidence Pack estão disponíveis em:</p>
+<p>Templates de Evidence Pack estão disponíveis no repositório. Use <strong>file_id</strong> EP-01..EP-07 no manifesto; nomes de arquivo podem ser EP-01_... ou legado EV-01_... para compatibilidade.</p>
 <ul>
-<li><code>source_pack/04_evidence_pack/templates/EV-01_system_overview.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-02_data_flow.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-03_inventory.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-04_risk_impact.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-07_incident_exception.md</code></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-01_system_overview.md</code> → file_id <strong>EP-01</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-02_data_flow.md</code> → file_id <strong>EP-02</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-03_inventory.md</code> → file_id <strong>EP-03</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-04_risk_impact.md</code> → file_id <strong>EP-04</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md</code> → file_id <strong>EP-05</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md</code> → file_id <strong>EP-06</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-07_incident_exception.md</code> → file_id <strong>EP-07</strong></li>
 </ul>
 <h3 id="schemas-e-exemplos">Schemas e Exemplos</h3>
 <ul>
@@ -2539,6 +2557,7 @@
 
 
                 
+
               </article>
             </div>
           

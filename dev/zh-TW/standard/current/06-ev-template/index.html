@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -209,7 +209,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ev" class="md-skip">
+        <a href="#evidence-pack-ep" class="md-skip">
           跳轉到
         </a>
       
@@ -942,6 +942,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#evidence-pack-ep-taxonomy-evidence-typeev" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名空間：Evidence Pack 文件類型（EP）與 Taxonomy Evidence Type（EV）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       關鍵原則：索引和差異管理
@@ -951,9 +960,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mvp-ev-01-ev-07" class="md-nav__link">
+  <a href="#mvp-ep-01-ep-07" class="md-nav__link">
     <span class="md-ellipsis">
-      MVP 證據集（EV-01 到 EV-07）
+      MVP 證據集（EP-01 到 EP-07）
     </span>
   </a>
   
@@ -2141,6 +2150,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#evidence-pack-ep-taxonomy-evidence-typeev" class="md-nav__link">
+    <span class="md-ellipsis">
+      命名空間：Evidence Pack 文件類型（EP）與 Taxonomy Evidence Type（EV）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       關鍵原則：索引和差異管理
@@ -2150,9 +2168,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mvp-ev-01-ev-07" class="md-nav__link">
+  <a href="#mvp-ep-01-ep-07" class="md-nav__link">
     <span class="md-ellipsis">
-      MVP 證據集（EV-01 到 EV-07）
+      MVP 證據集（EP-01 到 EP-07）
     </span>
   </a>
   
@@ -2287,6 +2305,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2307,70 +2331,64 @@
   
 
 
-<h1 id="ev">EV 範本</h1>
+<h1 id="evidence-pack-ep">Evidence Pack 範本（EP）</h1>
 <p>本節定義證據包範本及其使用。證據包是一組文件集合，展示 AI 系統的治理和合規性。</p>
-<h2 id="_1">關鍵原則：索引和差異管理</h2>
+<h2 id="evidence-pack-ep-taxonomy-evidence-typeev">命名空間：Evidence Pack 文件類型（EP）與 Taxonomy Evidence Type（EV）</h2>
 <blockquote>
-<p><strong>重要</strong>：重要的不是個別提交的內容，而是跨證據項目的<strong>索引</strong>和<strong>差異管理</strong>。</p>
+<p><strong>重要</strong>：<strong>EP-01..EP-07</strong> 表示<em>文件類型</em>（證據包檔案類型）。<strong>EV-001、EV-002、…</strong> 在<a href="../03-taxonomy/">分類法</a>中表示<em>事件/證據類型</em>（請求記錄、審查/核准記錄等）。請勿混用代碼：EP 用於包結構，EV 用於生命週期證據分類。</p>
 </blockquote>
+<h2 id="_1">關鍵原則：索引和差異管理</h2>
+<p>重要的不僅是個別提交的內容，而是跨證據項目的<strong>索引</strong>和<strong>差異管理</strong>。</p>
 <p>證據包作為索引，將 AI 系統連結到其治理人工產物。價值在於：</p>
 <ol>
 <li><strong>可追溯性</strong>：連結跨時間的決策、核准和變更</li>
 <li><strong>可稽核性</strong>：使稽核員能夠導覽證據結構</li>
 <li><strong>可維護性</strong>：追蹤什麼變更了、何時以及為什麼</li>
 </ol>
-<h2 id="mvp-ev-01-ev-07">MVP 證據集（EV-01 到 EV-07）</h2>
-<p>以下七種證據類型形成展示 AI 治理的<strong>最小可行集</strong>：</p>
+<h2 id="mvp-ep-01-ep-07">MVP 證據集（EP-01 到 EP-07）</h2>
+<p>以下七種 <strong>Evidence Pack 文件類型</strong>（EP）形成展示 AI 治理的<strong>最小可行集</strong>。每種為文件範本；分類法 <strong>EV</strong> 代碼（請求記錄、審查/核准等）在包內及 <code>codes.EV</code> 中用於對<em>事件</em>證據進行分類。</p>
 <table>
 <thead>
 <tr>
 <th>ID</th>
-<th>證據類型</th>
-<th>代碼</th>
+<th>文件類型</th>
 <th>用途</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>EV-01</td>
+<td>EP-01</td>
 <td>系統概述</td>
-<td>EV-001</td>
 <td>記錄 AI 系統及其用途</td>
 </tr>
 <tr>
-<td>EV-02</td>
+<td>EP-02</td>
 <td>資料流</td>
-<td>EV-002</td>
 <td>對應資料在系統中的移動</td>
 </tr>
 <tr>
-<td>EV-03</td>
+<td>EP-03</td>
 <td>清冊</td>
-<td>EV-003</td>
 <td>維護 AI 資產目錄</td>
 </tr>
 <tr>
-<td>EV-04</td>
+<td>EP-04</td>
 <td>風險與影響評估</td>
-<td>EV-004</td>
 <td>評估並記錄風險</td>
 </tr>
 <tr>
-<td>EV-05</td>
+<td>EP-05</td>
 <td>控制與核准</td>
-<td>EV-005</td>
 <td>記錄控制和核准記錄</td>
 </tr>
 <tr>
-<td>EV-06</td>
+<td>EP-06</td>
 <td>日誌與監控</td>
-<td>EV-006</td>
 <td>定義日誌和監控設定</td>
 </tr>
 <tr>
-<td>EV-07</td>
+<td>EP-07</td>
 <td>事件與例外</td>
-<td>EV-007</td>
 <td>追蹤事件和例外</td>
 </tr>
 </tbody>
@@ -2420,7 +2438,7 @@
 </tbody>
 </table>
 <h3 id="aimo-8">AIMO 代碼（8 維度）</h3>
-<p>每個證據包必須包含所有 8 個維度的代碼：</p>
+<p>每個證據包必須包含所有 8 個維度的代碼。<strong>EV</strong> 維度列出適用於本包的<em>分類法</em>證據類型（如請求記錄、審查/核准），而非文件類型代碼。文件類型由 <code>evidence_files[].file_id</code>（EP-01..EP-07）給出。</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2430,17 +2448,17 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-003&quot;, &quot;EV-004&quot;, &quot;EV-005&quot;, &quot;EV-006&quot;, &quot;EV-007&quot;]
+    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
   }
 }
 </code></pre>
 <h3 id="_4">證據檔案清單</h3>
+<p>每筆記錄透過 <strong>file_id</strong>（EP-01..EP-07）識別包內文件。可選 <strong>ev_codes</strong> 可列出該文件支援的分類法 EV 代碼（EV-xxx）。</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
-      &quot;file_id&quot;: &quot;EV-01&quot;,
-      &quot;filename&quot;: &quot;EV-01_system_overview.md&quot;,
-      &quot;ev_type&quot;: &quot;EV-001&quot;,
+      &quot;file_id&quot;: &quot;EP-01&quot;,
+      &quot;filename&quot;: &quot;EP-01_system_overview.md&quot;,
       &quot;title&quot;: &quot;System Overview&quot;,
       &quot;required&quot;: true
     }
@@ -2457,7 +2475,7 @@
 <li><strong>修訂歷史</strong> - 變更追蹤</li>
 </ol>
 <h3 id="_6">範本標頭範例</h3>
-<pre><code class="language-markdown"># EV-01: 系統概述
+<pre><code class="language-markdown"># EP-01: 系統概述
 
 ---
 
@@ -2485,19 +2503,19 @@
 | **IM** | `IM-001` | 獨立 |
 | **RS** | `RS-001` | 資料洩漏 |
 | **OB** | `OB-001` | 效率 |
-| **EV** | `EV-001` | 系統概述 |
+| **EV** | `EV-001`, `EV-002` | 請求記錄、審查/核准記錄 |
 </code></pre>
 <h2 id="_7">下載</h2>
 <h3 id="_8">範本</h3>
-<p>證據包範本可在以下位置取得：</p>
+<p>清單中請使用 <strong>file_id</strong> EP-01..EP-07；檔案名可為 EP-01_... 或相容的 EV-01_...。</p>
 <ul>
-<li><code>source_pack/04_evidence_pack/templates/EV-01_system_overview.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-02_data_flow.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-03_inventory.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-04_risk_impact.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-07_incident_exception.md</code></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-01_system_overview.md</code> → file_id <strong>EP-01</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-02_data_flow.md</code> → file_id <strong>EP-02</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-03_inventory.md</code> → file_id <strong>EP-03</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-04_risk_impact.md</code> → file_id <strong>EP-04</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md</code> → file_id <strong>EP-05</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md</code> → file_id <strong>EP-06</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-07_incident_exception.md</code> → file_id <strong>EP-07</strong></li>
 </ul>
 <h3 id="_9">結構描述和範例</h3>
 <ul>
@@ -2539,6 +2557,7 @@
 
 
                 
+
               </article>
             </div>
           

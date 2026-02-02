@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -1330,6 +1330,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#normative-relationship-ev-records-index-and-evidence-pack-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normative relationship: EV records (index) and Evidence Pack (payload)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#traceability" class="md-nav__link">
     <span class="md-ellipsis">
       Traceability
@@ -2063,6 +2072,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#normative-relationship-ev-records-index-and-evidence-pack-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normative relationship: EV records (index) and Evidence Pack (payload)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#traceability" class="md-nav__link">
     <span class="md-ellipsis">
       Traceability
@@ -2110,6 +2128,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2135,7 +2159,7 @@
 <h2 id="bundle-structure-and-naming">Bundle structure and naming</h2>
 <ul>
 <li><strong>Bundle root naming</strong>: use a consistent pattern such as <code>{org}_{system}_{period}_{version}</code> (e.g. <code>acme_ai-usage_2026-Q1_v1</code>).</li>
-<li><strong>Required files</strong>: at least one Evidence (EV) set aligned with the <a href="../../standard/current/06-ev-template/">EV Template</a>, a <a href="../../standard/current/05-dictionary/">Dictionary</a>, a short <strong>Summary</strong> (executive summary of the bundle), and a <strong>Change Log</strong> (or reference to it) for changes to the bundle or its contents.</li>
+<li><strong>Required files</strong>: at least one Evidence (EV) set aligned with the <a href="../../standard/current/06-ev-template/">Evidence Pack Template (EP)</a>, a <a href="../../standard/current/05-dictionary/">Dictionary</a>, a short <strong>Summary</strong> (executive summary of the bundle), and a <strong>Change Log</strong> (or reference to it) for changes to the bundle or its contents.</li>
 <li><strong>Optional attachments</strong>: logs, review records, exception approvals, renewal records; keep naming consistent and referrable from the main EV/Dictionary.</li>
 </ul>
 <h2 id="table-of-contents-toc">Table of contents (TOC)</h2>
@@ -2217,6 +2241,15 @@
 </tr>
 </tbody>
 </table>
+<h2 id="normative-relationship-ev-records-index-and-evidence-pack-payload">Normative relationship: EV records (index) and Evidence Pack (payload)</h2>
+<p>To avoid double-build and audit ambiguity, the following is <strong>normative</strong>:</p>
+<ol>
+<li><strong>EV records (JSON)</strong> are the <strong>index/ledger</strong>: machine-verifiable traceability. They record what happened (request, review, exception, renewal, change) and MUST carry stable IDs and cross-references.</li>
+<li><strong>Evidence Pack files</strong> (EP-01..EP-07 documents and manifest) are the <strong>payload</strong>: the human- and tool-readable evidence that the index points to.</li>
+<li><strong>Linkage</strong>: EV records SHOULD reference payload via <code>evidence_file_ids</code> (e.g. EP-01, EP-02) and/or cryptographic hashes. The <a href="../../validator/">Validator</a> checks referential integrity when these references are present (e.g. every referenced file_id exists in the Evidence Pack manifest and optional hash matches).</li>
+<li><strong>Minimum submission set</strong> for audit: <strong>EV JSON</strong> (root/records) + <strong>Dictionary</strong> + <strong>Summary</strong> + <strong>Change Log</strong> + <strong>Evidence Pack</strong> (manifest + files, e.g. as a zip). All of these together form the conformance surface.</li>
+</ol>
+<p>Implementers maintain a single source of truth: the EV index references the pack; the pack does not redefine the meaning of taxonomy EV codes (Request Record, Review/Approval, etc.). See <a href="../../standard/current/06-ev-template/">Evidence Pack Template</a> for EP-01..EP-07 document types.</p>
 <h2 id="traceability">Traceability</h2>
 <ul>
 <li><strong>Stable IDs</strong>: every record (EV, request, review, exception, renewal, change log entry) MUST have a stable, unique identifier.</li>
@@ -2260,6 +2293,7 @@ See [Minimum Evidence Requirements &gt; Integrity &amp; Access](minimum-evidence
 
 
                 
+
               </article>
             </div>
           

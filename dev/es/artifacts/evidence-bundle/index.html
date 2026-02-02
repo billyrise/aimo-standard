@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -1335,6 +1335,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#relacion-normativa-registros-ev-indice-y-evidence-pack-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relación normativa: registros EV (índice) y Evidence Pack (payload)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#trazabilidad" class="md-nav__link">
     <span class="md-ellipsis">
       Trazabilidad
@@ -2068,6 +2077,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#relacion-normativa-registros-ev-indice-y-evidence-pack-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relación normativa: registros EV (índice) y Evidence Pack (payload)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#trazabilidad" class="md-nav__link">
     <span class="md-ellipsis">
       Trazabilidad
@@ -2115,6 +2133,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2140,7 +2164,7 @@
 <h2 id="estructura-y-nomenclatura-del-paquete">Estructura y nomenclatura del paquete</h2>
 <ul>
 <li><strong>Nomenclatura de la raíz del paquete</strong>: use un patrón consistente como <code>{org}_{sistema}_{período}_{versión}</code> (ej. <code>acme_ai-usage_2026-Q1_v1</code>).</li>
-<li><strong>Archivos requeridos</strong>: al menos un conjunto de Evidencia (EV) alineado con la <a href="../../standard/current/06-ev-template/">Plantilla EV</a>, un <a href="../../standard/current/05-dictionary/">Diccionario</a>, un breve <strong>Resumen</strong> (resumen ejecutivo del paquete), y un <strong>Registro de Cambios</strong> (o referencia a él) para cambios al paquete o su contenido.</li>
+<li><strong>Archivos requeridos</strong>: al menos un conjunto de Evidencia (EV) alineado con la <a href="../../standard/current/06-ev-template/">Plantilla Evidence Pack (EP)</a>, un <a href="../../standard/current/05-dictionary/">Diccionario</a>, un breve <strong>Resumen</strong> (resumen ejecutivo del paquete), y un <strong>Registro de Cambios</strong> (o referencia a él) para cambios al paquete o su contenido.</li>
 <li><strong>Adjuntos opcionales</strong>: registros, registros de revisión, aprobaciones de excepciones, registros de renovación; mantenga la nomenclatura consistente y referenciable desde el EV/Diccionario principal.</li>
 </ul>
 <h2 id="tabla-de-contenido-toc">Tabla de contenido (TOC)</h2>
@@ -2222,6 +2246,8 @@
 </tr>
 </tbody>
 </table>
+<h2 id="relacion-normativa-registros-ev-indice-y-evidence-pack-payload">Relación normativa: registros EV (índice) y Evidence Pack (payload)</h2>
+<p>Para evitar doble construcción y ambigüedad en auditoría, lo siguiente es <strong>normativo</strong>: (1) Los registros EV (JSON) son el <strong>índice/ledger</strong> (trazabilidad verificable por máquina). (2) Los archivos del Evidence Pack (EP-01..EP-07 y manifiesto) son el <strong>payload</strong>. (3) Los registros EV DEBERÍAN referenciar el payload mediante <code>evidence_file_ids</code> (ej. EP-01) y/o hashes; el <a href="../../validator/">Validador</a> comprueba la integridad referencial. (4) <strong>Conjunto mínimo de entrega</strong>: EV JSON + Dictionary + Summary + Change Log + Evidence Pack (zip). Véase <a href="../../standard/current/06-ev-template/">Plantilla Evidence Pack</a> para tipos de documento EP-01..EP-07.</p>
 <h2 id="trazabilidad">Trazabilidad</h2>
 <ul>
 <li><strong>IDs estables</strong>: cada registro (EV, solicitud, revisión, excepción, renovación, entrada de registro de cambios) DEBE tener un identificador estable y único.</li>
@@ -2265,6 +2291,7 @@ Consulte [Requisitos Mínimos de Evidencia &gt; Integridad y Acceso](minimum-evi
 
 
                 
+
               </article>
             </div>
           

@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -1335,6 +1335,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ev-evidence-packpayload" class="md-nav__link">
+    <span class="md-ellipsis">
+      规范关系：EV 记录（索引）与 Evidence Pack（payload）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       可追溯性
@@ -2068,6 +2077,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ev-evidence-packpayload" class="md-nav__link">
+    <span class="md-ellipsis">
+      规范关系：EV 记录（索引）与 Evidence Pack（payload）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       可追溯性
@@ -2115,6 +2133,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2140,7 +2164,7 @@
 <h2 id="_2">包结构和命名</h2>
 <ul>
 <li><strong>包根目录命名</strong>：使用一致的命名模式，如 <code>{org}_{system}_{period}_{version}</code>（例如 <code>acme_ai-usage_2026-Q1_v1</code>）。</li>
-<li><strong>必需文件</strong>：至少一个与 <a href="../../standard/current/06-ev-template/">EV 模板</a> 对齐的证据（EV）集、一个 <a href="../../standard/current/05-dictionary/">字典</a>、一个简短的 <strong>摘要</strong>（包的执行摘要）以及一个 <strong>变更日志</strong>（或其引用），用于记录包或其内容的变更。</li>
+<li><strong>必需文件</strong>：至少一个与 <a href="../../standard/current/06-ev-template/">Evidence Pack 模板（EP）</a> 对齐的证据（EV）集、一个 <a href="../../standard/current/05-dictionary/">字典</a>、一个简短的 <strong>摘要</strong>（包的执行摘要）以及一个 <strong>变更日志</strong>（或其引用），用于记录包或其内容的变更。</li>
 <li><strong>可选附件</strong>：日志、审查记录、例外批准、续期记录；保持命名一致，并可从主 EV/字典中引用。</li>
 </ul>
 <h2 id="toc">目录（TOC）</h2>
@@ -2222,6 +2246,8 @@
 </tr>
 </tbody>
 </table>
+<h2 id="ev-evidence-packpayload">规范关系：EV 记录（索引）与 Evidence Pack（payload）</h2>
+<p>为避免双重构建与审计歧义，以下为<strong>规范</strong>：(1) EV 记录（JSON）为<strong>索引/台账</strong>（可机器验证的可追溯性）。(2) Evidence Pack 文件（EP-01..EP-07 及清单）为 <strong>payload</strong>。(3) EV 记录应通过 <code>evidence_file_ids</code>（如 EP-01）和/或哈希引用 payload；<a href="../../validator/">Validator</a> 检查引用完整性。(4) <strong>最小提交集</strong>：EV JSON + Dictionary + Summary + Change Log + Evidence Pack（zip）。参见 <a href="../../standard/current/06-ev-template/">Evidence Pack 模板</a> 了解 EP-01..EP-07 文档类型。</p>
 <h2 id="_3">可追溯性</h2>
 <ul>
 <li><strong>稳定ID</strong>：每条记录（EV、请求、审查、例外、续期、变更日志条目）必须具有稳定、唯一的标识符。</li>
@@ -2265,6 +2291,7 @@
 
 
                 
+
               </article>
             </div>
           

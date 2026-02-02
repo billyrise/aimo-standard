@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -1335,6 +1335,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#relazione-normativa-record-ev-indice-e-evidence-pack-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relazione normativa: record EV (indice) e Evidence Pack (payload)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tracciabilita" class="md-nav__link">
     <span class="md-ellipsis">
       Tracciabilità
@@ -2068,6 +2077,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#relazione-normativa-record-ev-indice-e-evidence-pack-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relazione normativa: record EV (indice) e Evidence Pack (payload)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tracciabilita" class="md-nav__link">
     <span class="md-ellipsis">
       Tracciabilità
@@ -2115,6 +2133,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2140,7 +2164,7 @@
 <h2 id="struttura-e-denominazione-del-bundle">Struttura e denominazione del bundle</h2>
 <ul>
 <li><strong>Denominazione radice del bundle</strong>: utilizzare un pattern coerente come <code>{org}_{system}_{period}_{version}</code> (es. <code>acme_ai-usage_2026-Q1_v1</code>).</li>
-<li><strong>File obbligatori</strong>: almeno un set di Evidence (EV) allineato con il <a href="../../standard/current/06-ev-template/">Template EV</a>, un <a href="../../standard/current/05-dictionary/">Dizionario</a>, un breve <strong>Riepilogo</strong> (sintesi esecutiva del bundle) e un <strong>Change Log</strong> (o riferimento ad esso) per le modifiche al bundle o ai suoi contenuti.</li>
+<li><strong>File obbligatori</strong>: almeno un set di Evidence (EV) allineato con il <a href="../../standard/current/06-ev-template/">Template Evidence Pack (EP)</a>, un <a href="../../standard/current/05-dictionary/">Dizionario</a>, un breve <strong>Riepilogo</strong> (sintesi esecutiva del bundle) e un <strong>Change Log</strong> (o riferimento ad esso) per le modifiche al bundle o ai suoi contenuti.</li>
 <li><strong>Allegati opzionali</strong>: log, record di revisione, approvazioni di eccezioni, record di rinnovo; mantenere una denominazione coerente e referenziabile dall'EV/Dizionario principale.</li>
 </ul>
 <h2 id="indice-dei-contenuti-toc">Indice dei contenuti (TOC)</h2>
@@ -2222,6 +2246,8 @@
 </tr>
 </tbody>
 </table>
+<h2 id="relazione-normativa-record-ev-indice-e-evidence-pack-payload">Relazione normativa: record EV (indice) e Evidence Pack (payload)</h2>
+<p>Per evitare doppia costruzione e ambiguità in audit, quanto segue è <strong>normativo</strong>: (1) I record EV (JSON) sono l'<strong>indice/ledger</strong> (tracciabilità verificabile da macchina). (2) I file Evidence Pack (EP-01..EP-07 e manifest) sono il <strong>payload</strong>. (3) I record EV DOVREBBERO riferire il payload tramite <code>evidence_file_ids</code> (es. EP-01) e/o hash; il <a href="../../validator/">Validator</a> verifica l'integrità referenziale. (4) <strong>Set minimo di sottomissione</strong>: EV JSON + Dictionary + Summary + Change Log + Evidence Pack (zip). Vedi <a href="../../standard/current/06-ev-template/">Template Evidence Pack</a> per i tipi di documento EP-01..EP-07.</p>
 <h2 id="tracciabilita">Tracciabilità</h2>
 <ul>
 <li><strong>ID stabili</strong>: ogni record (EV, richiesta, revisione, eccezione, rinnovo, voce del change log) DEVE avere un identificatore stabile e univoco.</li>
@@ -2265,6 +2291,7 @@ Vedere [Requisiti Minimi di Evidence &gt; Integrità &amp; Accesso](minimum-evid
 
 
                 
+
               </article>
             </div>
           

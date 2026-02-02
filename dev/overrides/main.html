@@ -3,10 +3,12 @@
 {# AIMO Standard - SEO and version-specific meta tags in HTML head #}
 {% block extrahead %}
 {{ super() }}
-{# noindex for dev (preview) version - unreleased content should not be indexed #}
-{# This is set by deploy-dev.yml via MIKE_DOCS_VERSION environment variable #}
+{# noindex + canonical to release for dev (preview) - do not cite /dev/ in audits #}
 {% if config.extra.is_dev_deploy %}
 <meta name="robots" content="noindex, nofollow">
+{% if page and page.canonical_url and '/dev/' in page.canonical_url %}
+<link rel="canonical" href="{{ page.canonical_url | replace('/dev/', '/latest/') }}">
+{% endif %}
 {% endif %}
 
 {# --- hreflang tags for multilingual SEO --- #}
@@ -139,4 +141,14 @@
 </script>
 {% endif %}
 {% endif %}
+{% endblock %}
+
+{# Development preview banner: visible on every /dev/ page to prevent audit miscitation #}
+{% block content %}
+{% if config.extra.is_dev_deploy %}
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="{{ config.site_url }}latest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="{{ config.site_url }}latest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="{{ config.site_url }}latest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+{% endif %}
+{{ super() }}
 {% endblock %}

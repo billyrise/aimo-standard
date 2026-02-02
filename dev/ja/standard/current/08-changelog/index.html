@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -1082,6 +1082,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      未リリース（名前空間と規範の修正）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="未リリース（名前空間と規範の修正）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#0012026-02-02" class="md-nav__link">
     <span class="md-ellipsis">
       バージョン 0.0.1（2026-02-02）
@@ -1092,7 +1116,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       追加
     </span>
@@ -1101,7 +1125,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       後方互換性
     </span>
@@ -1120,7 +1144,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       機械可読な変更履歴
     </span>
@@ -1129,7 +1153,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       参照
     </span>
@@ -2250,6 +2274,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      未リリース（名前空間と規範の修正）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="未リリース（名前空間と規範の修正）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#0012026-02-02" class="md-nav__link">
     <span class="md-ellipsis">
       バージョン 0.0.1（2026-02-02）
@@ -2260,7 +2308,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       追加
     </span>
@@ -2269,7 +2317,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       後方互換性
     </span>
@@ -2288,7 +2336,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       機械可読な変更履歴
     </span>
@@ -2297,7 +2345,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       参照
     </span>
@@ -2317,6 +2365,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2444,9 +2498,17 @@ v1.0.0: FS-007 削除 (status: removed)
 </tbody>
 </table>
 <h2 id="_8">変更履歴</h2>
+<h3 id="_9">未リリース（名前空間と規範の修正）</h3>
+<p><strong>概要：</strong> EV コード衝突の解消、EV（索引）と Evidence Pack（ペイロード）の明確化、/dev の監査誤引用防止の強化。</p>
+<h4 id="_10">変更</h4>
+<ul>
+<li><strong>Evidence Pack ドキュメント種別（EP 名前空間）：</strong> Evidence Pack のファイル種別は <strong>EP-01..EP-07</strong>（ドキュメント種別）を使用。Taxonomy の <strong>EV-001, EV-002, …</strong> はイベント／証跡種別（申請記録、審査/承認記録など）のまま。<a href="../06-ev-template/">Evidence Pack テンプレート</a> を参照。スキーマ：<code>evidence_files[].file_id</code> のパターンは <code>^EP-\\d{2}$</code>。<code>ev_type</code> は任意。</li>
+<li><strong>規範的関係：</strong> <a href="../../../artifacts/evidence-bundle/">Evidence Bundle</a> に以下を規範として明記。EV レコード（JSON）は索引／台帳。Evidence Pack ファイルはペイロード。EV レコードは evidence_file_ids（例：EP-01）および／またはハッシュでペイロードを参照することを SHOULD。最小提出セット = EV JSON + Dictionary + Summary + Change Log + Evidence Pack。</li>
+<li><strong>/dev 誤引用防止：</strong> 開発プレビューページに赤帯バナーを表示。「Development Preview — Not for audit citation. Use /latest/ or a versioned URL.」/dev/ ページの canonical は /latest/ を指す。noindex は従来どおり。</li>
+</ul>
 <h3 id="0012026-02-02">バージョン 0.0.1（2026-02-02）</h3>
 <p><strong>概要：</strong> 8次元コード体系、Evidence Packテンプレート、包括的なガバナンスドキュメントを含むAIMO Standardの初回リリース。</p>
-<h4 id="_9">追加</h4>
+<h4 id="_11">追加</h4>
 <p><strong>コード体系（8次元）</strong></p>
 <table>
 <thead>
@@ -2528,16 +2590,16 @@ v1.0.0: FS-007 削除 (status: removed)
 <li>Coverage Map（ISO 42001、NIST AI RMF、EU AI Act、ISMS）</li>
 <li>Trust Package</li>
 </ul>
-<h4 id="_10">後方互換性</h4>
+<h4 id="_12">後方互換性</h4>
 <p>これは初回リリースです。後方互換性の懸念はありません。</p>
 <hr />
-<h2 id="_11">機械可読な変更履歴</h2>
+<h2 id="_13">機械可読な変更履歴</h2>
 <p>機械可読な変更履歴が利用可能です：</p>
 <ul>
 <li><code>changelog/changelog.json</code></li>
 </ul>
 <p>このファイルは<code>changelog.schema.json</code>スキーマに従い、プログラムで解析できます。</p>
-<h2 id="_12">参照</h2>
+<h2 id="_14">参照</h2>
 <ul>
 <li><a href="../03-taxonomy/">タクソノミー</a> - 次元定義</li>
 <li><a href="../05-dictionary/">辞書</a> - コード辞書</li>
@@ -2559,6 +2621,7 @@ v1.0.0: FS-007 削除 (status: removed)
 
 
                 
+
               </article>
             </div>
           

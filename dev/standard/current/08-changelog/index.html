@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -1075,6 +1075,30 @@
   
     <nav class="md-nav" aria-label="Change History">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unreleased-namespace-and-normative-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unreleased (namespace and normative fixes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unreleased (namespace and normative fixes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#version-001-2026-02-02" class="md-nav__link">
@@ -2245,6 +2269,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#unreleased-namespace-and-normative-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unreleased (namespace and normative fixes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unreleased (namespace and normative fixes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#version-001-2026-02-02" class="md-nav__link">
     <span class="md-ellipsis">
       Version 0.0.1 (2026-02-02)
@@ -2312,6 +2360,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2439,6 +2493,14 @@ v1.0.0: FS-007 removed (status: removed)
 </tbody>
 </table>
 <h2 id="change-history">Change History</h2>
+<h3 id="unreleased-namespace-and-normative-fixes">Unreleased (namespace and normative fixes)</h3>
+<p><strong>Summary:</strong> Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.</p>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><strong>Evidence Pack document types (EP namespace):</strong> Evidence Pack file types use <strong>EP-01..EP-07</strong> (document type). Taxonomy <strong>EV-001, EV-002, …</strong> remain event/evidence types (Request Record, Review/Approval, etc.). See <a href="../06-ev-template/">Evidence Pack Template</a>. Schema: <code>evidence_files[].file_id</code> pattern is <code>^EP-\\d{2}$</code>; <code>ev_type</code> is optional.</li>
+<li><strong>Normative relationship:</strong> <a href="../../../artifacts/evidence-bundle/">Evidence Bundle</a> now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.</li>
+<li><strong>/dev anti-miscitation:</strong> Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.</li>
+</ul>
 <h3 id="version-001-2026-02-02">Version 0.0.1 (2026-02-02)</h3>
 <p><strong>Summary:</strong> Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.</p>
 <h4 id="added">Added</h4>
@@ -2554,6 +2616,7 @@ v1.0.0: FS-007 removed (status: removed)
 
 
                 
+
               </article>
             </div>
           

@@ -59,8 +59,8 @@
 
 
 
-
 <meta name="robots" content="noindex, nofollow">
+
 
 
 
@@ -209,7 +209,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ev" class="md-skip">
+        <a href="#evidence-pack-ep" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -942,6 +942,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#evidence-pack-ep-vs-taxonomy-evidence-typeev" class="md-nav__link">
+    <span class="md-ellipsis">
+      네임스페이스: Evidence Pack 문서 유형(EP) vs Taxonomy Evidence Type(EV)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       핵심 원칙: 인덱스 및 차이 관리
@@ -951,9 +960,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mvp-ev-01-ev-07" class="md-nav__link">
+  <a href="#mvp-ep-01-ep-07" class="md-nav__link">
     <span class="md-ellipsis">
-      MVP 증거 세트 (EV-01 ~ EV-07)
+      MVP 증거 세트 (EP-01 ~ EP-07)
     </span>
   </a>
   
@@ -2141,6 +2150,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#evidence-pack-ep-vs-taxonomy-evidence-typeev" class="md-nav__link">
+    <span class="md-ellipsis">
+      네임스페이스: Evidence Pack 문서 유형(EP) vs Taxonomy Evidence Type(EV)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       핵심 원칙: 인덱스 및 차이 관리
@@ -2150,9 +2168,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mvp-ev-01-ev-07" class="md-nav__link">
+  <a href="#mvp-ep-01-ep-07" class="md-nav__link">
     <span class="md-ellipsis">
-      MVP 증거 세트 (EV-01 ~ EV-07)
+      MVP 증거 세트 (EP-01 ~ EP-07)
     </span>
   </a>
   
@@ -2287,6 +2305,12 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+
+<div class="md-dev-preview-banner" style="background:#c00;color:#fff;padding:10px 16px;text-align:center;font-weight:bold;font-size:0.95rem;">
+  Development Preview — Not for audit citation. Use <a href="https://standard.aimoaas.com/latestlatest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="https://standard.aimoaas.com/latestlatest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="https://standard.aimoaas.com/latestlatest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
+</div>
+
+
                   
 
 
@@ -2307,70 +2331,64 @@
   
 
 
-<h1 id="ev">EV 템플릿</h1>
+<h1 id="evidence-pack-ep">Evidence Pack 템플릿 (EP)</h1>
 <p>이 섹션은 증거 팩 템플릿과 그 사용을 정의합니다. 증거 팩은 AI 시스템에 대한 거버넌스 및 컴플라이언스를 입증하는 문서 모음입니다.</p>
-<h2 id="_1">핵심 원칙: 인덱스 및 차이 관리</h2>
+<h2 id="evidence-pack-ep-vs-taxonomy-evidence-typeev">네임스페이스: Evidence Pack 문서 유형(EP) vs Taxonomy Evidence Type(EV)</h2>
 <blockquote>
-<p><strong>중요</strong>: 중요한 것은 개별 제출물의 내용이 아니라 증거 항목 전반에 걸친 <strong>인덱스</strong> 및 <strong>차이 관리</strong>입니다.</p>
+<p><strong>중요</strong>: <strong>EP-01..EP-07</strong>은 <em>문서 유형</em>(증거 팩 파일 유형)을 나타냅니다. <strong>EV-001, EV-002, …</strong>는 <a href="../03-taxonomy/">분류체계</a>에서 <em>이벤트/증거 유형</em>(요청 레코드, 검토/승인 레코드 등)을 나타냅니다. 코드를 혼용하지 마세요. EP는 팩 구조, EV는 라이프사이클 증거 분류에 사용합니다.</p>
 </blockquote>
+<h2 id="_1">핵심 원칙: 인덱스 및 차이 관리</h2>
+<p>중요한 것은 개별 제출물의 내용만이 아니라 증거 항목 전반에 걸친 <strong>인덱스</strong> 및 <strong>차이 관리</strong>입니다.</p>
 <p>증거 팩은 AI 시스템을 거버넌스 산출물에 연결하는 인덱스 역할을 합니다. 가치는 다음에 있습니다:</p>
 <ol>
 <li><strong>추적성</strong>: 시간에 걸쳐 결정, 승인 및 변경 연결</li>
 <li><strong>감사 가능성</strong>: 감사자가 증거 구조를 탐색할 수 있게 함</li>
 <li><strong>유지 관리 가능성</strong>: 무엇이 언제 왜 변경되었는지 추적</li>
 </ol>
-<h2 id="mvp-ev-01-ev-07">MVP 증거 세트 (EV-01 ~ EV-07)</h2>
-<p>다음 7가지 증거 유형이 AI 거버넌스를 입증하기 위한 <strong>최소 실행 가능 세트</strong>를 형성합니다:</p>
+<h2 id="mvp-ep-01-ep-07">MVP 증거 세트 (EP-01 ~ EP-07)</h2>
+<p>다음 7가지 <strong>Evidence Pack 문서 유형</strong>(EP)이 AI 거버넌스를 입증하기 위한 <strong>최소 실행 가능 세트</strong>를 형성합니다. 각각은 문서 템플릿이며, 분류체계 <strong>EV</strong> 코드(요청 레코드, 검토/승인 등)는 번들 내 다른 곳과 <code>codes.EV</code>에서 <em>이벤트</em> 증거 분류에 사용됩니다.</p>
 <table>
 <thead>
 <tr>
 <th>ID</th>
-<th>증거 유형</th>
-<th>코드</th>
+<th>문서 유형</th>
 <th>목적</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>EV-01</td>
+<td>EP-01</td>
 <td>시스템 개요</td>
-<td>EV-001</td>
 <td>AI 시스템과 그 목적 문서화</td>
 </tr>
 <tr>
-<td>EV-02</td>
+<td>EP-02</td>
 <td>데이터 흐름</td>
-<td>EV-002</td>
 <td>시스템을 통한 데이터 이동 매핑</td>
 </tr>
 <tr>
-<td>EV-03</td>
+<td>EP-03</td>
 <td>인벤토리</td>
-<td>EV-003</td>
 <td>AI 자산 카탈로그 유지</td>
 </tr>
 <tr>
-<td>EV-04</td>
+<td>EP-04</td>
 <td>리스크 및 영향 평가</td>
-<td>EV-004</td>
 <td>리스크 평가 및 문서화</td>
 </tr>
 <tr>
-<td>EV-05</td>
+<td>EP-05</td>
 <td>통제 및 승인</td>
-<td>EV-005</td>
 <td>통제 및 승인 레코드 문서화</td>
 </tr>
 <tr>
-<td>EV-06</td>
+<td>EP-06</td>
 <td>로깅 및 모니터링</td>
-<td>EV-006</td>
 <td>로깅 및 모니터링 설정 정의</td>
 </tr>
 <tr>
-<td>EV-07</td>
+<td>EP-07</td>
 <td>인시던트 및 예외</td>
-<td>EV-007</td>
 <td>인시던트 및 예외 추적</td>
 </tr>
 </tbody>
@@ -2420,7 +2438,7 @@
 </tbody>
 </table>
 <h3 id="aimo-8">AIMO 코드 (8개 차원)</h3>
-<p>각 증거 팩에는 8개 차원 모두의 코드가 포함되어야 합니다(MUST):</p>
+<p>각 증거 팩에는 8개 차원 모두의 코드가 포함되어야 합니다(MUST). <strong>EV</strong> 차원은 이 팩에 적용되는 <em>분류체계</em> 증거 유형(예: 요청 레코드, 검토/승인)을 나열합니다. 문서 유형 코드가 아닙니다. 문서 유형은 <code>evidence_files[].file_id</code>(EP-01..EP-07)로 지정됩니다.</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2430,17 +2448,17 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-003&quot;, &quot;EV-004&quot;, &quot;EV-005&quot;, &quot;EV-006&quot;, &quot;EV-007&quot;]
+    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
   }
 }
 </code></pre>
 <h3 id="_4">증거 파일 목록</h3>
+<p>각 항목은 <strong>file_id</strong>(EP-01..EP-07)로 팩 내 문서를 식별합니다. 선택적으로 <strong>ev_codes</strong>에 해당 문서가 지원하는 분류체계 EV 코드(EV-xxx)를 나열할 수 있습니다.</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
-      &quot;file_id&quot;: &quot;EV-01&quot;,
-      &quot;filename&quot;: &quot;EV-01_system_overview.md&quot;,
-      &quot;ev_type&quot;: &quot;EV-001&quot;,
+      &quot;file_id&quot;: &quot;EP-01&quot;,
+      &quot;filename&quot;: &quot;EP-01_system_overview.md&quot;,
       &quot;title&quot;: &quot;System Overview&quot;,
       &quot;required&quot;: true
     }
@@ -2457,7 +2475,7 @@
 <li><strong>수정 이력</strong> - 변경 추적</li>
 </ol>
 <h3 id="_6">템플릿 헤더 예시</h3>
-<pre><code class="language-markdown"># EV-01: 시스템 개요
+<pre><code class="language-markdown"># EP-01: 시스템 개요
 
 ---
 
@@ -2485,19 +2503,20 @@
 | **IM** | `IM-001` | 독립형 |
 | **RS** | `RS-001` | 데이터 유출 |
 | **OB** | `OB-001` | 효율성 |
-| **EV** | `EV-001` | 시스템 개요 |
+| **EV** | `EV-001`, `EV-002` | 요청 레코드, 검토/승인 레코드 |
 </code></pre>
 <h2 id="_7">다운로드</h2>
 <h3 id="_8">템플릿</h3>
 <p>증거 팩 템플릿은 다음에서 이용 가능합니다:</p>
+<p>매니페스트에서 <strong>file_id</strong> EP-01..EP-07을 사용하세요. 파일명은 EP-01_... 또는 하위 호환용 EV-01_...를 사용할 수 있습니다.</p>
 <ul>
-<li><code>source_pack/04_evidence_pack/templates/EV-01_system_overview.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-02_data_flow.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-03_inventory.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-04_risk_impact.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md</code></li>
-<li><code>source_pack/04_evidence_pack/templates/EV-07_incident_exception.md</code></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-01_system_overview.md</code> → file_id <strong>EP-01</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-02_data_flow.md</code> → file_id <strong>EP-02</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-03_inventory.md</code> → file_id <strong>EP-03</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-04_risk_impact.md</code> → file_id <strong>EP-04</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md</code> → file_id <strong>EP-05</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md</code> → file_id <strong>EP-06</strong></li>
+<li><code>source_pack/04_evidence_pack/templates/EV-07_incident_exception.md</code> → file_id <strong>EP-07</strong></li>
 </ul>
 <h3 id="_9">스키마 및 예제</h3>
 <ul>
@@ -2539,6 +2558,7 @@
 
 
                 
+
               </article>
             </div>
           
