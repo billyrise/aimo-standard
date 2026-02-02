@@ -128,6 +128,16 @@ jobs:
       - name: Build docs (mkdocs)
         run: python -m mkdocs build --strict
 
+      - name: Create site snapshot (before git operations)
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          mkdir -p dist
+          
+          echo "=== Creating site snapshot ==="
+          (cd site && zip -r "../dist/aimo-standard-${VERSION}-site.zip" .)
+          echo "Created: dist/aimo-standard-${VERSION}-site.zip"
+
       - name: Verify HTML (no *_ja columns in EN pages)
         run: |
           # Verify EN dictionary page does not contain language-specific column names
@@ -299,7 +309,7 @@ jobs:
         run: |
           python tooling/release/build_assets.py --version "${{ steps.v.outputs.ver }}" --ja
 
-      - name: Create source and site snapshots
+      - name: Create source snapshot and finalize checksums
         run: |
           set -euo pipefail
           VERSION="${{ steps.v.outputs.ver }}"
@@ -309,12 +319,6 @@ jobs:
           git archive --format=zip --prefix="aimo-standard-${VERSION}/" HEAD \
             -o "dist/aimo-standard-${VERSION}-src.zip"
           echo "Created: dist/aimo-standard-${VERSION}-src.zip"
-          
-          echo ""
-          echo "=== Creating site snapshot ==="
-          # Create site snapshot from built docs
-          (cd site && zip -r "../dist/aimo-standard-${VERSION}-site.zip" .)
-          echo "Created: dist/aimo-standard-${VERSION}-site.zip"
           
           echo ""
           echo "=== Updating checksums ==="
