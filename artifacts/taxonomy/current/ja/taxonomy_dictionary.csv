@@ -1,0 +1,92 @@
+code,dimension,dimension_name,label,definition,status,introduced_in,scope_notes,examples
+CH-001,CH,チャネル,Web UI,WebブラウザUI経由の利用。,active,0.1.0,Includes direct SaaS UI usage.,chat.openai.com|claude.ai
+CH-002,CH,チャネル,API,API連携による利用。,active,0.1.0,Includes internal apps calling model APIs.,openai api|azure openai
+CH-003,CH,チャネル,IDEプラグイン,IDE/エディタプラグイン経由の利用。,active,0.1.0,Often developer tooling.,cursor|copilot
+CH-004,CH,チャネル,チャット連携,Slack/Teams等のチャット連携経由の利用。,active,0.1.0,Includes bot-based workflows.,slack bot|teams bot
+CH-005,CH,チャネル,デスクトップアプリ,ネイティブデスクトップアプリ経由の利用。,active,0.1.0,Includes Electron apps.,desktop client
+CH-006,CH,チャネル,モバイルアプリ,ネイティブモバイルアプリ経由の利用。,active,0.1.0,Includes iOS/Android.,mobile client
+CH-007,CH,チャネル,メール,メール経由またはメール起点の自動化で利用。,active,0.1.0,Often via add-ins or automation.,email assistant
+CH-008,CH,チャネル,CLI,CLI経由の利用。,active,0.1.0,Often internal tools.,cli tool
+DT-001,DT,データ種別,公開情報,公開されており、公に利用されることを意図したデータ。,active,0.1.0,Still consider IP/copyright constraints.,public web|press release
+DT-002,DT,データ種別,社内情報,非公開の社内業務データ。,active,0.1.0,May include confidential business info.,internal wiki|project docs
+DT-003,DT,データ種別,機密情報,アクセス制限が必要な高機密データ。,active,0.1.0,Includes trade secrets.,strategy deck|M&A
+DT-004,DT,データ種別,個人情報,各国のプライバシー法令等で定義される個人データ。,active,0.1.0,Includes identifiers and personal attributes.,name|email
+DT-005,DT,データ種別,要配慮個人情報,要配慮個人情報（特別カテゴリ）に該当するデータ。,active,0.1.0,Higher controls required.,health|biometrics
+DT-006,DT,データ種別,認証情報,認証情報（パスワード、APIキー等）。,active,0.1.0,Must never be provided to external AI services unless explicitly allowed.,api key|password
+DT-007,DT,データ種別,ソースコード,ソースコードおよび関連アーティファクト。,active,0.1.0,Consider license/IP and secrets scanning.,repo|patch
+DT-008,DT,データ種別,顧客データ,顧客から提供された、または顧客に関連するデータ。,active,0.1.0,May include PII and contractual constraints.,tickets|usage logs
+DT-009,DT,データ種別,運用ログ,監視・障害対応等に用いる運用/システムログ。,active,0.1.0,May include personal data; classify carefully.,syslog|audit log
+DT-010,DT,データ種別,セキュリティテレメトリ,アラート・検知等のセキュリティテレメトリ。,active,0.1.0,High integrity expectations.,edr alerts
+EV-001,EV,証跡種別,申請記録,AI利用/サービスの申請と内容説明の証跡。,active,0.1.0,Lifecycle: request.,request form
+EV-002,EV,証跡種別,審査/承認記録,審査・承認が実施されたことの証跡。,active,0.1.0,Lifecycle: review/approval.,approval log
+EV-003,EV,証跡種別,例外記録,例外が付与され、管理された証跡。,active,0.1.0,Lifecycle: exception.,exception memo
+EV-004,EV,証跡種別,更新/再評価記録,更新または再評価が行われた証跡。,active,0.1.0,Lifecycle: renewal.,renewal checklist
+EV-005,EV,証跡種別,変更管理記録,変更内容と承認の証跡。,active,0.1.0,Lifecycle: change log.,change ticket
+EV-006,EV,証跡種別,完全性証明,完全性（ハッシュ、署名、WORM等）の証跡。,active,0.1.0,Supports evidence readiness.,sha256|signature
+EV-007,EV,証跡種別,アクセスログ,アクセス制御とアクセス履歴の証跡。,active,0.1.0,Supports accountability and SoD.,audit log
+EV-008,EV,証跡種別,AI資産台帳,利用するモデル/サービスの台帳記録。,active,0.1.0,Supports governance baseline.,inventory
+EV-009,EV,証跡種別,リスク評価,利用/サービスのリスク評価文書。,active,0.1.0,May reference RS codes.,risk assessment
+EV-010,EV,証跡種別,統制マッピング,外部フレームワークへの統制マッピング証跡。,active,0.1.0,Informative mapping only.,coverage mapping
+EV-011,EV,証跡種別,教育/ガイダンス,利用者に提供した教育/ガイダンスの証跡。,active,0.1.0,Supports adoption and safe use.,training
+EV-012,EV,証跡種別,監視証跡,監視・継続的監督の証跡。,active,0.1.0,Includes periodic review logs.,monitoring log
+EV-013,EV,証跡種別,インシデント記録,AI利用に関連するインシデント対応の証跡。,active,0.1.0,Link to IR processes.,incident ticket
+EV-014,EV,証跡種別,第三者評価,ベンダー/第三者評価の証跡。,active,0.1.0,Supports third-party risk management.,vendor assessment
+EV-015,EV,証跡種別,宣誓/サインオフ,正式な宣誓/サインオフの証跡。,active,0.1.0,Used where required by policy.,sign-off
+FS-001,FS,機能スコープ,社内生産性,社内業務の生産性向上を目的とした利用。,active,0.1.0,Exclude customer-facing core functions.,microsoft 365 copilot|notion ai
+FS-002,FS,機能スコープ,顧客向け機能,顧客に提供する製品・サービス機能に組み込まれたAI。,active,0.1.0,Includes AI-as-a-feature.,chatbot|recommendation
+FS-003,FS,機能スコープ,開発支援,ソフトウェア開発・エンジニアリング作業を支援するAI利用。,active,0.1.0,Includes code generation and review tools.,cursor|github copilot
+FS-004,FS,機能スコープ,IT運用,IT運用・システム管理（監視、インシデント対応等）でのAI利用。,active,0.1.0,May overlap with security operations; classify by primary intent.,aops|incident summarization
+FS-005,FS,機能スコープ,セキュリティ運用,セキュリティ監視・対応（SOC、検知、トリアージ等）でのAI利用。,active,0.1.0,"If primary goal is security posture, use FS-005.",soc copilot|alert triage
+FS-006,FS,機能スコープ,ガバナンス/コンプライアンス,ガバナンス/コンプライアンス業務（規程、監査証跡等）を支援するAI利用。,active,0.1.0,Includes evidence generation and control mapping support.,policy drafting|evidence bundle
+IM-001,IM,統合形態,単体利用,企業システム統合なしの単体利用。,active,0.1.0,Often highest shadow AI risk.,personal account
+IM-002,IM,統合形態,SaaS連携,SaaSアプリがAI機能を統合して提供。,active,0.1.0,Vendor-managed integration.,crm ai|support ai
+IM-003,IM,統合形態,社内アプリ組込み,社内業務アプリにAIを組み込む。,active,0.1.0,Often via API with internal controls.,internal portal
+IM-004,IM,統合形態,ワークフロー/RPA,ワークフロー自動化/RPA内でAIを呼び出す。,active,0.1.0,Requires traceability of triggers and outputs.,n8n|zapier-like
+IM-005,IM,統合形態,オンプレ/プライベート,オンプレまたは専用環境でホストするAI。,active,0.1.0,May reduce data exfiltration risk.,self-hosted llm
+IM-006,IM,統合形態,マネージド,企業統制を伴うマネージドサービスとして利用。,active,0.1.0,Includes centrally managed accounts and logging.,enterprise chatgpt
+IM-007,IM,統合形態,シャドー/未管理,承認された統制外での利用。,active,0.1.0,Track as shadow AI.,personal SaaS
+OB-001,OB,成果,効率化,時間・コスト効率の改善。,active,0.1.0,Measure via cycle time reduction.,time saved
+OB-002,OB,成果,品質向上,成果物の品質・精度向上。,active,0.1.0,Measure via error reduction.,fewer errors
+OB-003,OB,成果,売上貢献,売上成長への寄与。,active,0.1.0,Measure via conversion uplift.,conversion
+OB-004,OB,成果,リスク低減,運用・セキュリティ・コンプライアンスリスクの低減。,active,0.1.0,Measure via incident reduction.,fewer incidents
+OB-005,OB,成果,新規性/革新,新たな能力・イノベーションを実現。,active,0.1.0,Measure via new features/offerings.,new feature
+OB-006,OB,成果,顧客満足,顧客満足の向上。,active,0.1.0,Measure via NPS/CSAT.,csat
+OB-007,OB,成果,従業員体験,従業員体験の向上。,active,0.1.0,Measure via surveys.,ex
+RS-001,RS,リスク面,情報漏えい,意図しないデータ開示のリスク。,active,0.1.0,Includes prompt injection and retention risks.,pii exfiltration
+RS-002,RS,リスク面,悪用/攻撃,悪用（攻撃支援等）に利用されるリスク。,active,0.1.0,Includes malware generation and social engineering.,phishing|malware
+RS-003,RS,リスク面,法令/規程違反,法令・規程・契約の違反リスク。,active,0.1.0,Includes export control and privacy laws.,gdpr|ai act
+RS-004,RS,リスク面,知財侵害,著作権・特許・営業秘密等の侵害リスク。,active,0.1.0,Includes training data provenance and output reuse.,copyright
+RS-005,RS,リスク面,モデル誤用,モデルの不適切利用・過信によるリスク。,active,0.1.0,Includes hallucination impacts.,hallucination
+RS-006,RS,リスク面,偏り/公平性,不公平・偏りのある結果を生むリスク。,active,0.1.0,Relevant for HR/credit decisions.,bias
+RS-007,RS,リスク面,安全性,有害コンテンツや危険な推奨のリスク。,active,0.1.0,Safety policies needed.,self-harm advice
+RS-008,RS,リスク面,第三者リスク,ベンダー/下請け/モデル提供者に起因するリスク。,active,0.1.0,Assess contracts and controls.,vendor
+UC-001,UC,ユースケース分類,一般QA,一般的な質問応答・対話利用。,active,0.1.0,Low to medium risk depending on data type.,chat
+UC-002,UC,ユースケース分類,要約,文書・会議・メッセージの要約。,active,0.1.0,Risk depends on confidentiality.,meeting notes
+UC-003,UC,ユースケース分類,翻訳,言語間翻訳。,active,0.1.0,Beware of sensitive data in prompts.,translation
+UC-004,UC,ユースケース分類,文章作成,メール・文書・レポートの下書き生成。,active,0.1.0,Requires review and attribution policy.,draft email
+UC-005,UC,ユースケース分類,コード生成,コードやスクリプトの生成。,active,0.1.0,Must scan for secrets and licensing.,code snippet
+UC-006,UC,ユースケース分類,コードレビュー,コードの問題点・改善点レビュー。,active,0.1.0,May expose proprietary code.,review
+UC-007,UC,ユースケース分類,データ分析,構造化データの分析と洞察生成。,active,0.1.0,Consider data classification and export restrictions.,csv analysis
+UC-008,UC,ユースケース分類,分類/タグ付け,コンテンツの分類・タグ付け。,active,0.1.0,Used for routing and triage.,ticket triage
+UC-009,UC,ユースケース分類,検索/RAG,RAGによる検索・質問応答。,active,0.1.0,Risk depends on indexed data scope.,enterprise search
+UC-010,UC,ユースケース分類,エージェント自動化,自律/半自律エージェントによるアクション実行。,active,0.1.0,Highest need for controls and logging.,agent workflow
+UC-011,UC,ユースケース分類,セキュリティ一次対応,セキュリティ運用の一次対応支援。,active,0.1.0,Ensure confidentiality and integrity.,alert triage
+UC-012,UC,ユースケース分類,規程/統制マッピング,統制と証跡をフレームワークへ対応付け。,active,0.1.0,Informative mapping only; not legal advice.,coverage map
+UC-013,UC,ユースケース分類,顧客対応,顧客対応業務支援。,active,0.1.0,Be careful with customer data.,support bot
+UC-014,UC,ユースケース分類,営業支援,営業活動支援。,active,0.1.0,Avoid sharing confidential pricing/strategy.,proposal draft
+UC-015,UC,ユースケース分類,人事支援,人事プロセス支援。,active,0.1.0,Personal data risks are high.,job description
+UC-016,UC,ユースケース分類,財務分析,財務分析支援。,active,0.1.0,Consider regulatory and confidentiality constraints.,forecast
+UC-017,UC,ユースケース分類,法務ドラフト,法務文書ドラフト支援。,active,0.1.0,Not legal advice; require review.,contract draft
+UC-018,UC,ユースケース分類,調達支援,調達業務支援。,active,0.1.0,Vendor and contract data considerations.,rfp draft
+UC-019,UC,ユースケース分類,ITヘルプデスク,ITヘルプデスク業務支援。,active,0.1.0,May access internal credentials; handle carefully.,ticket assistant
+UC-020,UC,ユースケース分類,ドキュメント整備,ドキュメント生成・整備。,active,0.1.0,Ensure accuracy and change control.,runbook
+UC-021,UC,ユースケース分類,ナレッジベース,ナレッジベース構築・検索。,active,0.1.0,RAG governance needed.,kb
+UC-022,UC,ユースケース分類,監視/可観測性,監視・可観測性業務支援。,active,0.1.0,Operational logs classification required.,log analysis
+UC-023,UC,ユースケース分類,インシデント対応,インシデント対応ワークフロー支援。,active,0.1.0,Evidence integrity is critical.,ir assistant
+UC-024,UC,ユースケース分類,脅威モデリング,脅威モデリング支援。,active,0.1.0,May involve sensitive system details.,threat model
+UC-025,UC,ユースケース分類,統制テスト,統制テスト・証跡レビュー支援。,active,0.1.0,Informative; auditors decide procedures.,control test
+UC-026,UC,ユースケース分類,研修/学習,研修・学習コンテンツ支援。,active,0.1.0,Avoid personal data exposure.,learning plan
+UC-027,UC,ユースケース分類,マーケティング,マーケティングコンテンツ生成支援。,active,0.1.0,Ensure brand/legal review.,ad copy
+UC-028,UC,ユースケース分類,調査/リサーチ,調査・リサーチ支援。,active,0.1.0,Check citation and source reliability.,research
+UC-029,UC,ユースケース分類,意思決定支援,推奨による意思決定支援。,active,0.1.0,Explainability and accountability required.,recommendation
+UC-030,UC,ユースケース分類,その他,上記に含まれないユースケース。,active,0.1.0,Use with free-text description and review.,other

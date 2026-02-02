@@ -1,0 +1,18 @@
+{
+  "id": "EV-20260131-001",
+  "timestamp": "2026-01-31T10:00:00Z",
+  "source": "copilot-usage-log",
+  "summary": "Evidence of Microsoft 365 Copilot usage for internal productivity. System logs show Q&A and summarization tasks performed on internal documents.",
+  "taxonomy_version": "0.1.0",
+  "codes": {
+    "FS": ["FS-001"],
+    "UC": ["UC-001", "UC-002"],
+    "DT": ["DT-002"],
+    "CH": ["CH-001"],
+    "IM": ["IM-002"],
+    "RS": ["RS-001"],
+    "OB": ["OB-001"],
+    "EV": ["EV-001"]
+  },
+  "tags": ["copilot", "productivity", "internal"]
+}

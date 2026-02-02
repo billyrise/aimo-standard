@@ -1,0 +1,104 @@
+{
+  "taxonomy_version": "0.1.0",
+  "entries": [
+    {
+      "dimension_id": "CH",
+      "code": "CH-001",
+      "label_en": "Web UI",
+      "label_ja": "Web UI",
+      "definition_en": "Use via a web user interface.",
+      "definition_ja": "WebブラウザUI経由の利用。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "DT",
+      "code": "DT-002",
+      "label_en": "Internal",
+      "label_ja": "社内情報",
+      "definition_en": "Non-public internal business data.",
+      "definition_ja": "非公開の社内業務データ。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "EV",
+      "code": "EV-001",
+      "label_en": "Request Record",
+      "label_ja": "申請記録",
+      "definition_en": "Evidence that an AI use/service was requested and described.",
+      "definition_ja": "AI利用/サービスの申請と内容説明の証跡。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "FS",
+      "code": "FS-001",
+      "label_en": "End-user Productivity",
+      "label_ja": "社内生産性",
+      "definition_en": "AI used to improve productivity of internal end users (writing, search, summarization, meeting notes).",
+      "definition_ja": "社内業務の生産性向上を目的とした利用。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "IM",
+      "code": "IM-002",
+      "label_en": "SaaS Integrated",
+      "label_ja": "SaaS連携",
+      "definition_en": "SaaS application integrates AI features.",
+      "definition_ja": "SaaSアプリがAI機能を統合して提供。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "OB",
+      "code": "OB-001",
+      "label_en": "Efficiency",
+      "label_ja": "効率化",
+      "definition_en": "Improves time/cost efficiency.",
+      "definition_ja": "時間・コスト効率の改善。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "RS",
+      "code": "RS-001",
+      "label_en": "Data Leakage",
+      "label_ja": "情報漏えい",
+      "definition_en": "Risk of unintended data disclosure.",
+      "definition_ja": "意図しないデータ開示のリスク。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "UC",
+      "code": "UC-001",
+      "label_en": "General Q&A",
+      "label_ja": "一般QA",
+      "definition_en": "General question answering and conversational use.",
+      "definition_ja": "一般的な質問応答・対話利用。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    },
+    {
+      "dimension_id": "UC",
+      "code": "UC-002",
+      "label_en": "Summarization",
+      "label_ja": "要約",
+      "definition_en": "Summarizing documents, meetings, or messages.",
+      "definition_ja": "文書・会議・メッセージの要約。",
+      "status": "active",
+      "introduced_in": "0.1.0",
+      "backward_compatible": true
+    }
+  ]
+}

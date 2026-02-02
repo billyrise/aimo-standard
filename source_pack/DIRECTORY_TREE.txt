@@ -1,0 +1,52 @@
+source_pack/
+├── 00_manifest.md
+├── 01_positioning.md
+├── 02_conformance.md
+├── 03_taxonomy/
+│   ├── README.md
+│   ├── code_system.csv
+│   ├── dictionary_seed.csv
+│   ├── dimensions_en_ja.md
+│   ├── taxonomy_dictionary_v0.1.csv
+│   ├── taxonomy_pack_v0.1.json
+│   ├── taxonomy_en.yaml
+│   ├── taxonomy_ja.yaml
+│   └── schemas/
+│       ├── taxonomy_pack.schema.json
+│       └── changelog.schema.json
+├── 04_evidence_pack/
+│   ├── README.md
+│   ├── schemas/
+│   │   └── evidence_pack_manifest.schema.json
+│   ├── templates/
+│   │   ├── EV-01_system_overview.md
+│   │   ├── EV-02_data_flow.md
+│   │   ├── EV-03_inventory.md
+│   │   ├── EV-04_risk_impact.md
+│   │   ├── EV-05_controls_approvals.md
+│   │   ├── EV-06_logging_monitoring.md
+│   │   └── EV-07_incident_exception.md
+│   └── examples/
+│       └── evidence_pack_manifest.example.json
+├── 04_ev_templates/
+│   ├── ev_template_full.md
+│   ├── ev_template_min.md
+│   └── evidence_bundle_toc.md
+├── 05_validator/
+│   ├── reference_impl_notes.md
+│   └── validation_rules_spec.md
+├── 06_examples/
+│   ├── minimal_e2e_story.md
+│   ├── sample_inputs/
+│   │   └── README.md
+│   └── sample_outputs/
+│       └── README.md
+├── 07_release/
+│   ├── changelog_draft.md
+│   └── version_policy_notes.md
+├── 99_style_guide.md
+└── DIRECTORY_TREE.txt
+
+changelog/
+├── CHANGELOG.md
+└── changelog.json

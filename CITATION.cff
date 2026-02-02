@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: AIMO Standard
+message: >-
+  If you use AIMO Standard in your research or audit documentation,
+  please cite it using the metadata from this file.
+type: software
+authors:
+  - name: AIMO Standard Contributors
+license: Apache-2.0
+repository-code: https://github.com/billyrise/aimo-standard
+url: https://standard.aimoaas.com/
+abstract: >-
+  AIMO Standard is a structured evidence format and explainability
+  framework for AI governance. It provides schemas, templates,
+  taxonomy, and validation tooling for audit-ready AI evidence bundles.
+keywords:
+  - AI governance
+  - evidence management
+  - audit
+  - compliance
+  - explainability
+  - ISO 42001
+  - EU AI Act
+  - NIST AI RMF
+version: 0.0.1
+date-released: "2026-02-02"

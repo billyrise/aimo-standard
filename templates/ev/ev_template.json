@@ -1,0 +1,18 @@
+{
+  "id": "EV-YYYYMMDD-001",
+  "timestamp": "2026-01-01T00:00:00Z",
+  "source": "system-name",
+  "summary": "Brief description of what this evidence demonstrates.",
+  "taxonomy_version": "0.1.0",
+  "codes": {
+    "FS": ["FS-001"],
+    "UC": ["UC-001"],
+    "DT": ["DT-002"],
+    "CH": ["CH-001"],
+    "IM": ["IM-002"],
+    "RS": ["RS-001"],
+    "OB": ["OB-001"],
+    "EV": ["EV-001"]
+  },
+  "tags": ["example"]
+}

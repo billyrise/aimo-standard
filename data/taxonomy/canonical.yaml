@@ -1,0 +1,695 @@
+# AIMO Taxonomy - Canonical Structure (SSOT)
+# =========================================
+# This file is the SINGLE SOURCE OF TRUTH for taxonomy structure.
+# Edit this file directly to add/modify/deprecate codes.
+#
+# Structure:
+#   - Language-neutral: codes, status, lifecycle metadata
+#   - Labels and definitions: data/taxonomy/i18n/{lang}.yaml
+#
+# After editing, regenerate derived files:
+#   python tooling/taxonomy/build_artifacts.py --version current --langs en ja
+#
+# Language codes follow BCP47: en, ja, es, de, ko, zh-Hans, zh-Hant
+
+version: "0.1.0"
+generated_date: "2026-01-31"
+
+dimensions:
+  - id: FS
+    codes:
+      - code: FS-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Exclude customer-facing core functions."
+        examples:
+          - "microsoft 365 copilot"
+          - "notion ai"
+      - code: FS-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes AI-as-a-feature."
+        examples:
+          - "chatbot"
+          - "recommendation"
+      - code: FS-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes code generation and review tools."
+        examples:
+          - "cursor"
+          - "github copilot"
+      - code: FS-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May overlap with security operations; classify by primary intent."
+        examples:
+          - "aops"
+          - "incident summarization"
+      - code: FS-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "If primary goal is security posture, use FS-005."
+        examples:
+          - "soc copilot"
+          - "alert triage"
+      - code: FS-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes evidence generation and control mapping support."
+        examples:
+          - "policy drafting"
+          - "evidence bundle"
+  - id: DT
+    codes:
+      - code: DT-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Still consider IP/copyright constraints."
+        examples:
+          - "public web"
+          - "press release"
+      - code: DT-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May include confidential business info."
+        examples:
+          - "internal wiki"
+          - "project docs"
+      - code: DT-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes trade secrets."
+        examples:
+          - "strategy deck"
+          - "M&A"
+      - code: DT-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes identifiers and personal attributes."
+        examples:
+          - "name"
+          - "email"
+      - code: DT-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Higher controls required."
+        examples:
+          - "health"
+          - "biometrics"
+      - code: DT-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Must never be provided to external AI services unless explicitly allowed."
+        examples:
+          - "api key"
+          - "password"
+      - code: DT-007
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Consider license/IP and secrets scanning."
+        examples:
+          - "repo"
+          - "patch"
+      - code: DT-008
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May include PII and contractual constraints."
+        examples:
+          - "tickets"
+          - "usage logs"
+      - code: DT-009
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May include personal data; classify carefully."
+        examples:
+          - "syslog"
+          - "audit log"
+      - code: DT-010
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "High integrity expectations."
+        examples:
+          - "edr alerts"
+  - id: CH
+    codes:
+      - code: CH-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes direct SaaS UI usage."
+        examples:
+          - "chat.openai.com"
+          - "claude.ai"
+      - code: CH-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes internal apps calling model APIs."
+        examples:
+          - "openai api"
+          - "azure openai"
+      - code: CH-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Often developer tooling."
+        examples:
+          - "cursor"
+          - "copilot"
+      - code: CH-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes bot-based workflows."
+        examples:
+          - "slack bot"
+          - "teams bot"
+      - code: CH-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes Electron apps."
+        examples:
+          - "desktop client"
+      - code: CH-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes iOS/Android."
+        examples:
+          - "mobile client"
+      - code: CH-007
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Often via add-ins or automation."
+        examples:
+          - "email assistant"
+      - code: CH-008
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Often internal tools."
+        examples:
+          - "cli tool"
+  - id: IM
+    codes:
+      - code: IM-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Often highest shadow AI risk."
+        examples:
+          - "personal account"
+      - code: IM-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Vendor-managed integration."
+        examples:
+          - "crm ai"
+          - "support ai"
+      - code: IM-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Often via API with internal controls."
+        examples:
+          - "internal portal"
+      - code: IM-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Requires traceability of triggers and outputs."
+        examples:
+          - "n8n"
+          - "zapier-like"
+      - code: IM-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May reduce data exfiltration risk."
+        examples:
+          - "self-hosted llm"
+      - code: IM-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes centrally managed accounts and logging."
+        examples:
+          - "enterprise chatgpt"
+      - code: IM-007
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Track as shadow AI."
+        examples:
+          - "personal SaaS"
+  - id: RS
+    codes:
+      - code: RS-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes prompt injection and retention risks."
+        examples:
+          - "pii exfiltration"
+      - code: RS-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes malware generation and social engineering."
+        examples:
+          - "phishing"
+          - "malware"
+      - code: RS-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes export control and privacy laws."
+        examples:
+          - "gdpr"
+          - "ai act"
+      - code: RS-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes training data provenance and output reuse."
+        examples:
+          - "copyright"
+      - code: RS-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes hallucination impacts."
+        examples:
+          - "hallucination"
+      - code: RS-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Relevant for HR/credit decisions."
+        examples:
+          - "bias"
+      - code: RS-007
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Safety policies needed."
+        examples:
+          - "self-harm advice"
+      - code: RS-008
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Assess contracts and controls."
+        examples:
+          - "vendor"
+  - id: OB
+    codes:
+      - code: OB-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Measure via cycle time reduction."
+        examples:
+          - "time saved"
+      - code: OB-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Measure via error reduction."
+        examples:
+          - "fewer errors"
+      - code: OB-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Measure via conversion uplift."
+        examples:
+          - "conversion"
+      - code: OB-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Measure via incident reduction."
+        examples:
+          - "fewer incidents"
+      - code: OB-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Measure via new features/offerings."
+        examples:
+          - "new feature"
+      - code: OB-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Measure via NPS/CSAT."
+        examples:
+          - "csat"
+      - code: OB-007
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Measure via surveys."
+        examples:
+          - "ex"
+  - id: EV
+    codes:
+      - code: EV-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: request."
+        examples:
+          - "request form"
+      - code: EV-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: review/approval."
+        examples:
+          - "approval log"
+      - code: EV-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: exception."
+        examples:
+          - "exception memo"
+      - code: EV-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: renewal."
+        examples:
+          - "renewal checklist"
+      - code: EV-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: change log."
+        examples:
+          - "change ticket"
+      - code: EV-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports evidence readiness."
+        examples:
+          - "sha256"
+          - "signature"
+      - code: EV-007
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports accountability and SoD."
+        examples:
+          - "audit log"
+      - code: EV-008
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports governance baseline."
+        examples:
+          - "inventory"
+      - code: EV-009
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May reference RS codes."
+        examples:
+          - "risk assessment"
+      - code: EV-010
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Informative mapping only."
+        examples:
+          - "coverage mapping"
+      - code: EV-011
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports adoption and safe use."
+        examples:
+          - "training"
+      - code: EV-012
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes periodic review logs."
+        examples:
+          - "monitoring log"
+      - code: EV-013
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Link to IR processes."
+        examples:
+          - "incident ticket"
+      - code: EV-014
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports third-party risk management."
+        examples:
+          - "vendor assessment"
+      - code: EV-015
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Used where required by policy."
+        examples:
+          - "sign-off"
+  - id: UC
+    codes:
+      - code: UC-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Low to medium risk depending on data type."
+        examples:
+          - "chat"
+      - code: UC-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Risk depends on confidentiality."
+        examples:
+          - "meeting notes"
+      - code: UC-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Beware of sensitive data in prompts."
+        examples:
+          - "translation"
+      - code: UC-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Requires review and attribution policy."
+        examples:
+          - "draft email"
+      - code: UC-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Must scan for secrets and licensing."
+        examples:
+          - "code snippet"
+      - code: UC-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May expose proprietary code."
+        examples:
+          - "review"
+      - code: UC-007
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Consider data classification and export restrictions."
+        examples:
+          - "csv analysis"
+      - code: UC-008
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Used for routing and triage."
+        examples:
+          - "ticket triage"
+      - code: UC-009
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Risk depends on indexed data scope."
+        examples:
+          - "enterprise search"
+      - code: UC-010
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Highest need for controls and logging."
+        examples:
+          - "agent workflow"
+      - code: UC-011
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Ensure confidentiality and integrity."
+        examples:
+          - "alert triage"
+      - code: UC-012
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Informative mapping only; not legal advice."
+        examples:
+          - "coverage map"
+      - code: UC-013
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Be careful with customer data."
+        examples:
+          - "support bot"
+      - code: UC-014
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Avoid sharing confidential pricing/strategy."
+        examples:
+          - "proposal draft"
+      - code: UC-015
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Personal data risks are high."
+        examples:
+          - "job description"
+      - code: UC-016
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Consider regulatory and confidentiality constraints."
+        examples:
+          - "forecast"
+      - code: UC-017
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Not legal advice; require review."
+        examples:
+          - "contract draft"
+      - code: UC-018
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Vendor and contract data considerations."
+        examples:
+          - "rfp draft"
+      - code: UC-019
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May access internal credentials; handle carefully."
+        examples:
+          - "ticket assistant"
+      - code: UC-020
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Ensure accuracy and change control."
+        examples:
+          - "runbook"
+      - code: UC-021
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "RAG governance needed."
+        examples:
+          - "kb"
+      - code: UC-022
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Operational logs classification required."
+        examples:
+          - "log analysis"
+      - code: UC-023
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Evidence integrity is critical."
+        examples:
+          - "ir assistant"
+      - code: UC-024
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May involve sensitive system details."
+        examples:
+          - "threat model"
+      - code: UC-025
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Informative; auditors decide procedures."
+        examples:
+          - "control test"
+      - code: UC-026
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Avoid personal data exposure."
+        examples:
+          - "learning plan"
+      - code: UC-027
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Ensure brand/legal review."
+        examples:
+          - "ad copy"
+      - code: UC-028
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Check citation and source reliability."
+        examples:
+          - "research"
+      - code: UC-029
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Explainability and accountability required."
+        examples:
+          - "recommendation"
+      - code: UC-030
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Use with free-text description and review."
+        examples:
+          - "other"

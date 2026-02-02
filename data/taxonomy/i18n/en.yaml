@@ -1,0 +1,313 @@
+# AIMO Taxonomy - English Labels and Definitions (SSOT)
+# ======================================================
+# This file is the SINGLE SOURCE OF TRUTH for English translations.
+# Edit this file directly to add/update English labels and definitions.
+#
+# Structure is defined in: data/taxonomy/canonical.yaml
+# Language code: en (BCP47)
+#
+# After editing, regenerate derived files:
+#   python tooling/taxonomy/build_artifacts.py --version current --langs en ja
+
+language: "en"
+language_name: "English"
+generated_date: "2026-01-31"
+
+dimensions:
+  FS:
+    name: "Functional Scope"
+    codes:
+      FS-001:
+        label: "End-user Productivity"
+        definition: "AI used to improve productivity of internal end users (writing, search, summarization, meeting notes)."
+      FS-002:
+        label: "Customer-facing Features"
+        definition: "AI embedded in product/service features provided to customers."
+      FS-003:
+        label: "Developer Tooling"
+        definition: "AI used to assist software development and engineering tasks."
+      FS-004:
+        label: "IT Operations"
+        definition: "AI used for IT operations and system administration (monitoring, incident handling)."
+      FS-005:
+        label: "Security Operations"
+        definition: "AI used for security monitoring/response (SOC, detection, triage)."
+      FS-006:
+        label: "Governance & Compliance"
+        definition: "AI used to support governance/compliance activities (policy, audit evidence)."
+  DT:
+    name: "Data Type"
+    codes:
+      DT-001:
+        label: "Public"
+        definition: "Data that is publicly available and intended for public disclosure."
+      DT-002:
+        label: "Internal"
+        definition: "Non-public internal business data."
+      DT-003:
+        label: "Confidential"
+        definition: "Highly sensitive internal data requiring restricted access."
+      DT-004:
+        label: "Personal Data"
+        definition: "Personal data as defined by applicable privacy laws."
+      DT-005:
+        label: "Sensitive Personal Data"
+        definition: "Special category/sensitive personal data."
+      DT-006:
+        label: "Credentials"
+        definition: "Authentication secrets and credentials."
+      DT-007:
+        label: "Source Code"
+        definition: "Source code and related artifacts."
+      DT-008:
+        label: "Customer Data"
+        definition: "Customer-provided or customer-related data."
+      DT-009:
+        label: "Operational Logs"
+        definition: "Operational or system logs used for monitoring and troubleshooting."
+      DT-010:
+        label: "Security Telemetry"
+        definition: "Security telemetry such as alerts and detections."
+  CH:
+    name: "Channel"
+    codes:
+      CH-001:
+        label: "Web UI"
+        definition: "Use via a web user interface."
+      CH-002:
+        label: "API"
+        definition: "Use via programmatic API integration."
+      CH-003:
+        label: "IDE Plugin"
+        definition: "Use via IDE/editor plugin."
+      CH-004:
+        label: "ChatOps"
+        definition: "Use via chat platforms (Slack/Teams) integrations."
+      CH-005:
+        label: "Desktop App"
+        definition: "Use via native desktop application."
+      CH-006:
+        label: "Mobile App"
+        definition: "Use via native mobile application."
+      CH-007:
+        label: "Email"
+        definition: "Use via email interface or email-based automation."
+      CH-008:
+        label: "Command Line"
+        definition: "Use via command-line interface."
+  IM:
+    name: "Integration Mode"
+    codes:
+      IM-001:
+        label: "Standalone"
+        definition: "Used standalone without integration into enterprise systems."
+      IM-002:
+        label: "SaaS Integrated"
+        definition: "SaaS application integrates AI features."
+      IM-003:
+        label: "Enterprise App Embedded"
+        definition: "AI embedded into internal enterprise applications."
+      IM-004:
+        label: "RPA/Workflow"
+        definition: "AI invoked within workflow automation or RPA."
+      IM-005:
+        label: "On-prem / Private"
+        definition: "AI hosted in private/on-prem environment."
+      IM-006:
+        label: "Managed Service"
+        definition: "Use via managed service with enterprise controls."
+      IM-007:
+        label: "Shadow / Unmanaged"
+        definition: "Use outside of approved governance controls."
+  RS:
+    name: "Risk Surface"
+    codes:
+      RS-001:
+        label: "Data Leakage"
+        definition: "Risk of unintended data disclosure."
+      RS-002:
+        label: "Security Abuse"
+        definition: "Risk that the system is abused for malicious purposes."
+      RS-003:
+        label: "Compliance Breach"
+        definition: "Risk of violating laws/regulations/policies."
+      RS-004:
+        label: "IP Infringement"
+        definition: "Risk of infringing copyright/patent/trade secrets."
+      RS-005:
+        label: "Model Misuse"
+        definition: "Risk from inappropriate model use or over-reliance."
+      RS-006:
+        label: "Bias/Fairness"
+        definition: "Risk of unfair or biased outcomes."
+      RS-007:
+        label: "Safety"
+        definition: "Risk of harmful content or unsafe recommendations."
+      RS-008:
+        label: "Third-party Risk"
+        definition: "Vendors, sub-processors, and model provider risks."
+  OB:
+    name: "Outcome / Benefit"
+    codes:
+      OB-001:
+        label: "Efficiency"
+        definition: "Improves time/cost efficiency."
+      OB-002:
+        label: "Quality"
+        definition: "Improves quality/accuracy of outputs."
+      OB-003:
+        label: "Revenue"
+        definition: "Contributes to revenue growth."
+      OB-004:
+        label: "Risk Reduction"
+        definition: "Reduces operational/security/compliance risk."
+      OB-005:
+        label: "Innovation"
+        definition: "Enables new capabilities or innovations."
+      OB-006:
+        label: "Customer Satisfaction"
+        definition: "Improves customer satisfaction."
+      OB-007:
+        label: "Employee Experience"
+        definition: "Improves employee experience."
+  EV:
+    name: "Evidence Type"
+    codes:
+      EV-001:
+        label: "Request Record"
+        definition: "Evidence that an AI use/service was requested and described."
+      EV-002:
+        label: "Review/Approval Record"
+        definition: "Evidence that a review/approval was performed."
+      EV-003:
+        label: "Exception Record"
+        definition: "Evidence that an exception was granted and tracked."
+      EV-004:
+        label: "Renewal/Re-evaluation Record"
+        definition: "Evidence that renewal or re-evaluation occurred."
+      EV-005:
+        label: "Change Log Entry"
+        definition: "Evidence of changes and their approvals."
+      EV-006:
+        label: "Integrity Proof"
+        definition: "Evidence of integrity (hash, signature, WORM)."
+      EV-007:
+        label: "Access Log"
+        definition: "Evidence of access control and access history."
+      EV-008:
+        label: "Model/Service Inventory"
+        definition: "Inventory record of models/services used."
+      EV-009:
+        label: "Risk Assessment"
+        definition: "Documented risk assessment for the use/service."
+      EV-010:
+        label: "Control Mapping"
+        definition: "Control mapping evidence to external frameworks."
+      EV-011:
+        label: "Training/Guidance"
+        definition: "Evidence of training or guidance provided to users."
+      EV-012:
+        label: "Monitoring Evidence"
+        definition: "Evidence of monitoring and ongoing oversight."
+      EV-013:
+        label: "Incident Record"
+        definition: "Evidence of incident handling related to AI use."
+      EV-014:
+        label: "Third-party Assessment"
+        definition: "Evidence of vendor or third-party assessment."
+      EV-015:
+        label: "Attestation/Sign-off"
+        definition: "Formal attestation or sign-off record."
+  UC:
+    name: "Use Case Class"
+    codes:
+      UC-001:
+        label: "General Q&A"
+        definition: "General question answering and conversational use."
+      UC-002:
+        label: "Summarization"
+        definition: "Summarizing documents, meetings, or messages."
+      UC-003:
+        label: "Translation"
+        definition: "Translation between languages."
+      UC-004:
+        label: "Content Drafting"
+        definition: "Generating drafts for emails, documents, or reports."
+      UC-005:
+        label: "Code Generation"
+        definition: "Generating code or scripts."
+      UC-006:
+        label: "Code Review"
+        definition: "Reviewing code for issues and improvements."
+      UC-007:
+        label: "Data Analysis"
+        definition: "Analyzing structured data and producing insights."
+      UC-008:
+        label: "Classification/Tagging"
+        definition: "Classifying or labeling content."
+      UC-009:
+        label: "Search/RAG"
+        definition: "RAG-based retrieval and question answering."
+      UC-010:
+        label: "Agentic Automation"
+        definition: "Autonomous or semi-autonomous agents executing actions."
+      UC-011:
+        label: "Security Triage"
+        definition: "Assisting security operations triage."
+      UC-012:
+        label: "Policy/Control Mapping"
+        definition: "Mapping controls and evidence to frameworks."
+      UC-013:
+        label: "Customer Support"
+        definition: "Supporting customer support interactions."
+      UC-014:
+        label: "Sales Enablement"
+        definition: "Supporting sales activities."
+      UC-015:
+        label: "HR Support"
+        definition: "Supporting HR processes."
+      UC-016:
+        label: "Finance Analysis"
+        definition: "Supporting finance analysis tasks."
+      UC-017:
+        label: "Legal Drafting"
+        definition: "Supporting legal drafting tasks."
+      UC-018:
+        label: "Procurement Support"
+        definition: "Supporting procurement tasks."
+      UC-019:
+        label: "IT Helpdesk"
+        definition: "Supporting IT helpdesk operations."
+      UC-020:
+        label: "Documentation"
+        definition: "Generating and maintaining documentation."
+      UC-021:
+        label: "Knowledge Base"
+        definition: "Building and querying knowledge bases."
+      UC-022:
+        label: "Monitoring/Observability"
+        definition: "Assisting monitoring and observability tasks."
+      UC-023:
+        label: "Incident Response"
+        definition: "Assisting incident response workflows."
+      UC-024:
+        label: "Threat Modeling"
+        definition: "Supporting threat modeling activities."
+      UC-025:
+        label: "Control Testing"
+        definition: "Assisting control testing and evidence review."
+      UC-026:
+        label: "Training/Learning"
+        definition: "Supporting training and learning content."
+      UC-027:
+        label: "Marketing Content"
+        definition: "Supporting marketing content generation."
+      UC-028:
+        label: "Research"
+        definition: "Supporting research and investigation."
+      UC-029:
+        label: "Decision Support"
+        definition: "Supporting decisions with recommendations."
+      UC-030:
+        label: "Other"
+        definition: "Other use cases not covered above."

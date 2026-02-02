@@ -1,0 +1,458 @@
+name: release
+
+# Release workflow - deploys versioned docs and updates /latest/ alias
+# IMPORTANT: This is the ONLY workflow that updates /latest/
+# See VERSIONING.md for the complete versioning policy
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+env:
+  LANG: C.UTF-8
+  LC_ALL: C.UTF-8
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Derive version
+        id: v
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          VER="${TAG#v}"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          echo "ver=$VER" >> $GITHUB_OUTPUT
+          echo ""
+          echo "=== Release Version ==="
+          echo "Tag: $TAG"
+          echo "Version (directory): $VER"
+
+      # CRITICAL: Check that this version doesn't already exist
+      # Never rewrite a released version - this would violate immutability
+      - name: Check version does not already exist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          
+          echo "=== Checking for existing version $VERSION ==="
+          
+          # Try to fetch gh-pages branch
+          git fetch origin gh-pages:gh-pages 2>/dev/null || {
+            echo "No gh-pages branch exists yet - OK to proceed"
+            exit 0
+          }
+          
+          # Check if version directory already exists
+          if git ls-tree --name-only gh-pages | grep -q "^${VERSION}$"; then
+            echo ""
+            echo "ERROR: Version $VERSION already exists in gh-pages!"
+            echo ""
+            echo "This would violate the immutability policy."
+            echo "Released versions MUST NOT be overwritten."
+            echo ""
+            echo "If you need to fix something, release a new PATCH version instead."
+            echo "See VERSIONING.md for details."
+            echo ""
+            exit 1
+          fi
+          
+          echo "Version $VERSION does not exist - OK to proceed"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            tooling/requirements.txt
+
+      - name: Install system deps for WeasyPrint (libs + fonts)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libpango-1.0-0 libpangocairo-1.0-0 libcairo2 libgdk-pixbuf2.0-0 \
+            fonts-noto-cjk fonts-noto-core fonts-noto-color-emoji
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+          pip install -r tooling/requirements.txt
+
+      - name: Quality gates (lint + test)
+        run: |
+          echo "=== i18n Lint (Language Purity, Deprecated SSOT Phrases) ==="
+          python tooling/checks/lint_i18n.py
+          echo "=== Schema Lint ==="
+          python tooling/checks/lint_schema.py
+          echo "=== Manifest Lint ==="
+          python tooling/checks/lint_manifest.py
+          echo "=== Docs Consistency Lint ==="
+          python tooling/checks/lint_docs_consistency.py
+          echo "=== Taxonomy SSOT Lint ==="
+          python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+          echo "=== Legacy CSV Lint (no new language columns) ==="
+          python tooling/checks/lint_legacy_csv.py
+          echo "=== Taxonomy Dictionary Lint ==="
+          python tooling/checks/lint_taxonomy_dictionary.py
+          echo "=== Taxonomy JSON Lint ==="
+          python tooling/checks/lint_taxonomy_json.py
+          echo "=== Taxonomy Artifacts Check ==="
+          python tooling/taxonomy/build_artifacts.py --check
+          echo "=== pytest ==="
+          pytest -q
+
+      # CRITICAL: Ensure documentation references match the release version
+      # This prevents deploying a release where Versions/Cite/CITATION.cff
+      # still reference an older version
+      - name: Release consistency check
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          echo "=== Release Consistency Check ==="
+          python tooling/checks/check_release_consistency.py
+
+      - name: Build docs (mkdocs)
+        run: python -m mkdocs build --strict
+
+      - name: Verify HTML (no *_ja columns in EN pages)
+        run: |
+          # Verify EN dictionary page does not contain language-specific column names
+          if grep -rE "dimension_name_ja|label_ja|definition_ja" site/standard/current/05-dictionary/ 2>/dev/null; then
+            echo "ERROR: EN dictionary page contains *_ja column references"
+            exit 1
+          fi
+          echo "HTML verification passed: no *_ja columns in EN pages"
+
+      - name: Configure git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # Deploy versioned snapshot and update /latest/ alias
+      # IMPORTANT: This is the ONLY place that updates /latest/
+      # dev is handled separately by deploy-dev.yml
+      - name: Deploy version snapshot and update latest alias
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          
+          echo "=== Deploying version $VERSION ==="
+          echo ""
+          
+          git fetch origin gh-pages:gh-pages || true
+          
+          # Deploy versioned snapshot with latest as alias
+          # Using --update-aliases ensures latest points to this version
+          # Note: dev is NOT an alias here - it's deployed separately by deploy-dev.yml
+          echo "Step 1: Deploy $VERSION with latest alias"
+          mike deploy --push --update-aliases "$VERSION" latest
+          
+          echo ""
+          echo "Step 2: Set latest as default version"
+          mike set-default --push latest
+          
+          echo ""
+          echo "=== Deployment complete ==="
+          echo "Version deployed: /$VERSION/"
+          echo "latest alias now points to: /$VERSION/"
+          echo ""
+          echo "=== Current mike versions ==="
+          mike list
+          
+          echo ""
+          echo "=== Verification ==="
+          # Verify the alias is correct
+          ALIASES=$(mike list | grep "$VERSION")
+          if echo "$ALIASES" | grep -q "latest"; then
+            echo "✓ Confirmed: latest -> $VERSION"
+          else
+            echo "ERROR: latest alias not pointing to $VERSION!"
+            exit 1
+          fi
+
+      - name: Generate legacy URL redirects
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages:gh-pages || true
+          git checkout gh-pages
+          
+          # Generate redirect HTML pages inline (tooling not available on gh-pages)
+          REDIRECT_TEMPLATE='<!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="utf-8">
+              <meta http-equiv="refresh" content="0; url=TARGET">
+              <link rel="canonical" href="TARGET">
+              <title>Redirecting...</title>
+          </head>
+          <body>
+              <p>This page has moved. If you are not redirected, <a href="TARGET">click here</a>.</p>
+          </body>
+          </html>'
+          
+          # Root-level redirects to /latest/
+          for path in "standard/versions" "standard/current"; do
+            mkdir -p "$path"
+            target="../latest/${path}/"
+            echo "${REDIRECT_TEMPLATE//TARGET/$target}" > "${path}/index.html"
+            echo "Created redirect: ${path}/index.html -> $target"
+          done
+          
+          # Commit and push if there are changes
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No redirect changes to commit."
+          else
+            git commit -m "chore(pages): generate legacy URL redirects"
+            git push origin gh-pages
+          fi
+          git checkout -
+
+      - name: Ensure CNAME for custom domain (standard.aimoaas.com)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages:gh-pages || true
+          git checkout gh-pages
+          echo "standard.aimoaas.com" > CNAME
+          git add CNAME
+          if git diff --cached --quiet; then
+            echo "CNAME unchanged; nothing to commit."
+          else
+            git commit -m "chore(pages): ensure CNAME for standard.aimoaas.com"
+            git push origin gh-pages
+          fi
+          git checkout -
+
+      - name: Deploy root SEO files (robots.txt, sitemap.xml)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          
+          git fetch origin gh-pages:gh-pages || true
+          git checkout gh-pages
+          
+          echo "=== Deploying root SEO files ==="
+          
+          # Create robots.txt at root
+          cat > robots.txt << 'ROBOTS_EOF'
+          # AIMO Standard robots.txt
+          # Canonical site: https://standard.aimoaas.com/
+          
+          User-agent: *
+          Allow: /
+          
+          # Disallow dev preview (unreleased content)
+          Disallow: /dev/
+          
+          # Sitemap location
+          Sitemap: https://standard.aimoaas.com/sitemap.xml
+          ROBOTS_EOF
+          # Remove leading whitespace from heredoc
+          sed -i.bak 's/^          //' robots.txt && rm -f robots.txt.bak
+          echo "Created: robots.txt"
+          
+          # Copy sitemap from latest version to root
+          if [ -f "${VERSION}/sitemap.xml" ]; then
+            cp "${VERSION}/sitemap.xml" sitemap.xml
+            echo "Copied: ${VERSION}/sitemap.xml -> sitemap.xml"
+          elif [ -f "latest/sitemap.xml" ]; then
+            cp "latest/sitemap.xml" sitemap.xml
+            echo "Copied: latest/sitemap.xml -> sitemap.xml"
+          else
+            echo "WARNING: No sitemap.xml found to copy"
+          fi
+          
+          # Commit and push
+          git add robots.txt sitemap.xml 2>/dev/null || git add robots.txt
+          if git diff --cached --quiet; then
+            echo "SEO files unchanged; nothing to commit."
+          else
+            git commit -m "chore(pages): deploy root SEO files (robots.txt, sitemap.xml)"
+            git push origin gh-pages
+            echo "✓ Root SEO files deployed"
+          fi
+          git checkout -
+
+      - name: Build release assets (PDF + zip + checksums)
+        run: |
+          python tooling/release/build_assets.py --version "${{ steps.v.outputs.ver }}" --ja
+
+      - name: Create source and site snapshots
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          
+          echo "=== Creating source snapshot ==="
+          # Create source snapshot from git archive (clean, no .git)
+          git archive --format=zip --prefix="aimo-standard-${VERSION}/" HEAD \
+            -o "dist/aimo-standard-${VERSION}-src.zip"
+          echo "Created: dist/aimo-standard-${VERSION}-src.zip"
+          
+          echo ""
+          echo "=== Creating site snapshot ==="
+          # Create site snapshot from built docs
+          (cd site && zip -r "../dist/aimo-standard-${VERSION}-site.zip" .)
+          echo "Created: dist/aimo-standard-${VERSION}-site.zip"
+          
+          echo ""
+          echo "=== Updating checksums ==="
+          # Regenerate checksums to include new files
+          (cd dist && sha256sum *.pdf *.zip > SHA256SUMS.txt)
+          echo "Updated: dist/SHA256SUMS.txt"
+          
+          echo ""
+          echo "=== Release assets ==="
+          ls -la dist/
+
+      - name: Generate release notes from changelog
+        id: release_notes
+        run: |
+          VERSION="${{ steps.v.outputs.ver }}"
+          cat > dist/RELEASE_NOTES.md << EOF
+          ## AIMO Standard ${{ steps.v.outputs.tag }}
+
+          ### Release Assets
+
+          | Asset | Description |
+          | ----- | ----------- |
+          | \`trust_package.pdf\` | English Trust Package (auditor-ready) |
+          | \`trust_package.ja.pdf\` | Japanese Trust Package |
+          | \`aimo-standard-artifacts.zip\` | Schemas, templates, examples, validator rules |
+          | \`aimo-standard-${VERSION}-src.zip\` | Source code snapshot |
+          | \`aimo-standard-${VERSION}-site.zip\` | Built documentation site |
+          | \`SHA256SUMS.txt\` | SHA-256 checksums for verification |
+
+          ### Verification
+
+          \`\`\`bash
+          sha256sum -c SHA256SUMS.txt
+          \`\`\`
+
+          ### Documentation
+
+          - **This version**: https://standard.aimoaas.com/${VERSION}/
+          - **Latest**: https://standard.aimoaas.com/latest/
+          - **Changelog**: https://standard.aimoaas.com/${VERSION}/standard/current/08-changelog/
+          - **Versions**: https://standard.aimoaas.com/${VERSION}/standard/versions/
+
+          ### Repository
+
+          - [CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md)
+          - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)
+          - [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md)
+          EOF
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "${{ steps.v.outputs.tag }}"
+          body_path: dist/RELEASE_NOTES.md
+          files: |
+            dist/trust_package.pdf
+            dist/trust_package.ja.pdf
+            dist/aimo-standard-artifacts.zip
+            dist/aimo-standard-${{ steps.v.outputs.ver }}-src.zip
+            dist/aimo-standard-${{ steps.v.outputs.ver }}-site.zip
+            dist/SHA256SUMS.txt
+
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: |
+            dist/trust_package.pdf
+            dist/trust_package.ja.pdf
+            dist/aimo-standard-artifacts.zip
+            dist/aimo-standard-${{ steps.v.outputs.ver }}-src.zip
+            dist/aimo-standard-${{ steps.v.outputs.ver }}-site.zip
+            dist/SHA256SUMS.txt
+
+      - name: Update versions page on main branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.v.outputs.ver }}"
+          DATE="$(date -u +%Y-%m-%d)"
+
+          # Stash any local changes and switch to main
+          git stash --include-untracked || true
+          git fetch origin main:main
+          git checkout main
+
+          # Run the versions page updater
+          python tooling/release/update_versions_page.py --version "$VERSION" --date "$DATE"
+
+          # Commit and push if there are changes
+          git add docs/en/standard/versions/index.md docs/ja/standard/versions/index.md
+          if git diff --cached --quiet; then
+            echo "Versions pages already up to date."
+          else
+            git commit -m "docs: update versions page for v${VERSION}"
+            git push origin main
+            echo "✓ Versions pages updated on main branch"
+          fi
+
+          # Return to original state
+          git checkout -
+          git stash pop || true
+
+      - name: Release summary
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.v.outputs.ver }}"
+          TAG="${{ steps.v.outputs.tag }}"
+          RELEASE_URL="https://github.com/${{ github.repository }}/releases/tag/${TAG}"
+          
+          echo "## Release Complete: ${TAG}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Published URLs" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| URL | Description |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | ----------- |" >> $GITHUB_STEP_SUMMARY
+          echo "| https://standard.aimoaas.com/${VERSION}/ | Version ${VERSION} (immutable) |" >> $GITHUB_STEP_SUMMARY
+          echo "| https://standard.aimoaas.com/latest/ | Latest alias (now points to ${VERSION}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| ${RELEASE_URL} | GitHub Release with assets |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Release Assets" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Asset | Size |" >> $GITHUB_STEP_SUMMARY
+          echo "| ----- | ---- |" >> $GITHUB_STEP_SUMMARY
+          for f in dist/*.pdf dist/*.zip dist/*.txt; do
+            if [ -f "$f" ]; then
+              SIZE=$(ls -lh "$f" | awk '{print $5}')
+              NAME=$(basename "$f")
+              echo "| \`${NAME}\` | ${SIZE} |" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Verification" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All checks passed:" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Release consistency check (Versions/Cite/CITATION.cff)" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] MkDocs build (strict mode)" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] mike deploy with latest alias" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] GitHub Release created" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Build provenance attestations" >> $GITHUB_STEP_SUMMARY

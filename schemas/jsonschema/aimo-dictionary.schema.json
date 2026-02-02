@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aimoaas.com/standard/schemas/aimo-dictionary.schema.json",
+  "title": "AIMO Dictionary",
+  "description": "Dictionary of taxonomy codes used in evidence records. Aligned with taxonomy_dictionary_v0.1.csv SSOT.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["entries"],
+  "properties": {
+    "taxonomy_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Version of the taxonomy dictionary (SemVer format)"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dictionaryEntry"
+      }
+    }
+  },
+  "$defs": {
+    "dictionaryEntry": {
+      "type": "object",
+      "required": ["code", "label_en", "label_ja", "definition_en"],
+      "additionalProperties": true,
+      "properties": {
+        "dimension_id": {
+          "type": "string",
+          "enum": ["FS", "UC", "DT", "CH", "IM", "RS", "OB", "EV"],
+          "description": "Two-letter dimension identifier"
+        },
+        "code": {
+          "type": "string",
+          "pattern": "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$",
+          "description": "AIMO code in format <DIM>-<NNN>"
+        },
+        "label_en": {
+          "type": "string",
+          "description": "English label (short name)"
+        },
+        "label_ja": {
+          "type": "string",
+          "description": "Japanese label (short name)"
+        },
+        "definition_en": {
+          "type": "string",
+          "description": "English definition (1-2 sentences)"
+        },
+        "definition_ja": {
+          "type": "string",
+          "description": "Japanese definition (1-2 sentences)"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "deprecated", "removed"],
+          "description": "Lifecycle status of the code"
+        },
+        "introduced_in": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Version when code was introduced"
+        },
+        "deprecated_in": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Version when code was deprecated"
+        },
+        "replaced_by": {
+          "type": "string",
+          "pattern": "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$",
+          "description": "Replacement code if deprecated"
+        },
+        "backward_compatible": {
+          "type": "boolean",
+          "description": "Whether change is backward compatible"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aimoaas.com/standard/schemas/aimo-ev.schema.json",
+  "title": "AIMO EV (Evidence) Record",
+  "description": "Evidence record with taxonomy codes. See docs/standard/current/03-taxonomy.md for dimension definitions.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "timestamp", "source", "summary"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique evidence identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "ISO-8601 timestamp"
+    },
+    "source": {
+      "type": "string",
+      "description": "Origin of evidence (system, doc, log, etc.)"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short summary of evidence"
+    },
+    "taxonomy_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Version of the taxonomy dictionary used"
+    },
+    "codes": {
+      "type": "object",
+      "description": "AIMO taxonomy codes by dimension. See docs/standard/current/03-taxonomy.md",
+      "properties": {
+        "FS": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^FS-\\d{3}$" },
+          "minItems": 1,
+          "maxItems": 1,
+          "description": "Functional Scope (exactly 1 required)"
+        },
+        "UC": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^UC-\\d{3}$" },
+          "minItems": 1,
+          "description": "Use Case Class (1 or more required)"
+        },
+        "DT": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^DT-\\d{3}$" },
+          "minItems": 1,
+          "description": "Data Type (1 or more required)"
+        },
+        "CH": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^CH-\\d{3}$" },
+          "minItems": 1,
+          "description": "Channel (1 or more required)"
+        },
+        "IM": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^IM-\\d{3}$" },
+          "minItems": 1,
+          "maxItems": 1,
+          "description": "Integration Mode (exactly 1 required)"
+        },
+        "RS": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^RS-\\d{3}$" },
+          "minItems": 1,
+          "description": "Risk Surface (1 or more required)"
+        },
+        "OB": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^OB-\\d{3}$" },
+          "description": "Outcome/Benefit (optional)"
+        },
+        "EV": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^EV-\\d{3}$" },
+          "minItems": 1,
+          "description": "Evidence Type (1 or more required)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Additional freeform tags"
+    }
+  }
+}

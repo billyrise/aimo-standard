@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aimoaas.com/standard/schemas/aimo-standard.schema.json",
+  "title": "AIMO Standard - Root",
+  "description": "Root schema for AIMO evidence bundles. See docs/standard/current/ for full specification.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "dictionary", "evidence"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Standard version, e.g., 0.1.0"
+    },
+    "taxonomy_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Version of the taxonomy dictionary used (SemVer)"
+    },
+    "dictionary": { "$ref": "aimo-dictionary.schema.json" },
+    "evidence": {
+      "type": "array",
+      "items": { "$ref": "aimo-ev.schema.json" }
+    },
+    "request": {
+      "type": "object",
+      "description": "Optional request (application) record; id, timestamp, actor/role, scope, rationale recommended"
+    },
+    "review": {
+      "type": "object",
+      "description": "Optional review/approval record; id, timestamp, actor/role, decision, references recommended"
+    },
+    "exception": {
+      "type": "object",
+      "description": "Optional exception record; id, timestamp, scope, expiry, compensating controls, renewal ref recommended"
+    },
+    "renewal": {
+      "type": "object",
+      "description": "Optional renewal/re-evaluation record; id, timestamp, actor/role, decision, references recommended"
+    },
+    "change_log": {
+      "type": "object",
+      "description": "Optional change log or reference; id, timestamp, actor, change description, references recommended"
+    }
+  }
+}

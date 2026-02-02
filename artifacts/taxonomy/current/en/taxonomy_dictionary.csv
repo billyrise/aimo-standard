@@ -1,0 +1,92 @@
+code,dimension,dimension_name,label,definition,status,introduced_in,scope_notes,examples
+CH-001,CH,Channel,Web UI,Use via a web user interface.,active,0.1.0,Includes direct SaaS UI usage.,chat.openai.com|claude.ai
+CH-002,CH,Channel,API,Use via programmatic API integration.,active,0.1.0,Includes internal apps calling model APIs.,openai api|azure openai
+CH-003,CH,Channel,IDE Plugin,Use via IDE/editor plugin.,active,0.1.0,Often developer tooling.,cursor|copilot
+CH-004,CH,Channel,ChatOps,Use via chat platforms (Slack/Teams) integrations.,active,0.1.0,Includes bot-based workflows.,slack bot|teams bot
+CH-005,CH,Channel,Desktop App,Use via native desktop application.,active,0.1.0,Includes Electron apps.,desktop client
+CH-006,CH,Channel,Mobile App,Use via native mobile application.,active,0.1.0,Includes iOS/Android.,mobile client
+CH-007,CH,Channel,Email,Use via email interface or email-based automation.,active,0.1.0,Often via add-ins or automation.,email assistant
+CH-008,CH,Channel,Command Line,Use via command-line interface.,active,0.1.0,Often internal tools.,cli tool
+DT-001,DT,Data Type,Public,Data that is publicly available and intended for public disclosure.,active,0.1.0,Still consider IP/copyright constraints.,public web|press release
+DT-002,DT,Data Type,Internal,Non-public internal business data.,active,0.1.0,May include confidential business info.,internal wiki|project docs
+DT-003,DT,Data Type,Confidential,Highly sensitive internal data requiring restricted access.,active,0.1.0,Includes trade secrets.,strategy deck|M&A
+DT-004,DT,Data Type,Personal Data,Personal data as defined by applicable privacy laws.,active,0.1.0,Includes identifiers and personal attributes.,name|email
+DT-005,DT,Data Type,Sensitive Personal Data,Special category/sensitive personal data.,active,0.1.0,Higher controls required.,health|biometrics
+DT-006,DT,Data Type,Credentials,Authentication secrets and credentials.,active,0.1.0,Must never be provided to external AI services unless explicitly allowed.,api key|password
+DT-007,DT,Data Type,Source Code,Source code and related artifacts.,active,0.1.0,Consider license/IP and secrets scanning.,repo|patch
+DT-008,DT,Data Type,Customer Data,Customer-provided or customer-related data.,active,0.1.0,May include PII and contractual constraints.,tickets|usage logs
+DT-009,DT,Data Type,Operational Logs,Operational or system logs used for monitoring and troubleshooting.,active,0.1.0,May include personal data; classify carefully.,syslog|audit log
+DT-010,DT,Data Type,Security Telemetry,Security telemetry such as alerts and detections.,active,0.1.0,High integrity expectations.,edr alerts
+EV-001,EV,Evidence Type,Request Record,Evidence that an AI use/service was requested and described.,active,0.1.0,Lifecycle: request.,request form
+EV-002,EV,Evidence Type,Review/Approval Record,Evidence that a review/approval was performed.,active,0.1.0,Lifecycle: review/approval.,approval log
+EV-003,EV,Evidence Type,Exception Record,Evidence that an exception was granted and tracked.,active,0.1.0,Lifecycle: exception.,exception memo
+EV-004,EV,Evidence Type,Renewal/Re-evaluation Record,Evidence that renewal or re-evaluation occurred.,active,0.1.0,Lifecycle: renewal.,renewal checklist
+EV-005,EV,Evidence Type,Change Log Entry,Evidence of changes and their approvals.,active,0.1.0,Lifecycle: change log.,change ticket
+EV-006,EV,Evidence Type,Integrity Proof,"Evidence of integrity (hash, signature, WORM).",active,0.1.0,Supports evidence readiness.,sha256|signature
+EV-007,EV,Evidence Type,Access Log,Evidence of access control and access history.,active,0.1.0,Supports accountability and SoD.,audit log
+EV-008,EV,Evidence Type,Model/Service Inventory,Inventory record of models/services used.,active,0.1.0,Supports governance baseline.,inventory
+EV-009,EV,Evidence Type,Risk Assessment,Documented risk assessment for the use/service.,active,0.1.0,May reference RS codes.,risk assessment
+EV-010,EV,Evidence Type,Control Mapping,Control mapping evidence to external frameworks.,active,0.1.0,Informative mapping only.,coverage mapping
+EV-011,EV,Evidence Type,Training/Guidance,Evidence of training or guidance provided to users.,active,0.1.0,Supports adoption and safe use.,training
+EV-012,EV,Evidence Type,Monitoring Evidence,Evidence of monitoring and ongoing oversight.,active,0.1.0,Includes periodic review logs.,monitoring log
+EV-013,EV,Evidence Type,Incident Record,Evidence of incident handling related to AI use.,active,0.1.0,Link to IR processes.,incident ticket
+EV-014,EV,Evidence Type,Third-party Assessment,Evidence of vendor or third-party assessment.,active,0.1.0,Supports third-party risk management.,vendor assessment
+EV-015,EV,Evidence Type,Attestation/Sign-off,Formal attestation or sign-off record.,active,0.1.0,Used where required by policy.,sign-off
+FS-001,FS,Functional Scope,End-user Productivity,"AI used to improve productivity of internal end users (writing, search, summarization, meeting notes).",active,0.1.0,Exclude customer-facing core functions.,microsoft 365 copilot|notion ai
+FS-002,FS,Functional Scope,Customer-facing Features,AI embedded in product/service features provided to customers.,active,0.1.0,Includes AI-as-a-feature.,chatbot|recommendation
+FS-003,FS,Functional Scope,Developer Tooling,AI used to assist software development and engineering tasks.,active,0.1.0,Includes code generation and review tools.,cursor|github copilot
+FS-004,FS,Functional Scope,IT Operations,"AI used for IT operations and system administration (monitoring, incident handling).",active,0.1.0,May overlap with security operations; classify by primary intent.,aops|incident summarization
+FS-005,FS,Functional Scope,Security Operations,"AI used for security monitoring/response (SOC, detection, triage).",active,0.1.0,"If primary goal is security posture, use FS-005.",soc copilot|alert triage
+FS-006,FS,Functional Scope,Governance & Compliance,"AI used to support governance/compliance activities (policy, audit evidence).",active,0.1.0,Includes evidence generation and control mapping support.,policy drafting|evidence bundle
+IM-001,IM,Integration Mode,Standalone,Used standalone without integration into enterprise systems.,active,0.1.0,Often highest shadow AI risk.,personal account
+IM-002,IM,Integration Mode,SaaS Integrated,SaaS application integrates AI features.,active,0.1.0,Vendor-managed integration.,crm ai|support ai
+IM-003,IM,Integration Mode,Enterprise App Embedded,AI embedded into internal enterprise applications.,active,0.1.0,Often via API with internal controls.,internal portal
+IM-004,IM,Integration Mode,RPA/Workflow,AI invoked within workflow automation or RPA.,active,0.1.0,Requires traceability of triggers and outputs.,n8n|zapier-like
+IM-005,IM,Integration Mode,On-prem / Private,AI hosted in private/on-prem environment.,active,0.1.0,May reduce data exfiltration risk.,self-hosted llm
+IM-006,IM,Integration Mode,Managed Service,Use via managed service with enterprise controls.,active,0.1.0,Includes centrally managed accounts and logging.,enterprise chatgpt
+IM-007,IM,Integration Mode,Shadow / Unmanaged,Use outside of approved governance controls.,active,0.1.0,Track as shadow AI.,personal SaaS
+OB-001,OB,Outcome / Benefit,Efficiency,Improves time/cost efficiency.,active,0.1.0,Measure via cycle time reduction.,time saved
+OB-002,OB,Outcome / Benefit,Quality,Improves quality/accuracy of outputs.,active,0.1.0,Measure via error reduction.,fewer errors
+OB-003,OB,Outcome / Benefit,Revenue,Contributes to revenue growth.,active,0.1.0,Measure via conversion uplift.,conversion
+OB-004,OB,Outcome / Benefit,Risk Reduction,Reduces operational/security/compliance risk.,active,0.1.0,Measure via incident reduction.,fewer incidents
+OB-005,OB,Outcome / Benefit,Innovation,Enables new capabilities or innovations.,active,0.1.0,Measure via new features/offerings.,new feature
+OB-006,OB,Outcome / Benefit,Customer Satisfaction,Improves customer satisfaction.,active,0.1.0,Measure via NPS/CSAT.,csat
+OB-007,OB,Outcome / Benefit,Employee Experience,Improves employee experience.,active,0.1.0,Measure via surveys.,ex
+RS-001,RS,Risk Surface,Data Leakage,Risk of unintended data disclosure.,active,0.1.0,Includes prompt injection and retention risks.,pii exfiltration
+RS-002,RS,Risk Surface,Security Abuse,Risk that the system is abused for malicious purposes.,active,0.1.0,Includes malware generation and social engineering.,phishing|malware
+RS-003,RS,Risk Surface,Compliance Breach,Risk of violating laws/regulations/policies.,active,0.1.0,Includes export control and privacy laws.,gdpr|ai act
+RS-004,RS,Risk Surface,IP Infringement,Risk of infringing copyright/patent/trade secrets.,active,0.1.0,Includes training data provenance and output reuse.,copyright
+RS-005,RS,Risk Surface,Model Misuse,Risk from inappropriate model use or over-reliance.,active,0.1.0,Includes hallucination impacts.,hallucination
+RS-006,RS,Risk Surface,Bias/Fairness,Risk of unfair or biased outcomes.,active,0.1.0,Relevant for HR/credit decisions.,bias
+RS-007,RS,Risk Surface,Safety,Risk of harmful content or unsafe recommendations.,active,0.1.0,Safety policies needed.,self-harm advice
+RS-008,RS,Risk Surface,Third-party Risk,"Vendors, sub-processors, and model provider risks.",active,0.1.0,Assess contracts and controls.,vendor
+UC-001,UC,Use Case Class,General Q&A,General question answering and conversational use.,active,0.1.0,Low to medium risk depending on data type.,chat
+UC-002,UC,Use Case Class,Summarization,"Summarizing documents, meetings, or messages.",active,0.1.0,Risk depends on confidentiality.,meeting notes
+UC-003,UC,Use Case Class,Translation,Translation between languages.,active,0.1.0,Beware of sensitive data in prompts.,translation
+UC-004,UC,Use Case Class,Content Drafting,"Generating drafts for emails, documents, or reports.",active,0.1.0,Requires review and attribution policy.,draft email
+UC-005,UC,Use Case Class,Code Generation,Generating code or scripts.,active,0.1.0,Must scan for secrets and licensing.,code snippet
+UC-006,UC,Use Case Class,Code Review,Reviewing code for issues and improvements.,active,0.1.0,May expose proprietary code.,review
+UC-007,UC,Use Case Class,Data Analysis,Analyzing structured data and producing insights.,active,0.1.0,Consider data classification and export restrictions.,csv analysis
+UC-008,UC,Use Case Class,Classification/Tagging,Classifying or labeling content.,active,0.1.0,Used for routing and triage.,ticket triage
+UC-009,UC,Use Case Class,Search/RAG,RAG-based retrieval and question answering.,active,0.1.0,Risk depends on indexed data scope.,enterprise search
+UC-010,UC,Use Case Class,Agentic Automation,Autonomous or semi-autonomous agents executing actions.,active,0.1.0,Highest need for controls and logging.,agent workflow
+UC-011,UC,Use Case Class,Security Triage,Assisting security operations triage.,active,0.1.0,Ensure confidentiality and integrity.,alert triage
+UC-012,UC,Use Case Class,Policy/Control Mapping,Mapping controls and evidence to frameworks.,active,0.1.0,Informative mapping only; not legal advice.,coverage map
+UC-013,UC,Use Case Class,Customer Support,Supporting customer support interactions.,active,0.1.0,Be careful with customer data.,support bot
+UC-014,UC,Use Case Class,Sales Enablement,Supporting sales activities.,active,0.1.0,Avoid sharing confidential pricing/strategy.,proposal draft
+UC-015,UC,Use Case Class,HR Support,Supporting HR processes.,active,0.1.0,Personal data risks are high.,job description
+UC-016,UC,Use Case Class,Finance Analysis,Supporting finance analysis tasks.,active,0.1.0,Consider regulatory and confidentiality constraints.,forecast
+UC-017,UC,Use Case Class,Legal Drafting,Supporting legal drafting tasks.,active,0.1.0,Not legal advice; require review.,contract draft
+UC-018,UC,Use Case Class,Procurement Support,Supporting procurement tasks.,active,0.1.0,Vendor and contract data considerations.,rfp draft
+UC-019,UC,Use Case Class,IT Helpdesk,Supporting IT helpdesk operations.,active,0.1.0,May access internal credentials; handle carefully.,ticket assistant
+UC-020,UC,Use Case Class,Documentation,Generating and maintaining documentation.,active,0.1.0,Ensure accuracy and change control.,runbook
+UC-021,UC,Use Case Class,Knowledge Base,Building and querying knowledge bases.,active,0.1.0,RAG governance needed.,kb
+UC-022,UC,Use Case Class,Monitoring/Observability,Assisting monitoring and observability tasks.,active,0.1.0,Operational logs classification required.,log analysis
+UC-023,UC,Use Case Class,Incident Response,Assisting incident response workflows.,active,0.1.0,Evidence integrity is critical.,ir assistant
+UC-024,UC,Use Case Class,Threat Modeling,Supporting threat modeling activities.,active,0.1.0,May involve sensitive system details.,threat model
+UC-025,UC,Use Case Class,Control Testing,Assisting control testing and evidence review.,active,0.1.0,Informative; auditors decide procedures.,control test
+UC-026,UC,Use Case Class,Training/Learning,Supporting training and learning content.,active,0.1.0,Avoid personal data exposure.,learning plan
+UC-027,UC,Use Case Class,Marketing Content,Supporting marketing content generation.,active,0.1.0,Ensure brand/legal review.,ad copy
+UC-028,UC,Use Case Class,Research,Supporting research and investigation.,active,0.1.0,Check citation and source reliability.,research
+UC-029,UC,Use Case Class,Decision Support,Supporting decisions with recommendations.,active,0.1.0,Explainability and accountability required.,recommendation
+UC-030,UC,Use Case Class,Other,Other use cases not covered above.,active,0.1.0,Use with free-text description and review.,other

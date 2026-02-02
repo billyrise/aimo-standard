@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# MkDocs outputs
+site/
+dist/
+
+# Build intermediates (generated, not version-controlled)
+build/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Test artifacts
+.pytest_cache/
+
+# Local Cursor rules (not shared)
+.cursor/rules/03-docs-conventions.md

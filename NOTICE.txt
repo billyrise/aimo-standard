@@ -1,0 +1,9 @@
+AIMO Standard - NOTICE
+
+This repository contains documentation and reference artifacts for the AIMO Standard.
+
+SPDX-License-Identifier: Apache-2.0
+
+Trademark Notice:
+AIMOaaS is a trademark of RISEby inc. (trademark application pending).
+See TRADEMARKS.md for usage guidelines.

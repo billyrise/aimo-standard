@@ -1,0 +1,187 @@
+name: deploy-dev
+
+# Deploy main branch to /dev/ (preview only)
+# IMPORTANT: This workflow NEVER updates /latest/ - only the release workflow does that
+
+on:
+  workflow_run:
+    workflows: ["quality-gate"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-dev:
+    # Only deploy if quality-gate succeeded and it was a push (not PR)
+    if: >
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+
+      # Set is_dev_deploy flag for noindex meta tag injection
+      - name: Configure for dev deployment (noindex)
+        run: |
+          echo "Building for dev deployment - noindex will be applied"
+          # Add is_dev_deploy to mkdocs.yml extra section for template access
+          cat >> mkdocs.yml << 'EOF'
+          
+          # DEV DEPLOYMENT FLAG (auto-injected by deploy-dev.yml)
+          # This triggers noindex meta tag in theme override
+            is_dev_deploy: true
+          EOF
+
+      - name: Build documentation
+        run: python -m mkdocs build --strict
+
+      - name: Configure git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # Deploy ONLY to dev - NEVER touch latest
+      # dev is explicitly marked as preview/unreleased content
+      - name: Deploy to dev (preview only)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch origin gh-pages:gh-pages || true
+          
+          echo "=== Deploying to /dev/ (preview) ==="
+          echo "IMPORTANT: This deployment does NOT affect /latest/"
+          echo ""
+          
+          # Deploy as 'dev' only - no aliases, no updating latest
+          # The --title flag sets the display name in the version selector
+          mike deploy --push dev --title "dev (preview)"
+          
+          echo ""
+          echo "=== Deployment complete ==="
+          echo "Deployed to: /dev/"
+          echo ""
+          echo "=== Current mike versions ==="
+          mike list
+          
+          echo ""
+          echo "NOTE: /latest/ was NOT modified by this workflow."
+          echo "To update /latest/, push a release tag (v*.*.*)."
+
+      - name: Generate legacy URL redirects
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages:gh-pages || true
+          git checkout gh-pages
+          
+          # Generate redirect HTML pages inline (tooling not available on gh-pages)
+          REDIRECT_TEMPLATE='<!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="utf-8">
+              <meta http-equiv="refresh" content="0; url=TARGET">
+              <link rel="canonical" href="TARGET">
+              <title>Redirecting...</title>
+          </head>
+          <body>
+              <p>This page has moved. If you are not redirected, <a href="TARGET">click here</a>.</p>
+          </body>
+          </html>'
+          
+          # Root-level redirects to /latest/
+          for path in "standard/versions" "standard/current"; do
+            mkdir -p "$path"
+            target="../latest/${path}/"
+            echo "${REDIRECT_TEMPLATE//TARGET/$target}" > "${path}/index.html"
+            echo "Created redirect: ${path}/index.html -> $target"
+          done
+          
+          # Commit and push if there are changes
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No redirect changes to commit."
+          else
+            git commit -m "chore(pages): generate legacy URL redirects"
+            git push origin gh-pages
+          fi
+          git checkout -
+
+      - name: Ensure CNAME for custom domain (standard.aimoaas.com)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages:gh-pages || true
+          git checkout gh-pages
+          echo "standard.aimoaas.com" > CNAME
+          git add CNAME
+          if git diff --cached --quiet; then
+            echo "CNAME unchanged; nothing to commit."
+          else
+            git commit -m "chore(pages): ensure CNAME for standard.aimoaas.com"
+            git push origin gh-pages
+          fi
+          git checkout -
+
+      - name: Ensure root SEO files (robots.txt, sitemap.xml)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages:gh-pages || true
+          git checkout gh-pages
+          
+          echo "=== Ensuring root SEO files ==="
+          
+          # Create robots.txt at root if not exists
+          if [ ! -f robots.txt ]; then
+            cat > robots.txt << 'ROBOTS_EOF'
+          # AIMO Standard robots.txt
+          # Canonical site: https://standard.aimoaas.com/
+          
+          User-agent: *
+          Allow: /
+          
+          # Disallow dev preview (unreleased content)
+          Disallow: /dev/
+          
+          # Sitemap location
+          Sitemap: https://standard.aimoaas.com/sitemap.xml
+          ROBOTS_EOF
+            # Remove leading whitespace from heredoc
+            sed -i.bak 's/^          //' robots.txt && rm -f robots.txt.bak
+            echo "Created: robots.txt"
+          fi
+          
+          # Copy sitemap from latest version to root if not exists or update
+          LATEST_VERSION=$(cat versions.json 2>/dev/null | grep -o '"version": "[^"]*"' | head -1 | cut -d'"' -f4 || echo "")
+          if [ -n "$LATEST_VERSION" ] && [ -f "${LATEST_VERSION}/sitemap.xml" ]; then
+            cp "${LATEST_VERSION}/sitemap.xml" sitemap.xml
+            echo "Copied: ${LATEST_VERSION}/sitemap.xml -> sitemap.xml"
+          fi
+          
+          # Commit and push if changes
+          git add robots.txt sitemap.xml 2>/dev/null || git add robots.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "SEO files unchanged; nothing to commit."
+          else
+            git commit -m "chore(pages): ensure root SEO files"
+            git push origin gh-pages
+            echo "✓ Root SEO files ensured"
+          fi
+          git checkout -

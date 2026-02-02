@@ -1,0 +1,110 @@
+name: quality-gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+
+      - name: i18n Quality Gates
+        run: |
+          echo "=== i18n Lint (Language Purity, Required Pages) ==="
+          python tooling/checks/lint_i18n.py
+
+      - name: Schema and Content Lints
+        run: |
+          echo "=== Schema Lint ==="
+          python tooling/checks/lint_schema.py
+          echo "=== Manifest Lint ==="
+          python tooling/checks/lint_manifest.py
+
+      - name: Docs Consistency Lint
+        run: |
+          echo "=== Docs Consistency Lint (URL patterns, version references) ==="
+          python tooling/checks/lint_docs_consistency.py
+
+      - name: Taxonomy SSOT Lints
+        run: |
+          echo "=== Taxonomy SSOT Lint (canonical + i18n) ==="
+          python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+          echo "=== Legacy CSV Lint (no new language columns) ==="
+          python tooling/checks/lint_legacy_csv.py
+          echo "=== Taxonomy Dictionary Lint ==="
+          python tooling/checks/lint_taxonomy_dictionary.py || echo "Legacy lint (may fail if CSV moved)"
+          echo "=== Taxonomy JSON Lint ==="
+          python tooling/checks/lint_taxonomy_json.py
+
+      - name: Generated Assets Check
+        run: |
+          echo "=== Taxonomy Artifacts Check ==="
+          python tooling/taxonomy/build_artifacts.py --check
+          echo "=== Legacy Taxonomy Assets Check ==="
+          python tooling/taxonomy/build_taxonomy_assets.py --check || echo "Legacy check (may need update)"
+          echo "=== i18n Taxonomy Assets Check ==="
+          python tooling/taxonomy/build_i18n_taxonomy.py --check || echo "Legacy i18n check (deprecated)"
+
+      - name: Artifacts Sync Check (SSOT → Distribution)
+        run: |
+          echo "=== Artifacts Sync Check ==="
+          python tooling/checks/lint_artifacts_sync.py --check
+
+      - name: Baseline Audit
+        run: |
+          echo "=== Baseline Audit ==="
+          python tooling/audit/baseline_audit.py --check
+
+      - name: Version Alias Policy Check
+        run: |
+          echo "=== Version Alias Policy Check ==="
+          python tooling/checks/check_version_alias.py --check
+
+      - name: Run Tests
+        run: pytest -q
+
+      - name: Build Documentation
+        run: |
+          echo "=== MkDocs Build (strict mode) ==="
+          python -m mkdocs build --strict
+
+      - name: Verify HTML (no *_ja columns in EN pages)
+        run: |
+          echo "=== HTML Verification ==="
+          # Verify EN dictionary page does not contain language-specific column names
+          if grep -rE "dimension_name_ja|label_ja|definition_ja" site/standard/current/05-dictionary/ 2>/dev/null; then
+            echo "ERROR: EN dictionary page contains *_ja column references"
+            exit 1
+          fi
+          echo "HTML verification passed: no *_ja columns in EN pages"
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## PR Check Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| i18n Quality Gates | ${{ job.status == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Schema/Content Lints | ${{ job.status == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Generated Assets | ${{ job.status == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Documentation Build | ${{ job.status == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY

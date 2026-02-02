@@ -1,0 +1,313 @@
+# AIMO Taxonomy - 日本語 ラベルと定義 (SSOT)
+# ==========================================
+# This file is the SINGLE SOURCE OF TRUTH for Japanese translations.
+# Edit this file directly to add/update Japanese labels and definitions.
+#
+# Structure is defined in: data/taxonomy/canonical.yaml
+# Language code: ja (BCP47)
+#
+# After editing, regenerate derived files:
+#   python tooling/taxonomy/build_artifacts.py --version current --langs en ja
+
+language: "ja"
+language_name: "日本語"
+generated_date: "2026-01-31"
+
+dimensions:
+  FS:
+    name: "機能スコープ"
+    codes:
+      FS-001:
+        label: "社内生産性"
+        definition: "社内業務の生産性向上を目的とした利用。"
+      FS-002:
+        label: "顧客向け機能"
+        definition: "顧客に提供する製品・サービス機能に組み込まれたAI。"
+      FS-003:
+        label: "開発支援"
+        definition: "ソフトウェア開発・エンジニアリング作業を支援するAI利用。"
+      FS-004:
+        label: "IT運用"
+        definition: "IT運用・システム管理（監視、インシデント対応等）でのAI利用。"
+      FS-005:
+        label: "セキュリティ運用"
+        definition: "セキュリティ監視・対応（SOC、検知、トリアージ等）でのAI利用。"
+      FS-006:
+        label: "ガバナンス/コンプライアンス"
+        definition: "ガバナンス/コンプライアンス業務（規程、監査証跡等）を支援するAI利用。"
+  DT:
+    name: "データ種別"
+    codes:
+      DT-001:
+        label: "公開情報"
+        definition: "公開されており、公に利用されることを意図したデータ。"
+      DT-002:
+        label: "社内情報"
+        definition: "非公開の社内業務データ。"
+      DT-003:
+        label: "機密情報"
+        definition: "アクセス制限が必要な高機密データ。"
+      DT-004:
+        label: "個人情報"
+        definition: "各国のプライバシー法令等で定義される個人データ。"
+      DT-005:
+        label: "要配慮個人情報"
+        definition: "要配慮個人情報（特別カテゴリ）に該当するデータ。"
+      DT-006:
+        label: "認証情報"
+        definition: "認証情報（パスワード、APIキー等）。"
+      DT-007:
+        label: "ソースコード"
+        definition: "ソースコードおよび関連アーティファクト。"
+      DT-008:
+        label: "顧客データ"
+        definition: "顧客から提供された、または顧客に関連するデータ。"
+      DT-009:
+        label: "運用ログ"
+        definition: "監視・障害対応等に用いる運用/システムログ。"
+      DT-010:
+        label: "セキュリティテレメトリ"
+        definition: "アラート・検知等のセキュリティテレメトリ。"
+  CH:
+    name: "チャネル"
+    codes:
+      CH-001:
+        label: "Web UI"
+        definition: "WebブラウザUI経由の利用。"
+      CH-002:
+        label: "API"
+        definition: "API連携による利用。"
+      CH-003:
+        label: "IDEプラグイン"
+        definition: "IDE/エディタプラグイン経由の利用。"
+      CH-004:
+        label: "チャット連携"
+        definition: "Slack/Teams等のチャット連携経由の利用。"
+      CH-005:
+        label: "デスクトップアプリ"
+        definition: "ネイティブデスクトップアプリ経由の利用。"
+      CH-006:
+        label: "モバイルアプリ"
+        definition: "ネイティブモバイルアプリ経由の利用。"
+      CH-007:
+        label: "メール"
+        definition: "メール経由またはメール起点の自動化で利用。"
+      CH-008:
+        label: "CLI"
+        definition: "CLI経由の利用。"
+  IM:
+    name: "統合形態"
+    codes:
+      IM-001:
+        label: "単体利用"
+        definition: "企業システム統合なしの単体利用。"
+      IM-002:
+        label: "SaaS連携"
+        definition: "SaaSアプリがAI機能を統合して提供。"
+      IM-003:
+        label: "社内アプリ組込み"
+        definition: "社内業務アプリにAIを組み込む。"
+      IM-004:
+        label: "ワークフロー/RPA"
+        definition: "ワークフロー自動化/RPA内でAIを呼び出す。"
+      IM-005:
+        label: "オンプレ/プライベート"
+        definition: "オンプレまたは専用環境でホストするAI。"
+      IM-006:
+        label: "マネージド"
+        definition: "企業統制を伴うマネージドサービスとして利用。"
+      IM-007:
+        label: "シャドー/未管理"
+        definition: "承認された統制外での利用。"
+  RS:
+    name: "リスク面"
+    codes:
+      RS-001:
+        label: "情報漏えい"
+        definition: "意図しないデータ開示のリスク。"
+      RS-002:
+        label: "悪用/攻撃"
+        definition: "悪用（攻撃支援等）に利用されるリスク。"
+      RS-003:
+        label: "法令/規程違反"
+        definition: "法令・規程・契約の違反リスク。"
+      RS-004:
+        label: "知財侵害"
+        definition: "著作権・特許・営業秘密等の侵害リスク。"
+      RS-005:
+        label: "モデル誤用"
+        definition: "モデルの不適切利用・過信によるリスク。"
+      RS-006:
+        label: "偏り/公平性"
+        definition: "不公平・偏りのある結果を生むリスク。"
+      RS-007:
+        label: "安全性"
+        definition: "有害コンテンツや危険な推奨のリスク。"
+      RS-008:
+        label: "第三者リスク"
+        definition: "ベンダー/下請け/モデル提供者に起因するリスク。"
+  OB:
+    name: "成果"
+    codes:
+      OB-001:
+        label: "効率化"
+        definition: "時間・コスト効率の改善。"
+      OB-002:
+        label: "品質向上"
+        definition: "成果物の品質・精度向上。"
+      OB-003:
+        label: "売上貢献"
+        definition: "売上成長への寄与。"
+      OB-004:
+        label: "リスク低減"
+        definition: "運用・セキュリティ・コンプライアンスリスクの低減。"
+      OB-005:
+        label: "新規性/革新"
+        definition: "新たな能力・イノベーションを実現。"
+      OB-006:
+        label: "顧客満足"
+        definition: "顧客満足の向上。"
+      OB-007:
+        label: "従業員体験"
+        definition: "従業員体験の向上。"
+  EV:
+    name: "証跡種別"
+    codes:
+      EV-001:
+        label: "申請記録"
+        definition: "AI利用/サービスの申請と内容説明の証跡。"
+      EV-002:
+        label: "審査/承認記録"
+        definition: "審査・承認が実施されたことの証跡。"
+      EV-003:
+        label: "例外記録"
+        definition: "例外が付与され、管理された証跡。"
+      EV-004:
+        label: "更新/再評価記録"
+        definition: "更新または再評価が行われた証跡。"
+      EV-005:
+        label: "変更管理記録"
+        definition: "変更内容と承認の証跡。"
+      EV-006:
+        label: "完全性証明"
+        definition: "完全性（ハッシュ、署名、WORM等）の証跡。"
+      EV-007:
+        label: "アクセスログ"
+        definition: "アクセス制御とアクセス履歴の証跡。"
+      EV-008:
+        label: "AI資産台帳"
+        definition: "利用するモデル/サービスの台帳記録。"
+      EV-009:
+        label: "リスク評価"
+        definition: "利用/サービスのリスク評価文書。"
+      EV-010:
+        label: "統制マッピング"
+        definition: "外部フレームワークへの統制マッピング証跡。"
+      EV-011:
+        label: "教育/ガイダンス"
+        definition: "利用者に提供した教育/ガイダンスの証跡。"
+      EV-012:
+        label: "監視証跡"
+        definition: "監視・継続的監督の証跡。"
+      EV-013:
+        label: "インシデント記録"
+        definition: "AI利用に関連するインシデント対応の証跡。"
+      EV-014:
+        label: "第三者評価"
+        definition: "ベンダー/第三者評価の証跡。"
+      EV-015:
+        label: "宣誓/サインオフ"
+        definition: "正式な宣誓/サインオフの証跡。"
+  UC:
+    name: "ユースケース分類"
+    codes:
+      UC-001:
+        label: "一般QA"
+        definition: "一般的な質問応答・対話利用。"
+      UC-002:
+        label: "要約"
+        definition: "文書・会議・メッセージの要約。"
+      UC-003:
+        label: "翻訳"
+        definition: "言語間翻訳。"
+      UC-004:
+        label: "文章作成"
+        definition: "メール・文書・レポートの下書き生成。"
+      UC-005:
+        label: "コード生成"
+        definition: "コードやスクリプトの生成。"
+      UC-006:
+        label: "コードレビュー"
+        definition: "コードの問題点・改善点レビュー。"
+      UC-007:
+        label: "データ分析"
+        definition: "構造化データの分析と洞察生成。"
+      UC-008:
+        label: "分類/タグ付け"
+        definition: "コンテンツの分類・タグ付け。"
+      UC-009:
+        label: "検索/RAG"
+        definition: "RAGによる検索・質問応答。"
+      UC-010:
+        label: "エージェント自動化"
+        definition: "自律/半自律エージェントによるアクション実行。"
+      UC-011:
+        label: "セキュリティ一次対応"
+        definition: "セキュリティ運用の一次対応支援。"
+      UC-012:
+        label: "規程/統制マッピング"
+        definition: "統制と証跡をフレームワークへ対応付け。"
+      UC-013:
+        label: "顧客対応"
+        definition: "顧客対応業務支援。"
+      UC-014:
+        label: "営業支援"
+        definition: "営業活動支援。"
+      UC-015:
+        label: "人事支援"
+        definition: "人事プロセス支援。"
+      UC-016:
+        label: "財務分析"
+        definition: "財務分析支援。"
+      UC-017:
+        label: "法務ドラフト"
+        definition: "法務文書ドラフト支援。"
+      UC-018:
+        label: "調達支援"
+        definition: "調達業務支援。"
+      UC-019:
+        label: "ITヘルプデスク"
+        definition: "ITヘルプデスク業務支援。"
+      UC-020:
+        label: "ドキュメント整備"
+        definition: "ドキュメント生成・整備。"
+      UC-021:
+        label: "ナレッジベース"
+        definition: "ナレッジベース構築・検索。"
+      UC-022:
+        label: "監視/可観測性"
+        definition: "監視・可観測性業務支援。"
+      UC-023:
+        label: "インシデント対応"
+        definition: "インシデント対応ワークフロー支援。"
+      UC-024:
+        label: "脅威モデリング"
+        definition: "脅威モデリング支援。"
+      UC-025:
+        label: "統制テスト"
+        definition: "統制テスト・証跡レビュー支援。"
+      UC-026:
+        label: "研修/学習"
+        definition: "研修・学習コンテンツ支援。"
+      UC-027:
+        label: "マーケティング"
+        definition: "マーケティングコンテンツ生成支援。"
+      UC-028:
+        label: "調査/リサーチ"
+        definition: "調査・リサーチ支援。"
+      UC-029:
+        label: "意思決定支援"
+        definition: "推奨による意思決定支援。"
+      UC-030:
+        label: "その他"
+        definition: "上記に含まれないユースケース。"

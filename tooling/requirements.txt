@@ -1,0 +1,4 @@
+# PDF generation dependencies for build_assets.py
+# Install with: pip install -r tooling/requirements.txt
+weasyprint==63.1
+markdown>=3.2

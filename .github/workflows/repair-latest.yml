@@ -1,0 +1,149 @@
+name: repair-latest
+
+# Manual workflow to repair /latest/ alias if it diverges from the correct release
+# This should rarely be needed - only if /latest/ gets out of sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to point /latest/ to (e.g., 0.1.6). Leave empty to auto-detect most recent.'
+        required: false
+        type: string
+      dry_run:
+        description: 'Dry run - only show what would be done'
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+
+      - name: Configure git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Detect or validate version
+        id: version
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          
+          git fetch origin gh-pages:gh-pages 2>/dev/null || {
+            echo "ERROR: Could not fetch gh-pages branch"
+            exit 1
+          }
+          
+          if [ -n "$INPUT_VERSION" ]; then
+            VERSION="$INPUT_VERSION"
+            echo "Using specified version: $VERSION"
+            
+            # Validate it exists
+            if ! git ls-tree --name-only gh-pages | grep -q "^${VERSION}$"; then
+              echo "ERROR: Version $VERSION does not exist in gh-pages"
+              echo ""
+              echo "Available versions:"
+              git ls-tree --name-only gh-pages | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V
+              exit 1
+            fi
+          else
+            # Auto-detect most recent version
+            VERSIONS=$(git ls-tree --name-only gh-pages | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V)
+            
+            if [ -z "$VERSIONS" ]; then
+              echo "ERROR: No version directories found in gh-pages"
+              exit 1
+            fi
+            
+            VERSION=$(echo "$VERSIONS" | tail -1)
+            echo "Auto-detected most recent version: $VERSION"
+          fi
+          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Show current state
+        run: |
+          echo "=== Current mike versions ==="
+          mike list || echo "(No versions configured)"
+          echo ""
+          echo "=== Plan ==="
+          echo "Will set /latest/ to redirect to /${{ steps.version.outputs.version }}/"
+
+      - name: Repair latest alias
+        if: ${{ inputs.dry_run == false }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.version.outputs.version }}"
+          
+          echo "=== Deleting current /latest/ alias ==="
+          mike delete latest --push 2>/dev/null || echo "No existing /latest/ to delete"
+          
+          echo ""
+          echo "=== Recreating /latest/ -> /$VERSION/ ==="
+          mike deploy --push --update-aliases "$VERSION" latest
+          
+          echo ""
+          echo "=== Setting /latest/ as default ==="
+          mike set-default --push latest
+          
+          echo ""
+          echo "=== Verification ==="
+          mike list
+          
+          # Verify
+          ALIAS_INFO=$(mike list | grep "$VERSION")
+          if echo "$ALIAS_INFO" | grep -q "latest"; then
+            echo ""
+            echo "SUCCESS: /latest/ now redirects to /$VERSION/"
+          else
+            echo ""
+            echo "ERROR: Verification failed"
+            exit 1
+          fi
+
+      - name: Dry run notice
+        if: ${{ inputs.dry_run == true }}
+        run: |
+          echo ""
+          echo "=== DRY RUN ==="
+          echo "This was a dry run. No changes were made."
+          echo ""
+          echo "To actually repair, run this workflow again with dry_run=false"
+          echo "The repair would set /latest/ to /${{ steps.version.outputs.version }}/"
+
+      - name: Summary
+        run: |
+          echo "## Repair Latest Alias" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Property | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Target Version | ${{ steps.version.outputs.version }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Dry Run | ${{ inputs.dry_run }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ inputs.dry_run }}" == "true" ]; then
+            echo "**Status:** Dry run - no changes made" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Status:** Repaired /latest/ -> /${{ steps.version.outputs.version }}/" >> $GITHUB_STEP_SUMMARY
+          fi

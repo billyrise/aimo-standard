@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://standard.aimoaas.com/schemas/taxonomy_pack.schema.json",
+  "title": "AIMO Taxonomy Pack Schema",
+  "description": "Schema for AIMO Standard Taxonomy Pack containing dimension definitions and metadata.",
+  "type": "object",
+  "required": ["standard_id", "version", "released_date", "dimensions"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to this schema."
+    },
+    "standard_id": {
+      "type": "string",
+      "description": "Identifier for the standard (e.g., AIMO-STD).",
+      "pattern": "^[A-Z]+-[A-Z]+$"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the taxonomy pack.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "released_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Release date in ISO 8601 format (YYYY-MM-DD)."
+    },
+    "dimensions": {
+      "type": "array",
+      "description": "Array of dimension definitions.",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/dimension"
+      }
+    },
+    "dictionary_csv": {
+      "type": "string",
+      "description": "Path to the associated dictionary CSV file."
+    }
+  },
+  "$defs": {
+    "dimension": {
+      "type": "object",
+      "required": ["dimension_id", "name_en", "name_ja", "description_en", "description_ja", "token_type", "required", "multi_select", "composition_priority"],
+      "additionalProperties": false,
+      "properties": {
+        "dimension_id": {
+          "type": "string",
+          "description": "Two-letter dimension identifier (e.g., FS, UC, DT).",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "name_en": {
+          "type": "string",
+          "description": "English name of the dimension."
+        },
+        "name_ja": {
+          "type": "string",
+          "description": "Japanese name of the dimension."
+        },
+        "description_en": {
+          "type": "string",
+          "description": "English description of the dimension."
+        },
+        "description_ja": {
+          "type": "string",
+          "description": "Japanese description of the dimension."
+        },
+        "token_type": {
+          "type": "string",
+          "enum": ["numeric", "alpha", "alphanumeric"],
+          "description": "Type of token used in codes (e.g., FS-001 uses numeric)."
+        },
+        "required": {
+          "type": "boolean",
+          "description": "Whether at least one code from this dimension is required."
+        },
+        "multi_select": {
+          "type": "boolean",
+          "description": "Whether multiple codes from this dimension can be selected."
+        },
+        "composition_priority": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Priority order when composing code strings (lower = first)."
+        },
+        "examples": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Example codes for this dimension."
+        }
+      }
+    }
+  }
+}

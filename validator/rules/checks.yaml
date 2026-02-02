@@ -1,0 +1,26 @@
+version: "0.1"
+checks:
+  - id: schema_validate_root
+    description: Validate root object against aimo-standard.schema.json
+    required: true
+
+  - id: schema_validate_dictionary
+    description: Validate dictionary object against aimo-dictionary.schema.json
+    required: true
+
+  - id: schema_validate_ev
+    description: Validate each evidence record against aimo-ev.schema.json
+    required: true
+
+  - id: code_format_check
+    description: Validate AIMO code format matches pattern ^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+    required: true
+
+  - id: taxonomy_version_present
+    description: Check that taxonomy_version is specified (recommended)
+    required: false
+
+  - id: required_dimensions_present
+    description: Check that required dimensions (FS, UC, DT, CH, IM, RS, EV) have at least one code
+    required: false
+    notes: Full dimension validation is optional; schema patterns provide basic format check
