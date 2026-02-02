@@ -32,7 +32,7 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 
     ```bash
     # 特定バージョンの全アセットをダウンロード
-    VERSION=v0.0.2
+    VERSION=v0.0.3
     BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
     curl -LO "${BASE_URL}/trust_package.pdf"
@@ -135,7 +135,7 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 
 ```bash
 # GitHub CLI でリリースアセットをダウンロード
-VERSION=v0.0.2
+VERSION=v0.0.3
 gh release download "$VERSION" --repo billyrise/aimo-standard
 
 # 各アセットの attestation を検証
