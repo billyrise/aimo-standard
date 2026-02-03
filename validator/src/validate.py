@@ -409,7 +409,7 @@ def main():
         "--format",
         choices=["default", "json", "sarif"],
         default="default",
-        help="Output format: default (human), json (machine), sarif (Code Scanning)",
+        help="Output format: default (human), json (machine-readable for CI), sarif (GitHub Code Scanning). Exit: 0=pass, 1=fail, 2=usage error.",
     )
     parser.add_argument(
         "--validate-profiles",
