@@ -8,7 +8,7 @@ Esta sección define las plantillas de Paquetes de Evidencia y su uso. Un Paquet
 
 ## Espacio de nombres: tipos de documento Evidence Pack (EP) vs Taxonomy Evidence Type (EV)
 
-> **Importante**: **EP-01..EP-07** identifican *tipos de documento* (tipos de archivo del Evidence Pack). **EV-001, EV-002, …** en la [Taxonomía](./03-taxonomy.md) identifican *tipos de evento/evidencia* (Registro de Solicitud, Registro de Revisión/Aprobación, etc.). No mezcle códigos: use EP para estructura del pack y EV para clasificación de evidencia del ciclo de vida.
+> **Importante**: **EP-01..EP-07** identifican *tipos de documento* (tipos de archivo del Evidence Pack). **LG-001, LG-002, …** en la [Taxonomía](./03-taxonomy.md) identifican *tipos de log/registro* (Registro de Solicitud, Registro de Revisión/Aprobación, etc.). **EV-** reservado para ID de artefactos Evidence. Use EP para estructura del pack y LG para clasificación de evidencia del ciclo de vida.
 
 ## Principio Clave: Gestión de Índice y Diff
 
@@ -22,7 +22,7 @@ Un Paquete de Evidencia sirve como índice vinculando sistemas de IA a sus artef
 
 ## Conjunto Mínimo de Evidencia MVP (EP-01 a EP-07)
 
-Los siguientes siete **tipos de documento Evidence Pack** (EP) forman el **conjunto mínimo viable** para demostrar gobernanza de IA. Cada uno es una plantilla de documento; los códigos **EV** de taxonomía (Registro de Solicitud, Revisión/Aprobación, etc.) se usan en el bundle y en `codes.EV` para clasificar evidencia de *eventos*.
+Los siguientes siete **tipos de documento Evidence Pack** (EP) forman el **conjunto mínimo viable** para demostrar gobernanza de IA. Cada uno es una plantilla de documento; los códigos **LG** de taxonomía (Registro de Solicitud, Revisión/Aprobación, etc.) se usan en el bundle y en `codes.LG` para clasificar evidencia de *log/registro*.
 
 | ID | Tipo de documento | Propósito |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Cada Paquete de Evidencia DEBE incluir un archivo de manifiesto que contenga:
 
 ### Códigos AIMO (8 Dimensiones)
 
-Cada Paquete de Evidencia DEBE incluir códigos de las 8 dimensiones. La dimensión **EV** lista los tipos de evidencia de *taxonomía* (p. ej. Registro de Solicitud, Revisión/Aprobación) aplicables a este pack—no códigos de tipo de documento. El tipo de documento viene dado por `evidence_files[].file_id` (EP-01..EP-07).
+Cada Paquete de Evidencia DEBE incluir códigos de las 8 dimensiones. La dimensión **LG** lista los tipos de log/registro de *taxonomía* (p. ej. Registro de Solicitud, Revisión/Aprobación) aplicables a este pack—no códigos de tipo de documento. El tipo de documento viene dado por `evidence_files[].file_id` (EP-01..EP-07).
 
 ```json
 {
@@ -63,14 +63,14 @@ Cada Paquete de Evidencia DEBE incluir códigos de las 8 dimensiones. La dimensi
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
+    "LG": ["LG-001", "LG-002", "LG-008", "LG-009"]
   }
 }
 ```
 
 ### Lista de Archivos de Evidencia
 
-Cada entrada identifica un documento del pack por **file_id** (EP-01..EP-07). Opcionalmente **ev_codes** puede listar códigos EV de taxonomía (EV-xxx) que el documento soporta.
+Cada entrada identifica un documento del pack por **file_id** (EP-01..EP-07). Opcionalmente **ev_codes** puede listar códigos LG de taxonomía (LG-xxx) que el documento soporta.
 
 ```json
 {
@@ -126,7 +126,7 @@ Cada plantilla de evidencia incluye:
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Data Leakage |
 | **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 ```
 
 ## Descargas

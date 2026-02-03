@@ -159,7 +159,7 @@ Jedes EV-Template enthält eine 8-Dimensionen-Codes-Tabelle:
 | **IM** | `IM-002` | SaaS-integriert |
 | **RS** | `RS-001`, `RS-003` | Datenleck, Compliance-Verstoß |
 | **OB** | `OB-001` | Effizienz |
-| **EV** | `EV-001`, `EV-002` | Antragsdatensatz, Prüfungs-/Genehmigungsdatensatz |
+| **LG** | `LG-001`, `LG-002` | Antragsdatensatz, Prüfungs-/Genehmigungsdatensatz |
 ```
 
 ### Im Validator

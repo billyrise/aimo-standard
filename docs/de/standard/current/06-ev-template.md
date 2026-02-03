@@ -8,7 +8,7 @@ Dieser Abschnitt definiert die Evidence Pack-Templates und deren Verwendung. Ein
 
 ## Namensraum: Evidence Pack-Dokumenttypen (EP) vs Taxonomy Evidence Type (EV)
 
-> **Wichtig**: **EP-01..EP-07** bezeichnen *Dokumenttypen* (Evidence Pack-Dateitypen). **EV-001, EV-002, …** in der [Taxonomie](./03-taxonomy.md) bezeichnen *Ereignis-/Evidenztypen* (Antragsdatensatz, Prüf-/Genehmigungsdatensatz usw.). Codes nicht mischen: EP für Pack-Struktur, EV für Lebenszyklus-Evidenzklassifikation.
+> **Wichtig**: **EP-01..EP-07** bezeichnen *Dokumenttypen* (Evidence Pack-Dateitypen). **LG-001, LG-002, …** in der [Taxonomie](./03-taxonomy.md) bezeichnen *Log-/Registrierungstypen* (Antragsdatensatz, Prüf-/Genehmigungsdatensatz usw.). **EV-** reserviert für Evidence-Artefakt-IDs. EP für Pack-Struktur, LG für Lebenszyklus-Evidenzklassifikation.
 
 ## Grundprinzip: Index- und Diff-Management
 
@@ -22,7 +22,7 @@ Ein Evidence Pack dient als Index, der KI-Systeme mit ihren Governance-Artefakte
 
 ## MVP Evidence Set (EP-01 bis EP-07)
 
-Die folgenden sieben **Evidence Pack-Dokumenttypen** (EP) bilden das **minimale viable Set** zum Nachweis von KI-Governance. Jeder ist ein Dokumenten-Template; Taxonomy-**EV**-Codes (Antragsdatensatz, Prüf/Genehmigung usw.) werden an anderer Stelle im Bundle und in `codes.EV` zur Klassifikation von *Ereignis*-Evidenz verwendet.
+Die folgenden sieben **Evidence Pack-Dokumenttypen** (EP) bilden das **minimale viable Set** zum Nachweis von KI-Governance. Jeder ist ein Dokumenten-Template; Taxonomy-**LG**-Codes (Antragsdatensatz, Prüf/Genehmigung usw.) werden an anderer Stelle im Bundle und in `codes.LG` zur Klassifikation von *Log-/Registrierung*-Evidenz verwendet.
 
 | ID | Dokumenttyp | Zweck |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Jedes Evidence Pack MUSS eine Manifest-Datei enthalten mit:
 
 ### AIMO Codes (8 Dimensionen)
 
-Jedes Evidence Pack MUSS Codes aus allen 8 Dimensionen enthalten. Die Dimension **EV** listet *Taxonomy*-Evidenztypen (z. B. Antragsdatensatz, Prüf/Genehmigung), die auf dieses Pack zutreffen—nicht Dokumenttyp-Codes. Der Dokumenttyp wird durch `evidence_files[].file_id` (EP-01..EP-07) angegeben.
+Jedes Evidence Pack MUSS Codes aus allen 8 Dimensionen enthalten. Die Dimension **LG** listet *Taxonomy*-Log-/Registrierungstypen (z. B. Antragsdatensatz, Prüf/Genehmigung), die auf dieses Pack zutreffen—nicht Dokumenttyp-Codes. Der Dokumenttyp wird durch `evidence_files[].file_id` (EP-01..EP-07) angegeben.
 
 ```json
 {
@@ -63,14 +63,14 @@ Jedes Evidence Pack MUSS Codes aus allen 8 Dimensionen enthalten. Die Dimension 
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
+    "LG": ["LG-001", "LG-002", "LG-008", "LG-009"]
   }
 }
 ```
 
 ### Evidence-Dateiliste
 
-Jeder Eintrag identifiziert ein Dokument im Pack durch **file_id** (EP-01..EP-07). Optional kann **ev_codes** Taxonomy-EV-Codes (EV-xxx) auflisten, die das Dokument unterstützt.
+Jeder Eintrag identifiziert ein Dokument im Pack durch **file_id** (EP-01..EP-07). Optional kann **ev_codes** Taxonomy-LG-Codes (LG-xxx) auflisten, die das Dokument unterstützt.
 
 ```json
 {
@@ -126,7 +126,7 @@ Jedes Evidence-Template enthält:
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Datenleck |
 | **OB** | `OB-001` | Effizienz |
-| **EV** | `EV-001`, `EV-002` | Antragsdatensatz, Prüf-/Genehmigungsdatensatz |
+| **LG** | `LG-001`, `LG-002` | Antragsdatensatz, Prüf-/Genehmigungsdatensatz |
 ```
 
 ## Downloads

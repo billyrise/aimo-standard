@@ -26,7 +26,7 @@ The validator checks that all codes in the `codes` object match the pattern:
 ```
 
 Examples of valid codes:
-- `FS-001`, `UC-015`, `DT-004`, `CH-003`, `IM-002`, `RS-008`, `OB-007`, `EV-001`
+- `FS-001`, `UC-015`, `DT-004`, `CH-003`, `IM-002`, `RS-008`, `OB-007`, `LG-001`
 
 Examples of invalid codes:
 - `FS-1` (wrong token format)

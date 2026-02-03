@@ -51,16 +51,16 @@ AIMO verwendet 8 Dimensionen zur Klassifizierung von KI-Anwendungsfällen. Jede 
 | **IM** | Integrationsmodus | 7 | Wie KI mit Unternehmenssystemen verbunden ist |
 | **RS** | Risikooberfläche | 8 | Welche Risiken sind verbunden |
 | **OB** | Ergebnis / Nutzen | 7 | Welcher Nutzen wird erwartet |
-| **EV** | Evidence-Typ | 15 | Welches Evidence ist erforderlich |
+| **LG** | Log-/Registrierungstyp | 15 | Welches Log/Registrierung erforderlich ist |
 
-**Gesamt: 91 Codes über 8 Dimensionen**
+**Gesamt: 91 Codes über 8 Dimensionen**（**EV-** reserviert für Evidence-Artefakt-IDs; Taxonomie-Dimension Log/Registrierung: **LG-**.)
 
 ### Nutzungsregeln
 
 | Dimension | Auswahl | Audit-Implikation |
 | --- | --- | --- |
 | FS, IM | Genau 1 | Primäre Klassifizierung für Verantwortungszuweisung |
-| UC, DT, CH, RS, EV | 1 oder mehr | Vollständige Aufzählung für Risikoabdeckung erforderlich |
+| UC, DT, CH, RS, LG | 1 oder mehr | Vollständige Aufzählung für Risikoabdeckung erforderlich |
 | OB | 0 oder mehr | Optional; dokumentiert erwarteten Geschäftswert |
 
 ## Dimensionsdefinitionen
@@ -170,33 +170,33 @@ Kategorisiert die erwarteten Ergebnisse oder Vorteile der KI-Nutzung. **Optional
 | OB-006 | Kundenzufriedenheit | Verbessert Kundenzufriedenheit. |
 | OB-007 | Mitarbeitererfahrung | Verbessert Mitarbeitererfahrung. |
 
-### EV: Evidence-Typ
+### LG: Log-/Registrierungstyp
 
-Kategorisiert die erforderlichen oder gesammelten Evidence-Typen. **Wählen Sie eine oder mehrere.**
+Kategorisiert die erforderlichen oder gesammelten Log-/Registrierungstypen. **Wählen Sie eine oder mehrere.**（EV- reserviert für Evidence-Artefakt-IDs.)
 
 | Code | Label | Definition |
 | --- | --- | --- |
-| EV-001 | Antragsdatensatz | Evidence, dass eine KI-Nutzung/ein Service beantragt und beschrieben wurde. |
-| EV-002 | Prüfungs-/Genehmigungsdatensatz | Evidence, dass eine Prüfung/Genehmigung durchgeführt wurde. |
-| EV-003 | Ausnahmedatensatz | Evidence, dass eine Ausnahme gewährt und verfolgt wurde. |
-| EV-004 | Verlängerungs-/Neubewertungsdatensatz | Evidence, dass Verlängerung oder Neubewertung erfolgte. |
-| EV-005 | Änderungsprotokolleintrag | Evidence von Änderungen und deren Genehmigungen. |
-| EV-006 | Integritätsnachweis | Evidence der Integrität (Hash, Signatur, WORM). |
-| EV-007 | Zugriffsprotokoll | Evidence von Zugriffskontrolle und Zugriffshistorie. |
-| EV-008 | Modell-/Service-Inventar | Inventardatensatz der verwendeten Modelle/Services. |
-| EV-009 | Risikobewertung | Dokumentierte Risikobewertung für die Nutzung/den Service. |
-| EV-010 | Kontrollzuordnung | Kontrollzuordnungs-Evidence zu externen Frameworks. |
-| EV-011 | Schulung/Anleitung | Evidence von Schulung oder Anleitung für Benutzer. |
-| EV-012 | Monitoring-Evidence | Evidence von Monitoring und laufender Aufsicht. |
-| EV-013 | Incident-Datensatz | Evidence von Incident-Handling im Zusammenhang mit KI-Nutzung. |
-| EV-014 | Drittanbieter-Bewertung | Evidence von Anbieter- oder Drittanbieter-Bewertung. |
-| EV-015 | Attestierung/Abzeichnung | Formelle Attestierung oder Abzeichnungsdatensatz. |
+| LG-001 | Antragsdatensatz | Evidence, dass eine KI-Nutzung/ein Service beantragt und beschrieben wurde. |
+| LG-002 | Prüfungs-/Genehmigungsdatensatz | Evidence, dass eine Prüfung/Genehmigung durchgeführt wurde. |
+| LG-003 | Ausnahmedatensatz | Evidence, dass eine Ausnahme gewährt und verfolgt wurde. |
+| LG-004 | Verlängerungs-/Neubewertungsdatensatz | Evidence, dass Verlängerung oder Neubewertung erfolgte. |
+| LG-005 | Änderungsprotokolleintrag | Evidence von Änderungen und deren Genehmigungen. |
+| LG-006 | Integritätsnachweis | Evidence der Integrität (Hash, Signatur, WORM). |
+| LG-007 | Zugriffsprotokoll | Evidence von Zugriffskontrolle und Zugriffshistorie. |
+| LG-008 | Modell-/Service-Inventar | Inventardatensatz der verwendeten Modelle/Services. |
+| LG-009 | Risikobewertung | Dokumentierte Risikobewertung für die Nutzung/den Service. |
+| LG-010 | Kontrollzuordnung | Kontrollzuordnungs-Evidence zu externen Frameworks. |
+| LG-011 | Schulung/Anleitung | Evidence von Schulung oder Anleitung für Benutzer. |
+| LG-012 | Monitoring-Evidence | Evidence von Monitoring und laufender Aufsicht. |
+| LG-013 | Incident-Datensatz | Evidence von Incident-Handling im Zusammenhang mit KI-Nutzung. |
+| LG-014 | Drittanbieter-Bewertung | Evidence von Anbieter- oder Drittanbieter-Bewertung. |
+| LG-015 | Attestierung/Abzeichnung | Formelle Attestierung oder Abzeichnungsdatensatz. |
 
 ## Verwendung
 
 ### Beziehung zu Evidence
 
-Jedes Evidence (EV)-Dokument referenziert Codes aus mehreren Dimensionen, um das dokumentierte KI-System oder den Anwendungsfall zu klassifizieren. Die 8-Dimensionen-Klassifizierung ermöglicht:
+Jedes Evidence-Dokument referenziert Codes aus mehreren Dimensionen, um das dokumentierte KI-System oder den Anwendungsfall zu klassifizieren. Die 8-Dimensionen-Klassifizierung ermöglicht:
 
 - **Konsistente Kategorisierung** in der gesamten Organisation
 - **Risikobasierte Filterung** nach Dimensionswerten
@@ -216,7 +216,7 @@ CH: CH-001 (Web-UI)
 IM: IM-002 (SaaS-integriert)
 RS: RS-001 (Datenleck), RS-003 (Compliance-Verstoß)
 OB: OB-001 (Effizienz)
-EV: EV-001 (Antragsdatensatz), EV-002 (Prüfungs-/Genehmigungsdatensatz)
+LG: LG-001 (Antragsdatensatz), LG-002 (Prüfungs-/Genehmigungsdatensatz)
 ```
 
 ## SSOT-Referenz

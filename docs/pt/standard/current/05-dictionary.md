@@ -159,7 +159,7 @@ Cada template EV inclui uma tabela de códigos de 8 dimensões:
 | **IM** | `IM-002` | SaaS Integrado |
 | **RS** | `RS-001`, `RS-003` | Vazamento de Dados, Violação de Conformidade |
 | **OB** | `OB-001` | Eficiência |
-| **EV** | `EV-001`, `EV-002` | Registro de Solicitação, Registro de Revisão/Aprovação |
+| **LG** | `LG-001`, `LG-002` | Registro de Solicitação, Registro de Revisão/Aprovação |
 ```
 
 ### No Validador

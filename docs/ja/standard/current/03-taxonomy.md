@@ -51,16 +51,18 @@ AIMOはAIユースケースを分類するために8つの次元を使用しま�
 | **IM** | Integration Mode | 統合形態 | 7 | AIがエンタープライズシステムにどう接続するか |
 | **RS** | Risk Surface | リスク面 | 8 | どのリスクが関連するか |
 | **OB** | Outcome / Benefit | 成果 | 7 | どのベネフィットが期待されるか |
-| **EV** | Evidence Type | 証跡種別 | 15 | どの証跡が必要か |
+| **LG** | Log/Event Type | ログ/記録種別 | 15 | どのログ/記録が必要か |
 
 **合計: 8次元にわたる91コード**
+
+[IDポリシー / 名前空間](./04b-id-policy-namespace.md)を参照：**EV-** は Evidence *成果物*ID 専用。タクソノミーのログ/記録次元は **LG-**（例：LG-001 … LG-015）を使用。
 
 ### 使用ルール
 
 | 次元 | 選択 | 監査上の意味 |
 | --- | --- | --- |
 | FS, IM | 正確に1つ | 責任割当のための主要分類 |
-| UC, DT, CH, RS, EV | 1つ以上 | リスクカバレッジのための完全列挙が必要 |
+| UC, DT, CH, RS, LG | 1つ以上 | リスクカバレッジのための完全列挙が必要 |
 | OB | 0個以上 | 任意；期待されるビジネス価値を文書化 |
 
 ## 次元の定義
@@ -170,33 +172,33 @@ AI利用から期待される成果・ベネフィット。**任意；0個以上
 | OB-006 | Customer Satisfaction | 顧客満足 | 顧客満足の向上。 |
 | OB-007 | Employee Experience | 従業員体験 | 従業員体験の向上。 |
 
-### EV: Evidence Type / 証跡種別
+### LG: Log/Event Type / ログ/記録種別
 
-必要な/収集する証跡の種類。**1つ以上を選択。**
+必要な/収集するログ/記録の種類。**1つ以上を選択。**（[IDポリシー / 名前空間](./04b-id-policy-namespace.md)参照：**EV-** は Evidence *成果物*ID 専用。）
 
 | コード | ラベル（EN） | ラベル（JA） | 定義 |
 | --- | --- | --- | --- |
-| EV-001 | Request Record | 申請記録 | AI利用/サービスの申請と内容説明の証跡。 |
-| EV-002 | Review/Approval Record | 審査/承認記録 | 審査・承認が実施されたことの証跡。 |
-| EV-003 | Exception Record | 例外記録 | 例外が付与され、管理された証跡。 |
-| EV-004 | Renewal/Re-evaluation Record | 更新/再評価記録 | 更新または再評価が行われた証跡。 |
-| EV-005 | Change Log Entry | 変更管理記録 | 変更内容と承認の証跡。 |
-| EV-006 | Integrity Proof | 完全性証明 | 完全性（ハッシュ、署名、WORM等）の証跡。 |
-| EV-007 | Access Log | アクセスログ | アクセス制御とアクセス履歴の証跡。 |
-| EV-008 | Model/Service Inventory | AI資産台帳 | 利用するモデル/サービスの台帳記録。 |
-| EV-009 | Risk Assessment | リスク評価 | 利用/サービスのリスク評価文書。 |
-| EV-010 | Control Mapping | 統制マッピング | 外部フレームワークへの統制マッピング証跡。 |
-| EV-011 | Training/Guidance | 教育/ガイダンス | 利用者に提供した教育/ガイダンスの証跡。 |
-| EV-012 | Monitoring Evidence | 監視証跡 | 監視・継続的監督の証跡。 |
-| EV-013 | Incident Record | インシデント記録 | AI利用に関連するインシデント対応の証跡。 |
-| EV-014 | Third-party Assessment | 第三者評価 | ベンダー/第三者評価の証跡。 |
-| EV-015 | Attestation/Sign-off | 宣誓/サインオフ | 正式な宣誓/サインオフの証跡。 |
+| LG-001 | Request Record | 申請記録 | AI利用/サービスの申請と内容説明の証跡。 |
+| LG-002 | Review/Approval Record | 審査/承認記録 | 審査・承認が実施されたことの証跡。 |
+| LG-003 | Exception Record | 例外記録 | 例外が付与され、管理された証跡。 |
+| LG-004 | Renewal/Re-evaluation Record | 更新/再評価記録 | 更新または再評価が行われた証跡。 |
+| LG-005 | Change Log Entry | 変更管理記録 | 変更内容と承認の証跡。 |
+| LG-006 | Integrity Proof | 完全性証明 | 完全性（ハッシュ、署名、WORM等）の証跡。 |
+| LG-007 | Access Log | アクセスログ | アクセス制御とアクセス履歴の証跡。 |
+| LG-008 | Model/Service Inventory | AI資産台帳 | 利用するモデル/サービスの台帳記録。 |
+| LG-009 | Risk Assessment | リスク評価 | 利用/サービスのリスク評価文書。 |
+| LG-010 | Control Mapping | 統制マッピング | 外部フレームワークへの統制マッピング証跡。 |
+| LG-011 | Training/Guidance | 教育/ガイダンス | 利用者に提供した教育/ガイダンスの証跡。 |
+| LG-012 | Monitoring Evidence | 監視証跡 | 監視・継続的監督の証跡。 |
+| LG-013 | Incident Record | インシデント記録 | AI利用に関連するインシデント対応の証跡。 |
+| LG-014 | Third-party Assessment | 第三者評価 | ベンダー/第三者評価の証跡。 |
+| LG-015 | Attestation/Sign-off | 宣誓/サインオフ | 正式な宣誓/サインオフの証跡。 |
 
 ## 使用方法
 
 ### 証跡との関係
 
-各エビデンス（EV）ドキュメントは、文書化されるAIシステムまたはユースケースを分類するために複数の次元からコードを参照します。8次元分類により以下が可能になります：
+各証跡ドキュメントは、文書化されるAIシステムまたはユースケースを分類するために複数の次元からコードを参照します。8次元分類により以下が可能になります：
 
 - 組織全体での**一貫した分類**
 - 次元値による**リスクベースのフィルタリング**
@@ -216,7 +218,7 @@ CH: CH-001（Web UI）
 IM: IM-002（SaaS連携）
 RS: RS-001（情報漏えい）, RS-003（法令/規程違反）
 OB: OB-001（効率化）
-EV: EV-001（申請記録）, EV-002（審査/承認記録）
+LG: LG-001（申請記録）, LG-002（審査/承認記録）
 ```
 
 ## SSOT参照

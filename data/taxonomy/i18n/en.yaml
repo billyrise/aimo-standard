@@ -70,54 +70,6 @@ dimensions:
       DT-010:
         label: "Security Telemetry"
         definition: "Security telemetry such as alerts and detections."
-  EV:
-    name: "Evidence Type"
-    codes:
-      EV-001:
-        label: "Request Record"
-        definition: "Evidence that an AI use/service was requested and described."
-      EV-002:
-        label: "Review/Approval Record"
-        definition: "Evidence that a review/approval was performed."
-      EV-003:
-        label: "Exception Record"
-        definition: "Evidence that an exception was granted and tracked."
-      EV-004:
-        label: "Renewal/Re-evaluation Record"
-        definition: "Evidence that renewal or re-evaluation occurred."
-      EV-005:
-        label: "Change Log Entry"
-        definition: "Evidence of changes and their approvals."
-      EV-006:
-        label: "Integrity Proof"
-        definition: "Evidence of integrity (hash, signature, WORM)."
-      EV-007:
-        label: "Access Log"
-        definition: "Evidence of access control and access history."
-      EV-008:
-        label: "Model/Service Inventory"
-        definition: "Inventory record of models/services used."
-      EV-009:
-        label: "Risk Assessment"
-        definition: "Documented risk assessment for the use/service."
-      EV-010:
-        label: "Control Mapping"
-        definition: "Control mapping evidence to external frameworks."
-      EV-011:
-        label: "Training/Guidance"
-        definition: "Evidence of training or guidance provided to users."
-      EV-012:
-        label: "Monitoring Evidence"
-        definition: "Evidence of monitoring and ongoing oversight."
-      EV-013:
-        label: "Incident Record"
-        definition: "Evidence of incident handling related to AI use."
-      EV-014:
-        label: "Third-party Assessment"
-        definition: "Evidence of vendor or third-party assessment."
-      EV-015:
-        label: "Attestation/Sign-off"
-        definition: "Formal attestation or sign-off record."
   FS:
     name: "Functional Scope"
     codes:
@@ -163,6 +115,54 @@ dimensions:
       IM-007:
         label: "Shadow / Unmanaged"
         definition: "Use outside of approved governance controls."
+  LG:
+    name: "Log/Event Type"
+    codes:
+      LG-001:
+        label: "Request Record"
+        definition: "Evidence that an AI use/service was requested and described."
+      LG-002:
+        label: "Review/Approval Record"
+        definition: "Evidence that a review/approval was performed."
+      LG-003:
+        label: "Exception Record"
+        definition: "Evidence that an exception was granted and tracked."
+      LG-004:
+        label: "Renewal/Re-evaluation Record"
+        definition: "Evidence that renewal or re-evaluation occurred."
+      LG-005:
+        label: "Change Log Entry"
+        definition: "Evidence of changes and their approvals."
+      LG-006:
+        label: "Integrity Proof"
+        definition: "Evidence of integrity (hash, signature, WORM)."
+      LG-007:
+        label: "Access Log"
+        definition: "Evidence of access control and access history."
+      LG-008:
+        label: "Model/Service Inventory"
+        definition: "Inventory record of models/services used."
+      LG-009:
+        label: "Risk Assessment"
+        definition: "Documented risk assessment for the use/service."
+      LG-010:
+        label: "Control Mapping"
+        definition: "Control mapping evidence to external frameworks."
+      LG-011:
+        label: "Training/Guidance"
+        definition: "Evidence of training or guidance provided to users."
+      LG-012:
+        label: "Monitoring Evidence"
+        definition: "Evidence of monitoring and ongoing oversight."
+      LG-013:
+        label: "Incident Record"
+        definition: "Evidence of incident handling related to AI use."
+      LG-014:
+        label: "Third-party Assessment"
+        definition: "Evidence of vendor or third-party assessment."
+      LG-015:
+        label: "Attestation/Sign-off"
+        definition: "Formal attestation or sign-off record."
   OB:
     name: "Outcome / Benefit"
     codes:

@@ -152,114 +152,6 @@ dimensions:
         scope_notes: "High integrity expectations."
         examples:
           - "edr alerts"
-  - id: EV
-    codes:
-      - code: EV-001
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Lifecycle: request."
-        examples:
-          - "request form"
-      - code: EV-002
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Lifecycle: review/approval."
-        examples:
-          - "approval log"
-      - code: EV-003
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Lifecycle: exception."
-        examples:
-          - "exception memo"
-      - code: EV-004
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Lifecycle: renewal."
-        examples:
-          - "renewal checklist"
-      - code: EV-005
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Lifecycle: change log."
-        examples:
-          - "change ticket"
-      - code: EV-006
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Supports evidence readiness."
-        examples:
-          - "sha256"
-          - "signature"
-      - code: EV-007
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Supports accountability and SoD."
-        examples:
-          - "audit log"
-      - code: EV-008
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Supports governance baseline."
-        examples:
-          - "inventory"
-      - code: EV-009
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "May reference RS codes."
-        examples:
-          - "risk assessment"
-      - code: EV-010
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Informative mapping only."
-        examples:
-          - "coverage mapping"
-      - code: EV-011
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Supports adoption and safe use."
-        examples:
-          - "training"
-      - code: EV-012
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Includes periodic review logs."
-        examples:
-          - "monitoring log"
-      - code: EV-013
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Link to IR processes."
-        examples:
-          - "incident ticket"
-      - code: EV-014
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Supports third-party risk management."
-        examples:
-          - "vendor assessment"
-      - code: EV-015
-        status: active
-        introduced_in: "0.1.0"
-        backward_compatible: true
-        scope_notes: "Used where required by policy."
-        examples:
-          - "sign-off"
   - id: FS
     codes:
       - code: FS-001
@@ -363,6 +255,114 @@ dimensions:
         scope_notes: "Track as shadow AI."
         examples:
           - "personal SaaS"
+  - id: LG
+    codes:
+      - code: LG-001
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: request."
+        examples:
+          - "request form"
+      - code: LG-002
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: review/approval."
+        examples:
+          - "approval log"
+      - code: LG-003
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: exception."
+        examples:
+          - "exception memo"
+      - code: LG-004
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: renewal."
+        examples:
+          - "renewal checklist"
+      - code: LG-005
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Lifecycle: change log."
+        examples:
+          - "change ticket"
+      - code: LG-006
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports evidence readiness."
+        examples:
+          - "sha256"
+          - "signature"
+      - code: LG-007
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports accountability and SoD."
+        examples:
+          - "audit log"
+      - code: LG-008
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports governance baseline."
+        examples:
+          - "inventory"
+      - code: LG-009
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "May reference RS codes."
+        examples:
+          - "risk assessment"
+      - code: LG-010
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Informative mapping only."
+        examples:
+          - "coverage mapping"
+      - code: LG-011
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports adoption and safe use."
+        examples:
+          - "training"
+      - code: LG-012
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Includes periodic review logs."
+        examples:
+          - "monitoring log"
+      - code: LG-013
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Link to IR processes."
+        examples:
+          - "incident ticket"
+      - code: LG-014
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Supports third-party risk management."
+        examples:
+          - "vendor assessment"
+      - code: LG-015
+        status: active
+        introduced_in: "0.1.0"
+        backward_compatible: true
+        scope_notes: "Used where required by policy."
+        examples:
+          - "sign-off"
   - id: OB
     codes:
       - code: OB-001

@@ -17,21 +17,6 @@ DT-007,DT,データ種別,ソースコード,ソースコードおよび関連�
 DT-008,DT,データ種別,顧客データ,顧客から提供された、または顧客に関連するデータ。,active,0.1.0,May include PII and contractual constraints.,tickets|usage logs
 DT-009,DT,データ種別,運用ログ,監視・障害対応等に用いる運用/システムログ。,active,0.1.0,May include personal data; classify carefully.,syslog|audit log
 DT-010,DT,データ種別,セキュリティテレメトリ,アラート・検知等のセキュリティテレメトリ。,active,0.1.0,High integrity expectations.,edr alerts
-EV-001,EV,証跡種別,申請記録,AI利用/サービスの申請と内容説明の証跡。,active,0.1.0,Lifecycle: request.,request form
-EV-002,EV,証跡種別,審査/承認記録,審査・承認が実施されたことの証跡。,active,0.1.0,Lifecycle: review/approval.,approval log
-EV-003,EV,証跡種別,例外記録,例外が付与され、管理された証跡。,active,0.1.0,Lifecycle: exception.,exception memo
-EV-004,EV,証跡種別,更新/再評価記録,更新または再評価が行われた証跡。,active,0.1.0,Lifecycle: renewal.,renewal checklist
-EV-005,EV,証跡種別,変更管理記録,変更内容と承認の証跡。,active,0.1.0,Lifecycle: change log.,change ticket
-EV-006,EV,証跡種別,完全性証明,完全性（ハッシュ、署名、WORM等）の証跡。,active,0.1.0,Supports evidence readiness.,sha256|signature
-EV-007,EV,証跡種別,アクセスログ,アクセス制御とアクセス履歴の証跡。,active,0.1.0,Supports accountability and SoD.,audit log
-EV-008,EV,証跡種別,AI資産台帳,利用するモデル/サービスの台帳記録。,active,0.1.0,Supports governance baseline.,inventory
-EV-009,EV,証跡種別,リスク評価,利用/サービスのリスク評価文書。,active,0.1.0,May reference RS codes.,risk assessment
-EV-010,EV,証跡種別,統制マッピング,外部フレームワークへの統制マッピング証跡。,active,0.1.0,Informative mapping only.,coverage mapping
-EV-011,EV,証跡種別,教育/ガイダンス,利用者に提供した教育/ガイダンスの証跡。,active,0.1.0,Supports adoption and safe use.,training
-EV-012,EV,証跡種別,監視証跡,監視・継続的監督の証跡。,active,0.1.0,Includes periodic review logs.,monitoring log
-EV-013,EV,証跡種別,インシデント記録,AI利用に関連するインシデント対応の証跡。,active,0.1.0,Link to IR processes.,incident ticket
-EV-014,EV,証跡種別,第三者評価,ベンダー/第三者評価の証跡。,active,0.1.0,Supports third-party risk management.,vendor assessment
-EV-015,EV,証跡種別,宣誓/サインオフ,正式な宣誓/サインオフの証跡。,active,0.1.0,Used where required by policy.,sign-off
 FS-001,FS,機能スコープ,社内生産性,社内業務の生産性向上を目的とした利用。,active,0.1.0,Exclude customer-facing core functions.,microsoft 365 copilot|notion ai
 FS-002,FS,機能スコープ,顧客向け機能,顧客に提供する製品・サービス機能に組み込まれたAI。,active,0.1.0,Includes AI-as-a-feature.,chatbot|recommendation
 FS-003,FS,機能スコープ,開発支援,ソフトウェア開発・エンジニアリング作業を支援するAI利用。,active,0.1.0,Includes code generation and review tools.,cursor|github copilot
@@ -45,6 +30,21 @@ IM-004,IM,統合形態,ワークフロー/RPA,ワークフロー自動化/RPA内
 IM-005,IM,統合形態,オンプレ/プライベート,オンプレまたは専用環境でホストするAI。,active,0.1.0,May reduce data exfiltration risk.,self-hosted llm
 IM-006,IM,統合形態,マネージド,企業統制を伴うマネージドサービスとして利用。,active,0.1.0,Includes centrally managed accounts and logging.,enterprise chatgpt
 IM-007,IM,統合形態,シャドー/未管理,承認された統制外での利用。,active,0.1.0,Track as shadow AI.,personal SaaS
+LG-001,LG,ログ/記録種別,申請記録,AI利用/サービスの申請と内容説明の証跡。,active,0.1.0,Lifecycle: request.,request form
+LG-002,LG,ログ/記録種別,審査/承認記録,審査・承認が実施されたことの証跡。,active,0.1.0,Lifecycle: review/approval.,approval log
+LG-003,LG,ログ/記録種別,例外記録,例外が付与され、管理された証跡。,active,0.1.0,Lifecycle: exception.,exception memo
+LG-004,LG,ログ/記録種別,更新/再評価記録,更新または再評価が行われた証跡。,active,0.1.0,Lifecycle: renewal.,renewal checklist
+LG-005,LG,ログ/記録種別,変更管理記録,変更内容と承認の証跡。,active,0.1.0,Lifecycle: change log.,change ticket
+LG-006,LG,ログ/記録種別,完全性証明,完全性（ハッシュ、署名、WORM等）の証跡。,active,0.1.0,Supports evidence readiness.,sha256|signature
+LG-007,LG,ログ/記録種別,アクセスログ,アクセス制御とアクセス履歴の証跡。,active,0.1.0,Supports accountability and SoD.,audit log
+LG-008,LG,ログ/記録種別,AI資産台帳,利用するモデル/サービスの台帳記録。,active,0.1.0,Supports governance baseline.,inventory
+LG-009,LG,ログ/記録種別,リスク評価,利用/サービスのリスク評価文書。,active,0.1.0,May reference RS codes.,risk assessment
+LG-010,LG,ログ/記録種別,統制マッピング,外部フレームワークへの統制マッピング証跡。,active,0.1.0,Informative mapping only.,coverage mapping
+LG-011,LG,ログ/記録種別,教育/ガイダンス,利用者に提供した教育/ガイダンスの証跡。,active,0.1.0,Supports adoption and safe use.,training
+LG-012,LG,ログ/記録種別,監視証跡,監視・継続的監督の証跡。,active,0.1.0,Includes periodic review logs.,monitoring log
+LG-013,LG,ログ/記録種別,インシデント記録,AI利用に関連するインシデント対応の証跡。,active,0.1.0,Link to IR processes.,incident ticket
+LG-014,LG,ログ/記録種別,第三者評価,ベンダー/第三者評価の証跡。,active,0.1.0,Supports third-party risk management.,vendor assessment
+LG-015,LG,ログ/記録種別,宣誓/サインオフ,正式な宣誓/サインオフの証跡。,active,0.1.0,Used where required by policy.,sign-off
 OB-001,OB,成果,効率化,時間・コスト効率の改善。,active,0.1.0,Measure via cycle time reduction.,time saved
 OB-002,OB,成果,品質向上,成果物の品質・精度向上。,active,0.1.0,Measure via error reduction.,fewer errors
 OB-003,OB,成果,売上貢献,売上成長への寄与。,active,0.1.0,Measure via conversion uplift.,conversion

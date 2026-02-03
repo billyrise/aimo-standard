@@ -86,7 +86,7 @@ Each official release includes:
 
 #### Changed
 
-- **Evidence Pack document types (EP namespace):** Evidence Pack file types use **EP-01..EP-07** (document type). Taxonomy **EV-001, EV-002, …** remain event/evidence types (Request Record, Review/Approval, etc.). See [Evidence Pack Template](./06-ev-template.md). Schema: `evidence_files[].file_id` pattern is `^EP-\\d{2}$`; `ev_type` is optional.
+- **Evidence Pack document types (EP namespace):** Evidence Pack file types use **EP-01..EP-07** (document type). Taxonomy **LG-001, LG-002, …** are Log/Event types (Request Record, Review/Approval, etc.). **EV-** reserved for Evidence artifact IDs only. See [Evidence Pack Template](./06-ev-template.md) and [ID Policy / Namespace](./04b-id-policy-namespace.md). Schema: `evidence_files[].file_id` pattern is `^EP-\\d{2}$`; `ev_type` uses **LG-xxx**.
 - **Normative relationship:** [Evidence Bundle](../../artifacts/evidence-bundle.md) now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.
 - **/dev anti-miscitation:** Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.
 
@@ -107,7 +107,7 @@ Each official release includes:
 | IM | IM-001 to IM-005 | Integration Mode |
 | RS | RS-001 to RS-005 | Risk Surface |
 | OB | OB-001 to OB-005 | Outcome / Benefit |
-| EV | EV-001 to EV-007 | Evidence Type |
+| LG | LG-001 to LG-015 | Log/Event Type |
 
 **Schemas**
 
@@ -119,13 +119,13 @@ Each official release includes:
 
 **Evidence Pack Templates (MVP)**
 
-- EV-01: System Overview
-- EV-02: Data Flow
-- EV-03: AI Inventory
-- EV-04: Risk & Impact Assessment
-- EV-05: Controls & Approvals
-- EV-06: Logging & Monitoring
-- EV-07: Incident & Exception Handling
+- EP-01 (legacy EV-01): System Overview
+- EP-02 (legacy EV-02): Data Flow
+- EP-03 (legacy EV-03): AI Inventory
+- EP-04 (legacy EV-04): Risk & Impact Assessment
+- EP-05 (legacy EV-05): Controls & Approvals
+- EP-06 (legacy EV-06): Logging & Monitoring
+- EP-07 (legacy EV-07): Incident & Exception Handling
 
 **Documentation**
 

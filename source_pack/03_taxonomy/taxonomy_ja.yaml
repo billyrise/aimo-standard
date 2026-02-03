@@ -102,84 +102,6 @@ dimensions:
         definition: "アラート・検知等のセキュリティテレメトリ。"
         status: active
         introduced_in: "0.1.0"
-  - id: EV
-    name: "証跡種別"
-    codes:
-      - code: EV-001
-        label: "申請記録"
-        definition: "AI利用/サービスの申請と内容説明の証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-002
-        label: "審査/承認記録"
-        definition: "審査・承認が実施されたことの証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-003
-        label: "例外記録"
-        definition: "例外が付与され、管理された証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-004
-        label: "更新/再評価記録"
-        definition: "更新または再評価が行われた証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-005
-        label: "変更管理記録"
-        definition: "変更内容と承認の証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-006
-        label: "完全性証明"
-        definition: "完全性（ハッシュ、署名、WORM等）の証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-007
-        label: "アクセスログ"
-        definition: "アクセス制御とアクセス履歴の証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-008
-        label: "AI資産台帳"
-        definition: "利用するモデル/サービスの台帳記録。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-009
-        label: "リスク評価"
-        definition: "利用/サービスのリスク評価文書。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-010
-        label: "統制マッピング"
-        definition: "外部フレームワークへの統制マッピング証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-011
-        label: "教育/ガイダンス"
-        definition: "利用者に提供した教育/ガイダンスの証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-012
-        label: "監視証跡"
-        definition: "監視・継続的監督の証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-013
-        label: "インシデント記録"
-        definition: "AI利用に関連するインシデント対応の証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-014
-        label: "第三者評価"
-        definition: "ベンダー/第三者評価の証跡。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-015
-        label: "宣誓/サインオフ"
-        definition: "正式な宣誓/サインオフの証跡。"
-        status: active
-        introduced_in: "0.1.0"
   - id: FS
     name: "機能スコープ"
     codes:
@@ -249,6 +171,84 @@ dimensions:
       - code: IM-007
         label: "シャドー/未管理"
         definition: "承認された統制外での利用。"
+        status: active
+        introduced_in: "0.1.0"
+  - id: LG
+    name: "ログ/記録種別"
+    codes:
+      - code: LG-001
+        label: "申請記録"
+        definition: "AI利用/サービスの申請と内容説明の証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-002
+        label: "審査/承認記録"
+        definition: "審査・承認が実施されたことの証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-003
+        label: "例外記録"
+        definition: "例外が付与され、管理された証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-004
+        label: "更新/再評価記録"
+        definition: "更新または再評価が行われた証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-005
+        label: "変更管理記録"
+        definition: "変更内容と承認の証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-006
+        label: "完全性証明"
+        definition: "完全性（ハッシュ、署名、WORM等）の証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-007
+        label: "アクセスログ"
+        definition: "アクセス制御とアクセス履歴の証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-008
+        label: "AI資産台帳"
+        definition: "利用するモデル/サービスの台帳記録。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-009
+        label: "リスク評価"
+        definition: "利用/サービスのリスク評価文書。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-010
+        label: "統制マッピング"
+        definition: "外部フレームワークへの統制マッピング証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-011
+        label: "教育/ガイダンス"
+        definition: "利用者に提供した教育/ガイダンスの証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-012
+        label: "監視証跡"
+        definition: "監視・継続的監督の証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-013
+        label: "インシデント記録"
+        definition: "AI利用に関連するインシデント対応の証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-014
+        label: "第三者評価"
+        definition: "ベンダー/第三者評価の証跡。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-015
+        label: "宣誓/サインオフ"
+        definition: "正式な宣誓/サインオフの証跡。"
         status: active
         introduced_in: "0.1.0"
   - id: OB

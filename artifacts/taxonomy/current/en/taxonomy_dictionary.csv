@@ -17,21 +17,6 @@ DT-007,DT,Data Type,Source Code,Source code and related artifacts.,active,0.1.0,
 DT-008,DT,Data Type,Customer Data,Customer-provided or customer-related data.,active,0.1.0,May include PII and contractual constraints.,tickets|usage logs
 DT-009,DT,Data Type,Operational Logs,Operational or system logs used for monitoring and troubleshooting.,active,0.1.0,May include personal data; classify carefully.,syslog|audit log
 DT-010,DT,Data Type,Security Telemetry,Security telemetry such as alerts and detections.,active,0.1.0,High integrity expectations.,edr alerts
-EV-001,EV,Evidence Type,Request Record,Evidence that an AI use/service was requested and described.,active,0.1.0,Lifecycle: request.,request form
-EV-002,EV,Evidence Type,Review/Approval Record,Evidence that a review/approval was performed.,active,0.1.0,Lifecycle: review/approval.,approval log
-EV-003,EV,Evidence Type,Exception Record,Evidence that an exception was granted and tracked.,active,0.1.0,Lifecycle: exception.,exception memo
-EV-004,EV,Evidence Type,Renewal/Re-evaluation Record,Evidence that renewal or re-evaluation occurred.,active,0.1.0,Lifecycle: renewal.,renewal checklist
-EV-005,EV,Evidence Type,Change Log Entry,Evidence of changes and their approvals.,active,0.1.0,Lifecycle: change log.,change ticket
-EV-006,EV,Evidence Type,Integrity Proof,"Evidence of integrity (hash, signature, WORM).",active,0.1.0,Supports evidence readiness.,sha256|signature
-EV-007,EV,Evidence Type,Access Log,Evidence of access control and access history.,active,0.1.0,Supports accountability and SoD.,audit log
-EV-008,EV,Evidence Type,Model/Service Inventory,Inventory record of models/services used.,active,0.1.0,Supports governance baseline.,inventory
-EV-009,EV,Evidence Type,Risk Assessment,Documented risk assessment for the use/service.,active,0.1.0,May reference RS codes.,risk assessment
-EV-010,EV,Evidence Type,Control Mapping,Control mapping evidence to external frameworks.,active,0.1.0,Informative mapping only.,coverage mapping
-EV-011,EV,Evidence Type,Training/Guidance,Evidence of training or guidance provided to users.,active,0.1.0,Supports adoption and safe use.,training
-EV-012,EV,Evidence Type,Monitoring Evidence,Evidence of monitoring and ongoing oversight.,active,0.1.0,Includes periodic review logs.,monitoring log
-EV-013,EV,Evidence Type,Incident Record,Evidence of incident handling related to AI use.,active,0.1.0,Link to IR processes.,incident ticket
-EV-014,EV,Evidence Type,Third-party Assessment,Evidence of vendor or third-party assessment.,active,0.1.0,Supports third-party risk management.,vendor assessment
-EV-015,EV,Evidence Type,Attestation/Sign-off,Formal attestation or sign-off record.,active,0.1.0,Used where required by policy.,sign-off
 FS-001,FS,Functional Scope,End-user Productivity,"AI used to improve productivity of internal end users (writing, search, summarization, meeting notes).",active,0.1.0,Exclude customer-facing core functions.,microsoft 365 copilot|notion ai
 FS-002,FS,Functional Scope,Customer-facing Features,AI embedded in product/service features provided to customers.,active,0.1.0,Includes AI-as-a-feature.,chatbot|recommendation
 FS-003,FS,Functional Scope,Developer Tooling,AI used to assist software development and engineering tasks.,active,0.1.0,Includes code generation and review tools.,cursor|github copilot
@@ -45,6 +30,21 @@ IM-004,IM,Integration Mode,RPA/Workflow,AI invoked within workflow automation or
 IM-005,IM,Integration Mode,On-prem / Private,AI hosted in private/on-prem environment.,active,0.1.0,May reduce data exfiltration risk.,self-hosted llm
 IM-006,IM,Integration Mode,Managed Service,Use via managed service with enterprise controls.,active,0.1.0,Includes centrally managed accounts and logging.,enterprise chatgpt
 IM-007,IM,Integration Mode,Shadow / Unmanaged,Use outside of approved governance controls.,active,0.1.0,Track as shadow AI.,personal SaaS
+LG-001,LG,Log/Event Type,Request Record,Evidence that an AI use/service was requested and described.,active,0.1.0,Lifecycle: request.,request form
+LG-002,LG,Log/Event Type,Review/Approval Record,Evidence that a review/approval was performed.,active,0.1.0,Lifecycle: review/approval.,approval log
+LG-003,LG,Log/Event Type,Exception Record,Evidence that an exception was granted and tracked.,active,0.1.0,Lifecycle: exception.,exception memo
+LG-004,LG,Log/Event Type,Renewal/Re-evaluation Record,Evidence that renewal or re-evaluation occurred.,active,0.1.0,Lifecycle: renewal.,renewal checklist
+LG-005,LG,Log/Event Type,Change Log Entry,Evidence of changes and their approvals.,active,0.1.0,Lifecycle: change log.,change ticket
+LG-006,LG,Log/Event Type,Integrity Proof,"Evidence of integrity (hash, signature, WORM).",active,0.1.0,Supports evidence readiness.,sha256|signature
+LG-007,LG,Log/Event Type,Access Log,Evidence of access control and access history.,active,0.1.0,Supports accountability and SoD.,audit log
+LG-008,LG,Log/Event Type,Model/Service Inventory,Inventory record of models/services used.,active,0.1.0,Supports governance baseline.,inventory
+LG-009,LG,Log/Event Type,Risk Assessment,Documented risk assessment for the use/service.,active,0.1.0,May reference RS codes.,risk assessment
+LG-010,LG,Log/Event Type,Control Mapping,Control mapping evidence to external frameworks.,active,0.1.0,Informative mapping only.,coverage mapping
+LG-011,LG,Log/Event Type,Training/Guidance,Evidence of training or guidance provided to users.,active,0.1.0,Supports adoption and safe use.,training
+LG-012,LG,Log/Event Type,Monitoring Evidence,Evidence of monitoring and ongoing oversight.,active,0.1.0,Includes periodic review logs.,monitoring log
+LG-013,LG,Log/Event Type,Incident Record,Evidence of incident handling related to AI use.,active,0.1.0,Link to IR processes.,incident ticket
+LG-014,LG,Log/Event Type,Third-party Assessment,Evidence of vendor or third-party assessment.,active,0.1.0,Supports third-party risk management.,vendor assessment
+LG-015,LG,Log/Event Type,Attestation/Sign-off,Formal attestation or sign-off record.,active,0.1.0,Used where required by policy.,sign-off
 OB-001,OB,Outcome / Benefit,Efficiency,Improves time/cost efficiency.,active,0.1.0,Measure via cycle time reduction.,time saved
 OB-002,OB,Outcome / Benefit,Quality,Improves quality/accuracy of outputs.,active,0.1.0,Measure via error reduction.,fewer errors
 OB-003,OB,Outcome / Benefit,Revenue,Contributes to revenue growth.,active,0.1.0,Measure via conversion uplift.,conversion

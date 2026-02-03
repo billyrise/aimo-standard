@@ -89,16 +89,16 @@
       "examples": ["OB-001", "OB-002", "OB-004"]
     },
     {
-      "dimension_id": "EV",
-      "name_en": "Evidence Type",
-      "name_ja": "証跡種別",
-      "description_en": "Categorizes the types of evidence required or collected.",
-      "description_ja": "必要な/収集する証跡の種類。",
+      "dimension_id": "LG",
+      "name_en": "Log/Event Type",
+      "name_ja": "ログ/記録種別",
+      "description_en": "Categorizes the types of log/event/record evidence required or collected.",
+      "description_ja": "必要な/収集するログ・記録の種類。",
       "token_type": "numeric",
       "required": true,
       "multi_select": true,
       "composition_priority": 8,
-      "examples": ["EV-001", "EV-002", "EV-003"]
+      "examples": ["LG-001", "LG-002", "LG-003"]
     }
   ],
   "dictionary_csv": "taxonomy_dictionary_v0.1.csv"

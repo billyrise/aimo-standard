@@ -11,9 +11,9 @@
 | --- | --- | --- | --- | --- |
 | **CH** | Channel | チャネル | 8 | `CH-` |
 | **DT** | Data Type | データ種別 | 10 | `DT-` |
-| **EV** | Evidence Type | 証跡種別 | 15 | `EV-` |
 | **FS** | Functional Scope | 機能スコープ | 6 | `FS-` |
 | **IM** | Integration Mode | 統合形態 | 7 | `IM-` |
+| **LG** | Log/Event Type | ログ/記録種別 | 15 | `LG-` |
 | **OB** | Outcome / Benefit | 成果 | 7 | `OB-` |
 | **RS** | Risk Surface | リスク面 | 8 | `RS-` |
 | **UC** | Use Case Class | ユースケース分類 | 30 | `UC-` |
@@ -50,26 +50,6 @@
 | DT-009 | Operational Logs | 運用ログ | active |
 | DT-010 | Security Telemetry | セキュリティテレメトリ | active |
 
-### EV: Evidence Type / 証跡種別
-
-| Code | Label (EN) | Label (JA) | Status |
-| --- | --- | --- | --- |
-| EV-001 | Request Record | 申請記録 | active |
-| EV-002 | Review/Approval Record | 審査/承認記録 | active |
-| EV-003 | Exception Record | 例外記録 | active |
-| EV-004 | Renewal/Re-evaluation Record | 更新/再評価記録 | active |
-| EV-005 | Change Log Entry | 変更管理記録 | active |
-| EV-006 | Integrity Proof | 完全性証明 | active |
-| EV-007 | Access Log | アクセスログ | active |
-| EV-008 | Model/Service Inventory | AI資産台帳 | active |
-| EV-009 | Risk Assessment | リスク評価 | active |
-| EV-010 | Control Mapping | 統制マッピング | active |
-| EV-011 | Training/Guidance | 教育/ガイダンス | active |
-| EV-012 | Monitoring Evidence | 監視証跡 | active |
-| EV-013 | Incident Record | インシデント記録 | active |
-| EV-014 | Third-party Assessment | 第三者評価 | active |
-| EV-015 | Attestation/Sign-off | 宣誓/サインオフ | active |
-
 ### FS: Functional Scope / 機能スコープ
 
 | Code | Label (EN) | Label (JA) | Status |
@@ -92,6 +72,26 @@
 | IM-005 | On-prem / Private | オンプレ/プライベート | active |
 | IM-006 | Managed Service | マネージド | active |
 | IM-007 | Shadow / Unmanaged | シャドー/未管理 | active |
+
+### LG: Log/Event Type / ログ/記録種別
+
+| Code | Label (EN) | Label (JA) | Status |
+| --- | --- | --- | --- |
+| LG-001 | Request Record | 申請記録 | active |
+| LG-002 | Review/Approval Record | 審査/承認記録 | active |
+| LG-003 | Exception Record | 例外記録 | active |
+| LG-004 | Renewal/Re-evaluation Record | 更新/再評価記録 | active |
+| LG-005 | Change Log Entry | 変更管理記録 | active |
+| LG-006 | Integrity Proof | 完全性証明 | active |
+| LG-007 | Access Log | アクセスログ | active |
+| LG-008 | Model/Service Inventory | AI資産台帳 | active |
+| LG-009 | Risk Assessment | リスク評価 | active |
+| LG-010 | Control Mapping | 統制マッピング | active |
+| LG-011 | Training/Guidance | 教育/ガイダンス | active |
+| LG-012 | Monitoring Evidence | 監視証跡 | active |
+| LG-013 | Incident Record | インシデント記録 | active |
+| LG-014 | Third-party Assessment | 第三者評価 | active |
+| LG-015 | Attestation/Sign-off | 宣誓/サインオフ | active |
 
 ### OB: Outcome / Benefit / 成果
 

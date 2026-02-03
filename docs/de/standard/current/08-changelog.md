@@ -101,7 +101,7 @@ Jedes offizielle Release enthält:
 | IM | IM-001 bis IM-005 | Integrationsmodus |
 | RS | RS-001 bis RS-005 | Risikooberfläche |
 | OB | OB-001 bis OB-005 | Ergebnis / Nutzen |
-| EV | EV-001 bis EV-007 | Evidence-Typ |
+| LG | LG-001 bis LG-015 | Log-/Registrierungstyp |
 
 **Schemas**
 

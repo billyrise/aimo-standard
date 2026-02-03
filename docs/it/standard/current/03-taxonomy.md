@@ -51,16 +51,16 @@ AIMO utilizza 8 dimensioni per classificare i casi d'uso dell'IA. Ogni dimension
 | **IM** | Integration Mode | 7 | Come l'IA si connette ai sistemi aziendali |
 | **RS** | Risk Surface | 8 | Quali rischi sono associati |
 | **OB** | Outcome / Benefit | 7 | Quali benefici sono attesi |
-| **EV** | Evidence Type | 15 | Quale evidence è richiesta |
+| **LG** | Log/Event Type | 15 | Quale log/registro è richiesto |
 
-**Totale: 91 codici in 8 dimensioni**
+**Totale: 91 codici in 8 dimensioni**（**EV-** riservato per ID artefatti Evidence; dimensione log/registro della tassonomia: **LG-**.)
 
 ### Regole d'Uso
 
 | Dimensione | Selezione | Implicazione per l'Audit |
 | --- | --- | --- |
 | FS, IM | Esattamente 1 | Classificazione primaria per l'assegnazione di responsabilità |
-| UC, DT, CH, RS, EV | 1 o più | Enumerazione completa richiesta per la copertura del rischio |
+| UC, DT, CH, RS, LG | 1 o più | Enumerazione completa richiesta per la copertura del rischio |
 | OB | 0 o più | Opzionale; documenta il valore aziendale atteso |
 
 ## Definizioni delle Dimensioni
@@ -170,33 +170,33 @@ Categorizza i risultati o i benefici attesi dall'uso dell'IA. **Opzionale; selez
 | OB-006 | Customer Satisfaction | Migliora la soddisfazione del cliente. |
 | OB-007 | Employee Experience | Migliora l'esperienza dei dipendenti. |
 
-### EV: Evidence Type
+### LG: Log/Event Type
 
-Categorizza i tipi di evidence richiesti o raccolti. **Selezionare una o più.**
+Categorizza i tipi di log/registro richiesti o raccolti. **Selezionare una o più.**（EV- riservato per ID artefatti Evidence.)
 
 | Codice | Etichetta | Definizione |
 | --- | --- | --- |
-| EV-001 | Request Record | Evidence che un uso/servizio IA è stato richiesto e descritto. |
-| EV-002 | Review/Approval Record | Evidence che una revisione/approvazione è stata eseguita. |
-| EV-003 | Exception Record | Evidence che un'eccezione è stata concessa e tracciata. |
-| EV-004 | Renewal/Re-evaluation Record | Evidence che è avvenuto rinnovo o rivalutazione. |
-| EV-005 | Change Log Entry | Evidence delle modifiche e delle loro approvazioni. |
-| EV-006 | Integrity Proof | Evidence di integrità (hash, firma, WORM). |
-| EV-007 | Access Log | Evidence di controllo degli accessi e cronologia degli accessi. |
-| EV-008 | Model/Service Inventory | Record di inventario dei modelli/servizi utilizzati. |
-| EV-009 | Risk Assessment | Valutazione del rischio documentata per l'uso/servizio. |
-| EV-010 | Control Mapping | Evidence di mappatura dei controlli verso framework esterni. |
-| EV-011 | Training/Guidance | Evidence di formazione o guida fornita agli utenti. |
-| EV-012 | Monitoring Evidence | Evidence di monitoraggio e supervisione continua. |
-| EV-013 | Incident Record | Evidence di gestione degli incidenti relativi all'uso dell'IA. |
-| EV-014 | Third-party Assessment | Evidence di valutazione del vendor o di terze parti. |
-| EV-015 | Attestation/Sign-off | Record di attestazione formale o sign-off. |
+| LG-001 | Request Record | Evidence che un uso/servizio IA è stato richiesto e descritto. |
+| LG-002 | Review/Approval Record | Evidence che una revisione/approvazione è stata eseguita. |
+| LG-003 | Exception Record | Evidence che un'eccezione è stata concessa e tracciata. |
+| LG-004 | Renewal/Re-evaluation Record | Evidence che è avvenuto rinnovo o rivalutazione. |
+| LG-005 | Change Log Entry | Evidence delle modifiche e delle loro approvazioni. |
+| LG-006 | Integrity Proof | Evidence di integrità (hash, firma, WORM). |
+| LG-007 | Access Log | Evidence di controllo degli accessi e cronologia degli accessi. |
+| LG-008 | Model/Service Inventory | Record di inventario dei modelli/servizi utilizzati. |
+| LG-009 | Risk Assessment | Valutazione del rischio documentata per l'uso/servizio. |
+| LG-010 | Control Mapping | Evidence di mappatura dei controlli verso framework esterni. |
+| LG-011 | Training/Guidance | Evidence di formazione o guida fornita agli utenti. |
+| LG-012 | Monitoring Evidence | Evidence di monitoraggio e supervisione continua. |
+| LG-013 | Incident Record | Evidence di gestione degli incidenti relativi all'uso dell'IA. |
+| LG-014 | Third-party Assessment | Evidence di valutazione del vendor o di terze parti. |
+| LG-015 | Attestation/Sign-off | Record di attestazione formale o sign-off. |
 
 ## Come Usare
 
 ### Relazione con l'Evidence
 
-Ogni documento Evidence (EV) referenzia codici da più dimensioni per classificare il sistema IA o il caso d'uso documentato. La classificazione a 8 dimensioni abilita:
+Ogni documento Evidence referenzia codici da più dimensioni per classificare il sistema IA o il caso d'uso documentato. La classificazione a 8 dimensioni abilita:
 
 - **Categorizzazione coerente** attraverso l'organizzazione
 - **Filtraggio basato sul rischio** per valori dimensionali
@@ -216,7 +216,7 @@ CH: CH-001 (Web UI)
 IM: IM-002 (SaaS Integrated)
 RS: RS-001 (Data Leakage), RS-003 (Compliance Breach)
 OB: OB-001 (Efficiency)
-EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
+LG: LG-001 (Request Record), LG-002 (Review/Approval Record)
 ```
 
 ## Riferimento SSOT

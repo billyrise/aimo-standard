@@ -27,13 +27,13 @@
       "properties": {
         "dimension_id": {
           "type": "string",
-          "enum": ["FS", "UC", "DT", "CH", "IM", "RS", "OB", "EV"],
+          "enum": ["FS", "UC", "DT", "CH", "IM", "RS", "OB", "LG"],
           "description": "Two-letter dimension identifier"
         },
         "code": {
           "type": "string",
-          "pattern": "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$",
-          "description": "AIMO code in format <DIM>-<NNN>"
+          "pattern": "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$",
+          "description": "AIMO code in format <DIM>-<NNN>. EV- reserved for Evidence artifact IDs only."
         },
         "label_en": {
           "type": "string",
@@ -68,7 +68,7 @@
         },
         "replaced_by": {
           "type": "string",
-          "pattern": "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$",
+          "pattern": "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$",
           "description": "Replacement code if deprecated"
         },
         "backward_compatible": {

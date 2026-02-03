@@ -25,7 +25,7 @@ Alle AIMO-Codes folgen dem Format: **`<PRÄFIX>-<TOKEN>`**
 - `IM-002` - Integrationsmodus: SaaS-integriert
 - `RS-001` - Risikooberfläche: Datenleck
 - `OB-001` - Ergebnis/Nutzen: Effizienz
-- `EV-001` - Evidence-Typ: Antragsdatensatz
+- `LG-001` - Log-/Registrierungstyp: Antragsdatensatz
 
 ## Namensräume
 
@@ -118,7 +118,7 @@ CH: CH-001
 IM: IM-002
 RS: RS-001, RS-003
 OB: OB-001
-EV: EV-001, EV-002
+LG: LG-001, LG-002
 ```
 
 ## Lifecycle

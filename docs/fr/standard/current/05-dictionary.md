@@ -159,7 +159,7 @@ Chaque modèle EV inclut un tableau de codes à 8 dimensions :
 | **IM** | `IM-002` | SaaS intégré |
 | **RS** | `RS-001`, `RS-003` | Fuite de données, Violation de conformité |
 | **OB** | `OB-001` | Efficacité |
-| **EV** | `EV-001`, `EV-002` | Enregistrement de demande, Enregistrement de revue/approbation |
+| **LG** | `LG-001`, `LG-002` | Enregistrement de demande, Enregistrement de revue/approbation |
 ```
 
 ### Dans le validateur
