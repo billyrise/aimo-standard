@@ -18,7 +18,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../minimum-evidence/">
+        <link rel="next" href="../evidence-bundle-coverage-map/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -707,6 +707,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -750,6 +754,29 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard/current/00-versioning-reference-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versioning & Reference Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -949,6 +976,29 @@
   
   <span class="md-ellipsis">
     Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard/current/09-evidence-bundle-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle structure
     
   </span>
   
@@ -1232,6 +1282,8 @@
       
         
       
+        
+      
     
     
     
@@ -1337,6 +1389,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#root-required-structure-normative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root required structure (normative)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bundle-structure-and-naming" class="md-nav__link">
     <span class="md-ellipsis">
       Bundle structure and naming
@@ -1415,6 +1476,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../evidence-bundle-coverage-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle Coverage Map (template)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../minimum-evidence/" class="md-nav__link">
         
   
@@ -1464,7 +1548,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1481,14 +1565,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2079,6 +2163,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#root-required-structure-normative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root required structure (normative)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bundle-structure-and-naming" class="md-nav__link">
     <span class="md-ellipsis">
       Bundle structure and naming
@@ -2181,6 +2274,16 @@
 
 <h1 id="evidence-bundle">Evidence Bundle</h1>
 <p>An <strong>Evidence Bundle</strong> is an audit package: a structured set of artifacts that supports explainability and traceability for AI governance. It is not a product feature but a deliverable format for auditors and compliance.</p>
+<h2 id="root-required-structure-normative">Root required structure (normative)</h2>
+<p>The <strong>root layout</strong> of an Evidence Bundle is defined normatively in <a href="../../standard/current/09-evidence-bundle-structure/">Evidence Bundle root structure (v0.1)</a>. At the bundle root the following MUST be present:</p>
+<ul>
+<li><strong>manifest.json</strong> — bundle manifest (bundle_id, bundle_version, object_index, payload_index, hash_chain, signing).</li>
+<li><strong>objects/</strong> — directory for enumerated objects (listed in manifest).</li>
+<li><strong>payloads/</strong> — directory for payload files (e.g. root EV JSON, Evidence Pack files).</li>
+<li><strong>signatures/</strong> — directory for digital signatures; v0.1 MUST contain at least one signature that references the manifest (existence and target; verification is a future extension).</li>
+<li><strong>hashes/</strong> — directory for hash chain or integrity records as required by the manifest.</li>
+</ul>
+<p><strong>Integrity</strong> (manifest, sha256 for indexed files, signature presence) is <strong>normative</strong> and enforced by the <a href="../../validator/">Validator</a>. <strong>Custody</strong> (storage, access control, retention) is <strong>implementation-defined</strong> and not specified by the standard.</p>
 <h2 id="bundle-structure-and-naming">Bundle structure and naming</h2>
 <ul>
 <li><strong>Bundle root naming</strong>: use a consistent pattern such as <code>{org}_{system}_{period}_{version}</code> (e.g. <code>acme_ai-usage_2026-Q1_v1</code>).</li>
@@ -2285,19 +2388,14 @@
 <p>Auditors use the Evidence Bundle to verify that AI use is requested, reviewed, and approved; that exceptions are time-bound and have compensating controls and renewal; and that changes are logged. The TOC and traceability rules let them locate required artifacts and follow IDs and references across request, review, exception, renewal, and EV records. The Summary gives a quick overview; the Change Log supports change control and accountability.</p>
 <p>See <a href="../minimum-evidence/">Minimum Evidence Requirements</a> for MUST-level fields and lifecycle groups.</p>
 <h2 id="operational-guidance">Operational guidance</h2>
-<p>!!! info "Integrity and access control"
-    While AIMO does not prescribe specific controls, adopters should document:</p>
-<pre><code>- **Access roles**: who can create, read, update, or delete evidence
-- **Retention policy**: how long evidence is retained and under what schedule
-- **Integrity mechanisms**: hashing, WORM storage, or digital signatures used
-- **Audit trail**: logs of access and changes to the bundle
-
-See [Minimum Evidence Requirements &gt; Integrity &amp; Access](minimum-evidence.md#6-integrity-access) for detailed guidance.
-</code></pre>
+<p>!!! info "Integrity (normative) vs Custody (implementation)"
+    - <strong>Integrity</strong> is normative in v0.1: the bundle MUST have manifest.json, object_index/payload_index with sha256, and at least one signature in signatures/ that references the manifest. The <a href="../../validator/">Validator</a> rejects bundles that do not satisfy these requirements.
+    - <strong>Custody</strong> (access control, retention, WORM) is implementation-defined. Adopters should document access roles, retention policy, and audit trail; see <a href="../minimum-evidence/#6-integrity-access">Minimum Evidence Requirements &gt; Integrity &amp; Access</a>.</p>
 <h2 id="audit-journey">Audit journey</h2>
 <p>From this page, the typical audit journey continues:</p>
 <ol>
 <li><strong>Next</strong>: <a href="../minimum-evidence/">Minimum Evidence Requirements</a> — MUST-level checklist by lifecycle</li>
+<li><strong>One-page summary</strong>: <a href="../evidence-bundle-coverage-map/">Evidence Bundle Coverage Map (template)</a> — scope, evidence types, controls mapping, exclusions, integrity (informative)</li>
 <li><strong>Then</strong>: <a href="../../coverage-map/">Coverage Map</a> — mapping to external frameworks</li>
 <li><strong>Validate</strong>: <a href="../../validator/">Validator</a> — run structural checks</li>
 <li><strong>Download</strong>: <a href="../../releases/">Releases</a> — get release assets and verify checksums</li>

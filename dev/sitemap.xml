@@ -31,6 +31,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/artifacts/evidence-bundle/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -436,6 +451,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -571,6 +601,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -629,6 +674,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/ja/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/ja/artifacts/evidence-bundle/</loc>
@@ -1036,6 +1096,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/ja/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/ja/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -1171,6 +1246,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/ja/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/ja/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -1229,6 +1319,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/es/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latest/es/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/es/artifacts/evidence-bundle/</loc>
@@ -1636,6 +1741,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/es/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latest/es/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/es/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -1771,6 +1891,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/es/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latest/es/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/es/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -1829,6 +1964,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/fr/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latest/fr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/fr/artifacts/evidence-bundle/</loc>
@@ -2236,6 +2386,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/fr/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latest/fr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/fr/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2371,6 +2536,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/fr/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latest/fr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/fr/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2429,6 +2609,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/de/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latest/de/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/de/artifacts/evidence-bundle/</loc>
@@ -2836,6 +3031,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/de/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latest/de/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/de/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2971,6 +3181,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/de/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latest/de/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/de/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -3029,6 +3254,21 @@
         <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/pt/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latest/pt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/pt/artifacts/evidence-bundle/</loc>
@@ -3436,6 +3676,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/pt/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latest/pt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/pt/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -3571,6 +3826,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/pt/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latest/pt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/pt/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -3629,6 +3899,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/it/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latest/it/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/it/artifacts/evidence-bundle/</loc>
@@ -4036,6 +4321,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/it/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latest/it/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/it/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -4171,6 +4471,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/it/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latest/it/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/it/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -4229,6 +4544,21 @@
         <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/zh/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latest/zh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/zh/artifacts/evidence-bundle/</loc>
@@ -4636,6 +4966,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latest/zh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -4771,6 +5116,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latest/zh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -4829,6 +5189,21 @@
         <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/zh-TW/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latest/zh-TW/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/zh-TW/artifacts/evidence-bundle/</loc>
@@ -5236,6 +5611,21 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh-TW/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latest/zh-TW/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh-TW/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5371,6 +5761,21 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/08-changelog/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh-TW/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latest/zh-TW/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh-TW/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5429,6 +5834,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/ko/artifacts/evidence-bundle-coverage-map/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latest/ko/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle-coverage-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle-coverage-map/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/ko/artifacts/evidence-bundle/</loc>
@@ -5836,6 +6256,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/ko/standard/current/00-versioning-reference-policy/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latest/ko/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/00-versioning-reference-policy/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/00-versioning-reference-policy/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/ko/standard/current/01-overview/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5969,6 +6404,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/08-changelog/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/08-changelog/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/08-changelog/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/ko/standard/current/09-evidence-bundle-structure/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latest/ko/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/ko/standard/versions/</loc>
