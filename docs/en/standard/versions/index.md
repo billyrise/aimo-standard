@@ -9,15 +9,15 @@ Official releases are frozen snapshots published with auditor-ready PDFs and mac
 ## Latest Release
 
 !!! success "Current Version"
-    **v0.0.3** (2026-02-02) — [View Documentation](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.3)
+    **v0.1.0** (2026-02-03) — [View Documentation](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.0)
 
 ## Version History
 
 | Version | Date | Release Notes | PDF (EN) | PDF (JA) | Artifacts | Checksums |
 | :------ | :--- | :------------ | :------- | :------- | :-------- | :-------- |
-| **v0.0.3** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/SHA256SUMS.txt) |
-| **v0.0.2** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
-| **v0.0.1** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
+| **v0.1.0** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/SHA256SUMS.txt) |
+| **v0.1.0** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/SHA256SUMS.txt) |
+| **v0.1.0** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/SHA256SUMS.txt) |
 
 !!! note "Data Source"
     This version table is synchronized with [GitHub Releases](https://github.com/billyrise/aimo-standard/releases). Each release tag (`vX.Y.Z`) corresponds to a frozen snapshot of the specification.
@@ -45,10 +45,10 @@ For release process details, see [VERSIONING.md](https://github.com/billyrise/ai
 To cite a specific version in audit reports and ensure reproducibility:
 
 1. **Canonical URL**: Use the frozen documentation URL for that version, e.g.  
-   `https://standard.aimoaas.com/0.0.3/` (replace `0.0.3` with the version you used).  
+   `https://standard.aimoaas.com/0.1.0/` (replace `0.0.3` with the version you used).  
    **For v0.1.0 and later**: Prefer citing the versioned URL (e.g. `https://standard.aimoaas.com/0.1.0/`) rather than `/latest/` for audit evidence, so the snapshot is unambiguous.
-2. **Version pinning**: Record the **release tag** (e.g. `v0.0.3`) and optionally the **commit hash** from the [GitHub Release](https://github.com/billyrise/aimo-standard/releases) page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).
-3. **Evidence alignment**: State in your submission which AIMO Standard version (e.g. `v0.0.3`) your evidence bundle aligns with, and obtain the validator and schemas from that same release.
+2. **Version pinning**: Record the **release tag** (e.g. `v0.1.0`) and optionally the **commit hash** from the [GitHub Release](https://github.com/billyrise/aimo-standard/releases) page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).
+3. **Evidence alignment**: State in your submission which AIMO Standard version (e.g. `v0.1.0`) your evidence bundle aligns with, and obtain the validator and schemas from that same release.
 
 ## Version layers
 
@@ -56,7 +56,7 @@ AIMO Standard uses three version concepts. For the current release they are alig
 
 | Layer | Description | Where it appears |
 |-------|-------------|------------------|
-| **Standard version** (site/release) | The release tag and documentation snapshot (e.g. `v0.0.3`). | Versions table, GitHub Releases, `/X.Y.Z/` URLs. |
+| **Standard version** (site/release) | The release tag and documentation snapshot (e.g. `v0.1.0`). | Versions table, GitHub Releases, `/X.Y.Z/` URLs. |
 | **Taxonomy schema version** | Version of the code system and taxonomy/schema definitions. | `taxonomy_version` in manifests; schema `$id` or docs. |
 | **Dictionary content version** | Version of the dictionary entries (codes and definitions). | Dictionary metadata; same as taxonomy for 0.0.x. |
 
@@ -72,7 +72,7 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 
     ```bash
     # Download all assets for a specific version
-    VERSION=v0.0.3
+    VERSION=v0.1.0
     BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
     curl -LO "${BASE_URL}/trust_package.pdf"
@@ -85,7 +85,7 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 
     ```powershell
     # Download all assets for a specific version
-    $VERSION = "v0.0.1"
+    $VERSION = "v0.1.0"
     $BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
 
     Invoke-WebRequest -Uri "$BASE_URL/trust_package.pdf" -OutFile trust_package.pdf
@@ -175,7 +175,7 @@ All release assets include cryptographically signed build provenance attestation
 
 ```bash
 # Download release assets using GitHub CLI
-VERSION=v0.0.3
+VERSION=v0.1.0
 gh release download "$VERSION" --repo billyrise/aimo-standard
 
 # Verify attestation for each asset
@@ -241,14 +241,14 @@ When upgrading between versions with breaking changes:
 
 Each release creates a frozen documentation snapshot accessible at:
 
-- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.0.1/`)
+- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.1.0/`)
 - GitHub Pages: `https://billyrise.github.io/aimo-standard/{version}/`
 
 ### URL Types and Their Meaning
 
 | URL Pattern | Description | For Audit Citations? |
 |-------------|-------------|---------------------|
-| `/X.Y.Z/` (e.g., `/0.0.1/`) | **Frozen release** — immutable snapshot | **Yes** (preferred) |
+| `/X.Y.Z/` (e.g., `/0.1.0/`) | **Frozen release** — immutable snapshot | **Yes** (preferred) |
 | `/latest/` | **Alias** — redirects to most recent release | Yes (resolves to `/X.Y.Z/`) |
 | `/dev/` | **Preview** — unreleased main branch content | **No** (not for citations) |
 
@@ -259,10 +259,10 @@ Each release creates a frozen documentation snapshot accessible at:
 ### FAQ
 
 ??? question "Why is `/latest/` not a version number?"
-    `/latest/` is a convenience alias that always redirects to the most recent stable release (e.g., `/0.0.1/`). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.
+    `/latest/` is a convenience alias that always redirects to the most recent stable release (e.g., `/0.1.0/`). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.
 
 ??? question "Which URL should auditors cite?"
-    - **Formal audits (immutability required)**: Use `/X.Y.Z/` (e.g., `https://standard.aimoaas.com/0.0.1/standard/current/`)
+    - **Formal audits (immutability required)**: Use `/X.Y.Z/` (e.g., `https://standard.aimoaas.com/0.1.0/standard/current/`)
     - **General references**: `/latest/` is acceptable as it redirects to the current release
     - **Never cite**: `/dev/` (unreleased, subject to change)
 
