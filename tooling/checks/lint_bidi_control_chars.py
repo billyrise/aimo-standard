@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
-Lint for Unicode Bidirectional (Bidi) control characters (Trojan Source hardening).
+Lint for Unicode Bidirectional (Bidi) and hidden/invisible characters (Trojan Source hardening).
 
-Detects characters that can be used to alter visual rendering and hide malicious code:
-- U+202A–202E: LRE, RLE, PDF, LRO, RLO
-- U+2066–2069: LRI, RLI, FSI, PDI
-- U+200E, U+200F: LRM, RLM
+Detects characters that can alter visual rendering or hide malicious code:
+- Bidi: U+202A–202E (LRE, RLE, PDF, LRO, RLO), U+2066–2069 (LRI, RLI, FSI, PDI), U+200E–200F (LRM, RLM)
+- Hidden: U+200B (ZERO WIDTH SPACE), U+200C (ZWNJ), U+200D (ZWJ), U+2060 (WORD JOINER), U+FEFF (BOM)
 
 Exit Codes:
 - 0: No bidi control chars found
@@ -21,11 +20,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 
-# Bidi control character ranges (Trojan Source)
-# 202A-202E: LRE, RLE, PDF, LRO, RLO
-# 2066-2069: LRI, RLI, FSI, PDI
-# 200E, 200F: LRM, RLM
-BIDI_RE = re.compile(r"[\u200E\u200F\u202A-\u202E\u2066-\u2069]")
+# Bidi + hidden/invisible (Trojan Source + GitHub "hidden or bidirectional Unicode" warning)
+# Bidi: 202A-202E, 2066-2069, 200E-200F
+# Hidden: 200B ZWSP, 200C ZWNJ, 200D ZWJ, 2060 WORD JOINER, FEFF BOM
+BIDI_AND_HIDDEN_RE = re.compile(
+    r"[\u200B\u200C\u200D\u200E\u200F\u202A-\u202E\u2060\u2066-\u2069\uFEFF]"
+)
 
 # Directories to skip
 SKIP_DIRS = {".venv", "venv", "site", ".git", "node_modules", "__pycache__", ".mypy_cache"}
@@ -53,7 +53,7 @@ def scan_file(filepath: Path) -> list[tuple[int, str]]:
     except OSError:
         return issues
     for i, line in enumerate(content.splitlines(), start=1):
-        if BIDI_RE.search(line):
+        if BIDI_AND_HIDDEN_RE.search(line):
             issues.append((i, line.strip()))
     return issues
 
@@ -69,11 +69,11 @@ def main() -> int:
             errors.append(f"{rel}:{line_num}: {preview}")
 
     if errors:
-        print("lint_bidi_control_chars: Bidi control characters found (Trojan Source risk):", file=sys.stderr)
+        print("lint_bidi_control_chars: Bidi/hidden Unicode found (Trojan Source risk):", file=sys.stderr)
         for e in errors:
             print(e, file=sys.stderr)
         return 1
-    print("lint_bidi_control_chars: OK (no bidi control characters)")
+    print("lint_bidi_control_chars: OK (no bidi/hidden Unicode)")
     return 0
 
 
