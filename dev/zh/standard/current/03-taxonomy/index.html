@@ -18,7 +18,7 @@
         <link rel="prev" href="../02-scope/">
       
       
-        <link rel="next" href="../04-codes/">
+        <link rel="next" href="../04b-id-policy-namespace/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -997,9 +999,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev" class="md-nav__link">
+  <a href="#lg" class="md-nav__link">
     <span class="md-ellipsis">
-      EV：证据类型
+      LG：日志/记录类型
     </span>
   </a>
   
@@ -1074,6 +1076,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2328,9 +2353,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev" class="md-nav__link">
+  <a href="#lg" class="md-nav__link">
     <span class="md-ellipsis">
-      EV：证据类型
+      LG：日志/记录类型
     </span>
   </a>
   
@@ -2526,14 +2551,14 @@ AIMO 分类法提供了一种共享语言来分类这些AI特定风险，并将�
 <td>期望什么收益</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>证据类型</td>
+<td><strong>LG</strong></td>
+<td>日志/记录类型</td>
 <td>15</td>
-<td>需要什么证据</td>
+<td>需要什么日志/记录</td>
 </tr>
 </tbody>
 </table>
-<p><strong>总计：8个维度下的91个代码</strong></p>
+<p><strong>总计：8个维度下的91个代码</strong>（<strong>EV-</strong> 专用于 Evidence 成果物 ID；分类法日志/记录维度使用 <strong>LG-</strong>。）</p>
 <h3 id="_5">使用规则</h3>
 <table>
 <thead>
@@ -2550,7 +2575,7 @@ AIMO 分类法提供了一种共享语言来分类这些AI特定风险，并将�
 <td>用于责任分配的主要分类</td>
 </tr>
 <tr>
-<td>UC, DT, CH, RS, EV</td>
+<td>UC, DT, CH, RS, LG</td>
 <td>1个或多个</td>
 <td>风险覆盖需要完整枚举</td>
 </tr>
@@ -2924,8 +2949,8 @@ AIMO 分类法提供了一种共享语言来分类这些AI特定风险，并将�
 </tr>
 </tbody>
 </table>
-<h3 id="ev">EV：证据类型</h3>
-<p>对需要或收集的证据类型进行分类。<strong>选择一个或多个。</strong></p>
+<h3 id="lg">LG：日志/记录类型</h3>
+<p>对需要或收集的日志/记录类型进行分类。<strong>选择一个或多个。</strong>（EV- 专用于 Evidence 成果物 ID。）</p>
 <table>
 <thead>
 <tr>
@@ -2936,77 +2961,77 @@ AIMO 分类法提供了一种共享语言来分类这些AI特定风险，并将�
 </thead>
 <tbody>
 <tr>
-<td>EV-001</td>
+<td>LG-001</td>
 <td>请求记录</td>
 <td>AI使用/服务被请求和描述的证据。</td>
 </tr>
 <tr>
-<td>EV-002</td>
+<td>LG-002</td>
 <td>审查/批准记录</td>
 <td>进行了审查/批准的证据。</td>
 </tr>
 <tr>
-<td>EV-003</td>
+<td>LG-003</td>
 <td>例外记录</td>
 <td>例外被授予和跟踪的证据。</td>
 </tr>
 <tr>
-<td>EV-004</td>
+<td>LG-004</td>
 <td>续期/重新评估记录</td>
 <td>发生续期或重新评估的证据。</td>
 </tr>
 <tr>
-<td>EV-005</td>
+<td>LG-005</td>
 <td>变更日志条目</td>
 <td>变更及其批准的证据。</td>
 </tr>
 <tr>
-<td>EV-006</td>
+<td>LG-006</td>
 <td>完整性证明</td>
 <td>完整性证据（哈希、签名、WORM）。</td>
 </tr>
 <tr>
-<td>EV-007</td>
+<td>LG-007</td>
 <td>访问日志</td>
 <td>访问控制和访问历史的证据。</td>
 </tr>
 <tr>
-<td>EV-008</td>
+<td>LG-008</td>
 <td>模型/服务清单</td>
 <td>使用的模型/服务的清单记录。</td>
 </tr>
 <tr>
-<td>EV-009</td>
+<td>LG-009</td>
 <td>风险评估</td>
 <td>使用/服务的书面风险评估。</td>
 </tr>
 <tr>
-<td>EV-010</td>
+<td>LG-010</td>
 <td>控制映射</td>
 <td>与外部框架的控制映射证据。</td>
 </tr>
 <tr>
-<td>EV-011</td>
+<td>LG-011</td>
 <td>培训/指导</td>
 <td>向用户提供培训或指导的证据。</td>
 </tr>
 <tr>
-<td>EV-012</td>
+<td>LG-012</td>
 <td>监控证据</td>
 <td>监控和持续监督的证据。</td>
 </tr>
 <tr>
-<td>EV-013</td>
+<td>LG-013</td>
 <td>事件记录</td>
 <td>与AI使用相关的事件处理证据。</td>
 </tr>
 <tr>
-<td>EV-014</td>
+<td>LG-014</td>
 <td>第三方评估</td>
 <td>供应商或第三方评估的证据。</td>
 </tr>
 <tr>
-<td>EV-015</td>
+<td>LG-015</td>
 <td>证明/签字</td>
 <td>正式证明或签字记录。</td>
 </tr>
@@ -3014,7 +3039,7 @@ AIMO 分类法提供了一种共享语言来分类这些AI特定风险，并将�
 </table>
 <h2 id="_7">如何使用</h2>
 <h3 id="_8">与证据的关系</h3>
-<p>每个证据（EV）文档引用来自多个维度的代码，以对正在记录的AI系统或用例进行分类。8维分类实现：</p>
+<p>每个证据文档引用来自多个维度的代码，以对正在记录的AI系统或用例进行分类。8维分类实现：</p>
 <ul>
 <li>整个组织的<strong>一致分类</strong></li>
 <li>按维度值进行<strong>基于风险的筛选</strong></li>
@@ -3030,7 +3055,7 @@ CH: CH-001 (Web UI)
 IM: IM-002 (SaaS 集成)
 RS: RS-001 (数据泄露), RS-003 (合规违规)
 OB: OB-001 (效率)
-EV: EV-001 (请求记录), EV-002 (审查/批准记录)
+LG: LG-001 (请求记录), LG-002 (审查/批准记录)
 </code></pre>
 <h2 id="ssot">SSOT 参考</h2>
 <p>!!! info "事实来源"

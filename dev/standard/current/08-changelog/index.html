@@ -717,6 +717,8 @@
       
         
       
+        
+      
     
     
     
@@ -824,6 +826,29 @@
   
   <span class="md-ellipsis">
     Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
     
   </span>
   
@@ -2497,7 +2522,7 @@ v1.0.0: FS-007 removed (status: removed)
 <p><strong>Summary:</strong> Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.</p>
 <h4 id="changed">Changed</h4>
 <ul>
-<li><strong>Evidence Pack document types (EP namespace):</strong> Evidence Pack file types use <strong>EP-01..EP-07</strong> (document type). Taxonomy <strong>EV-001, EV-002, …</strong> remain event/evidence types (Request Record, Review/Approval, etc.). See <a href="../06-ev-template/">Evidence Pack Template</a>. Schema: <code>evidence_files[].file_id</code> pattern is <code>^EP-\\d{2}$</code>; <code>ev_type</code> is optional.</li>
+<li><strong>Evidence Pack document types (EP namespace):</strong> Evidence Pack file types use <strong>EP-01..EP-07</strong> (document type). Taxonomy <strong>LG-001, LG-002, …</strong> are Log/Event types (Request Record, Review/Approval, etc.). <strong>EV-</strong> reserved for Evidence artifact IDs only. See <a href="../06-ev-template/">Evidence Pack Template</a> and <a href="../04b-id-policy-namespace/">ID Policy / Namespace</a>. Schema: <code>evidence_files[].file_id</code> pattern is <code>^EP-\\d{2}$</code>; <code>ev_type</code> uses <strong>LG-xxx</strong>.</li>
 <li><strong>Normative relationship:</strong> <a href="../../../artifacts/evidence-bundle/">Evidence Bundle</a> now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.</li>
 <li><strong>/dev anti-miscitation:</strong> Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.</li>
 </ul>
@@ -2550,9 +2575,9 @@ v1.0.0: FS-007 removed (status: removed)
 <td>Outcome / Benefit</td>
 </tr>
 <tr>
-<td>EV</td>
-<td>EV-001 to EV-007</td>
-<td>Evidence Type</td>
+<td>LG</td>
+<td>LG-001 to LG-015</td>
+<td>Log/Event Type</td>
 </tr>
 </tbody>
 </table>
@@ -2566,13 +2591,13 @@ v1.0.0: FS-007 removed (status: removed)
 </ul>
 <p><strong>Evidence Pack Templates (MVP)</strong></p>
 <ul>
-<li>EV-01: System Overview</li>
-<li>EV-02: Data Flow</li>
-<li>EV-03: AI Inventory</li>
-<li>EV-04: Risk &amp; Impact Assessment</li>
-<li>EV-05: Controls &amp; Approvals</li>
-<li>EV-06: Logging &amp; Monitoring</li>
-<li>EV-07: Incident &amp; Exception Handling</li>
+<li>EP-01 (legacy EV-01): System Overview</li>
+<li>EP-02 (legacy EV-02): Data Flow</li>
+<li>EP-03 (legacy EV-03): AI Inventory</li>
+<li>EP-04 (legacy EV-04): Risk &amp; Impact Assessment</li>
+<li>EP-05 (legacy EV-05): Controls &amp; Approvals</li>
+<li>EP-06 (legacy EV-06): Logging &amp; Monitoring</li>
+<li>EP-07 (legacy EV-07): Incident &amp; Exception Handling</li>
 </ul>
 <p><strong>Documentation</strong></p>
 <ul>

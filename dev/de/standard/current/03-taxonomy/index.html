@@ -18,7 +18,7 @@
         <link rel="prev" href="../02-scope/">
       
       
-        <link rel="next" href="../04-codes/">
+        <link rel="next" href="../04b-id-policy-namespace/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -997,9 +999,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-evidence-typ" class="md-nav__link">
+  <a href="#lg-log-registrierungstyp" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Evidence-Typ
+      LG: Log-/Registrierungstyp
     </span>
   </a>
   
@@ -1074,6 +1076,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2328,9 +2353,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-evidence-typ" class="md-nav__link">
+  <a href="#lg-log-registrierungstyp" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Evidence-Typ
+      LG: Log-/Registrierungstyp
     </span>
   </a>
   
@@ -2526,14 +2551,14 @@ AIMO Taxonomie bietet eine gemeinsame Sprache, um diese KI-spezifischen Risiken 
 <td>Welcher Nutzen wird erwartet</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>Evidence-Typ</td>
+<td><strong>LG</strong></td>
+<td>Log-/Registrierungstyp</td>
 <td>15</td>
-<td>Welches Evidence ist erforderlich</td>
+<td>Welches Log/Registrierung erforderlich ist</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Gesamt: 91 Codes über 8 Dimensionen</strong></p>
+<p><strong>Gesamt: 91 Codes über 8 Dimensionen</strong>（<strong>EV-</strong> reserviert für Evidence-Artefakt-IDs; Taxonomie-Dimension Log/Registrierung: <strong>LG-</strong>.)</p>
 <h3 id="nutzungsregeln">Nutzungsregeln</h3>
 <table>
 <thead>
@@ -2550,7 +2575,7 @@ AIMO Taxonomie bietet eine gemeinsame Sprache, um diese KI-spezifischen Risiken 
 <td>Primäre Klassifizierung für Verantwortungszuweisung</td>
 </tr>
 <tr>
-<td>UC, DT, CH, RS, EV</td>
+<td>UC, DT, CH, RS, LG</td>
 <td>1 oder mehr</td>
 <td>Vollständige Aufzählung für Risikoabdeckung erforderlich</td>
 </tr>
@@ -2924,8 +2949,8 @@ AIMO Taxonomie bietet eine gemeinsame Sprache, um diese KI-spezifischen Risiken 
 </tr>
 </tbody>
 </table>
-<h3 id="ev-evidence-typ">EV: Evidence-Typ</h3>
-<p>Kategorisiert die erforderlichen oder gesammelten Evidence-Typen. <strong>Wählen Sie eine oder mehrere.</strong></p>
+<h3 id="lg-log-registrierungstyp">LG: Log-/Registrierungstyp</h3>
+<p>Kategorisiert die erforderlichen oder gesammelten Log-/Registrierungstypen. <strong>Wählen Sie eine oder mehrere.</strong>（EV- reserviert für Evidence-Artefakt-IDs.)</p>
 <table>
 <thead>
 <tr>
@@ -2936,77 +2961,77 @@ AIMO Taxonomie bietet eine gemeinsame Sprache, um diese KI-spezifischen Risiken 
 </thead>
 <tbody>
 <tr>
-<td>EV-001</td>
+<td>LG-001</td>
 <td>Antragsdatensatz</td>
 <td>Evidence, dass eine KI-Nutzung/ein Service beantragt und beschrieben wurde.</td>
 </tr>
 <tr>
-<td>EV-002</td>
+<td>LG-002</td>
 <td>Prüfungs-/Genehmigungsdatensatz</td>
 <td>Evidence, dass eine Prüfung/Genehmigung durchgeführt wurde.</td>
 </tr>
 <tr>
-<td>EV-003</td>
+<td>LG-003</td>
 <td>Ausnahmedatensatz</td>
 <td>Evidence, dass eine Ausnahme gewährt und verfolgt wurde.</td>
 </tr>
 <tr>
-<td>EV-004</td>
+<td>LG-004</td>
 <td>Verlängerungs-/Neubewertungsdatensatz</td>
 <td>Evidence, dass Verlängerung oder Neubewertung erfolgte.</td>
 </tr>
 <tr>
-<td>EV-005</td>
+<td>LG-005</td>
 <td>Änderungsprotokolleintrag</td>
 <td>Evidence von Änderungen und deren Genehmigungen.</td>
 </tr>
 <tr>
-<td>EV-006</td>
+<td>LG-006</td>
 <td>Integritätsnachweis</td>
 <td>Evidence der Integrität (Hash, Signatur, WORM).</td>
 </tr>
 <tr>
-<td>EV-007</td>
+<td>LG-007</td>
 <td>Zugriffsprotokoll</td>
 <td>Evidence von Zugriffskontrolle und Zugriffshistorie.</td>
 </tr>
 <tr>
-<td>EV-008</td>
+<td>LG-008</td>
 <td>Modell-/Service-Inventar</td>
 <td>Inventardatensatz der verwendeten Modelle/Services.</td>
 </tr>
 <tr>
-<td>EV-009</td>
+<td>LG-009</td>
 <td>Risikobewertung</td>
 <td>Dokumentierte Risikobewertung für die Nutzung/den Service.</td>
 </tr>
 <tr>
-<td>EV-010</td>
+<td>LG-010</td>
 <td>Kontrollzuordnung</td>
 <td>Kontrollzuordnungs-Evidence zu externen Frameworks.</td>
 </tr>
 <tr>
-<td>EV-011</td>
+<td>LG-011</td>
 <td>Schulung/Anleitung</td>
 <td>Evidence von Schulung oder Anleitung für Benutzer.</td>
 </tr>
 <tr>
-<td>EV-012</td>
+<td>LG-012</td>
 <td>Monitoring-Evidence</td>
 <td>Evidence von Monitoring und laufender Aufsicht.</td>
 </tr>
 <tr>
-<td>EV-013</td>
+<td>LG-013</td>
 <td>Incident-Datensatz</td>
 <td>Evidence von Incident-Handling im Zusammenhang mit KI-Nutzung.</td>
 </tr>
 <tr>
-<td>EV-014</td>
+<td>LG-014</td>
 <td>Drittanbieter-Bewertung</td>
 <td>Evidence von Anbieter- oder Drittanbieter-Bewertung.</td>
 </tr>
 <tr>
-<td>EV-015</td>
+<td>LG-015</td>
 <td>Attestierung/Abzeichnung</td>
 <td>Formelle Attestierung oder Abzeichnungsdatensatz.</td>
 </tr>
@@ -3014,7 +3039,7 @@ AIMO Taxonomie bietet eine gemeinsame Sprache, um diese KI-spezifischen Risiken 
 </table>
 <h2 id="verwendung">Verwendung</h2>
 <h3 id="beziehung-zu-evidence">Beziehung zu Evidence</h3>
-<p>Jedes Evidence (EV)-Dokument referenziert Codes aus mehreren Dimensionen, um das dokumentierte KI-System oder den Anwendungsfall zu klassifizieren. Die 8-Dimensionen-Klassifizierung ermöglicht:</p>
+<p>Jedes Evidence-Dokument referenziert Codes aus mehreren Dimensionen, um das dokumentierte KI-System oder den Anwendungsfall zu klassifizieren. Die 8-Dimensionen-Klassifizierung ermöglicht:</p>
 <ul>
 <li><strong>Konsistente Kategorisierung</strong> in der gesamten Organisation</li>
 <li><strong>Risikobasierte Filterung</strong> nach Dimensionswerten</li>
@@ -3030,7 +3055,7 @@ CH: CH-001 (Web-UI)
 IM: IM-002 (SaaS-integriert)
 RS: RS-001 (Datenleck), RS-003 (Compliance-Verstoß)
 OB: OB-001 (Effizienz)
-EV: EV-001 (Antragsdatensatz), EV-002 (Prüfungs-/Genehmigungsdatensatz)
+LG: LG-001 (Antragsdatensatz), LG-002 (Prüfungs-/Genehmigungsdatensatz)
 </code></pre>
 <h2 id="ssot-referenz">SSOT-Referenz</h2>
 <p>!!! info "Quelle der Wahrheit"

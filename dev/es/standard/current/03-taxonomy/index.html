@@ -18,7 +18,7 @@
         <link rel="prev" href="../02-scope/">
       
       
-        <link rel="next" href="../04-codes/">
+        <link rel="next" href="../04b-id-policy-namespace/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -997,9 +999,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-tipo-de-evidencia" class="md-nav__link">
+  <a href="#lg-tipo-de-logregistro" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Tipo de Evidencia
+      LG: Tipo de Log/Registro
     </span>
   </a>
   
@@ -1074,6 +1076,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2328,9 +2353,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-tipo-de-evidencia" class="md-nav__link">
+  <a href="#lg-tipo-de-logregistro" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Tipo de Evidencia
+      LG: Tipo de Log/Registro
     </span>
   </a>
   
@@ -2526,14 +2551,14 @@ La Taxonomía AIMO proporciona un lenguaje compartido para clasificar estos ries
 <td>Qué beneficios se esperan</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>Tipo de Evidencia</td>
+<td><strong>LG</strong></td>
+<td>Tipo de Log/Registro</td>
 <td>15</td>
-<td>Qué evidencia se requiere</td>
+<td>Qué log/registro se requiere</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Total: 91 códigos en 8 dimensiones</strong></p>
+<p><strong>Total: 91 códigos en 8 dimensiones</strong>（<strong>EV-</strong> reservado para ID de artefactos Evidence; dimensión log/registro de taxonomía: <strong>LG-</strong>.)</p>
 <h3 id="reglas-de-uso">Reglas de Uso</h3>
 <table>
 <thead>
@@ -2550,7 +2575,7 @@ La Taxonomía AIMO proporciona un lenguaje compartido para clasificar estos ries
 <td>Clasificación primaria para asignación de responsabilidad</td>
 </tr>
 <tr>
-<td>UC, DT, CH, RS, EV</td>
+<td>UC, DT, CH, RS, LG</td>
 <td>1 o más</td>
 <td>Enumeración completa requerida para cobertura de riesgo</td>
 </tr>
@@ -2924,8 +2949,8 @@ La Taxonomía AIMO proporciona un lenguaje compartido para clasificar estos ries
 </tr>
 </tbody>
 </table>
-<h3 id="ev-tipo-de-evidencia">EV: Tipo de Evidencia</h3>
-<p>Categoriza los tipos de evidencia requerida o recopilada. <strong>Seleccione uno o más.</strong></p>
+<h3 id="lg-tipo-de-logregistro">LG: Tipo de Log/Registro</h3>
+<p>Categoriza los tipos de log/registro requeridos o recopilados. <strong>Seleccione uno o más.</strong>（EV- reservado para ID de artefactos Evidence.)</p>
 <table>
 <thead>
 <tr>
@@ -2936,77 +2961,77 @@ La Taxonomía AIMO proporciona un lenguaje compartido para clasificar estos ries
 </thead>
 <tbody>
 <tr>
-<td>EV-001</td>
+<td>LG-001</td>
 <td>Registro de Solicitud</td>
 <td>Evidencia de que un uso/servicio de IA fue solicitado y descrito.</td>
 </tr>
 <tr>
-<td>EV-002</td>
+<td>LG-002</td>
 <td>Registro de Revisión/Aprobación</td>
 <td>Evidencia de que una revisión/aprobación fue realizada.</td>
 </tr>
 <tr>
-<td>EV-003</td>
+<td>LG-003</td>
 <td>Registro de Excepción</td>
 <td>Evidencia de que una excepción fue otorgada y rastreada.</td>
 </tr>
 <tr>
-<td>EV-004</td>
+<td>LG-004</td>
 <td>Registro de Renovación/Reevaluación</td>
 <td>Evidencia de que renovación o reevaluación ocurrió.</td>
 </tr>
 <tr>
-<td>EV-005</td>
+<td>LG-005</td>
 <td>Entrada de Registro de Cambios</td>
 <td>Evidencia de cambios y sus aprobaciones.</td>
 </tr>
 <tr>
-<td>EV-006</td>
+<td>LG-006</td>
 <td>Prueba de Integridad</td>
 <td>Evidencia de integridad (hash, firma, WORM).</td>
 </tr>
 <tr>
-<td>EV-007</td>
+<td>LG-007</td>
 <td>Registro de Acceso</td>
 <td>Evidencia de control de acceso e historial de acceso.</td>
 </tr>
 <tr>
-<td>EV-008</td>
+<td>LG-008</td>
 <td>Inventario de Modelo/Servicio</td>
 <td>Registro de inventario de modelos/servicios usados.</td>
 </tr>
 <tr>
-<td>EV-009</td>
+<td>LG-009</td>
 <td>Evaluación de Riesgos</td>
 <td>Evaluación de riesgos documentada para el uso/servicio.</td>
 </tr>
 <tr>
-<td>EV-010</td>
+<td>LG-010</td>
 <td>Mapeo de Controles</td>
 <td>Evidencia de mapeo de controles a marcos externos.</td>
 </tr>
 <tr>
-<td>EV-011</td>
+<td>LG-011</td>
 <td>Capacitación/Guía</td>
 <td>Evidencia de capacitación o guía proporcionada a usuarios.</td>
 </tr>
 <tr>
-<td>EV-012</td>
+<td>LG-012</td>
 <td>Evidencia de Monitoreo</td>
 <td>Evidencia de monitoreo y supervisión continua.</td>
 </tr>
 <tr>
-<td>EV-013</td>
+<td>LG-013</td>
 <td>Registro de Incidente</td>
 <td>Evidencia de manejo de incidentes relacionados con uso de IA.</td>
 </tr>
 <tr>
-<td>EV-014</td>
+<td>LG-014</td>
 <td>Evaluación de Terceros</td>
 <td>Evidencia de evaluación de proveedor o tercero.</td>
 </tr>
 <tr>
-<td>EV-015</td>
+<td>LG-015</td>
 <td>Atestación/Firma</td>
 <td>Registro de atestación o firma formal.</td>
 </tr>
@@ -3014,7 +3039,7 @@ La Taxonomía AIMO proporciona un lenguaje compartido para clasificar estos ries
 </table>
 <h2 id="como-usar">Cómo Usar</h2>
 <h3 id="relacion-con-evidencia">Relación con Evidencia</h3>
-<p>Cada documento de Evidencia (EV) referencia códigos de múltiples dimensiones para clasificar el sistema o caso de uso de IA que se documenta. La clasificación de 8 dimensiones permite:</p>
+<p>Cada documento de evidencia referencia códigos de múltiples dimensiones para clasificar el sistema o caso de uso de IA que se documenta. La clasificación de 8 dimensiones permite:</p>
 <ul>
 <li><strong>Categorización consistente</strong> en la organización</li>
 <li><strong>Filtrado basado en riesgo</strong> por valores de dimensión</li>
@@ -3030,7 +3055,7 @@ CH: CH-001 (UI Web)
 IM: IM-002 (SaaS Integrado)
 RS: RS-001 (Fuga de Datos), RS-003 (Violación de Cumplimiento)
 OB: OB-001 (Eficiencia)
-EV: EV-001 (Registro de Solicitud), EV-002 (Registro de Revisión/Aprobación)
+LG: LG-001 (Registro de Solicitud), LG-002 (Registro de Revisión/Aprobación)
 </code></pre>
 <h2 id="referencia-ssot">Referencia SSOT</h2>
 <p>!!! info "Fuente de Verdad"

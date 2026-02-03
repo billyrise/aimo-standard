@@ -18,7 +18,7 @@
         <link rel="prev" href="../02-scope/">
       
       
-        <link rel="next" href="../04-codes/">
+        <link rel="next" href="../04b-id-policy-namespace/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -997,9 +999,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev" class="md-nav__link">
+  <a href="#lg" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: 증거 유형
+      LG: 로그/기록 유형
     </span>
   </a>
   
@@ -1074,6 +1076,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2328,9 +2353,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev" class="md-nav__link">
+  <a href="#lg" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: 증거 유형
+      LG: 로그/기록 유형
     </span>
   </a>
   
@@ -2526,14 +2551,14 @@ AIMO 분류체계는 이러한 AI 특정 리스크를 분류하고 증거 요구
 <td>기대되는 혜택</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>증거 유형</td>
+<td><strong>LG</strong></td>
+<td>로그/기록 유형</td>
 <td>15</td>
-<td>필요한 증거</td>
+<td>필요한 로그/기록</td>
 </tr>
 </tbody>
 </table>
-<p><strong>총계: 8개 차원에 걸쳐 91개 코드</strong></p>
+<p><strong>총계: 8개 차원에 걸쳐 91개 코드</strong>（<strong>EV-</strong>는 Evidence 산출물 ID 전용; 분류법 로그/기록 차원은 <strong>LG-</strong> 사용.)</p>
 <h3 id="_5">사용 규칙</h3>
 <table>
 <thead>
@@ -2550,7 +2575,7 @@ AIMO 분류체계는 이러한 AI 특정 리스크를 분류하고 증거 요구
 <td>책임 할당을 위한 기본 분류</td>
 </tr>
 <tr>
-<td>UC, DT, CH, RS, EV</td>
+<td>UC, DT, CH, RS, LG</td>
 <td>1개 이상</td>
 <td>리스크 범위를 위한 완전한 열거 필요</td>
 </tr>
@@ -2924,8 +2949,8 @@ AIMO 분류체계는 이러한 AI 특정 리스크를 분류하고 증거 요구
 </tr>
 </tbody>
 </table>
-<h3 id="ev">EV: 증거 유형</h3>
-<p>필요하거나 수집된 증거 유형을 분류합니다. <strong>하나 이상을 선택합니다.</strong></p>
+<h3 id="lg">LG: 로그/기록 유형</h3>
+<p>필요하거나 수집된 로그/기록 유형을 분류합니다. <strong>하나 이상을 선택합니다.</strong>（EV-는 Evidence 산출물 ID 전용.)</p>
 <table>
 <thead>
 <tr>
@@ -2936,77 +2961,77 @@ AIMO 분류체계는 이러한 AI 특정 리스크를 분류하고 증거 요구
 </thead>
 <tbody>
 <tr>
-<td>EV-001</td>
+<td>LG-001</td>
 <td>요청 레코드</td>
 <td>AI 사용/서비스가 요청되고 설명되었다는 증거.</td>
 </tr>
 <tr>
-<td>EV-002</td>
+<td>LG-002</td>
 <td>검토/승인 레코드</td>
 <td>검토/승인이 수행되었다는 증거.</td>
 </tr>
 <tr>
-<td>EV-003</td>
+<td>LG-003</td>
 <td>예외 레코드</td>
 <td>예외가 부여되고 추적되었다는 증거.</td>
 </tr>
 <tr>
-<td>EV-004</td>
+<td>LG-004</td>
 <td>갱신/재평가 레코드</td>
 <td>갱신 또는 재평가가 발생했다는 증거.</td>
 </tr>
 <tr>
-<td>EV-005</td>
+<td>LG-005</td>
 <td>변경 로그 항목</td>
 <td>변경 및 그 승인에 대한 증거.</td>
 </tr>
 <tr>
-<td>EV-006</td>
+<td>LG-006</td>
 <td>무결성 증명</td>
 <td>무결성에 대한 증거 (해시, 서명, WORM).</td>
 </tr>
 <tr>
-<td>EV-007</td>
+<td>LG-007</td>
 <td>접근 로그</td>
 <td>접근 통제 및 접근 이력에 대한 증거.</td>
 </tr>
 <tr>
-<td>EV-008</td>
+<td>LG-008</td>
 <td>모델/서비스 인벤토리</td>
 <td>사용된 모델/서비스의 인벤토리 레코드.</td>
 </tr>
 <tr>
-<td>EV-009</td>
+<td>LG-009</td>
 <td>리스크 평가</td>
 <td>사용/서비스에 대한 문서화된 리스크 평가.</td>
 </tr>
 <tr>
-<td>EV-010</td>
+<td>LG-010</td>
 <td>통제 매핑</td>
 <td>외부 프레임워크에 대한 통제 매핑 증거.</td>
 </tr>
 <tr>
-<td>EV-011</td>
+<td>LG-011</td>
 <td>교육/지침</td>
 <td>사용자에게 제공된 교육 또는 지침에 대한 증거.</td>
 </tr>
 <tr>
-<td>EV-012</td>
+<td>LG-012</td>
 <td>모니터링 증거</td>
 <td>모니터링 및 지속적인 감독에 대한 증거.</td>
 </tr>
 <tr>
-<td>EV-013</td>
+<td>LG-013</td>
 <td>인시던트 레코드</td>
 <td>AI 사용과 관련된 인시던트 처리에 대한 증거.</td>
 </tr>
 <tr>
-<td>EV-014</td>
+<td>LG-014</td>
 <td>제3자 평가</td>
 <td>벤더 또는 제3자 평가에 대한 증거.</td>
 </tr>
 <tr>
-<td>EV-015</td>
+<td>LG-015</td>
 <td>증명/승인</td>
 <td>공식 증명 또는 승인 레코드.</td>
 </tr>
@@ -3014,7 +3039,7 @@ AIMO 분류체계는 이러한 AI 특정 리스크를 분류하고 증거 요구
 </table>
 <h2 id="_7">사용 방법</h2>
 <h3 id="_8">증거와의 관계</h3>
-<p>각 증거(EV) 문서는 문서화되는 AI 시스템 또는 사용 사례를 분류하기 위해 여러 차원의 코드를 참조합니다. 8차원 분류는 다음을 가능하게 합니다:</p>
+<p>각 증거 문서는 문서화되는 AI 시스템 또는 사용 사례를 분류하기 위해 여러 차원의 코드를 참조합니다. 8차원 분류는 다음을 가능하게 합니다:</p>
 <ul>
 <li>조직 전반에 걸친 <strong>일관된 분류</strong></li>
 <li>차원 값에 의한 <strong>리스크 기반 필터링</strong></li>
@@ -3030,7 +3055,7 @@ CH: CH-001 (웹 UI)
 IM: IM-002 (SaaS 통합)
 RS: RS-001 (데이터 유출), RS-003 (컴플라이언스 위반)
 OB: OB-001 (효율성)
-EV: EV-001 (요청 레코드), EV-002 (검토/승인 레코드)
+LG: LG-001 (요청 레코드), LG-002 (검토/승인 레코드)
 </code></pre>
 <h2 id="ssot">SSOT 참조</h2>
 <p>!!! info "진실 공급원"

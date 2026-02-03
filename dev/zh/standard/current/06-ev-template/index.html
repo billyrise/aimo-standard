@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -846,6 +848,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../04-codes/" class="md-nav__link">
         
   
@@ -942,9 +967,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#evidence-pack-ep-taxonomy-evidence-typeev" class="md-nav__link">
+  <a href="#evidence-pack-ep-taxonomy-logevent-typelg" class="md-nav__link">
     <span class="md-ellipsis">
-      命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Evidence Type（EV）
+      命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Log/Event Type（LG）
     </span>
   </a>
   
@@ -2150,9 +2175,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#evidence-pack-ep-taxonomy-evidence-typeev" class="md-nav__link">
+  <a href="#evidence-pack-ep-taxonomy-logevent-typelg" class="md-nav__link">
     <span class="md-ellipsis">
-      命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Evidence Type（EV）
+      命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Log/Event Type（LG）
     </span>
   </a>
   
@@ -2333,9 +2358,9 @@
 
 <h1 id="evidence-pack-ep">Evidence Pack 模板（EP）</h1>
 <p>本节定义证据包模板及其使用。证据包是一组文档的集合，用于展示AI系统的治理和合规。</p>
-<h2 id="evidence-pack-ep-taxonomy-evidence-typeev">命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Evidence Type（EV）</h2>
+<h2 id="evidence-pack-ep-taxonomy-logevent-typelg">命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Log/Event Type（LG）</h2>
 <blockquote>
-<p><strong>重要</strong>：<strong>EP-01..EP-07</strong> 表示<em>文档类型</em>（证据包文件类型）。<strong>EV-001、EV-002、…</strong> 在<a href="../03-taxonomy/">分类法</a>中表示<em>事件/证据类型</em>（请求记录、审查/批准记录等）。请勿混用代码：EP 用于包结构，EV 用于生命周期证据分类。</p>
+<p><strong>重要</strong>：<strong>EP-01..EP-07</strong> 表示<em>文档类型</em>（证据包文件类型）。<strong>LG-001、LG-002、…</strong> 在<a href="../03-taxonomy/">分类法</a>中表示<em>日志/记录类型</em>（请求记录、审查/批准记录等）。<strong>EV-</strong> 专用于 Evidence 成果物 ID。请勿混用：EP 用于包结构，LG 用于生命周期证据分类。</p>
 </blockquote>
 <h2 id="_1">关键原则：索引和差异管理</h2>
 <p>重要的不仅是单个提交的内容，而是证据项之间的<strong>索引</strong>和<strong>差异管理</strong>。</p>
@@ -2346,7 +2371,7 @@
 <li><strong>可维护性</strong>：跟踪什么变了、何时变的、为什么变</li>
 </ol>
 <h2 id="mvp-ep-01-ep-07">MVP 证据集（EP-01 到 EP-07）</h2>
-<p>以下七种 <strong>Evidence Pack 文档类型</strong>（EP）构成展示AI治理的<strong>最小可行集</strong>。每种为文档模板；分类法 <strong>EV</strong> 代码（请求记录、审查/批准等）在包内及 <code>codes.EV</code> 中用于对<em>事件</em>证据进行分类。</p>
+<p>以下七种 <strong>Evidence Pack 文档类型</strong>（EP）构成展示AI治理的<strong>最小可行集</strong>。每种为文档模板；分类法 <strong>LG</strong> 代码（请求记录、审查/批准等）在包内及 <code>codes.LG</code> 中用于对<em>日志/记录</em>证据进行分类。</p>
 <table>
 <thead>
 <tr>
@@ -2438,7 +2463,7 @@
 </tbody>
 </table>
 <h3 id="aimo-8">AIMO 代码（8个维度）</h3>
-<p>每个证据包必须包含所有8个维度的代码。<strong>EV</strong> 维度列出适用于本包的<em>分类法</em>证据类型（如请求记录、审查/批准），而非文档类型代码。文档类型由 <code>evidence_files[].file_id</code>（EP-01..EP-07）给出。</p>
+<p>每个证据包必须包含所有8个维度的代码。<strong>LG</strong> 维度列出适用于本包的<em>分类法</em>日志/记录类型（如请求记录、审查/批准），而非文档类型代码。文档类型由 <code>evidence_files[].file_id</code>（EP-01..EP-07）给出。</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2448,12 +2473,12 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
+    &quot;LG&quot;: [&quot;LG-001&quot;, &quot;LG-002&quot;, &quot;LG-008&quot;, &quot;LG-009&quot;]
   }
 }
 </code></pre>
 <h3 id="_4">证据文件列表</h3>
-<p>每条记录通过 <strong>file_id</strong>（EP-01..EP-07）标识包内文档。可选 <strong>ev_codes</strong> 可列出该文档支持的分类法 EV 代码（EV-xxx）。</p>
+<p>每条记录通过 <strong>file_id</strong>（EP-01..EP-07）标识包内文档。可选 <strong>ev_codes</strong> 可列出该文档支持的分类法 LG 代码（LG-xxx）。</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
@@ -2503,7 +2528,7 @@
 | **IM** | `IM-001` | 独立 |
 | **RS** | `RS-001` | 数据泄露 |
 | **OB** | `OB-001` | 效率 |
-| **EV** | `EV-001`, `EV-002` | 请求记录、审查/批准记录 |
+| **LG** | `LG-001`, `LG-002` | 请求记录、审查/批准记录 |
 </code></pre>
 <h2 id="_7">下载</h2>
 <h3 id="_8">模板</h3>

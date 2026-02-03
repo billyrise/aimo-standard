@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -829,6 +831,29 @@
   
   <span class="md-ellipsis">
     Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
     
   </span>
   
@@ -2335,7 +2360,7 @@
 <p>Dieser Abschnitt definiert die Evidence Pack-Templates und deren Verwendung. Ein Evidence Pack ist eine Sammlung von Dokumentation, die Governance und Compliance für ein KI-System nachweist.</p>
 <h2 id="namensraum-evidence-pack-dokumenttypen-ep-vs-taxonomy-evidence-type-ev">Namensraum: Evidence Pack-Dokumenttypen (EP) vs Taxonomy Evidence Type (EV)</h2>
 <blockquote>
-<p><strong>Wichtig</strong>: <strong>EP-01..EP-07</strong> bezeichnen <em>Dokumenttypen</em> (Evidence Pack-Dateitypen). <strong>EV-001, EV-002, …</strong> in der <a href="../03-taxonomy/">Taxonomie</a> bezeichnen <em>Ereignis-/Evidenztypen</em> (Antragsdatensatz, Prüf-/Genehmigungsdatensatz usw.). Codes nicht mischen: EP für Pack-Struktur, EV für Lebenszyklus-Evidenzklassifikation.</p>
+<p><strong>Wichtig</strong>: <strong>EP-01..EP-07</strong> bezeichnen <em>Dokumenttypen</em> (Evidence Pack-Dateitypen). <strong>LG-001, LG-002, …</strong> in der <a href="../03-taxonomy/">Taxonomie</a> bezeichnen <em>Log-/Registrierungstypen</em> (Antragsdatensatz, Prüf-/Genehmigungsdatensatz usw.). <strong>EV-</strong> reserviert für Evidence-Artefakt-IDs. EP für Pack-Struktur, LG für Lebenszyklus-Evidenzklassifikation.</p>
 </blockquote>
 <h2 id="grundprinzip-index-und-diff-management">Grundprinzip: Index- und Diff-Management</h2>
 <p>Was zählt, ist nicht nur der Inhalt einzelner Einreichungen, sondern das <strong>Index</strong>- und <strong>Diff-Management</strong> über Evidence-Elemente hinweg.</p>
@@ -2346,7 +2371,7 @@
 <li><strong>Wartbarkeit</strong>: Verfolgung, was sich wann und warum geändert hat</li>
 </ol>
 <h2 id="mvp-evidence-set-ep-01-bis-ep-07">MVP Evidence Set (EP-01 bis EP-07)</h2>
-<p>Die folgenden sieben <strong>Evidence Pack-Dokumenttypen</strong> (EP) bilden das <strong>minimale viable Set</strong> zum Nachweis von KI-Governance. Jeder ist ein Dokumenten-Template; Taxonomy-<strong>EV</strong>-Codes (Antragsdatensatz, Prüf/Genehmigung usw.) werden an anderer Stelle im Bundle und in <code>codes.EV</code> zur Klassifikation von <em>Ereignis</em>-Evidenz verwendet.</p>
+<p>Die folgenden sieben <strong>Evidence Pack-Dokumenttypen</strong> (EP) bilden das <strong>minimale viable Set</strong> zum Nachweis von KI-Governance. Jeder ist ein Dokumenten-Template; Taxonomy-<strong>LG</strong>-Codes (Antragsdatensatz, Prüf/Genehmigung usw.) werden an anderer Stelle im Bundle und in <code>codes.LG</code> zur Klassifikation von <em>Log-/Registrierung</em>-Evidenz verwendet.</p>
 <table>
 <thead>
 <tr>
@@ -2438,7 +2463,7 @@
 </tbody>
 </table>
 <h3 id="aimo-codes-8-dimensionen">AIMO Codes (8 Dimensionen)</h3>
-<p>Jedes Evidence Pack MUSS Codes aus allen 8 Dimensionen enthalten. Die Dimension <strong>EV</strong> listet <em>Taxonomy</em>-Evidenztypen (z. B. Antragsdatensatz, Prüf/Genehmigung), die auf dieses Pack zutreffen—nicht Dokumenttyp-Codes. Der Dokumenttyp wird durch <code>evidence_files[].file_id</code> (EP-01..EP-07) angegeben.</p>
+<p>Jedes Evidence Pack MUSS Codes aus allen 8 Dimensionen enthalten. Die Dimension <strong>LG</strong> listet <em>Taxonomy</em>-Log-/Registrierungstypen (z. B. Antragsdatensatz, Prüf/Genehmigung), die auf dieses Pack zutreffen—nicht Dokumenttyp-Codes. Der Dokumenttyp wird durch <code>evidence_files[].file_id</code> (EP-01..EP-07) angegeben.</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2448,12 +2473,12 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
+    &quot;LG&quot;: [&quot;LG-001&quot;, &quot;LG-002&quot;, &quot;LG-008&quot;, &quot;LG-009&quot;]
   }
 }
 </code></pre>
 <h3 id="evidence-dateiliste">Evidence-Dateiliste</h3>
-<p>Jeder Eintrag identifiziert ein Dokument im Pack durch <strong>file_id</strong> (EP-01..EP-07). Optional kann <strong>ev_codes</strong> Taxonomy-EV-Codes (EV-xxx) auflisten, die das Dokument unterstützt.</p>
+<p>Jeder Eintrag identifiziert ein Dokument im Pack durch <strong>file_id</strong> (EP-01..EP-07). Optional kann <strong>ev_codes</strong> Taxonomy-LG-Codes (LG-xxx) auflisten, die das Dokument unterstützt.</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
@@ -2503,7 +2528,7 @@
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Datenleck |
 | **OB** | `OB-001` | Effizienz |
-| **EV** | `EV-001`, `EV-002` | Antragsdatensatz, Prüf-/Genehmigungsdatensatz |
+| **LG** | `LG-001`, `LG-002` | Antragsdatensatz, Prüf-/Genehmigungsdatensatz |
 </code></pre>
 <h2 id="downloads">Downloads</h2>
 <h3 id="templates">Templates</h3>

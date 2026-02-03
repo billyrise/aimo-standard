@@ -18,7 +18,7 @@
         <link rel="prev" href="../02-scope/">
       
       
-        <link rel="next" href="../04-codes/">
+        <link rel="next" href="../04b-id-policy-namespace/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -997,9 +999,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-evidence-type" class="md-nav__link">
+  <a href="#lg-logevent-type" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Evidence Type
+      LG: Log/Event Type
     </span>
   </a>
   
@@ -1074,6 +1076,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2328,9 +2353,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-evidence-type" class="md-nav__link">
+  <a href="#lg-logevent-type" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Evidence Type
+      LG: Log/Event Type
     </span>
   </a>
   
@@ -2526,14 +2551,14 @@ La Tassonomia AIMO fornisce un linguaggio condiviso per classificare questi risc
 <td>Quali benefici sono attesi</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>Evidence Type</td>
+<td><strong>LG</strong></td>
+<td>Log/Event Type</td>
 <td>15</td>
-<td>Quale evidence è richiesta</td>
+<td>Quale log/registro è richiesto</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Totale: 91 codici in 8 dimensioni</strong></p>
+<p><strong>Totale: 91 codici in 8 dimensioni</strong>（<strong>EV-</strong> riservato per ID artefatti Evidence; dimensione log/registro della tassonomia: <strong>LG-</strong>.)</p>
 <h3 id="regole-duso">Regole d'Uso</h3>
 <table>
 <thead>
@@ -2550,7 +2575,7 @@ La Tassonomia AIMO fornisce un linguaggio condiviso per classificare questi risc
 <td>Classificazione primaria per l'assegnazione di responsabilità</td>
 </tr>
 <tr>
-<td>UC, DT, CH, RS, EV</td>
+<td>UC, DT, CH, RS, LG</td>
 <td>1 o più</td>
 <td>Enumerazione completa richiesta per la copertura del rischio</td>
 </tr>
@@ -2924,8 +2949,8 @@ La Tassonomia AIMO fornisce un linguaggio condiviso per classificare questi risc
 </tr>
 </tbody>
 </table>
-<h3 id="ev-evidence-type">EV: Evidence Type</h3>
-<p>Categorizza i tipi di evidence richiesti o raccolti. <strong>Selezionare una o più.</strong></p>
+<h3 id="lg-logevent-type">LG: Log/Event Type</h3>
+<p>Categorizza i tipi di log/registro richiesti o raccolti. <strong>Selezionare una o più.</strong>（EV- riservato per ID artefatti Evidence.)</p>
 <table>
 <thead>
 <tr>
@@ -2936,77 +2961,77 @@ La Tassonomia AIMO fornisce un linguaggio condiviso per classificare questi risc
 </thead>
 <tbody>
 <tr>
-<td>EV-001</td>
+<td>LG-001</td>
 <td>Request Record</td>
 <td>Evidence che un uso/servizio IA è stato richiesto e descritto.</td>
 </tr>
 <tr>
-<td>EV-002</td>
+<td>LG-002</td>
 <td>Review/Approval Record</td>
 <td>Evidence che una revisione/approvazione è stata eseguita.</td>
 </tr>
 <tr>
-<td>EV-003</td>
+<td>LG-003</td>
 <td>Exception Record</td>
 <td>Evidence che un'eccezione è stata concessa e tracciata.</td>
 </tr>
 <tr>
-<td>EV-004</td>
+<td>LG-004</td>
 <td>Renewal/Re-evaluation Record</td>
 <td>Evidence che è avvenuto rinnovo o rivalutazione.</td>
 </tr>
 <tr>
-<td>EV-005</td>
+<td>LG-005</td>
 <td>Change Log Entry</td>
 <td>Evidence delle modifiche e delle loro approvazioni.</td>
 </tr>
 <tr>
-<td>EV-006</td>
+<td>LG-006</td>
 <td>Integrity Proof</td>
 <td>Evidence di integrità (hash, firma, WORM).</td>
 </tr>
 <tr>
-<td>EV-007</td>
+<td>LG-007</td>
 <td>Access Log</td>
 <td>Evidence di controllo degli accessi e cronologia degli accessi.</td>
 </tr>
 <tr>
-<td>EV-008</td>
+<td>LG-008</td>
 <td>Model/Service Inventory</td>
 <td>Record di inventario dei modelli/servizi utilizzati.</td>
 </tr>
 <tr>
-<td>EV-009</td>
+<td>LG-009</td>
 <td>Risk Assessment</td>
 <td>Valutazione del rischio documentata per l'uso/servizio.</td>
 </tr>
 <tr>
-<td>EV-010</td>
+<td>LG-010</td>
 <td>Control Mapping</td>
 <td>Evidence di mappatura dei controlli verso framework esterni.</td>
 </tr>
 <tr>
-<td>EV-011</td>
+<td>LG-011</td>
 <td>Training/Guidance</td>
 <td>Evidence di formazione o guida fornita agli utenti.</td>
 </tr>
 <tr>
-<td>EV-012</td>
+<td>LG-012</td>
 <td>Monitoring Evidence</td>
 <td>Evidence di monitoraggio e supervisione continua.</td>
 </tr>
 <tr>
-<td>EV-013</td>
+<td>LG-013</td>
 <td>Incident Record</td>
 <td>Evidence di gestione degli incidenti relativi all'uso dell'IA.</td>
 </tr>
 <tr>
-<td>EV-014</td>
+<td>LG-014</td>
 <td>Third-party Assessment</td>
 <td>Evidence di valutazione del vendor o di terze parti.</td>
 </tr>
 <tr>
-<td>EV-015</td>
+<td>LG-015</td>
 <td>Attestation/Sign-off</td>
 <td>Record di attestazione formale o sign-off.</td>
 </tr>
@@ -3014,7 +3039,7 @@ La Tassonomia AIMO fornisce un linguaggio condiviso per classificare questi risc
 </table>
 <h2 id="come-usare">Come Usare</h2>
 <h3 id="relazione-con-levidence">Relazione con l'Evidence</h3>
-<p>Ogni documento Evidence (EV) referenzia codici da più dimensioni per classificare il sistema IA o il caso d'uso documentato. La classificazione a 8 dimensioni abilita:</p>
+<p>Ogni documento Evidence referenzia codici da più dimensioni per classificare il sistema IA o il caso d'uso documentato. La classificazione a 8 dimensioni abilita:</p>
 <ul>
 <li><strong>Categorizzazione coerente</strong> attraverso l'organizzazione</li>
 <li><strong>Filtraggio basato sul rischio</strong> per valori dimensionali</li>
@@ -3030,7 +3055,7 @@ CH: CH-001 (Web UI)
 IM: IM-002 (SaaS Integrated)
 RS: RS-001 (Data Leakage), RS-003 (Compliance Breach)
 OB: OB-001 (Efficiency)
-EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
+LG: LG-001 (Request Record), LG-002 (Review/Approval Record)
 </code></pre>
 <h2 id="riferimento-ssot">Riferimento SSOT</h2>
 <p>!!! info "Fonte di Verità"

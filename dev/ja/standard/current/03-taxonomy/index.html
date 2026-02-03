@@ -18,7 +18,7 @@
         <link rel="prev" href="../02-scope/">
       
       
-        <link rel="next" href="../04-codes/">
+        <link rel="next" href="../04b-id-policy-namespace/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -997,9 +999,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-evidence-type" class="md-nav__link">
+  <a href="#lg-logevent-type" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Evidence Type / 証跡種別
+      LG: Log/Event Type / ログ/記録種別
     </span>
   </a>
   
@@ -1074,6 +1076,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2328,9 +2353,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-evidence-type" class="md-nav__link">
+  <a href="#lg-logevent-type" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Evidence Type / 証跡種別
+      LG: Log/Event Type / ログ/記録種別
     </span>
   </a>
   
@@ -2534,15 +2559,16 @@ AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類
 <td>どのベネフィットが期待されるか</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>Evidence Type</td>
-<td>証跡種別</td>
+<td><strong>LG</strong></td>
+<td>Log/Event Type</td>
+<td>ログ/記録種別</td>
 <td>15</td>
-<td>どの証跡が必要か</td>
+<td>どのログ/記録が必要か</td>
 </tr>
 </tbody>
 </table>
 <p><strong>合計: 8次元にわたる91コード</strong></p>
+<p><a href="../04b-id-policy-namespace/">IDポリシー / 名前空間</a>を参照：<strong>EV-</strong> は Evidence <em>成果物</em>ID 専用。タクソノミーのログ/記録次元は <strong>LG-</strong>（例：LG-001 … LG-015）を使用。</p>
 <h3 id="_4">使用ルール</h3>
 <table>
 <thead>
@@ -2559,7 +2585,7 @@ AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類
 <td>責任割当のための主要分類</td>
 </tr>
 <tr>
-<td>UC, DT, CH, RS, EV</td>
+<td>UC, DT, CH, RS, LG</td>
 <td>1つ以上</td>
 <td>リスクカバレッジのための完全列挙が必要</td>
 </tr>
@@ -2994,8 +3020,8 @@ AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類
 </tr>
 </tbody>
 </table>
-<h3 id="ev-evidence-type">EV: Evidence Type / 証跡種別</h3>
-<p>必要な/収集する証跡の種類。<strong>1つ以上を選択。</strong></p>
+<h3 id="lg-logevent-type">LG: Log/Event Type / ログ/記録種別</h3>
+<p>必要な/収集するログ/記録の種類。<strong>1つ以上を選択。</strong>（<a href="../04b-id-policy-namespace/">IDポリシー / 名前空間</a>参照：<strong>EV-</strong> は Evidence <em>成果物</em>ID 専用。）</p>
 <table>
 <thead>
 <tr>
@@ -3007,91 +3033,91 @@ AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類
 </thead>
 <tbody>
 <tr>
-<td>EV-001</td>
+<td>LG-001</td>
 <td>Request Record</td>
 <td>申請記録</td>
 <td>AI利用/サービスの申請と内容説明の証跡。</td>
 </tr>
 <tr>
-<td>EV-002</td>
+<td>LG-002</td>
 <td>Review/Approval Record</td>
 <td>審査/承認記録</td>
 <td>審査・承認が実施されたことの証跡。</td>
 </tr>
 <tr>
-<td>EV-003</td>
+<td>LG-003</td>
 <td>Exception Record</td>
 <td>例外記録</td>
 <td>例外が付与され、管理された証跡。</td>
 </tr>
 <tr>
-<td>EV-004</td>
+<td>LG-004</td>
 <td>Renewal/Re-evaluation Record</td>
 <td>更新/再評価記録</td>
 <td>更新または再評価が行われた証跡。</td>
 </tr>
 <tr>
-<td>EV-005</td>
+<td>LG-005</td>
 <td>Change Log Entry</td>
 <td>変更管理記録</td>
 <td>変更内容と承認の証跡。</td>
 </tr>
 <tr>
-<td>EV-006</td>
+<td>LG-006</td>
 <td>Integrity Proof</td>
 <td>完全性証明</td>
 <td>完全性（ハッシュ、署名、WORM等）の証跡。</td>
 </tr>
 <tr>
-<td>EV-007</td>
+<td>LG-007</td>
 <td>Access Log</td>
 <td>アクセスログ</td>
 <td>アクセス制御とアクセス履歴の証跡。</td>
 </tr>
 <tr>
-<td>EV-008</td>
+<td>LG-008</td>
 <td>Model/Service Inventory</td>
 <td>AI資産台帳</td>
 <td>利用するモデル/サービスの台帳記録。</td>
 </tr>
 <tr>
-<td>EV-009</td>
+<td>LG-009</td>
 <td>Risk Assessment</td>
 <td>リスク評価</td>
 <td>利用/サービスのリスク評価文書。</td>
 </tr>
 <tr>
-<td>EV-010</td>
+<td>LG-010</td>
 <td>Control Mapping</td>
 <td>統制マッピング</td>
 <td>外部フレームワークへの統制マッピング証跡。</td>
 </tr>
 <tr>
-<td>EV-011</td>
+<td>LG-011</td>
 <td>Training/Guidance</td>
 <td>教育/ガイダンス</td>
 <td>利用者に提供した教育/ガイダンスの証跡。</td>
 </tr>
 <tr>
-<td>EV-012</td>
+<td>LG-012</td>
 <td>Monitoring Evidence</td>
 <td>監視証跡</td>
 <td>監視・継続的監督の証跡。</td>
 </tr>
 <tr>
-<td>EV-013</td>
+<td>LG-013</td>
 <td>Incident Record</td>
 <td>インシデント記録</td>
 <td>AI利用に関連するインシデント対応の証跡。</td>
 </tr>
 <tr>
-<td>EV-014</td>
+<td>LG-014</td>
 <td>Third-party Assessment</td>
 <td>第三者評価</td>
 <td>ベンダー/第三者評価の証跡。</td>
 </tr>
 <tr>
-<td>EV-015</td>
+<td>LG-015</td>
 <td>Attestation/Sign-off</td>
 <td>宣誓/サインオフ</td>
 <td>正式な宣誓/サインオフの証跡。</td>
@@ -3100,7 +3126,7 @@ AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類
 </table>
 <h2 id="_6">使用方法</h2>
 <h3 id="_7">証跡との関係</h3>
-<p>各エビデンス（EV）ドキュメントは、文書化されるAIシステムまたはユースケースを分類するために複数の次元からコードを参照します。8次元分類により以下が可能になります：</p>
+<p>各証跡ドキュメントは、文書化されるAIシステムまたはユースケースを分類するために複数の次元からコードを参照します。8次元分類により以下が可能になります：</p>
 <ul>
 <li>組織全体での<strong>一貫した分類</strong></li>
 <li>次元値による<strong>リスクベースのフィルタリング</strong></li>
@@ -3116,7 +3142,7 @@ CH: CH-001（Web UI）
 IM: IM-002（SaaS連携）
 RS: RS-001（情報漏えい）, RS-003（法令/規程違反）
 OB: OB-001（効率化）
-EV: EV-001（申請記録）, EV-002（審査/承認記録）
+LG: LG-001（申請記録）, LG-002（審査/承認記録）
 </code></pre>
 <h2 id="ssot">SSOT参照</h2>
 <p>!!! info "正式なソース"

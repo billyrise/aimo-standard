@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -829,6 +831,29 @@
   
   <span class="md-ellipsis">
     Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
     
   </span>
   
@@ -2335,7 +2360,7 @@
 <p>このセクションでは、Evidence Packテンプレートとその使用方法を定義します。Evidence Packは、AIシステムのガバナンスとコンプライアンスを示すドキュメントのコレクションです。</p>
 <h2 id="evidence-pack-ep-taxonomy-evidence-typeev">名前空間：Evidence Pack ドキュメント種別（EP）と Taxonomy Evidence Type（EV）</h2>
 <blockquote>
-<p><strong>重要</strong>: <strong>EP-01..EP-07</strong> は<em>ドキュメント種別</em>（Evidence Pack ファイル種別）を表します。<strong>EV-001, EV-002, …</strong> は <a href="../03-taxonomy/">タクソノミー</a> における<em>イベント／証跡種別</em>（申請記録、審査/承認記録、例外記録など）を表します。コードを混同しないでください。EP はパック構造、EV はライフサイクル証跡の分類に使用します。</p>
+<p><strong>重要</strong>: <strong>EP-01..EP-07</strong> は<em>ドキュメント種別</em>（Evidence Pack ファイル種別）を表します。<strong>LG-001, LG-002, …</strong> は <a href="../03-taxonomy/">タクソノミー</a> における<em>ログ/記録種別</em>（申請記録、審査/承認記録、例外記録など）を表します。<strong>EV-</strong> は <a href="../04b-id-policy-namespace/">IDポリシー / 名前空間</a> のとおり Evidence <em>成果物</em>ID 専用です。EP はパック構造、LG はライフサイクル証跡の分類に使用します。</p>
 </blockquote>
 <h2 id="_1">重要原則：索引と差分管理</h2>
 <p>重要なのは個々の提出物の中身だけでなく、証跡項目全体の<strong>索引</strong>と<strong>差分管理</strong>です。</p>
@@ -2346,7 +2371,7 @@
 <li><strong>保守性</strong>: 何が、いつ、なぜ変更されたかの追跡</li>
 </ol>
 <h2 id="mvp-ep-01ep-07">MVP 証跡セット（EP-01〜EP-07）</h2>
-<p>以下の7つの <strong>Evidence Pack ドキュメント種別</strong>（EP）が、AIガバナンスを示すための<strong>最小限の必要セット</strong>を構成します。各項目はドキュメントテンプレートです。Taxonomy の <strong>EV</strong> コード（申請記録、審査/承認記録など）は、バンドル内の他箇所および <code>codes.EV</code> で<em>イベント</em>証跡の分類に使用します。</p>
+<p>以下の7つの <strong>Evidence Pack ドキュメント種別</strong>（EP）が、AIガバナンスを示すための<strong>最小限の必要セット</strong>を構成します。各項目はドキュメントテンプレートです。Taxonomy の <strong>LG</strong> コード（申請記録、審査/承認記録など）は、バンドル内の他箇所および <code>codes.LG</code> で<em>ログ/記録</em>証跡の分類に使用します。</p>
 <table>
 <thead>
 <tr>
@@ -2438,7 +2463,7 @@
 </tbody>
 </table>
 <h3 id="aimo8">AIMOコード（8次元）</h3>
-<p>各Evidence Packには8次元すべてからのコードが必須です。<strong>EV</strong> 次元は、このパックに該当する<em>タクソノミー</em>の証跡種別（例：申請記録、審査/承認記録）を列挙します。ドキュメント種別コードではありません。ドキュメント種別は <code>evidence_files[].file_id</code>（EP-01..EP-07）で表します。</p>
+<p>各Evidence Packには8次元すべてからのコードが必須です。<strong>LG</strong> 次元は、このパックに該当する<em>タクソノミー</em>のログ/記録種別（例：申請記録、審査/承認記録）を列挙します。ドキュメント種別コードではありません。ドキュメント種別は <code>evidence_files[].file_id</code>（EP-01..EP-07）で表します。<a href="../04b-id-policy-namespace/">IDポリシー / 名前空間</a> 参照。</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2448,12 +2473,12 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
+    &quot;LG&quot;: [&quot;LG-001&quot;, &quot;LG-002&quot;, &quot;LG-008&quot;, &quot;LG-009&quot;]
   }
 }
 </code></pre>
 <h3 id="_3">証跡ファイルリスト</h3>
-<p>各エントリは <strong>file_id</strong>（EP-01..EP-07）でパック内のドキュメントを識別します。任意で <strong>ev_codes</strong> に、そのドキュメントが対応するタクソノミー EV コード（EV-xxx）を列挙できます。</p>
+<p>各エントリは <strong>file_id</strong>（EP-01..EP-07）でパック内のドキュメントを識別します。任意で <strong>ev_codes</strong> に、そのドキュメントが対応するタクソノミー LG コード（LG-xxx）を列挙できます。</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
@@ -2503,7 +2528,7 @@
 | **IM** | `IM-001` | 単体利用 |
 | **RS** | `RS-001` | 情報漏えい |
 | **OB** | `OB-001` | 効率化 |
-| **EV** | `EV-001`, `EV-002` | 申請記録、審査/承認記録 |
+| **LG** | `LG-001`, `LG-002` | 申請記録、審査/承認記録 |
 </code></pre>
 <h2 id="_6">ダウンロード</h2>
 <h3 id="_7">テンプレート</h3>

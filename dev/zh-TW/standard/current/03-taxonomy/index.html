@@ -18,7 +18,7 @@
         <link rel="prev" href="../02-scope/">
       
       
-        <link rel="next" href="../04-codes/">
+        <link rel="next" href="../04b-id-policy-namespace/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -997,9 +999,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev" class="md-nav__link">
+  <a href="#lg" class="md-nav__link">
     <span class="md-ellipsis">
-      EV：證據類型
+      LG：日誌/記錄類型
     </span>
   </a>
   
@@ -1074,6 +1076,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2328,9 +2353,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev" class="md-nav__link">
+  <a href="#lg" class="md-nav__link">
     <span class="md-ellipsis">
-      EV：證據類型
+      LG：日誌/記錄類型
     </span>
   </a>
   
@@ -2526,14 +2551,14 @@ AIMO 分類法提供共享語言來分類這些 AI 特定風險，並將它們�
 <td>預期的效益是什麼</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>證據類型</td>
+<td><strong>LG</strong></td>
+<td>日誌/記錄類型</td>
 <td>15</td>
-<td>需要什麼證據</td>
+<td>需要什麼日誌/記錄</td>
 </tr>
 </tbody>
 </table>
-<p><strong>總計：8 個維度中的 91 個代碼</strong></p>
+<p><strong>總計：8 個維度中的 91 個代碼</strong>（<strong>EV-</strong> 專用於 Evidence 成果物 ID；分類法日誌/記錄維度使用 <strong>LG-</strong>。）</p>
 <h3 id="_5">使用規則</h3>
 <table>
 <thead>
@@ -2550,7 +2575,7 @@ AIMO 分類法提供共享語言來分類這些 AI 特定風險，並將它們�
 <td>責任分配的主要分類</td>
 </tr>
 <tr>
-<td>UC、DT、CH、RS、EV</td>
+<td>UC、DT、CH、RS、LG</td>
 <td>1 或更多</td>
 <td>風險覆蓋需要完整列舉</td>
 </tr>
@@ -2924,8 +2949,8 @@ AIMO 分類法提供共享語言來分類這些 AI 特定風險，並將它們�
 </tr>
 </tbody>
 </table>
-<h3 id="ev">EV：證據類型</h3>
-<p>分類需要或收集的證據類型。<strong>選擇一個或多個。</strong></p>
+<h3 id="lg">LG：日誌/記錄類型</h3>
+<p>分類需要或收集的日誌/記錄類型。<strong>選擇一個或多個。</strong>（EV- 專用於 Evidence 成果物 ID。）</p>
 <table>
 <thead>
 <tr>
@@ -2936,77 +2961,77 @@ AIMO 分類法提供共享語言來分類這些 AI 特定風險，並將它們�
 </thead>
 <tbody>
 <tr>
-<td>EV-001</td>
+<td>LG-001</td>
 <td>請求記錄</td>
 <td>AI 使用/服務已請求並描述的證據。</td>
 </tr>
 <tr>
-<td>EV-002</td>
+<td>LG-002</td>
 <td>審查/核准記錄</td>
 <td>已執行審查/核准的證據。</td>
 </tr>
 <tr>
-<td>EV-003</td>
+<td>LG-003</td>
 <td>例外記錄</td>
 <td>已授予並追蹤例外的證據。</td>
 </tr>
 <tr>
-<td>EV-004</td>
+<td>LG-004</td>
 <td>續期/重新評估記錄</td>
 <td>已發生續期或重新評估的證據。</td>
 </tr>
 <tr>
-<td>EV-005</td>
+<td>LG-005</td>
 <td>變更日誌條目</td>
 <td>變更及其核准的證據。</td>
 </tr>
 <tr>
-<td>EV-006</td>
+<td>LG-006</td>
 <td>完整性證明</td>
 <td>完整性（雜湊、簽章、WORM）的證據。</td>
 </tr>
 <tr>
-<td>EV-007</td>
+<td>LG-007</td>
 <td>存取日誌</td>
 <td>存取控制和存取歷史的證據。</td>
 </tr>
 <tr>
-<td>EV-008</td>
+<td>LG-008</td>
 <td>模型/服務清冊</td>
 <td>使用的模型/服務的清冊記錄。</td>
 </tr>
 <tr>
-<td>EV-009</td>
+<td>LG-009</td>
 <td>風險評估</td>
 <td>使用/服務的記錄風險評估。</td>
 </tr>
 <tr>
-<td>EV-010</td>
+<td>LG-010</td>
 <td>控制對應</td>
 <td>與外部框架的控制對應證據。</td>
 </tr>
 <tr>
-<td>EV-011</td>
+<td>LG-011</td>
 <td>培訓/指引</td>
 <td>提供給使用者的培訓或指引證據。</td>
 </tr>
 <tr>
-<td>EV-012</td>
+<td>LG-012</td>
 <td>監控證據</td>
 <td>監控和持續監督的證據。</td>
 </tr>
 <tr>
-<td>EV-013</td>
+<td>LG-013</td>
 <td>事件記錄</td>
 <td>與 AI 使用相關的事件處理證據。</td>
 </tr>
 <tr>
-<td>EV-014</td>
+<td>LG-014</td>
 <td>第三方評估</td>
 <td>供應商或第三方評估的證據。</td>
 </tr>
 <tr>
-<td>EV-015</td>
+<td>LG-015</td>
 <td>證明/簽核</td>
 <td>正式證明或簽核記錄。</td>
 </tr>
@@ -3014,7 +3039,7 @@ AIMO 分類法提供共享語言來分類這些 AI 特定風險，並將它們�
 </table>
 <h2 id="_7">如何使用</h2>
 <h3 id="_8">與證據的關係</h3>
-<p>每個證據（EV）文件參照來自多個維度的代碼，以分類正在記錄的 AI 系統或使用案例。8 維度分類實現：</p>
+<p>每個證據文件參照來自多個維度的代碼，以分類正在記錄的 AI 系統或使用案例。8 維度分類實現：</p>
 <ul>
 <li>整個組織的<strong>一致分類</strong></li>
 <li>按維度值的<strong>基於風險的篩選</strong></li>
@@ -3030,7 +3055,7 @@ CH: CH-001 (Web UI)
 IM: IM-002 (SaaS 整合)
 RS: RS-001 (資料洩漏), RS-003 (合規違反)
 OB: OB-001 (效率)
-EV: EV-001 (請求記錄), EV-002 (審查/核准記錄)
+LG: LG-001 (請求記錄), LG-002 (審查/核准記錄)
 </code></pre>
 <h2 id="ssot">SSOT 參照</h2>
 <p>!!! info "事實來源"

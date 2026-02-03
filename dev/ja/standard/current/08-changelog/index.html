@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -829,6 +831,29 @@
   
   <span class="md-ellipsis">
     Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
     
   </span>
   
@@ -2502,7 +2527,7 @@ v1.0.0: FS-007 削除 (status: removed)
 <p><strong>概要：</strong> EV コード衝突の解消、EV（索引）と Evidence Pack（ペイロード）の明確化、/dev の監査誤引用防止の強化。</p>
 <h4 id="_10">変更</h4>
 <ul>
-<li><strong>Evidence Pack ドキュメント種別（EP 名前空間）：</strong> Evidence Pack のファイル種別は <strong>EP-01..EP-07</strong>（ドキュメント種別）を使用。Taxonomy の <strong>EV-001, EV-002, …</strong> はイベント／証跡種別（申請記録、審査/承認記録など）のまま。<a href="../06-ev-template/">Evidence Pack テンプレート</a> を参照。スキーマ：<code>evidence_files[].file_id</code> のパターンは <code>^EP-\\d{2}$</code>。<code>ev_type</code> は任意。</li>
+<li><strong>Evidence Pack ドキュメント種別（EP 名前空間）：</strong> Evidence Pack のファイル種別は <strong>EP-01..EP-07</strong>（ドキュメント種別）を使用。Taxonomy の <strong>LG-001, LG-002, …</strong> はログ/記録種別（申請記録、審査/承認記録など）。<strong>EV-</strong> は Evidence 成果物ID 専用。<a href="../06-ev-template/">Evidence Pack テンプレート</a> および <a href="../04b-id-policy-namespace/">IDポリシー / 名前空間</a> を参照。スキーマ：<code>evidence_files[].file_id</code> のパターンは <code>^EP-\\d{2}$</code>。<code>ev_type</code> は <strong>LG-xxx</strong> を使用。</li>
 <li><strong>規範的関係：</strong> <a href="../../../artifacts/evidence-bundle/">Evidence Bundle</a> に以下を規範として明記。EV レコード（JSON）は索引／台帳。Evidence Pack ファイルはペイロード。EV レコードは evidence_file_ids（例：EP-01）および／またはハッシュでペイロードを参照することを SHOULD。最小提出セット = EV JSON + Dictionary + Summary + Change Log + Evidence Pack。</li>
 <li><strong>/dev 誤引用防止：</strong> 開発プレビューページに赤帯バナーを表示。「Development Preview — Not for audit citation. Use /latest/ or a versioned URL.」/dev/ ページの canonical は /latest/ を指す。noindex は従来どおり。</li>
 </ul>
@@ -2555,9 +2580,9 @@ v1.0.0: FS-007 削除 (status: removed)
 <td>成果</td>
 </tr>
 <tr>
-<td>EV</td>
-<td>EV-001〜EV-007</td>
-<td>証跡種別</td>
+<td>LG</td>
+<td>LG-001〜LG-015</td>
+<td>ログ/記録種別</td>
 </tr>
 </tbody>
 </table>

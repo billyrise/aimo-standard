@@ -717,6 +717,8 @@
       
         
       
+        
+      
     
     
     
@@ -841,6 +843,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../04-codes/" class="md-nav__link">
         
   
@@ -937,9 +962,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#namespace-evidence-pack-document-types-ep-vs-taxonomy-evidence-type-ev" class="md-nav__link">
+  <a href="#namespace-evidence-pack-document-types-ep-vs-taxonomy-logevent-type-lg" class="md-nav__link">
     <span class="md-ellipsis">
-      Namespace: Evidence Pack document types (EP) vs Taxonomy Evidence Type (EV)
+      Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)
     </span>
   </a>
   
@@ -2145,9 +2170,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#namespace-evidence-pack-document-types-ep-vs-taxonomy-evidence-type-ev" class="md-nav__link">
+  <a href="#namespace-evidence-pack-document-types-ep-vs-taxonomy-logevent-type-lg" class="md-nav__link">
     <span class="md-ellipsis">
-      Namespace: Evidence Pack document types (EP) vs Taxonomy Evidence Type (EV)
+      Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)
     </span>
   </a>
   
@@ -2328,9 +2353,9 @@
 
 <h1 id="evidence-pack-template-ep">Evidence Pack Template (EP)</h1>
 <p>This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.</p>
-<h2 id="namespace-evidence-pack-document-types-ep-vs-taxonomy-evidence-type-ev">Namespace: Evidence Pack document types (EP) vs Taxonomy Evidence Type (EV)</h2>
+<h2 id="namespace-evidence-pack-document-types-ep-vs-taxonomy-logevent-type-lg">Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)</h2>
 <blockquote>
-<p><strong>Important</strong>: <strong>EP-01..EP-07</strong> identify <em>document types</em> (Evidence Pack file types). <strong>EV-001, EV-002, …</strong> in the <a href="../03-taxonomy/">Taxonomy</a> identify <em>event/evidence types</em> (Request Record, Review/Approval, Exception, etc.). Codes must not be mixed: use EP for pack structure and EV for lifecycle evidence classification.</p>
+<p><strong>Important</strong>: <strong>EP-01..EP-07</strong> identify <em>document types</em> (Evidence Pack file types). <strong>LG-001, LG-002, …</strong> in the <a href="../03-taxonomy/">Taxonomy</a> identify <em>log/event types</em> (Request Record, Review/Approval, Exception, etc.). <strong>EV-</strong> is reserved for <a href="../04b-id-policy-namespace/">Evidence artifact IDs</a> only. Use EP for pack structure and LG for lifecycle log/event classification.</p>
 </blockquote>
 <h2 id="key-principle-index-and-diff-management">Key Principle: Index and Diff Management</h2>
 <p>What matters is not the content of individual submissions alone, but the <strong>index</strong> and <strong>diff management</strong> across evidence items.</p>
@@ -2341,7 +2366,7 @@
 <li><strong>Maintainability</strong>: Tracking what changed, when, and why</li>
 </ol>
 <h2 id="mvp-evidence-set-ep-01-to-ep-07">MVP Evidence Set (EP-01 to EP-07)</h2>
-<p>The following seven <strong>Evidence Pack document types</strong> (EP) form the <strong>minimum viable set</strong> for demonstrating AI governance. Each is a document template; taxonomy <strong>EV</strong> codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in <code>codes.EV</code> to classify <em>event</em> evidence.</p>
+<p>The following seven <strong>Evidence Pack document types</strong> (EP) form the <strong>minimum viable set</strong> for demonstrating AI governance. Each is a document template; taxonomy <strong>LG</strong> codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in <code>codes.LG</code> to classify <em>log/event</em> evidence.</p>
 <table>
 <thead>
 <tr>
@@ -2433,7 +2458,7 @@
 </tbody>
 </table>
 <h3 id="aimo-codes-8-dimensions">AIMO Codes (8 Dimensions)</h3>
-<p>Each Evidence Pack MUST include codes from all 8 dimensions. The <strong>EV</strong> dimension lists <em>taxonomy</em> Evidence Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by <code>evidence_files[].file_id</code> (EP-01..EP-07).</p>
+<p>Each Evidence Pack MUST include codes from all 8 dimensions. The <strong>LG</strong> dimension lists <em>taxonomy</em> Log/Event Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by <code>evidence_files[].file_id</code> (EP-01..EP-07). See <a href="../04b-id-policy-namespace/">ID Policy / Namespace</a>.</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2443,12 +2468,12 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
+    &quot;LG&quot;: [&quot;LG-001&quot;, &quot;LG-002&quot;, &quot;LG-008&quot;, &quot;LG-009&quot;]
   }
 }
 </code></pre>
 <h3 id="evidence-files-list">Evidence Files List</h3>
-<p>Each entry identifies a document in the pack by <strong>file_id</strong> (EP-01..EP-07). Optional <strong>ev_codes</strong> may list taxonomy EV codes (EV-xxx) that the document supports.</p>
+<p>Each entry identifies a document in the pack by <strong>file_id</strong> (EP-01..EP-07). Optional <strong>ev_codes</strong> may list taxonomy LG codes (LG-xxx) that the document supports.</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
@@ -2498,7 +2523,7 @@
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Data Leakage |
 | **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 </code></pre>
 <h2 id="downloads">Downloads</h2>
 <h3 id="templates">Templates</h3>

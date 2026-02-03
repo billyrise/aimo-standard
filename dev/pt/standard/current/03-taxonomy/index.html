@@ -18,7 +18,7 @@
         <link rel="prev" href="../02-scope/">
       
       
-        <link rel="next" href="../04-codes/">
+        <link rel="next" href="../04b-id-policy-namespace/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -997,9 +999,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-tipo-de-evidencia" class="md-nav__link">
+  <a href="#lg-tipo-de-logregistro" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Tipo de Evidência
+      LG: Tipo de Log/Registro
     </span>
   </a>
   
@@ -1074,6 +1076,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2328,9 +2353,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ev-tipo-de-evidencia" class="md-nav__link">
+  <a href="#lg-tipo-de-logregistro" class="md-nav__link">
     <span class="md-ellipsis">
-      EV: Tipo de Evidência
+      LG: Tipo de Log/Registro
     </span>
   </a>
   
@@ -2526,14 +2551,14 @@ A Taxonomia AIMO fornece uma linguagem compartilhada para classificar esses risc
 <td>Quais benefícios são esperados</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>Tipo de Evidência</td>
+<td><strong>LG</strong></td>
+<td>Tipo de Log/Registro</td>
 <td>15</td>
-<td>Quais evidências são necessárias</td>
+<td>Quais logs/registros são necessários</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Total: 91 códigos em 8 dimensões</strong></p>
+<p><strong>Total: 91 códigos em 8 dimensões</strong>（<strong>EV-</strong> reservado para IDs de artefato Evidence; dimensão de log/registro da taxonomia usa <strong>LG-</strong>.)</p>
 <h3 id="regras-de-uso">Regras de Uso</h3>
 <table>
 <thead>
@@ -2550,7 +2575,7 @@ A Taxonomia AIMO fornece uma linguagem compartilhada para classificar esses risc
 <td>Classificação primária para atribuição de responsabilidade</td>
 </tr>
 <tr>
-<td>UC, DT, CH, RS, EV</td>
+<td>UC, DT, CH, RS, LG</td>
 <td>1 ou mais</td>
 <td>Enumeração completa necessária para cobertura de risco</td>
 </tr>
@@ -2924,8 +2949,8 @@ A Taxonomia AIMO fornece uma linguagem compartilhada para classificar esses risc
 </tr>
 </tbody>
 </table>
-<h3 id="ev-tipo-de-evidencia">EV: Tipo de Evidência</h3>
-<p>Categoriza os tipos de evidências necessárias ou coletadas. <strong>Selecione um ou mais.</strong></p>
+<h3 id="lg-tipo-de-logregistro">LG: Tipo de Log/Registro</h3>
+<p>Categoriza os tipos de log/registro necessários ou coletados. <strong>Selecione um ou mais.</strong>（EV- reservado para IDs de artefato Evidence.)</p>
 <table>
 <thead>
 <tr>
@@ -2936,77 +2961,77 @@ A Taxonomia AIMO fornece uma linguagem compartilhada para classificar esses risc
 </thead>
 <tbody>
 <tr>
-<td>EV-001</td>
+<td>LG-001</td>
 <td>Registro de Solicitação</td>
 <td>Evidência de que um uso/serviço de IA foi solicitado e descrito.</td>
 </tr>
 <tr>
-<td>EV-002</td>
+<td>LG-002</td>
 <td>Registro de Revisão/Aprovação</td>
 <td>Evidência de que uma revisão/aprovação foi realizada.</td>
 </tr>
 <tr>
-<td>EV-003</td>
+<td>LG-003</td>
 <td>Registro de Exceção</td>
 <td>Evidência de que uma exceção foi concedida e rastreada.</td>
 </tr>
 <tr>
-<td>EV-004</td>
+<td>LG-004</td>
 <td>Registro de Renovação/Reavaliação</td>
 <td>Evidência de que renovação ou reavaliação ocorreu.</td>
 </tr>
 <tr>
-<td>EV-005</td>
+<td>LG-005</td>
 <td>Entrada de Log de Alterações</td>
 <td>Evidência de alterações e suas aprovações.</td>
 </tr>
 <tr>
-<td>EV-006</td>
+<td>LG-006</td>
 <td>Prova de Integridade</td>
 <td>Evidência de integridade (hash, assinatura, WORM).</td>
 </tr>
 <tr>
-<td>EV-007</td>
+<td>LG-007</td>
 <td>Log de Acesso</td>
 <td>Evidência de controle de acesso e histórico de acesso.</td>
 </tr>
 <tr>
-<td>EV-008</td>
+<td>LG-008</td>
 <td>Inventário de Modelo/Serviço</td>
 <td>Registro de inventário de modelos/serviços usados.</td>
 </tr>
 <tr>
-<td>EV-009</td>
+<td>LG-009</td>
 <td>Avaliação de Risco</td>
 <td>Avaliação de risco documentada para o uso/serviço.</td>
 </tr>
 <tr>
-<td>EV-010</td>
+<td>LG-010</td>
 <td>Mapeamento de Controles</td>
 <td>Evidência de mapeamento de controles para frameworks externos.</td>
 </tr>
 <tr>
-<td>EV-011</td>
+<td>LG-011</td>
 <td>Treinamento/Orientação</td>
 <td>Evidência de treinamento ou orientação fornecida aos usuários.</td>
 </tr>
 <tr>
-<td>EV-012</td>
+<td>LG-012</td>
 <td>Evidência de Monitoramento</td>
 <td>Evidência de monitoramento e supervisão contínua.</td>
 </tr>
 <tr>
-<td>EV-013</td>
+<td>LG-013</td>
 <td>Registro de Incidente</td>
 <td>Evidência de tratamento de incidentes relacionados ao uso de IA.</td>
 </tr>
 <tr>
-<td>EV-014</td>
+<td>LG-014</td>
 <td>Avaliação de Terceiros</td>
 <td>Evidência de avaliação de fornecedor ou terceiros.</td>
 </tr>
 <tr>
-<td>EV-015</td>
+<td>LG-015</td>
 <td>Atestação/Sign-off</td>
 <td>Registro formal de atestação ou sign-off.</td>
 </tr>
@@ -3014,7 +3039,7 @@ A Taxonomia AIMO fornece uma linguagem compartilhada para classificar esses risc
 </table>
 <h2 id="como-usar">Como Usar</h2>
 <h3 id="relacao-com-evidencias">Relação com Evidências</h3>
-<p>Cada documento de Evidências (EV) referencia códigos de múltiplas dimensões para classificar o sistema ou caso de uso de IA sendo documentado. A classificação de 8 dimensões permite:</p>
+<p>Cada documento de evidências referencia códigos de múltiplas dimensões para classificar o sistema ou caso de uso de IA sendo documentado. A classificação de 8 dimensões permite:</p>
 <ul>
 <li><strong>Categorização consistente</strong> em toda a organização</li>
 <li><strong>Filtragem baseada em risco</strong> por valores de dimensão</li>
@@ -3030,7 +3055,7 @@ CH: CH-001 (UI Web)
 IM: IM-002 (SaaS Integrado)
 RS: RS-001 (Vazamento de Dados), RS-003 (Violação de Conformidade)
 OB: OB-001 (Eficiência)
-EV: EV-001 (Registro de Solicitação), EV-002 (Registro de Revisão/Aprovação)
+LG: LG-001 (Registro de Solicitação), LG-002 (Registro de Revisão/Aprovação)
 </code></pre>
 <h2 id="referencia-ssot">Referência SSOT</h2>
 <p>!!! info "Fonte de Verdade"

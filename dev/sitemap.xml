@@ -496,6 +496,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/standard/current/05-dictionary/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -1079,6 +1094,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/ja/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/ja/standard/current/05-dictionary/</loc>
@@ -1666,6 +1696,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/es/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latest/es/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/es/standard/current/05-dictionary/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2249,6 +2294,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/fr/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latest/fr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/fr/standard/current/05-dictionary/</loc>
@@ -2836,6 +2896,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/de/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latest/de/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/de/standard/current/05-dictionary/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -3419,6 +3494,21 @@
         <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/pt/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latest/pt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/pt/standard/current/05-dictionary/</loc>
@@ -4006,6 +4096,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/it/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latest/it/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/it/standard/current/05-dictionary/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -4589,6 +4694,21 @@
         <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/zh/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latest/zh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/zh/standard/current/05-dictionary/</loc>
@@ -5176,6 +5296,21 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04-codes/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh-TW/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latest/zh-TW/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh-TW/standard/current/05-dictionary/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5759,6 +5894,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04-codes/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04-codes/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/ko/standard/current/04b-id-policy-namespace/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latest/ko/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/04b-id-policy-namespace/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/04b-id-policy-namespace/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/ko/standard/current/05-dictionary/</loc>

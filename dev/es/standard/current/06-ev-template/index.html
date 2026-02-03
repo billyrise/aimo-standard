@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -829,6 +831,29 @@
   
   <span class="md-ellipsis">
     Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
     
   </span>
   
@@ -2335,7 +2360,7 @@
 <p>Esta sección define las plantillas de Paquetes de Evidencia y su uso. Un Paquete de Evidencia es una colección de documentación que demuestra gobernanza y cumplimiento para un sistema de IA.</p>
 <h2 id="espacio-de-nombres-tipos-de-documento-evidence-pack-ep-vs-taxonomy-evidence-type-ev">Espacio de nombres: tipos de documento Evidence Pack (EP) vs Taxonomy Evidence Type (EV)</h2>
 <blockquote>
-<p><strong>Importante</strong>: <strong>EP-01..EP-07</strong> identifican <em>tipos de documento</em> (tipos de archivo del Evidence Pack). <strong>EV-001, EV-002, …</strong> en la <a href="../03-taxonomy/">Taxonomía</a> identifican <em>tipos de evento/evidencia</em> (Registro de Solicitud, Registro de Revisión/Aprobación, etc.). No mezcle códigos: use EP para estructura del pack y EV para clasificación de evidencia del ciclo de vida.</p>
+<p><strong>Importante</strong>: <strong>EP-01..EP-07</strong> identifican <em>tipos de documento</em> (tipos de archivo del Evidence Pack). <strong>LG-001, LG-002, …</strong> en la <a href="../03-taxonomy/">Taxonomía</a> identifican <em>tipos de log/registro</em> (Registro de Solicitud, Registro de Revisión/Aprobación, etc.). <strong>EV-</strong> reservado para ID de artefactos Evidence. Use EP para estructura del pack y LG para clasificación de evidencia del ciclo de vida.</p>
 </blockquote>
 <h2 id="principio-clave-gestion-de-indice-y-diff">Principio Clave: Gestión de Índice y Diff</h2>
 <p>Lo que importa no es solo el contenido de envíos individuales, sino el <strong>índice</strong> y la <strong>gestión de diff</strong> entre elementos de evidencia.</p>
@@ -2346,7 +2371,7 @@
 <li><strong>Mantenibilidad</strong>: Rastrear qué cambió, cuándo y por qué</li>
 </ol>
 <h2 id="conjunto-minimo-de-evidencia-mvp-ep-01-a-ep-07">Conjunto Mínimo de Evidencia MVP (EP-01 a EP-07)</h2>
-<p>Los siguientes siete <strong>tipos de documento Evidence Pack</strong> (EP) forman el <strong>conjunto mínimo viable</strong> para demostrar gobernanza de IA. Cada uno es una plantilla de documento; los códigos <strong>EV</strong> de taxonomía (Registro de Solicitud, Revisión/Aprobación, etc.) se usan en el bundle y en <code>codes.EV</code> para clasificar evidencia de <em>eventos</em>.</p>
+<p>Los siguientes siete <strong>tipos de documento Evidence Pack</strong> (EP) forman el <strong>conjunto mínimo viable</strong> para demostrar gobernanza de IA. Cada uno es una plantilla de documento; los códigos <strong>LG</strong> de taxonomía (Registro de Solicitud, Revisión/Aprobación, etc.) se usan en el bundle y en <code>codes.LG</code> para clasificar evidencia de <em>log/registro</em>.</p>
 <table>
 <thead>
 <tr>
@@ -2438,7 +2463,7 @@
 </tbody>
 </table>
 <h3 id="codigos-aimo-8-dimensiones">Códigos AIMO (8 Dimensiones)</h3>
-<p>Cada Paquete de Evidencia DEBE incluir códigos de las 8 dimensiones. La dimensión <strong>EV</strong> lista los tipos de evidencia de <em>taxonomía</em> (p. ej. Registro de Solicitud, Revisión/Aprobación) aplicables a este pack—no códigos de tipo de documento. El tipo de documento viene dado por <code>evidence_files[].file_id</code> (EP-01..EP-07).</p>
+<p>Cada Paquete de Evidencia DEBE incluir códigos de las 8 dimensiones. La dimensión <strong>LG</strong> lista los tipos de log/registro de <em>taxonomía</em> (p. ej. Registro de Solicitud, Revisión/Aprobación) aplicables a este pack—no códigos de tipo de documento. El tipo de documento viene dado por <code>evidence_files[].file_id</code> (EP-01..EP-07).</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2448,12 +2473,12 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
+    &quot;LG&quot;: [&quot;LG-001&quot;, &quot;LG-002&quot;, &quot;LG-008&quot;, &quot;LG-009&quot;]
   }
 }
 </code></pre>
 <h3 id="lista-de-archivos-de-evidencia">Lista de Archivos de Evidencia</h3>
-<p>Cada entrada identifica un documento del pack por <strong>file_id</strong> (EP-01..EP-07). Opcionalmente <strong>ev_codes</strong> puede listar códigos EV de taxonomía (EV-xxx) que el documento soporta.</p>
+<p>Cada entrada identifica un documento del pack por <strong>file_id</strong> (EP-01..EP-07). Opcionalmente <strong>ev_codes</strong> puede listar códigos LG de taxonomía (LG-xxx) que el documento soporta.</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
@@ -2503,7 +2528,7 @@
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Data Leakage |
 | **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 </code></pre>
 <h2 id="descargas">Descargas</h2>
 <h3 id="plantillas">Plantillas</h3>

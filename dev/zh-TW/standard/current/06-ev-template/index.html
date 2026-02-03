@@ -722,6 +722,8 @@
       
         
       
+        
+      
     
     
     
@@ -829,6 +831,29 @@
   
   <span class="md-ellipsis">
     Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
     
   </span>
   
@@ -2335,7 +2360,7 @@
 <p>本節定義證據包範本及其使用。證據包是一組文件集合，展示 AI 系統的治理和合規性。</p>
 <h2 id="evidence-pack-ep-taxonomy-evidence-typeev">命名空間：Evidence Pack 文件類型（EP）與 Taxonomy Evidence Type（EV）</h2>
 <blockquote>
-<p><strong>重要</strong>：<strong>EP-01..EP-07</strong> 表示<em>文件類型</em>（證據包檔案類型）。<strong>EV-001、EV-002、…</strong> 在<a href="../03-taxonomy/">分類法</a>中表示<em>事件/證據類型</em>（請求記錄、審查/核准記錄等）。請勿混用代碼：EP 用於包結構，EV 用於生命週期證據分類。</p>
+<p><strong>重要</strong>：<strong>EP-01..EP-07</strong> 表示<em>文件類型</em>（證據包檔案類型）。<strong>LG-001、LG-002、…</strong> 在<a href="../03-taxonomy/">分類法</a>中表示<em>日誌/記錄類型</em>（請求記錄、審查/核准記錄等）。<strong>EV-</strong> 專用於 Evidence 成果物 ID。請勿混用：EP 用於包結構，LG 用於生命週期證據分類。</p>
 </blockquote>
 <h2 id="_1">關鍵原則：索引和差異管理</h2>
 <p>重要的不僅是個別提交的內容，而是跨證據項目的<strong>索引</strong>和<strong>差異管理</strong>。</p>
@@ -2346,7 +2371,7 @@
 <li><strong>可維護性</strong>：追蹤什麼變更了、何時以及為什麼</li>
 </ol>
 <h2 id="mvp-ep-01-ep-07">MVP 證據集（EP-01 到 EP-07）</h2>
-<p>以下七種 <strong>Evidence Pack 文件類型</strong>（EP）形成展示 AI 治理的<strong>最小可行集</strong>。每種為文件範本；分類法 <strong>EV</strong> 代碼（請求記錄、審查/核准等）在包內及 <code>codes.EV</code> 中用於對<em>事件</em>證據進行分類。</p>
+<p>以下七種 <strong>Evidence Pack 文件類型</strong>（EP）形成展示 AI 治理的<strong>最小可行集</strong>。每種為文件範本；分類法 <strong>LG</strong> 代碼（請求記錄、審查/核准等）在包內及 <code>codes.LG</code> 中用於對<em>日誌/記錄</em>證據進行分類。</p>
 <table>
 <thead>
 <tr>
@@ -2438,7 +2463,7 @@
 </tbody>
 </table>
 <h3 id="aimo-8">AIMO 代碼（8 維度）</h3>
-<p>每個證據包必須包含所有 8 個維度的代碼。<strong>EV</strong> 維度列出適用於本包的<em>分類法</em>證據類型（如請求記錄、審查/核准），而非文件類型代碼。文件類型由 <code>evidence_files[].file_id</code>（EP-01..EP-07）給出。</p>
+<p>每個證據包必須包含所有 8 個維度的代碼。<strong>LG</strong> 維度列出適用於本包的<em>分類法</em>日誌/記錄類型（如請求記錄、審查/核准），而非文件類型代碼。文件類型由 <code>evidence_files[].file_id</code>（EP-01..EP-07）給出。</p>
 <pre><code class="language-json">{
   &quot;codes&quot;: {
     &quot;FS&quot;: [&quot;FS-001&quot;],
@@ -2448,12 +2473,12 @@
     &quot;IM&quot;: [&quot;IM-001&quot;],
     &quot;RS&quot;: [&quot;RS-001&quot;, &quot;RS-003&quot;],
     &quot;OB&quot;: [&quot;OB-001&quot;],
-    &quot;EV&quot;: [&quot;EV-001&quot;, &quot;EV-002&quot;, &quot;EV-008&quot;, &quot;EV-009&quot;]
+    &quot;LG&quot;: [&quot;LG-001&quot;, &quot;LG-002&quot;, &quot;LG-008&quot;, &quot;LG-009&quot;]
   }
 }
 </code></pre>
 <h3 id="_4">證據檔案清單</h3>
-<p>每筆記錄透過 <strong>file_id</strong>（EP-01..EP-07）識別包內文件。可選 <strong>ev_codes</strong> 可列出該文件支援的分類法 EV 代碼（EV-xxx）。</p>
+<p>每筆記錄透過 <strong>file_id</strong>（EP-01..EP-07）識別包內文件。可選 <strong>ev_codes</strong> 可列出該文件支援的分類法 LG 代碼（LG-xxx）。</p>
 <pre><code class="language-json">{
   &quot;evidence_files&quot;: [
     {
@@ -2503,7 +2528,7 @@
 | **IM** | `IM-001` | 獨立 |
 | **RS** | `RS-001` | 資料洩漏 |
 | **OB** | `OB-001` | 效率 |
-| **EV** | `EV-001`, `EV-002` | 請求記錄、審查/核准記錄 |
+| **LG** | `LG-001`, `LG-002` | 請求記錄、審查/核准記錄 |
 </code></pre>
 <h2 id="_7">下載</h2>
 <h3 id="_8">範本</h3>
