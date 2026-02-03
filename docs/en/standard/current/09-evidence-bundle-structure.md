@@ -6,6 +6,16 @@ description: Normative root structure and manifest for Evidence Bundle (v0.1). I
 
 This page defines the **normative** root layout and manifest for an Evidence Bundle. Validators MUST reject bundles that do not satisfy these requirements before any schema validation.
 
+## v0.1 normative MUST (summary)
+
+- **manifest.json** at bundle root is required.
+- **object_index** and **payload_index**: each entry MUST include **sha256** (64 lowercase hex); paths MUST be relative and MUST NOT contain `../` or escape the bundle root.
+- **signing.signatures** MUST be a non-empty array (empty array is invalid).
+- Each signature entry MUST have: **path** under `signatures/` (path traversal forbidden), **targets** (array, at least one path), and at least one signature in the bundle MUST list **manifest.json** in **targets** (manifest signing is mandatory).
+- **hash_chain**: v0.1 MUST include **algorithm**, **head**, **path** (under `hashes/`), and **covers** with at least **manifest.json** and **objects/index.json**.
+
+Validators MUST enforce these before accepting a bundle. The JSON Schema and the reference validator implement the same rules.
+
 ## Root required structure (MUST)
 
 At the bundle root, the following MUST be present:
