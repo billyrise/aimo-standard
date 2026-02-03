@@ -121,6 +121,8 @@ jobs:
           pytest -q
           echo "=== Evidence Bundle integrity (v0.1 minimal) ==="
           python validator/src/validate.py examples/evidence_bundle_v01_minimal
+          echo "=== Profile JSONs (aimo-profile schema) ==="
+          python validator/src/validate.py --validate-profiles
 
       # CRITICAL: Ensure documentation references match the release version
       # This prevents deploying a release where Versions/Cite/CITATION.cff

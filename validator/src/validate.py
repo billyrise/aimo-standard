@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[2]
 SCHEMAS_DIR = ROOT / "schemas" / "jsonschema"
 TAXONOMY_DIR = ROOT / "source_pack" / "03_taxonomy"
 DICTIONARY_JSON_PATH = TAXONOMY_DIR / "taxonomy_dictionary.json"
+PROFILES_DIR = ROOT / "coverage_map" / "profiles"
+PROFILE_SCHEMA_NAME = "aimo-profile.schema.json"
 
 # Fixed message for Evidence Bundle integrity failure (audit-facing).
 BUNDLE_INTEGRITY_REJECT_MESSAGE = (
@@ -358,28 +360,96 @@ def emit_sarif(errors: list[str], path_str: str) -> dict:
     }
 
 
+def validate_profiles(profiles_dir: Path | None = None) -> tuple[bool, list[str]]:
+    """
+    Validate all profile JSONs in coverage_map/profiles/ against aimo-profile.schema.json.
+    Enforces profile_id (PR-*), target (enum), target_version, and mappings structure.
+    Returns (valid, list of error messages).
+    """
+    errors: list[str] = []
+    directory = (profiles_dir or PROFILES_DIR).resolve()
+    if not directory.is_dir():
+        return False, [f"Profiles directory not found: {directory}"]
+
+    try:
+        schema = load_schema(PROFILE_SCHEMA_NAME)
+    except Exception as e:
+        return False, [f"Failed to load {PROFILE_SCHEMA_NAME}: {e}"]
+
+    validator = Draft202012Validator(schema)
+    json_files = sorted(directory.glob("*.json"))
+    if not json_files:
+        return False, [f"No *.json files in {directory}"]
+
+    for path in json_files:
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            errors.append(f"{path.name}: invalid JSON: {e}")
+            continue
+        for err in validator.iter_errors(data):
+            loc = ".".join(str(x) for x in err.path) if err.path else "<root>"
+            errors.append(f"{path.name}: {loc}: {err.message}")
+
+    return len(errors) == 0, errors
+
+
 def main():
     parser = argparse.ArgumentParser(
-        description="Validate AIMO root JSON or Evidence Bundle directory.",
+        description="Validate AIMO root JSON, Evidence Bundle directory, and/or profile JSONs.",
     )
-    parser.add_argument("path", type=Path, help="Path to root JSON file or bundle directory")
+    parser.add_argument(
+        "path",
+        nargs="?",
+        type=Path,
+        default=None,
+        help="Path to root JSON file or bundle directory (optional if --validate-profiles is used)",
+    )
     parser.add_argument(
         "--format",
         choices=["default", "json", "sarif"],
         default="default",
         help="Output format: default (human), json (machine), sarif (Code Scanning)",
     )
+    parser.add_argument(
+        "--validate-profiles",
+        action="store_true",
+        help="Validate profile JSONs in coverage_map/profiles/ against aimo-profile.schema.json",
+    )
     args = parser.parse_args()
-    p = args.path.resolve()
 
-    valid, errors, warnings = run_validation(p)
-    path_str = str(p)
+    path_valid = True
+    errors: list[str] = []
+    warnings: list[str] = []
+    path_str = ""
+
+    if args.path is not None:
+        p = args.path.resolve()
+        path_str = str(p)
+        path_valid, errors, warnings = run_validation(p)
+    elif not args.validate_profiles:
+        parser.error("Either path or --validate-profiles (or both) is required")
+
+    profiles_valid = True
+    profile_errors: list[str] = []
+    if args.validate_profiles:
+        profiles_valid, profile_errors = validate_profiles()
+
+    valid = path_valid and profiles_valid
+    if not profiles_valid:
+        errors = errors + profile_errors
 
     if args.format == "json":
-        out = {"valid": valid, "errors": errors, "warnings": warnings, "path": path_str}
+        out = {
+            "valid": valid,
+            "errors": errors,
+            "warnings": warnings,
+            "path": path_str or None,
+            "profiles_valid": profiles_valid if args.validate_profiles else None,
+        }
         print(json.dumps(out, indent=2, ensure_ascii=False))
     elif args.format == "sarif":
-        sarif = emit_sarif(errors, path_str) if errors else emit_sarif([], path_str)
+        sarif = emit_sarif(errors, path_str or "profiles") if errors else emit_sarif([], path_str or "profiles")
         print(json.dumps(sarif, indent=2, ensure_ascii=False))
     else:
         if errors:
@@ -388,7 +458,10 @@ def main():
         else:
             for w in warnings:
                 print(f"WARNING: {w}", file=sys.stderr)
-            print("OK")
+            if args.validate_profiles and profiles_valid and (args.path is None or path_valid):
+                print("Profile validation: OK")
+            if args.path is not None and path_valid:
+                print("OK")
 
     sys.exit(0 if valid else 1)
 
