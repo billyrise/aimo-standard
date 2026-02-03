@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "taxonomy_version": "0.1.0",
+  "dictionary": {
+    "taxonomy_version": "0.1.0",
+    "entries": [
+      {"dimension_id": "FS", "code": "FS-002", "label_en": "Customer-facing Features", "label_ja": "顧客向け機能", "definition_en": "AI embedded in product/service features provided to customers.", "definition_ja": "顧客に提供する製品・サービス機能に組み込まれたAI。", "status": "active", "introduced_in": "0.1.0", "backward_compatible": true},
+      {"dimension_id": "LG", "code": "LG-001", "label_en": "Request Record", "label_ja": "申請記録", "definition_en": "Evidence that an AI use/service was requested and described.", "definition_ja": "AI利用/サービスの申請と内容説明の証跡。", "status": "active", "introduced_in": "0.1.0", "backward_compatible": true},
+      {"dimension_id": "RS", "code": "RS-001", "label_en": "Data Leakage", "label_ja": "情報漏えい", "definition_en": "Risk of unintended data disclosure.", "definition_ja": "意図しないデータ開示のリスク。", "status": "active", "introduced_in": "0.1.0", "backward_compatible": true}
+    ]
+  },
+  "evidence": [
+    {
+      "id": "EV-ANNEXIV-001",
+      "timestamp": "2026-02-01T10:00:00Z",
+      "source": "provider-compliance",
+      "summary": "Technical documentation for high-risk AI system per EU AI Act Annex IV: general description, development process, monitoring and control, risk management, conformity, post-market monitoring.",
+      "taxonomy_version": "0.1.0",
+      "codes": {"FS": ["FS-002"], "LG": ["LG-001"], "RS": ["RS-001"]},
+      "tags": ["eu-ai-act", "annex-iv", "high-risk", "technical-documentation"]
+    }
+  ],
+  "request": {
+    "id": "REQ-ANNEXIV-001",
+    "timestamp": "2026-01-15T09:00:00Z",
+    "actor": "compliance@provider.example",
+    "scope": "High-risk AI system for recruitment screening (Annex III 4(a))",
+    "rationale": "Conformity documentation and technical documentation under Article 11(1) and Annex IV."
+  },
+  "review": {
+    "id": "REV-ANNEXIV-001",
+    "timestamp": "2026-01-20T14:00:00Z",
+    "actor": "quality-assurance@provider.example",
+    "decision": "approved",
+    "rationale": "Annex IV elements covered: 1) general description, 2) development, 3) monitoring/control, 4) risk management, 5) lifecycle changes, 6) standards, 7) EU declaration of conformity, 8) post-market monitoring plan.",
+    "references": ["REQ-ANNEXIV-001"]
+  },
+  "change_log": {
+    "id": "CHG-ANNEXIV-001",
+    "timestamp": "2026-02-01T10:00:00Z",
+    "actor": "system",
+    "change_description": "Initial Evidence Bundle for EU AI Act Annex IV technical documentation sample.",
+    "references": ["EV-ANNEXIV-001", "REQ-ANNEXIV-001", "REV-ANNEXIV-001"]
+  }
+}

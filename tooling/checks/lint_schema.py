@@ -46,6 +46,7 @@ SCHEMA_EXAMPLE_MAP = {
     ],
     "evidence_bundle_manifest.schema.json": [
         "examples/evidence_bundle_v01_minimal/manifest.json",
+        "examples/evidence_bundle_v01_annex_iv_sample/manifest.json",
     ],
     "aimo-dictionary.schema.json": [
         "examples/**/dictionary.json",
