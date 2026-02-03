@@ -31,6 +31,8 @@ jobs:
         run: |
           echo "=== Bidi Control Chars (Trojan Source) + Format (Cf) ==="
           python tooling/checks/lint_bidi_control_chars.py --check-format
+          echo "=== Hidden/Bidi Unicode (GitHub warning parity: Cf, non-ASCII ws, variation selectors) ==="
+          python tooling/checks/lint_hidden_unicode.py
           echo "=== EN Locale Purity (no CJK in docs/en) ==="
           python tooling/checks/lint_locale_purity.py
           echo "=== i18n Lint (Required Pages, Heading Consistency) ==="
@@ -95,6 +97,11 @@ jobs:
         run: |
           echo "=== MkDocs Build (strict mode) ==="
           python -m mkdocs build --strict
+
+      - name: Validate Evidence Bundle (v0.1 minimal)
+        run: |
+          echo "=== Evidence Bundle integrity check (examples/evidence_bundle_v01_minimal) ==="
+          python validator/src/validate.py examples/evidence_bundle_v01_minimal
 
       - name: Site content policy (EV reserved, LG required)
         run: |

@@ -92,8 +92,13 @@ jobs:
           pip install -r requirements.txt
           pip install -r tooling/requirements.txt
 
+      # Same quality gates as quality-gate.yml so release cannot succeed if PR would fail
       - name: Quality gates (lint + test)
         run: |
+          echo "=== Bidi Control Chars (Trojan Source) ==="
+          python tooling/checks/lint_bidi_control_chars.py
+          echo "=== Hidden/Bidi Unicode (Cf, non-ASCII ws, variation selectors) ==="
+          python tooling/checks/lint_hidden_unicode.py
           echo "=== i18n Lint (Language Purity, Deprecated SSOT Phrases) ==="
           python tooling/checks/lint_i18n.py
           echo "=== Schema Lint ==="
@@ -114,6 +119,8 @@ jobs:
           python tooling/taxonomy/build_artifacts.py --check
           echo "=== pytest ==="
           pytest -q
+          echo "=== Evidence Bundle integrity (v0.1 minimal) ==="
+          python validator/src/validate.py examples/evidence_bundle_v01_minimal
 
       # CRITICAL: Ensure documentation references match the release version
       # This prevents deploying a release where Versions/Cite/CITATION.cff

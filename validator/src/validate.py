@@ -1,3 +1,4 @@
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -8,6 +9,12 @@ ROOT = Path(__file__).resolve().parents[2]
 SCHEMAS_DIR = ROOT / "schemas" / "jsonschema"
 TAXONOMY_DIR = ROOT / "source_pack" / "03_taxonomy"
 DICTIONARY_JSON_PATH = TAXONOMY_DIR / "taxonomy_dictionary.json"
+
+# Fixed message for Evidence Bundle integrity failure (audit-facing).
+BUNDLE_INTEGRITY_REJECT_MESSAGE = (
+    "Invalid Evidence Bundle: manifest integrity requirements not satisfied "
+    "(missing sha256/signature/index mismatch)."
+)
 
 
 def load_schema(name: str) -> dict:
@@ -125,12 +132,184 @@ def validate_dictionary_consistency(payload: dict) -> tuple[list[str], list[str]
     
     return errors, warnings
 
+
+def sha256_file(path: Path) -> str:
+    """Return lowercase 64-char hex SHA-256 of file at path."""
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def _check_path_under_root(
+    bundle_root: Path,
+    path_str: str,
+    subdir: str | None = None,
+    label: str = "path",
+) -> tuple[bool, Path | None, str | None]:
+    """
+    Ensure path is relative, has no .. segment, and resolves under bundle root.
+    If subdir is set (e.g. 'signatures'), path_str is relative to bundle_root/subdir.
+    Returns (ok, resolved_path, error_message).
+    """
+    if not path_str or not isinstance(path_str, str):
+        return False, None, f"{label}: path required"
+    if path_str.startswith("/"):
+        return False, None, f"{label}: path must be relative (no leading /): {path_str!r}"
+    if ".." in path_str:
+        return False, None, f"{label}: path must not contain ..: {path_str!r}"
+    base = (bundle_root / subdir) if subdir else bundle_root
+    try:
+        resolved = (base / path_str).resolve()
+    except Exception as e:
+        return False, None, f"{label}: invalid path {path_str!r}: {e}"
+    root_resolved = bundle_root.resolve()
+    try:
+        resolved.relative_to(root_resolved)
+    except ValueError:
+        return False, None, f"{label}: path escapes bundle root: {path_str!r}"
+    return True, resolved, None
+
+
+def validate_bundle(bundle_root: Path) -> list[str]:
+    """
+    Validate Evidence Bundle at bundle_root (directory).
+    Pre-schema: required dirs and manifest.json. Then schema validate manifest.
+    Then: every object_index/payload_index file exists and sha256 matches.
+    Then: signatures/ contains at least one file (v0.1: existence only).
+    Returns list of error messages; empty if valid.
+    """
+    errors: list[str] = []
+    bundle_root = bundle_root.resolve()
+
+    # 1) Required structure
+    required_dirs = ["objects", "payloads", "signatures", "hashes"]
+    for d in required_dirs:
+        if not (bundle_root / d).is_dir():
+            errors.append(f"Missing required directory: {d}/")
+    manifest_path = bundle_root / "manifest.json"
+    if not manifest_path.is_file():
+        errors.append("Missing required file: manifest.json")
+    if errors:
+        return errors
+
+    # 2) Load and schema-validate manifest
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        errors.append(f"manifest.json invalid JSON: {e}")
+        return errors
+
+    schema = load_schema("evidence_bundle_manifest.schema.json")
+    try:
+        Draft202012Validator(schema).validate(manifest)
+    except Exception as e:
+        errors.append(f"manifest.json schema validation failed: {e}")
+        return errors
+
+    # 3) Path safety and resolve-under-root for all path-bearing fields
+    for i, obj in enumerate(manifest.get("object_index", [])):
+        rel = obj.get("path", "")
+        ok, resolved, err = _check_path_under_root(bundle_root, rel, subdir=None, label=f"object_index[{i}].path")
+        if not ok:
+            errors.append(err or f"object_index[{i}]: invalid path")
+            continue
+        if not (resolved and resolved.is_file()):
+            errors.append(f"object_index[{i}]: file not found: {rel}")
+            continue
+        want = (obj.get("sha256") or "").lower().strip()
+        if len(want) != 64 or not all(c in "0123456789abcdef" for c in want):
+            errors.append(f"object_index[{i}]: invalid sha256 (must be 64 hex)")
+            continue
+        got = sha256_file(resolved)
+        if got != want:
+            errors.append(f"object_index[{i}]: sha256 mismatch for {rel}")
+
+    for i, pl in enumerate(manifest.get("payload_index", [])):
+        rel = pl.get("path", "")
+        ok, resolved, err = _check_path_under_root(bundle_root, rel, subdir=None, label=f"payload_index[{i}].path")
+        if not ok:
+            errors.append(err or f"payload_index[{i}]: invalid path")
+            continue
+        if not (resolved and resolved.is_file()):
+            errors.append(f"payload_index[{i}]: file not found: {rel}")
+            continue
+        want = (pl.get("sha256") or "").lower().strip()
+        if len(want) != 64 or not all(c in "0123456789abcdef" for c in want):
+            errors.append(f"payload_index[{i}]: invalid sha256 (must be 64 hex)")
+            continue
+        got = sha256_file(resolved)
+        if got != want:
+            errors.append(f"payload_index[{i}]: sha256 mismatch for {rel}")
+
+    # 4) signing.signatures: each path exists under signatures/; path safe; targets includes manifest.json (v0.1)
+    signatures = (manifest.get("signing") or {}).get("signatures") or []
+    if not signatures:
+        errors.append("signing.signatures must contain at least one entry (v0.1)")
+    else:
+        has_manifest_target = False
+        for i, sig in enumerate(signatures):
+            path_str = sig.get("path", "")
+            ok, resolved, err = _check_path_under_root(
+                bundle_root, path_str, subdir="signatures", label=f"signing.signatures[{i}].path"
+            )
+            if not ok:
+                errors.append(err or f"signing.signatures[{i}]: invalid path")
+                continue
+            if not (resolved and resolved.is_file()):
+                errors.append(f"signing.signatures[{i}]: signature file not found: signatures/{path_str}")
+                continue
+            targets = sig.get("targets") or []
+            if "manifest.json" in targets:
+                has_manifest_target = True
+        if not has_manifest_target:
+            errors.append("signing.signatures: at least one entry must have targets including manifest.json (v0.1 MUST)")
+
+    # 5) hash_chain: path exists under hashes/; path safe; covers includes manifest.json and objects/index.json (v0.1)
+    hc = manifest.get("hash_chain") or {}
+    hc_path = hc.get("path", "")
+    ok, resolved, err = _check_path_under_root(
+        bundle_root, hc_path, subdir="hashes", label="hash_chain.path"
+    )
+    if not ok and hc_path:
+        errors.append(err or "hash_chain.path: invalid path")
+    elif ok and resolved:
+        if not resolved.is_file():
+            errors.append(f"hash_chain.path: file not found: hashes/{hc_path}")
+    # v0.1: covers MUST include manifest.json and objects/index.json (always check when hash_chain present)
+    if hc:
+        covers = hc.get("covers") or []
+        if "manifest.json" not in covers:
+            errors.append("hash_chain.covers must include manifest.json (v0.1 MUST)")
+        if "objects/index.json" not in covers:
+            errors.append("hash_chain.covers must include objects/index.json (v0.1 MUST)")
+
+    return errors
+
+
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python validator/src/validate.py <path-to-root-json>", file=sys.stderr)
+        print("Usage: python validator/src/validate.py <path-to-root-json | path-to-bundle-dir>", file=sys.stderr)
         sys.exit(2)
 
-    p = Path(sys.argv[1])
+    p = Path(sys.argv[1]).resolve()
+    if not p.exists():
+        print(f"Path not found: {p}", file=sys.stderr)
+        sys.exit(2)
+
+    # Bundle mode: directory with manifest.json
+    if p.is_dir():
+        bundle_errors = validate_bundle(p)
+        if bundle_errors:
+            print(BUNDLE_INTEGRITY_REJECT_MESSAGE, file=sys.stderr)
+            for err in bundle_errors:
+                print(f"  {err}", file=sys.stderr)
+            sys.exit(1)
+        print("OK")
+        sys.exit(0)
+
+    # Root JSON mode: single file (legacy)
     payload = json.loads(p.read_text(encoding="utf-8"))
 
     # Step 1: Reject codes.EV before schema (clear, human-readable reason)
@@ -148,14 +327,10 @@ def main():
         print(str(e), file=sys.stderr)
         sys.exit(1)
 
-    # Step 4: Dictionary consistency check
+    # Step 3: Dictionary consistency check
     dict_errors, dict_warnings = validate_dictionary_consistency(payload)
-    
-    # Print warnings
     for warn in dict_warnings:
         print(f"WARNING: {warn}", file=sys.stderr)
-    
-    # Print errors and exit if any
     if dict_errors:
         print("\nDictionary consistency check failed:", file=sys.stderr)
         for err in dict_errors:

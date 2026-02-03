@@ -16,7 +16,7 @@
 | version.provider | `mike` | `mkdocs.yml:40-41` |
 | gh-pages branch | `gh-pages` (default) | `.github/workflows/*.yml` |
 | deploy_prefix | None (root `/`) | N/A |
-| alias_type | **NOT SET (defaults to `copy`)** | ⚠️ PROBLEM |
+| alias_type | **NOT SET (defaults to `copy`)** | ⚠ PROBLEM |
 
 **Evidence from mkdocs.yml:**
 
@@ -44,7 +44,7 @@ mike plugin is NOT explicitly configured under `plugins:` - only referenced via 
 | Workflow | Trigger | Updates /latest/? | Problem? |
 |----------|---------|-------------------|----------|
 | `release.yml` | `push: tags: v*` | Yes - `mike deploy VER latest dev --update-aliases` | OK |
-| `docs_current.yml` | `push: main` (after quality-gate) | **Yes - `mike deploy latest dev`** | ⚠️ **CRITICAL BUG** |
+| `docs_current.yml` | `push: main` (after quality-gate) | **Yes - `mike deploy latest dev`** | ⚠ **CRITICAL BUG** |
 | `quality-gate.yml` | PR/push to main | No | OK |
 
 **Critical Bug in docs_current.yml (lines 44-53):**

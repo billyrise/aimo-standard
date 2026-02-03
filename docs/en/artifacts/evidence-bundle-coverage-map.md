@@ -1,0 +1,82 @@
+---
+description: Evidence Bundle Coverage Map template (v0.1). Informative one-page summary for auditors — scope, evidence types, controls mapping, exclusions, integrity proof.
+---
+
+# Evidence Bundle Coverage Map (Template)
+
+!!! info "Informative — recommended practice"
+    This page defines a **recommended practice template** for a one-page Evidence Bundle Coverage Map. It is **not** a normative requirement of the standard. Use it to document what a bundle covers and does not cover for auditor handoff. References (e.g. to frameworks) are stable; adoption is at the implementer's discretion.
+
+---
+
+## 1. Scope
+
+| Item | Description |
+|------|--------------|
+| **Scope reference** | `scope_ref` from the bundle manifest (e.g. `SC-001`). Links this bundle to the declared scope. |
+| **Bundle ID** | `bundle_id` (UUID) — unique identifier for this bundle. |
+| **Bundle version** | `bundle_version` (SemVer) — version of the bundle. |
+| **Period / snapshot** | Optional: time period or snapshot date this bundle represents (e.g. 2026-Q1, as-of 2026-02-03). |
+
+---
+
+## 2. Evidence types (EV / objects vs payloads)
+
+| Category | Contents | v0.1 minimal example |
+|----------|----------|------------------------|
+| **object_index** | Enumerated objects (metadata, indexes). Each entry: `id`, `type`, `path`, `sha256`. | e.g. `objects/index.json` (index type). |
+| **payload_index** | Payload files (root EV JSON, Evidence Pack files). Each entry: `logical_id`, `path`, `sha256`, `mime`, `size`. | e.g. `payloads/root.json` (root AIMO EV JSON). |
+| **EV types** | Evidence records (in root or linked payloads) — request, review, exception, renewal, change log. | Aligned with [Evidence Pack Template](../standard/current/06-ev-template.md) and [Minimum Evidence Requirements](minimum-evidence.md). |
+
+*Implementers may extend object_index and payload_index; paths MUST remain within the bundle root and satisfy the [Evidence Bundle root structure (v0.1)](../standard/current/09-evidence-bundle-structure.md).*
+
+---
+
+## 3. Controls mapping (reference only)
+
+Mapping to external frameworks is **for reference only**; the standard does not mandate compliance with any specific regulation.
+
+| Framework | Use in this bundle | Reference |
+|-----------|--------------------|-----------|
+| **ISO/IEC 42001** | Optional: document which AI MS themes this bundle supports. | [Coverage Map → ISO 42001](../coverage-map/iso-42001.md) |
+| **EU AI Act** | Optional: high-level documentation/record-keeping alignment. | [Coverage Map → EU AI Act](../coverage-map/eu-ai-act.md) |
+| **NIST AI RMF** | Optional: Govern, Map, Measure, Manage mapping. | [Coverage Map → NIST AI RMF](../coverage-map/nist-ai-rmf.md) |
+| **ISMS (27001/27002)** | Optional: change management, access, logging, integrity. | [Coverage Map → ISMS](../coverage-map/isms.md) |
+
+*Fill in “Use in this bundle” per submission; the standard does not require any specific control coverage.*
+
+---
+
+## 4. Exclusions / assumptions
+
+| Area | What this bundle does **not** cover (example rows — adjust per submission) |
+|------|-------------------------------------------------------------------------------|
+| **Exclusions** | e.g. Systems or use cases out of scope; third-party components not evidenced; time period outside this bundle. |
+| **Assumptions** | e.g. Dictionary/taxonomy version; validator/schema version used; custody and retention are implementation-defined. |
+| **Limitations** | e.g. Signature verification is out of scope in v0.1; no legal interpretation of regulations. |
+
+*Replace placeholder text with submission-specific exclusions and assumptions.*
+
+---
+
+## 5. Integrity proof summary (v0.1)
+
+| Element | What is provided (v0.1 normative) |
+|---------|----------------------------------|
+| **manifest.json** | Present and schema-valid; includes `object_index`, `payload_index`, `hash_chain`, `signing`. |
+| **sha256** | Every file in `object_index` and `payload_index` has a declared 64-char lowercase hex sha256; validator checks content match. |
+| **Index existence** | All listed paths exist under the bundle root; no path traversal (`../` or leading `/`). |
+| **Signature existence** | At least one signature file in `signatures/`; manifest references it via `signing.signatures[]` with `path` and `targets` (v0.1 MUST include `manifest.json` in targets). Cryptographic verification is out of scope for v0.1. |
+| **Hash chain** | `hash_chain` in manifest: `algorithm`, `head` (64-char hex), `path` (file under `hashes/`), `covers` (v0.1 MUST include `manifest.json` and `objects/index.json`). File at `hash_chain.path` exists. |
+
+*This table summarizes the integrity guarantees that the [Validator](../validator/index.md) checks for v0.1 bundles. Custody (storage, access control, retention) is implementation-defined.*
+
+---
+
+## See also
+
+- [Evidence Bundle (artifact overview)](evidence-bundle.md)
+- [Evidence Bundle root structure (v0.1)](../standard/current/09-evidence-bundle-structure.md)
+- [Minimum Evidence Requirements](minimum-evidence.md)
+- [Coverage Map (framework mappings)](../coverage-map/index.md)
+- [Validator](../validator/index.md)

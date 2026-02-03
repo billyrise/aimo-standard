@@ -10,7 +10,7 @@ This directory contains derived taxonomy assets for the AIMO Standard.
 
 ## SSOT Declaration (IMPORTANT)
 
-⚠️ **The SSOT has moved to `data/taxonomy/`**
+⚠ **The SSOT has moved to `data/taxonomy/`**
 
 | Type | SSOT Location | Purpose |
 | --- | --- | --- |

@@ -245,7 +245,7 @@ def generate_report(results: dict[str, list[TranslationStatus]]) -> str:
                 elif status.is_fresh:
                     icon = "✅ Fresh"
                 else:
-                    icon = "⚠️ Outdated"
+                    icon = "⚠ Outdated"
                 lines.append(f"| `{page}` | {icon} |")
         
         lines.append("")
