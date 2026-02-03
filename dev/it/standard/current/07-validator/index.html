@@ -2534,7 +2534,7 @@
 <td>Opzionale (0 o più)</td>
 </tr>
 <tr>
-<td>EV (Evidence Type)</td>
+<td>LG (Log/Event Type)</td>
 <td>Almeno 1 codice</td>
 </tr>
 </tbody>
@@ -2548,7 +2548,7 @@
 </ul>
 <h3 id="4-validazione-formato-codice">4. Validazione Formato Codice</h3>
 <p>Controllare che tutti i codici corrispondano al formato atteso:</p>
-<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 </code></pre>
 <h3 id="5-validazione-schema">5. Validazione Schema</h3>
 <p>Validare contro JSON Schemas:</p>
@@ -2601,7 +2601,7 @@ check: |
 <pre><code class="language-yaml">rule_id: code_format
 description: Tutti i codici devono corrispondere al formato standard
 severity: error
-pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$&quot;
+pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$&quot;
 </code></pre>
 <h3 id="regola-formato-versione">Regola: Formato Versione</h3>
 <pre><code class="language-yaml">rule_id: version_format

@@ -3035,7 +3035,7 @@ AIMO Taxonomy provides a shared language to classify these AI-specific risks and
 </table>
 <h2 id="how-to-use">How to Use</h2>
 <h3 id="relationship-with-evidence">Relationship with Evidence</h3>
-<p>Each evidence document references codes from multiple dimensions to classify the AI system or use case being documented. The 8-dimension classification enables:</p>
+<p>Each evidence document references codes from multiple dimensions to classify the AI system or use case being documented. <strong>EV</strong> denotes evidence <em>artifact</em> identifiers (e.g. <code>evidence[].id</code>, <code>references[]</code>); <strong>LG</strong> denotes log/event <em>taxonomy</em> codes (e.g. <code>evidence[].codes.LG</code>). The 8-dimension classification enables:</p>
 <ul>
 <li><strong>Consistent categorization</strong> across the organization</li>
 <li><strong>Risk-based filtering</strong> by dimension values</li>
@@ -3055,7 +3055,7 @@ LG: LG-001 (Request Record), LG-002 (Review/Approval Record)
 </code></pre>
 <h2 id="ssot-reference">SSOT Reference</h2>
 <p>!!! info "Source of Truth"
-    The authoritative definition is <code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>. This page is explanatory. See <a href="../../../contributing/localization/">Localization Guide</a> for update workflows.</p>
+    The authoritative definitions are <code>data/taxonomy/canonical.yaml</code> and <code>data/taxonomy/i18n/*.yaml</code>. The file <code>source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv</code> is <strong>generated</strong> from the SSOT. This page is explanatory. See <a href="../../../contributing/localization/">Localization Guide</a> for update workflows.</p>
 <h2 id="related-pages">Related Pages</h2>
 <ul>
 <li><a href="../04-codes/">Codes</a> - Code format, naming conventions, and lifecycle</li>

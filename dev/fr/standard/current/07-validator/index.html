@@ -2548,7 +2548,7 @@
 </ul>
 <h3 id="4-validation-du-format-de-code">4. Validation du format de code</h3>
 <p>Vérifier que tous les codes correspondent au format attendu :</p>
-<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 </code></pre>
 <h3 id="5-validation-de-schema">5. Validation de schéma</h3>
 <p>Valider par rapport aux schémas JSON :</p>
@@ -2601,7 +2601,7 @@ check: |
 <pre><code class="language-yaml">rule_id: code_format
 description: Tous les codes doivent correspondre au format standard
 severity: error
-pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$&quot;
+pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$&quot;
 </code></pre>
 <h3 id="regle-format-de-version">Règle : Format de version</h3>
 <pre><code class="language-yaml">rule_id: version_format

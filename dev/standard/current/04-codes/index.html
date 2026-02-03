@@ -2544,7 +2544,7 @@
 <li><code>IM-002</code> - Integration Mode: SaaS Integrated</li>
 <li><code>RS-001</code> - Risk Surface: Data Leakage</li>
 <li><code>OB-001</code> - Outcome/Benefit: Efficiency</li>
-<li><code>EV-001</code> - Evidence Type: Request Record</li>
+<li><code>LG-001</code> - Log/Event Type: Request Record</li>
 </ul>
 <h2 id="namespaces">Namespaces</h2>
 <p>The AIMO taxonomy uses 8 dimension namespaces:</p>
@@ -2601,9 +2601,9 @@
 <td>7</td>
 </tr>
 <tr>
-<td><strong>EV</strong></td>
-<td>Evidence Type</td>
-<td><code>EV-</code></td>
+<td><strong>LG</strong></td>
+<td>Log/Event Type</td>
+<td><code>LG-</code></td>
 <td>15</td>
 </tr>
 </tbody>
@@ -2679,9 +2679,9 @@
 <td>Risk categories</td>
 </tr>
 <tr>
-<td>EV</td>
+<td>LG</td>
 <td>1 or more</td>
-<td>Evidence types</td>
+<td>Log/event types</td>
 </tr>
 </tbody>
 </table>
@@ -2712,8 +2712,9 @@
 <li>IM (Integration Mode)</li>
 <li>RS (Risk Surface)</li>
 <li>OB (Outcome / Benefit)</li>
-<li>EV (Evidence Type)</li>
+<li>LG (Log/Event Type)</li>
 </ol>
+<p>See <a href="../04b-id-policy-namespace/">ID Policy / Namespace</a>: <strong>EV-</strong> is reserved for Evidence <em>artifact</em> IDs only; taxonomy log/event dimension uses <strong>LG-</strong> (e.g. LG-001 … LG-015).</p>
 <p><strong>Example composition:</strong></p>
 <pre><code>FS: FS-001
 UC: UC-001, UC-002
@@ -2722,7 +2723,7 @@ CH: CH-001
 IM: IM-002
 RS: RS-001, RS-003
 OB: OB-001
-EV: EV-001, EV-002
+LG: LG-001, LG-002
 </code></pre>
 <h2 id="lifecycle">Lifecycle</h2>
 <h3 id="status-values">Status Values</h3>
@@ -2875,7 +2876,7 @@ EV: EV-001, EV-002
 <p>See <a href="../07-validator/">Validator</a> for implementation details.</p>
 <h2 id="ssot-reference">SSOT Reference</h2>
 <p>!!! info "Source of Truth"
-    The authoritative definition is <code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>. This page is explanatory. See <a href="../../../contributing/localization/">Localization Guide</a> for update workflows.</p>
+    The authoritative definitions are <code>data/taxonomy/canonical.yaml</code> and <code>data/taxonomy/i18n/*.yaml</code>. The file <code>source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv</code> is <strong>generated</strong> from the SSOT. This page is explanatory. See <a href="../../../contributing/localization/">Localization Guide</a> for update workflows.</p>
 <h2 id="related-pages">Related Pages</h2>
 <ul>
 <li><a href="../03-taxonomy/">Taxonomy</a> - Full dimension definitions</li>

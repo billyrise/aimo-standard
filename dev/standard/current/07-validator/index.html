@@ -2530,7 +2530,7 @@
 </tr>
 <tr>
 <td>Codes Object</td>
-<td>FS, UC, DT, CH, IM, RS, EV (OB optional)</td>
+<td>FS, UC, DT, CH, IM, RS, LG (OB optional)</td>
 </tr>
 <tr>
 <td>Evidence File Entry</td>
@@ -2577,7 +2577,7 @@
 <td>Optional (0 or more)</td>
 </tr>
 <tr>
-<td>EV (Evidence Type)</td>
+<td>LG (Log/Event Type)</td>
 <td>At least 1 code</td>
 </tr>
 </tbody>
@@ -2591,7 +2591,7 @@
 </ul>
 <h3 id="4-code-format-validation">4. Code Format Validation</h3>
 <p>Check that all codes match the expected format:</p>
-<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 </code></pre>
 <h3 id="5-schema-validation">5. Schema Validation</h3>
 <p>Validate against JSON Schemas:</p>
@@ -2644,7 +2644,7 @@ check: |
 <pre><code class="language-yaml">rule_id: code_format
 description: All codes must match the standard format
 severity: error
-pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$&quot;
+pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$&quot;
 </code></pre>
 <h3 id="rule-version-format">Rule: Version Format</h3>
 <pre><code class="language-yaml">rule_id: version_format

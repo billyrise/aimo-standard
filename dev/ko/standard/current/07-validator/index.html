@@ -2548,7 +2548,7 @@
 </ul>
 <h3 id="4">4. 코드 형식 검증</h3>
 <p>모든 코드가 예상 형식과 일치하는지 확인:</p>
-<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 </code></pre>
 <h3 id="5">5. 스키마 검증</h3>
 <p>JSON 스키마에 대해 검증:</p>
@@ -2601,7 +2601,7 @@ check: |
 <pre><code class="language-yaml">rule_id: code_format
 description: 모든 코드가 표준 형식과 일치해야 함
 severity: error
-pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$&quot;
+pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$&quot;
 </code></pre>
 <h3 id="_7">규칙: 버전 형식</h3>
 <pre><code class="language-yaml">rule_id: version_format

@@ -2596,7 +2596,7 @@
 </ul>
 <h3 id="4">4. コードフォーマットバリデーション</h3>
 <p>すべてのコードが期待されるフォーマットに一致することを確認：</p>
-<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+<pre><code class="language-regex">^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 </code></pre>
 <h3 id="5">5. スキーマバリデーション</h3>
 <p>JSON Schemaに対してバリデーション：</p>
@@ -2649,7 +2649,7 @@ check: |
 <pre><code class="language-yaml">rule_id: code_format
 description: すべてのコードが標準フォーマットに一致する必要がある
 severity: error
-pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$&quot;
+pattern: &quot;^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$&quot;
 </code></pre>
 <h3 id="_7">ルール：バージョンフォーマット</h3>
 <pre><code class="language-yaml">rule_id: version_format
