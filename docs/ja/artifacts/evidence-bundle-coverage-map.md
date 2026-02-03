@@ -75,8 +75,25 @@ description: Evidence Bundle Coverage Map テンプレ（v0.1）。監査向け�
 
 ## Coverage Map（YAML）と Profile（JSON）の関係
 
-- **`coverage_map/coverage_map.yaml`** は **Informative**：AIMO の証跡/成果物と外部フレームワーク（ISO 42001、NIST AI RMF、EU AI Act 等）との高レベルな対応テーマを説明する。規範的な検証要件は課さない。
-- **`coverage_map/profiles/`** 配下の **Profile JSON**（例：`iso42001.json`, `nist_ai_rmf.json`, `eu_ai_act_annex_iv.json`）は **規範的な変換仕様**：`schemas/jsonschema/aimo-profile.schema.json` に準拠し、機械可読なマッピング（どの AIMO オブジェクトがどのフレームワーク条項に対応するか）を定義する。バリデータはプロファイル適合チェック（必須マッピングの充足）に利用可能。実装は [Validator](../validator/index.md) を参照。
+| 成果物 | 位置づけ | 目的 |
+|--------|----------|------|
+| **Coverage Map YAML**（`coverage_map/coverage_map.yaml` 等） | **Informative** | AIMO 証跡/成果物と外部フレームワーク（ISO 42001、NIST AI RMF、EU AI Act 等）の高レベルな対応テーマの説明。規範的な検証要件は課さない。 |
+| **Profile JSON**（`coverage_map/profiles/*.json`） | **Normative** | `schemas/jsonschema/aimo-profile.schema.json` で検証される変換仕様。機械可読なマッピングを定義。[Validator](../validator/index.md) の `--validate-profiles` で公式 Profile JSON のスキーマ適合を検証する（profile_id の PR-* パターン、target 列挙、target_version、mappings）。 |
+
+### v0.1 公式 profiles（凍結セット）
+
+v0.1 リリースに含まれる**規範的** Profile JSON は **3 本**。いずれもバリデータで検証される。
+
+| ファイル | profile_id | target | target_version |
+|----------|------------|--------|-----------------|
+| `iso42001.json` | PR-ISO42001-v0.1 | ISO_42001 | 1.0 |
+| `nist_ai_rmf.json` | PR-NIST-AI-RMF-v0.1 | NIST_AI_RMF | 1.0 |
+| `eu_ai_act_annex_iv.json` | PR-EU-AI-ACT-ANNEX-IV-v0.1 | EU_AI_ACT_ANNEX_IV | Annex IV |
+
+### Profile 更新方針
+
+- **ISO 42001 / NIST AI RMF**：対象フレームワークの新バージョンは、将来の標準バージョンで新規 Profile ファイルまたは新 `target_version` として追加可能。v0.1 の Profile は v0.1 リリースとして凍結。
+- **EU AI Act Annex IV**：Annex IV および関連条文は規制側で更新される場合がある。条文・文言変更に追随するため、**PATCH**（例 0.1.x）で Profile のマッピングを更新することがある（profile_id は継続）。実装者は Profile の `target_version` およびリリースノートで参照される版に合わせること。
 
 ---
 

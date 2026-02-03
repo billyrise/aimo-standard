@@ -75,8 +75,25 @@ Mapping to external frameworks is **for reference only**; the standard does not 
 
 ## Coverage Map (YAML) vs Profiles (JSON)
 
-- **`coverage_map/coverage_map.yaml`** is **Informative**: it describes high-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements.
-- **Profile JSONs** in **`coverage_map/profiles/`** (e.g. `iso42001.json`, `nist_ai_rmf.json`, `eu_ai_act_annex_iv.json`) are **normative conversion specifications**: they conform to `schemas/jsonschema/aimo-profile.schema.json` and define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). Validators may use them to check that a bundle satisfies a given profile (required mappings present). See [Validator](../validator/index.md) for profile-based validation when implemented.
+| Artifact | Status | Purpose |
+|----------|--------|---------|
+| **Coverage Map YAML** (`coverage_map/coverage_map.yaml` or similar) | **Informative** | High-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements. |
+| **Profile JSONs** (`coverage_map/profiles/*.json`) | **Normative** | Conversion specifications validated against `schemas/jsonschema/aimo-profile.schema.json`. They define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). The [Validator](../validator/index.md) runs `--validate-profiles` to ensure all official profile JSONs conform to the schema (profile_id PR-* pattern, target enum, target_version, mappings). |
+
+### v0.1 official profiles (frozen set)
+
+The v0.1 release includes **three** normative profile JSONs, all validated by the validator:
+
+| File | profile_id | target | target_version |
+|------|------------|--------|----------------|
+| `iso42001.json` | PR-ISO42001-v0.1 | ISO_42001 | 1.0 |
+| `nist_ai_rmf.json` | PR-NIST-AI-RMF-v0.1 | NIST_AI_RMF | 1.0 |
+| `eu_ai_act_annex_iv.json` | PR-EU-AI-ACT-ANNEX-IV-v0.1 | EU_AI_ACT_ANNEX_IV | Annex IV |
+
+### Profile update policy
+
+- **ISO 42001 / NIST AI RMF**: New versions of the target framework may be added as new profile files or new `target_version` values in a future standard version; v0.1 profiles remain frozen for the v0.1 release.
+- **EU AI Act Annex IV**: Annex IV and related articles may be updated by regulators; profile mappings may be updated via **PATCH** (e.g. 0.1.x) to follow wording or clause changes while keeping the same profile_id for continuity. Implementers should align with the version referenced in the profile’s `target_version` and release notes.
 
 ---
 
