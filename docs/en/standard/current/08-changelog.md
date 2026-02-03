@@ -80,6 +80,14 @@ Each official release includes:
 
 ## Change History
 
+### Version 0.1.1 {#version-011}
+
+**Summary:** PATCH release. Optional signature metadata for verification, Coverage Map audit_questions, Normative/Informative and governance clarifications, v0.2 roadmap. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
+### Version 0.1.0 {#version-010}
+
+**Summary:** Normative Evidence Bundle structure, ID namespace (EV/LG), Profiles, Validator. Breaking: EV→LG for taxonomy. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
 ### Unreleased (namespace and normative fixes)
 
 **Summary:** Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.

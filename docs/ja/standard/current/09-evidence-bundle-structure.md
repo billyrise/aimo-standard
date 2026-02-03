@@ -32,7 +32,7 @@ description: Evidence Bundle（v0.1）の規範的ルート構造とマニフェ
 
 ## Integrity（規範）と Custody（実装側）
 
-- **Integrity** は v0.1 で**規範**とする：マニフェスト、索引ファイルの sha256、マニフェストに対する署名の存在を必須とする。バリデータは以下をチェックすることは MUST とする：必須ディレクトリ・ファイルの存在、manifest.json の存在と有効性、object_index / payload_index に列挙された全ファイルの存在と sha256 一致、signatures/ にマニフェストを対象とする署名が少なくとも1つ存在すること（v0.1 では存在と参照のみ；検証は v0.1 の範囲外）。
+- **Integrity** は v0.1 で**規範**とする：マニフェスト、索引ファイルの sha256、マニフェストに対する署名の存在を必須とする。バリデータは以下をチェックすることは MUST とする：必須ディレクトリ・ファイルの存在、manifest.json の存在と有効性、object_index / payload_index に列挙された全ファイルの存在と sha256 一致、signatures/ にマニフェストを対象とする署名が少なくとも1つ存在すること（v0.1：存在と参照のみ；v0.1.1：検証用メタデータは RECOMMENDED；v0.2 予定：暗号学的検証をスコープに含める）。
 - **Custody**（保管・アクセス制御・保持）は**実装側**で定義する。標準は保管方法を規定しない。提出時点で Integrity 要件を満たすことを要求する。
 
 ## manifest.json（MUST 項目）
@@ -50,13 +50,29 @@ description: Evidence Bundle（v0.1）の規範的ルート構造とマニフェ
 | **hash_chain** | object | **規範（v0.1）：** `algorithm`（sha256 \| merkle）、`head`（64 文字小 hex）、`path`（hashes/ 配下の相対パス；`../` 禁止・先頭 `/` 禁止）、`covers`（配列・最低1要素）を必須とする。v0.1 では `covers` に `manifest.json` と `objects/index.json` を含めること（MUST）。 |
 | **signing** | object | **規範（v0.1）：** `signatures`（配列・最低1要素）を必須とする。各要素は MUST：`signature_id`（例 SIG-... または UUID）、`path`（signatures/ 配下の相対パス；`../` 禁止・先頭 `/` 禁止）、`targets`（配列・最低1要素；v0.1 では少なくとも1つの署名の targets に `manifest.json` を含めること）、`algorithm`（ed25519 \| rsa-pss \| ecdsa \| unspecified のいずれか）。`created_at`（date-time）は MAY。**注記：** 署名の暗号検証は v0.1 の範囲外とする。参照（どのファイルを指し、何を対象とするか）は v0.1 で必須。 |
 
+**v0.1.1 オプション署名メタデータ（第三者による再実施のため RECOMMENDED）：**
+
+| フィールド | 型 | 説明 |
+|------------|------|------|
+| **signer_identity** | string | 署名者識別（例 PGP フィンガープリント、did:key）。 |
+| **signed_at** | string (date-time) | 署名適用日時（ISO 8601）。 |
+| **verification_command** | string | 監査人が再検証するための例示 CLI コマンド。 |
+| **canonicalization** | string | 署名対象ペイロードの正規化方式：`rfc8785_json`、`cbor`、`unspecified`。 |
+
+Integrity と検証：**v0.1** — 参照と存在のみ。**v0.1.1** — 検証用メタデータは RECOMMENDED。**v0.2**（予定）— 暗号学的検証をスコープに含める。
+
 - **sha256** は 64 文字の小 hex であること（MUST）。
 - **path** は相対パスとし、`../` および先頭 `/` を含んではならない（MUST）。パスは Evidence Bundle ルート内に留まること（MUST）。
 
 JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json` を参照。
 
+## 将来拡張（情報提供）
+
+- **Control/Requirement リンク**: 将来バージョンで、Evidence Bundle 要素を Control または Requirement 識別子へリンクする標準方式を追加する可能性がある（例：NIST OSCAL 等へのエクスポート用）。v0.1 および v0.1.1 では不要。
+
 ## 関連
 
 - [Evidence Bundle（概要）](../../artifacts/evidence-bundle.md)
+- [署名検証ロードマップ](../../artifacts/signature-verification-roadmap.md)
 - [Validator](../../validator/index.md)
 - [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md)

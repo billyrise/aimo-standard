@@ -71,6 +71,12 @@ The `release.yml` workflow handles this.
 3. **`dev` is explicitly unreleased.** Must have noindex; not for audit citations.
 4. **alias_type must be `redirect`** (not `copy`) to prevent content drift.
 
+### 5. Standard governance (v0.1.1)
+
+- **Major version upgrades**: When releasing a MAJOR version (breaking changes), the project SHOULD provide an automated migration tool (migrator) and a migration guide so adopters can transition without ambiguity.
+- **Deprecated versions**: Released versions that are superseded SHOULD be marked as deprecated and retained as read-only archives. A deprecation period (e.g. 3 years) MAY be defined so that citations remain valid for a known interval.
+- **Change impact**: Changes that affect IDs, terminology, or normative requirements SHOULD be accompanied by an impact analysis (e.g. diff) and an explicit compatibility statement (e.g. "backward compatible" or "breaking; see migration guide").
+
 ### 4. Audit citation and /latest
 
 - **Audit citations MUST use a versioned URL** (`https://standard.aimoaas.com/X.Y.Z/...`). `/latest/` is for convenience and reference only; it is **not recommended for audit evidence** because the target can change when a new release is published.

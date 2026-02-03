@@ -19,6 +19,10 @@ This page explains what the Coverage Map is and is not, how to use it in audit, 
 - **Not** legal advice or a substitute for verification against authoritative texts.
 - **Not** exhaustive; it is a practical subset for audit-readiness and explainability.
 
+## Audit questions (v0.1.1)
+
+From v0.1.1, mappings may include **audit_questions**: example questions an auditor might ask when reviewing a given requirement. These are **for explanatory use only**. They do not constitute assurance, compliance guarantees, or an exhaustive audit program. Readers must verify against authoritative framework texts and apply professional judgment.
+
 ## How to use it in audit
 
 Use the flow: **requirement → evidence → artifact → validation**.

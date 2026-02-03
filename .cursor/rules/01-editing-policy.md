@@ -5,6 +5,10 @@
 - Do not update other locales (ja, es, fr, de, pt, it, zh, zh-TW, ko) in day-to-day edits.
 - This keeps a single source of truth and avoids drift until release.
 
+## Normative language (shall / should / may)
+- In **normative** standard text, use **shall** for mandatory requirements (MUST), **should** for recommended practice (RECOMMENDED), and **may** for optional (MAY). Do not use "must" or "can" where the standard uses RFC 2119-style language; keep normative and informative clearly separated.
+- See `source_pack/00_manifest.md` for which content is Normative vs Informative.
+
 ## English Canonical
 - English `.md` files under `docs/en/` are canonical.
 - Other locales live under `docs/<locale>/` (folder structure; see mkdocs i18n).

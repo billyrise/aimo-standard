@@ -447,6 +447,23 @@ def main():
             "path": path_str or None,
             "profiles_valid": profiles_valid if args.validate_profiles else None,
         }
+        # v0.1.1: include signing metadata from bundle manifest when path is a bundle (for auditor re-performance)
+        if args.path is not None and args.path.resolve().is_dir() and path_valid:
+            manifest_path = args.path.resolve() / "manifest.json"
+            if manifest_path.is_file():
+                try:
+                    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                    sigs = (manifest.get("signing") or {}).get("signatures") or []
+                    out["signing_metadata"] = [
+                        {
+                            k: sig.get(k)
+                            for k in ("signature_id", "path", "targets", "algorithm", "signer_identity", "signed_at", "verification_command", "canonicalization")
+                            if sig.get(k) is not None
+                        }
+                        for sig in sigs
+                    ]
+                except (json.JSONDecodeError, OSError):
+                    pass
         print(json.dumps(out, indent=2, ensure_ascii=False))
     elif args.format == "sarif":
         sarif = emit_sarif(errors, path_str or "profiles") if errors else emit_sarif([], path_str or "profiles")

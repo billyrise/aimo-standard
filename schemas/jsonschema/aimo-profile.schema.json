@@ -2,10 +2,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://standard.aimoaas.com/schemas/aimo-profile.schema.json",
   "title": "AIMO Profile",
-  "description": "Normative conversion profile mapping AIMO evidence/artifacts to an external framework (e.g. ISO/IEC 42001, NIST AI RMF, EU AI Act Annex IV). Used for validator profile conformance and coverage explanation.",
+  "description": "Normative conversion profile mapping AIMO evidence/artifacts to an external framework (e.g. ISO/IEC 42001, NIST AI RMF, EU AI Act Annex IV). Used for validator profile conformance and coverage explanation. v0.1.1: optional audit_questions for explanatory use only (not assurance).",
   "type": "object",
   "required": ["profile_id", "target", "target_version", "mappings"],
   "properties": {
+    "audit_questions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "v0.1.1 optional: Example audit questions that this mapping may help address. Informative only; does not guarantee compliance or assurance."
+    },
     "profile_id": {
       "type": "string",
       "pattern": "^PR-[A-Za-z0-9_.-]+$",

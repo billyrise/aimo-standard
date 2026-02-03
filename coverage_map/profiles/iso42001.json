@@ -2,6 +2,10 @@
   "profile_id": "PR-ISO42001-v0.1",
   "target": "ISO_42001",
   "target_version": "1.0",
+  "audit_questions": [
+    "What is the scope and context of the organization for AI systems?",
+    "Where is the AI policy and how is it maintained?"
+  ],
   "mappings": [
     { "source_object_ref": "Summary", "target_field": "4.1 Context of the organization", "required": true },
     { "source_object_ref": "dictionary", "target_field": "5.2 Policy", "required": true },

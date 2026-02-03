@@ -34,7 +34,9 @@
         "path": "manifest.sig",
         "targets": ["manifest.json", "objects/index.json"],
         "algorithm": "unspecified",
-        "created_at": "2026-02-03T12:00:00Z"
+        "created_at": "2026-02-03T12:00:00Z",
+        "signer_identity": "example-pgp-fingerprint-or-did-key",
+        "verification_command": "aimo verify --pubkey <key> --manifest manifest.json"
       }
     ]
   }

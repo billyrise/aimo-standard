@@ -23,6 +23,7 @@ build/
 
 # Local reports (not for GitHub)
 REPORTS/v0.1_release_plan.md
+REPORTS/v0.1.1_update_plan.md
 
 # Local design doc (not for GitHub)
 AIMO Standard v0_1.docx

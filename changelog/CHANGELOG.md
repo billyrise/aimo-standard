@@ -9,6 +9,32 @@ This changelog follows [Semantic Versioning](https://semver.org/) principles:
 
 ---
 
+## [0.1.1] - (release date TBD) {#version-011}
+
+### Summary (auditor-facing)
+
+v0.1.1 is a **PATCH** release: backward-compatible additions and clarifications. All v0.1.0 Evidence Bundles and root JSON remain valid. New: optional signature metadata for third-party verification, Coverage Map audit questions (informative), Normative/Informative and standard governance clarifications, and an informative v0.2 roadmap.
+
+### Added
+
+- **Evidence Bundle signing (v0.1.1 optional)**: Manifest `signing.signatures[]` may include `signer_identity`, `signed_at`, `verification_command`, and `canonicalization` (RECOMMENDED for auditor re-performance). Schema: `evidence_bundle_manifest.schema.json`. Documented in [09-evidence-bundle-structure](docs/en/standard/current/09-evidence-bundle-structure.md) and [signature-verification-roadmap](docs/en/artifacts/signature-verification-roadmap.md). Cryptographic verification remains out of scope until v0.2.
+- **Coverage Map audit_questions**: `coverage_map.yaml` and Profile schema support optional `audit_questions` (example auditor questions). Methodology and meta note that audit questions are for explanatory use only, not assurance. See [methodology](docs/en/coverage-map/methodology.md) and [aimo-profile.schema.json](schemas/jsonschema/aimo-profile.schema.json).
+- **Normative vs Informative**: [00_manifest.md](source_pack/00_manifest.md) now includes a table of Normative vs Informative content. Editing policy (shall/should/may) documented in `.cursor/rules/01-editing-policy.md`.
+- **Standard governance**: [VERSIONING.md](VERSIONING.md) section 5: Major version upgrades SHOULD provide a migrator and migration guide; deprecated versions as read-only archives; impact analysis and compatibility statement for significant changes.
+- **v0.2 roadmap (informative)**: [source_pack/07_release/v0.2_roadmap.md](source_pack/07_release/v0.2_roadmap.md) and [docs/en/standard/current/10-roadmap-v0.2.md](docs/en/standard/current/10-roadmap-v0.2.md): audit object SSOT, Evidence-as-Code, output profiles, Test library, lifecycle, JNC, OSCAL linkage. Target 2026 Q4–2027.
+- **Justified Non-Compliance (JNC)**: Informative [justified-non-compliance.md](docs/en/artifacts/justified-non-compliance.md) describing a possible future extension; not normative in v0.1.1.
+- **Evidence Bundle future extensions**: [09-evidence-bundle-structure](docs/en/standard/current/09-evidence-bundle-structure.md) adds a short "Future extensions" note on Control/Requirement linkage and OSCAL.
+- **Validator**: When validating a bundle with `--format json`, output now includes `signing_metadata` (v0.1.1 fields from manifest) when present.
+
+### Changed
+
+- **09-evidence-bundle-structure**: v0.1.1 optional signature fields table; Integrity note (v0.1 / v0.1.1 / v0.2); link to signature-verification-roadmap.
+- **coverage_map.yaml**: `meta.methodology` and two mappings extended with `audit_questions`; version set to 0.1.1.
+- **coverage_map/profiles/iso42001.json**: Optional `audit_questions` array added.
+- **aimo-profile.schema.json**: Optional top-level `audit_questions` (array of strings).
+
+---
+
 ## [0.1.0] - (release date TBD)
 
 ### Summary (auditor-facing)

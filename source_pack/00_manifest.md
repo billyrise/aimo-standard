@@ -18,13 +18,27 @@ This manifest is the canonical checklist for auditor-first documentation. All CU
 
 ---
 
+## Normative vs Informative (v0.1.1)
+
+Standard text uses **shall** for normative (MUST) requirements, **should** for recommended practice, and **may** for optional. Normative content is the single source of truth for conformance; informative content supports understanding and does not create obligations.
+
+| Subject | Normative? | Location (SSOT) |
+|---------|------------|-----------------|
+| Evidence Bundle structure | Normative | `docs/*/standard/current/09-evidence-bundle-structure.md` |
+| ID policy / namespace | Normative | `docs/*/standard/current/04b-id-policy-namespace.md` |
+| JSON Schemas | Normative | `schemas/jsonschema/` |
+| Validator rules | Normative | `validator/rules/checks.md`, `checks.yaml` |
+| Profiles (conversion spec) | Normative | `coverage_map/profiles/*.json` |
+| Coverage Map YAML | Informative | `coverage_map/coverage_map.yaml` — mapping explanation only |
+| Methodology, roadmap, JNC | Informative | `docs/*/coverage-map/methodology.md`, artifacts/signature-verification-roadmap.md, standard/current/10-roadmap-v0.2.md |
+
 ## Normative SSOT (v0.1)
 
 The following paths are **normative** for AIMO Standard v0.1. The repository does not use a separate `/normative/` directory; normative content lives in the paths below.
 
 | Normative subject | Location (SSOT) |
 |-------------------|-----------------|
-| **Evidence Bundle structure** | `docs/*/standard/current/09-evidence-bundle-structure.md` — root layout, manifest, integrity (v0.1) |
+| **Evidence Bundle structure** | `docs/*/standard/current/09-evidence-bundle-structure.md` — root layout, manifest, integrity (v0.1); v0.1.1 optional signature metadata |
 | **ID policy / namespace** | `docs/*/standard/current/04b-id-policy-namespace.md` — EV (artifact ID) vs LG (taxonomy) separation |
 | **JSON Schemas** | `schemas/jsonschema/` — aimo-standard, aimo-dictionary, aimo-ev, evidence_bundle_manifest, evidence_pack_manifest, aimo-profile, etc. |
 | **Validator rules** | `validator/rules/checks.md`, `validator/rules/checks.yaml` — code format (LG, not EV in taxonomy), schema validation |

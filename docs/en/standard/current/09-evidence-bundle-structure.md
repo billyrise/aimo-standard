@@ -36,7 +36,7 @@ Implementers MUST NOT submit a bundle that omits any of these. The Validator MUS
   - Required directories and files exist.
   - `manifest.json` is present and valid (schema and pre-schema checks).
   - Every file listed in `object_index` and `payload_index` exists at the given path and its content matches the declared `sha256`.
-  - `signatures/` contains at least one signature that targets the manifest (v0.1: existence and reference only; verification is out of scope for v0.1).
+  - `signatures/` contains at least one signature that targets the manifest (v0.1: existence and reference only; v0.1.1: verification metadata RECOMMENDED; v0.2 planned: cryptographic verification in scope).
 - **Custody** (storage, access control, retention, WORM) is **implementation-defined**. The standard does not prescribe how custodians store or protect the bundle; it only requires that the package, when submitted, satisfies the Integrity requirements above.
 
 ## manifest.json (MUST fields)
@@ -54,14 +54,30 @@ The manifest MUST include at least:
 | **hash_chain** | object | **Normative (v0.1):** MUST include `algorithm` (sha256 \| merkle), `head` (64 lowercase hex), `path` (relative path under `hashes/`; no `../`, no leading `/`), and `covers` (array, at least one element). v0.1 MUST include `manifest.json` and `objects/index.json` in `covers`. |
 | **signing** | object | **Normative (v0.1):** MUST include `signatures` (array, at least one entry). Each entry MUST have: `signature_id` (e.g. SIG-... or UUID), `path` (relative under `signatures/`; no `../`, no leading `/`), `targets` (array, at least one path; v0.1 MUST include `manifest.json` in at least one signature's targets), `algorithm` (one of ed25519, rsa-pss, ecdsa, unspecified). `created_at` (date-time) is MAY. **Note:** Cryptographic verification of signatures is out of scope for v0.1; reference (which file and what it targets) is required. |
 
+**v0.1.1 optional signature metadata (RECOMMENDED for third-party re-performance):**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| **signer_identity** | string | Identity of the signer (e.g. PGP fingerprint, did:key). |
+| **signed_at** | string (date-time) | When the signature was applied (ISO 8601). |
+| **verification_command** | string | Example CLI command for an auditor to re-perform verification. |
+| **canonicalization** | string | How the signed payload was canonicalized: `rfc8785_json`, `cbor`, or `unspecified`. |
+
+Integrity and verification: **v0.1** — reference and existence only. **v0.1.1** — metadata for verification is RECOMMENDED. **v0.2** (planned) — cryptographic verification in scope.
+
 - **sha256** values MUST be 64 lowercase hexadecimal characters.
 - **path** MUST be a relative path; MUST NOT contain `../` or start with `/`; paths MUST stay within the Evidence Bundle root.
 - The manifest MAY include an explicit self-reference (e.g. in `object_index` or a dedicated field) so that the manifest’s own integrity is covered; validators MUST accept a bundle where the manifest is either listed in an index or explicitly referenced by a signature.
 
 See the JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json`.
 
+## Future extensions (informative)
+
+- **Control/Requirement linkage**: A future version may add a standard way to link Evidence Bundle elements to Control or Requirement identifiers (e.g. for export to NIST OSCAL or similar audit automation formats). This is not required in v0.1 or v0.1.1.
+
 ## References
 
 - [Evidence Bundle (artifact overview)](../../artifacts/evidence-bundle.md) — purpose and TOC
+- [Signature verification roadmap](../../artifacts/signature-verification-roadmap.md) — v0.1.1 metadata and v0.2 verification plan
 - [Validator](../../validator/index.md) — how the validator enforces this structure
 - [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md) — MUST-level checklist

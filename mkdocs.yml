@@ -102,6 +102,7 @@ nav:
           - Validator: standard/current/07-validator.md
           - Changelog: standard/current/08-changelog.md
           - Evidence Bundle structure: standard/current/09-evidence-bundle-structure.md
+          - Roadmap (v0.2): standard/current/10-roadmap-v0.2.md
       - Versions: standard/versions/index.md
       - Conformance: conformance/index.md
       - Coverage Map:
@@ -116,6 +117,8 @@ nav:
       - Evidence Bundle: artifacts/evidence-bundle.md
       - Evidence Bundle Coverage Map (template): artifacts/evidence-bundle-coverage-map.md
       - Minimum Evidence Requirements: artifacts/minimum-evidence.md
+      - Signature verification roadmap: artifacts/signature-verification-roadmap.md
+      - Justified Non-Compliance (JNC): artifacts/justified-non-compliance.md
       - Log Schemas:
           - artifacts/log-schemas/index.md
           - Shadow AI Discovery Log Schema: artifacts/log-schemas/shadow-ai-discovery.md

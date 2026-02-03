@@ -120,7 +120,7 @@
     },
     "signing": {
       "type": "object",
-      "description": "Signing metadata. v0.1 normative: signatures array with explicit reference (path, targets, algorithm). Cryptographic verification is out of scope for v0.1.",
+      "description": "Signing metadata. v0.1 normative: signatures array with explicit reference (path, targets, algorithm). v0.1.1 adds optional metadata for verification (signer_identity, verification_command, etc.). Cryptographic verification is out of scope until v0.2.",
       "required": ["signatures"],
       "additionalProperties": true,
       "properties": {
@@ -161,6 +161,24 @@
                 "type": "string",
                 "format": "date-time",
                 "description": "When the signature was created (MAY)."
+              },
+              "signer_identity": {
+                "type": "string",
+                "description": "v0.1.1 RECOMMENDED: Identity of the signer (e.g. PGP fingerprint, did:key). Enables third-party re-performance of verification. Cryptographic verification is out of scope until v0.2."
+              },
+              "signed_at": {
+                "type": "string",
+                "format": "date-time",
+                "description": "v0.1.1 RECOMMENDED: When the signature was applied (ISO 8601)."
+              },
+              "verification_command": {
+                "type": "string",
+                "description": "v0.1.1 RECOMMENDED: Example CLI command for an auditor to re-perform verification (e.g. aimo verify --pubkey ...). Verification execution is out of scope until v0.2."
+              },
+              "canonicalization": {
+                "type": "string",
+                "enum": ["rfc8785_json", "cbor", "unspecified"],
+                "description": "v0.1.1 RECOMMENDED: How the signed payload was canonicalized (e.g. RFC 8785 JSON). Enables reproducible verification in v0.2."
               }
             }
           }

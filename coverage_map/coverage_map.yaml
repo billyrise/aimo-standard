@@ -3,9 +3,9 @@
 # This mapping does NOT guarantee compliance or constitute legal advice.
 
 meta:
-  version: "0.1.0"
-  last_updated: "2026-01-31"
-  methodology: "Informative mapping only. Readers must verify against authoritative framework texts. AIMO supports explainability and evidence readiness; it does not guarantee conformity to any external standard or regulation."
+  version: "0.1.1"
+  last_updated: "2026-02-04"
+  methodology: "Informative mapping only. Readers must verify against authoritative framework texts. AIMO supports explainability and evidence readiness; it does not guarantee conformity to any external standard or regulation. Audit questions (audit_questions) are for explanatory use only and do not constitute assurance or compliance guarantees."
 
 frameworks:
   - id: iso42001
@@ -35,6 +35,9 @@ mappings:
     minimum_evidence_refs: [request, review]
     artifacts: [schemas/jsonschema/aimo-standard.schema.json, templates/ev/]
     validator_refs: schema_validate_ev
+    audit_questions:
+      - "What is the scope and context of the AI system?"
+      - "Who is responsible for the organization context?"
     notes: "Informative mapping; verify against official text."
   - framework_id: iso42001
     framework_ref: "4.2 Interested parties"
@@ -44,6 +47,9 @@ mappings:
     minimum_evidence_refs: [request, review]
     artifacts: [templates/ev/ev_template.md]
     validator_refs: n/a
+    audit_questions:
+      - "Which stakeholders are identified and how are their requirements captured?"
+      - "Where is stakeholder input reflected in request/review evidence?"
     notes: "Informative mapping; verify against official text."
   - framework_id: iso42001
     framework_ref: "5.1 Leadership and commitment"
