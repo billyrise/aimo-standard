@@ -139,12 +139,13 @@
               },
               "path": {
                 "type": "string",
-                "description": "Relative path under signatures/; MUST NOT contain ../ or start with /.",
-                "pattern": "^(?!\\/)(?!.*\\.\\./).*$"
+                "description": "Relative path under signatures/ (resolved as bundle_root/signatures/<path>). MUST NOT contain .. or start with /. Path traversal is forbidden.",
+                "minLength": 1,
+                "pattern": "^(?!\\/)(?!.*\\.\\.).+$"
               },
               "targets": {
                 "type": "array",
-                "description": "Bundle paths that this signature covers. v0.1 MUST include manifest.json in at least one signature.",
+                "description": "Bundle paths that this signature covers. v0.1 normative: at least one signature in the bundle MUST include manifest.json in targets (enforced by validator).",
                 "minItems": 1,
                 "items": {
                   "type": "string",
