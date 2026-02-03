@@ -6,6 +6,18 @@ description: AIMO Evidence Bundle structure. Audit package format with TOC, trac
 
 An **Evidence Bundle** is an audit package: a structured set of artifacts that supports explainability and traceability for AI governance. It is not a product feature but a deliverable format for auditors and compliance.
 
+## Root required structure (normative)
+
+The **root layout** of an Evidence Bundle is defined normatively in [Evidence Bundle root structure (v0.1)](../standard/current/09-evidence-bundle-structure.md). At the bundle root the following MUST be present:
+
+- **manifest.json** — bundle manifest (bundle_id, bundle_version, object_index, payload_index, hash_chain, signing).
+- **objects/** — directory for enumerated objects (listed in manifest).
+- **payloads/** — directory for payload files (e.g. root EV JSON, Evidence Pack files).
+- **signatures/** — directory for digital signatures; v0.1 MUST contain at least one signature that references the manifest (existence and target; verification is a future extension).
+- **hashes/** — directory for hash chain or integrity records as required by the manifest.
+
+**Integrity** (manifest, sha256 for indexed files, signature presence) is **normative** and enforced by the [Validator](../validator/index.md). **Custody** (storage, access control, retention) is **implementation-defined** and not specified by the standard.
+
 ## Bundle structure and naming
 
 - **Bundle root naming**: use a consistent pattern such as `{org}_{system}_{period}_{version}` (e.g. `acme_ai-usage_2026-Q1_v1`).
@@ -50,15 +62,9 @@ See [Minimum Evidence Requirements](minimum-evidence.md) for MUST-level fields a
 
 ## Operational guidance
 
-!!! info "Integrity and access control"
-    While AIMO does not prescribe specific controls, adopters should document:
-    
-    - **Access roles**: who can create, read, update, or delete evidence
-    - **Retention policy**: how long evidence is retained and under what schedule
-    - **Integrity mechanisms**: hashing, WORM storage, or digital signatures used
-    - **Audit trail**: logs of access and changes to the bundle
-    
-    See [Minimum Evidence Requirements > Integrity & Access](minimum-evidence.md#6-integrity-access) for detailed guidance.
+!!! info "Integrity (normative) vs Custody (implementation)"
+    - **Integrity** is normative in v0.1: the bundle MUST have manifest.json, object_index/payload_index with sha256, and at least one signature in signatures/ that references the manifest. The [Validator](../validator/index.md) rejects bundles that do not satisfy these requirements.
+    - **Custody** (access control, retention, WORM) is implementation-defined. Adopters should document access roles, retention policy, and audit trail; see [Minimum Evidence Requirements > Integrity & Access](minimum-evidence.md#6-integrity-access).
 
 ## Audit journey
 

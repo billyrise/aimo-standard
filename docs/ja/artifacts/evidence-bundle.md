@@ -6,6 +6,10 @@ description: AIMO Evidence Bundle構造。TOC、追跡可能性、AIガバナン
 
 **Evidence Bundle** は監査用パッケージであり、AIガバナンスの説明可能性と追跡可能性を支える構造化されたアーティファクトの集合である。製品機能ではなく、監査・コンプライアンス向けの成果物形式である。
 
+## ルート必須構成（規範）
+
+バンドルの**ルート構成**は [Evidence Bundle ルート構造（v0.1）](../standard/current/09-evidence-bundle-structure.md) で規範的に定義する。バンドルルートには以下が MUST で存在すること：**manifest.json**、**objects/**、**payloads/**、**signatures/**、**hashes/**。**Integrity**（マニフェスト、sha256、署名の存在）は規範であり [Validator](../validator/index.md) が検証する。**Custody**（保管・アクセス制御）は実装側で定義する。
+
 ## バンドル構造と命名
 
 - **バンドルルート命名**: `{org}_{system}_{period}_{version}` など一貫した形式を用いる（例: `acme_ai-usage_2026-Q1_v1`）。
@@ -50,15 +54,9 @@ MUST レベルのフィールドとライフサイクル区分は [Minimum Evide
 
 ## 運用ガイダンス
 
-!!! info "完全性とアクセス制御"
-    AIMO は特定の統制を規定しないが、採用者は以下を文書化すべきである：
-    
-    - **アクセスロール**: 誰が証跡を作成・閲覧・更新・削除できるか
-    - **保持ポリシー**: 証跡をどのくらいの期間、どのスケジュールで保持するか
-    - **完全性メカニズム**: 使用するハッシュ、WORM ストレージ、デジタル署名
-    - **監査証跡**: バンドルへのアクセスと変更のログ
-    
-    詳細は [Minimum Evidence Requirements > Integrity & Access](minimum-evidence.md#6-integrity-access完全性アクセス制御) を参照。
+!!! info "Integrity（規範）と Custody（実装側）"
+    - **Integrity** は v0.1 で規範とする。バンドルには manifest.json、object_index/payload_index の sha256、signatures/ にマニフェスト参照署名が必須。[Validator](../validator/index.md) がこれらを満たさないバンドルを拒否する。
+    - **Custody**（アクセス制御・保持・WORM）は実装側で定義する。採用者はアクセスロール、保持ポリシー、監査証跡を文書化すること。詳細は [Minimum Evidence Requirements > Integrity & Access](minimum-evidence.md#6-integrity-access) を参照。
 
 ## 監査ジャーニー
 

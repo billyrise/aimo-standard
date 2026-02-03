@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://standard.aimoaas.com/schemas/evidence_bundle_manifest.schema.json",
+  "title": "AIMO Evidence Bundle Manifest Schema",
+  "description": "Schema for Evidence Bundle manifest.json. Root descriptor with object_index, payload_index, hash_chain, and signing. v0.1 normative.",
+  "type": "object",
+  "required": [
+    "bundle_id",
+    "bundle_version",
+    "created_at",
+    "scope_ref",
+    "object_index",
+    "payload_index",
+    "hash_chain",
+    "signing"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to this schema."
+    },
+    "bundle_id": {
+      "type": "string",
+      "description": "Unique identifier for this bundle (UUID).",
+      "format": "uuid"
+    },
+    "bundle_version": {
+      "type": "string",
+      "description": "Version of the bundle (SemVer).",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9.-]+)?(\\+[a-zA-Z0-9.-]+)?$"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Creation timestamp (ISO 8601 date-time).",
+      "format": "date-time"
+    },
+    "scope_ref": {
+      "type": "string",
+      "description": "Scope reference (e.g. SC-001).",
+      "pattern": "^SC-[A-Za-z0-9-]+$"
+    },
+    "object_index": {
+      "type": "array",
+      "description": "List of enumerated objects (id, type, path, sha256).",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "path", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string" },
+          "path": {
+            "type": "string",
+            "description": "Relative path; MUST NOT contain ../ (path traversal prevention).",
+            "pattern": "^(?!.*\\.\\./).*$"
+          },
+          "sha256": {
+            "type": "string",
+            "description": "SHA-256 hash (64 lowercase hex).",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "payload_index": {
+      "type": "array",
+      "description": "List of payloads (logical_id, path, sha256, mime, size).",
+      "items": {
+        "type": "object",
+        "required": ["logical_id", "path", "sha256", "mime", "size"],
+        "additionalProperties": false,
+        "properties": {
+          "logical_id": { "type": "string" },
+          "path": {
+            "type": "string",
+            "pattern": "^(?!.*\\.\\./).*$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "mime": { "type": "string" },
+          "size": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "hash_chain": {
+      "type": "object",
+      "description": "Chain head and algorithm (e.g. sha256, merkle). Extensible.",
+      "required": ["algorithm", "head"],
+      "additionalProperties": true,
+      "properties": {
+        "algorithm": { "type": "string", "enum": ["sha256", "merkle"] },
+        "head": { "type": "string" }
+      }
+    },
+    "signing": {
+      "type": "object",
+      "description": "Signing method(s). v0.1 requires at least one signature in signatures/ that references the manifest.",
+      "additionalProperties": true
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Reserved for future extensions.",
+      "additionalProperties": true
+    }
+  }
+}

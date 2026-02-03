@@ -1,0 +1,31 @@
+{
+  "$schema": "https://standard.aimoaas.com/schemas/evidence_bundle_manifest.schema.json",
+  "bundle_id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+  "bundle_version": "0.1.0",
+  "created_at": "2026-02-03T12:00:00Z",
+  "scope_ref": "SC-001",
+  "object_index": [
+    {
+      "id": "idx-001",
+      "type": "index",
+      "path": "objects/index.json",
+      "sha256": "20ea51cb3601c179131ee08968f0bb7cab67d123255c5cfeff63d2ce1b214b9b"
+    }
+  ],
+  "payload_index": [
+    {
+      "logical_id": "root",
+      "path": "payloads/root.json",
+      "sha256": "0b9c591e35b4f69c1bff43d32abd19098d848d3b2df522c8053eb335804c3daf",
+      "mime": "application/json",
+      "size": 4301
+    }
+  ],
+  "hash_chain": {
+    "algorithm": "sha256",
+    "head": "20ea51cb3601c179131ee08968f0bb7cab67d123255c5cfeff63d2ce1b214b9b"
+  },
+  "signing": {
+    "v0.1": "signatures/manifest.sig references manifest; cryptographic verification is a future extension"
+  }
+}

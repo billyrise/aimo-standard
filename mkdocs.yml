@@ -100,6 +100,7 @@ nav:
           - EV Template: standard/current/06-ev-template.md
           - Validator: standard/current/07-validator.md
           - Changelog: standard/current/08-changelog.md
+          - Evidence Bundle structure: standard/current/09-evidence-bundle-structure.md
       - Versions: standard/versions/index.md
       - Conformance: conformance/index.md
       - Coverage Map:

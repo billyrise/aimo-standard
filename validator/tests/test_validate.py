@@ -144,3 +144,79 @@ def test_validate_examples(tmp_path):
             cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(example)]
             r = subprocess.run(cmd, capture_output=True, text=True)
             assert r.returncode == 0, f"Example {example.name} failed: {r.stderr}"
+
+BUNDLE_INTEGRITY_MESSAGE = (
+    "Invalid Evidence Bundle: manifest integrity requirements not satisfied "
+    "(missing sha256/signature/index mismatch)."
+)
+
+
+def test_validate_bundle_ok():
+    """Valid v0.1 minimal bundle passes."""
+    bundle_dir = ROOT / "examples" / "evidence_bundle_v01_minimal"
+    if not bundle_dir.is_dir():
+        return  # skip if example not present
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(bundle_dir)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode == 0, f"Bundle validation failed: {r.stderr}"
+    assert "OK" in r.stdout
+
+
+def test_validate_bundle_fail_sha256_mismatch(tmp_path):
+    """Bundle with wrong sha256 in manifest fails with fixed message."""
+    # Copy minimal bundle and corrupt manifest sha256 for one file
+    import shutil
+    src = ROOT / "examples" / "evidence_bundle_v01_minimal"
+    if not src.is_dir():
+        return
+    dest = tmp_path / "bundle"
+    shutil.copytree(src, dest)
+    manifest_path = dest / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest["payload_index"][0]["sha256"] = "0" * 64  # wrong hash
+    manifest_path.write_text(json.dumps(manifest, indent=2))
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode != 0, "Validator must reject bundle with sha256 mismatch"
+    assert BUNDLE_INTEGRITY_MESSAGE in r.stderr
+
+
+def test_validate_bundle_fail_signature_missing(tmp_path):
+    """Bundle with empty signatures/ fails with fixed message."""
+    import shutil
+    src = ROOT / "examples" / "evidence_bundle_v01_minimal"
+    if not src.is_dir():
+        return
+    dest = tmp_path / "bundle"
+    shutil.copytree(src, dest)
+    sig_dir = dest / "signatures"
+    for f in sig_dir.iterdir():
+        f.unlink()
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode != 0, "Validator must reject bundle with no signature file"
+    assert BUNDLE_INTEGRITY_MESSAGE in r.stderr
+
+
+def test_validate_bundle_fail_index_file_missing(tmp_path):
+    """Bundle with payload_index pointing to missing file fails."""
+    import shutil
+    src = ROOT / "examples" / "evidence_bundle_v01_minimal"
+    if not src.is_dir():
+        return
+    dest = tmp_path / "bundle"
+    shutil.copytree(src, dest)
+    manifest_path = dest / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest["payload_index"].append({
+        "logical_id": "missing",
+        "path": "payloads/nonexistent.json",
+        "sha256": "a" * 64,
+        "mime": "application/json",
+        "size": 0
+    })
+    manifest_path.write_text(json.dumps(manifest, indent=2))
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode != 0, "Validator must reject bundle when indexed file is missing"
+    assert BUNDLE_INTEGRITY_MESSAGE in r.stderr
