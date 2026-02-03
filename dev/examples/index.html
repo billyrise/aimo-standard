@@ -2149,7 +2149,8 @@
 <p>This section points to end-to-end and minimal examples that show how artifacts are assembled.</p>
 <ul>
 <li><strong>Minimal bundle</strong>: <code>examples/minimal/</code> in the repository (e.g., <code>sample_ev.json</code>, <code>sample_dictionary.json</code>).</li>
-<li><strong>Evidence Bundle (minimal)</strong>: <code>examples/evidence_bundle_minimal/</code> — root.json with optional request, review, change_log; see <a href="../artifacts/evidence-bundle/">Evidence Bundle</a> and <a href="../artifacts/minimum-evidence/">Minimum Evidence</a>.</li>
+<li><strong>Evidence Bundle (minimal)</strong>: <code>examples/evidence_bundle_v01_minimal/</code> — normative minimal Bundle (manifest, object_index, payload_index, hash_chain, signing); see <a href="../artifacts/evidence-bundle/">Evidence Bundle</a> and <a href="../artifacts/minimum-evidence/">Minimum Evidence</a>.</li>
+<li><strong>Evidence Bundle (EU AI Act Annex IV sample)</strong>: <code>examples/evidence_bundle_v01_annex_iv_sample/</code> — official sample aligned with EU AI Act Annex IV technical documentation for high-risk AI; same structure as minimal, with root payload content oriented to Annex IV (general description, development, monitoring, risk management, conformity, post-market monitoring). See <a href="../coverage-map/eu-ai-act/">EU AI Act mapping</a> and profile <code>coverage_map/profiles/eu_ai_act_annex_iv.json</code>.</li>
 <li><strong>Schema alignment</strong>: validate against <code>schemas/jsonschema/</code> and <a href="../standard/current/">Standard</a>.</li>
 <li><strong>Audit-ready packaging</strong>: see the <a href="../governance/trust-package/">Trust Package</a>.</li>
 </ul>
