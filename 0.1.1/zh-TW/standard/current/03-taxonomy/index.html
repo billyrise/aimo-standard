@@ -1,0 +1,3276 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AIMO 分類法 - 具有 91 個代碼的 8 維度分類系統，用於分類 AI 系統。涵蓋功能範圍、使用案例、資料類型、通道、整合、風險、成果和證據。">
+      
+      
+        <meta name="author" content="AIMO Standard Contributors">
+      
+      
+        <link rel="canonical" href="https://standard.aimoaas.com/latest/zh-TW/standard/current/03-taxonomy/">
+      
+      
+        <link rel="prev" href="../02-scope/">
+      
+      
+        <link rel="next" href="../04b-id-policy-namespace/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Taxonomy - AIMO Standard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/zh-TW/standard/current/03-taxonomy/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja//zh-TW/standard/current/03-taxonomy/">
+
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/zh-TW/standard/current/03-taxonomy/">
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIMO Standard">
+<meta property="og:title" content="Taxonomy">
+<meta property="og:description" content="AIMO 分類法 - 具有 91 個代碼的 8 維度分類系統，用於分類 AI 系統。涵蓋功能範圍、使用案例、資料類型、通道、整合、風險、成果和證據。">
+<meta property="og:url" content="https://standard.aimoaas.com/latest/zh-TW/standard/current/03-taxonomy/">
+<meta property="og:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:locale:alternate" content="ja_JP">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Taxonomy">
+<meta name="twitter:description" content="AIMO 分類法 - 具有 91 個代碼的 8 維度分類系統，用於分類 AI 系統。涵蓋功能範圍、使用案例、資料類型、通道、整合、風險、成果和證據。">
+<meta name="twitter:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
+
+
+
+<meta name="description" content="AIMO 分類法 - 具有 91 個代碼的 8 維度分類系統，用於分類 AI 系統。涵蓋功能範圍、使用案例、資料類型、通道、整合、風險、成果和證據。">
+
+<meta name="author" content="AIMO Standard Contributors">
+<meta name="keywords" content="AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance, ISO 42001, NIST AI RMF, EU AI Act, evidence management">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AIMO Standard",
+  "url": "https://standard.aimoaas.com/latest",
+  "description": "Open standard for AI governance, audit evidence, and agentic AI risk management. Taxonomy with 8 dimensions and 91 codes for enterprise AI compliance.",
+  "inLanguage": ["en", "ja"],
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIMO Standard Contributors",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://standard.aimoaas.com/latest?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Taxonomy",
+  "description": "AIMO 分類法 - 具有 91 個代碼的 8 維度分類系統，用於分類 AI 系統。涵蓋功能範圍、使用案例、資料類型、通道、整合、風險、成果和證據。",
+  "url": "https://standard.aimoaas.com/latest/zh-TW/standard/current/03-taxonomy/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AIMO Standard",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIMO Standard Contributors",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI Governance",
+    "description": "Standards and frameworks for AI system governance and audit"
+  },
+  "keywords": "AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance"
+}
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://standard.aimoaas.com/latest"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Zh Tw",
+      "item": "https://standard.aimoaas.com/latestzh-TW/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Standard",
+      "item": "https://standard.aimoaas.com/latestzh-TW/standard/"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Current",
+      "item": "https://standard.aimoaas.com/latestzh-TW/standard/current/"
+    },{
+      "@type": "ListItem",
+      "position": 5,
+      "name": "03 Taxonomy",
+      "item": "https://standard.aimoaas.com/latestzh-TW/standard/current/03-taxonomy/"
+    }
+  ]
+}
+</script>
+
+
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../../../" title="AIMO Standard" class="md-header__button md-logo" aria-label="AIMO Standard" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AIMO Standard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Taxonomy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="選擇語言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../standard/current/03-taxonomy/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../ja/standard/current/03-taxonomy/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../es/standard/current/03-taxonomy/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../fr/standard/current/03-taxonomy/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../de/standard/current/03-taxonomy/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../pt/standard/current/03-taxonomy/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../it/standard/current/03-taxonomy/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../zh/standard/current/03-taxonomy/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh-TW" class="md-select__link">
+              繁體中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../ko/standard/current/03-taxonomy/" hreflang="ko" class="md-select__link">
+              한국어
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/billyrise/aimo-standard" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="標籤" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AIMO 標準
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Standard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../artifacts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Artifacts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../validator/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Validator
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../releases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Releases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../governance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Governance
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="AIMO Standard" class="md-nav__button md-logo" aria-label="AIMO Standard" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AIMO Standard
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/billyrise/aimo-standard" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AIMO 標準
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Standard
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Standard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Current
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-versioning-reference-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versioning & Reference Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Taxonomy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Taxonomy
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      這不是什麼（不過度聲明）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI/代理式特定風險的範例（為什麼需要 AI 特定標準）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      維度概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="維度概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用規則
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      維度定義
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="維度定義">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FS：功能範圍
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC：使用案例類別
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dt" class="md-nav__link">
+    <span class="md-ellipsis">
+      DT：資料類型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch" class="md-nav__link">
+    <span class="md-ellipsis">
+      CH：通道
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im" class="md-nav__link">
+    <span class="md-ellipsis">
+      IM：整合模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rs" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS：風險面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB：成果 / 效益
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lg" class="md-nav__link">
+    <span class="md-ellipsis">
+      LG：日誌/記錄類型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      與證據的關係
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      參照字典
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      分類範例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssot" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSOT 參照
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      相關頁面
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Codes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-ev-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EV Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-evidence-bundle-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-roadmap-v0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap (v0.2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../conformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conformance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../coverage-map/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Coverage Map
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Coverage Map
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methodology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/iso-42001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42001
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/nist-ai-rmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NIST AI RMF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/eu-ai-act/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EU AI Act
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/isms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISMS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../artifacts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Artifacts
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Artifacts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/evidence-bundle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/evidence-bundle-coverage-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle Coverage Map (template)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/minimum-evidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minimum Evidence Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/signature-verification-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signature verification roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/justified-non-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justified Non-Compliance (JNC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../artifacts/log-schemas/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Log Schemas
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Log Schemas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/log-schemas/shadow-ai-discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shadow AI Discovery Log Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/log-schemas/agent-activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Activity Log Format
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../validator/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Validator
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Validator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../examples/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../releases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Releases
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../governance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Governance
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/trust-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trust Package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/human-oversight-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Human Oversight Protocol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/trademarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trademarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/cite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Cite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/seo-canonical-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SEO & Canonical Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Localization Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      這不是什麼（不過度聲明）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI/代理式特定風險的範例（為什麼需要 AI 特定標準）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      維度概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="維度概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用規則
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      維度定義
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="維度定義">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FS：功能範圍
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC：使用案例類別
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dt" class="md-nav__link">
+    <span class="md-ellipsis">
+      DT：資料類型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch" class="md-nav__link">
+    <span class="md-ellipsis">
+      CH：通道
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im" class="md-nav__link">
+    <span class="md-ellipsis">
+      IM：整合模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rs" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS：風險面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB：成果 / 效益
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lg" class="md-nav__link">
+    <span class="md-ellipsis">
+      LG：日誌/記錄類型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      與證據的關係
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      參照字典
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      分類範例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssot" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSOT 參照
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      相關頁面
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+
+                  
+
+
+  
+    <a href="https://github.com/billyrise/aimo-standard/edit/main/docs/en/zh-TW/standard/current/03-taxonomy.md" title="編輯此頁" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/billyrise/aimo-standard/raw/main/docs/en/zh-TW/standard/current/03-taxonomy.md" title="查看此頁原始碼" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">分類法</h1>
+<p>AIMO 分類法提供一個結構化的分類系統，用於分類 AI 系統、其使用和相關治理要求。它由 <strong>8 個維度</strong>和 <strong>91 個代碼</strong>組成，使組織能夠進行一致的分類和證據管理。</p>
+<h2 id="_2">目的</h2>
+<p>從稽核角度來看，分類法服務於三個主要目的：</p>
+<ol>
+<li>
+<p><strong>可解釋性</strong>：提供共同詞彙來描述整個組織的 AI 使用案例，支援與稽核員和利害關係人的清晰溝通。</p>
+</li>
+<li>
+<p><strong>證據就緒</strong>：使用標準化分類系統地記錄 AI 系統，使證據收集和審查更加高效。</p>
+</li>
+<li>
+<p><strong>可比較性</strong>：允許組織使用一致的術語比較不同情境中的 AI 使用案例。</p>
+</li>
+</ol>
+<h2 id="_3">這不是什麼（不過度聲明）</h2>
+<p>!!! warning "重要"
+    AIMO 標準支援<strong>可解釋性和證據就緒</strong>。它<strong>不</strong>提供法律建議、保證合規性或認證符合任何法規或框架。請參閱<a href="../../../governance/responsibility-boundary/">責任邊界</a>了解詳情。</p>
+<p>分類法僅是分類系統。它不會：</p>
+<ul>
+<li>保證符合任何法律或法規</li>
+<li>取代專業的法律、安全或合規建議</li>
+<li>認證符合外部框架（ISO、NIST、歐盟 AI 法案等）</li>
+<li>提供風險評估或控制建議</li>
+</ul>
+<h2 id="ai-ai">AI/代理式特定風險的範例（為什麼需要 AI 特定標準）</h2>
+<p>傳統安全控制（例如 ISMS）通常無法以<strong>可稽核解釋</strong>的方式捕捉 LLM/代理特定的故障模式和自主代理偏差（例如非預期工具執行、遞迴迴圈）。
+AIMO 分類法提供共享語言來分類這些 AI 特定風險，並將它們連接到證據要求和補救工作流程。</p>
+<p>（用於區分的參考範例。以下代碼是說明性佔位符；官方代碼系統遵循標準定義。）
+- AG-01 失控迴圈 / 遞迴
+- AG-02 未授權工具使用（混淆代理人式濫用）
+- AG-03 權限邊界漂移</p>
+<h2 id="_4">維度概述</h2>
+<p>AIMO 使用 8 個維度來分類 AI 使用案例。每個維度有唯一的 2 字母前綴。</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>名稱</th>
+<th>代碼數量</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FS</strong></td>
+<td>功能範圍</td>
+<td>6</td>
+<td>支援哪個業務功能</td>
+</tr>
+<tr>
+<td><strong>UC</strong></td>
+<td>使用案例類別</td>
+<td>30</td>
+<td>執行什麼類型的任務</td>
+</tr>
+<tr>
+<td><strong>DT</strong></td>
+<td>資料類型</td>
+<td>10</td>
+<td>涉及哪些資料分類</td>
+</tr>
+<tr>
+<td><strong>CH</strong></td>
+<td>通道</td>
+<td>8</td>
+<td>使用者如何存取 AI</td>
+</tr>
+<tr>
+<td><strong>IM</strong></td>
+<td>整合模式</td>
+<td>7</td>
+<td>AI 如何連接到企業系統</td>
+</tr>
+<tr>
+<td><strong>RS</strong></td>
+<td>風險面</td>
+<td>8</td>
+<td>相關的風險是什麼</td>
+</tr>
+<tr>
+<td><strong>OB</strong></td>
+<td>成果 / 效益</td>
+<td>7</td>
+<td>預期的效益是什麼</td>
+</tr>
+<tr>
+<td><strong>LG</strong></td>
+<td>日誌/記錄類型</td>
+<td>15</td>
+<td>需要什麼日誌/記錄</td>
+</tr>
+</tbody>
+</table>
+<p><strong>總計：8 個維度中的 91 個代碼</strong>（<strong>EV-</strong> 專用於 Evidence 成果物 ID；分類法日誌/記錄維度使用 <strong>LG-</strong>。）</p>
+<h3 id="_5">使用規則</h3>
+<table>
+<thead>
+<tr>
+<th>維度</th>
+<th>選擇</th>
+<th>稽核影響</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS、IM</td>
+<td>正好 1</td>
+<td>責任分配的主要分類</td>
+</tr>
+<tr>
+<td>UC、DT、CH、RS、LG</td>
+<td>1 或更多</td>
+<td>風險覆蓋需要完整列舉</td>
+</tr>
+<tr>
+<td>OB</td>
+<td>0 或更多</td>
+<td>選用；記錄預期的業務價值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_6">維度定義</h2>
+<h3 id="fs">FS：功能範圍</h3>
+<p>按支援的業務功能分類 AI 使用。<strong>選擇正好一個。</strong></p>
+<table>
+<thead>
+<tr>
+<th>代碼</th>
+<th>標籤</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS-001</td>
+<td>終端使用者生產力</td>
+<td>用於提高內部終端使用者生產力的 AI（寫作、搜尋、摘要、會議記錄）。</td>
+</tr>
+<tr>
+<td>FS-002</td>
+<td>面向客戶的功能</td>
+<td>嵌入提供給客戶的產品/服務功能中的 AI。</td>
+</tr>
+<tr>
+<td>FS-003</td>
+<td>開發人員工具</td>
+<td>用於協助軟體開發和工程任務的 AI。</td>
+</tr>
+<tr>
+<td>FS-004</td>
+<td>IT 營運</td>
+<td>用於 IT 營運和系統管理（監控、事件處理）的 AI。</td>
+</tr>
+<tr>
+<td>FS-005</td>
+<td>安全營運</td>
+<td>用於安全監控/回應（SOC、偵測、分類）的 AI。</td>
+</tr>
+<tr>
+<td>FS-006</td>
+<td>治理與合規</td>
+<td>用於支援治理/合規活動（政策、稽核證據）的 AI。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc">UC：使用案例類別</h3>
+<p>按任務或互動類型分類 AI 使用。<strong>選擇一個或多個。</strong>完整清單包含 30 個代碼；以下是代表性範例。</p>
+<table>
+<thead>
+<tr>
+<th>代碼</th>
+<th>標籤</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UC-001</td>
+<td>一般問答</td>
+<td>一般問答和對話使用。</td>
+</tr>
+<tr>
+<td>UC-002</td>
+<td>摘要</td>
+<td>摘要文件、會議或訊息。</td>
+</tr>
+<tr>
+<td>UC-003</td>
+<td>翻譯</td>
+<td>語言之間的翻譯。</td>
+</tr>
+<tr>
+<td>UC-004</td>
+<td>內容起草</td>
+<td>產生電子郵件、文件或報告的草稿。</td>
+</tr>
+<tr>
+<td>UC-005</td>
+<td>程式碼產生</td>
+<td>產生程式碼或腳本。</td>
+</tr>
+<tr>
+<td>UC-006</td>
+<td>程式碼審查</td>
+<td>審查程式碼的問題和改進。</td>
+</tr>
+<tr>
+<td>UC-009</td>
+<td>搜尋/RAG</td>
+<td>基於 RAG 的檢索和問答。</td>
+</tr>
+<tr>
+<td>UC-010</td>
+<td>代理式自動化</td>
+<td>執行動作的自主或半自主代理。</td>
+</tr>
+</tbody>
+</table>
+<p>請參閱<a href="../05-dictionary/">字典</a>了解完整的 30 個 UC 代碼清單。</p>
+<h3 id="dt">DT：資料類型</h3>
+<p>分類涉及的資料敏感性和分類。<strong>選擇一個或多個。</strong></p>
+<table>
+<thead>
+<tr>
+<th>代碼</th>
+<th>標籤</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DT-001</td>
+<td>公開</td>
+<td>公開可用且預期公開揭露的資料。</td>
+</tr>
+<tr>
+<td>DT-002</td>
+<td>內部</td>
+<td>非公開的內部業務資料。</td>
+</tr>
+<tr>
+<td>DT-003</td>
+<td>機密</td>
+<td>需要限制存取的高度敏感內部資料。</td>
+</tr>
+<tr>
+<td>DT-004</td>
+<td>個人資料</td>
+<td>適用隱私法定義的個人資料。</td>
+</tr>
+<tr>
+<td>DT-005</td>
+<td>敏感個人資料</td>
+<td>特殊類別/敏感個人資料。</td>
+</tr>
+<tr>
+<td>DT-006</td>
+<td>憑證</td>
+<td>驗證密鑰和憑證。</td>
+</tr>
+<tr>
+<td>DT-007</td>
+<td>原始碼</td>
+<td>原始碼和相關人工產物。</td>
+</tr>
+<tr>
+<td>DT-008</td>
+<td>客戶資料</td>
+<td>客戶提供或與客戶相關的資料。</td>
+</tr>
+<tr>
+<td>DT-009</td>
+<td>營運日誌</td>
+<td>用於監控和故障排除的營運或系統日誌。</td>
+</tr>
+<tr>
+<td>DT-010</td>
+<td>安全遙測</td>
+<td>警報和偵測等安全遙測。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch">CH：通道</h3>
+<p>分類使用者如何存取或與 AI 互動。<strong>選擇一個或多個。</strong></p>
+<table>
+<thead>
+<tr>
+<th>代碼</th>
+<th>標籤</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CH-001</td>
+<td>Web UI</td>
+<td>透過 Web 使用者介面使用。</td>
+</tr>
+<tr>
+<td>CH-002</td>
+<td>API</td>
+<td>透過程式化 API 整合使用。</td>
+</tr>
+<tr>
+<td>CH-003</td>
+<td>IDE 外掛程式</td>
+<td>透過 IDE/編輯器外掛程式使用。</td>
+</tr>
+<tr>
+<td>CH-004</td>
+<td>ChatOps</td>
+<td>透過聊天平台（Slack/Teams）整合使用。</td>
+</tr>
+<tr>
+<td>CH-005</td>
+<td>桌面應用程式</td>
+<td>透過原生桌面應用程式使用。</td>
+</tr>
+<tr>
+<td>CH-006</td>
+<td>行動應用程式</td>
+<td>透過原生行動應用程式使用。</td>
+</tr>
+<tr>
+<td>CH-007</td>
+<td>電子郵件</td>
+<td>透過電子郵件介面或電子郵件式自動化使用。</td>
+</tr>
+<tr>
+<td>CH-008</td>
+<td>命令列</td>
+<td>透過命令列介面使用。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="im">IM：整合模式</h3>
+<p>分類 AI 如何整合到企業系統中。<strong>選擇正好一個。</strong></p>
+<table>
+<thead>
+<tr>
+<th>代碼</th>
+<th>標籤</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IM-001</td>
+<td>獨立</td>
+<td>獨立使用，未整合到企業系統。</td>
+</tr>
+<tr>
+<td>IM-002</td>
+<td>SaaS 整合</td>
+<td>SaaS 應用程式整合 AI 功能。</td>
+</tr>
+<tr>
+<td>IM-003</td>
+<td>企業應用程式嵌入</td>
+<td>AI 嵌入內部企業應用程式。</td>
+</tr>
+<tr>
+<td>IM-004</td>
+<td>RPA/工作流程</td>
+<td>AI 在工作流程自動化或 RPA 中呼叫。</td>
+</tr>
+<tr>
+<td>IM-005</td>
+<td>內部部署 / 私有</td>
+<td>AI 託管在私有/內部部署環境。</td>
+</tr>
+<tr>
+<td>IM-006</td>
+<td>受管服務</td>
+<td>透過具有企業控制的受管服務使用。</td>
+</tr>
+<tr>
+<td>IM-007</td>
+<td>Shadow / 未受管理</td>
+<td>在核准的治理控制之外使用。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rs">RS：風險面</h3>
+<p>分類與 AI 使用相關的風險類型。<strong>選擇一個或多個。</strong></p>
+<table>
+<thead>
+<tr>
+<th>代碼</th>
+<th>標籤</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RS-001</td>
+<td>資料洩漏</td>
+<td>非預期資料揭露的風險。</td>
+</tr>
+<tr>
+<td>RS-002</td>
+<td>安全濫用</td>
+<td>系統被濫用於惡意目的的風險。</td>
+</tr>
+<tr>
+<td>RS-003</td>
+<td>合規違反</td>
+<td>違反法律/法規/政策的風險。</td>
+</tr>
+<tr>
+<td>RS-004</td>
+<td>智慧財產侵權</td>
+<td>侵犯著作權/專利/營業秘密的風險。</td>
+</tr>
+<tr>
+<td>RS-005</td>
+<td>模型濫用</td>
+<td>不當模型使用或過度依賴的風險。</td>
+</tr>
+<tr>
+<td>RS-006</td>
+<td>偏見/公平性</td>
+<td>不公平或有偏見結果的風險。</td>
+</tr>
+<tr>
+<td>RS-007</td>
+<td>安全性</td>
+<td>有害內容或不安全建議的風險。</td>
+</tr>
+<tr>
+<td>RS-008</td>
+<td>第三方風險</td>
+<td>供應商、子處理者和模型提供者風險。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ob">OB：成果 / 效益</h3>
+<p>分類 AI 使用的預期成果或效益。<strong>選用；選擇零個或多個。</strong></p>
+<table>
+<thead>
+<tr>
+<th>代碼</th>
+<th>標籤</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OB-001</td>
+<td>效率</td>
+<td>改善時間/成本效率。</td>
+</tr>
+<tr>
+<td>OB-002</td>
+<td>品質</td>
+<td>改善產出的品質/準確性。</td>
+</tr>
+<tr>
+<td>OB-003</td>
+<td>營收</td>
+<td>貢獻營收成長。</td>
+</tr>
+<tr>
+<td>OB-004</td>
+<td>風險降低</td>
+<td>降低營運/安全/合規風險。</td>
+</tr>
+<tr>
+<td>OB-005</td>
+<td>創新</td>
+<td>實現新能力或創新。</td>
+</tr>
+<tr>
+<td>OB-006</td>
+<td>客戶滿意度</td>
+<td>改善客戶滿意度。</td>
+</tr>
+<tr>
+<td>OB-007</td>
+<td>員工體驗</td>
+<td>改善員工體驗。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lg">LG：日誌/記錄類型</h3>
+<p>分類需要或收集的日誌/記錄類型。<strong>選擇一個或多個。</strong>（EV- 專用於 Evidence 成果物 ID。）</p>
+<table>
+<thead>
+<tr>
+<th>代碼</th>
+<th>標籤</th>
+<th>定義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LG-001</td>
+<td>請求記錄</td>
+<td>AI 使用/服務已請求並描述的證據。</td>
+</tr>
+<tr>
+<td>LG-002</td>
+<td>審查/核准記錄</td>
+<td>已執行審查/核准的證據。</td>
+</tr>
+<tr>
+<td>LG-003</td>
+<td>例外記錄</td>
+<td>已授予並追蹤例外的證據。</td>
+</tr>
+<tr>
+<td>LG-004</td>
+<td>續期/重新評估記錄</td>
+<td>已發生續期或重新評估的證據。</td>
+</tr>
+<tr>
+<td>LG-005</td>
+<td>變更日誌條目</td>
+<td>變更及其核准的證據。</td>
+</tr>
+<tr>
+<td>LG-006</td>
+<td>完整性證明</td>
+<td>完整性（雜湊、簽章、WORM）的證據。</td>
+</tr>
+<tr>
+<td>LG-007</td>
+<td>存取日誌</td>
+<td>存取控制和存取歷史的證據。</td>
+</tr>
+<tr>
+<td>LG-008</td>
+<td>模型/服務清冊</td>
+<td>使用的模型/服務的清冊記錄。</td>
+</tr>
+<tr>
+<td>LG-009</td>
+<td>風險評估</td>
+<td>使用/服務的記錄風險評估。</td>
+</tr>
+<tr>
+<td>LG-010</td>
+<td>控制對應</td>
+<td>與外部框架的控制對應證據。</td>
+</tr>
+<tr>
+<td>LG-011</td>
+<td>培訓/指引</td>
+<td>提供給使用者的培訓或指引證據。</td>
+</tr>
+<tr>
+<td>LG-012</td>
+<td>監控證據</td>
+<td>監控和持續監督的證據。</td>
+</tr>
+<tr>
+<td>LG-013</td>
+<td>事件記錄</td>
+<td>與 AI 使用相關的事件處理證據。</td>
+</tr>
+<tr>
+<td>LG-014</td>
+<td>第三方評估</td>
+<td>供應商或第三方評估的證據。</td>
+</tr>
+<tr>
+<td>LG-015</td>
+<td>證明/簽核</td>
+<td>正式證明或簽核記錄。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_7">如何使用</h2>
+<h3 id="_8">與證據的關係</h3>
+<p>每個證據文件參照來自多個維度的代碼，以分類正在記錄的 AI 系統或使用案例。8 維度分類實現：</p>
+<ul>
+<li>整個組織的<strong>一致分類</strong></li>
+<li>按維度值的<strong>基於風險的篩選</strong></li>
+<li>透過覆蓋範圍對應的<strong>框架對應</strong></li>
+</ul>
+<h3 id="_9">參照字典</h3>
+<p>如需完整的代碼定義，包括範圍說明和範例，請參閱<a href="../05-dictionary/">字典</a>。</p>
+<h3 id="_10">分類範例</h3>
+<pre><code>FS: FS-001 (終端使用者生產力)
+UC: UC-001 (一般問答), UC-002 (摘要)
+DT: DT-002 (內部), DT-004 (個人資料)
+CH: CH-001 (Web UI)
+IM: IM-002 (SaaS 整合)
+RS: RS-001 (資料洩漏), RS-003 (合規違反)
+OB: OB-001 (效率)
+LG: LG-001 (請求記錄), LG-002 (審查/核准記錄)
+</code></pre>
+<h2 id="ssot">SSOT 參照</h2>
+<p>!!! info "事實來源"
+    權威定義是 <code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>。本頁是解釋性的。請參閱<a href="../../../contributing/localization/">在地化指南</a>了解更新工作流程。</p>
+<h2 id="_11">相關頁面</h2>
+<ul>
+<li><a href="../04-codes/">代碼</a> - 代碼格式、命名慣例和生命週期</li>
+<li><a href="../05-dictionary/">字典</a> - 完整代碼清單和欄位定義</li>
+<li><a href="../06-ev-template/">證據範本</a> - 如何在證據中使用代碼</li>
+<li><a href="../../../governance/responsibility-boundary/">責任邊界</a> - 不過度聲明聲明</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 AIMO Standard Contributors
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "content.action.edit", "content.action.view"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
