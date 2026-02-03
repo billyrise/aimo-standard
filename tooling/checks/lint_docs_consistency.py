@@ -6,7 +6,7 @@ Checks for common inconsistencies in documentation that can confuse
 auditors and external users.
 
 Checks performed:
-1. No hardcoded git checkout versions (e.g., "git checkout v0.1.3")
+1. No hardcoded git checkout versions (e.g., "git checkout v0.1.x")
 2. URL patterns are consistent (site paths use version without 'v' prefix)
 3. Version examples are up-to-date
 
@@ -30,13 +30,13 @@ def check_hardcoded_checkout(content: str, filepath: Path) -> list[tuple[int, st
     Check for hardcoded 'git checkout vX.Y.Z' with specific old versions.
     
     Allowed: VERSION=vX.Y.Z followed by git checkout "$VERSION"
-    Not allowed: git checkout v0.1.3 (or other hardcoded old versions)
+    Not allowed: git checkout v0.1.x (or other hardcoded old versions)
     """
     issues = []
     lines = content.splitlines()
     
     # Pattern for hardcoded checkout (not using a variable)
-    # Match: git checkout v0.1.0, v0.1.1, v0.1.2, v0.1.3, v0.1.4, v0.1.5
+    # Match: git checkout v0.1.0 … v0.1.5 (avoid hardcoding; use variable or v0.1.x in docs)
     # (older versions that shouldn't be hardcoded)
     hardcoded_pattern = re.compile(r'git checkout v0\.1\.[0-5]\b(?!\s*#.*VERSION)')
     
@@ -51,8 +51,8 @@ def check_url_pattern_consistency(content: str, filepath: Path) -> list[tuple[in
     """
     Check that site URLs use version without 'v' prefix.
     
-    Correct: https://standard.aimoaas.com/0.1.6/
-    Wrong:   https://standard.aimoaas.com/v0.1.6/
+    Correct: https://standard.aimoaas.com/0.1.x/
+    Wrong:   https://standard.aimoaas.com/v0.1.x/
     
     Exception: GitHub release tag URLs should use 'v' prefix.
     """

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to point /latest/ to (e.g., 0.1.6). Leave empty to auto-detect most recent.'
+        description: 'Version to point /latest/ to (e.g., 0.1.x). Leave empty to auto-detect most recent.'
         required: false
         type: string
       dry_run:

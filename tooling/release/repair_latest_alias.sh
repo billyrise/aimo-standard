@@ -17,7 +17,7 @@
 #   - Write access to gh-pages branch
 #
 # Safety:
-#   - This script does NOT modify versioned directories (e.g., /0.1.6/)
+#   - This script does NOT modify versioned directories (e.g., /0.1.x/)
 #   - It only affects the /latest/ alias
 #
 

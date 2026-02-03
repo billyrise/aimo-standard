@@ -66,7 +66,7 @@ The `release.yml` workflow handles this.
 
 ### 3. Non-Negotiable Rules
 
-1. **Never rewrite a released version.** If `/0.1.6/` needs fixes, release `0.1.7`.
+1. **Never rewrite a released version.** If `/0.1.x/` needs fixes, release a new PATCH (e.g. `0.1.x` → next patch).
 2. **`latest` is an alias, not a version.** Only the release workflow (tag push) updates it; nothing else must change `/latest/`.
 3. **`dev` is explicitly unreleased.** Must have noindex; not for audit citations.
 4. **alias_type must be `redirect`** (not `copy`) to prevent content drift.

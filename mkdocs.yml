@@ -24,7 +24,7 @@ plugins:
       # With redirect, /latest/ contains meta refresh pages pointing to the current release
       # DO NOT use copy (default) - it duplicates files and allows drift
       alias_type: redirect
-      # Redirect aliases are relative paths (e.g., ../0.1.6/)
+      # Redirect aliases are relative paths (e.g., ../0.1.x/)
       redirect_template: null  # Use default redirect template
       # Canonical version for SEO - pages under /latest/ will have canonical pointing to release
       canonical_version: latest
@@ -78,7 +78,7 @@ plugins:
 extra:
   version:
     provider: mike
-    # Show alias in version selector (e.g., "0.1.6 (latest)")
+    # Show alias in version selector (e.g., "0.1.x (latest)")
     alias: true
     # Default version for redirects
     default: latest

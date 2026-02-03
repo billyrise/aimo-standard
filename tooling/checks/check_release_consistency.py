@@ -6,7 +6,7 @@ Ensures that documentation references (Versions page, Cite page, CITATION.cff)
 match the release version before deployment.
 
 Usage:
-    RELEASE_TAG=v0.1.7 python tooling/checks/check_release_consistency.py
+    RELEASE_TAG=v0.1.x python tooling/checks/check_release_consistency.py
 
 Exit codes:
     0 - All checks passed
@@ -26,13 +26,13 @@ def get_release_tag() -> str:
     tag = os.environ.get("RELEASE_TAG", "").strip()
     if not tag:
         print("[ERROR] RELEASE_TAG environment variable not set")
-        print("Usage: RELEASE_TAG=v0.1.7 python check_release_consistency.py")
+        print("Usage: RELEASE_TAG=v0.1.x python check_release_consistency.py")
         sys.exit(2)
     return tag
 
 
 def tag_to_version(tag: str) -> str:
-    """Convert tag (v0.1.7) to version (0.1.7)."""
+    """Convert tag (v0.1.x) to version (0.1.x)."""
     return tag.lstrip("v")
 
 
@@ -108,7 +108,7 @@ class ConsistencyChecker:
             found = bibtex_match.group(1) if bibtex_match else "not found"
             errors_found.append(f"BibTeX version={found}")
 
-        # Check URL example (e.g., /0.1.7/)
+        # Check URL example (e.g., /0.1.x/)
         url_pattern = re.compile(r"/" + re.escape(self.ver) + r"/")
         if url_pattern.search(content):
             self.successes.append(f"[OK] {lang.upper()} cite: URL example contains /{self.ver}/")
