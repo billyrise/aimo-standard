@@ -61,6 +61,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -74,6 +89,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/artifacts/log-schemas/</loc>
@@ -616,6 +646,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -706,6 +751,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/ja/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/ja/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -719,6 +779,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/ja/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/ja/artifacts/log-schemas/</loc>
@@ -1261,6 +1336,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/ja/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/ja/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -1351,6 +1441,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/es/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latest/es/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/es/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -1364,6 +1469,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/es/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latest/es/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/es/artifacts/log-schemas/</loc>
@@ -1906,6 +2026,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/es/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latest/es/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/es/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -1996,6 +2131,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/fr/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latest/fr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/fr/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2009,6 +2159,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/fr/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latest/fr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/fr/artifacts/log-schemas/</loc>
@@ -2551,6 +2716,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/fr/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latest/fr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/fr/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2641,6 +2821,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/de/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latest/de/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/de/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2654,6 +2849,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/de/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latest/de/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/de/artifacts/log-schemas/</loc>
@@ -3196,6 +3406,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/de/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latest/de/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/de/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -3286,6 +3511,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/pt/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latest/pt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/pt/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -3299,6 +3539,21 @@
         <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/pt/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latest/pt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/pt/artifacts/log-schemas/</loc>
@@ -3841,6 +4096,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/pt/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latest/pt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/pt/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -3931,6 +4201,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/it/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latest/it/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/it/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -3944,6 +4229,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/it/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latest/it/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/it/artifacts/log-schemas/</loc>
@@ -4486,6 +4786,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/it/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latest/it/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/it/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -4576,6 +4891,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latest/zh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -4589,6 +4919,21 @@
         <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/zh/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latest/zh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/zh/artifacts/log-schemas/</loc>
@@ -5131,6 +5476,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latest/zh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5221,6 +5581,21 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh-TW/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latest/zh-TW/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh-TW/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5234,6 +5609,21 @@
         <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/zh-TW/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latest/zh-TW/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/zh-TW/artifacts/log-schemas/</loc>
@@ -5776,6 +6166,21 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/zh-TW/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latest/zh-TW/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latestko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/zh-TW/standard/versions/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5866,6 +6271,21 @@
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/evidence-bundle/"/>
     </url>
     <url>
+        <loc>https://standard.aimoaas.com/latest/ko/artifacts/justified-non-compliance/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latest/ko/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/justified-non-compliance/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/justified-non-compliance/"/>
+    </url>
+    <url>
         <loc>https://standard.aimoaas.com/latest/ko/artifacts/minimum-evidence/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5879,6 +6299,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/minimum-evidence/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/minimum-evidence/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/ko/artifacts/signature-verification-roadmap/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latest/ko/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latestartifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/artifacts/signature-verification-roadmap/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/artifacts/signature-verification-roadmap/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/ko/artifacts/log-schemas/</loc>
@@ -6419,6 +6854,21 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/09-evidence-bundle-structure/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/09-evidence-bundle-structure/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/09-evidence-bundle-structure/"/>
+    </url>
+    <url>
+        <loc>https://standard.aimoaas.com/latest/ko/standard/current/10-roadmap-v0.2/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://standard.aimoaas.com/latest/ko/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://standard.aimoaas.com/latestde/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/lateststandard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://standard.aimoaas.com/latestes/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://standard.aimoaas.com/latestfr/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://standard.aimoaas.com/latestit/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://standard.aimoaas.com/latestpt/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://standard.aimoaas.com/latestzh/standard/current/10-roadmap-v0.2/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://standard.aimoaas.com/latestzh-TW/standard/current/10-roadmap-v0.2/"/>
     </url>
     <url>
         <loc>https://standard.aimoaas.com/latest/ko/standard/versions/</loc>

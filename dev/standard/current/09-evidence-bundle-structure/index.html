@@ -18,7 +18,7 @@
         <link rel="prev" href="../08-changelog/">
       
       
-        <link rel="next" href="../../versions/">
+        <link rel="next" href="../10-roadmap-v0.2/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -723,6 +723,8 @@
       
         
       
+        
+      
     
     
     
@@ -1094,6 +1096,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#future-extensions-informative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future extensions (informative)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -1106,6 +1117,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-roadmap-v0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap (v0.2)
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1387,6 +1421,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1507,6 +1545,52 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../artifacts/signature-verification-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signature verification roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/justified-non-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justified Non-Compliance (JNC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1531,7 +1615,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1548,14 +1632,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2182,6 +2266,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#future-extensions-informative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future extensions (informative)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -2284,7 +2377,7 @@
 <li>Required directories and files exist.</li>
 <li><code>manifest.json</code> is present and valid (schema and pre-schema checks).</li>
 <li>Every file listed in <code>object_index</code> and <code>payload_index</code> exists at the given path and its content matches the declared <code>sha256</code>.</li>
-<li><code>signatures/</code> contains at least one signature that targets the manifest (v0.1: existence and reference only; verification is out of scope for v0.1).</li>
+<li><code>signatures/</code> contains at least one signature that targets the manifest (v0.1: existence and reference only; v0.1.1: verification metadata RECOMMENDED; v0.2 planned: cryptographic verification in scope).</li>
 <li><strong>Custody</strong> (storage, access control, retention, WORM) is <strong>implementation-defined</strong>. The standard does not prescribe how custodians store or protect the bundle; it only requires that the package, when submitted, satisfies the Integrity requirements above.</li>
 </ul>
 <h2 id="manifestjson-must-fields">manifest.json (MUST fields)</h2>
@@ -2340,15 +2433,53 @@
 </tr>
 </tbody>
 </table>
+<p><strong>v0.1.1 optional signature metadata (RECOMMENDED for third-party re-performance):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>signer_identity</strong></td>
+<td>string</td>
+<td>Identity of the signer (e.g. PGP fingerprint, did:key).</td>
+</tr>
+<tr>
+<td><strong>signed_at</strong></td>
+<td>string (date-time)</td>
+<td>When the signature was applied (ISO 8601).</td>
+</tr>
+<tr>
+<td><strong>verification_command</strong></td>
+<td>string</td>
+<td>Example CLI command for an auditor to re-perform verification.</td>
+</tr>
+<tr>
+<td><strong>canonicalization</strong></td>
+<td>string</td>
+<td>How the signed payload was canonicalized: <code>rfc8785_json</code>, <code>cbor</code>, or <code>unspecified</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Integrity and verification: <strong>v0.1</strong> — reference and existence only. <strong>v0.1.1</strong> — metadata for verification is RECOMMENDED. <strong>v0.2</strong> (planned) — cryptographic verification in scope.</p>
 <ul>
 <li><strong>sha256</strong> values MUST be 64 lowercase hexadecimal characters.</li>
 <li><strong>path</strong> MUST be a relative path; MUST NOT contain <code>../</code> or start with <code>/</code>; paths MUST stay within the Evidence Bundle root.</li>
 <li>The manifest MAY include an explicit self-reference (e.g. in <code>object_index</code> or a dedicated field) so that the manifest’s own integrity is covered; validators MUST accept a bundle where the manifest is either listed in an index or explicitly referenced by a signature.</li>
 </ul>
 <p>See the JSON Schema: <code>schemas/jsonschema/evidence_bundle_manifest.schema.json</code>.</p>
+<h2 id="future-extensions-informative">Future extensions (informative)</h2>
+<ul>
+<li><strong>Control/Requirement linkage</strong>: A future version may add a standard way to link Evidence Bundle elements to Control or Requirement identifiers (e.g. for export to NIST OSCAL or similar audit automation formats). This is not required in v0.1 or v0.1.1.</li>
+</ul>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="../../../artifacts/evidence-bundle/">Evidence Bundle (artifact overview)</a> — purpose and TOC</li>
+<li><a href="../../../artifacts/signature-verification-roadmap/">Signature verification roadmap</a> — v0.1.1 metadata and v0.2 verification plan</li>
 <li><a href="../../../validator/">Validator</a> — how the validator enforces this structure</li>
 <li><a href="../../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a> — MUST-level checklist</li>
 </ul>

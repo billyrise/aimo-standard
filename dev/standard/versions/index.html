@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://standard.aimoaas.com/latest/standard/versions/">
       
       
-        <link rel="prev" href="../current/09-evidence-bundle-structure/">
+        <link rel="prev" href="../current/10-roadmap-v0.2/">
       
       
         <link rel="next" href="../../conformance/">
@@ -716,6 +716,8 @@
       
         
       
+        
+      
     
     
     
@@ -1007,6 +1009,29 @@
   
   <span class="md-ellipsis">
     Evidence Bundle structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../current/10-roadmap-v0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap (v0.2)
     
   </span>
   
@@ -1491,6 +1516,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1611,6 +1640,52 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../artifacts/signature-verification-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signature verification roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../artifacts/justified-non-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justified Non-Compliance (JNC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1635,7 +1710,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1652,14 +1727,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2447,7 +2522,7 @@
 <p>Official releases are frozen snapshots published with auditor-ready PDFs and machine-readable artifacts.</p>
 <h2 id="latest-release">Latest Release</h2>
 <p>!!! success "Current Version"
-    <strong>v0.1.0</strong> (2026-02-03) — <a href="../current/">View Documentation</a> | <a href="https://github.com/billyrise/aimo-standard/releases/tag/v0.1.0">GitHub Release</a></p>
+    <strong>v0.1.1</strong> (2026-02-04) — <a href="../current/">View Documentation</a> | <a href="https://github.com/billyrise/aimo-standard/releases/tag/v0.1.1">GitHub Release</a></p>
 <h2 id="version-history">Version History</h2>
 <table>
 <thead>
@@ -2462,6 +2537,15 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align: left;"><strong>v0.1.1</strong></td>
+<td style="text-align: left;">2026-02-04</td>
+<td style="text-align: left;"><a href="../current/08-changelog/#version-011">Changelog</a></td>
+<td style="text-align: left;"><a href="https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/trust_package.pdf">trust_package.pdf</a></td>
+<td style="text-align: left;"><a href="https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/trust_package.ja.pdf">trust_package.ja.pdf</a></td>
+<td style="text-align: left;"><a href="https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/aimo-standard-artifacts.zip">ZIP</a></td>
+<td style="text-align: left;"><a href="https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/SHA256SUMS.txt">SHA256</a></td>
+</tr>
 <tr>
 <td style="text-align: left;"><strong>v0.1.0</strong></td>
 <td style="text-align: left;">2026-02-03</td>
@@ -2513,7 +2597,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><code>/X.Y.Z/</code></strong> (e.g. <code>/0.1.0/</code>)</td>
+<td><strong><code>/X.Y.Z/</code></strong> (e.g. <code>/0.1.1/</code>)</td>
 <td>Frozen snapshot; never changes.</td>
 <td><strong>MUST</strong> use for audit citations and reproducible evidence.</td>
 </tr>
@@ -2556,10 +2640,10 @@
 <p>To cite a specific version in audit reports and ensure reproducibility:</p>
 <ol>
 <li><strong>Canonical URL</strong>: Use the frozen documentation URL for that version, e.g.<br />
-<code>https://standard.aimoaas.com/0.1.0/</code> (replace <code>0.0.3</code> with the version you used).<br />
-<strong>For v0.1.0 and later</strong>: Prefer citing the versioned URL (e.g. <code>https://standard.aimoaas.com/0.1.0/</code>) rather than <code>/latest/</code> for audit evidence, so the snapshot is unambiguous.</li>
-<li><strong>Version pinning</strong>: Record the <strong>release tag</strong> (e.g. <code>v0.1.0</code>) and optionally the <strong>commit hash</strong> from the <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Release</a> page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).</li>
-<li><strong>Evidence alignment</strong>: State in your submission which AIMO Standard version (e.g. <code>v0.1.0</code>) your evidence bundle aligns with, and obtain the validator and schemas from that same release.</li>
+<code>https://standard.aimoaas.com/0.1.1/</code> (replace <code>0.0.3</code> with the version you used).<br />
+<strong>For v0.1.1 and later</strong>: Prefer citing the versioned URL (e.g. <code>https://standard.aimoaas.com/0.1.1/</code>) rather than <code>/latest/</code> for audit evidence, so the snapshot is unambiguous.</li>
+<li><strong>Version pinning</strong>: Record the <strong>release tag</strong> (e.g. <code>v0.1.1</code>) and optionally the <strong>commit hash</strong> from the <a href="https://github.com/billyrise/aimo-standard/releases">GitHub Release</a> page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).</li>
+<li><strong>Evidence alignment</strong>: State in your submission which AIMO Standard version (e.g. <code>v0.1.1</code>) your evidence bundle aligns with, and obtain the validator and schemas from that same release.</li>
 </ol>
 <h2 id="version-layers">Version layers</h2>
 <p>AIMO Standard uses three version concepts. For the current release they are aligned; future releases may version them independently.</p>
@@ -2574,7 +2658,7 @@
 <tbody>
 <tr>
 <td><strong>Standard version</strong> (site/release)</td>
-<td>The release tag and documentation snapshot (e.g. <code>v0.1.0</code>).</td>
+<td>The release tag and documentation snapshot (e.g. <code>v0.1.1</code>).</td>
 <td>Versions table, GitHub Releases, <code>/X.Y.Z/</code> URLs.</td>
 </tr>
 <tr>
@@ -2596,7 +2680,7 @@
 <p>=== "Linux / macOS"</p>
 <pre><code>```bash
 # Download all assets for a specific version
-VERSION=v0.1.0
+VERSION=v0.1.1
 BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
 curl -LO "${BASE_URL}/trust_package.pdf"
@@ -2608,7 +2692,7 @@ curl -LO "${BASE_URL}/SHA256SUMS.txt"
 <p>=== "Windows (PowerShell)"</p>
 <pre><code>```powershell
 # Download all assets for a specific version
-$VERSION = "v0.1.0"
+$VERSION = "v0.1.1"
 $BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
 
 Invoke-WebRequest -Uri "$BASE_URL/trust_package.pdf" -OutFile trust_package.pdf
@@ -2685,7 +2769,7 @@ Get-Content .\SHA256SUMS.txt
 <p>All release assets include cryptographically signed build provenance attestations generated by GitHub Actions. This allows you to verify that assets were built in the official repository without tampering.</p>
 <p><strong>Prerequisites</strong>: Install <a href="https://cli.github.com/">GitHub CLI</a> (<code>gh</code>)</p>
 <pre><code class="language-bash"># Download release assets using GitHub CLI
-VERSION=v0.1.0
+VERSION=v0.1.1
 gh release download &quot;$VERSION&quot; --repo billyrise/aimo-standard
 
 # Verify attestation for each asset
@@ -2757,7 +2841,7 @@ gh attestation verify trust_package.pdf \
 <h2 id="versioned-documentation-snapshots">Versioned Documentation Snapshots</h2>
 <p>Each release creates a frozen documentation snapshot accessible at:</p>
 <ul>
-<li>Production: <code>https://standard.aimoaas.com/{version}/</code> (e.g., <code>/0.1.0/</code>)</li>
+<li>Production: <code>https://standard.aimoaas.com/{version}/</code> (e.g., <code>/0.1.1/</code>)</li>
 <li>GitHub Pages: <code>https://billyrise.github.io/aimo-standard/{version}/</code></li>
 </ul>
 <h3 id="url-types-and-their-meaning">URL Types and Their Meaning</h3>
@@ -2771,7 +2855,7 @@ gh attestation verify trust_package.pdf \
 </thead>
 <tbody>
 <tr>
-<td><code>/X.Y.Z/</code> (e.g., <code>/0.1.0/</code>)</td>
+<td><code>/X.Y.Z/</code> (e.g., <code>/0.1.1/</code>)</td>
 <td><strong>Frozen release</strong> — immutable snapshot</td>
 <td><strong>Yes</strong> (preferred)</td>
 </tr>
@@ -2792,9 +2876,9 @@ gh attestation verify trust_package.pdf \
     - <strong><code>/dev/</code></strong> reflects the current <code>main</code> branch and may contain <strong>unreleased changes</strong>. Never cite <code>/dev/</code> in audit reports.</p>
 <h3 id="faq">FAQ</h3>
 <p>??? question "Why is <code>/latest/</code> not a version number?"
-    <code>/latest/</code> is a convenience alias that always redirects to the most recent stable release (e.g., <code>/0.1.0/</code>). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.</p>
+    <code>/latest/</code> is a convenience alias that always redirects to the most recent stable release (e.g., <code>/0.1.1/</code>). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.</p>
 <p>??? question "Which URL should auditors cite?"
-    - <strong>Formal audits (immutability required)</strong>: Use <code>/X.Y.Z/</code> (e.g., <code>https://standard.aimoaas.com/0.1.0/standard/current/</code>)
+    - <strong>Formal audits (immutability required)</strong>: Use <code>/X.Y.Z/</code> (e.g., <code>https://standard.aimoaas.com/0.1.1/standard/current/</code>)
     - <strong>General references</strong>: <code>/latest/</code> is acceptable as it redirects to the current release
     - <strong>Never cite</strong>: <code>/dev/</code> (unreleased, subject to change)</p>
 <p>??? question "What if <code>/latest/</code> shows different content than expected?"
