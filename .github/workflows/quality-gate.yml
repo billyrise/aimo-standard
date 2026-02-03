@@ -96,6 +96,11 @@ jobs:
           echo "=== MkDocs Build (strict mode) ==="
           python -m mkdocs build --strict
 
+      - name: Site content policy (EV reserved, LG required)
+        run: |
+          echo "=== Site Content Policy (no EV taxonomy regression) ==="
+          python tooling/checks/check_site_content_policy.py --site-dir site
+
       - name: Verify HTML (no *_ja columns in EN pages)
         run: |
           echo "=== HTML Verification ==="
