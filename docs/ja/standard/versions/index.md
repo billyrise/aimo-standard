@@ -9,7 +9,7 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 ## 最新リリース
 
 !!! success "現在のバージョン"
-    **v0.1.1** (2026-02-04) — [ドキュメントを見る](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.1)
+    **v0.1.1** (2026-02-03) — [ドキュメントを見る](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.1)
 
 ## バージョン履歴
 

@@ -9,7 +9,7 @@ Official releases are frozen snapshots published with auditor-ready PDFs and mac
 ## Latest Release
 
 !!! success "Current Version"
-    **v0.1.1** (2026-02-04) — [View Documentation](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.1)
+    **v0.1.1** (2026-02-03) — [View Documentation](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.1)
 
 ## Version History
 
