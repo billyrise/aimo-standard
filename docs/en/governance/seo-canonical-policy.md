@@ -129,12 +129,20 @@ Every generated HTML page includes canonical and hreflang tags in the `<head>`:
 
 ### robots.txt
 
+Production is **fully crawlable**. There is no global crawler block. Only the `/dev/` preview path is disallowed.
+
 ```
 User-agent: *
 Allow: /
+Allow: /latest/
+
+# Disallow dev preview only (unreleased content — not for audit citation)
+Disallow: /dev/
 
 Sitemap: https://standard.aimoaas.com/sitemap.xml
 ```
+
+From v0.1.1 onward, SEO must be world-class: the canonical site must be indexable by all major search engines; `noindex` and `robots.txt` Disallow apply only to `/dev/` and mirror sites, never to production `/` or `/latest/`.
 
 ### Sitemap
 
@@ -174,11 +182,12 @@ This ensures search engines always prioritize the Production canonical URLs at `
 
 ## Verification
 
-After each build, you can verify canonical URLs by:
+After each build, you can verify canonical URLs and crawler access by:
 
 1. **Inspecting generated HTML** — Check `site/` directory after `mkdocs build`
 2. **Using browser DevTools** — Inspect `<head>` section on deployed pages
-3. **Google Search Console** — Monitor which URLs are indexed
+3. **Checking robots.txt** — Ensure `https://standard.aimoaas.com/robots.txt` contains `Allow: /` and `Allow: /latest/`, and only `Disallow: /dev/`. No global Disallow.
+4. **Google Search Console** — Monitor which URLs are indexed and any crawl errors
 
 Example verification command:
 

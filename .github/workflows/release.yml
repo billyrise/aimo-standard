@@ -289,15 +289,17 @@ jobs:
           
           echo "=== Deploying root SEO files ==="
           
-          # Create robots.txt at root
+          # Create robots.txt at root (production fully crawlable; only /dev/ disallowed)
           cat > robots.txt << 'ROBOTS_EOF'
           # AIMO Standard robots.txt
           # Canonical site: https://standard.aimoaas.com/
+          # Production is fully crawlable; only /dev/ (preview) is disallowed.
           
           User-agent: *
           Allow: /
+          Allow: /latest/
           
-          # Disallow dev preview (unreleased content)
+          # Disallow dev preview only (unreleased content — not for audit citation)
           Disallow: /dev/
           
           # Sitemap location

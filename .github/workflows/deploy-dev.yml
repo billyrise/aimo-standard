@@ -148,16 +148,18 @@ jobs:
           
           echo "=== Ensuring root SEO files ==="
           
-          # Create robots.txt at root if not exists
+          # Create robots.txt at root if not exists (same as release: only /dev/ disallowed)
           if [ ! -f robots.txt ]; then
             cat > robots.txt << 'ROBOTS_EOF'
           # AIMO Standard robots.txt
           # Canonical site: https://standard.aimoaas.com/
+          # Production is fully crawlable; only /dev/ (preview) is disallowed.
           
           User-agent: *
           Allow: /
+          Allow: /latest/
           
-          # Disallow dev preview (unreleased content)
+          # Disallow dev preview only (unreleased content — not for audit citation)
           Disallow: /dev/
           
           # Sitemap location
