@@ -106,7 +106,7 @@ Al documentar un sistema de IA, los códigos de múltiples dimensiones se combin
 5. IM (Modo de Integración)
 6. RS (Superficie de Riesgo)
 7. OB (Resultado / Beneficio)
-8. EV (Tipo de Evidencia)
+8. LG (Tipo de log/registro)
 
 **Ejemplo de composición:**
 

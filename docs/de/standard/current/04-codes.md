@@ -106,7 +106,7 @@ Bei der Dokumentation eines KI-Systems werden Codes aus mehreren Dimensionen kom
 5. IM (Integrationsmodus)
 6. RS (Risikooberfläche)
 7. OB (Ergebnis / Nutzen)
-8. EV (Evidence-Typ)
+8. LG (Log-/Ereignistyp)
 
 **Beispielkomposition:**
 

@@ -47,7 +47,7 @@
         {
           "type": "added",
           "scope": "EV",
-          "description": "Evidence Type dimension with 7 codes (EV-001 to EV-007)"
+          "description": "Log/Event Type dimension (LG) with 7 codes (LG-001 to LG-007); EV reserved for Evidence artifact IDs only"
         },
         {
           "type": "added",

@@ -63,8 +63,8 @@ def validate_json(payload: dict) -> None:
 
 # Fixed message for pre-schema rejection of codes.EV (human-readable, normative).
 CODES_EV_REJECT_MESSAGE = (
-    "Invalid taxonomy dimension: 'EV' is reserved for Evidence Artifact IDs. "
-    "Use 'LG' for log/event taxonomy codes."
+    "Invalid taxonomy dimension: 'EV' is reserved for Evidence artifact IDs. "
+    "Use 'LG' for Log/Event Type."
 )
 
 

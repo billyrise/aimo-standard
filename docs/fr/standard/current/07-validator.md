@@ -39,7 +39,7 @@ Vérifier que chaque dimension requise a au moins un code :
 | IM (Mode d'intégration) | Exactement 1 code |
 | RS (Surface de risque) | Au moins 1 code |
 | OB (Résultat / Bénéfice) | Optionnel (0 ou plus) |
-| EV (Type de preuve) | Au moins 1 code |
+| LG (Type de log/événement) | Au moins 1 code |
 
 ### 3. Vérification d'existence dans le dictionnaire
 
@@ -82,7 +82,7 @@ check: |
   - CH: au moins 1
   - IM: exactement 1
   - RS: au moins 1
-  - EV: au moins 1
+  - LG: au moins 1
 ```
 
 ### Règle : Codes valides
@@ -176,7 +176,7 @@ Checking required dimensions...
   IM: OK (1 code)
   RS: OK (3 codes)
   OB: OK (2 codes)
-  EV: OK (7 codes)
+  LG: OK (7 codes)
 
 Checking code validity...
   All codes valid.

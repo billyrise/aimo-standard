@@ -28,17 +28,19 @@ This directory contains the Evidence Pack templates, schemas, and examples for t
 
 ---
 
-## MVP Evidence Set (EV-01 to EV-07)
+## MVP Evidence Set (templates EV-01 to EV-07; taxonomy LG-001 to LG-007)
 
-| Template | Evidence Type | Code | Description |
+v0.1: Taxonomy dimension for log/event type is **LG** only. **EV-** is reserved for Evidence artifact IDs. Template filenames remain EV-01_... for legacy; use **LG-xxx** in `evidence[].codes`.
+
+| Template (file) | Log/Event Type (code) | Code | Description |
 | --- | --- | --- | --- |
-| EV-01 | System Overview | EV-001 | AI system purpose and architecture |
-| EV-02 | Data Flow | EV-002 | Data movement and processing |
-| EV-03 | Inventory | EV-003 | AI asset catalog |
-| EV-04 | Risk & Impact | EV-004 | Risk assessment documentation |
-| EV-05 | Controls & Approvals | EV-005 | Control measures and approvals |
-| EV-06 | Logging & Monitoring | EV-006 | Logging and monitoring setup |
-| EV-07 | Incident & Exception | EV-007 | Incident and exception handling |
+| EV-01 | System Overview | LG-001 | AI system purpose and architecture |
+| EV-02 | Data Flow | LG-002 | Data movement and processing |
+| EV-03 | Inventory | LG-003 | AI asset catalog |
+| EV-04 | Risk & Impact | LG-004 | Risk assessment documentation |
+| EV-05 | Controls & Approvals | LG-005 | Control measures and approvals |
+| EV-06 | Logging & Monitoring | LG-006 | Logging and monitoring setup |
+| EV-07 | Incident & Exception | LG-007 | Incident and exception handling |
 
 ---
 

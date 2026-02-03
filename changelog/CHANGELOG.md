@@ -95,7 +95,7 @@ Initial release of AIMO Standard with 8-dimension code system, Evidence Pack tem
 - **IM** (Integration Mode): 5 codes (IM-001 to IM-005)
 - **RS** (Risk Surface): 5 codes (RS-001 to RS-005)
 - **OB** (Outcome / Benefit): 5 codes (OB-001 to OB-005)
-- **EV** (Evidence Type): 7 codes (EV-001 to EV-007)
+- **LG** (Log/Event Type): 7 codes (LG-001 to LG-007); formerly EV (Evidence Type) in pre-v0.1 (EV- is now reserved for Evidence artifact IDs only)
 
 #### Schemas
 - `taxonomy_pack.schema.json`: Schema for taxonomy pack definition

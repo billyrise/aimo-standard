@@ -96,7 +96,7 @@ check: |
   - CH: at least 1
   - IM: exactly 1
   - RS: at least 1
-  - EV: at least 1
+  - LG: at least 1
 ```
 
 ### Rule: Valid Codes
@@ -190,7 +190,7 @@ Checking required dimensions...
   IM: OK (1 code)
   RS: OK (3 codes)
   OB: OK (2 codes)
-  EV: OK (7 codes)
+  LG: OK (7 codes)
 
 Checking code validity...
   All codes valid.

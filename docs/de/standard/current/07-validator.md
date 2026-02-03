@@ -39,7 +39,7 @@ Prüfen, dass jede erforderliche Dimension mindestens einen Code hat:
 | IM (Integrationsmodus) | Genau 1 Code |
 | RS (Risikooberfläche) | Mindestens 1 Code |
 | OB (Ergebnis / Nutzen) | Optional (0 oder mehr) |
-| EV (Evidence-Typ) | Mindestens 1 Code |
+| LG (Log-/Ereignistyp) | Mindestens 1 Code |
 
 ### 3. Dictionary-Existenzprüfung
 
@@ -82,7 +82,7 @@ check: |
   - CH: mindestens 1
   - IM: genau 1
   - RS: mindestens 1
-  - EV: mindestens 1
+  - LG: mindestens 1
 ```
 
 ### Regel: Gültige Codes
@@ -176,7 +176,7 @@ Checking required dimensions...
   IM: OK (1 code)
   RS: OK (3 codes)
   OB: OK (2 codes)
-  EV: OK (7 codes)
+  LG: OK (7 codes)
 
 Checking code validity...
   All codes valid.

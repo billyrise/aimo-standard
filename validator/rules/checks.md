@@ -9,7 +9,7 @@ This document defines validator checks aligned with the AIMO Taxonomy.
 1. **MUST** validate JSON artifacts against the published JSON Schemas.
 2. **MUST** reject additionalProperties where schemas disallow them.
 3. **MUST** ensure required fields exist.
-4. **MUST** validate AIMO code format: `^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$` (taxonomy dimensions). The **EV-** prefix is reserved for Evidence artifact IDs only, not for taxonomy codes.
+4. **MUST** validate AIMO code format: `^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$` (taxonomy dimensions). The **EV-** prefix is reserved for Evidence artifact IDs only; taxonomy dimension for log/event type is **LG** only. Use of **EV** in `evidence[].codes` is rejected with a normative error.
 
 ### Recommended Checks
 
@@ -25,7 +25,7 @@ The validator checks that all codes in the `codes` object match the pattern:
 ^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 ```
 
-(Taxonomy dimension for log/event type is **LG**; **EV-** is reserved for Evidence artifact IDs only.)
+(Taxonomy dimension for log/event type is **LG** only. **EV-** is reserved for Evidence artifact IDs; use of EV in codes is rejected by the validator.)
 
 Examples of valid codes:
 - `FS-001`, `UC-015`, `DT-004`, `CH-003`, `IM-002`, `RS-008`, `OB-007`, `LG-001`

@@ -34,7 +34,7 @@ This document defines the full authoring template for Evidence (EV) records, inc
 
 ```json
 {
-  "id": "EV-001",
+  "id": "EV-20260115-001",
   "timestamp": "2026-01-15T10:00:00Z",
   "source": "example-system",
   "summary": "Minimal evidence record for Evidence Bundle example.",
@@ -121,7 +121,7 @@ When using the root schema (`aimo-standard.schema.json`), the following lifecycl
   "timestamp": "2026-01-15T10:00:00Z",
   "actor": "system",
   "change_description": "Initial bundle creation",
-  "references": ["EV-001"]
+  "references": ["EV-20260115-001"]
 }
 ```
 
@@ -138,12 +138,12 @@ When using the root schema (`aimo-standard.schema.json`), the following lifecycl
   "dictionary": {
     "entries": [
       { "key": "REQ-001", "label": "Request", "description": "AI use request" },
-      { "key": "EV-001", "label": "Evidence", "description": "Use evidence record" }
+      { "key": "EV-20260115-001", "label": "Evidence", "description": "Use evidence record" }
     ]
   },
   "evidence": [
     {
-      "id": "EV-001",
+      "id": "EV-20260115-001",
       "timestamp": "2026-01-15T10:00:00Z",
       "source": "example-system",
       "summary": "Minimal evidence record.",

@@ -106,7 +106,7 @@ Lors de la documentation d'un système IA, les codes de plusieurs dimensions son
 5. IM (Mode d'intégration)
 6. RS (Surface de risque)
 7. OB (Résultat / Bénéfice)
-8. EV (Type de preuve)
+8. LG (Type de log/événement)
 
 **Exemple de composition :**
 
