@@ -56,9 +56,8 @@ def scan_file(filepath: Path, allowlist_files: set[Path]) -> list[tuple[int, str
     for i, line in enumerate(lines):
         if is_in_code_block(lines, i):
             continue
-        # Strip inline code (backticks) before checking, so `Japanese (日本語)` in docs is still reported
-        line_without_inline_code = re.sub(r"`[^`]*`", "", line)
-        if CJK_RE.search(line_without_inline_code):
+        # Do not strip inline code: backticks must not be used to hide CJK (Trojan Source hardening)
+        if CJK_RE.search(line):
             issues.append((i + 1, line.strip()))
     return issues
 
