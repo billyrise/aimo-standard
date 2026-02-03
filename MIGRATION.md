@@ -1,6 +1,85 @@
 # Migration Guide: Multi-language Taxonomy and Documentation
 
-This guide documents the migration from language-coupled taxonomy data to a language-neutral structure with separate translation packs.
+This guide documents the migration from language-coupled taxonomy data to a language-neutral structure with separate translation packs. For **v0.1 scope** (what is MUST vs reserved) and **v0.1 audit submission minimum set**, see [v0.1_object_model_scope.md](source_pack/07_release/v0.1_object_model_scope.md) and the [0.1.0] section of [CHANGELOG.md](changelog/CHANGELOG.md). Those documents are kept in sync with this migration guide.
+
+---
+
+## v0.1 ID namespace: EV (Taxonomy) → LG (Log/Event Type)
+
+In **AIMO Standard v0.1**, the taxonomy dimension for classifying log/event types (request record, access log, etc.) uses the **LG-** prefix only. The **EV-** prefix is reserved exclusively for **Evidence artifact IDs** (e.g. `evidence[].id`, bundle object identifiers).
+
+- **If you have existing taxonomy codes** such as `EV-001` … `EV-015` (formerly "Evidence Type"): treat them as **LG-001** … **LG-015** in v0.1. Update `evidence[].codes` to use `"LG": ["LG-001", …]` instead of `"EV": ["EV-001", …]`.
+- **Validators** reject use of `EV` as a taxonomy dimension in `evidence[].codes`; use `LG` and `LG-xxx` codes only for the log/event dimension.
+- See [ID Policy / Namespace (04b)](docs/en/standard/current/04b-id-policy-namespace.md) for the normative definition.
+
+Migration scripts to rename EV-* to LG-* in existing payloads are optional; the mapping is a direct substitution (EV-001 → LG-001, etc.) for the same code set.
+
+### Deterministic conversion table (EV-xxx → LG-xxx)
+
+| Old (taxonomy, forbidden in v0.1) | New (taxonomy, use in `evidence[].codes.LG`) |
+|-----------------------------------|-----------------------------------------------|
+| EV-001 | LG-001 |
+| EV-002 | LG-002 |
+| EV-003 | LG-003 |
+| EV-004 | LG-004 |
+| EV-005 | LG-005 |
+| EV-006 | LG-006 |
+| EV-007 | LG-007 |
+| EV-008 | LG-008 |
+| EV-009 | LG-009 |
+| EV-010 | LG-010 |
+| EV-011 | LG-011 |
+| EV-012 | LG-012 |
+| EV-013 | LG-013 |
+| EV-014 | LG-014 |
+| EV-015 | LG-015 |
+
+For codes beyond EV-015, use the same number: EV-NNN → LG-NNN.
+
+### Why the validator rejects old EV in codes (audit uniqueness)
+
+Using **EV** both for (1) Evidence *artifact* IDs (e.g. `evidence[].id`) and (2) taxonomy *codes* for log/event type caused **concept collision**: the same string `EV-001` could mean an artifact identifier or a taxonomy code. For audit and machine processing, v0.1 enforces:
+
+- **EV-** = Evidence artifact ID only (e.g. `EV-20260115-001`).
+- **LG-** = Log/Event Type taxonomy dimension only (e.g. `LG-001`).
+
+The reference validator fails with a clear error if it finds `evidence[].codes.EV` so that all payloads have a single, unambiguous interpretation. This ensures citation and traceability remain consistent.
+
+### Before / After JSON example
+
+**Before (invalid in v0.1):**
+
+```json
+{
+  "evidence": [
+    {
+      "id": "EV-20260115-001",
+      "codes": {
+        "FS": ["FS-001"],
+        "EV": ["EV-001", "EV-002"]
+      }
+    }
+  ]
+}
+```
+
+**After (valid in v0.1):**
+
+```json
+{
+  "evidence": [
+    {
+      "id": "EV-20260115-001",
+      "codes": {
+        "FS": ["FS-001"],
+        "LG": ["LG-001", "LG-002"]
+      }
+    }
+  ]
+}
+```
+
+Only the **codes** object changes: replace the dimension key `"EV"` with `"LG"` and each code `EV-NNN` with `LG-NNN`. The **id** field correctly keeps the **EV-** prefix (artifact ID).
 
 ## Overview
 

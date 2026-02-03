@@ -26,7 +26,7 @@
 | **IM** (Integration Mode) | `IM-001` | Standalone |
 | **RS** (Risk Surface) | `RS-001, RS-003, RS-005` | Data Leakage, Compliance Breach, Model Misuse |
 | **OB** (Outcome / Benefit) | `OB-001` | Efficiency |
-| **EV** (Evidence Type) | `EV-004` | Risk & Impact Assessment |
+| **LG** (Log/Event Type) | `LG-004` | Risk & Impact Assessment |
 
 ---
 

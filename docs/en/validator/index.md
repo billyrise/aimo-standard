@@ -17,7 +17,11 @@ pip install jsonschema   # if not already installed
 **2. Run validation against a sample bundle**
 
 ```bash
+# Single root JSON file
 python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+
+# Evidence Bundle directory (v0.1 minimal: validates manifest, object_index, payload_index, signing, hash_chain)
+python validator/src/validate.py examples/evidence_bundle_v01_minimal
 ```
 
 **3. Read the report and fix errors/warnings**
@@ -37,7 +41,32 @@ Schema validation failed:
 <root>: 'evidence' is a required property
 ```
 
-Exit codes: `0` = success, `1` = validation errors, `2` = usage error.
+**Exit codes**: `0` = success, `1` = validation errors, `2` = usage error (e.g. missing path or options).
+
+---
+
+## Output formats (--format) and CI usage
+
+| Option | Use case | Output |
+|--------|----------|--------|
+| `default` (omit) | Local inspection | Human-readable message (OK / error list) |
+| `--format json` | CI and scripts | Machine-readable JSON (`valid`, `errors`, `warnings`, `path`, `profiles_valid`) |
+| `--format sarif` | GitHub Code Scanning | SARIF 2.1.0 (ruleId, level, location, message). Use when feeding results into Code Scanning as a pre-submission gate. |
+
+**Example: validating the Evidence Bundle v0.1 minimal sample**
+
+```bash
+# Local success check
+python validator/src/validate.py examples/evidence_bundle_v01_minimal
+
+# Get result as JSON (for CI parsing)
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format json
+
+# Write SARIF to a file (for Code Scanning upload)
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format sarif > dist/validator.sarif
+```
+
+**How it appears on GitHub**: The Quality Gate workflow runs the validator with `--format sarif` and uploads the result via `upload-sarif`. When validation fails on a PR, the Security tab (Code Scanning) shows results for `aimo-standard/validation` so you can see which path and which error failed.
 
 ---
 

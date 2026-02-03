@@ -26,7 +26,7 @@
 | **IM** (Integration Mode) | `IM-001` | Standalone |
 | **RS** (Risk Surface) | `RS-001` | Data Leakage |
 | **OB** (Outcome / Benefit) | `OB-001` | Efficiency |
-| **EV** (Evidence Type) | `EV-007` | Incident & Exception |
+| **LG** (Log/Event Type) | `LG-007` | Incident & Exception |
 
 ---
 

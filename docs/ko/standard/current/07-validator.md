@@ -39,7 +39,7 @@ AIMO 검증기는 증거 팩 및 관련 산출물이 AIMO 표준 스키마 및 �
 | IM (통합 모드) | 정확히 1개 코드 |
 | RS (리스크 표면) | 최소 1개 코드 |
 | OB (결과 / 혜택) | 선택적 (0개 이상) |
-| EV (증거 유형) | 최소 1개 코드 |
+| LG (로그/기록 유형) | 최소 1개 코드 |
 
 ### 3. 딕셔너리 존재 확인
 
@@ -82,7 +82,7 @@ check: |
   - CH: 최소 1개
   - IM: 정확히 1개
   - RS: 최소 1개
-  - EV: 최소 1개
+  - LG: 최소 1개
 ```
 
 ### 규칙: 유효한 코드
@@ -176,7 +176,7 @@ Checking required dimensions...
   IM: OK (1 code)
   RS: OK (3 codes)
   OB: OK (2 codes)
-  EV: OK (7 codes)
+  LG: OK (7 codes)
 
 Checking code validity...
   All codes valid.

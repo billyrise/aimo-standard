@@ -96,7 +96,7 @@ check: |
   - CH: 少なくとも1つ
   - IM: 正確に1つ
   - RS: 少なくとも1つ
-  - EV: 少なくとも1つ
+  - LG: 少なくとも1つ
 ```
 
 ### ルール：有効なコード
@@ -190,7 +190,7 @@ Checking required dimensions...
   IM: OK (1 code)
   RS: OK (3 codes)
   OB: OK (2 codes)
-  EV: OK (7 codes)
+  LG: OK (7 codes)
 
 Checking code validity...
   All codes valid.

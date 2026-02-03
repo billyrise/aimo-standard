@@ -53,7 +53,7 @@ The `codes` object contains taxonomy codes by dimension. Format: `<DIM>-<NNN>`
   "IM": ["IM-002"],
   "RS": ["RS-001"],
   "OB": ["OB-001"],
-  "EV": ["EV-001", "EV-002"]
+  "LG": ["LG-001", "LG-002"]
 }
 ```
 
@@ -68,7 +68,7 @@ The `codes` object contains taxonomy codes by dimension. Format: `<DIM>-<NNN>`
 | **IM** | Yes | Exactly 1 | Integration Mode |
 | **RS** | Yes | 1 or more | Risk Surface |
 | **OB** | No | 0 or more | Outcome/Benefit |
-| **EV** | Yes | 1 or more | Evidence Type |
+| **LG** | Yes | 1 or more | Log/Event Type |
 
 ---
 
@@ -91,7 +91,7 @@ See [Evidence Bundle](../../docs/artifacts/evidence-bundle.md) for full document
 Evidence records are validated against:
 
 1. **Schema**: `schemas/jsonschema/aimo-ev.schema.json`
-2. **Code format**: Pattern `^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$`
+2. **Code format**: Pattern `^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$` (EV- prefix reserved for Evidence artifact IDs only.)
 3. **Dictionary**: Codes should exist in `taxonomy_dictionary_v0.1.csv`
 
 Run: `python validator/src/validate.py <path-to-root.json>`

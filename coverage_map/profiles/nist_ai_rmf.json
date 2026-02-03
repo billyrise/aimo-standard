@@ -1,0 +1,10 @@
+{
+  "profile_id": "PR-NIST-AI-RMF-v0.1",
+  "target": "NIST_AI_RMF",
+  "target_version": "1.0",
+  "mappings": [
+    { "source_object_ref": "Summary", "target_field": "Govern", "required": true },
+    { "source_object_ref": "dictionary", "target_field": "Map", "required": true },
+    { "source_object_ref": "evidence", "target_field": "Measure/Manage", "required": true }
+  ]
+}

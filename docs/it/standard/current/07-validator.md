@@ -82,7 +82,7 @@ check: |
   - CH: almeno 1
   - IM: esattamente 1
   - RS: almeno 1
-  - EV: almeno 1
+  - LG: almeno 1
 ```
 
 ### Regola: Codici Validi
@@ -176,7 +176,7 @@ Checking required dimensions...
   IM: OK (1 codice)
   RS: OK (3 codici)
   OB: OK (2 codici)
-  EV: OK (7 codici)
+  LG: OK (7 codici)
 
 Checking code validity...
   Tutti i codici validi.

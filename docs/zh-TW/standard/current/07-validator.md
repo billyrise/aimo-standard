@@ -39,7 +39,7 @@ AIMO 驗證器確保證據包和相關人工產物符合 AIMO 標準結構描述
 | IM（整合模式） | 正好 1 個代碼 |
 | RS（風險面） | 至少 1 個代碼 |
 | OB（成果 / 效益） | 選用（0 或更多） |
-| EV（證據類型） | 至少 1 個代碼 |
+| LG（日誌/記錄類型） | 至少 1 個代碼 |
 
 ### 3. 字典存在檢查
 
@@ -82,7 +82,7 @@ check: |
   - CH: 至少 1
   - IM: 正好 1
   - RS: 至少 1
-  - EV: 至少 1
+  - LG: 至少 1
 ```
 
 ### 規則：有效代碼
@@ -176,7 +176,7 @@ Checking required dimensions...
   IM: OK (1 code)
   RS: OK (3 codes)
   OB: OK (2 codes)
-  EV: OK (7 codes)
+  LG: OK (7 codes)
 
 Checking code validity...
   All codes valid.

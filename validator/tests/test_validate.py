@@ -61,8 +61,8 @@ def test_validate_fail(tmp_path):
     assert r.returncode != 0
 
 EXPECTED_CODES_EV_MESSAGE = (
-    "Invalid taxonomy dimension: 'EV' is reserved for Evidence Artifact IDs. "
-    "Use 'LG' for log/event taxonomy codes."
+    "Invalid taxonomy dimension: 'EV' is reserved for Evidence artifact IDs. "
+    "Use 'LG' for Log/Event Type."
 )
 
 

@@ -23,9 +23,14 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 !!! note "データソース"
     このバージョンテーブルは [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) と同期しています。各リリースタグ（`vX.Y.Z`）は仕様の固定スナップショットに対応します。
 
-## 「latest」の単一の真実の情報源（SSOT）
+## /latest とバージョン付き URL — 誤引用を防ぐ
 
-**「latest」の正式な定義**は [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) の **latest** タグ（`releases/latest`）です。サイトの `/latest/` は常にそのリリースへリダイレクトします。「サイト側の latest」は存在せず、リリースワークフローがタグ付きバージョンをデプロイし、そのバージョンを `latest` エイリアスとして一度に設定します。
+| URL | 用途 | 監査・証跡 |
+|-----|------|------------|
+| **`/X.Y.Z/`**（例：`/0.1.0/`） | 固定スナップショット；変更されない。 | 監査引用・再現可能な証跡には**必須**で使用。 |
+| **`/latest/`** | 現行リリースへのリダイレクト；新タグリリース時に更新。 | 参照用；監査証跡としては**非推奨**（指し先が変わるため）。 |
+
+**「latest」の正式な定義**は [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) の **latest** タグです。サイトの `/latest/` はそのリリースへリダイレクトします。**リリースワークフロー**（タグ push で起動）のみが `/latest/` を更新します。詳細は [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照してください。
 
 | ソース | 役割 |
 |--------|------|
@@ -40,9 +45,9 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 
 監査報告書で特定バージョンを引用し、再現性を確保するには：
 
-1. **正規 URL**：そのバージョンの固定ドキュメント URL を使用（例：`https://standard.aimoaas.com/0.0.3/`。使用したバージョンで `0.0.3` を置き換え）。
-2. **バージョン固定**：[GitHub Release](https://github.com/billyrise/aimo-standard/releases) ページの**リリースタグ**（例：`v0.0.3`）および任意で**コミットハッシュ**を記録。これにより、仕様スナップショットがリリース資産（PDF、ZIP、チェックサム）と一致することを独立に検証できます。
-3. **エビデンスの整合**：提出物に、準拠した AIMO Standard のバージョン（例：`v0.0.3`）を明記し、バリデータとスキーマは同一リリースから取得してください。
+1. **正規 URL**：そのバージョンの固定ドキュメント URL を使用（例：`https://standard.aimoaas.com/0.1.0/`。使用したバージョンで `0.0.3` を置き換え）。**v0.1.0 以降**：監査証跡では `/latest/` よりバージョン付き URL（例：`https://standard.aimoaas.com/0.1.0/`）の引用を推奨し、スナップショットの曖昧さを避けてください。
+2. **バージョン固定**：[GitHub Release](https://github.com/billyrise/aimo-standard/releases) ページの**リリースタグ**（例：`v0.1.0`）および任意で**コミットハッシュ**を記録。これにより、仕様スナップショットがリリース資産（PDF、ZIP、チェックサム）と一致することを独立に検証できます。
+3. **エビデンスの整合**：提出物に、準拠した AIMO Standard のバージョン（例：`v0.1.0`）を明記し、バリデータとスキーマは同一リリースから取得してください。
 
 ## バージョン層
 
@@ -50,7 +55,7 @@ AIMO Standard では三つのバージョン概念を使用します。現行リ
 
 | 層 | 説明 | 記載箇所 |
 |----|------|----------|
-| **Standard バージョン**（サイト/リリース） | リリースタグとドキュメントスナップショット（例：`v0.0.3`）。 | バージョンテーブル、GitHub Releases、`/X.Y.Z/` URL。 |
+| **Standard バージョン**（サイト/リリース） | リリースタグとドキュメントスナップショット（例：`v0.1.0`）。 | バージョンテーブル、GitHub Releases、`/X.Y.Z/` URL。 |
 | **Taxonomy スキーマバージョン** | コード体系と taxonomy/スキーマ定義のバージョン。 | マニフェストの `taxonomy_version`；スキーマの `$id` またはドキュメント。 |
 | **Dictionary コンテンツバージョン** | 辞書エントリ（コードと定義）のバージョン。 | 辞書メタデータ；0.0.x では taxonomy と同じ。 |
 
@@ -79,7 +84,7 @@ AIMO Standard では三つのバージョン概念を使用します。現行リ
 
     ```powershell
     # 特定バージョンの全アセットをダウンロード
-    $VERSION = "v0.0.1"
+    $VERSION = "v0.1.0"
     $BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
 
     Invoke-WebRequest -Uri "$BASE_URL/trust_package.pdf" -OutFile trust_package.pdf
@@ -235,14 +240,14 @@ AIMO Standard は [Semantic Versioning](https://semver.org/) (SemVer) に従い�
 
 各リリースは以下でアクセス可能な固定ドキュメントスナップショットを作成します：
 
-- 本番環境: `https://standard.aimoaas.com/{version}/`（例: `/0.0.1/`）
+- 本番環境: `https://standard.aimoaas.com/{version}/`（例: `/0.1.0/`）
 - GitHub Pages: `https://billyrise.github.io/aimo-standard/{version}/`
 
 ### URL タイプとその意味
 
 | URLパターン | 説明 | 監査引用に使用可能？ |
 |-------------|------|---------------------|
-| `/X.Y.Z/`（例: `/0.0.1/`） | **固定リリース** — 不変のスナップショット | **はい**（推奨） |
+| `/X.Y.Z/`（例: `/0.1.0/`） | **固定リリース** — 不変のスナップショット | **はい**（推奨） |
 | `/latest/` | **エイリアス** — 最新リリースへリダイレクト | はい（`/X.Y.Z/`に解決） |
 | `/dev/` | **プレビュー** — 未リリースのmainブランチ内容 | **いいえ**（引用不可） |
 
@@ -253,10 +258,10 @@ AIMO Standard は [Semantic Versioning](https://semver.org/) (SemVer) に従い�
 ### よくある質問
 
 ??? question "`/latest/` がバージョン番号でないのはなぜですか？"
-    `/latest/` は最新の安定リリース（例: `/0.0.1/`）に常にリダイレクトする便利なエイリアスです。これにより、ユーザーは単一のURLをブックマークしながら、自動的に現行バージョンを取得できます。不変性が必要な正式監査では、代わりに明示的なバージョンURLを引用してください。
+    `/latest/` は最新の安定リリース（例: `/0.1.0/`）に常にリダイレクトする便利なエイリアスです。これにより、ユーザーは単一のURLをブックマークしながら、自動的に現行バージョンを取得できます。不変性が必要な正式監査では、代わりに明示的なバージョンURLを引用してください。
 
 ??? question "監査人はどのURLを引用すべきですか？"
-    - **正式監査（不変性が必要）**: `/X.Y.Z/` を使用（例: `https://standard.aimoaas.com/0.0.1/standard/current/`）
+    - **正式監査（不変性が必要）**: `/X.Y.Z/` を使用（例: `https://standard.aimoaas.com/0.1.0/standard/current/`）
     - **一般的な参照**: `/latest/` は現行リリースにリダイレクトされるため許容可能
     - **絶対に引用しないでください**: `/dev/`（未リリース、変更される可能性あり）
 

@@ -28,6 +28,15 @@ Validators **must** reject:
 - Use of **EV** as a taxonomy dimension in `evidence[].codes` (e.g. `"EV": ["EV-001"]`). Use **LG** and `LG-xxx` instead.
 - Use of taxonomy codes **EV-001** … **EV-999** in any taxonomy/codes field; only **LG-xxx** are allowed for the log/event dimension.
 
+## v0.1 prefix inventory
+
+| Prefix | v0.1 status | Use |
+|--------|-------------|-----|
+| **EV-** | In use | Evidence artifact ID only (e.g. `evidence[].id`) |
+| **LG-** | In use | Log/Event Type taxonomy dimension (`evidence[].codes.LG`) |
+| **SC-** | In use | Scope (e.g. scope identifier) |
+| **RQ-**, **CT-**, **CL-**, **TP-**, **FD-**, **RM-**, **AP-**, **CH-**, **PR-** | Reserved | Requirement, Control, Claim, Test Plan, Finding, Remediation, Approval, Change, Profile — for future use; not yet normative in v0.1 |
+
 ## References
 
 - [Taxonomy](./03-taxonomy.md) — dimension **LG: Log/Event Type**

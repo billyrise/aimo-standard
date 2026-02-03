@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  security-events: write  # required for upload-sarif (Code Scanning)
 
 jobs:
   quality-gate:
@@ -102,6 +103,34 @@ jobs:
         run: |
           echo "=== Evidence Bundle integrity check (examples/evidence_bundle_v01_minimal) ==="
           python validator/src/validate.py examples/evidence_bundle_v01_minimal
+
+      - name: Validate Profiles (aimo-profile schema)
+        run: |
+          echo "=== Profile JSONs (coverage_map/profiles/) vs aimo-profile.schema.json ==="
+          python validator/src/validate.py --validate-profiles
+
+      - name: Validator SARIF (Code Scanning)
+        id: validator-sarif
+        run: |
+          mkdir -p dist
+          python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format sarif > dist/validator.sarif
+          EXIT=$?
+          echo "exit_code=$EXIT" >> $GITHUB_OUTPUT
+          exit $EXIT
+        continue-on-error: true
+
+      - name: Upload SARIF to Code Scanning
+        if: always() && steps.validator-sarif.outcome != 'cancelled'
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: dist/validator.sarif
+        continue-on-error: true
+
+      - name: Fail if Validator had errors
+        if: steps.validator-sarif.outputs.exit_code != '0'
+        run: |
+          echo "Validator reported errors (see logs or Code Scanning)."
+          exit 1
 
       - name: Site content policy (EV reserved, LG required)
         run: |

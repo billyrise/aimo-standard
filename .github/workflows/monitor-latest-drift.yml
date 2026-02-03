@@ -1,0 +1,24 @@
+# Monitor: public /latest/ must match latest release tag
+# Runs daily at 09:00 JST. Fails if /latest/ redirect target != newest v* tag.
+# See VERSIONING.md and tooling/checks/check_public_latest_drift.py
+
+name: monitor-latest-drift
+
+on:
+  schedule:
+    # 09:00 JST = 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check public /latest/ vs latest tag
+        run: |
+          python tooling/checks/check_public_latest_drift.py --base-url https://standard.aimoaas.com

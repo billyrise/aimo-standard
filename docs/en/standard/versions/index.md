@@ -23,9 +23,14 @@ Official releases are frozen snapshots published with auditor-ready PDFs and mac
 !!! note "Data Source"
     This version table is synchronized with [GitHub Releases](https://github.com/billyrise/aimo-standard/releases). Each release tag (`vX.Y.Z`) corresponds to a frozen snapshot of the specification.
 
-## Single source of truth (SSOT) for "latest"
+## /latest vs versioned URLs — avoid wrong citations
 
-The **authoritative definition of "latest"** is the [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) **latest** tag (`releases/latest`). The site path `/latest/` is a redirect that always points to that release. There is no separate "site latest" — the release workflow deploys the tagged version and sets it as the `latest` alias in one step.
+| URL | Use | Audit / evidence |
+|-----|-----|------------------|
+| **`/X.Y.Z/`** (e.g. `/0.1.0/`) | Frozen snapshot; never changes. | **MUST** use for audit citations and reproducible evidence. |
+| **`/latest/`** | Redirect to the current release; updates when a new tag is released. | Reference only; **not recommended** for audit evidence (target can change). |
+
+The **authoritative definition of "latest"** is the [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) **latest** tag. The site path `/latest/` is a redirect that points to that release. Only the **release workflow** (triggered by a tag push) updates `/latest/`; see [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md).
 
 | Source | Role |
 |--------|------|
@@ -41,9 +46,10 @@ For release process details, see [VERSIONING.md](https://github.com/billyrise/ai
 To cite a specific version in audit reports and ensure reproducibility:
 
 1. **Canonical URL**: Use the frozen documentation URL for that version, e.g.  
-   `https://standard.aimoaas.com/0.0.3/` (replace `0.0.3` with the version you used).
-2. **Version pinning**: Record the **release tag** (e.g. `v0.0.3`) and optionally the **commit hash** from the [GitHub Release](https://github.com/billyrise/aimo-standard/releases) page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).
-3. **Evidence alignment**: State in your submission which AIMO Standard version (e.g. `v0.0.3`) your evidence bundle aligns with, and obtain the validator and schemas from that same release.
+   `https://standard.aimoaas.com/0.1.0/` (replace `0.0.3` with the version you used).  
+   **For v0.1.0 and later**: Prefer citing the versioned URL (e.g. `https://standard.aimoaas.com/0.1.0/`) rather than `/latest/` for audit evidence, so the snapshot is unambiguous.
+2. **Version pinning**: Record the **release tag** (e.g. `v0.1.0`) and optionally the **commit hash** from the [GitHub Release](https://github.com/billyrise/aimo-standard/releases) page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).
+3. **Evidence alignment**: State in your submission which AIMO Standard version (e.g. `v0.1.0`) your evidence bundle aligns with, and obtain the validator and schemas from that same release.
 
 ## Version layers
 
@@ -51,7 +57,7 @@ AIMO Standard uses three version concepts. For the current release they are alig
 
 | Layer | Description | Where it appears |
 |-------|-------------|------------------|
-| **Standard version** (site/release) | The release tag and documentation snapshot (e.g. `v0.0.3`). | Versions table, GitHub Releases, `/X.Y.Z/` URLs. |
+| **Standard version** (site/release) | The release tag and documentation snapshot (e.g. `v0.1.0`). | Versions table, GitHub Releases, `/X.Y.Z/` URLs. |
 | **Taxonomy schema version** | Version of the code system and taxonomy/schema definitions. | `taxonomy_version` in manifests; schema `$id` or docs. |
 | **Dictionary content version** | Version of the dictionary entries (codes and definitions). | Dictionary metadata; same as taxonomy for 0.0.x. |
 
@@ -80,7 +86,7 @@ Auditors and implementers should verify download integrity using SHA-256 checksu
 
     ```powershell
     # Download all assets for a specific version
-    $VERSION = "v0.0.1"
+    $VERSION = "v0.1.0"
     $BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
 
     Invoke-WebRequest -Uri "$BASE_URL/trust_package.pdf" -OutFile trust_package.pdf
@@ -236,14 +242,14 @@ When upgrading between versions with breaking changes:
 
 Each release creates a frozen documentation snapshot accessible at:
 
-- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.0.1/`)
+- Production: `https://standard.aimoaas.com/{version}/` (e.g., `/0.1.0/`)
 - GitHub Pages: `https://billyrise.github.io/aimo-standard/{version}/`
 
 ### URL Types and Their Meaning
 
 | URL Pattern | Description | For Audit Citations? |
 |-------------|-------------|---------------------|
-| `/X.Y.Z/` (e.g., `/0.0.1/`) | **Frozen release** — immutable snapshot | **Yes** (preferred) |
+| `/X.Y.Z/` (e.g., `/0.1.0/`) | **Frozen release** — immutable snapshot | **Yes** (preferred) |
 | `/latest/` | **Alias** — redirects to most recent release | Yes (resolves to `/X.Y.Z/`) |
 | `/dev/` | **Preview** — unreleased main branch content | **No** (not for citations) |
 
@@ -254,10 +260,10 @@ Each release creates a frozen documentation snapshot accessible at:
 ### FAQ
 
 ??? question "Why is `/latest/` not a version number?"
-    `/latest/` is a convenience alias that always redirects to the most recent stable release (e.g., `/0.0.1/`). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.
+    `/latest/` is a convenience alias that always redirects to the most recent stable release (e.g., `/0.1.0/`). This allows users to bookmark a single URL while automatically getting the current version. For formal audits requiring immutability, cite the explicit version URL instead.
 
 ??? question "Which URL should auditors cite?"
-    - **Formal audits (immutability required)**: Use `/X.Y.Z/` (e.g., `https://standard.aimoaas.com/0.0.1/standard/current/`)
+    - **Formal audits (immutability required)**: Use `/X.Y.Z/` (e.g., `https://standard.aimoaas.com/0.1.0/standard/current/`)
     - **General references**: `/latest/` is acceptable as it redirects to the current release
     - **Never cite**: `/dev/` (unreleased, subject to change)
 

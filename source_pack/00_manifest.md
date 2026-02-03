@@ -18,6 +18,25 @@ This manifest is the canonical checklist for auditor-first documentation. All CU
 
 ---
 
+## Normative SSOT (v0.1)
+
+The following paths are **normative** for AIMO Standard v0.1. The repository does not use a separate `/normative/` directory; normative content lives in the paths below.
+
+| Normative subject | Location (SSOT) |
+|-------------------|-----------------|
+| **Evidence Bundle structure** | `docs/*/standard/current/09-evidence-bundle-structure.md` — root layout, manifest, integrity (v0.1) |
+| **ID policy / namespace** | `docs/*/standard/current/04b-id-policy-namespace.md` — EV (artifact ID) vs LG (taxonomy) separation |
+| **JSON Schemas** | `schemas/jsonschema/` — aimo-standard, aimo-dictionary, aimo-ev, evidence_bundle_manifest, evidence_pack_manifest, aimo-profile, etc. |
+| **Validator rules** | `validator/rules/checks.md`, `validator/rules/checks.yaml` — code format (LG, not EV in taxonomy), schema validation |
+
+### v0.1 scope (no contradictions with scope / changelog / migration)
+
+- **v0.1 MUST**: Evidence, Dictionary, Root structure (version/dictionary/evidence), Evidence Bundle structure (manifest, object_index, payload_index, signing with manifest target, hash_chain), ID policy (EV/LG). Defined in [v0.1_object_model_scope.md](07_release/v0.1_object_model_scope.md).
+- **v0.1 reserved only (not required)**: RQ, CT, CL, TP, FD, RM, AP, CH, PR (profile id namespace), Scope as first-class object. Validator tasks D1/D5/D6 apply only when object schemas exist in a future version.
+- **Cross-references**: For release summary and breaking changes see [changelog/CHANGELOG.md](../changelog/CHANGELOG.md) [0.1.0]. For EV→LG migration and audit minimum see [MIGRATION.md](../MIGRATION.md).
+
+---
+
 ## 1. Auditors
 
 ### 1.1 Trust Package Hub

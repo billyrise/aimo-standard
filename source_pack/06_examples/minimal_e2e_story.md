@@ -46,7 +46,7 @@ The organization has the following governance records:
 
 ```json
 {
-  "id": "EV-001",
+  "id": "EV-20260115-001",
   "timestamp": "2026-01-15T10:00:00Z",
   "source": "example-system",
   "summary": "Minimal evidence record for Evidence Bundle example.",
@@ -68,12 +68,12 @@ Create the bundle structure following `aimo-standard.schema.json`:
   "dictionary": {
     "entries": [
       { "key": "REQ-001", "label": "Request", "description": "AI use request" },
-      { "key": "EV-001", "label": "Evidence", "description": "Use evidence record" }
+      { "key": "EV-20260115-001", "label": "Evidence", "description": "Use evidence record" }
     ]
   },
   "evidence": [
     {
-      "id": "EV-001",
+      "id": "EV-20260115-001",
       "timestamp": "2026-01-15T10:00:00Z",
       "source": "example-system",
       "summary": "Minimal evidence record for Evidence Bundle example.",
@@ -100,7 +100,7 @@ Create the bundle structure following `aimo-standard.schema.json`:
     "timestamp": "2026-01-15T10:00:00Z",
     "actor": "system",
     "change_description": "Initial bundle creation",
-    "references": ["EV-001"]
+    "references": ["EV-20260115-001"]
   }
 }
 ```
@@ -205,7 +205,7 @@ REQ-001 (Request)
     ↓ references
 REV-001 (Review)
     ↓ approved
-EV-001 (Evidence)
+EV-20260115-001 (Evidence)
     ↓ recorded
 CHG-001 (Change Log)
 ```

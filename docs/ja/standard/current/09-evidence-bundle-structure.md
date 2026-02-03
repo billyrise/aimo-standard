@@ -6,6 +6,16 @@ description: Evidence Bundle（v0.1）の規範的ルート構造とマニフェ
 
 本ページは Evidence Bundle の**規範的**ルート構成とマニフェストを定義する。バリデータは、これらの要件を満たさないバンドルをスキーマ検証の前に拒否しなければならない。
 
+## v0.1 規範 MUST（まとめ）
+
+- バンドルルートに **manifest.json** が存在することは必須。
+- **object_index** と **payload_index**：各エントリに **sha256**（64 文字小 hex）が必須。path は相対で `../` 禁止・ルート外参照禁止。
+- **signing.signatures** は空でない配列であること（空配列は無効）。
+- 各署名エントリは **path**（signatures/ 配下、パストラバーサル禁止）、**targets**（配列・最低1要素）を持ち、バンドル内の少なくとも1件の署名が **targets** に **manifest.json** を含むこと（マニフェスト署名は必須）。
+- **hash_chain**：v0.1 では **algorithm**、**head**、**path**（hashes/ 配下）、**covers**（少なくとも **manifest.json** と **objects/index.json**）を必須とする。
+
+バリデータはこれらを満たさないバンドルを拒否すること（MUST）。JSON Schema および参照バリデータは同一ルールを実装する。
+
 ## ルート必須構成（MUST）
 
 バンドルルートに以下が存在することは MUST とする。
