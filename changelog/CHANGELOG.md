@@ -25,6 +25,7 @@ v0.1.1 is a **PATCH** release: backward-compatible additions and clarifications.
 - **Justified Non-Compliance (JNC)**: Informative [justified-non-compliance.md](docs/en/artifacts/justified-non-compliance.md) describing a possible future extension; not normative in v0.1.1.
 - **Evidence Bundle future extensions**: [09-evidence-bundle-structure](docs/en/standard/current/09-evidence-bundle-structure.md) adds a short "Future extensions" note on Control/Requirement linkage and OSCAL.
 - **Validator**: When validating a bundle with `--format json`, output now includes `signing_metadata` (v0.1.1 fields from manifest) when present.
+- **EU AI Act Annex IV (pulled forward)**: Official sample Evidence Bundle [examples/evidence_bundle_v01_annex_iv_sample/](examples/evidence_bundle_v01_annex_iv_sample/) for high-risk AI technical documentation (Annex IV). Profile [coverage_map/profiles/eu_ai_act_annex_iv.json](coverage_map/profiles/eu_ai_act_annex_iv.json) extended with `audit_questions` for auditor use. Documented in [Examples](docs/en/examples/index.md) and [EU AI Act mapping](docs/en/coverage-map/eu-ai-act.md). Rationale: EU applicability phase from 2026-08; see [REPORTS/v0.1.1_update_plan.md](REPORTS/v0.1.1_update_plan.md) §0.4.
 
 ### Changed
 

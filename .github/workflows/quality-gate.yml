@@ -104,6 +104,11 @@ jobs:
           echo "=== Evidence Bundle integrity check (examples/evidence_bundle_v01_minimal) ==="
           python validator/src/validate.py examples/evidence_bundle_v01_minimal
 
+      - name: Validate Evidence Bundle (EU Annex IV sample)
+        run: |
+          echo "=== Evidence Bundle integrity check (examples/evidence_bundle_v01_annex_iv_sample) ==="
+          python validator/src/validate.py examples/evidence_bundle_v01_annex_iv_sample
+
       - name: Validate Profiles (aimo-profile schema)
         run: |
           echo "=== Profile JSONs (coverage_map/profiles/) vs aimo-profile.schema.json ==="

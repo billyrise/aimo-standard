@@ -2,9 +2,17 @@
   "profile_id": "PR-EU-AI-ACT-ANNEX-IV-v0.1",
   "target": "EU_AI_ACT_ANNEX_IV",
   "target_version": "Annex IV",
+  "audit_questions": [
+    "Does the technical documentation include a general description of the AI system (intended purpose, provider, version, deployment)?",
+    "Is the development process documented (methods, design choices, data, human oversight)?",
+    "Are monitoring, functioning, and control of the system described?",
+    "Is risk management documented and linked to evidence?",
+    "Are relevant lifecycle changes and post-market monitoring plan documented?",
+    "Is there an EU declaration of conformity (or reference) for the high-risk AI system?"
+  ],
   "mappings": [
-    { "source_object_ref": "Summary", "target_field": "Documentation", "required": true },
-    { "source_object_ref": "dictionary", "target_field": "Record-keeping", "required": true },
-    { "source_object_ref": "evidence", "target_field": "Technical documentation", "required": true }
+    {"source_object_ref": "Summary", "target_field": "Documentation", "required": true},
+    {"source_object_ref": "dictionary", "target_field": "Record-keeping", "required": true},
+    {"source_object_ref": "evidence", "target_field": "Technical documentation", "required": true}
   ]
 }

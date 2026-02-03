@@ -33,9 +33,9 @@ mike plugin is NOT explicitly configured under `plugins:` - only referenced via 
 **Current:** Not explicitly set → defaults to `copy`
 
 **Problem:** When alias_type=copy (default), mike **copies** all files from the versioned directory to create the alias. This means:
-- `/latest/` is a full copy of `/0.1.6/`
+- `/latest/` is a full copy of `/0.1.x/`
 - If main branch is deployed, `/latest/` gets overwritten with main's content
-- `/latest/` and `/0.1.6/` can have different content!
+- `/latest/` and `/0.1.x/` can have different content!
 
 **Required:** `alias_type: redirect` or `alias_type: symlink`
 
@@ -79,19 +79,19 @@ Every push to main overwrites `/latest/` with unreleased content.
 
 ## 2. Risk Analysis
 
-### Why /latest/ and /0.1.6/ Can Diverge
+### Why /latest/ and /0.1.x/ Can Diverge
 
 ```
 Timeline of Events:
-1. v0.1.6 tag created → release.yml deploys 0.1.6/ and sets latest=0.1.6 ✓
+1. v0.1.x tag created → release.yml deploys 0.1.x/ and sets latest=0.1.x ✓
 2. PR merged to main → docs_current.yml deploys main content to /latest/ ✗
-3. Now: /latest/ = main (unreleased), /0.1.6/ = frozen release
+3. Now: /latest/ = main (unreleased), /0.1.x/ = frozen release
 4. Auditor cites /latest/ → gets unreleased content!
 ```
 
 ### SEO and Canonical Issues
 
-1. **Duplicate content:** /latest/ and /0.1.6/ may have same content (copy) or different (drift)
+1. **Duplicate content:** /latest/ and /0.1.x/ may have same content (copy) or different (drift)
 2. **No noindex on dev:** Unreleased content can be indexed
 3. **Canonical confusion:** auditors may cite wrong version
 
@@ -151,17 +151,17 @@ Timeline of Events:
 └────────────────────────────────────────────────────────────┘
 
 ┌────────────────────────────────────────────────────────────┐
-│ Push tag v0.1.7                                            │
+│ Push tag v0.1.x                                            │
 │ ↓                                                          │
 │ release.yml                                                │
 │ ↓                                                          │
-│ 1. Check: 0.1.7/ must NOT exist in gh-pages               │
+│ 1. Check: 0.1.x/ must NOT exist in gh-pages               │
 │ 2. Build + quality gates                                   │
-│ 3. mike deploy --push --update-aliases 0.1.7 latest       │
+│ 3. mike deploy --push --update-aliases 0.1.x latest       │
 │ 4. mike set-default --push latest                          │
 │ 5. Create GitHub Release with assets                       │
 │                                                            │
-│ Result: /0.1.7/ created, /latest/ → redirect to /0.1.7/   │
+│ Result: /0.1.x/ created, /latest/ → redirect to /0.1.x/   │
 └────────────────────────────────────────────────────────────┘
 ```
 
@@ -177,7 +177,7 @@ plugins:
 ```
 
 With `alias_type: redirect`:
-- `/latest/index.html` contains `<meta http-equiv="refresh" content="0; url=../0.1.6/">`
+- `/latest/index.html` contains `<meta http-equiv="refresh" content="0; url=../0.1.x/">`
 - No file duplication
 - No content drift possible
 
@@ -212,12 +212,12 @@ After implementation:
 mike list
 
 # Expected output:
-# 0.1.6 [latest] (default)
+# 0.1.x [latest] (default)
 # dev
 
 # Verify /latest/ is redirect, not copy
 curl -sI https://standard.aimoaas.com/latest/ | grep -i location
-# Should show redirect to /0.1.6/
+# Should show redirect to /0.1.x/
 ```
 
 ---

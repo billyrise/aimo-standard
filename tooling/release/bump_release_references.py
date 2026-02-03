@@ -6,7 +6,7 @@ Automatically updates version references in documentation files for a new releas
 Updates: Versions pages, Cite pages, and CITATION.cff.
 
 Usage:
-    python tooling/release/bump_release_references.py --version 0.1.8
+    python tooling/release/bump_release_references.py --version 0.1.x
 
 Exit codes:
     0 - All updates completed successfully
@@ -29,7 +29,7 @@ def parse_args():
     parser.add_argument(
         "--version",
         required=True,
-        help="New version number (e.g., 0.1.8). Do not include 'v' prefix."
+        help="New version number (e.g., 0.1.x). Do not include 'v' prefix."
     )
     parser.add_argument(
         "--dry-run",
@@ -41,7 +41,7 @@ def parse_args():
     # Validate version format
     if not re.match(r"^\d+\.\d+\.\d+$", args.version):
         print(f"[ERROR] Invalid version format: {args.version}")
-        print("Expected format: X.Y.Z (e.g., 0.1.8)")
+        print("Expected format: X.Y.Z (e.g., 0.1.x)")
         sys.exit(2)
     
     return args
@@ -100,21 +100,21 @@ class VersionBumper:
         old_versions = self._detect_old_versions(content)
         
         for old_ver in old_versions:
-            # Pattern 1: v0.1.7 -> v{new_version}
+            # Pattern 1: v0.1.x -> v{new_version}
             v_pattern = re.compile(r"\bv" + re.escape(old_ver) + r"\b")
             new_content, n = v_pattern.subn(f"v{self.new_version}", content)
             if n > 0:
                 change_count += n
                 content = new_content
 
-            # Pattern 2: /0.1.7/ -> /{new_version}/
+            # Pattern 2: /0.1.x/ -> /{new_version}/
             url_pattern = re.compile(r"/" + re.escape(old_ver) + r"/")
             new_content, n = url_pattern.subn(f"/{self.new_version}/", content)
             if n > 0:
                 change_count += n
                 content = new_content
 
-            # Pattern 3: version = {0.1.7} (BibTeX) -> version = {new_version}
+            # Pattern 3: version = {0.1.x} (BibTeX) -> version = {new_version}
             bibtex_pattern = re.compile(
                 r"(version\s*=\s*\{)" + re.escape(old_ver) + r"(\})"
             )
@@ -123,7 +123,7 @@ class VersionBumper:
                 change_count += n
                 content = new_content
 
-            # Pattern 4: Version 0.1.7 (APA style) -> Version {new_version}
+            # Pattern 4: Version 0.1.x (APA style) -> Version {new_version}
             apa_pattern = re.compile(
                 r"(Version\s+)" + re.escape(old_ver) + r"\b",
                 re.IGNORECASE
@@ -133,7 +133,7 @@ class VersionBumper:
                 change_count += n
                 content = new_content
 
-            # Pattern 5: version: 0.1.7 (YAML) -> version: {new_version}
+            # Pattern 5: version: 0.1.x (YAML) -> version: {new_version}
             yaml_pattern = re.compile(
                 r"(^version:\s*['\"]?)" + re.escape(old_ver) + r"(['\"]?\s*$)",
                 re.MULTILINE

@@ -80,14 +80,14 @@ The versioning and deployment system has been updated to ensure:
 ```bash
 # 1. Ensure all changes are merged to main
 # 2. Create and push the tag
-git tag v0.1.7
-git push origin v0.1.7
+git tag v0.1.x
+git push origin v0.1.x
 
 # 3. The release.yml workflow will:
-#    - Check that 0.1.7/ doesn't already exist (immutability)
+#    - Check that 0.1.x/ doesn't already exist (immutability)
 #    - Run all quality gates
-#    - Build docs and deploy to /0.1.7/
-#    - Update /latest/ alias to redirect to /0.1.7/
+#    - Build docs and deploy to /0.1.x/
+#    - Update /latest/ alias to redirect to /0.1.x/
 #    - Create GitHub Release with assets
 ```
 
@@ -107,12 +107,12 @@ git push origin v0.1.7
 mike list
 
 # Expected output:
-# 0.1.6 [latest] (default)
+# 0.1.x [latest] (default)
 # dev
 
 # Verify /latest/ redirects correctly
 curl -sI https://standard.aimoaas.com/latest/ | grep -i location
-# Expected: Location: ../0.1.6/ or similar
+# Expected: Location: ../0.1.x/ or similar
 ```
 
 ### How to Repair /latest/ (if needed)
@@ -123,7 +123,7 @@ curl -sI https://standard.aimoaas.com/latest/ | grep -i location
 # Set dry_run=false to apply
 
 # Option 2: Local script
-./tooling/release/repair_latest_alias.sh 0.1.6
+./tooling/release/repair_latest_alias.sh 0.1.x
 ```
 
 ---
@@ -132,8 +132,8 @@ curl -sI https://standard.aimoaas.com/latest/ | grep -i location
 
 | URL | Content | Mutable | Indexed |
 |-----|---------|---------|---------|
-| `https://standard.aimoaas.com/0.1.6/` | Frozen release v0.1.6 | **Never** | Yes |
-| `https://standard.aimoaas.com/latest/` | Redirect → /0.1.6/ | Pointer on release | Yes |
+| `https://standard.aimoaas.com/0.1.x/` | Frozen release v0.1.x | **Never** | Yes |
+| `https://standard.aimoaas.com/latest/` | Redirect → /0.1.x/ | Pointer on release | Yes |
 | `https://standard.aimoaas.com/dev/` | Main branch preview | Always | No |
 
 ### Redirect Behavior
@@ -142,10 +142,10 @@ With `alias_type: redirect`:
 
 ```
 GET /latest/
-→ 302 Redirect to /0.1.6/
+→ 302 Redirect to /0.1.x/
 
 GET /latest/standard/current/
-→ 302 Redirect to /0.1.6/standard/current/
+→ 302 Redirect to /0.1.x/standard/current/
 ```
 
 No file duplication. No content drift possible.

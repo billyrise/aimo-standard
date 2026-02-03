@@ -12,10 +12,10 @@ It updates:
   3. Example version numbers in code blocks
 
 Usage:
-  python tooling/release/update_versions_page.py --version 0.1.3 --date 2026-02-01
+  python tooling/release/update_versions_page.py --version 0.1.x --date 2026-02-01
 
   # Check mode (no changes, just verify):
-  python tooling/release/update_versions_page.py --version 0.1.3 --date 2026-02-01 --check
+  python tooling/release/update_versions_page.py --version 0.1.x --date 2026-02-01 --check
 """
 
 import argparse
@@ -43,7 +43,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--version",
         required=True,
-        help="Version number without 'v' prefix (e.g., 0.1.3)",
+        help="Version number without 'v' prefix (e.g., 0.1.x)",
     )
     parser.add_argument(
         "--date",
@@ -62,7 +62,7 @@ def validate_version(version: str) -> None:
     """Validate version format (X.Y.Z)."""
     if not re.match(r"^\d+\.\d+\.\d+$", version):
         print(f"ERROR: Invalid version format: {version}", file=sys.stderr)
-        print("Expected format: X.Y.Z (e.g., 0.1.3)", file=sys.stderr)
+        print("Expected format: X.Y.Z (e.g., 0.1.x)", file=sys.stderr)
         sys.exit(1)
 
 

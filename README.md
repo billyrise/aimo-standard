@@ -69,7 +69,7 @@ The release process is fully automated via GitHub Actions, with a two-step workf
 ### Step 1: Prepare Release (Automated Version Bump)
 
 1. Go to **Actions** → **prepare-release** → **Run workflow**
-2. Enter the new version number (e.g., `0.1.8`) — do NOT include the `v` prefix
+2. Enter the new version number (e.g., `0.1.x`) — do NOT include the `v` prefix
 3. Click **Run workflow**
 
 This will:
@@ -83,8 +83,8 @@ This will:
 1. Review and merge the PR created in Step 1
 2. Create and push the release tag:
    ```bash
-   git tag v0.1.8
-   git push origin v0.1.8
+   git tag v0.1.x
+   git push origin v0.1.x
    ```
 
 This will automatically:

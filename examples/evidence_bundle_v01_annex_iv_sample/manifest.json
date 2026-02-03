@@ -1,0 +1,43 @@
+{
+  "$schema": "https://standard.aimoaas.com/schemas/evidence_bundle_manifest.schema.json",
+  "bundle_id": "e7f8a9b0-c1d2-4e5f-8a9b-0c1d2e3f4a5b",
+  "bundle_version": "0.1.0",
+  "created_at": "2026-02-04T12:00:00Z",
+  "scope_ref": "SC-ANNEXIV",
+  "object_index": [
+    {
+      "id": "idx-001",
+      "type": "index",
+      "path": "objects/index.json",
+      "sha256": "c511d557aa3b5ffdf13b45bc1cc6c46ade31066bf82a3d8ce58544cf93448444"
+    }
+  ],
+  "payload_index": [
+    {
+      "logical_id": "root",
+      "path": "payloads/root.json",
+      "sha256": "d521cb3dee1f5c5fdd8b9001ec904c6bbbaf2a560477fb46925696117f965228",
+      "mime": "application/json",
+      "size": 2750
+    }
+  ],
+  "hash_chain": {
+    "algorithm": "sha256",
+    "head": "c511d557aa3b5ffdf13b45bc1cc6c46ade31066bf82a3d8ce58544cf93448444",
+    "path": "chain.sha256",
+    "covers": ["manifest.json", "objects/index.json"]
+  },
+  "signing": {
+    "signatures": [
+      {
+        "signature_id": "SIG-001",
+        "path": "manifest.sig",
+        "targets": ["manifest.json", "objects/index.json"],
+        "algorithm": "unspecified",
+        "created_at": "2026-02-04T12:00:00Z",
+        "signer_identity": "example-pgp-fingerprint-or-did-key",
+        "verification_command": "aimo verify --pubkey <key> --manifest manifest.json"
+      }
+    ]
+  }
+}
