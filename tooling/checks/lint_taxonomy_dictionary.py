@@ -65,8 +65,8 @@ REQUIRED_FIELDS = [
     "backward_compatible",
 ]
 
-# Valid dimension IDs
-VALID_DIMENSIONS = {"FS", "UC", "DT", "CH", "IM", "RS", "OB", "EV"}
+# Valid dimension IDs (LG = Log/Event Type; EV reserved for Evidence artifact IDs only)
+VALID_DIMENSIONS = {"FS", "UC", "DT", "CH", "IM", "RS", "OB", "LG"}
 
 # Valid status values
 VALID_STATUSES = {"active", "deprecated", "removed"}
