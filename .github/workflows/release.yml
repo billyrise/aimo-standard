@@ -13,6 +13,7 @@ permissions:
   contents: write
   id-token: write
   attestations: write
+  security-events: write  # for upload-sarif (Code Scanning)
 
 env:
   LANG: C.UTF-8
@@ -123,6 +124,14 @@ jobs:
           python validator/src/validate.py examples/evidence_bundle_v01_minimal
           echo "=== Profile JSONs (aimo-profile schema) ==="
           python validator/src/validate.py --validate-profiles
+          mkdir -p dist
+          python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format sarif > dist/validator.sarif
+
+      - name: Upload SARIF (Code Scanning)
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: dist/validator.sarif
+        continue-on-error: true
 
       # CRITICAL: Ensure documentation references match the release version
       # This prevents deploying a release where Versions/Cite/CITATION.cff
