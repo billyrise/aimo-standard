@@ -42,7 +42,7 @@
     },
     "object_index": {
       "type": "array",
-      "description": "List of enumerated objects (id, type, path, sha256).",
+      "description": "List of enumerated objects (id, type, path, sha256). Paths MUST be relative, MUST NOT contain ../ or start with /. Paths MUST remain within the Evidence Bundle root; validators MUST reject paths that escape the bundle root.",
       "items": {
         "type": "object",
         "required": ["id", "type", "path", "sha256"],
@@ -52,8 +52,8 @@
           "type": { "type": "string" },
           "path": {
             "type": "string",
-            "description": "Relative path; MUST NOT contain ../ (path traversal prevention).",
-            "pattern": "^(?!.*\\.\\./).*$"
+            "description": "Relative path within bundle root; MUST NOT contain ../ (path traversal prevention) or start with /.",
+            "pattern": "^(?!\\/)(?!.*\\.\\./).*$"
           },
           "sha256": {
             "type": "string",
@@ -65,7 +65,7 @@
     },
     "payload_index": {
       "type": "array",
-      "description": "List of payloads (logical_id, path, sha256, mime, size).",
+      "description": "List of payloads (logical_id, path, sha256, mime, size). Paths MUST be relative, MUST NOT contain ../ or start with /. Paths MUST remain within the Evidence Bundle root; validators MUST reject paths that escape the bundle root.",
       "items": {
         "type": "object",
         "required": ["logical_id", "path", "sha256", "mime", "size"],
@@ -74,7 +74,8 @@
           "logical_id": { "type": "string" },
           "path": {
             "type": "string",
-            "pattern": "^(?!.*\\.\\./).*$"
+            "description": "Relative path within bundle root; MUST NOT contain ../ or start with /.",
+            "pattern": "^(?!\\/)(?!.*\\.\\./).*$"
           },
           "sha256": {
             "type": "string",
@@ -87,18 +88,83 @@
     },
     "hash_chain": {
       "type": "object",
-      "description": "Chain head and algorithm (e.g. sha256, merkle). Extensible.",
-      "required": ["algorithm", "head"],
+      "description": "Hash chain head and algorithm. v0.1 normative: algorithm, head, path (under hashes/), and covers (v0.1 MUST include manifest.json and objects/index.json).",
+      "required": ["algorithm", "head", "path", "covers"],
       "additionalProperties": true,
       "properties": {
-        "algorithm": { "type": "string", "enum": ["sha256", "merkle"] },
-        "head": { "type": "string" }
+        "algorithm": {
+          "type": "string",
+          "enum": ["sha256", "merkle"],
+          "description": "Hash chain algorithm."
+        },
+        "head": {
+          "type": "string",
+          "description": "Chain head (64 lowercase hex for sha256).",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "path": {
+          "type": "string",
+          "description": "Relative path under hashes/; MUST NOT contain ../ or start with /.",
+          "pattern": "^(?!\\/)(?!.*\\.\\./).*$"
+        },
+        "covers": {
+          "type": "array",
+          "description": "List of bundle paths covered by this chain. v0.1 MUST include manifest.json and objects/index.json.",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^(?!\\/)(?!.*\\.\\./).*$"
+          }
+        }
       }
     },
     "signing": {
       "type": "object",
-      "description": "Signing method(s). v0.1 requires at least one signature in signatures/ that references the manifest.",
-      "additionalProperties": true
+      "description": "Signing metadata. v0.1 normative: signatures array with explicit reference (path, targets, algorithm). Cryptographic verification is out of scope for v0.1.",
+      "required": ["signatures"],
+      "additionalProperties": true,
+      "properties": {
+        "signatures": {
+          "type": "array",
+          "description": "List of signature entries. Each entry MUST reference a file under signatures/ and its targets. v0.1 MUST include at least one signature whose targets include manifest.json.",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["signature_id", "path", "targets", "algorithm"],
+            "additionalProperties": true,
+            "properties": {
+              "signature_id": {
+                "type": "string",
+                "description": "Unique identifier for this signature (e.g. SIG-001 or UUID)."
+              },
+              "path": {
+                "type": "string",
+                "description": "Relative path under signatures/; MUST NOT contain ../ or start with /.",
+                "pattern": "^(?!\\/)(?!.*\\.\\./).*$"
+              },
+              "targets": {
+                "type": "array",
+                "description": "Bundle paths that this signature covers. v0.1 MUST include manifest.json in at least one signature.",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^(?!\\/)(?!.*\\.\\./).*$"
+                }
+              },
+              "algorithm": {
+                "type": "string",
+                "enum": ["ed25519", "rsa-pss", "ecdsa", "unspecified"],
+                "description": "Signature algorithm. v0.1 allows unspecified for future extension."
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time",
+                "description": "When the signature was created (MAY)."
+              }
+            }
+          }
+        }
+      }
     },
     "extensions": {
       "type": "object",

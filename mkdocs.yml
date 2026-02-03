@@ -91,6 +91,7 @@ nav:
       - standard/index.md
       - Current:
           - standard/current/index.md
+          - Versioning & Reference Policy: standard/current/00-versioning-reference-policy.md
           - Overview: standard/current/01-overview.md
           - Scope: standard/current/02-scope.md
           - Taxonomy: standard/current/03-taxonomy.md
@@ -113,6 +114,7 @@ nav:
   - Artifacts:
       - artifacts/index.md
       - Evidence Bundle: artifacts/evidence-bundle.md
+      - Evidence Bundle Coverage Map (template): artifacts/evidence-bundle-coverage-map.md
       - Minimum Evidence Requirements: artifacts/minimum-evidence.md
       - Log Schemas:
           - artifacts/log-schemas/index.md

@@ -23,9 +23,19 @@
   ],
   "hash_chain": {
     "algorithm": "sha256",
-    "head": "20ea51cb3601c179131ee08968f0bb7cab67d123255c5cfeff63d2ce1b214b9b"
+    "head": "20ea51cb3601c179131ee08968f0bb7cab67d123255c5cfeff63d2ce1b214b9b",
+    "path": "chain.sha256",
+    "covers": ["manifest.json", "objects/index.json"]
   },
   "signing": {
-    "v0.1": "signatures/manifest.sig references manifest; cryptographic verification is a future extension"
+    "signatures": [
+      {
+        "signature_id": "SIG-001",
+        "path": "manifest.sig",
+        "targets": ["manifest.json", "objects/index.json"],
+        "algorithm": "unspecified",
+        "created_at": "2026-02-03T12:00:00Z"
+      }
+    ]
   }
 }

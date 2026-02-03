@@ -35,13 +35,13 @@ description: Evidence Bundle（v0.1）の規範的ルート構造とマニフェ
 | **bundle_version** | string (SemVer) | バンドルバージョン。 |
 | **created_at** | string (date-time) | 作成日時。 |
 | **scope_ref** | string | スコープ参照（例 SC-001）。パターン SC-*。 |
-| **object_index** | array | オブジェクト一覧：id, type, path, sha256。path は相対パスで ../ 禁止。 |
-| **payload_index** | array | ペイロード一覧：logical_id, path, sha256, mime, size。同様の path 規則。 |
-| **hash_chain** | object | チェーン先頭と方式（sha256, merkle 等）。 |
-| **signing** | object | 署名方式（将来拡張）。v0.1 では signatures/ にマニフェストを参照する署名が1つ以上必須。 |
+| **object_index** | array | オブジェクト一覧：id, type, path, sha256。path は相対パスで `../` および先頭 `/` 禁止。Evidence Bundle ルート外を指してはならず、バリデータはルート外へのパスを拒否すること（MUST）。 |
+| **payload_index** | array | ペイロード一覧：logical_id, path, sha256, mime, size。object_index と同様の path 規則（相対、`../` 禁止、先頭 `/` 禁止、バンドル内）。 |
+| **hash_chain** | object | **規範（v0.1）：** `algorithm`（sha256 \| merkle）、`head`（64 文字小 hex）、`path`（hashes/ 配下の相対パス；`../` 禁止・先頭 `/` 禁止）、`covers`（配列・最低1要素）を必須とする。v0.1 では `covers` に `manifest.json` と `objects/index.json` を含めること（MUST）。 |
+| **signing** | object | **規範（v0.1）：** `signatures`（配列・最低1要素）を必須とする。各要素は MUST：`signature_id`（例 SIG-... または UUID）、`path`（signatures/ 配下の相対パス；`../` 禁止・先頭 `/` 禁止）、`targets`（配列・最低1要素；v0.1 では少なくとも1つの署名の targets に `manifest.json` を含めること）、`algorithm`（ed25519 \| rsa-pss \| ecdsa \| unspecified のいずれか）。`created_at`（date-time）は MAY。**注記：** 署名の暗号検証は v0.1 の範囲外とする。参照（どのファイルを指し、何を対象とするか）は v0.1 で必須。 |
 
 - **sha256** は 64 文字の小 hex であること（MUST）。
-- **path** は相対パスで、`../` を含んではならない（MUST）。
+- **path** は相対パスとし、`../` および先頭 `/` を含んではならない（MUST）。パスは Evidence Bundle ルート内に留まること（MUST）。
 
 JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json` を参照。
 

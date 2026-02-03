@@ -217,7 +217,7 @@ AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
 | **MINOR** | 0.X.0 | Backward-compatible additions |
 | **PATCH** | 0.0.X | Fixes and clarifications |
 
-For the complete versioning policy, see [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md).
+For the **operational policy** (URL semantics and MUST rules), see [Versioning & Reference Policy](../current/00-versioning-reference-policy.md). For the complete versioning policy, see [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md).
 
 ## Migration
 

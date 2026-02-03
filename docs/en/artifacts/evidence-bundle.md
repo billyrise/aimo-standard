@@ -71,6 +71,7 @@ See [Minimum Evidence Requirements](minimum-evidence.md) for MUST-level fields a
 From this page, the typical audit journey continues:
 
 1. **Next**: [Minimum Evidence Requirements](minimum-evidence.md) — MUST-level checklist by lifecycle
-2. **Then**: [Coverage Map](../coverage-map/index.md) — mapping to external frameworks
-3. **Validate**: [Validator](../validator/index.md) — run structural checks
-4. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums
+2. **One-page summary**: [Evidence Bundle Coverage Map (template)](evidence-bundle-coverage-map.md) — scope, evidence types, controls mapping, exclusions, integrity (informative)
+3. **Then**: [Coverage Map](../coverage-map/index.md) — mapping to external frameworks
+4. **Validate**: [Validator](../validator/index.md) — run structural checks
+5. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums

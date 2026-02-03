@@ -20,3 +20,9 @@ build/
 
 # Local Cursor rules (not shared)
 .cursor/rules/03-docs-conventions.md
+
+# Local reports (not for GitHub)
+REPORTS/v0.1_release_plan.md
+
+# Local design doc (not for GitHub)
+AIMO Standard v0_1.docx

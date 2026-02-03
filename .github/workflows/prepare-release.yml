@@ -46,6 +46,23 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+          pip install -r tooling/requirements.txt
+
+      # Same critical quality gates as quality-gate.yml / release.yml (release must not bypass)
+      - name: Quality gates (lint + validator)
+        run: |
+          echo "=== Hidden/Bidi Unicode ==="
+          python tooling/checks/lint_hidden_unicode.py
+          echo "=== Schema Lint ==="
+          python tooling/checks/lint_schema.py
+          echo "=== Evidence Bundle integrity (v0.1 minimal) ==="
+          python validator/src/validate.py examples/evidence_bundle_v01_minimal
 
       - name: Bump version references
         id: bump

@@ -7,6 +7,7 @@ description: AIMO Standardアーティファクトハブ。機械可読スキー
 本セクションは、AIMO Standard を実装する機械可読・人間可読アーティファクトのハブです。
 
 - **Evidence Bundle**: 構造、TOC、追跡可能性 — [Evidence Bundle](evidence-bundle.md)。
+- **Evidence Bundle Coverage Map（テンプレ）**: 監査向け一枚まとめ（スコープ、エビデンス種別、コントロール対応、除外、整合性）— [Evidence Bundle Coverage Map](evidence-bundle-coverage-map.md)（informative）。
 - **Minimum Evidence Requirements**: ライフサイクル別 MUST チェックリスト — [Minimum Evidence Requirements](minimum-evidence.md)。
 - **タクソノミー／コード／辞書**: [Taxonomy](../standard/current/03-taxonomy.md)、[Codes](../standard/current/04-codes.md)、[Dictionary](../standard/current/05-dictionary.md)。
 - **証跡テンプレート**: [EV Template](../standard/current/06-ev-template.md) および関連スキーマ。

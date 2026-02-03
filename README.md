@@ -64,6 +64,8 @@ python tooling/checks/lint_schema.py
 
 The release process is fully automated via GitHub Actions, with a two-step workflow to prevent version mismatch errors.
 
+**Quality gates:** Both **prepare-release** and **release** run the same critical quality gates (including `lint_hidden_unicode`, `lint_schema`, and Evidence Bundle validator). A release cannot succeed if the repo would fail the PR quality-gate checks — no bypass.
+
 ### Step 1: Prepare Release (Automated Version Bump)
 
 1. Go to **Actions** → **prepare-release** → **Run workflow**
@@ -71,6 +73,7 @@ The release process is fully automated via GitHub Actions, with a two-step workf
 3. Click **Run workflow**
 
 This will:
+- Run quality gates (hidden-unicode, schema lint, Evidence Bundle v0.1 minimal validation)
 - Automatically update all version references (Versions pages, Cite pages, CITATION.cff)
 - Verify consistency with `check_release_consistency.py`
 - Create a PR with all changes
@@ -85,6 +88,7 @@ This will:
    ```
 
 This will automatically:
+- Run the same full quality gates as PR (bidi, hidden-unicode, schema, lints, pytest, Evidence Bundle validator)
 - Run consistency checks (fails if versions don't match)
 - Build docs with `mkdocs build --strict`
 - Deploy via `mike` with `latest` alias update

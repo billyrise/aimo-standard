@@ -142,6 +142,36 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
+def _check_path_under_root(
+    bundle_root: Path,
+    path_str: str,
+    subdir: str | None = None,
+    label: str = "path",
+) -> tuple[bool, Path | None, str | None]:
+    """
+    Ensure path is relative, has no .. segment, and resolves under bundle root.
+    If subdir is set (e.g. 'signatures'), path_str is relative to bundle_root/subdir.
+    Returns (ok, resolved_path, error_message).
+    """
+    if not path_str or not isinstance(path_str, str):
+        return False, None, f"{label}: path required"
+    if path_str.startswith("/"):
+        return False, None, f"{label}: path must be relative (no leading /): {path_str!r}"
+    if ".." in path_str:
+        return False, None, f"{label}: path must not contain ..: {path_str!r}"
+    base = (bundle_root / subdir) if subdir else bundle_root
+    try:
+        resolved = (base / path_str).resolve()
+    except Exception as e:
+        return False, None, f"{label}: invalid path {path_str!r}: {e}"
+    root_resolved = bundle_root.resolve()
+    try:
+        resolved.relative_to(root_resolved)
+    except ValueError:
+        return False, None, f"{label}: path escapes bundle root: {path_str!r}"
+    return True, resolved, None
+
+
 def validate_bundle(bundle_root: Path) -> list[str]:
     """
     Validate Evidence Bundle at bundle_root (directory).
@@ -178,46 +208,82 @@ def validate_bundle(bundle_root: Path) -> list[str]:
         errors.append(f"manifest.json schema validation failed: {e}")
         return errors
 
-    # 3) object_index and payload_index: each file exists and sha256 matches
+    # 3) Path safety and resolve-under-root for all path-bearing fields
     for i, obj in enumerate(manifest.get("object_index", [])):
         rel = obj.get("path", "")
-        if ".." in rel or rel.startswith("/"):
-            errors.append(f"object_index[{i}]: path must be relative and not contain ../: {rel!r}")
+        ok, resolved, err = _check_path_under_root(bundle_root, rel, subdir=None, label=f"object_index[{i}].path")
+        if not ok:
+            errors.append(err or f"object_index[{i}]: invalid path")
             continue
-        fp = bundle_root / rel
-        if not fp.is_file():
+        if not (resolved and resolved.is_file()):
             errors.append(f"object_index[{i}]: file not found: {rel}")
             continue
         want = (obj.get("sha256") or "").lower().strip()
         if len(want) != 64 or not all(c in "0123456789abcdef" for c in want):
             errors.append(f"object_index[{i}]: invalid sha256 (must be 64 hex)")
             continue
-        got = sha256_file(fp)
+        got = sha256_file(resolved)
         if got != want:
             errors.append(f"object_index[{i}]: sha256 mismatch for {rel}")
 
     for i, pl in enumerate(manifest.get("payload_index", [])):
         rel = pl.get("path", "")
-        if ".." in rel or rel.startswith("/"):
-            errors.append(f"payload_index[{i}]: path must be relative and not contain ../: {rel!r}")
+        ok, resolved, err = _check_path_under_root(bundle_root, rel, subdir=None, label=f"payload_index[{i}].path")
+        if not ok:
+            errors.append(err or f"payload_index[{i}]: invalid path")
             continue
-        fp = bundle_root / rel
-        if not fp.is_file():
+        if not (resolved and resolved.is_file()):
             errors.append(f"payload_index[{i}]: file not found: {rel}")
             continue
         want = (pl.get("sha256") or "").lower().strip()
         if len(want) != 64 or not all(c in "0123456789abcdef" for c in want):
             errors.append(f"payload_index[{i}]: invalid sha256 (must be 64 hex)")
             continue
-        got = sha256_file(fp)
+        got = sha256_file(resolved)
         if got != want:
             errors.append(f"payload_index[{i}]: sha256 mismatch for {rel}")
 
-    # 4) signatures/ must contain at least one file (v0.1: existence and target reference)
-    sig_dir = bundle_root / "signatures"
-    sig_files = [f for f in sig_dir.iterdir()] if sig_dir.is_dir() else []
-    if not sig_files:
-        errors.append("signatures/ must contain at least one signature file (manifest reference required in v0.1)")
+    # 4) signing.signatures: each path exists under signatures/; path safe; targets includes manifest.json (v0.1)
+    signatures = (manifest.get("signing") or {}).get("signatures") or []
+    if not signatures:
+        errors.append("signing.signatures must contain at least one entry (v0.1)")
+    else:
+        has_manifest_target = False
+        for i, sig in enumerate(signatures):
+            path_str = sig.get("path", "")
+            ok, resolved, err = _check_path_under_root(
+                bundle_root, path_str, subdir="signatures", label=f"signing.signatures[{i}].path"
+            )
+            if not ok:
+                errors.append(err or f"signing.signatures[{i}]: invalid path")
+                continue
+            if not (resolved and resolved.is_file()):
+                errors.append(f"signing.signatures[{i}]: signature file not found: signatures/{path_str}")
+                continue
+            targets = sig.get("targets") or []
+            if "manifest.json" in targets:
+                has_manifest_target = True
+        if not has_manifest_target:
+            errors.append("signing.signatures: at least one entry must have targets including manifest.json (v0.1 MUST)")
+
+    # 5) hash_chain: path exists under hashes/; path safe; covers includes manifest.json and objects/index.json (v0.1)
+    hc = manifest.get("hash_chain") or {}
+    hc_path = hc.get("path", "")
+    ok, resolved, err = _check_path_under_root(
+        bundle_root, hc_path, subdir="hashes", label="hash_chain.path"
+    )
+    if not ok and hc_path:
+        errors.append(err or "hash_chain.path: invalid path")
+    elif ok and resolved:
+        if not resolved.is_file():
+            errors.append(f"hash_chain.path: file not found: hashes/{hc_path}")
+    # v0.1: covers MUST include manifest.json and objects/index.json (always check when hash_chain present)
+    if hc:
+        covers = hc.get("covers") or []
+        if "manifest.json" not in covers:
+            errors.append("hash_chain.covers must include manifest.json (v0.1 MUST)")
+        if "objects/index.json" not in covers:
+            errors.append("hash_chain.covers must include objects/index.json (v0.1 MUST)")
 
     return errors
 

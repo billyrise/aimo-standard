@@ -216,7 +216,7 @@ AIMO Standard は [Semantic Versioning](https://semver.org/) (SemVer) に従い�
 | **MINOR** | 0.X.0 | 後方互換の追加 |
 | **PATCH** | 0.0.X | 修正と明確化 |
 
-完全なバージョニングポリシーは [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照してください。
+**運用規約**（URL の意味と MUST ルール）は [バージョニング・参照方針](../current/00-versioning-reference-policy.md) を参照。完全なバージョニングポリシーは [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照してください。
 
 ## 移行
 

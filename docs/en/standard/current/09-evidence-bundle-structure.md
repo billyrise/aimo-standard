@@ -39,13 +39,13 @@ The manifest MUST include at least:
 | **bundle_version** | string (SemVer) | Version of the bundle. |
 | **created_at** | string (date-time) | Creation timestamp. |
 | **scope_ref** | string | Scope reference (e.g. `SC-001`). Pattern `SC-*`. |
-| **object_index** | array | List of objects: `id`, `type`, `path`, `sha256`. Paths MUST be relative and MUST NOT contain `../` (path traversal prevention). |
-| **payload_index** | array | List of payloads: `logical_id`, `path`, `sha256`, `mime`, `size`. Same path rules. |
-| **hash_chain** | object | Chain head and algorithm (e.g. sha256, merkle). Structure is defined by the schema. |
-| **signing** | object | Signing method(s); extensible for future algorithms. v0.1 requires at least one signature file in `signatures/` that references the manifest. |
+| **object_index** | array | List of objects: `id`, `type`, `path`, `sha256`. Paths MUST be relative, MUST NOT contain `../` or start with `/`, and MUST remain within the Evidence Bundle root (validators MUST reject paths that escape the bundle root). |
+| **payload_index** | array | List of payloads: `logical_id`, `path`, `sha256`, `mime`, `size`. Same path rules as object_index (relative, no `../`, no leading `/`, within bundle root). |
+| **hash_chain** | object | **Normative (v0.1):** MUST include `algorithm` (sha256 \| merkle), `head` (64 lowercase hex), `path` (relative path under `hashes/`; no `../`, no leading `/`), and `covers` (array, at least one element). v0.1 MUST include `manifest.json` and `objects/index.json` in `covers`. |
+| **signing** | object | **Normative (v0.1):** MUST include `signatures` (array, at least one entry). Each entry MUST have: `signature_id` (e.g. SIG-... or UUID), `path` (relative under `signatures/`; no `../`, no leading `/`), `targets` (array, at least one path; v0.1 MUST include `manifest.json` in at least one signature's targets), `algorithm` (one of ed25519, rsa-pss, ecdsa, unspecified). `created_at` (date-time) is MAY. **Note:** Cryptographic verification of signatures is out of scope for v0.1; reference (which file and what it targets) is required. |
 
 - **sha256** values MUST be 64 lowercase hexadecimal characters.
-- **path** MUST be a relative path; MUST NOT contain `../`.
+- **path** MUST be a relative path; MUST NOT contain `../` or start with `/`; paths MUST stay within the Evidence Bundle root.
 - The manifest MAY include an explicit self-reference (e.g. in `object_index` or a dedicated field) so that the manifest’s own integrity is covered; validators MUST accept a bundle where the manifest is either listed in an index or explicitly referenced by a signature.
 
 See the JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json`.

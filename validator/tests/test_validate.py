@@ -220,3 +220,89 @@ def test_validate_bundle_fail_index_file_missing(tmp_path):
     r = subprocess.run(cmd, capture_output=True, text=True)
     assert r.returncode != 0, "Validator must reject bundle when indexed file is missing"
     assert BUNDLE_INTEGRITY_MESSAGE in r.stderr
+
+
+def _copy_minimal_bundle(tmp_path):
+    """Copy examples/evidence_bundle_v01_minimal to tmp_path/bundle. Returns dest or None if source missing."""
+    import shutil
+    src = ROOT / "examples" / "evidence_bundle_v01_minimal"
+    if not src.is_dir():
+        return None
+    dest = tmp_path / "bundle"
+    shutil.copytree(src, dest)
+    return dest
+
+
+def test_validate_bundle_rejects_path_traversal_in_object_index(tmp_path):
+    """object_index[*].path with ../ is rejected (path traversal)."""
+    dest = _copy_minimal_bundle(tmp_path)
+    if dest is None:
+        return
+    manifest_path = dest / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest["object_index"][0]["path"] = "objects/../payloads/root.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2))
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode != 0, "Validator must reject path traversal in object_index.path"
+    assert BUNDLE_INTEGRITY_MESSAGE in r.stderr
+
+
+def test_validate_bundle_rejects_missing_signature_referenced_by_manifest(tmp_path):
+    """signing.signatures[*].path pointing to non-existent file fails."""
+    dest = _copy_minimal_bundle(tmp_path)
+    if dest is None:
+        return
+    manifest_path = dest / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest["signing"]["signatures"][0]["path"] = "missing.sig"
+    manifest_path.write_text(json.dumps(manifest, indent=2))
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode != 0, "Validator must reject when signature file referenced in manifest does not exist"
+    assert BUNDLE_INTEGRITY_MESSAGE in r.stderr
+
+
+def test_validate_bundle_rejects_signing_targets_without_manifest(tmp_path):
+    """targets without manifest.json fails (v0.1 MUST)."""
+    dest = _copy_minimal_bundle(tmp_path)
+    if dest is None:
+        return
+    manifest_path = dest / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest["signing"]["signatures"][0]["targets"] = ["payloads/root.json"]
+    manifest_path.write_text(json.dumps(manifest, indent=2))
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode != 0, "Validator must reject when no signature targets manifest.json"
+    assert BUNDLE_INTEGRITY_MESSAGE in r.stderr
+
+
+def test_validate_bundle_rejects_hash_chain_path_missing(tmp_path):
+    """hash_chain.path pointing to non-existent file fails."""
+    dest = _copy_minimal_bundle(tmp_path)
+    if dest is None:
+        return
+    manifest_path = dest / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest["hash_chain"]["path"] = "nonexistent.head"
+    manifest_path.write_text(json.dumps(manifest, indent=2))
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode != 0, "Validator must reject when hash_chain.path file does not exist"
+    assert BUNDLE_INTEGRITY_MESSAGE in r.stderr
+
+
+def test_validate_bundle_rejects_hash_chain_covers_missing_manifest_or_index(tmp_path):
+    """hash_chain.covers missing manifest.json or objects/index.json fails (v0.1 MUST)."""
+    dest = _copy_minimal_bundle(tmp_path)
+    if dest is None:
+        return
+    manifest_path = dest / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest["hash_chain"]["covers"] = ["manifest.json"]
+    manifest_path.write_text(json.dumps(manifest, indent=2))
+    cmd = [sys.executable, str(ROOT / "validator" / "src" / "validate.py"), str(dest)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    assert r.returncode != 0, "Validator must reject when hash_chain.covers omits manifest.json or objects/index.json"
+    assert BUNDLE_INTEGRITY_MESSAGE in r.stderr

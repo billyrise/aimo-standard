@@ -63,6 +63,7 @@ MUST レベルのフィールドとライフサイクル区分は [Minimum Evide
 本ページから、典型的な監査ジャーニーは以下のように続く：
 
 1. **次へ**: [Minimum Evidence Requirements](minimum-evidence.md) — ライフサイクル別 MUST チェックリスト
-2. **続いて**: [Coverage Map](../coverage-map/index.md) — 外部フレームワークへのマッピング
-3. **検証**: [Validator](../validator/index.md) — 構造チェックを実行
-4. **ダウンロード**: [Releases](../releases/index.md) — リリースアセットを取得し、チェックサムを検証
+2. **一枚まとめ**: [Evidence Bundle Coverage Map（テンプレ）](evidence-bundle-coverage-map.md) — スコープ・エビデンス種別・コントロール対応・除外・整合性（informative）
+3. **続いて**: [Coverage Map](../coverage-map/index.md) — 外部フレームワークへのマッピング
+4. **検証**: [Validator](../validator/index.md) — 構造チェックを実行
+5. **ダウンロード**: [Releases](../releases/index.md) — リリースアセットを取得し、チェックサムを検証
