@@ -73,9 +73,8 @@ RECOMMENDED_PAGES = [
 
 # Pages allowed to have mixed-language content (e.g., translation mapping docs)
 # Use relative path from language directory (e.g., "contributing/localization.md")
-MIXED_LANGUAGE_ALLOWLIST = [
-    "contributing/localization.md",  # Localization guide may reference both languages
-]
+# EN pages must not contain CJK; keep this list empty to enforce locale purity.
+MIXED_LANGUAGE_ALLOWLIST: list[str] = []
 
 # Regex patterns
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+)$")

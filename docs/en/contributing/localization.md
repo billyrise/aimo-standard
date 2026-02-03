@@ -28,15 +28,15 @@ The AIMO Standard documentation uses a **folder-based i18n structure**:
 ```
 docs/
 ├── en/           # English (canonical)
-├── ja/           # Japanese (日本語)
+├── ja/           # Japanese
 ├── es/           # Spanish (Español)
 ├── fr/           # French (Français)
 ├── de/           # German (Deutsch)
 ├── pt/           # Portuguese (Português)
 ├── it/           # Italian (Italiano)
-├── zh/           # Simplified Chinese (简体中文)
-├── zh-TW/        # Traditional Chinese (繁體中文)
-└── ko/           # Korean (한국어)
+├── zh/           # Simplified Chinese
+├── zh-TW/        # Traditional Chinese
+└── ko/           # Korean
 ```
 
 - **English is canonical**: The `docs/en/` folder is the authoritative source for documentation content.
@@ -109,15 +109,15 @@ AIMO uses BCP47 language codes:
 | Code | Language | Status |
 | --- | --- | --- |
 | `en` | English | Canonical (source) |
-| `ja` | Japanese (日本語) | Active |
+| `ja` | Japanese | Active |
 | `es` | Spanish (Español) | Active |
 | `fr` | French (Français) | Active |
 | `de` | German (Deutsch) | Active |
 | `pt` | Portuguese (Português) | Active |
 | `it` | Italian (Italiano) | Active |
-| `zh` | Simplified Chinese (简体中文) | Active |
-| `zh-TW` | Traditional Chinese (繁體中文) | Active |
-| `ko` | Korean (한국어) | Active |
+| `zh` | Simplified Chinese | Active |
+| `zh-TW` | Traditional Chinese | Active |
+| `ko` | Korean | Active |
 
 ### Legacy CSV Files (Frozen)
 
