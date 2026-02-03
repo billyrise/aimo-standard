@@ -1,6 +1,8 @@
 # Migration Guide: Multi-language Taxonomy and Documentation
 
-This guide documents the migration from language-coupled taxonomy data to a language-neutral structure with separate translation packs.
+This guide documents the migration from language-coupled taxonomy data to a language-neutral structure with separate translation packs. For **v0.1 scope** (what is MUST vs reserved) and **v0.1 audit submission minimum set**, see [v0.1_object_model_scope.md](source_pack/07_release/v0.1_object_model_scope.md) and the [0.1.0] section of [CHANGELOG.md](changelog/CHANGELOG.md). Those documents are kept in sync with this migration guide.
+
+---
 
 ## v0.1 ID namespace: EV (Taxonomy) → LG (Log/Event Type)
 

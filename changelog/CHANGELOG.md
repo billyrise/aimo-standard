@@ -11,26 +11,29 @@ This changelog follows [Semantic Versioning](https://semver.org/) principles:
 
 ## [0.1.0] - (release date TBD)
 
-### Summary
-v0.1 establishes normative Evidence Bundle structure, ID namespace (EV/LG) separation, Profiles for framework mapping, and Validator output formats. This is a **breaking** release for taxonomy code usage (EV→LG migration).
+### Summary (auditor-facing)
+
+v0.1 defines the **normative** Evidence Bundle structure, ID namespace (EV/LG) separation, Profiles for framework mapping, and Validator as a submission gate. This is a **breaking** release for taxonomy code usage (EV→LG). **v0.1 audit submission minimum**: root JSON with `version`, `dictionary`, `evidence`; or an Evidence Bundle directory with manifest, indexes (sha256), signing (at least one signature targeting manifest), and hash_chain. Scope MUST vs reserved: [v0.1_object_model_scope](source_pack/07_release/v0.1_object_model_scope.md). One-page structure: [09-evidence-bundle-structure](docs/en/standard/current/09-evidence-bundle-structure.md), [minimum-evidence](docs/artifacts/minimum-evidence.md).
 
 ### Breaking
 
-- **ID namespace**: Taxonomy dimension for log/event type is **LG** only. **EV-** is reserved for Evidence artifact IDs. Validators reject `evidence[].codes.EV`; use `evidence[].codes.LG` with `LG-001` … `LG-015`. See [04b-id-policy-namespace](docs/en/standard/current/04b-id-policy-namespace.md) and [MIGRATION.md](MIGRATION.md).
+- **ID namespace**: Taxonomy dimension for log/event type is **LG** only. **EV-** is reserved for Evidence artifact IDs. Validators **reject** `evidence[].codes.EV` with a normative error; use `evidence[].codes.LG` with `LG-001` … `LG-015`. See [04b-id-policy-namespace](docs/en/standard/current/04b-id-policy-namespace.md) and [MIGRATION.md](MIGRATION.md).
 - **Validator rules**: Code format in `validator/rules/checks.md` / `checks.yaml` is `^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$` for taxonomy; EV is artifact ID only.
+- **Evidence Bundle signing**: At least one entry in `signing.signatures` must have `targets` including `manifest.json` (manifest signing is mandatory). Empty `signatures` array is invalid. Schema and validator enforce this.
 
 ### Added
 
 - **Evidence Bundle (v0.1 normative)**: Root structure and [09-evidence-bundle-structure](docs/en/standard/current/09-evidence-bundle-structure.md), `evidence_bundle_manifest.schema.json`, `validate_bundle()` in validator. Example: `examples/evidence_bundle_v01_minimal` (manifest, object_index, payload_index, hash_chain, signatures). CI runs Bundle validation in quality-gate and release.
 - **ID policy**: [04b-id-policy-namespace](docs/en/standard/current/04b-id-policy-namespace.md) (10 languages). v0.1 prefix inventory: EV, LG, SC in use; RQ, CT, CL, TP, FD, RM, AP, CH, PR reserved.
-- **Profiles**: `schemas/jsonschema/aimo-profile.schema.json` and `coverage_map/profiles/` (ISO 42001, NIST AI RMF, EU AI Act Annex IV). Coverage Map YAML remains Informative; Profile JSONs are normative conversion specs.
-- **Validator**: `--format json` and `--format sarif` for machine-readable and Code Scanning output. Exit codes: 0 = pass, 1 = fail.
-- **Normative SSOT**: [00_manifest.md](source_pack/00_manifest.md) documents normative paths (09, 04b, schemas, validator rules). [v0.1_object_model_scope.md](source_pack/07_release/v0.1_object_model_scope.md) defines v0.1 MUST (Evidence, dictionary) and optional/future objects.
+- **Profiles**: `schemas/jsonschema/aimo-profile.schema.json` and `coverage_map/profiles/` (ISO 42001, NIST AI RMF, EU AI Act Annex IV). Profile JSONs are normative conversion specs; validator `--validate-profiles` enforces schema. Coverage Map YAML remains Informative.
+- **Validator**: `--format json` and `--format sarif` for machine-readable and GitHub Code Scanning output. Exit codes: 0 = pass, 1 = fail. SARIF uploaded in CI for submission gate visibility.
+- **Normative SSOT**: [00_manifest.md](source_pack/00_manifest.md) documents normative paths and v0.1 scope. [v0.1_object_model_scope.md](source_pack/07_release/v0.1_object_model_scope.md) defines v0.1 MUST (Evidence, dictionary, bundle structure) and reserved/future objects (D1/D5/D6 when object schemas exist).
 
 ### Changed
 
-- **MIGRATION.md**: New section "v0.1 ID namespace: EV (Taxonomy) → LG (Log/Event Type)" for migration from EV-* to LG-* taxonomy codes.
-- **evidence-bundle-coverage-map.md** (EN/JA): Relationship between Coverage Map (Informative) and Profile JSONs (normative) documented.
+- **MIGRATION.md**: Section "v0.1 ID namespace: EV (Taxonomy) → LG (Log/Event Type)" with conversion table, validator rationale, and before/after JSON. v0.1 scope and audit minimum set referenced.
+- **evidence-bundle-coverage-map.md** (EN/JA): Normative vs Informative (Coverage Map YAML vs Profile JSONs), v0.1 official profiles (3), update policy.
+- **Docs**: Normative strengthening for audit citation (/latest vs /version), Evidence Bundle MUST checklist (EN/JA), Validator json/sarif and exit codes.
 
 ---
 
