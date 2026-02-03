@@ -6,7 +6,7 @@ description: AIMO Evidence Packテンプレートと使用ガイド。索引管�
 
 このセクションでは、Evidence Packテンプレートとその使用方法を定義します。Evidence Packは、AIシステムのガバナンスとコンプライアンスを示すドキュメントのコレクションです。
 
-## 名前空間：Evidence Pack ドキュメント種別（EP）と Taxonomy Evidence Type（EV）
+## 名前空間：Evidence Pack ドキュメント種別（EP）と Taxonomy Log/Event Type（LG）
 
 > **重要**: **EP-01..EP-07** は*ドキュメント種別*（Evidence Pack ファイル種別）を表します。**LG-001, LG-002, …** は [タクソノミー](./03-taxonomy.md) における*ログ/記録種別*（申請記録、審査/承認記録、例外記録など）を表します。**EV-** は [IDポリシー / 名前空間](./04b-id-policy-namespace.md) のとおり Evidence *成果物*ID 専用です。EP はパック構造、LG はライフサイクル証跡の分類に使用します。
 

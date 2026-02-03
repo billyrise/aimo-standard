@@ -87,7 +87,7 @@ Die aktuelle Dictionary-Version ist **v0.1.0** und enthält:
 | IM | Integrationsmodus | 7 | 0 | 7 |
 | RS | Risikooberfläche | 8 | 0 | 8 |
 | OB | Ergebnis / Nutzen | 7 | 0 | 7 |
-| EV | Evidence-Typ | 15 | 0 | 15 |
+| LG | Log/Event-Typ | 15 | 0 | 15 |
 | **Gesamt** | | **91** | **0** | **91** |
 
 !!! note "Vollständige Code-Listen"

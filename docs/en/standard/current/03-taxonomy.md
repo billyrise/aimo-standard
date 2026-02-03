@@ -198,7 +198,7 @@ Categorizes the types of log/event/record evidence required or collected. **Sele
 
 ### Relationship with Evidence
 
-Each evidence document references codes from multiple dimensions to classify the AI system or use case being documented. The 8-dimension classification enables:
+Each evidence document references codes from multiple dimensions to classify the AI system or use case being documented. **EV** denotes evidence *artifact* identifiers (e.g. `evidence[].id`, `references[]`); **LG** denotes log/event *taxonomy* codes (e.g. `evidence[].codes.LG`). The 8-dimension classification enables:
 
 - **Consistent categorization** across the organization
 - **Risk-based filtering** by dimension values
@@ -224,7 +224,7 @@ LG: LG-001 (Request Record), LG-002 (Review/Approval Record)
 ## SSOT Reference
 
 !!! info "Source of Truth"
-    The authoritative definition is `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+    The authoritative definitions are `data/taxonomy/canonical.yaml` and `data/taxonomy/i18n/*.yaml`. The file `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` is **generated** from the SSOT. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
 
 ## Related Pages
 

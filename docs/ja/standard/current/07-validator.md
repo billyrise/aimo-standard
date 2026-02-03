@@ -68,7 +68,7 @@ AIMOバリデータは、Evidence Packおよび関連アーティファクトが
 すべてのコードが期待されるフォーマットに一致することを確認：
 
 ```regex
-^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 ```
 
 ### 5. スキーマバリデーション
@@ -117,7 +117,7 @@ check: |
 rule_id: code_format
 description: すべてのコードが標準フォーマットに一致する必要がある
 severity: error
-pattern: "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$"
+pattern: "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$"
 ```
 
 ### ルール：バージョンフォーマット

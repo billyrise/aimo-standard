@@ -6,7 +6,7 @@ description: Modèles et guide d'utilisation des packs de preuves AIMO. Structur
 
 Cette section définit les modèles de pack de preuves et leur utilisation. Un pack de preuves est une collection de documentation qui démontre la gouvernance et la conformité pour un système IA.
 
-## Espace de noms : types de document Evidence Pack (EP) vs Taxonomy Evidence Type (EV)
+## Espace de noms : types de document Evidence Pack (EP) vs Taxonomy Log/Event Type (LG)
 
 > **Important** : **EP-01..EP-07** identifient les *types de document* (types de fichier Evidence Pack). **LG-001, LG-002, …** dans la [Taxonomie](./03-taxonomy.md) identifient les *types de log/registre* (Enregistrement de demande, Enregistrement de revue/approbation, etc.). **EV-** réservé aux ID d'artefacts Evidence. Utiliser EP pour la structure du pack et LG pour la classification des preuves du cycle de vie.
 

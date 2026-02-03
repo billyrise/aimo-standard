@@ -54,7 +54,7 @@ Validieren, dass alle Codes im Taxonomie-Dictionary existieren:
 Prüfen, dass alle Codes dem erwarteten Format entsprechen:
 
 ```regex
-^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 ```
 
 ### 5. Schema-Validierung
@@ -103,7 +103,7 @@ check: |
 rule_id: code_format
 description: Alle Codes müssen dem Standard-Format entsprechen
 severity: error
-pattern: "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$"
+pattern: "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$"
 ```
 
 ### Regel: Versions-Format

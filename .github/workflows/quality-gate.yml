@@ -29,8 +29,8 @@ jobs:
 
       - name: i18n Quality Gates
         run: |
-          echo "=== Bidi Control Chars (Trojan Source) ==="
-          python tooling/checks/lint_bidi_control_chars.py
+          echo "=== Bidi Control Chars (Trojan Source) + Format (Cf) ==="
+          python tooling/checks/lint_bidi_control_chars.py --check-format
           echo "=== Hidden/Bidi Unicode (GitHub warning parity: Cf, non-ASCII ws, variation selectors) ==="
           python tooling/checks/lint_hidden_unicode.py
           echo "=== EN Locale Purity (no CJK in docs/en) ==="
@@ -102,6 +102,11 @@ jobs:
         run: |
           echo "=== Evidence Bundle integrity check (examples/evidence_bundle_v01_minimal) ==="
           python validator/src/validate.py examples/evidence_bundle_v01_minimal
+
+      - name: Site content policy (EV reserved, LG required)
+        run: |
+          echo "=== Site Content Policy (no EV taxonomy regression) ==="
+          python tooling/checks/check_site_content_policy.py --site-dir site
 
       - name: Verify HTML (no *_ja columns in EN pages)
         run: |
