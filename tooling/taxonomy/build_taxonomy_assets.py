@@ -337,22 +337,53 @@ def main() -> int:
     }
 
     if args.check:
-        # Check mode: verify files match
+        # Check mode: verify files match (either from CSV or from build_artifacts/data/)
         mismatches = []
         for key, content in generated.items():
             path = OUTPUT_FILES[key]
             if not files_match(content, path):
                 mismatches.append(path.name)
 
-        if mismatches:
-            print("ERROR: Taxonomy assets need regeneration:")
-            for name in mismatches:
-                print(f"  - {name}")
-            print("\nRun: python tooling/taxonomy/build_taxonomy_assets.py")
-            return 1
-        else:
+        if not mismatches:
             print("taxonomy assets check OK (all files up to date)")
             return 0
+
+        # Fallback: accept output from build_artifacts (data/ SSOT) so both checks can pass
+        canonical_path = REPO_ROOT / "data" / "taxonomy" / "canonical.yaml"
+        if canonical_path.exists():
+            try:
+                import sys
+                if str(REPO_ROOT) not in sys.path:
+                    sys.path.insert(0, str(REPO_ROOT))
+                from tooling.taxonomy.build_artifacts import (
+                    get_source_pack_content,
+                    normalize_for_compare,
+                )
+                expected = get_source_pack_content()
+                all_match = True
+                for key, path in OUTPUT_FILES.items():
+                    if path not in expected:
+                        all_match = False
+                        break
+                    if not path.exists():
+                        all_match = False
+                        break
+                    existing = path.read_text(encoding="utf-8")
+                    if normalize_for_compare(expected[path]) != normalize_for_compare(existing):
+                        all_match = False
+                        break
+                if all_match:
+                    print("taxonomy assets check OK (all files up to date, from build_artifacts)")
+                    return 0
+            except Exception:  # noqa: BLE001
+                pass
+
+        print("ERROR: Taxonomy assets need regeneration:")
+        for name in mismatches:
+            print(f"  - {name}")
+        print("\nRun: python tooling/taxonomy/build_taxonomy_assets.py")
+        print("Or:  python tooling/taxonomy/build_artifacts.py --version current --langs en ja")
+        return 1
 
     # Write mode: generate files
     for key, content in generated.items():

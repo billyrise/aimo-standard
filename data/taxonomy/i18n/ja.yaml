@@ -1,40 +1,42 @@
-# AIMO Taxonomy - 日本語 ラベルと定義 (SSOT)
-# ==========================================
-# This file is the SINGLE SOURCE OF TRUTH for Japanese translations.
-# Edit this file directly to add/update Japanese labels and definitions.
+# AIMO Taxonomy - 日本語 Labels and Definitions
+# Generated from: source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv
+# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_i18n_taxonomy.py
 #
-# Structure is defined in: data/taxonomy/canonical.yaml
-# Language code: ja (BCP47)
-#
-# After editing, regenerate derived files:
-#   python tooling/taxonomy/build_artifacts.py --version current --langs en ja
+# This file provides translations for the canonical taxonomy structure.
+# Structure is defined in data/taxonomy/canonical.yaml
 
 language: "ja"
 language_name: "日本語"
-generated_date: "2026-01-31"
+generated_date: "2026-02-03"
 
 dimensions:
-  FS:
-    name: "機能スコープ"
+  CH:
+    name: "チャネル"
     codes:
-      FS-001:
-        label: "社内生産性"
-        definition: "社内業務の生産性向上を目的とした利用。"
-      FS-002:
-        label: "顧客向け機能"
-        definition: "顧客に提供する製品・サービス機能に組み込まれたAI。"
-      FS-003:
-        label: "開発支援"
-        definition: "ソフトウェア開発・エンジニアリング作業を支援するAI利用。"
-      FS-004:
-        label: "IT運用"
-        definition: "IT運用・システム管理（監視、インシデント対応等）でのAI利用。"
-      FS-005:
-        label: "セキュリティ運用"
-        definition: "セキュリティ監視・対応（SOC、検知、トリアージ等）でのAI利用。"
-      FS-006:
-        label: "ガバナンス/コンプライアンス"
-        definition: "ガバナンス/コンプライアンス業務（規程、監査証跡等）を支援するAI利用。"
+      CH-001:
+        label: "Web UI"
+        definition: "WebブラウザUI経由の利用。"
+      CH-002:
+        label: "API"
+        definition: "API連携による利用。"
+      CH-003:
+        label: "IDEプラグイン"
+        definition: "IDE/エディタプラグイン経由の利用。"
+      CH-004:
+        label: "チャット連携"
+        definition: "Slack/Teams等のチャット連携経由の利用。"
+      CH-005:
+        label: "デスクトップアプリ"
+        definition: "ネイティブデスクトップアプリ経由の利用。"
+      CH-006:
+        label: "モバイルアプリ"
+        definition: "ネイティブモバイルアプリ経由の利用。"
+      CH-007:
+        label: "メール"
+        definition: "メール経由またはメール起点の自動化で利用。"
+      CH-008:
+        label: "CLI"
+        definition: "CLI経由の利用。"
   DT:
     name: "データ種別"
     codes:
@@ -68,108 +70,6 @@ dimensions:
       DT-010:
         label: "セキュリティテレメトリ"
         definition: "アラート・検知等のセキュリティテレメトリ。"
-  CH:
-    name: "チャネル"
-    codes:
-      CH-001:
-        label: "Web UI"
-        definition: "WebブラウザUI経由の利用。"
-      CH-002:
-        label: "API"
-        definition: "API連携による利用。"
-      CH-003:
-        label: "IDEプラグイン"
-        definition: "IDE/エディタプラグイン経由の利用。"
-      CH-004:
-        label: "チャット連携"
-        definition: "Slack/Teams等のチャット連携経由の利用。"
-      CH-005:
-        label: "デスクトップアプリ"
-        definition: "ネイティブデスクトップアプリ経由の利用。"
-      CH-006:
-        label: "モバイルアプリ"
-        definition: "ネイティブモバイルアプリ経由の利用。"
-      CH-007:
-        label: "メール"
-        definition: "メール経由またはメール起点の自動化で利用。"
-      CH-008:
-        label: "CLI"
-        definition: "CLI経由の利用。"
-  IM:
-    name: "統合形態"
-    codes:
-      IM-001:
-        label: "単体利用"
-        definition: "企業システム統合なしの単体利用。"
-      IM-002:
-        label: "SaaS連携"
-        definition: "SaaSアプリがAI機能を統合して提供。"
-      IM-003:
-        label: "社内アプリ組込み"
-        definition: "社内業務アプリにAIを組み込む。"
-      IM-004:
-        label: "ワークフロー/RPA"
-        definition: "ワークフロー自動化/RPA内でAIを呼び出す。"
-      IM-005:
-        label: "オンプレ/プライベート"
-        definition: "オンプレまたは専用環境でホストするAI。"
-      IM-006:
-        label: "マネージド"
-        definition: "企業統制を伴うマネージドサービスとして利用。"
-      IM-007:
-        label: "シャドー/未管理"
-        definition: "承認された統制外での利用。"
-  RS:
-    name: "リスク面"
-    codes:
-      RS-001:
-        label: "情報漏えい"
-        definition: "意図しないデータ開示のリスク。"
-      RS-002:
-        label: "悪用/攻撃"
-        definition: "悪用（攻撃支援等）に利用されるリスク。"
-      RS-003:
-        label: "法令/規程違反"
-        definition: "法令・規程・契約の違反リスク。"
-      RS-004:
-        label: "知財侵害"
-        definition: "著作権・特許・営業秘密等の侵害リスク。"
-      RS-005:
-        label: "モデル誤用"
-        definition: "モデルの不適切利用・過信によるリスク。"
-      RS-006:
-        label: "偏り/公平性"
-        definition: "不公平・偏りのある結果を生むリスク。"
-      RS-007:
-        label: "安全性"
-        definition: "有害コンテンツや危険な推奨のリスク。"
-      RS-008:
-        label: "第三者リスク"
-        definition: "ベンダー/下請け/モデル提供者に起因するリスク。"
-  OB:
-    name: "成果"
-    codes:
-      OB-001:
-        label: "効率化"
-        definition: "時間・コスト効率の改善。"
-      OB-002:
-        label: "品質向上"
-        definition: "成果物の品質・精度向上。"
-      OB-003:
-        label: "売上貢献"
-        definition: "売上成長への寄与。"
-      OB-004:
-        label: "リスク低減"
-        definition: "運用・セキュリティ・コンプライアンスリスクの低減。"
-      OB-005:
-        label: "新規性/革新"
-        definition: "新たな能力・イノベーションを実現。"
-      OB-006:
-        label: "顧客満足"
-        definition: "顧客満足の向上。"
-      OB-007:
-        label: "従業員体験"
-        definition: "従業員体験の向上。"
   EV:
     name: "証跡種別"
     codes:
@@ -218,6 +118,102 @@ dimensions:
       EV-015:
         label: "宣誓/サインオフ"
         definition: "正式な宣誓/サインオフの証跡。"
+  FS:
+    name: "機能スコープ"
+    codes:
+      FS-001:
+        label: "社内生産性"
+        definition: "社内業務の生産性向上を目的とした利用。"
+      FS-002:
+        label: "顧客向け機能"
+        definition: "顧客に提供する製品・サービス機能に組み込まれたAI。"
+      FS-003:
+        label: "開発支援"
+        definition: "ソフトウェア開発・エンジニアリング作業を支援するAI利用。"
+      FS-004:
+        label: "IT運用"
+        definition: "IT運用・システム管理（監視、インシデント対応等）でのAI利用。"
+      FS-005:
+        label: "セキュリティ運用"
+        definition: "セキュリティ監視・対応（SOC、検知、トリアージ等）でのAI利用。"
+      FS-006:
+        label: "ガバナンス/コンプライアンス"
+        definition: "ガバナンス/コンプライアンス業務（規程、監査証跡等）を支援するAI利用。"
+  IM:
+    name: "統合形態"
+    codes:
+      IM-001:
+        label: "単体利用"
+        definition: "企業システム統合なしの単体利用。"
+      IM-002:
+        label: "SaaS連携"
+        definition: "SaaSアプリがAI機能を統合して提供。"
+      IM-003:
+        label: "社内アプリ組込み"
+        definition: "社内業務アプリにAIを組み込む。"
+      IM-004:
+        label: "ワークフロー/RPA"
+        definition: "ワークフロー自動化/RPA内でAIを呼び出す。"
+      IM-005:
+        label: "オンプレ/プライベート"
+        definition: "オンプレまたは専用環境でホストするAI。"
+      IM-006:
+        label: "マネージド"
+        definition: "企業統制を伴うマネージドサービスとして利用。"
+      IM-007:
+        label: "シャドー/未管理"
+        definition: "承認された統制外での利用。"
+  OB:
+    name: "成果"
+    codes:
+      OB-001:
+        label: "効率化"
+        definition: "時間・コスト効率の改善。"
+      OB-002:
+        label: "品質向上"
+        definition: "成果物の品質・精度向上。"
+      OB-003:
+        label: "売上貢献"
+        definition: "売上成長への寄与。"
+      OB-004:
+        label: "リスク低減"
+        definition: "運用・セキュリティ・コンプライアンスリスクの低減。"
+      OB-005:
+        label: "新規性/革新"
+        definition: "新たな能力・イノベーションを実現。"
+      OB-006:
+        label: "顧客満足"
+        definition: "顧客満足の向上。"
+      OB-007:
+        label: "従業員体験"
+        definition: "従業員体験の向上。"
+  RS:
+    name: "リスク面"
+    codes:
+      RS-001:
+        label: "情報漏えい"
+        definition: "意図しないデータ開示のリスク。"
+      RS-002:
+        label: "悪用/攻撃"
+        definition: "悪用（攻撃支援等）に利用されるリスク。"
+      RS-003:
+        label: "法令/規程違反"
+        definition: "法令・規程・契約の違反リスク。"
+      RS-004:
+        label: "知財侵害"
+        definition: "著作権・特許・営業秘密等の侵害リスク。"
+      RS-005:
+        label: "モデル誤用"
+        definition: "モデルの不適切利用・過信によるリスク。"
+      RS-006:
+        label: "偏り/公平性"
+        definition: "不公平・偏りのある結果を生むリスク。"
+      RS-007:
+        label: "安全性"
+        definition: "有害コンテンツや危険な推奨のリスク。"
+      RS-008:
+        label: "第三者リスク"
+        definition: "ベンダー/下請け/モデル提供者に起因するリスク。"
   UC:
     name: "ユースケース分類"
     codes:

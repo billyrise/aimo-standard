@@ -3,40 +3,50 @@
 # DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_artifacts.py
 
 version: "0.1.0"
-generated_date: "2026-02-01"
+generated_date: "2026-02-03"
 
 dimensions:
-  - id: FS
-    name: "機能スコープ"
+  - id: CH
+    name: "チャネル"
     codes:
-      - code: FS-001
-        label: "社内生産性"
-        definition: "社内業務の生産性向上を目的とした利用。"
+      - code: CH-001
+        label: "Web UI"
+        definition: "WebブラウザUI経由の利用。"
         status: active
         introduced_in: "0.1.0"
-      - code: FS-002
-        label: "顧客向け機能"
-        definition: "顧客に提供する製品・サービス機能に組み込まれたAI。"
+      - code: CH-002
+        label: "API"
+        definition: "API連携による利用。"
         status: active
         introduced_in: "0.1.0"
-      - code: FS-003
-        label: "開発支援"
-        definition: "ソフトウェア開発・エンジニアリング作業を支援するAI利用。"
+      - code: CH-003
+        label: "IDEプラグイン"
+        definition: "IDE/エディタプラグイン経由の利用。"
         status: active
         introduced_in: "0.1.0"
-      - code: FS-004
-        label: "IT運用"
-        definition: "IT運用・システム管理（監視、インシデント対応等）でのAI利用。"
+      - code: CH-004
+        label: "チャット連携"
+        definition: "Slack/Teams等のチャット連携経由の利用。"
         status: active
         introduced_in: "0.1.0"
-      - code: FS-005
-        label: "セキュリティ運用"
-        definition: "セキュリティ監視・対応（SOC、検知、トリアージ等）でのAI利用。"
+      - code: CH-005
+        label: "デスクトップアプリ"
+        definition: "ネイティブデスクトップアプリ経由の利用。"
         status: active
         introduced_in: "0.1.0"
-      - code: FS-006
-        label: "ガバナンス/コンプライアンス"
-        definition: "ガバナンス/コンプライアンス業務（規程、監査証跡等）を支援するAI利用。"
+      - code: CH-006
+        label: "モバイルアプリ"
+        definition: "ネイティブモバイルアプリ経由の利用。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: CH-007
+        label: "メール"
+        definition: "メール経由またはメール起点の自動化で利用。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: CH-008
+        label: "CLI"
+        definition: "CLI経由の利用。"
         status: active
         introduced_in: "0.1.0"
   - id: DT
@@ -90,168 +100,6 @@ dimensions:
       - code: DT-010
         label: "セキュリティテレメトリ"
         definition: "アラート・検知等のセキュリティテレメトリ。"
-        status: active
-        introduced_in: "0.1.0"
-  - id: CH
-    name: "チャネル"
-    codes:
-      - code: CH-001
-        label: "Web UI"
-        definition: "WebブラウザUI経由の利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-002
-        label: "API"
-        definition: "API連携による利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-003
-        label: "IDEプラグイン"
-        definition: "IDE/エディタプラグイン経由の利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-004
-        label: "チャット連携"
-        definition: "Slack/Teams等のチャット連携経由の利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-005
-        label: "デスクトップアプリ"
-        definition: "ネイティブデスクトップアプリ経由の利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-006
-        label: "モバイルアプリ"
-        definition: "ネイティブモバイルアプリ経由の利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-007
-        label: "メール"
-        definition: "メール経由またはメール起点の自動化で利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-008
-        label: "CLI"
-        definition: "CLI経由の利用。"
-        status: active
-        introduced_in: "0.1.0"
-  - id: IM
-    name: "統合形態"
-    codes:
-      - code: IM-001
-        label: "単体利用"
-        definition: "企業システム統合なしの単体利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-002
-        label: "SaaS連携"
-        definition: "SaaSアプリがAI機能を統合して提供。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-003
-        label: "社内アプリ組込み"
-        definition: "社内業務アプリにAIを組み込む。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-004
-        label: "ワークフロー/RPA"
-        definition: "ワークフロー自動化/RPA内でAIを呼び出す。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-005
-        label: "オンプレ/プライベート"
-        definition: "オンプレまたは専用環境でホストするAI。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-006
-        label: "マネージド"
-        definition: "企業統制を伴うマネージドサービスとして利用。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-007
-        label: "シャドー/未管理"
-        definition: "承認された統制外での利用。"
-        status: active
-        introduced_in: "0.1.0"
-  - id: RS
-    name: "リスク面"
-    codes:
-      - code: RS-001
-        label: "情報漏えい"
-        definition: "意図しないデータ開示のリスク。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-002
-        label: "悪用/攻撃"
-        definition: "悪用（攻撃支援等）に利用されるリスク。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-003
-        label: "法令/規程違反"
-        definition: "法令・規程・契約の違反リスク。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-004
-        label: "知財侵害"
-        definition: "著作権・特許・営業秘密等の侵害リスク。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-005
-        label: "モデル誤用"
-        definition: "モデルの不適切利用・過信によるリスク。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-006
-        label: "偏り/公平性"
-        definition: "不公平・偏りのある結果を生むリスク。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-007
-        label: "安全性"
-        definition: "有害コンテンツや危険な推奨のリスク。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-008
-        label: "第三者リスク"
-        definition: "ベンダー/下請け/モデル提供者に起因するリスク。"
-        status: active
-        introduced_in: "0.1.0"
-  - id: OB
-    name: "成果"
-    codes:
-      - code: OB-001
-        label: "効率化"
-        definition: "時間・コスト効率の改善。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-002
-        label: "品質向上"
-        definition: "成果物の品質・精度向上。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-003
-        label: "売上貢献"
-        definition: "売上成長への寄与。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-004
-        label: "リスク低減"
-        definition: "運用・セキュリティ・コンプライアンスリスクの低減。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-005
-        label: "新規性/革新"
-        definition: "新たな能力・イノベーションを実現。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-006
-        label: "顧客満足"
-        definition: "顧客満足の向上。"
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-007
-        label: "従業員体験"
-        definition: "従業員体験の向上。"
         status: active
         introduced_in: "0.1.0"
   - id: EV
@@ -330,6 +178,158 @@ dimensions:
       - code: EV-015
         label: "宣誓/サインオフ"
         definition: "正式な宣誓/サインオフの証跡。"
+        status: active
+        introduced_in: "0.1.0"
+  - id: FS
+    name: "機能スコープ"
+    codes:
+      - code: FS-001
+        label: "社内生産性"
+        definition: "社内業務の生産性向上を目的とした利用。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-002
+        label: "顧客向け機能"
+        definition: "顧客に提供する製品・サービス機能に組み込まれたAI。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-003
+        label: "開発支援"
+        definition: "ソフトウェア開発・エンジニアリング作業を支援するAI利用。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-004
+        label: "IT運用"
+        definition: "IT運用・システム管理（監視、インシデント対応等）でのAI利用。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-005
+        label: "セキュリティ運用"
+        definition: "セキュリティ監視・対応（SOC、検知、トリアージ等）でのAI利用。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-006
+        label: "ガバナンス/コンプライアンス"
+        definition: "ガバナンス/コンプライアンス業務（規程、監査証跡等）を支援するAI利用。"
+        status: active
+        introduced_in: "0.1.0"
+  - id: IM
+    name: "統合形態"
+    codes:
+      - code: IM-001
+        label: "単体利用"
+        definition: "企業システム統合なしの単体利用。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-002
+        label: "SaaS連携"
+        definition: "SaaSアプリがAI機能を統合して提供。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-003
+        label: "社内アプリ組込み"
+        definition: "社内業務アプリにAIを組み込む。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-004
+        label: "ワークフロー/RPA"
+        definition: "ワークフロー自動化/RPA内でAIを呼び出す。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-005
+        label: "オンプレ/プライベート"
+        definition: "オンプレまたは専用環境でホストするAI。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-006
+        label: "マネージド"
+        definition: "企業統制を伴うマネージドサービスとして利用。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-007
+        label: "シャドー/未管理"
+        definition: "承認された統制外での利用。"
+        status: active
+        introduced_in: "0.1.0"
+  - id: OB
+    name: "成果"
+    codes:
+      - code: OB-001
+        label: "効率化"
+        definition: "時間・コスト効率の改善。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-002
+        label: "品質向上"
+        definition: "成果物の品質・精度向上。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-003
+        label: "売上貢献"
+        definition: "売上成長への寄与。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-004
+        label: "リスク低減"
+        definition: "運用・セキュリティ・コンプライアンスリスクの低減。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-005
+        label: "新規性/革新"
+        definition: "新たな能力・イノベーションを実現。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-006
+        label: "顧客満足"
+        definition: "顧客満足の向上。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-007
+        label: "従業員体験"
+        definition: "従業員体験の向上。"
+        status: active
+        introduced_in: "0.1.0"
+  - id: RS
+    name: "リスク面"
+    codes:
+      - code: RS-001
+        label: "情報漏えい"
+        definition: "意図しないデータ開示のリスク。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-002
+        label: "悪用/攻撃"
+        definition: "悪用（攻撃支援等）に利用されるリスク。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-003
+        label: "法令/規程違反"
+        definition: "法令・規程・契約の違反リスク。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-004
+        label: "知財侵害"
+        definition: "著作権・特許・営業秘密等の侵害リスク。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-005
+        label: "モデル誤用"
+        definition: "モデルの不適切利用・過信によるリスク。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-006
+        label: "偏り/公平性"
+        definition: "不公平・偏りのある結果を生むリスク。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-007
+        label: "安全性"
+        definition: "有害コンテンツや危険な推奨のリスク。"
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-008
+        label: "第三者リスク"
+        definition: "ベンダー/下請け/モデル提供者に起因するリスク。"
         status: active
         introduced_in: "0.1.0"
   - id: UC

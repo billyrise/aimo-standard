@@ -439,6 +439,41 @@ def generate_taxonomy_json(canonical: dict, en_i18n: dict, ja_i18n: dict) -> str
     return json.dumps(dictionary, ensure_ascii=False, indent=2) + "\n"
 
 
+def get_source_pack_content(langs: Optional[list[str]] = None) -> dict[Path, str]:
+    """
+    Load SSOT and return generated content for source_pack/03_taxonomy files only.
+    Used by build_taxonomy_assets --check to accept build_artifacts output.
+    """
+    if langs is None:
+        langs = ["en", "ja"]
+    canonical = load_canonical()
+    i18n_packs = {}
+    for lang in langs:
+        i18n = load_i18n(lang)
+        if i18n is None:
+            raise FileNotFoundError(f"Language pack not found: {I18N_DIR / f'{lang}.yaml'}")
+        i18n_packs[lang] = i18n
+    en_i18n = i18n_packs.get("en")
+    ja_i18n = i18n_packs.get("ja", en_i18n)
+    out: dict[Path, str] = {}
+    for lang in ["en", "ja"]:
+        if lang in i18n_packs:
+            out[SOURCE_PACK_DIR / f"taxonomy_{lang}.yaml"] = generate_taxonomy_yaml(
+                canonical, i18n_packs[lang], lang
+            )
+    if en_i18n and ja_i18n:
+        out[SOURCE_PACK_DIR / "code_system.csv"] = generate_code_system_csv(
+            canonical, en_i18n, ja_i18n
+        )
+        out[SOURCE_PACK_DIR / "dimensions_en_ja.md"] = generate_dimensions_md(
+            canonical, en_i18n, ja_i18n
+        )
+        out[SOURCE_PACK_DIR / "taxonomy_dictionary.json"] = generate_taxonomy_json(
+            canonical, en_i18n, ja_i18n
+        )
+    return out
+
+
 def write_file(path: Path, content: str) -> None:
     """Write file, creating directories as needed."""
     path.parent.mkdir(parents=True, exist_ok=True)
