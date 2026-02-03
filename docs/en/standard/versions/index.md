@@ -22,9 +22,14 @@ Official releases are frozen snapshots published with auditor-ready PDFs and mac
 !!! note "Data Source"
     This version table is synchronized with [GitHub Releases](https://github.com/billyrise/aimo-standard/releases). Each release tag (`vX.Y.Z`) corresponds to a frozen snapshot of the specification.
 
-## Single source of truth (SSOT) for "latest"
+## /latest vs versioned URLs — avoid wrong citations
 
-The **authoritative definition of "latest"** is the [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) **latest** tag (`releases/latest`). The site path `/latest/` is a redirect that always points to that release. There is no separate "site latest" — the release workflow deploys the tagged version and sets it as the `latest` alias in one step.
+| URL | Use | Audit / evidence |
+|-----|-----|------------------|
+| **`/X.Y.Z/`** (e.g. `/0.1.0/`) | Frozen snapshot; never changes. | **MUST** use for audit citations and reproducible evidence. |
+| **`/latest/`** | Redirect to the current release; updates when a new tag is released. | Reference only; **not recommended** for audit evidence (target can change). |
+
+The **authoritative definition of "latest"** is the [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) **latest** tag. The site path `/latest/` is a redirect that points to that release. Only the **release workflow** (triggered by a tag push) updates `/latest/`; see [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md).
 
 | Source | Role |
 |--------|------|

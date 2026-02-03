@@ -22,9 +22,14 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 !!! note "データソース"
     このバージョンテーブルは [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) と同期しています。各リリースタグ（`vX.Y.Z`）は仕様の固定スナップショットに対応します。
 
-## 「latest」の単一の真実の情報源（SSOT）
+## /latest とバージョン付き URL — 誤引用を防ぐ
 
-**「latest」の正式な定義**は [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) の **latest** タグ（`releases/latest`）です。サイトの `/latest/` は常にそのリリースへリダイレクトします。「サイト側の latest」は存在せず、リリースワークフローがタグ付きバージョンをデプロイし、そのバージョンを `latest` エイリアスとして一度に設定します。
+| URL | 用途 | 監査・証跡 |
+|-----|------|------------|
+| **`/X.Y.Z/`**（例：`/0.1.0/`） | 固定スナップショット；変更されない。 | 監査引用・再現可能な証跡には**必須**で使用。 |
+| **`/latest/`** | 現行リリースへのリダイレクト；新タグリリース時に更新。 | 参照用；監査証跡としては**非推奨**（指し先が変わるため）。 |
+
+**「latest」の正式な定義**は [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) の **latest** タグです。サイトの `/latest/` はそのリリースへリダイレクトします。**リリースワークフロー**（タグ push で起動）のみが `/latest/` を更新します。詳細は [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照してください。
 
 | ソース | 役割 |
 |--------|------|

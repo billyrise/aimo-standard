@@ -67,9 +67,15 @@ The `release.yml` workflow handles this.
 ### 3. Non-Negotiable Rules
 
 1. **Never rewrite a released version.** If `/0.1.6/` needs fixes, release `0.1.7`.
-2. **`latest` is an alias, not a version.** Only the release workflow updates it.
+2. **`latest` is an alias, not a version.** Only the release workflow (tag push) updates it; nothing else must change `/latest/`.
 3. **`dev` is explicitly unreleased.** Must have noindex; not for audit citations.
 4. **alias_type must be `redirect`** (not `copy`) to prevent content drift.
+
+### 4. Audit citation and /latest
+
+- **Audit citations MUST use a versioned URL** (`https://standard.aimoaas.com/X.Y.Z/...`). `/latest/` is for convenience and reference only; it is **not recommended for audit evidence** because the target can change when a new release is published.
+- **Updates to `/latest/`** happen only when a **tag** is pushed and the `release.yml` workflow runs (`mike deploy --push --update-aliases`). There is no other mechanism that updates the public `/latest/` alias.
+- **Drift detection**: The workflow `monitor-latest-drift.yml` runs daily (09:00 JST) and compares the public site’s `/latest/` redirect target to the latest `v*` tag. If they differ, the job fails so the team can fix the deployment (e.g. by re-running the release workflow or repairing the alias).
 
 ---
 
@@ -105,9 +111,11 @@ If a post-release clarification is needed without changing normative meaning:
 
 | Use Case | Recommended URL |
 |----------|-----------------|
-| Formal audit (requires immutability) | `https://standard.aimoaas.com/X.Y.Z/...` |
-| General reference (acceptable) | `https://standard.aimoaas.com/latest/...` |
+| **Formal audit / evidence (MUST)** | `https://standard.aimoaas.com/X.Y.Z/...` — use a fixed version; do not rely on `/latest/` for audit evidence. |
+| General reference (acceptable) | `https://standard.aimoaas.com/latest/...` — convenient but not pinned; avoid for citations that must be reproducible. |
 | **Never cite** | `https://standard.aimoaas.com/dev/...` |
+
+See the [Versions](https://standard.aimoaas.com/latest/standard/versions/) page for the difference between versioned URLs and `/latest/`.
 
 ### What if `/latest/` differs from the latest release?
 
