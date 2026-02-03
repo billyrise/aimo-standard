@@ -9,7 +9,7 @@ This directory contains legacy English-Japanese mixed CSV files for backward com
 
 ## Important Notice
 
-⚠️ **These files are maintained for backward compatibility only.**
+⚠ **These files are maintained for backward compatibility only.**
 
 - **New languages will NOT be added** to these files
 - **New integrations should use** `artifacts/taxonomy/{version}/{lang}/taxonomy_dictionary.csv`
