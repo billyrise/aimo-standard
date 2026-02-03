@@ -75,11 +75,11 @@
           "items": { "type": "string", "pattern": "^OB-\\d{3}$" },
           "description": "Outcome/Benefit (optional)"
         },
-        "EV": {
+        "LG": {
           "type": "array",
-          "items": { "type": "string", "pattern": "^EV-\\d{3}$" },
+          "items": { "type": "string", "pattern": "^LG-\\d{3}$" },
           "minItems": 1,
-          "description": "Evidence Type (1 or more required)"
+          "description": "Log/Event Type (Taxonomy) (1 or more required). EV- prefix reserved for Evidence artifact IDs only."
         }
       },
       "additionalProperties": false

@@ -102,84 +102,6 @@ dimensions:
         definition: "Security telemetry such as alerts and detections."
         status: active
         introduced_in: "0.1.0"
-  - id: EV
-    name: "Evidence Type"
-    codes:
-      - code: EV-001
-        label: "Request Record"
-        definition: "Evidence that an AI use/service was requested and described."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-002
-        label: "Review/Approval Record"
-        definition: "Evidence that a review/approval was performed."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-003
-        label: "Exception Record"
-        definition: "Evidence that an exception was granted and tracked."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-004
-        label: "Renewal/Re-evaluation Record"
-        definition: "Evidence that renewal or re-evaluation occurred."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-005
-        label: "Change Log Entry"
-        definition: "Evidence of changes and their approvals."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-006
-        label: "Integrity Proof"
-        definition: "Evidence of integrity (hash, signature, WORM)."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-007
-        label: "Access Log"
-        definition: "Evidence of access control and access history."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-008
-        label: "Model/Service Inventory"
-        definition: "Inventory record of models/services used."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-009
-        label: "Risk Assessment"
-        definition: "Documented risk assessment for the use/service."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-010
-        label: "Control Mapping"
-        definition: "Control mapping evidence to external frameworks."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-011
-        label: "Training/Guidance"
-        definition: "Evidence of training or guidance provided to users."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-012
-        label: "Monitoring Evidence"
-        definition: "Evidence of monitoring and ongoing oversight."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-013
-        label: "Incident Record"
-        definition: "Evidence of incident handling related to AI use."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-014
-        label: "Third-party Assessment"
-        definition: "Evidence of vendor or third-party assessment."
-        status: active
-        introduced_in: "0.1.0"
-      - code: EV-015
-        label: "Attestation/Sign-off"
-        definition: "Formal attestation or sign-off record."
-        status: active
-        introduced_in: "0.1.0"
   - id: FS
     name: "Functional Scope"
     codes:
@@ -249,6 +171,84 @@ dimensions:
       - code: IM-007
         label: "Shadow / Unmanaged"
         definition: "Use outside of approved governance controls."
+        status: active
+        introduced_in: "0.1.0"
+  - id: LG
+    name: "Log/Event Type"
+    codes:
+      - code: LG-001
+        label: "Request Record"
+        definition: "Evidence that an AI use/service was requested and described."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-002
+        label: "Review/Approval Record"
+        definition: "Evidence that a review/approval was performed."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-003
+        label: "Exception Record"
+        definition: "Evidence that an exception was granted and tracked."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-004
+        label: "Renewal/Re-evaluation Record"
+        definition: "Evidence that renewal or re-evaluation occurred."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-005
+        label: "Change Log Entry"
+        definition: "Evidence of changes and their approvals."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-006
+        label: "Integrity Proof"
+        definition: "Evidence of integrity (hash, signature, WORM)."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-007
+        label: "Access Log"
+        definition: "Evidence of access control and access history."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-008
+        label: "Model/Service Inventory"
+        definition: "Inventory record of models/services used."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-009
+        label: "Risk Assessment"
+        definition: "Documented risk assessment for the use/service."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-010
+        label: "Control Mapping"
+        definition: "Control mapping evidence to external frameworks."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-011
+        label: "Training/Guidance"
+        definition: "Evidence of training or guidance provided to users."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-012
+        label: "Monitoring Evidence"
+        definition: "Evidence of monitoring and ongoing oversight."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-013
+        label: "Incident Record"
+        definition: "Evidence of incident handling related to AI use."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-014
+        label: "Third-party Assessment"
+        definition: "Evidence of vendor or third-party assessment."
+        status: active
+        introduced_in: "0.1.0"
+      - code: LG-015
+        label: "Attestation/Sign-off"
+        definition: "Formal attestation or sign-off record."
         status: active
         introduced_in: "0.1.0"
   - id: OB

@@ -12,7 +12,7 @@
     "IM": ["IM-002"],
     "RS": ["RS-001"],
     "OB": ["OB-001"],
-    "EV": ["EV-001"]
+    "LG": ["LG-001"]
   },
   "tags": ["copilot", "productivity", "internal"]
 }

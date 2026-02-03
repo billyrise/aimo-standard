@@ -69,52 +69,52 @@ dimensions:
       DT-010:
         label: ""  # English: Security Telemetry
         definition: ""
-  EV:
-    name: ""  # English: Evidence Type
+  LG:
+    name: ""  # English: Log/Event Type
     codes:
-      EV-001:
+      LG-001:
         label: ""  # English: Request Record
         definition: ""
-      EV-002:
+      LG-002:
         label: ""  # English: Review/Approval Record
         definition: ""
-      EV-003:
+      LG-003:
         label: ""  # English: Exception Record
         definition: ""
-      EV-004:
+      LG-004:
         label: ""  # English: Renewal/Re-evaluation Record
         definition: ""
-      EV-005:
+      LG-005:
         label: ""  # English: Change Log Entry
         definition: ""
-      EV-006:
+      LG-006:
         label: ""  # English: Integrity Proof
         definition: ""
-      EV-007:
+      LG-007:
         label: ""  # English: Access Log
         definition: ""
-      EV-008:
+      LG-008:
         label: ""  # English: Model/Service Inventory
         definition: ""
-      EV-009:
+      LG-009:
         label: ""  # English: Risk Assessment
         definition: ""
-      EV-010:
+      LG-010:
         label: ""  # English: Control Mapping
         definition: ""
-      EV-011:
+      LG-011:
         label: ""  # English: Training/Guidance
         definition: ""
-      EV-012:
+      LG-012:
         label: ""  # English: Monitoring Evidence
         definition: ""
-      EV-013:
+      LG-013:
         label: ""  # English: Incident Record
         definition: ""
-      EV-014:
+      LG-014:
         label: ""  # English: Third-party Assessment
         definition: ""
-      EV-015:
+      LG-015:
         label: ""  # English: Attestation/Sign-off
         definition: ""
   FS:

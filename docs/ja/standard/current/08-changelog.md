@@ -86,7 +86,7 @@ v1.0.0: FS-007 削除 (status: removed)
 
 #### 変更
 
-- **Evidence Pack ドキュメント種別（EP 名前空間）：** Evidence Pack のファイル種別は **EP-01..EP-07**（ドキュメント種別）を使用。Taxonomy の **EV-001, EV-002, …** はイベント／証跡種別（申請記録、審査/承認記録など）のまま。[Evidence Pack テンプレート](./06-ev-template.md) を参照。スキーマ：`evidence_files[].file_id` のパターンは `^EP-\\d{2}$`。`ev_type` は任意。
+- **Evidence Pack ドキュメント種別（EP 名前空間）：** Evidence Pack のファイル種別は **EP-01..EP-07**（ドキュメント種別）を使用。Taxonomy の **LG-001, LG-002, …** はログ/記録種別（申請記録、審査/承認記録など）。**EV-** は Evidence 成果物ID 専用。[Evidence Pack テンプレート](./06-ev-template.md) および [IDポリシー / 名前空間](./04b-id-policy-namespace.md) を参照。スキーマ：`evidence_files[].file_id` のパターンは `^EP-\\d{2}$`。`ev_type` は **LG-xxx** を使用。
 - **規範的関係：** [Evidence Bundle](../../artifacts/evidence-bundle.md) に以下を規範として明記。EV レコード（JSON）は索引／台帳。Evidence Pack ファイルはペイロード。EV レコードは evidence_file_ids（例：EP-01）および／またはハッシュでペイロードを参照することを SHOULD。最小提出セット = EV JSON + Dictionary + Summary + Change Log + Evidence Pack。
 - **/dev 誤引用防止：** 開発プレビューページに赤帯バナーを表示。「Development Preview — Not for audit citation. Use /latest/ or a versioned URL.」/dev/ ページの canonical は /latest/ を指す。noindex は従来どおり。
 
@@ -107,7 +107,7 @@ v1.0.0: FS-007 削除 (status: removed)
 | IM | IM-001〜IM-005 | 統合形態 |
 | RS | RS-001〜RS-005 | リスク面 |
 | OB | OB-001〜OB-005 | 成果 |
-| EV | EV-001〜EV-007 | 証跡種別 |
+| LG | LG-001〜LG-015 | ログ/記録種別 |
 
 **スキーマ**
 

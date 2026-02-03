@@ -6,9 +6,9 @@ description: AIMO Evidence Pack templates and usage guide. Structure for documen
 
 This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.
 
-## Namespace: Evidence Pack document types (EP) vs Taxonomy Evidence Type (EV)
+## Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)
 
-> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **EV-001, EV-002, …** in the [Taxonomy](./03-taxonomy.md) identify *event/evidence types* (Request Record, Review/Approval, Exception, etc.). Codes must not be mixed: use EP for pack structure and EV for lifecycle evidence classification.
+> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **LG-001, LG-002, …** in the [Taxonomy](./03-taxonomy.md) identify *log/event types* (Request Record, Review/Approval, Exception, etc.). **EV-** is reserved for [Evidence artifact IDs](./04b-id-policy-namespace.md) only. Use EP for pack structure and LG for lifecycle log/event classification.
 
 ## Key Principle: Index and Diff Management
 
@@ -22,7 +22,7 @@ An Evidence Pack serves as an index linking AI systems to their governance artif
 
 ## MVP Evidence Set (EP-01 to EP-07)
 
-The following seven **Evidence Pack document types** (EP) form the **minimum viable set** for demonstrating AI governance. Each is a document template; taxonomy **EV** codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in `codes.EV` to classify *event* evidence.
+The following seven **Evidence Pack document types** (EP) form the **minimum viable set** for demonstrating AI governance. Each is a document template; taxonomy **LG** codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in `codes.LG` to classify *log/event* evidence.
 
 | ID | Document Type | Purpose |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Each Evidence Pack MUST include a manifest file containing:
 
 ### AIMO Codes (8 Dimensions)
 
-Each Evidence Pack MUST include codes from all 8 dimensions. The **EV** dimension lists *taxonomy* Evidence Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07).
+Each Evidence Pack MUST include codes from all 8 dimensions. The **LG** dimension lists *taxonomy* Log/Event Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07). See [ID Policy / Namespace](./04b-id-policy-namespace.md).
 
 ```json
 {
@@ -63,14 +63,14 @@ Each Evidence Pack MUST include codes from all 8 dimensions. The **EV** dimensio
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
+    "LG": ["LG-001", "LG-002", "LG-008", "LG-009"]
   }
 }
 ```
 
 ### Evidence Files List
 
-Each entry identifies a document in the pack by **file_id** (EP-01..EP-07). Optional **ev_codes** may list taxonomy EV codes (EV-xxx) that the document supports.
+Each entry identifies a document in the pack by **file_id** (EP-01..EP-07). Optional **ev_codes** may list taxonomy LG codes (LG-xxx) that the document supports.
 
 ```json
 {
@@ -126,7 +126,7 @@ Each evidence template includes:
 | **IM** | `IM-001` | Standalone |
 | **RS** | `RS-001` | Data Leakage |
 | **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 ```
 
 ## Downloads

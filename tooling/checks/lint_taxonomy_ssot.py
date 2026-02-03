@@ -37,8 +37,8 @@ DATA_DIR = REPO_ROOT / "data" / "taxonomy"
 CANONICAL_PATH = DATA_DIR / "canonical.yaml"
 I18N_DIR = DATA_DIR / "i18n"
 
-# Valid dimension IDs
-VALID_DIMENSIONS = {"FS", "UC", "DT", "CH", "IM", "RS", "OB", "EV"}
+# Valid dimension IDs (LG = Log/Event Type; EV reserved for Evidence artifact IDs only)
+VALID_DIMENSIONS = {"FS", "UC", "DT", "CH", "IM", "RS", "OB", "LG"}
 
 # Code pattern: <DIM>-<NNN>
 CODE_PATTERN = re.compile(r"^([A-Z]{2})-(\d{3})$")

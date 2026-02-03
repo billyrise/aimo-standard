@@ -24,8 +24,8 @@
       "backward_compatible": true
     },
     {
-      "dimension_id": "EV",
-      "code": "EV-001",
+      "dimension_id": "LG",
+      "code": "LG-001",
       "label_en": "Request Record",
       "label_ja": "申請記録",
       "definition_en": "Evidence that an AI use/service was requested and described.",

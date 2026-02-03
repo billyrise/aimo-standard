@@ -53,6 +53,20 @@ def validate_json(payload: dict) -> None:
         raise ValueError("Schema validation failed:\n" + "\n".join(msgs))
 
 
+def validate_namespace_no_ev_codes(payload: dict) -> list[str]:
+    """Reject use of EV as taxonomy dimension in evidence.codes (EV reserved for Evidence artifact IDs; use LG for Log/Event Type)."""
+    errors: list[str] = []
+    for ev_idx, evidence in enumerate(payload.get("evidence", [])):
+        ev_id = evidence.get("id", f"evidence[{ev_idx}]")
+        codes_obj = evidence.get("codes", {})
+        if "EV" in codes_obj:
+            errors.append(
+                f"{ev_id}: namespace violation: 'EV' is reserved for Evidence artifact IDs; "
+                "use 'LG' for Log/Event Type (taxonomy) codes."
+            )
+    return errors
+
+
 def validate_dictionary_consistency(payload: dict) -> tuple[list[str], list[str]]:
     """Validate that evidence codes exist in taxonomy dictionary.
     
@@ -121,7 +135,15 @@ def main():
         print(str(e), file=sys.stderr)
         sys.exit(1)
 
-    # Step 2: Dictionary consistency check
+    # Step 2: Namespace check (EV vs LG)
+    ns_errors = validate_namespace_no_ev_codes(payload)
+    if ns_errors:
+        print("Namespace check failed:", file=sys.stderr)
+        for err in ns_errors:
+            print(f"  {err}", file=sys.stderr)
+        sys.exit(1)
+
+    # Step 3: Dictionary consistency check
     dict_errors, dict_warnings = validate_dictionary_consistency(payload)
     
     # Print warnings

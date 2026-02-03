@@ -51,16 +51,18 @@ AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-l
 | **IM** | Integration Mode | 7 | How AI connects to enterprise systems |
 | **RS** | Risk Surface | 8 | What risks are associated |
 | **OB** | Outcome / Benefit | 7 | What benefits are expected |
-| **EV** | Evidence Type | 15 | What evidence is required |
+| **LG** | Log/Event Type | 15 | What log/event/record type is required (request record, access log, etc.) |
 
 **Total: 91 codes across 8 dimensions**
+
+See [ID Policy / Namespace](./04b-id-policy-namespace.md): **EV-** is reserved for Evidence *artifact* IDs only; taxonomy log/event dimension uses **LG-** (e.g. LG-001 … LG-015).
 
 ### Usage Rules
 
 | Dimension | Selection | Audit Implication |
 | --- | --- | --- |
 | FS, IM | Exactly 1 | Primary classification for responsibility assignment |
-| UC, DT, CH, RS, EV | 1 or more | Complete enumeration required for risk coverage |
+| UC, DT, CH, RS, LG | 1 or more | Complete enumeration required for risk coverage |
 | OB | 0 or more | Optional; documents expected business value |
 
 ## Dimension Definitions
@@ -170,33 +172,33 @@ Categorizes the expected outcomes or benefits from AI use. **Optional; select ze
 | OB-006 | Customer Satisfaction | Improves customer satisfaction. |
 | OB-007 | Employee Experience | Improves employee experience. |
 
-### EV: Evidence Type
+### LG: Log/Event Type
 
-Categorizes the types of evidence required or collected. **Select one or more.**
+Categorizes the types of log/event/record evidence required or collected. **Select one or more.** (See [ID Policy / Namespace](./04b-id-policy-namespace.md): **EV-** is reserved for Evidence *artifact* IDs only.)
 
 | Code | Label | Definition |
 | --- | --- | --- |
-| EV-001 | Request Record | Evidence that an AI use/service was requested and described. |
-| EV-002 | Review/Approval Record | Evidence that a review/approval was performed. |
-| EV-003 | Exception Record | Evidence that an exception was granted and tracked. |
-| EV-004 | Renewal/Re-evaluation Record | Evidence that renewal or re-evaluation occurred. |
-| EV-005 | Change Log Entry | Evidence of changes and their approvals. |
-| EV-006 | Integrity Proof | Evidence of integrity (hash, signature, WORM). |
-| EV-007 | Access Log | Evidence of access control and access history. |
-| EV-008 | Model/Service Inventory | Inventory record of models/services used. |
-| EV-009 | Risk Assessment | Documented risk assessment for the use/service. |
-| EV-010 | Control Mapping | Control mapping evidence to external frameworks. |
-| EV-011 | Training/Guidance | Evidence of training or guidance provided to users. |
-| EV-012 | Monitoring Evidence | Evidence of monitoring and ongoing oversight. |
-| EV-013 | Incident Record | Evidence of incident handling related to AI use. |
-| EV-014 | Third-party Assessment | Evidence of vendor or third-party assessment. |
-| EV-015 | Attestation/Sign-off | Formal attestation or sign-off record. |
+| LG-001 | Request Record | Evidence that an AI use/service was requested and described. |
+| LG-002 | Review/Approval Record | Evidence that a review/approval was performed. |
+| LG-003 | Exception Record | Evidence that an exception was granted and tracked. |
+| LG-004 | Renewal/Re-evaluation Record | Evidence that renewal or re-evaluation occurred. |
+| LG-005 | Change Log Entry | Evidence of changes and their approvals. |
+| LG-006 | Integrity Proof | Evidence of integrity (hash, signature, WORM). |
+| LG-007 | Access Log | Evidence of access control and access history. |
+| LG-008 | Model/Service Inventory | Inventory record of models/services used. |
+| LG-009 | Risk Assessment | Documented risk assessment for the use/service. |
+| LG-010 | Control Mapping | Control mapping evidence to external frameworks. |
+| LG-011 | Training/Guidance | Evidence of training or guidance provided to users. |
+| LG-012 | Monitoring Evidence | Evidence of monitoring and ongoing oversight. |
+| LG-013 | Incident Record | Evidence of incident handling related to AI use. |
+| LG-014 | Third-party Assessment | Evidence of vendor or third-party assessment. |
+| LG-015 | Attestation/Sign-off | Formal attestation or sign-off record. |
 
 ## How to Use
 
 ### Relationship with Evidence
 
-Each Evidence (EV) document references codes from multiple dimensions to classify the AI system or use case being documented. The 8-dimension classification enables:
+Each evidence document references codes from multiple dimensions to classify the AI system or use case being documented. The 8-dimension classification enables:
 
 - **Consistent categorization** across the organization
 - **Risk-based filtering** by dimension values
@@ -216,7 +218,7 @@ CH: CH-001 (Web UI)
 IM: IM-002 (SaaS Integrated)
 RS: RS-001 (Data Leakage), RS-003 (Compliance Breach)
 OB: OB-001 (Efficiency)
-EV: EV-001 (Request Record), EV-002 (Review/Approval Record)
+LG: LG-001 (Request Record), LG-002 (Review/Approval Record)
 ```
 
 ## SSOT Reference

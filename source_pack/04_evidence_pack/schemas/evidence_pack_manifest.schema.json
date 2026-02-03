@@ -59,7 +59,7 @@
     "codes": {
       "type": "object",
       "description": "8-dimension AIMO codes applicable to this Evidence Pack.",
-      "required": ["FS", "UC", "DT", "CH", "IM", "RS", "EV"],
+      "required": ["FS", "UC", "DT", "CH", "IM", "RS", "LG"],
       "additionalProperties": false,
       "properties": {
         "FS": {
@@ -103,11 +103,11 @@
           "items": { "type": "string", "pattern": "^OB-\\d{3}$" },
           "description": "Outcome / Benefit codes (optional)."
         },
-        "EV": {
+        "LG": {
           "type": "array",
-          "items": { "type": "string", "pattern": "^EV-\\d{3}$" },
+          "items": { "type": "string", "pattern": "^LG-\\d{3}$" },
           "minItems": 1,
-          "description": "Evidence Type codes."
+          "description": "Log/Event Type (Taxonomy) codes."
         }
       }
     },
@@ -148,13 +148,13 @@
         },
         "ev_type": {
           "type": "string",
-          "description": "Optional. Single Taxonomy Evidence Type code (EV-xxx) that this document evidences. Document type is file_id (EP-01..EP-07).",
-          "pattern": "^EV-\\d{3}$"
+          "description": "Optional. Single Taxonomy Log/Event Type code (LG-xxx) that this document evidences. Document type is file_id (EP-01..EP-07).",
+          "pattern": "^LG-\\d{3}$"
         },
         "ev_codes": {
           "type": "array",
-          "items": { "type": "string", "pattern": "^EV-\\d{3}$" },
-          "description": "Optional. Taxonomy Evidence Type codes (EV-xxx) that this document supports."
+          "items": { "type": "string", "pattern": "^LG-\\d{3}$" },
+          "description": "Optional. Taxonomy Log/Event Type codes (LG-xxx) that this document supports."
         },
         "title": {
           "type": "string",

@@ -13,7 +13,7 @@ checks:
     required: true
 
   - id: code_format_check
-    description: Validate AIMO code format matches pattern ^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+    description: Validate AIMO code format matches pattern ^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$ (Taxonomy). EV- prefix reserved for Evidence artifact IDs only.
     required: true
 
   - id: taxonomy_version_present
@@ -21,6 +21,6 @@ checks:
     required: false
 
   - id: required_dimensions_present
-    description: Check that required dimensions (FS, UC, DT, CH, IM, RS, EV) have at least one code
+    description: Check that required dimensions (FS, UC, DT, CH, IM, RS, LG) have at least one code
     required: false
-    notes: Full dimension validation is optional; schema patterns provide basic format check
+    notes: Full dimension validation is optional; schema patterns provide basic format check. LG = Log/Event Type; EV = Evidence artifact ID only.
