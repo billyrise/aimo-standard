@@ -51,16 +51,16 @@ AIMO utilise 8 dimensions pour classifier les cas d'usage de l'IA. Chaque dimens
 | **IM** | Mode d'intégration | 7 | Comment l'IA se connecte aux systèmes entreprise |
 | **RS** | Surface de risque | 8 | Quels risques sont associés |
 | **OB** | Résultat / Bénéfice | 7 | Quels bénéfices sont attendus |
-| **EV** | Type de preuve | 15 | Quelles preuves sont requises |
+| **LG** | Type de log/registre | 15 | Quels logs/registres sont requis |
 
-**Total : 91 codes sur 8 dimensions**
+**Total : 91 codes sur 8 dimensions**（**EV-** réservé aux ID d'artefacts Evidence ; dimension log/registre de la taxonomie : **LG-**.)
 
 ### Règles d'utilisation
 
 | Dimension | Sélection | Implication d'audit |
 | --- | --- | --- |
 | FS, IM | Exactement 1 | Classification primaire pour l'attribution des responsabilités |
-| UC, DT, CH, RS, EV | 1 ou plus | Énumération complète requise pour la couverture des risques |
+| UC, DT, CH, RS, LG | 1 ou plus | Énumération complète requise pour la couverture des risques |
 | OB | 0 ou plus | Optionnel ; documente la valeur métier attendue |
 
 ## Définitions des dimensions
@@ -170,33 +170,33 @@ Catégorise les résultats ou bénéfices attendus de l'utilisation de l'IA. **O
 | OB-006 | Satisfaction client | Améliore la satisfaction client. |
 | OB-007 | Expérience employé | Améliore l'expérience employé. |
 
-### EV : Type de preuve
+### LG : Type de log/registre
 
-Catégorise les types de preuves requises ou collectées. **Sélectionnez une ou plusieurs.**
+Catégorise les types de log/registre requis ou collectés. **Sélectionnez une ou plusieurs.**（EV- réservé aux ID d'artefacts Evidence.)
 
 | Code | Libellé | Définition |
 | --- | --- | --- |
-| EV-001 | Enregistrement de demande | Preuve qu'une utilisation/service IA a été demandé(e) et décrit(e). |
-| EV-002 | Enregistrement de revue/approbation | Preuve qu'une revue/approbation a été effectuée. |
-| EV-003 | Enregistrement d'exception | Preuve qu'une exception a été accordée et suivie. |
-| EV-004 | Enregistrement de renouvellement/réévaluation | Preuve qu'un renouvellement ou une réévaluation a eu lieu. |
-| EV-005 | Entrée de journal des modifications | Preuve des modifications et de leurs approbations. |
-| EV-006 | Preuve d'intégrité | Preuve d'intégrité (hash, signature, WORM). |
-| EV-007 | Journal des accès | Preuve de contrôle d'accès et d'historique des accès. |
-| EV-008 | Inventaire de modèles/services | Enregistrement d'inventaire des modèles/services utilisés. |
-| EV-009 | Évaluation des risques | Évaluation des risques documentée pour l'utilisation/service. |
-| EV-010 | Correspondance de contrôles | Preuve de correspondance des contrôles avec les cadres externes. |
-| EV-011 | Formation/orientation | Preuve de formation ou d'orientation fournie aux utilisateurs. |
-| EV-012 | Preuve de surveillance | Preuve de surveillance et de supervision continue. |
-| EV-013 | Enregistrement d'incident | Preuve de gestion d'incident liée à l'utilisation de l'IA. |
-| EV-014 | Évaluation tierce | Preuve d'évaluation fournisseur ou tierce. |
-| EV-015 | Attestation/validation | Enregistrement d'attestation formelle ou de validation. |
+| LG-001 | Enregistrement de demande | Preuve qu'une utilisation/service IA a été demandé(e) et décrit(e). |
+| LG-002 | Enregistrement de revue/approbation | Preuve qu'une revue/approbation a été effectuée. |
+| LG-003 | Enregistrement d'exception | Preuve qu'une exception a été accordée et suivie. |
+| LG-004 | Enregistrement de renouvellement/réévaluation | Preuve qu'un renouvellement ou une réévaluation a eu lieu. |
+| LG-005 | Entrée de journal des modifications | Preuve des modifications et de leurs approbations. |
+| LG-006 | Preuve d'intégrité | Preuve d'intégrité (hash, signature, WORM). |
+| LG-007 | Journal des accès | Preuve de contrôle d'accès et d'historique des accès. |
+| LG-008 | Inventaire de modèles/services | Enregistrement d'inventaire des modèles/services utilisés. |
+| LG-009 | Évaluation des risques | Évaluation des risques documentée pour l'utilisation/service. |
+| LG-010 | Correspondance de contrôles | Preuve de correspondance des contrôles avec les cadres externes. |
+| LG-011 | Formation/orientation | Preuve de formation ou d'orientation fournie aux utilisateurs. |
+| LG-012 | Preuve de surveillance | Preuve de surveillance et de supervision continue. |
+| LG-013 | Enregistrement d'incident | Preuve de gestion d'incident liée à l'utilisation de l'IA. |
+| LG-014 | Évaluation tierce | Preuve d'évaluation fournisseur ou tierce. |
+| LG-015 | Attestation/validation | Enregistrement d'attestation formelle ou de validation. |
 
 ## Comment utiliser
 
 ### Relation avec les preuves
 
-Chaque document de preuve (EV) référence des codes de plusieurs dimensions pour classifier le système IA ou le cas d'usage documenté. La classification à 8 dimensions permet :
+Chaque document de preuve référence des codes de plusieurs dimensions pour classifier le système IA ou le cas d'usage documenté. La classification à 8 dimensions permet :
 
 - **Catégorisation cohérente** dans l'organisation
 - **Filtrage basé sur le risque** par valeurs de dimension
@@ -216,7 +216,7 @@ CH: CH-001 (Interface web)
 IM: IM-002 (SaaS intégré)
 RS: RS-001 (Fuite de données), RS-003 (Violation de conformité)
 OB: OB-001 (Efficacité)
-EV: EV-001 (Enregistrement de demande), EV-002 (Enregistrement de revue/approbation)
+LG: LG-001 (Enregistrement de demande), LG-002 (Enregistrement de revue/approbation)
 ```
 
 ## Référence SSOT

@@ -25,7 +25,7 @@ Todos os códigos AIMO seguem o formato: **`<PREFIXO>-<TOKEN>`**
 - `IM-002` - Modo de Integração: SaaS Integrado
 - `RS-001` - Superfície de Risco: Vazamento de Dados
 - `OB-001` - Resultado/Benefício: Eficiência
-- `EV-001` - Tipo de Evidência: Registro de Solicitação
+- `LG-001` - Tipo de Log/Registro: Registro de Solicitação
 
 ## Namespaces
 
@@ -118,7 +118,7 @@ CH: CH-001
 IM: IM-002
 RS: RS-001, RS-003
 OB: OB-001
-EV: EV-001, EV-002
+LG: LG-001, LG-002
 ```
 
 ## Ciclo de Vida

@@ -53,17 +53,22 @@ def validate_json(payload: dict) -> None:
         raise ValueError("Schema validation failed:\n" + "\n".join(msgs))
 
 
-def validate_namespace_no_ev_codes(payload: dict) -> list[str]:
-    """Reject use of EV as taxonomy dimension in evidence.codes (EV reserved for Evidence artifact IDs; use LG for Log/Event Type)."""
+# Fixed message for pre-schema rejection of codes.EV (human-readable, normative).
+CODES_EV_REJECT_MESSAGE = (
+    "Invalid taxonomy dimension: 'EV' is reserved for Evidence Artifact IDs. "
+    "Use 'LG' for log/event taxonomy codes."
+)
+
+
+def reject_codes_ev_before_schema(payload: dict) -> list[str]:
+    """Reject use of EV as taxonomy dimension in evidence.codes *before* schema validation.
+    EV is reserved for Evidence artifact IDs; taxonomy log/event dimension uses LG."""
     errors: list[str] = []
     for ev_idx, evidence in enumerate(payload.get("evidence", [])):
-        ev_id = evidence.get("id", f"evidence[{ev_idx}]")
-        codes_obj = evidence.get("codes", {})
-        if "EV" in codes_obj:
-            errors.append(
-                f"{ev_id}: namespace violation: 'EV' is reserved for Evidence artifact IDs; "
-                "use 'LG' for Log/Event Type (taxonomy) codes."
-            )
+        codes_obj = evidence.get("codes") if isinstance(evidence, dict) else None
+        if isinstance(codes_obj, dict) and "EV" in codes_obj:
+            ev_id = evidence.get("id", f"evidence[{ev_idx}]") if isinstance(evidence, dict) else f"evidence[{ev_idx}]"
+            errors.append(f"{ev_id}: {CODES_EV_REJECT_MESSAGE}")
     return errors
 
 
@@ -127,23 +132,23 @@ def main():
 
     p = Path(sys.argv[1])
     payload = json.loads(p.read_text(encoding="utf-8"))
-    
-    # Step 1: Schema validation
+
+    # Step 1: Reject codes.EV before schema (clear, human-readable reason)
+    pre_errors = reject_codes_ev_before_schema(payload)
+    if pre_errors:
+        print(CODES_EV_REJECT_MESSAGE, file=sys.stderr)
+        for err in pre_errors:
+            print(f"  {err}", file=sys.stderr)
+        sys.exit(1)
+
+    # Step 2: Schema validation
     try:
         validate_json(payload)
     except Exception as e:
         print(str(e), file=sys.stderr)
         sys.exit(1)
 
-    # Step 2: Namespace check (EV vs LG)
-    ns_errors = validate_namespace_no_ev_codes(payload)
-    if ns_errors:
-        print("Namespace check failed:", file=sys.stderr)
-        for err in ns_errors:
-            print(f"  {err}", file=sys.stderr)
-        sys.exit(1)
-
-    # Step 3: Dictionary consistency check
+    # Step 4: Dictionary consistency check
     dict_errors, dict_warnings = validate_dictionary_consistency(payload)
     
     # Print warnings

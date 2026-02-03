@@ -159,7 +159,7 @@ Ogni template EV include una tabella di codici a 8 dimensioni:
 | **IM** | `IM-002` | SaaS Integrated |
 | **RS** | `RS-001`, `RS-003` | Data Leakage, Compliance Breach |
 | **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 ```
 
 ### Nel Validator

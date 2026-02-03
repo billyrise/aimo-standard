@@ -8,7 +8,7 @@ Cette section définit les modèles de pack de preuves et leur utilisation. Un p
 
 ## Espace de noms : types de document Evidence Pack (EP) vs Taxonomy Evidence Type (EV)
 
-> **Important** : **EP-01..EP-07** identifient les *types de document* (types de fichier Evidence Pack). **EV-001, EV-002, …** dans la [Taxonomie](./03-taxonomy.md) identifient les *types d'événement/preuve* (Enregistrement de demande, Enregistrement de revue/approbation, etc.). Ne pas mélanger les codes : utiliser EP pour la structure du pack et EV pour la classification des preuves du cycle de vie.
+> **Important** : **EP-01..EP-07** identifient les *types de document* (types de fichier Evidence Pack). **LG-001, LG-002, …** dans la [Taxonomie](./03-taxonomy.md) identifient les *types de log/registre* (Enregistrement de demande, Enregistrement de revue/approbation, etc.). **EV-** réservé aux ID d'artefacts Evidence. Utiliser EP pour la structure du pack et LG pour la classification des preuves du cycle de vie.
 
 ## Principe clé : Gestion d'index et de diff
 
@@ -22,7 +22,7 @@ Un pack de preuves sert d'index liant les systèmes IA à leurs artefacts de gou
 
 ## Ensemble de preuves MVP (EP-01 à EP-07)
 
-Les sept **types de document Evidence Pack** (EP) suivants forment l'**ensemble minimum viable** pour démontrer la gouvernance IA. Chacun est un modèle de document ; les codes **EV** de taxonomie (Enregistrement de demande, Revue/approbation, etc.) sont utilisés ailleurs dans le bundle et dans `codes.EV` pour classer les preuves d'*événements*.
+Les sept **types de document Evidence Pack** (EP) suivants forment l'**ensemble minimum viable** pour démontrer la gouvernance IA. Chacun est un modèle de document ; les codes **LG** de taxonomie (Enregistrement de demande, Revue/approbation, etc.) sont utilisés ailleurs dans le bundle et dans `codes.LG` pour classer les preuves de *log/registre*.
 
 | ID | Type de document | Objectif |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Chaque pack de preuves DOIT inclure un fichier manifeste contenant :
 
 ### Codes AIMO (8 dimensions)
 
-Chaque pack de preuves DOIT inclure des codes des 8 dimensions. La dimension **EV** liste les types de preuve *taxonomie* (ex. Enregistrement de demande, Revue/approbation) applicables à ce pack—pas les codes de type de document. Le type de document est donné par `evidence_files[].file_id` (EP-01..EP-07).
+Chaque pack de preuves DOIT inclure des codes des 8 dimensions. La dimension **LG** liste les types de log/registre *taxonomie* (ex. Enregistrement de demande, Revue/approbation) applicables à ce pack—pas les codes de type de document. Le type de document est donné par `evidence_files[].file_id` (EP-01..EP-07).
 
 ```json
 {
@@ -63,14 +63,14 @@ Chaque pack de preuves DOIT inclure des codes des 8 dimensions. La dimension **E
     "IM": ["IM-001"],
     "RS": ["RS-001", "RS-003"],
     "OB": ["OB-001"],
-    "EV": ["EV-001", "EV-002", "EV-008", "EV-009"]
+    "LG": ["LG-001", "LG-002", "LG-008", "LG-009"]
   }
 }
 ```
 
 ### Liste des fichiers de preuves
 
-Chaque entrée identifie un document du pack par **file_id** (EP-01..EP-07). Optionnellement **ev_codes** peut lister les codes EV de taxonomie (EV-xxx) que le document supporte.
+Chaque entrée identifie un document du pack par **file_id** (EP-01..EP-07). Optionnellement **ev_codes** peut lister les codes LG de taxonomie (LG-xxx) que le document supporte.
 
 ```json
 {
@@ -126,7 +126,7 @@ Chaque modèle de preuve inclut :
 | **IM** | `IM-001` | Autonome |
 | **RS** | `RS-001` | Fuite de données |
 | **OB** | `OB-001` | Efficacité |
-| **EV** | `EV-001`, `EV-002` | Enregistrement de demande, Enregistrement de revue/approbation |
+| **LG** | `LG-001`, `LG-002` | Enregistrement de demande, Enregistrement de revue/approbation |
 ```
 
 ## Téléchargements

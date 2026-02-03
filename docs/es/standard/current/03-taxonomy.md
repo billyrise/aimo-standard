@@ -51,16 +51,16 @@ AIMO usa 8 dimensiones para clasificar casos de uso de IA. Cada dimensión tiene
 | **IM** | Modo de Integración | 7 | Cómo se conecta la IA a sistemas empresariales |
 | **RS** | Superficie de Riesgo | 8 | Qué riesgos están asociados |
 | **OB** | Resultado / Beneficio | 7 | Qué beneficios se esperan |
-| **EV** | Tipo de Evidencia | 15 | Qué evidencia se requiere |
+| **LG** | Tipo de Log/Registro | 15 | Qué log/registro se requiere |
 
-**Total: 91 códigos en 8 dimensiones**
+**Total: 91 códigos en 8 dimensiones**（**EV-** reservado para ID de artefactos Evidence; dimensión log/registro de taxonomía: **LG-**.)
 
 ### Reglas de Uso
 
 | Dimensión | Selección | Implicación de Auditoría |
 | --- | --- | --- |
 | FS, IM | Exactamente 1 | Clasificación primaria para asignación de responsabilidad |
-| UC, DT, CH, RS, EV | 1 o más | Enumeración completa requerida para cobertura de riesgo |
+| UC, DT, CH, RS, LG | 1 o más | Enumeración completa requerida para cobertura de riesgo |
 | OB | 0 o más | Opcional; documenta valor de negocio esperado |
 
 ## Definiciones de Dimensiones
@@ -170,33 +170,33 @@ Categoriza los resultados o beneficios esperados del uso de IA. **Opcional; sele
 | OB-006 | Satisfacción del Cliente | Mejora satisfacción del cliente. |
 | OB-007 | Experiencia del Empleado | Mejora experiencia del empleado. |
 
-### EV: Tipo de Evidencia
+### LG: Tipo de Log/Registro
 
-Categoriza los tipos de evidencia requerida o recopilada. **Seleccione uno o más.**
+Categoriza los tipos de log/registro requeridos o recopilados. **Seleccione uno o más.**（EV- reservado para ID de artefactos Evidence.)
 
 | Código | Etiqueta | Definición |
 | --- | --- | --- |
-| EV-001 | Registro de Solicitud | Evidencia de que un uso/servicio de IA fue solicitado y descrito. |
-| EV-002 | Registro de Revisión/Aprobación | Evidencia de que una revisión/aprobación fue realizada. |
-| EV-003 | Registro de Excepción | Evidencia de que una excepción fue otorgada y rastreada. |
-| EV-004 | Registro de Renovación/Reevaluación | Evidencia de que renovación o reevaluación ocurrió. |
-| EV-005 | Entrada de Registro de Cambios | Evidencia de cambios y sus aprobaciones. |
-| EV-006 | Prueba de Integridad | Evidencia de integridad (hash, firma, WORM). |
-| EV-007 | Registro de Acceso | Evidencia de control de acceso e historial de acceso. |
-| EV-008 | Inventario de Modelo/Servicio | Registro de inventario de modelos/servicios usados. |
-| EV-009 | Evaluación de Riesgos | Evaluación de riesgos documentada para el uso/servicio. |
-| EV-010 | Mapeo de Controles | Evidencia de mapeo de controles a marcos externos. |
-| EV-011 | Capacitación/Guía | Evidencia de capacitación o guía proporcionada a usuarios. |
-| EV-012 | Evidencia de Monitoreo | Evidencia de monitoreo y supervisión continua. |
-| EV-013 | Registro de Incidente | Evidencia de manejo de incidentes relacionados con uso de IA. |
-| EV-014 | Evaluación de Terceros | Evidencia de evaluación de proveedor o tercero. |
-| EV-015 | Atestación/Firma | Registro de atestación o firma formal. |
+| LG-001 | Registro de Solicitud | Evidencia de que un uso/servicio de IA fue solicitado y descrito. |
+| LG-002 | Registro de Revisión/Aprobación | Evidencia de que una revisión/aprobación fue realizada. |
+| LG-003 | Registro de Excepción | Evidencia de que una excepción fue otorgada y rastreada. |
+| LG-004 | Registro de Renovación/Reevaluación | Evidencia de que renovación o reevaluación ocurrió. |
+| LG-005 | Entrada de Registro de Cambios | Evidencia de cambios y sus aprobaciones. |
+| LG-006 | Prueba de Integridad | Evidencia de integridad (hash, firma, WORM). |
+| LG-007 | Registro de Acceso | Evidencia de control de acceso e historial de acceso. |
+| LG-008 | Inventario de Modelo/Servicio | Registro de inventario de modelos/servicios usados. |
+| LG-009 | Evaluación de Riesgos | Evaluación de riesgos documentada para el uso/servicio. |
+| LG-010 | Mapeo de Controles | Evidencia de mapeo de controles a marcos externos. |
+| LG-011 | Capacitación/Guía | Evidencia de capacitación o guía proporcionada a usuarios. |
+| LG-012 | Evidencia de Monitoreo | Evidencia de monitoreo y supervisión continua. |
+| LG-013 | Registro de Incidente | Evidencia de manejo de incidentes relacionados con uso de IA. |
+| LG-014 | Evaluación de Terceros | Evidencia de evaluación de proveedor o tercero. |
+| LG-015 | Atestación/Firma | Registro de atestación o firma formal. |
 
 ## Cómo Usar
 
 ### Relación con Evidencia
 
-Cada documento de Evidencia (EV) referencia códigos de múltiples dimensiones para clasificar el sistema o caso de uso de IA que se documenta. La clasificación de 8 dimensiones permite:
+Cada documento de evidencia referencia códigos de múltiples dimensiones para clasificar el sistema o caso de uso de IA que se documenta. La clasificación de 8 dimensiones permite:
 
 - **Categorización consistente** en la organización
 - **Filtrado basado en riesgo** por valores de dimensión
@@ -216,7 +216,7 @@ CH: CH-001 (UI Web)
 IM: IM-002 (SaaS Integrado)
 RS: RS-001 (Fuga de Datos), RS-003 (Violación de Cumplimiento)
 OB: OB-001 (Eficiencia)
-EV: EV-001 (Registro de Solicitud), EV-002 (Registro de Revisión/Aprobación)
+LG: LG-001 (Registro de Solicitud), LG-002 (Registro de Revisión/Aprobación)
 ```
 
 ## Referencia SSOT

@@ -101,7 +101,7 @@ Chaque version officielle inclut :
 | IM | IM-001 à IM-005 | Mode d'intégration |
 | RS | RS-001 à RS-005 | Surface de risque |
 | OB | OB-001 à OB-005 | Résultat / Bénéfice |
-| EV | EV-001 à EV-007 | Type de preuve |
+| LG | LG-001 à LG-015 | Type de log/registre |
 
 **Schémas**
 
