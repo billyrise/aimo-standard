@@ -54,7 +54,7 @@ AIMO 验证器确保证据包和相关工件符合 AIMO 标准模式和要求。
 检查所有代码是否匹配预期格式：
 
 ```regex
-^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 ```
 
 ### 5. 模式验证
@@ -103,7 +103,7 @@ check: |
 rule_id: code_format
 description: 所有代码必须匹配标准格式
 severity: error
-pattern: "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$"
+pattern: "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$"
 ```
 
 ### 规则：版本格式

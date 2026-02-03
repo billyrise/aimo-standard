@@ -6,7 +6,7 @@ description: AIMO 證據包範本和使用指南。使用索引管理和稽核�
 
 本節定義證據包範本及其使用。證據包是一組文件集合，展示 AI 系統的治理和合規性。
 
-## 命名空間：Evidence Pack 文件類型（EP）與 Taxonomy Evidence Type（EV）
+## 命名空間：Evidence Pack 文件類型（EP）與 Taxonomy Log/Event Type（LG）
 
 > **重要**：**EP-01..EP-07** 表示*文件類型*（證據包檔案類型）。**LG-001、LG-002、…** 在[分類法](./03-taxonomy.md)中表示*日誌/記錄類型*（請求記錄、審查/核准記錄等）。**EV-** 專用於 Evidence 成果物 ID。請勿混用：EP 用於包結構，LG 用於生命週期證據分類。
 

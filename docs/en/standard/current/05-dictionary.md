@@ -87,7 +87,7 @@ The current dictionary version is **v0.1.0** and contains:
 | IM | Integration Mode | 7 | 0 | 7 |
 | RS | Risk Surface | 8 | 0 | 8 |
 | OB | Outcome / Benefit | 7 | 0 | 7 |
-| EV | Evidence Type | 15 | 0 | 15 |
+| LG | Log/Event Type | 15 | 0 | 15 |
 | **Total** | | **91** | **0** | **91** |
 
 !!! note "Complete Code Listings"
@@ -145,7 +145,7 @@ The current dictionary version is **v0.1.0** and contains:
 
 ### In Evidence Templates
 
-Each EV template includes an 8-dimension codes table:
+Each Evidence Pack template includes an 8-dimension codes table:
 
 ```markdown
 ## AIMO Codes (8 Dimensions)
@@ -159,7 +159,7 @@ Each EV template includes an 8-dimension codes table:
 | **IM** | `IM-002` | SaaS Integrated |
 | **RS** | `RS-001`, `RS-003` | Data Leakage, Compliance Breach |
 | **OB** | `OB-001` | Efficiency |
-| **EV** | `EV-001`, `EV-002` | Request Record, Review/Approval Record |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 ```
 
 ### In Validator

@@ -6,7 +6,7 @@ description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 �
 
 이 섹션은 증거 팩 템플릿과 그 사용을 정의합니다. 증거 팩은 AI 시스템에 대한 거버넌스 및 컴플라이언스를 입증하는 문서 모음입니다.
 
-## 네임스페이스: Evidence Pack 문서 유형(EP) vs Taxonomy Evidence Type(EV)
+## 네임스페이스: Evidence Pack 문서 유형(EP) vs Taxonomy Log/Event Type(LG)
 
 > **중요**: **EP-01..EP-07**은 *문서 유형*(증거 팩 파일 유형)을 나타냅니다. **LG-001, LG-002, …**는 [분류체계](./03-taxonomy.md)에서 *로그/기록 유형*(요청 레코드, 검토/승인 레코드 등)을 나타냅니다. **EV-**는 Evidence 산출물 ID 전용입니다. EP는 팩 구조, LG는 라이프사이클 증거 분류에 사용합니다.
 

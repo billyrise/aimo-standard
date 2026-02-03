@@ -40,7 +40,7 @@ A taxonomia AIMO usa 8 namespaces de dimensão:
 | **IM** | Modo de Integração | `IM-` | 7 |
 | **RS** | Superfície de Risco | `RS-` | 8 |
 | **OB** | Resultado / Benefício | `OB-` | 7 |
-| **EV** | Tipo de Evidência | `EV-` | 15 |
+| **LG** | Tipo Log/Evento | `LG-` | 15 |
 
 **Total: 91 códigos em 8 dimensões**
 
@@ -87,7 +87,7 @@ Para cada sistema ou caso de uso de IA, você DEVE especificar pelo menos um có
 | CH | 1 ou mais | Canais de acesso |
 | IM | Exatamente 1 | Modo de integração |
 | RS | 1 ou mais | Categorias de risco |
-| EV | 1 ou mais | Tipos de evidência |
+| LG | 1 ou mais | Tipos de log/evento |
 
 ### Dimensões Opcionais
 

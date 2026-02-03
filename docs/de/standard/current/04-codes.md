@@ -40,7 +40,7 @@ Die AIMO Taxonomie verwendet 8 Dimensions-Namensräume:
 | **IM** | Integrationsmodus | `IM-` | 7 |
 | **RS** | Risikooberfläche | `RS-` | 8 |
 | **OB** | Ergebnis / Nutzen | `OB-` | 7 |
-| **EV** | Evidence-Typ | `EV-` | 15 |
+| **LG** | Log/Event-Typ | `LG-` | 15 |
 
 **Gesamt: 91 Codes über 8 Dimensionen**
 
@@ -87,7 +87,7 @@ Für jedes KI-System oder jeden Anwendungsfall MÜSSEN Sie mindestens einen Code
 | CH | 1 oder mehr | Zugriffskanäle |
 | IM | Genau 1 | Integrationsmodus |
 | RS | 1 oder mehr | Risikokategorien |
-| EV | 1 oder mehr | Evidence-Typen |
+| LG | 1 oder mehr | Log/Event-Typen |
 
 ### Optionale Dimensionen
 

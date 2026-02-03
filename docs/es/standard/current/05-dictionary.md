@@ -87,7 +87,7 @@ La versión actual del diccionario es **v0.1.0** y contiene:
 | IM | Modo de Integración | 7 | 0 | 7 |
 | RS | Superficie de Riesgo | 8 | 0 | 8 |
 | OB | Resultado / Beneficio | 7 | 0 | 7 |
-| EV | Tipo de Evidencia | 15 | 0 | 15 |
+| LG | Tipo Log/Evento | 15 | 0 | 15 |
 | **Total** | | **91** | **0** | **91** |
 
 !!! note "Listados Completos de Códigos"

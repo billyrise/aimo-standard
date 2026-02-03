@@ -29,8 +29,8 @@ jobs:
 
       - name: i18n Quality Gates
         run: |
-          echo "=== Bidi Control Chars (Trojan Source) ==="
-          python tooling/checks/lint_bidi_control_chars.py
+          echo "=== Bidi Control Chars (Trojan Source) + Format (Cf) ==="
+          python tooling/checks/lint_bidi_control_chars.py --check-format
           echo "=== EN Locale Purity (no CJK in docs/en) ==="
           python tooling/checks/lint_locale_purity.py
           echo "=== i18n Lint (Required Pages, Heading Consistency) ==="
@@ -95,6 +95,11 @@ jobs:
         run: |
           echo "=== MkDocs Build (strict mode) ==="
           python -m mkdocs build --strict
+
+      - name: Site content policy (EV reserved, LG required)
+        run: |
+          echo "=== Site Content Policy (no EV taxonomy regression) ==="
+          python tooling/checks/check_site_content_policy.py --site-dir site
 
       - name: Verify HTML (no *_ja columns in EN pages)
         run: |
