@@ -40,7 +40,8 @@ For release process details, see [VERSIONING.md](https://github.com/billyrise/ai
 To cite a specific version in audit reports and ensure reproducibility:
 
 1. **Canonical URL**: Use the frozen documentation URL for that version, e.g.  
-   `https://standard.aimoaas.com/0.0.3/` (replace `0.0.3` with the version you used).
+   `https://standard.aimoaas.com/0.0.3/` (replace `0.0.3` with the version you used).  
+   **For v0.1.0 and later**: Prefer citing the versioned URL (e.g. `https://standard.aimoaas.com/0.1.0/`) rather than `/latest/` for audit evidence, so the snapshot is unambiguous.
 2. **Version pinning**: Record the **release tag** (e.g. `v0.0.3`) and optionally the **commit hash** from the [GitHub Release](https://github.com/billyrise/aimo-standard/releases) page. This allows independent verification that the specification snapshot matches the release assets (PDF, ZIP, checksums).
 3. **Evidence alignment**: State in your submission which AIMO Standard version (e.g. `v0.0.3`) your evidence bundle aligns with, and obtain the validator and schemas from that same release.
 

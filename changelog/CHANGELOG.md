@@ -9,6 +9,31 @@ This changelog follows [Semantic Versioning](https://semver.org/) principles:
 
 ---
 
+## [0.1.0] - (release date TBD)
+
+### Summary
+v0.1 establishes normative Evidence Bundle structure, ID namespace (EV/LG) separation, Profiles for framework mapping, and Validator output formats. This is a **breaking** release for taxonomy code usage (EV→LG migration).
+
+### Breaking
+
+- **ID namespace**: Taxonomy dimension for log/event type is **LG** only. **EV-** is reserved for Evidence artifact IDs. Validators reject `evidence[].codes.EV`; use `evidence[].codes.LG` with `LG-001` … `LG-015`. See [04b-id-policy-namespace](docs/en/standard/current/04b-id-policy-namespace.md) and [MIGRATION.md](MIGRATION.md).
+- **Validator rules**: Code format in `validator/rules/checks.md` / `checks.yaml` is `^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$` for taxonomy; EV is artifact ID only.
+
+### Added
+
+- **Evidence Bundle (v0.1 normative)**: Root structure and [09-evidence-bundle-structure](docs/en/standard/current/09-evidence-bundle-structure.md), `evidence_bundle_manifest.schema.json`, `validate_bundle()` in validator. Example: `examples/evidence_bundle_v01_minimal` (manifest, object_index, payload_index, hash_chain, signatures). CI runs Bundle validation in quality-gate and release.
+- **ID policy**: [04b-id-policy-namespace](docs/en/standard/current/04b-id-policy-namespace.md) (10 languages). v0.1 prefix inventory: EV, LG, SC in use; RQ, CT, CL, TP, FD, RM, AP, CH, PR reserved.
+- **Profiles**: `schemas/jsonschema/aimo-profile.schema.json` and `coverage_map/profiles/` (ISO 42001, NIST AI RMF, EU AI Act Annex IV). Coverage Map YAML remains Informative; Profile JSONs are normative conversion specs.
+- **Validator**: `--format json` and `--format sarif` for machine-readable and Code Scanning output. Exit codes: 0 = pass, 1 = fail.
+- **Normative SSOT**: [00_manifest.md](source_pack/00_manifest.md) documents normative paths (09, 04b, schemas, validator rules). [v0.1_object_model_scope.md](source_pack/07_release/v0.1_object_model_scope.md) defines v0.1 MUST (Evidence, dictionary) and optional/future objects.
+
+### Changed
+
+- **MIGRATION.md**: New section "v0.1 ID namespace: EV (Taxonomy) → LG (Log/Event Type)" for migration from EV-* to LG-* taxonomy codes.
+- **evidence-bundle-coverage-map.md** (EN/JA): Relationship between Coverage Map (Informative) and Profile JSONs (normative) documented.
+
+---
+
 ## [0.0.3] - 2026-02-02
 
 ### Summary

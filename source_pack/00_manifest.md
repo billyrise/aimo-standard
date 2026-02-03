@@ -18,6 +18,19 @@ This manifest is the canonical checklist for auditor-first documentation. All CU
 
 ---
 
+## Normative SSOT (v0.1)
+
+The following paths are **normative** for AIMO Standard v0.1. The repository does not use a separate `/normative/` directory; normative content lives in the paths below.
+
+| Normative subject | Location (SSOT) |
+|-------------------|-----------------|
+| **Evidence Bundle structure** | `docs/*/standard/current/09-evidence-bundle-structure.md` — root layout, manifest, integrity (v0.1) |
+| **ID policy / namespace** | `docs/*/standard/current/04b-id-policy-namespace.md` — EV (artifact ID) vs LG (taxonomy) separation |
+| **JSON Schemas** | `schemas/jsonschema/` — aimo-standard, aimo-dictionary, aimo-ev, evidence_bundle_manifest, evidence_pack_manifest, etc. |
+| **Validator rules** | `validator/rules/checks.md`, `validator/rules/checks.yaml` — code format (LG, not EV in taxonomy), schema validation |
+
+---
+
 ## 1. Auditors
 
 ### 1.1 Trust Package Hub

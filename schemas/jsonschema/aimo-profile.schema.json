@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://standard.aimoaas.com/schemas/aimo-profile.schema.json",
+  "title": "AIMO Profile",
+  "description": "Normative conversion profile mapping AIMO evidence/artifacts to an external framework (e.g. ISO/IEC 42001, NIST AI RMF, EU AI Act Annex IV). Used for validator profile conformance and coverage explanation.",
+  "type": "object",
+  "required": ["profile_id", "target", "target_version", "mappings"],
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "pattern": "^PR-[A-Za-z0-9_.-]+$",
+      "description": "Unique profile identifier (PR-* namespace)."
+    },
+    "target": {
+      "type": "string",
+      "enum": ["ISO_42001", "NIST_AI_RMF", "EU_AI_ACT_ANNEX_IV"],
+      "description": "Target framework or regulation for mapping."
+    },
+    "target_version": {
+      "type": "string",
+      "description": "Version of the target framework (e.g. 1.0, Annex IV)."
+    },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_object_ref", "target_field"],
+        "properties": {
+          "source_object_ref": {
+            "type": "string",
+            "description": "AIMO artifact or object reference (e.g. evidence, dictionary, Summary)."
+          },
+          "target_field": {
+            "type": "string",
+            "description": "Target framework clause or field identifier."
+          },
+          "transform": {
+            "type": "string",
+            "description": "Optional transform or mapping rule (informative)."
+          },
+          "required": {
+            "type": "boolean",
+            "default": false,
+            "description": "If true, validator MUST ensure this mapping is satisfied by the bundle."
+          }
+        }
+      }
+    }
+  }
+}

@@ -73,6 +73,13 @@ Mapping to external frameworks is **for reference only**; the standard does not 
 
 ---
 
+## Coverage Map (YAML) vs Profiles (JSON)
+
+- **`coverage_map/coverage_map.yaml`** is **Informative**: it describes high-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements.
+- **Profile JSONs** in **`coverage_map/profiles/`** (e.g. `iso42001.json`, `nist_ai_rmf.json`, `eu_ai_act_annex_iv.json`) are **normative conversion specifications**: they conform to `schemas/jsonschema/aimo-profile.schema.json` and define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). Validators may use them to check that a bundle satisfies a given profile (required mappings present). See [Validator](../validator/index.md) for profile-based validation when implemented.
+
+---
+
 ## See also
 
 - [Evidence Bundle (artifact overview)](evidence-bundle.md)

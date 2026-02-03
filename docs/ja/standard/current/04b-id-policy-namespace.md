@@ -28,6 +28,15 @@ description: AIMO v0.1 IDポリシーと名前空間の分離 - EVはEvidence（
 - `evidence[].codes` で **EV** をタクソノミー次元として使用すること（例：`"EV": ["EV-001"]`）。代わりに **LG** と `LG-xxx` を使用すること。
 - いずれのタクソノミー/codes フィールドでも **EV-001** … **EV-999** 形式のタクソノミーコードを使用すること。ログ/記録次元では **LG-xxx** のみ許容します。
 
+## v0.1 プレフィックス一覧
+
+| プレフィックス | v0.1 状態 | 用途 |
+|----------------|-----------|------|
+| **EV-** | 使用中 | Evidence 成果物 ID 専用（例：`evidence[].id`） |
+| **LG-** | 使用中 | ログ/記録種別タクソノミー次元（`evidence[].codes.LG`） |
+| **SC-** | 使用中 | スコープ（例：スコープ識別子） |
+| **RQ-**、**CT-**、**CL-**、**TP-**、**FD-**、**RM-**、**AP-**、**CH-**、**PR-** | 予約 | Requirement、Control、Claim、Test Plan、Finding、Remediation、Approval、Change、Profile — 将来用；v0.1 では未規範 |
+
 ## 参照
 
 - [タクソノミー](./03-taxonomy.md) — 次元 **LG: ログ/記録種別**

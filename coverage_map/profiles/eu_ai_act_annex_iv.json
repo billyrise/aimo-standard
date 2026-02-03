@@ -1,0 +1,10 @@
+{
+  "profile_id": "PR-EU-AI-ACT-ANNEX-IV-v0.1",
+  "target": "EU_AI_ACT_ANNEX_IV",
+  "target_version": "Annex IV",
+  "mappings": [
+    { "source_object_ref": "Summary", "target_field": "Documentation", "required": true },
+    { "source_object_ref": "dictionary", "target_field": "Record-keeping", "required": true },
+    { "source_object_ref": "evidence", "target_field": "Technical documentation", "required": true }
+  ]
+}

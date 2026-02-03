@@ -1,3 +1,4 @@
+import argparse
 import hashlib
 import json
 import sys
@@ -288,57 +289,108 @@ def validate_bundle(bundle_root: Path) -> list[str]:
     return errors
 
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: python validator/src/validate.py <path-to-root-json | path-to-bundle-dir>", file=sys.stderr)
-        sys.exit(2)
+def run_validation(path: Path) -> tuple[bool, list[str], list[str]]:
+    """
+    Run validation on path (file or bundle dir). Returns (valid, errors, warnings).
+    """
+    errors: list[str] = []
+    warnings: list[str] = []
 
-    p = Path(sys.argv[1]).resolve()
-    if not p.exists():
-        print(f"Path not found: {p}", file=sys.stderr)
-        sys.exit(2)
+    if not path.exists():
+        return False, [f"Path not found: {path}"], []
 
-    # Bundle mode: directory with manifest.json
-    if p.is_dir():
-        bundle_errors = validate_bundle(p)
+    if path.is_dir():
+        bundle_errors = validate_bundle(path)
         if bundle_errors:
-            print(BUNDLE_INTEGRITY_REJECT_MESSAGE, file=sys.stderr)
-            for err in bundle_errors:
-                print(f"  {err}", file=sys.stderr)
-            sys.exit(1)
-        print("OK")
-        sys.exit(0)
+            errors.append(BUNDLE_INTEGRITY_REJECT_MESSAGE)
+            errors.extend(bundle_errors)
+            return False, errors, []
+        return True, [], []
 
-    # Root JSON mode: single file (legacy)
-    payload = json.loads(p.read_text(encoding="utf-8"))
+    # Root JSON mode
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        return False, [f"Invalid JSON: {e}"], []
 
-    # Step 1: Reject codes.EV before schema (clear, human-readable reason)
     pre_errors = reject_codes_ev_before_schema(payload)
     if pre_errors:
-        print(CODES_EV_REJECT_MESSAGE, file=sys.stderr)
-        for err in pre_errors:
-            print(f"  {err}", file=sys.stderr)
-        sys.exit(1)
+        errors.append(CODES_EV_REJECT_MESSAGE)
+        errors.extend(pre_errors)
+        return False, errors, []
 
-    # Step 2: Schema validation
     try:
         validate_json(payload)
     except Exception as e:
-        print(str(e), file=sys.stderr)
-        sys.exit(1)
+        errors.append(str(e))
+        return False, errors, []
 
-    # Step 3: Dictionary consistency check
     dict_errors, dict_warnings = validate_dictionary_consistency(payload)
-    for warn in dict_warnings:
-        print(f"WARNING: {warn}", file=sys.stderr)
+    warnings.extend(dict_warnings)
     if dict_errors:
-        print("\nDictionary consistency check failed:", file=sys.stderr)
-        for err in dict_errors:
-            print(f"  {err}", file=sys.stderr)
-        sys.exit(1)
+        errors.append("Dictionary consistency check failed")
+        errors.extend(dict_errors)
+        return False, errors, warnings
 
-    print("OK")
-    sys.exit(0)
+    return True, [], warnings
+
+
+def emit_sarif(errors: list[str], path_str: str) -> dict:
+    """Produce minimal SARIF 2.1.0 run for GitHub Code Scanning / human readers."""
+    results = [
+        {
+            "ruleId": "aimo-standard/validation",
+            "level": "error",
+            "message": {"text": err},
+            "locations": [{"physicalLocation": {"artifactLocation": {"uri": path_str}, "region": {"startLine": 1}}}],
+        }
+        for err in errors
+    ]
+    return {
+        "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+        "version": "2.1.0",
+        "runs": [
+            {
+                "tool": {"driver": {"name": "AIMO Validator", "version": "0.1", "rules": [{"id": "aimo-standard/validation", "name": "AIMO validation"}]}},
+                "results": results,
+            }
+        ],
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Validate AIMO root JSON or Evidence Bundle directory.",
+    )
+    parser.add_argument("path", type=Path, help="Path to root JSON file or bundle directory")
+    parser.add_argument(
+        "--format",
+        choices=["default", "json", "sarif"],
+        default="default",
+        help="Output format: default (human), json (machine), sarif (Code Scanning)",
+    )
+    args = parser.parse_args()
+    p = args.path.resolve()
+
+    valid, errors, warnings = run_validation(p)
+    path_str = str(p)
+
+    if args.format == "json":
+        out = {"valid": valid, "errors": errors, "warnings": warnings, "path": path_str}
+        print(json.dumps(out, indent=2, ensure_ascii=False))
+    elif args.format == "sarif":
+        sarif = emit_sarif(errors, path_str) if errors else emit_sarif([], path_str)
+        print(json.dumps(sarif, indent=2, ensure_ascii=False))
+    else:
+        if errors:
+            for err in errors:
+                print(err, file=sys.stderr)
+        else:
+            for w in warnings:
+                print(f"WARNING: {w}", file=sys.stderr)
+            print("OK")
+
+    sys.exit(0 if valid else 1)
 
 if __name__ == "__main__":
     main()

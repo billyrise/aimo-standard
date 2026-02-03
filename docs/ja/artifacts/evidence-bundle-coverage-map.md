@@ -73,6 +73,13 @@ description: Evidence Bundle Coverage Map テンプレ（v0.1）。監査向け�
 
 ---
 
+## Coverage Map（YAML）と Profile（JSON）の関係
+
+- **`coverage_map/coverage_map.yaml`** は **Informative**：AIMO の証跡/成果物と外部フレームワーク（ISO 42001、NIST AI RMF、EU AI Act 等）との高レベルな対応テーマを説明する。規範的な検証要件は課さない。
+- **`coverage_map/profiles/`** 配下の **Profile JSON**（例：`iso42001.json`, `nist_ai_rmf.json`, `eu_ai_act_annex_iv.json`）は **規範的な変換仕様**：`schemas/jsonschema/aimo-profile.schema.json` に準拠し、機械可読なマッピング（どの AIMO オブジェクトがどのフレームワーク条項に対応するか）を定義する。バリデータはプロファイル適合チェック（必須マッピングの充足）に利用可能。実装は [Validator](../validator/index.md) を参照。
+
+---
+
 ## 関連
 
 - [Evidence Bundle（概要）](evidence-bundle.md)

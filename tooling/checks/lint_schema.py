@@ -57,6 +57,9 @@ SCHEMA_EXAMPLE_MAP = {
     "aimo-standard.schema.json": [
         "examples/**/root.json",
     ],
+    "aimo-profile.schema.json": [
+        "coverage_map/profiles/*.json",
+    ],
 }
 
 
@@ -159,6 +162,8 @@ def main():
             if pattern.startswith("examples/"):
                 base_dir = ROOT
             elif pattern.startswith("source_pack/"):
+                base_dir = ROOT
+            elif pattern.startswith("coverage_map/"):
                 base_dir = ROOT
             else:
                 base_dir = EXAMPLES

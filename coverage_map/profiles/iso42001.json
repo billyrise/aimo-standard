@@ -1,0 +1,10 @@
+{
+  "profile_id": "PR-ISO42001-v0.1",
+  "target": "ISO_42001",
+  "target_version": "1.0",
+  "mappings": [
+    { "source_object_ref": "Summary", "target_field": "4.1 Context of the organization", "required": true },
+    { "source_object_ref": "dictionary", "target_field": "5.2 Policy", "required": true },
+    { "source_object_ref": "evidence", "target_field": "7.5 Documented information", "required": true }
+  ]
+}

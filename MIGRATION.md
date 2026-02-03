@@ -2,6 +2,16 @@
 
 This guide documents the migration from language-coupled taxonomy data to a language-neutral structure with separate translation packs.
 
+## v0.1 ID namespace: EV (Taxonomy) → LG (Log/Event Type)
+
+In **AIMO Standard v0.1**, the taxonomy dimension for classifying log/event types (request record, access log, etc.) uses the **LG-** prefix only. The **EV-** prefix is reserved exclusively for **Evidence artifact IDs** (e.g. `evidence[].id`, bundle object identifiers).
+
+- **If you have existing taxonomy codes** such as `EV-001` … `EV-015` (formerly "Evidence Type"): treat them as **LG-001** … **LG-015** in v0.1. Update `evidence[].codes` to use `"LG": ["LG-001", …]` instead of `"EV": ["EV-001", …]`.
+- **Validators** reject use of `EV` as a taxonomy dimension in `evidence[].codes`; use `LG` and `LG-xxx` codes only for the log/event dimension.
+- See [ID Policy / Namespace (04b)](docs/en/standard/current/04b-id-policy-namespace.md) for the normative definition.
+
+Migration scripts to rename EV-* to LG-* in existing payloads are optional; the mapping is a direct substitution (EV-001 → LG-001, etc.) for the same code set.
+
 ## Overview
 
 ### Before (Legacy Structure)
