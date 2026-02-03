@@ -1,0 +1,3201 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AIMO 분류체계 - AI 시스템 분류를 위한 8개 차원과 91개 코드의 분류 시스템. 기능 범위, 사용 사례, 데이터 유형, 채널, 통합, 리스크, 결과 및 증거를 다룹니다.">
+      
+      
+        <meta name="author" content="AIMO Standard Contributors">
+      
+      
+        <link rel="canonical" href="https://standard.aimoaas.com/latest/ko/standard/current/03-taxonomy/">
+      
+      
+        <link rel="prev" href="../02-scope/">
+      
+      
+        <link rel="next" href="../04b-id-policy-namespace/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Taxonomy - AIMO Standard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/ko/standard/current/03-taxonomy/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latestja//ko/standard/current/03-taxonomy/">
+
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/ko/standard/current/03-taxonomy/">
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIMO Standard">
+<meta property="og:title" content="Taxonomy">
+<meta property="og:description" content="AIMO 분류체계 - AI 시스템 분류를 위한 8개 차원과 91개 코드의 분류 시스템. 기능 범위, 사용 사례, 데이터 유형, 채널, 통합, 리스크, 결과 및 증거를 다룹니다.">
+<meta property="og:url" content="https://standard.aimoaas.com/latest/ko/standard/current/03-taxonomy/">
+<meta property="og:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:locale:alternate" content="ja_JP">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Taxonomy">
+<meta name="twitter:description" content="AIMO 분류체계 - AI 시스템 분류를 위한 8개 차원과 91개 코드의 분류 시스템. 기능 범위, 사용 사례, 데이터 유형, 채널, 통합, 리스크, 결과 및 증거를 다룹니다.">
+<meta name="twitter:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
+
+
+
+<meta name="description" content="AIMO 분류체계 - AI 시스템 분류를 위한 8개 차원과 91개 코드의 분류 시스템. 기능 범위, 사용 사례, 데이터 유형, 채널, 통합, 리스크, 결과 및 증거를 다룹니다.">
+
+<meta name="author" content="AIMO Standard Contributors">
+<meta name="keywords" content="AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance, ISO 42001, NIST AI RMF, EU AI Act, evidence management">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AIMO Standard",
+  "url": "https://standard.aimoaas.com/latest",
+  "description": "Open standard for AI governance, audit evidence, and agentic AI risk management. Taxonomy with 8 dimensions and 91 codes for enterprise AI compliance.",
+  "inLanguage": ["en", "ja"],
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIMO Standard Contributors",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://standard.aimoaas.com/latest?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Taxonomy",
+  "description": "AIMO 분류체계 - AI 시스템 분류를 위한 8개 차원과 91개 코드의 분류 시스템. 기능 범위, 사용 사례, 데이터 유형, 채널, 통합, 리스크, 결과 및 증거를 다룹니다.",
+  "url": "https://standard.aimoaas.com/latest/ko/standard/current/03-taxonomy/",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AIMO Standard",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIMO Standard Contributors",
+    "url": "https://standard.aimoaas.com/latest"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI Governance",
+    "description": "Standards and frameworks for AI system governance and audit"
+  },
+  "keywords": "AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance"
+}
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://standard.aimoaas.com/latest"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ko",
+      "item": "https://standard.aimoaas.com/latestko/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Standard",
+      "item": "https://standard.aimoaas.com/latestko/standard/"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Current",
+      "item": "https://standard.aimoaas.com/latestko/standard/current/"
+    },{
+      "@type": "ListItem",
+      "position": 5,
+      "name": "03 Taxonomy",
+      "item": "https://standard.aimoaas.com/latestko/standard/current/03-taxonomy/"
+    }
+  ]
+}
+</script>
+
+
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../../../" title="AIMO Standard" class="md-header__button md-logo" aria-label="AIMO Standard" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AIMO Standard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Taxonomy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="언어설정">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../standard/current/03-taxonomy/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../ja/standard/current/03-taxonomy/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../es/standard/current/03-taxonomy/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../fr/standard/current/03-taxonomy/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../de/standard/current/03-taxonomy/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../pt/standard/current/03-taxonomy/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../it/standard/current/03-taxonomy/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../zh/standard/current/03-taxonomy/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../zh-TW/standard/current/03-taxonomy/" hreflang="zh-TW" class="md-select__link">
+              繁體中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ko" class="md-select__link">
+              한국어
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/billyrise/aimo-standard" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AIMO 표준
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Standard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../artifacts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Artifacts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../validator/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Validator
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../examples/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../releases/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Releases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../governance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Governance
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="AIMO Standard" class="md-nav__button md-logo" aria-label="AIMO Standard" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AIMO Standard
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/billyrise/aimo-standard" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AIMO 표준
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Standard
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Standard
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Current
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Current
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-versioning-reference-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versioning & Reference Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-scope/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scope
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Taxonomy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Taxonomy
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      목적
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      이것이 아닌 것 (과대 주장 금지)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI/에이전틱 특정 리스크 예시 (AI 특정 표준이 필요한 이유)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      차원 개요
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="차원 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      사용 규칙
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      차원 정의
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="차원 정의">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FS: 기능 범위
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC: 사용 사례 분류
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dt" class="md-nav__link">
+    <span class="md-ellipsis">
+      DT: 데이터 유형
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch" class="md-nav__link">
+    <span class="md-ellipsis">
+      CH: 채널
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im" class="md-nav__link">
+    <span class="md-ellipsis">
+      IM: 통합 모드
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rs" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS: 리스크 표면
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB: 결과 / 혜택
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lg" class="md-nav__link">
+    <span class="md-ellipsis">
+      LG: 로그/기록 유형
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      사용 방법
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="사용 방법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      증거와의 관계
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      딕셔너리 참조
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      분류 예시
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssot" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSOT 참조
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      관련 페이지
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-id-policy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ID Policy / Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Codes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-ev-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EV Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-evidence-bundle-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../versions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../conformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conformance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../coverage-map/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Coverage Map
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Coverage Map
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methodology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/iso-42001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42001
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/nist-ai-rmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NIST AI RMF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/eu-ai-act/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EU AI Act
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/isms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISMS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../artifacts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Artifacts
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Artifacts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/evidence-bundle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/evidence-bundle-coverage-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evidence Bundle Coverage Map (template)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/minimum-evidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minimum Evidence Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../artifacts/log-schemas/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Log Schemas
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Log Schemas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/log-schemas/shadow-ai-discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shadow AI Discovery Log Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/log-schemas/agent-activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Activity Log Format
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../validator/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Validator
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Validator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../examples/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../releases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Releases
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../governance/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Governance
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Governance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/trust-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trust Package
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/responsibility-boundary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Responsibility Boundary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/human-oversight-protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Human Oversight Protocol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/trademarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trademarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/cite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Cite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/seo-canonical-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SEO & Canonical Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Localization Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      목적
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      이것이 아닌 것 (과대 주장 금지)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI/에이전틱 특정 리스크 예시 (AI 특정 표준이 필요한 이유)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      차원 개요
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="차원 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      사용 규칙
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      차원 정의
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="차원 정의">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FS: 기능 범위
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC: 사용 사례 분류
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dt" class="md-nav__link">
+    <span class="md-ellipsis">
+      DT: 데이터 유형
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch" class="md-nav__link">
+    <span class="md-ellipsis">
+      CH: 채널
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im" class="md-nav__link">
+    <span class="md-ellipsis">
+      IM: 통합 모드
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rs" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS: 리스크 표면
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ob" class="md-nav__link">
+    <span class="md-ellipsis">
+      OB: 결과 / 혜택
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lg" class="md-nav__link">
+    <span class="md-ellipsis">
+      LG: 로그/기록 유형
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      사용 방법
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="사용 방법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      증거와의 관계
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      딕셔너리 참조
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      분류 예시
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssot" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSOT 참조
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      관련 페이지
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+
+                  
+
+
+  
+    <a href="https://github.com/billyrise/aimo-standard/edit/main/docs/en/ko/standard/current/03-taxonomy.md" title="이 페이지를 편집" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/billyrise/aimo-standard/raw/main/docs/en/ko/standard/current/03-taxonomy.md" title="페이지소스 보기" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">분류체계</h1>
+<p>AIMO 분류체계는 AI 시스템, 그 사용 및 관련 거버넌스 요구사항을 분류하기 위한 구조화된 분류 시스템을 제공합니다. 조직 전반에 걸쳐 일관된 분류 및 증거 관리를 가능하게 하는 <strong>8개 차원</strong>과 <strong>91개 코드</strong>로 구성됩니다.</p>
+<h2 id="_2">목적</h2>
+<p>분류체계는 감사 관점에서 세 가지 주요 목적을 수행합니다:</p>
+<ol>
+<li>
+<p><strong>설명 가능성</strong>: 조직 전반에 걸쳐 AI 사용 사례를 설명하기 위한 공통 어휘를 제공하여 감사자 및 이해관계자와의 명확한 커뮤니케이션을 지원합니다.</p>
+</li>
+<li>
+<p><strong>증거 준비</strong>: 표준화된 분류를 사용하여 AI 시스템을 체계적으로 문서화할 수 있게 하여 증거 수집 및 검토를 더 효율적으로 만듭니다.</p>
+</li>
+<li>
+<p><strong>비교 가능성</strong>: 조직이 일관된 용어를 사용하여 다양한 맥락에서 AI 사용 사례를 비교할 수 있게 합니다.</p>
+</li>
+</ol>
+<h2 id="_3">이것이 아닌 것 (과대 주장 금지)</h2>
+<p>!!! warning "중요"
+    AIMO 표준은 <strong>설명 가능성 및 증거 준비</strong>를 지원합니다. 법률 자문을 제공하거나, 컴플라이언스를 보장하거나, 어떤 규정 또는 프레임워크에 대한 적합성을 인증하지 <strong>않습니다</strong>. 자세한 내용은 <a href="../../../governance/responsibility-boundary/">책임 경계</a>를 참조하세요.</p>
+<p>분류체계는 분류 시스템일 뿐입니다. 다음은 수행하지 않습니다:</p>
+<ul>
+<li>법률 또는 규정 준수 보장</li>
+<li>전문적인 법률, 보안 또는 컴플라이언스 자문 대체</li>
+<li>외부 프레임워크(ISO, NIST, EU AI Act 등)에 대한 적합성 인증</li>
+<li>리스크 평가 또는 통제 권고 제공</li>
+</ul>
+<h2 id="ai-ai">AI/에이전틱 특정 리스크 예시 (AI 특정 표준이 필요한 이유)</h2>
+<p>전통적인 보안 통제(예: ISMS)만으로는 LLM/에이전트 특정 실패 모드와 자율 에이전트 편차(예: 의도치 않은 도구 실행, 재귀 루프)를 <strong>감사 설명 가능한</strong> 방식으로 캡처하지 못하는 경우가 많습니다.
+AIMO 분류체계는 이러한 AI 특정 리스크를 분류하고 증거 요구사항 및 해결 워크플로우에 연결하는 공유 언어를 제공합니다.</p>
+<p>(차별화를 위한 참조 예시. 아래 코드는 설명 목적의 플레이스홀더입니다; 공식 코드 시스템은 표준 정의를 따릅니다.)
+- AG-01 폭주 루프 / 재귀
+- AG-02 무단 도구 사용 (혼란된 대리인 스타일 오용)
+- AG-03 권한 경계 드리프트</p>
+<h2 id="_4">차원 개요</h2>
+<p>AIMO는 AI 사용 사례를 분류하기 위해 8개 차원을 사용합니다. 각 차원에는 고유한 2자리 접두사가 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>이름</th>
+<th>코드 수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FS</strong></td>
+<td>기능 범위</td>
+<td>6</td>
+<td>어떤 비즈니스 기능이 지원되는지</td>
+</tr>
+<tr>
+<td><strong>UC</strong></td>
+<td>사용 사례 분류</td>
+<td>30</td>
+<td>어떤 유형의 작업이 수행되는지</td>
+</tr>
+<tr>
+<td><strong>DT</strong></td>
+<td>데이터 유형</td>
+<td>10</td>
+<td>어떤 데이터 분류가 관련되는지</td>
+</tr>
+<tr>
+<td><strong>CH</strong></td>
+<td>채널</td>
+<td>8</td>
+<td>사용자가 AI에 접근하는 방법</td>
+</tr>
+<tr>
+<td><strong>IM</strong></td>
+<td>통합 모드</td>
+<td>7</td>
+<td>AI가 기업 시스템에 연결되는 방법</td>
+</tr>
+<tr>
+<td><strong>RS</strong></td>
+<td>리스크 표면</td>
+<td>8</td>
+<td>관련된 리스크</td>
+</tr>
+<tr>
+<td><strong>OB</strong></td>
+<td>결과 / 혜택</td>
+<td>7</td>
+<td>기대되는 혜택</td>
+</tr>
+<tr>
+<td><strong>LG</strong></td>
+<td>로그/기록 유형</td>
+<td>15</td>
+<td>필요한 로그/기록</td>
+</tr>
+</tbody>
+</table>
+<p><strong>총계: 8개 차원에 걸쳐 91개 코드</strong>（<strong>EV-</strong>는 Evidence 산출물 ID 전용; 분류법 로그/기록 차원은 <strong>LG-</strong> 사용.)</p>
+<h3 id="_5">사용 규칙</h3>
+<table>
+<thead>
+<tr>
+<th>차원</th>
+<th>선택</th>
+<th>감사 영향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS, IM</td>
+<td>정확히 1개</td>
+<td>책임 할당을 위한 기본 분류</td>
+</tr>
+<tr>
+<td>UC, DT, CH, RS, LG</td>
+<td>1개 이상</td>
+<td>리스크 범위를 위한 완전한 열거 필요</td>
+</tr>
+<tr>
+<td>OB</td>
+<td>0개 이상</td>
+<td>선택적; 기대되는 비즈니스 가치 문서화</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_6">차원 정의</h2>
+<h3 id="fs">FS: 기능 범위</h3>
+<p>AI 사용을 지원하는 비즈니스 기능별로 분류합니다. <strong>정확히 하나를 선택합니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>레이블</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS-001</td>
+<td>최종 사용자 생산성</td>
+<td>내부 최종 사용자의 생산성 향상에 사용되는 AI (작성, 검색, 요약, 회의 메모).</td>
+</tr>
+<tr>
+<td>FS-002</td>
+<td>고객 대면 기능</td>
+<td>고객에게 제공되는 제품/서비스 기능에 내장된 AI.</td>
+</tr>
+<tr>
+<td>FS-003</td>
+<td>개발자 도구</td>
+<td>소프트웨어 개발 및 엔지니어링 작업을 지원하는 데 사용되는 AI.</td>
+</tr>
+<tr>
+<td>FS-004</td>
+<td>IT 운영</td>
+<td>IT 운영 및 시스템 관리에 사용되는 AI (모니터링, 인시던트 처리).</td>
+</tr>
+<tr>
+<td>FS-005</td>
+<td>보안 운영</td>
+<td>보안 모니터링/대응에 사용되는 AI (SOC, 탐지, 분류).</td>
+</tr>
+<tr>
+<td>FS-006</td>
+<td>거버넌스 및 컴플라이언스</td>
+<td>거버넌스/컴플라이언스 활동을 지원하는 데 사용되는 AI (정책, 감사 증거).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc">UC: 사용 사례 분류</h3>
+<p>작업 또는 상호 작용 유형별로 AI 사용을 분류합니다. <strong>하나 이상을 선택합니다.</strong> 전체 목록에는 30개 코드가 포함되며; 아래는 대표적인 예시입니다.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>레이블</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UC-001</td>
+<td>일반 Q&amp;A</td>
+<td>일반 질문 응답 및 대화형 사용.</td>
+</tr>
+<tr>
+<td>UC-002</td>
+<td>요약</td>
+<td>문서, 회의 또는 메시지 요약.</td>
+</tr>
+<tr>
+<td>UC-003</td>
+<td>번역</td>
+<td>언어 간 번역.</td>
+</tr>
+<tr>
+<td>UC-004</td>
+<td>콘텐츠 작성</td>
+<td>이메일, 문서 또는 보고서 초안 생성.</td>
+</tr>
+<tr>
+<td>UC-005</td>
+<td>코드 생성</td>
+<td>코드 또는 스크립트 생성.</td>
+</tr>
+<tr>
+<td>UC-006</td>
+<td>코드 리뷰</td>
+<td>문제 및 개선 사항에 대한 코드 검토.</td>
+</tr>
+<tr>
+<td>UC-009</td>
+<td>검색/RAG</td>
+<td>RAG 기반 검색 및 질문 응답.</td>
+</tr>
+<tr>
+<td>UC-010</td>
+<td>에이전틱 자동화</td>
+<td>작업을 실행하는 자율 또는 반자율 에이전트.</td>
+</tr>
+</tbody>
+</table>
+<p>30개 UC 코드의 전체 목록은 <a href="../05-dictionary/">딕셔너리</a>를 참조하세요.</p>
+<h3 id="dt">DT: 데이터 유형</h3>
+<p>관련된 데이터의 민감도 및 분류를 분류합니다. <strong>하나 이상을 선택합니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>레이블</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DT-001</td>
+<td>공개</td>
+<td>공개적으로 이용 가능하고 공개를 위한 데이터.</td>
+</tr>
+<tr>
+<td>DT-002</td>
+<td>내부</td>
+<td>비공개 내부 비즈니스 데이터.</td>
+</tr>
+<tr>
+<td>DT-003</td>
+<td>기밀</td>
+<td>제한된 접근이 필요한 매우 민감한 내부 데이터.</td>
+</tr>
+<tr>
+<td>DT-004</td>
+<td>개인 데이터</td>
+<td>해당 개인정보 보호법에 정의된 개인 데이터.</td>
+</tr>
+<tr>
+<td>DT-005</td>
+<td>민감한 개인 데이터</td>
+<td>특수 범주/민감한 개인 데이터.</td>
+</tr>
+<tr>
+<td>DT-006</td>
+<td>자격 증명</td>
+<td>인증 비밀 및 자격 증명.</td>
+</tr>
+<tr>
+<td>DT-007</td>
+<td>소스 코드</td>
+<td>소스 코드 및 관련 산출물.</td>
+</tr>
+<tr>
+<td>DT-008</td>
+<td>고객 데이터</td>
+<td>고객이 제공하거나 고객과 관련된 데이터.</td>
+</tr>
+<tr>
+<td>DT-009</td>
+<td>운영 로그</td>
+<td>모니터링 및 문제 해결에 사용되는 운영 또는 시스템 로그.</td>
+</tr>
+<tr>
+<td>DT-010</td>
+<td>보안 텔레메트리</td>
+<td>경고 및 탐지와 같은 보안 텔레메트리.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch">CH: 채널</h3>
+<p>사용자가 AI에 접근하거나 상호 작용하는 방법을 분류합니다. <strong>하나 이상을 선택합니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>레이블</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CH-001</td>
+<td>웹 UI</td>
+<td>웹 사용자 인터페이스를 통한 사용.</td>
+</tr>
+<tr>
+<td>CH-002</td>
+<td>API</td>
+<td>프로그래밍 방식 API 통합을 통한 사용.</td>
+</tr>
+<tr>
+<td>CH-003</td>
+<td>IDE 플러그인</td>
+<td>IDE/편집기 플러그인을 통한 사용.</td>
+</tr>
+<tr>
+<td>CH-004</td>
+<td>ChatOps</td>
+<td>채팅 플랫폼(Slack/Teams) 통합을 통한 사용.</td>
+</tr>
+<tr>
+<td>CH-005</td>
+<td>데스크톱 앱</td>
+<td>네이티브 데스크톱 애플리케이션을 통한 사용.</td>
+</tr>
+<tr>
+<td>CH-006</td>
+<td>모바일 앱</td>
+<td>네이티브 모바일 애플리케이션을 통한 사용.</td>
+</tr>
+<tr>
+<td>CH-007</td>
+<td>이메일</td>
+<td>이메일 인터페이스 또는 이메일 기반 자동화를 통한 사용.</td>
+</tr>
+<tr>
+<td>CH-008</td>
+<td>명령줄</td>
+<td>명령줄 인터페이스를 통한 사용.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="im">IM: 통합 모드</h3>
+<p>AI가 기업 시스템에 통합되는 방법을 분류합니다. <strong>정확히 하나를 선택합니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>레이블</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IM-001</td>
+<td>독립형</td>
+<td>기업 시스템에 통합 없이 독립적으로 사용.</td>
+</tr>
+<tr>
+<td>IM-002</td>
+<td>SaaS 통합</td>
+<td>SaaS 애플리케이션이 AI 기능을 통합.</td>
+</tr>
+<tr>
+<td>IM-003</td>
+<td>기업 앱 내장</td>
+<td>내부 기업 애플리케이션에 내장된 AI.</td>
+</tr>
+<tr>
+<td>IM-004</td>
+<td>RPA/워크플로우</td>
+<td>워크플로우 자동화 또는 RPA 내에서 호출되는 AI.</td>
+</tr>
+<tr>
+<td>IM-005</td>
+<td>온프레미스 / 프라이빗</td>
+<td>프라이빗/온프레미스 환경에서 호스팅되는 AI.</td>
+</tr>
+<tr>
+<td>IM-006</td>
+<td>관리형 서비스</td>
+<td>기업 통제가 있는 관리형 서비스를 통한 사용.</td>
+</tr>
+<tr>
+<td>IM-007</td>
+<td>Shadow / 미관리</td>
+<td>승인된 거버넌스 통제 외부에서의 사용.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rs">RS: 리스크 표면</h3>
+<p>AI 사용과 관련된 리스크 유형을 분류합니다. <strong>하나 이상을 선택합니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>레이블</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RS-001</td>
+<td>데이터 유출</td>
+<td>의도치 않은 데이터 공개 리스크.</td>
+</tr>
+<tr>
+<td>RS-002</td>
+<td>보안 남용</td>
+<td>시스템이 악의적 목적으로 남용되는 리스크.</td>
+</tr>
+<tr>
+<td>RS-003</td>
+<td>컴플라이언스 위반</td>
+<td>법률/규정/정책 위반 리스크.</td>
+</tr>
+<tr>
+<td>RS-004</td>
+<td>IP 침해</td>
+<td>저작권/특허/영업 비밀 침해 리스크.</td>
+</tr>
+<tr>
+<td>RS-005</td>
+<td>모델 오용</td>
+<td>부적절한 모델 사용 또는 과의존으로 인한 리스크.</td>
+</tr>
+<tr>
+<td>RS-006</td>
+<td>편향/공정성</td>
+<td>불공정하거나 편향된 결과의 리스크.</td>
+</tr>
+<tr>
+<td>RS-007</td>
+<td>안전</td>
+<td>유해한 콘텐츠 또는 안전하지 않은 권장의 리스크.</td>
+</tr>
+<tr>
+<td>RS-008</td>
+<td>제3자 리스크</td>
+<td>벤더, 하위 처리자 및 모델 제공자 리스크.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ob">OB: 결과 / 혜택</h3>
+<p>AI 사용에서 기대되는 결과 또는 혜택을 분류합니다. <strong>선택적; 0개 이상을 선택합니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>레이블</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OB-001</td>
+<td>효율성</td>
+<td>시간/비용 효율성 향상.</td>
+</tr>
+<tr>
+<td>OB-002</td>
+<td>품질</td>
+<td>출력의 품질/정확성 향상.</td>
+</tr>
+<tr>
+<td>OB-003</td>
+<td>수익</td>
+<td>수익 성장에 기여.</td>
+</tr>
+<tr>
+<td>OB-004</td>
+<td>리스크 감소</td>
+<td>운영/보안/컴플라이언스 리스크 감소.</td>
+</tr>
+<tr>
+<td>OB-005</td>
+<td>혁신</td>
+<td>새로운 기능 또는 혁신 가능.</td>
+</tr>
+<tr>
+<td>OB-006</td>
+<td>고객 만족</td>
+<td>고객 만족도 향상.</td>
+</tr>
+<tr>
+<td>OB-007</td>
+<td>직원 경험</td>
+<td>직원 경험 향상.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lg">LG: 로그/기록 유형</h3>
+<p>필요하거나 수집된 로그/기록 유형을 분류합니다. <strong>하나 이상을 선택합니다.</strong>（EV-는 Evidence 산출물 ID 전용.)</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>레이블</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LG-001</td>
+<td>요청 레코드</td>
+<td>AI 사용/서비스가 요청되고 설명되었다는 증거.</td>
+</tr>
+<tr>
+<td>LG-002</td>
+<td>검토/승인 레코드</td>
+<td>검토/승인이 수행되었다는 증거.</td>
+</tr>
+<tr>
+<td>LG-003</td>
+<td>예외 레코드</td>
+<td>예외가 부여되고 추적되었다는 증거.</td>
+</tr>
+<tr>
+<td>LG-004</td>
+<td>갱신/재평가 레코드</td>
+<td>갱신 또는 재평가가 발생했다는 증거.</td>
+</tr>
+<tr>
+<td>LG-005</td>
+<td>변경 로그 항목</td>
+<td>변경 및 그 승인에 대한 증거.</td>
+</tr>
+<tr>
+<td>LG-006</td>
+<td>무결성 증명</td>
+<td>무결성에 대한 증거 (해시, 서명, WORM).</td>
+</tr>
+<tr>
+<td>LG-007</td>
+<td>접근 로그</td>
+<td>접근 통제 및 접근 이력에 대한 증거.</td>
+</tr>
+<tr>
+<td>LG-008</td>
+<td>모델/서비스 인벤토리</td>
+<td>사용된 모델/서비스의 인벤토리 레코드.</td>
+</tr>
+<tr>
+<td>LG-009</td>
+<td>리스크 평가</td>
+<td>사용/서비스에 대한 문서화된 리스크 평가.</td>
+</tr>
+<tr>
+<td>LG-010</td>
+<td>통제 매핑</td>
+<td>외부 프레임워크에 대한 통제 매핑 증거.</td>
+</tr>
+<tr>
+<td>LG-011</td>
+<td>교육/지침</td>
+<td>사용자에게 제공된 교육 또는 지침에 대한 증거.</td>
+</tr>
+<tr>
+<td>LG-012</td>
+<td>모니터링 증거</td>
+<td>모니터링 및 지속적인 감독에 대한 증거.</td>
+</tr>
+<tr>
+<td>LG-013</td>
+<td>인시던트 레코드</td>
+<td>AI 사용과 관련된 인시던트 처리에 대한 증거.</td>
+</tr>
+<tr>
+<td>LG-014</td>
+<td>제3자 평가</td>
+<td>벤더 또는 제3자 평가에 대한 증거.</td>
+</tr>
+<tr>
+<td>LG-015</td>
+<td>증명/승인</td>
+<td>공식 증명 또는 승인 레코드.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_7">사용 방법</h2>
+<h3 id="_8">증거와의 관계</h3>
+<p>각 증거 문서는 문서화되는 AI 시스템 또는 사용 사례를 분류하기 위해 여러 차원의 코드를 참조합니다. 8차원 분류는 다음을 가능하게 합니다:</p>
+<ul>
+<li>조직 전반에 걸친 <strong>일관된 분류</strong></li>
+<li>차원 값에 의한 <strong>리스크 기반 필터링</strong></li>
+<li>커버리지 맵을 통한 <strong>프레임워크 매핑</strong></li>
+</ul>
+<h3 id="_9">딕셔너리 참조</h3>
+<p>범위 노트 및 예시를 포함한 완전한 코드 정의는 <a href="../05-dictionary/">딕셔너리</a>를 참조하세요.</p>
+<h3 id="_10">분류 예시</h3>
+<pre><code>FS: FS-001 (최종 사용자 생산성)
+UC: UC-001 (일반 Q&amp;A), UC-002 (요약)
+DT: DT-002 (내부), DT-004 (개인 데이터)
+CH: CH-001 (웹 UI)
+IM: IM-002 (SaaS 통합)
+RS: RS-001 (데이터 유출), RS-003 (컴플라이언스 위반)
+OB: OB-001 (효율성)
+LG: LG-001 (요청 레코드), LG-002 (검토/승인 레코드)
+</code></pre>
+<h2 id="ssot">SSOT 참조</h2>
+<p>!!! info "진실 공급원"
+    권위 있는 정의는 <code>source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv</code>입니다. 이 페이지는 설명 목적입니다. 업데이트 워크플로우는 <a href="../../../contributing/localization/">현지화 가이드</a>를 참조하세요.</p>
+<h2 id="_11">관련 페이지</h2>
+<ul>
+<li><a href="../04-codes/">코드</a> - 코드 형식, 명명 규칙 및 생명주기</li>
+<li><a href="../05-dictionary/">딕셔너리</a> - 완전한 코드 목록 및 열 정의</li>
+<li><a href="../06-ev-template/">증거 템플릿</a> - 증거에서 코드를 사용하는 방법</li>
+<li><a href="../../../governance/responsibility-boundary/">책임 경계</a> - 과대 주장 금지 선언</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 AIMO Standard Contributors
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "content.action.edit", "content.action.view"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
