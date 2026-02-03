@@ -1,40 +1,42 @@
-# AIMO Taxonomy - English Labels and Definitions (SSOT)
-# ======================================================
-# This file is the SINGLE SOURCE OF TRUTH for English translations.
-# Edit this file directly to add/update English labels and definitions.
+# AIMO Taxonomy - English Labels and Definitions
+# Generated from: source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv
+# DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_i18n_taxonomy.py
 #
-# Structure is defined in: data/taxonomy/canonical.yaml
-# Language code: en (BCP47)
-#
-# After editing, regenerate derived files:
-#   python tooling/taxonomy/build_artifacts.py --version current --langs en ja
+# This file provides translations for the canonical taxonomy structure.
+# Structure is defined in data/taxonomy/canonical.yaml
 
 language: "en"
 language_name: "English"
-generated_date: "2026-01-31"
+generated_date: "2026-02-03"
 
 dimensions:
-  FS:
-    name: "Functional Scope"
+  CH:
+    name: "Channel"
     codes:
-      FS-001:
-        label: "End-user Productivity"
-        definition: "AI used to improve productivity of internal end users (writing, search, summarization, meeting notes)."
-      FS-002:
-        label: "Customer-facing Features"
-        definition: "AI embedded in product/service features provided to customers."
-      FS-003:
-        label: "Developer Tooling"
-        definition: "AI used to assist software development and engineering tasks."
-      FS-004:
-        label: "IT Operations"
-        definition: "AI used for IT operations and system administration (monitoring, incident handling)."
-      FS-005:
-        label: "Security Operations"
-        definition: "AI used for security monitoring/response (SOC, detection, triage)."
-      FS-006:
-        label: "Governance & Compliance"
-        definition: "AI used to support governance/compliance activities (policy, audit evidence)."
+      CH-001:
+        label: "Web UI"
+        definition: "Use via a web user interface."
+      CH-002:
+        label: "API"
+        definition: "Use via programmatic API integration."
+      CH-003:
+        label: "IDE Plugin"
+        definition: "Use via IDE/editor plugin."
+      CH-004:
+        label: "ChatOps"
+        definition: "Use via chat platforms (Slack/Teams) integrations."
+      CH-005:
+        label: "Desktop App"
+        definition: "Use via native desktop application."
+      CH-006:
+        label: "Mobile App"
+        definition: "Use via native mobile application."
+      CH-007:
+        label: "Email"
+        definition: "Use via email interface or email-based automation."
+      CH-008:
+        label: "Command Line"
+        definition: "Use via command-line interface."
   DT:
     name: "Data Type"
     codes:
@@ -68,108 +70,6 @@ dimensions:
       DT-010:
         label: "Security Telemetry"
         definition: "Security telemetry such as alerts and detections."
-  CH:
-    name: "Channel"
-    codes:
-      CH-001:
-        label: "Web UI"
-        definition: "Use via a web user interface."
-      CH-002:
-        label: "API"
-        definition: "Use via programmatic API integration."
-      CH-003:
-        label: "IDE Plugin"
-        definition: "Use via IDE/editor plugin."
-      CH-004:
-        label: "ChatOps"
-        definition: "Use via chat platforms (Slack/Teams) integrations."
-      CH-005:
-        label: "Desktop App"
-        definition: "Use via native desktop application."
-      CH-006:
-        label: "Mobile App"
-        definition: "Use via native mobile application."
-      CH-007:
-        label: "Email"
-        definition: "Use via email interface or email-based automation."
-      CH-008:
-        label: "Command Line"
-        definition: "Use via command-line interface."
-  IM:
-    name: "Integration Mode"
-    codes:
-      IM-001:
-        label: "Standalone"
-        definition: "Used standalone without integration into enterprise systems."
-      IM-002:
-        label: "SaaS Integrated"
-        definition: "SaaS application integrates AI features."
-      IM-003:
-        label: "Enterprise App Embedded"
-        definition: "AI embedded into internal enterprise applications."
-      IM-004:
-        label: "RPA/Workflow"
-        definition: "AI invoked within workflow automation or RPA."
-      IM-005:
-        label: "On-prem / Private"
-        definition: "AI hosted in private/on-prem environment."
-      IM-006:
-        label: "Managed Service"
-        definition: "Use via managed service with enterprise controls."
-      IM-007:
-        label: "Shadow / Unmanaged"
-        definition: "Use outside of approved governance controls."
-  RS:
-    name: "Risk Surface"
-    codes:
-      RS-001:
-        label: "Data Leakage"
-        definition: "Risk of unintended data disclosure."
-      RS-002:
-        label: "Security Abuse"
-        definition: "Risk that the system is abused for malicious purposes."
-      RS-003:
-        label: "Compliance Breach"
-        definition: "Risk of violating laws/regulations/policies."
-      RS-004:
-        label: "IP Infringement"
-        definition: "Risk of infringing copyright/patent/trade secrets."
-      RS-005:
-        label: "Model Misuse"
-        definition: "Risk from inappropriate model use or over-reliance."
-      RS-006:
-        label: "Bias/Fairness"
-        definition: "Risk of unfair or biased outcomes."
-      RS-007:
-        label: "Safety"
-        definition: "Risk of harmful content or unsafe recommendations."
-      RS-008:
-        label: "Third-party Risk"
-        definition: "Vendors, sub-processors, and model provider risks."
-  OB:
-    name: "Outcome / Benefit"
-    codes:
-      OB-001:
-        label: "Efficiency"
-        definition: "Improves time/cost efficiency."
-      OB-002:
-        label: "Quality"
-        definition: "Improves quality/accuracy of outputs."
-      OB-003:
-        label: "Revenue"
-        definition: "Contributes to revenue growth."
-      OB-004:
-        label: "Risk Reduction"
-        definition: "Reduces operational/security/compliance risk."
-      OB-005:
-        label: "Innovation"
-        definition: "Enables new capabilities or innovations."
-      OB-006:
-        label: "Customer Satisfaction"
-        definition: "Improves customer satisfaction."
-      OB-007:
-        label: "Employee Experience"
-        definition: "Improves employee experience."
   EV:
     name: "Evidence Type"
     codes:
@@ -218,6 +118,102 @@ dimensions:
       EV-015:
         label: "Attestation/Sign-off"
         definition: "Formal attestation or sign-off record."
+  FS:
+    name: "Functional Scope"
+    codes:
+      FS-001:
+        label: "End-user Productivity"
+        definition: "AI used to improve productivity of internal end users (writing, search, summarization, meeting notes)."
+      FS-002:
+        label: "Customer-facing Features"
+        definition: "AI embedded in product/service features provided to customers."
+      FS-003:
+        label: "Developer Tooling"
+        definition: "AI used to assist software development and engineering tasks."
+      FS-004:
+        label: "IT Operations"
+        definition: "AI used for IT operations and system administration (monitoring, incident handling)."
+      FS-005:
+        label: "Security Operations"
+        definition: "AI used for security monitoring/response (SOC, detection, triage)."
+      FS-006:
+        label: "Governance & Compliance"
+        definition: "AI used to support governance/compliance activities (policy, audit evidence)."
+  IM:
+    name: "Integration Mode"
+    codes:
+      IM-001:
+        label: "Standalone"
+        definition: "Used standalone without integration into enterprise systems."
+      IM-002:
+        label: "SaaS Integrated"
+        definition: "SaaS application integrates AI features."
+      IM-003:
+        label: "Enterprise App Embedded"
+        definition: "AI embedded into internal enterprise applications."
+      IM-004:
+        label: "RPA/Workflow"
+        definition: "AI invoked within workflow automation or RPA."
+      IM-005:
+        label: "On-prem / Private"
+        definition: "AI hosted in private/on-prem environment."
+      IM-006:
+        label: "Managed Service"
+        definition: "Use via managed service with enterprise controls."
+      IM-007:
+        label: "Shadow / Unmanaged"
+        definition: "Use outside of approved governance controls."
+  OB:
+    name: "Outcome / Benefit"
+    codes:
+      OB-001:
+        label: "Efficiency"
+        definition: "Improves time/cost efficiency."
+      OB-002:
+        label: "Quality"
+        definition: "Improves quality/accuracy of outputs."
+      OB-003:
+        label: "Revenue"
+        definition: "Contributes to revenue growth."
+      OB-004:
+        label: "Risk Reduction"
+        definition: "Reduces operational/security/compliance risk."
+      OB-005:
+        label: "Innovation"
+        definition: "Enables new capabilities or innovations."
+      OB-006:
+        label: "Customer Satisfaction"
+        definition: "Improves customer satisfaction."
+      OB-007:
+        label: "Employee Experience"
+        definition: "Improves employee experience."
+  RS:
+    name: "Risk Surface"
+    codes:
+      RS-001:
+        label: "Data Leakage"
+        definition: "Risk of unintended data disclosure."
+      RS-002:
+        label: "Security Abuse"
+        definition: "Risk that the system is abused for malicious purposes."
+      RS-003:
+        label: "Compliance Breach"
+        definition: "Risk of violating laws/regulations/policies."
+      RS-004:
+        label: "IP Infringement"
+        definition: "Risk of infringing copyright/patent/trade secrets."
+      RS-005:
+        label: "Model Misuse"
+        definition: "Risk from inappropriate model use or over-reliance."
+      RS-006:
+        label: "Bias/Fairness"
+        definition: "Risk of unfair or biased outcomes."
+      RS-007:
+        label: "Safety"
+        definition: "Risk of harmful content or unsafe recommendations."
+      RS-008:
+        label: "Third-party Risk"
+        definition: "Vendors, sub-processors, and model provider risks."
   UC:
     name: "Use Case Class"
     codes:

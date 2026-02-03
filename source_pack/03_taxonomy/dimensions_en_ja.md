@@ -9,29 +9,31 @@
 
 | ID | Name (EN) | Name (JA) | Code Count | Prefix |
 | --- | --- | --- | --- | --- |
-| **FS** | Functional Scope | 機能スコープ | 6 | `FS-` |
-| **DT** | Data Type | データ種別 | 10 | `DT-` |
 | **CH** | Channel | チャネル | 8 | `CH-` |
-| **IM** | Integration Mode | 統合形態 | 7 | `IM-` |
-| **RS** | Risk Surface | リスク面 | 8 | `RS-` |
-| **OB** | Outcome / Benefit | 成果 | 7 | `OB-` |
+| **DT** | Data Type | データ種別 | 10 | `DT-` |
 | **EV** | Evidence Type | 証跡種別 | 15 | `EV-` |
+| **FS** | Functional Scope | 機能スコープ | 6 | `FS-` |
+| **IM** | Integration Mode | 統合形態 | 7 | `IM-` |
+| **OB** | Outcome / Benefit | 成果 | 7 | `OB-` |
+| **RS** | Risk Surface | リスク面 | 8 | `RS-` |
 | **UC** | Use Case Class | ユースケース分類 | 30 | `UC-` |
 
 ---
 
 ## Code Summary by Dimension
 
-### FS: Functional Scope / 機能スコープ
+### CH: Channel / チャネル
 
 | Code | Label (EN) | Label (JA) | Status |
 | --- | --- | --- | --- |
-| FS-001 | End-user Productivity | 社内生産性 | active |
-| FS-002 | Customer-facing Features | 顧客向け機能 | active |
-| FS-003 | Developer Tooling | 開発支援 | active |
-| FS-004 | IT Operations | IT運用 | active |
-| FS-005 | Security Operations | セキュリティ運用 | active |
-| FS-006 | Governance & Compliance | ガバナンス/コンプライアンス | active |
+| CH-001 | Web UI | Web UI | active |
+| CH-002 | API | API | active |
+| CH-003 | IDE Plugin | IDEプラグイン | active |
+| CH-004 | ChatOps | チャット連携 | active |
+| CH-005 | Desktop App | デスクトップアプリ | active |
+| CH-006 | Mobile App | モバイルアプリ | active |
+| CH-007 | Email | メール | active |
+| CH-008 | Command Line | CLI | active |
 
 ### DT: Data Type / データ種別
 
@@ -47,56 +49,6 @@
 | DT-008 | Customer Data | 顧客データ | active |
 | DT-009 | Operational Logs | 運用ログ | active |
 | DT-010 | Security Telemetry | セキュリティテレメトリ | active |
-
-### CH: Channel / チャネル
-
-| Code | Label (EN) | Label (JA) | Status |
-| --- | --- | --- | --- |
-| CH-001 | Web UI | Web UI | active |
-| CH-002 | API | API | active |
-| CH-003 | IDE Plugin | IDEプラグイン | active |
-| CH-004 | ChatOps | チャット連携 | active |
-| CH-005 | Desktop App | デスクトップアプリ | active |
-| CH-006 | Mobile App | モバイルアプリ | active |
-| CH-007 | Email | メール | active |
-| CH-008 | Command Line | CLI | active |
-
-### IM: Integration Mode / 統合形態
-
-| Code | Label (EN) | Label (JA) | Status |
-| --- | --- | --- | --- |
-| IM-001 | Standalone | 単体利用 | active |
-| IM-002 | SaaS Integrated | SaaS連携 | active |
-| IM-003 | Enterprise App Embedded | 社内アプリ組込み | active |
-| IM-004 | RPA/Workflow | ワークフロー/RPA | active |
-| IM-005 | On-prem / Private | オンプレ/プライベート | active |
-| IM-006 | Managed Service | マネージド | active |
-| IM-007 | Shadow / Unmanaged | シャドー/未管理 | active |
-
-### RS: Risk Surface / リスク面
-
-| Code | Label (EN) | Label (JA) | Status |
-| --- | --- | --- | --- |
-| RS-001 | Data Leakage | 情報漏えい | active |
-| RS-002 | Security Abuse | 悪用/攻撃 | active |
-| RS-003 | Compliance Breach | 法令/規程違反 | active |
-| RS-004 | IP Infringement | 知財侵害 | active |
-| RS-005 | Model Misuse | モデル誤用 | active |
-| RS-006 | Bias/Fairness | 偏り/公平性 | active |
-| RS-007 | Safety | 安全性 | active |
-| RS-008 | Third-party Risk | 第三者リスク | active |
-
-### OB: Outcome / Benefit / 成果
-
-| Code | Label (EN) | Label (JA) | Status |
-| --- | --- | --- | --- |
-| OB-001 | Efficiency | 効率化 | active |
-| OB-002 | Quality | 品質向上 | active |
-| OB-003 | Revenue | 売上貢献 | active |
-| OB-004 | Risk Reduction | リスク低減 | active |
-| OB-005 | Innovation | 新規性/革新 | active |
-| OB-006 | Customer Satisfaction | 顧客満足 | active |
-| OB-007 | Employee Experience | 従業員体験 | active |
 
 ### EV: Evidence Type / 証跡種別
 
@@ -117,6 +69,54 @@
 | EV-013 | Incident Record | インシデント記録 | active |
 | EV-014 | Third-party Assessment | 第三者評価 | active |
 | EV-015 | Attestation/Sign-off | 宣誓/サインオフ | active |
+
+### FS: Functional Scope / 機能スコープ
+
+| Code | Label (EN) | Label (JA) | Status |
+| --- | --- | --- | --- |
+| FS-001 | End-user Productivity | 社内生産性 | active |
+| FS-002 | Customer-facing Features | 顧客向け機能 | active |
+| FS-003 | Developer Tooling | 開発支援 | active |
+| FS-004 | IT Operations | IT運用 | active |
+| FS-005 | Security Operations | セキュリティ運用 | active |
+| FS-006 | Governance & Compliance | ガバナンス/コンプライアンス | active |
+
+### IM: Integration Mode / 統合形態
+
+| Code | Label (EN) | Label (JA) | Status |
+| --- | --- | --- | --- |
+| IM-001 | Standalone | 単体利用 | active |
+| IM-002 | SaaS Integrated | SaaS連携 | active |
+| IM-003 | Enterprise App Embedded | 社内アプリ組込み | active |
+| IM-004 | RPA/Workflow | ワークフロー/RPA | active |
+| IM-005 | On-prem / Private | オンプレ/プライベート | active |
+| IM-006 | Managed Service | マネージド | active |
+| IM-007 | Shadow / Unmanaged | シャドー/未管理 | active |
+
+### OB: Outcome / Benefit / 成果
+
+| Code | Label (EN) | Label (JA) | Status |
+| --- | --- | --- | --- |
+| OB-001 | Efficiency | 効率化 | active |
+| OB-002 | Quality | 品質向上 | active |
+| OB-003 | Revenue | 売上貢献 | active |
+| OB-004 | Risk Reduction | リスク低減 | active |
+| OB-005 | Innovation | 新規性/革新 | active |
+| OB-006 | Customer Satisfaction | 顧客満足 | active |
+| OB-007 | Employee Experience | 従業員体験 | active |
+
+### RS: Risk Surface / リスク面
+
+| Code | Label (EN) | Label (JA) | Status |
+| --- | --- | --- | --- |
+| RS-001 | Data Leakage | 情報漏えい | active |
+| RS-002 | Security Abuse | 悪用/攻撃 | active |
+| RS-003 | Compliance Breach | 法令/規程違反 | active |
+| RS-004 | IP Infringement | 知財侵害 | active |
+| RS-005 | Model Misuse | モデル誤用 | active |
+| RS-006 | Bias/Fairness | 偏り/公平性 | active |
+| RS-007 | Safety | 安全性 | active |
+| RS-008 | Third-party Risk | 第三者リスク | active |
 
 ### UC: Use Case Class / ユースケース分類
 
@@ -158,5 +158,5 @@
 ## Generation Info
 
 - **Source**: `data/taxonomy/canonical.yaml` + `i18n/*.yaml`
-- **Generated**: 2026-02-01
+- **Generated**: 2026-02-03
 - **Total Codes**: 91

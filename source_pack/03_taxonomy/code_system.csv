@@ -2,11 +2,11 @@
 # Generated from: data/taxonomy/canonical.yaml
 # DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_artifacts.py
 dimension_id,dimension_name_en,dimension_name_ja,namespace_prefix,code_count,notes
-FS,"Functional Scope","機能スコープ",FS-,6,"6 codes defined"
-DT,"Data Type","データ種別",DT-,10,"10 codes defined"
 CH,"Channel","チャネル",CH-,8,"8 codes defined"
-IM,"Integration Mode","統合形態",IM-,7,"7 codes defined"
-RS,"Risk Surface","リスク面",RS-,8,"8 codes defined"
-OB,"Outcome / Benefit","成果",OB-,7,"7 codes defined"
+DT,"Data Type","データ種別",DT-,10,"10 codes defined"
 EV,"Evidence Type","証跡種別",EV-,15,"15 codes defined"
+FS,"Functional Scope","機能スコープ",FS-,6,"6 codes defined"
+IM,"Integration Mode","統合形態",IM-,7,"7 codes defined"
+OB,"Outcome / Benefit","成果",OB-,7,"7 codes defined"
+RS,"Risk Surface","リスク面",RS-,8,"8 codes defined"
 UC,"Use Case Class","ユースケース分類",UC-,30,"30 codes defined"

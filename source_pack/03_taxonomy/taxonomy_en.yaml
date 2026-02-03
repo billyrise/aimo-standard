@@ -3,40 +3,50 @@
 # DO NOT EDIT MANUALLY - regenerate with: python tooling/taxonomy/build_artifacts.py
 
 version: "0.1.0"
-generated_date: "2026-02-01"
+generated_date: "2026-02-03"
 
 dimensions:
-  - id: FS
-    name: "Functional Scope"
+  - id: CH
+    name: "Channel"
     codes:
-      - code: FS-001
-        label: "End-user Productivity"
-        definition: "AI used to improve productivity of internal end users (writing, search, summarization, meeting notes)."
+      - code: CH-001
+        label: "Web UI"
+        definition: "Use via a web user interface."
         status: active
         introduced_in: "0.1.0"
-      - code: FS-002
-        label: "Customer-facing Features"
-        definition: "AI embedded in product/service features provided to customers."
+      - code: CH-002
+        label: "API"
+        definition: "Use via programmatic API integration."
         status: active
         introduced_in: "0.1.0"
-      - code: FS-003
-        label: "Developer Tooling"
-        definition: "AI used to assist software development and engineering tasks."
+      - code: CH-003
+        label: "IDE Plugin"
+        definition: "Use via IDE/editor plugin."
         status: active
         introduced_in: "0.1.0"
-      - code: FS-004
-        label: "IT Operations"
-        definition: "AI used for IT operations and system administration (monitoring, incident handling)."
+      - code: CH-004
+        label: "ChatOps"
+        definition: "Use via chat platforms (Slack/Teams) integrations."
         status: active
         introduced_in: "0.1.0"
-      - code: FS-005
-        label: "Security Operations"
-        definition: "AI used for security monitoring/response (SOC, detection, triage)."
+      - code: CH-005
+        label: "Desktop App"
+        definition: "Use via native desktop application."
         status: active
         introduced_in: "0.1.0"
-      - code: FS-006
-        label: "Governance & Compliance"
-        definition: "AI used to support governance/compliance activities (policy, audit evidence)."
+      - code: CH-006
+        label: "Mobile App"
+        definition: "Use via native mobile application."
+        status: active
+        introduced_in: "0.1.0"
+      - code: CH-007
+        label: "Email"
+        definition: "Use via email interface or email-based automation."
+        status: active
+        introduced_in: "0.1.0"
+      - code: CH-008
+        label: "Command Line"
+        definition: "Use via command-line interface."
         status: active
         introduced_in: "0.1.0"
   - id: DT
@@ -90,168 +100,6 @@ dimensions:
       - code: DT-010
         label: "Security Telemetry"
         definition: "Security telemetry such as alerts and detections."
-        status: active
-        introduced_in: "0.1.0"
-  - id: CH
-    name: "Channel"
-    codes:
-      - code: CH-001
-        label: "Web UI"
-        definition: "Use via a web user interface."
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-002
-        label: "API"
-        definition: "Use via programmatic API integration."
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-003
-        label: "IDE Plugin"
-        definition: "Use via IDE/editor plugin."
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-004
-        label: "ChatOps"
-        definition: "Use via chat platforms (Slack/Teams) integrations."
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-005
-        label: "Desktop App"
-        definition: "Use via native desktop application."
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-006
-        label: "Mobile App"
-        definition: "Use via native mobile application."
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-007
-        label: "Email"
-        definition: "Use via email interface or email-based automation."
-        status: active
-        introduced_in: "0.1.0"
-      - code: CH-008
-        label: "Command Line"
-        definition: "Use via command-line interface."
-        status: active
-        introduced_in: "0.1.0"
-  - id: IM
-    name: "Integration Mode"
-    codes:
-      - code: IM-001
-        label: "Standalone"
-        definition: "Used standalone without integration into enterprise systems."
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-002
-        label: "SaaS Integrated"
-        definition: "SaaS application integrates AI features."
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-003
-        label: "Enterprise App Embedded"
-        definition: "AI embedded into internal enterprise applications."
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-004
-        label: "RPA/Workflow"
-        definition: "AI invoked within workflow automation or RPA."
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-005
-        label: "On-prem / Private"
-        definition: "AI hosted in private/on-prem environment."
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-006
-        label: "Managed Service"
-        definition: "Use via managed service with enterprise controls."
-        status: active
-        introduced_in: "0.1.0"
-      - code: IM-007
-        label: "Shadow / Unmanaged"
-        definition: "Use outside of approved governance controls."
-        status: active
-        introduced_in: "0.1.0"
-  - id: RS
-    name: "Risk Surface"
-    codes:
-      - code: RS-001
-        label: "Data Leakage"
-        definition: "Risk of unintended data disclosure."
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-002
-        label: "Security Abuse"
-        definition: "Risk that the system is abused for malicious purposes."
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-003
-        label: "Compliance Breach"
-        definition: "Risk of violating laws/regulations/policies."
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-004
-        label: "IP Infringement"
-        definition: "Risk of infringing copyright/patent/trade secrets."
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-005
-        label: "Model Misuse"
-        definition: "Risk from inappropriate model use or over-reliance."
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-006
-        label: "Bias/Fairness"
-        definition: "Risk of unfair or biased outcomes."
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-007
-        label: "Safety"
-        definition: "Risk of harmful content or unsafe recommendations."
-        status: active
-        introduced_in: "0.1.0"
-      - code: RS-008
-        label: "Third-party Risk"
-        definition: "Vendors, sub-processors, and model provider risks."
-        status: active
-        introduced_in: "0.1.0"
-  - id: OB
-    name: "Outcome / Benefit"
-    codes:
-      - code: OB-001
-        label: "Efficiency"
-        definition: "Improves time/cost efficiency."
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-002
-        label: "Quality"
-        definition: "Improves quality/accuracy of outputs."
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-003
-        label: "Revenue"
-        definition: "Contributes to revenue growth."
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-004
-        label: "Risk Reduction"
-        definition: "Reduces operational/security/compliance risk."
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-005
-        label: "Innovation"
-        definition: "Enables new capabilities or innovations."
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-006
-        label: "Customer Satisfaction"
-        definition: "Improves customer satisfaction."
-        status: active
-        introduced_in: "0.1.0"
-      - code: OB-007
-        label: "Employee Experience"
-        definition: "Improves employee experience."
         status: active
         introduced_in: "0.1.0"
   - id: EV
@@ -330,6 +178,158 @@ dimensions:
       - code: EV-015
         label: "Attestation/Sign-off"
         definition: "Formal attestation or sign-off record."
+        status: active
+        introduced_in: "0.1.0"
+  - id: FS
+    name: "Functional Scope"
+    codes:
+      - code: FS-001
+        label: "End-user Productivity"
+        definition: "AI used to improve productivity of internal end users (writing, search, summarization, meeting notes)."
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-002
+        label: "Customer-facing Features"
+        definition: "AI embedded in product/service features provided to customers."
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-003
+        label: "Developer Tooling"
+        definition: "AI used to assist software development and engineering tasks."
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-004
+        label: "IT Operations"
+        definition: "AI used for IT operations and system administration (monitoring, incident handling)."
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-005
+        label: "Security Operations"
+        definition: "AI used for security monitoring/response (SOC, detection, triage)."
+        status: active
+        introduced_in: "0.1.0"
+      - code: FS-006
+        label: "Governance & Compliance"
+        definition: "AI used to support governance/compliance activities (policy, audit evidence)."
+        status: active
+        introduced_in: "0.1.0"
+  - id: IM
+    name: "Integration Mode"
+    codes:
+      - code: IM-001
+        label: "Standalone"
+        definition: "Used standalone without integration into enterprise systems."
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-002
+        label: "SaaS Integrated"
+        definition: "SaaS application integrates AI features."
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-003
+        label: "Enterprise App Embedded"
+        definition: "AI embedded into internal enterprise applications."
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-004
+        label: "RPA/Workflow"
+        definition: "AI invoked within workflow automation or RPA."
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-005
+        label: "On-prem / Private"
+        definition: "AI hosted in private/on-prem environment."
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-006
+        label: "Managed Service"
+        definition: "Use via managed service with enterprise controls."
+        status: active
+        introduced_in: "0.1.0"
+      - code: IM-007
+        label: "Shadow / Unmanaged"
+        definition: "Use outside of approved governance controls."
+        status: active
+        introduced_in: "0.1.0"
+  - id: OB
+    name: "Outcome / Benefit"
+    codes:
+      - code: OB-001
+        label: "Efficiency"
+        definition: "Improves time/cost efficiency."
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-002
+        label: "Quality"
+        definition: "Improves quality/accuracy of outputs."
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-003
+        label: "Revenue"
+        definition: "Contributes to revenue growth."
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-004
+        label: "Risk Reduction"
+        definition: "Reduces operational/security/compliance risk."
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-005
+        label: "Innovation"
+        definition: "Enables new capabilities or innovations."
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-006
+        label: "Customer Satisfaction"
+        definition: "Improves customer satisfaction."
+        status: active
+        introduced_in: "0.1.0"
+      - code: OB-007
+        label: "Employee Experience"
+        definition: "Improves employee experience."
+        status: active
+        introduced_in: "0.1.0"
+  - id: RS
+    name: "Risk Surface"
+    codes:
+      - code: RS-001
+        label: "Data Leakage"
+        definition: "Risk of unintended data disclosure."
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-002
+        label: "Security Abuse"
+        definition: "Risk that the system is abused for malicious purposes."
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-003
+        label: "Compliance Breach"
+        definition: "Risk of violating laws/regulations/policies."
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-004
+        label: "IP Infringement"
+        definition: "Risk of infringing copyright/patent/trade secrets."
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-005
+        label: "Model Misuse"
+        definition: "Risk from inappropriate model use or over-reliance."
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-006
+        label: "Bias/Fairness"
+        definition: "Risk of unfair or biased outcomes."
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-007
+        label: "Safety"
+        definition: "Risk of harmful content or unsafe recommendations."
+        status: active
+        introduced_in: "0.1.0"
+      - code: RS-008
+        label: "Third-party Risk"
+        definition: "Vendors, sub-processors, and model provider risks."
         status: active
         introduced_in: "0.1.0"
   - id: UC
