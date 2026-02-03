@@ -40,7 +40,7 @@ La taxonomía AIMO usa 8 espacios de nombres de dimensión:
 | **IM** | Modo de Integración | `IM-` | 7 |
 | **RS** | Superficie de Riesgo | `RS-` | 8 |
 | **OB** | Resultado / Beneficio | `OB-` | 7 |
-| **EV** | Tipo de Evidencia | `EV-` | 15 |
+| **LG** | Tipo Log/Evento | `LG-` | 15 |
 
 **Total: 91 códigos en 8 dimensiones**
 
@@ -87,7 +87,7 @@ Para cada sistema o caso de uso de IA, DEBE especificar al menos un código de c
 | CH | 1 o más | Canales de acceso |
 | IM | Exactamente 1 | Modo de integración |
 | RS | 1 o más | Categorías de riesgo |
-| EV | 1 o más | Tipos de evidencia |
+| LG | 1 o más | Tipos de log/evento |
 
 ### Dimensiones Opcionales
 

@@ -6,7 +6,7 @@ description: Templates e guia de uso do Evidence Pack AIMO. Estrutura para docum
 
 Esta seção define os templates de Evidence Pack e seu uso. Um Evidence Pack é uma coleção de documentação que demonstra governança e conformidade para um sistema de IA.
 
-## Namespace: tipos de documento Evidence Pack (EP) vs Taxonomy Evidence Type (EV)
+## Namespace: tipos de documento Evidence Pack (EP) vs Taxonomy Log/Event Type (LG)
 
 > **Importante**: **EP-01..EP-07** identificam *tipos de documento* (tipos de arquivo Evidence Pack). **LG-001, LG-002, …** na [Taxonomia](./03-taxonomy.md) identificam *tipos de log/registro* (Registro de Solicitação, Registro de Revisão/Aprovação, etc.). **EV-** reservado para IDs de artefato Evidence. Use EP para estrutura do pack e LG para classificação de evidência do ciclo de vida.
 

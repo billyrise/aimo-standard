@@ -37,7 +37,7 @@ Check that all mandatory fields are present:
 | Artifact | Required Fields |
 | --- | --- |
 | Evidence Pack Manifest | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
-| Codes Object | FS, UC, DT, CH, IM, RS, EV (OB optional) |
+| Codes Object | FS, UC, DT, CH, IM, RS, LG (OB optional) |
 | Evidence File Entry | file_id (EP-01..EP-07), filename, title (ev_type / ev_codes optional) |
 
 ### 2. Dimension Code Validation
@@ -53,7 +53,7 @@ Check that each required dimension has at least one code:
 | IM (Integration Mode) | Exactly 1 code |
 | RS (Risk Surface) | At least 1 code |
 | OB (Outcome / Benefit) | Optional (0 or more) |
-| EV (Evidence Type) | At least 1 code |
+| LG (Log/Event Type) | At least 1 code |
 
 ### 3. Dictionary Existence Check
 
@@ -68,7 +68,7 @@ Validate that all codes exist in the taxonomy dictionary:
 Check that all codes match the expected format:
 
 ```regex
-^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 ```
 
 ### 5. Schema Validation
@@ -117,7 +117,7 @@ check: |
 rule_id: code_format
 description: All codes must match the standard format
 severity: error
-pattern: "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$"
+pattern: "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$"
 ```
 
 ### Rule: Version Format

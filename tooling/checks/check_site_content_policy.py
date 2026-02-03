@@ -5,6 +5,8 @@ Site content policy check for AIMO Standard.
 Enforces that built site HTML does not regress to "EV as taxonomy dimension":
 - Forbidden: EV-001..EV-999 (taxonomy codes); "EV Evidence Type" (en 03/04 only).
 - Allowed: EV-YYYYMMDD-NNN (Evidence artifact IDs).
+- On 04b-id-policy-namespace only: the single "Previously, the taxonomy used EV-001 … EV-015"
+  history block is masked before the EV-\\d{3} check (so that block is allowed).
 - Required: LG dimension/codes on taxonomy/codes/dictionary pages; 04b must exist with ID Policy/Namespace.
 
 Run after mkdocs build (site/ must exist). Used in CI to block deploy of old EV taxonomy text.
@@ -32,8 +34,7 @@ CRITICAL_PAGES = [
     "04b-id-policy-namespace",
 ]
 
-# Forbidden: taxonomy dimension EV (EV-001..EV-999). Language-agnostic.
-# We allow EV-YYYYMMDD-NNN (artifact ID); mask those first, then flag remaining EV-NNN.
+# Forbidden: taxonomy dimension EV (EV-001..EV-999). We allow EV-YYYYMMDD-NNN (artifact ID); mask those first.
 ARTIFACT_ID_PATTERN = re.compile(r"EV-\d{8}-\d{3}")
 FORBIDDEN_EV_TAXONOMY_CODE = re.compile(r"EV-\d{3}")
 
@@ -45,6 +46,10 @@ REQUIRED_LG_PATTERN = re.compile(r"LG-\d{3}")
 
 # Required on 04b: page must mention Namespace or ID Policy (or anchor id-policy-namespace)
 REQUIRED_04B_PATTERN = re.compile(r"Namespace|ID\s+Policy|id-policy-namespace", re.IGNORECASE)
+
+# 04b history block: lines containing "Previously" (en) or "従来" (ja) and EV-001/EV-015 — mask EV-\\d{3} only in that block
+HISTORY_START = re.compile(r"Previously|従来|used\s+\*\*EV-001\*\*", re.IGNORECASE)
+HISTORY_CONTAINS_EV = re.compile(r"EV-\d{3}")
 
 
 def discover_locales(site_dir: Path) -> list[str]:
@@ -69,18 +74,47 @@ def mask_artifact_ids(text: str) -> str:
     return ARTIFACT_ID_PATTERN.sub("EV-ARTIFACT-ID", text)
 
 
-def check_forbidden_ev_codes(content: str, locale: str, page: str, path: Path) -> list[str]:
-    """Flag EV-001..EV-999 (taxonomy) but not EV-YYYYMMDD-NNN. Returns list of error messages."""
+def mask_04b_history_block(content: str) -> str:
+    """
+    In 04b page content, mask EV-\\d{3} only inside the single "Previously, the taxonomy used EV-001 … EV-015"
+    history block (so that block is allowed; any other EV-\\d{3} on 04b still fails).
+    """
+    lines = content.split("\n")
+    out = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if HISTORY_START.search(line):
+            # Find end of block: next lines that contain EV-001/EV-015/EV-999 (up to ~15 lines)
+            end = i
+            for k in range(i, min(i + 15, len(lines))):
+                if HISTORY_CONTAINS_EV.search(lines[k]):
+                    end = k
+            # Mask EV-\\d{3} in lines [i, end+1]
+            for k in range(i, min(end + 2, len(lines))):
+                masked = mask_artifact_ids(lines[k])
+                masked = FORBIDDEN_EV_TAXONOMY_CODE.sub("EV-MASKED", masked)
+                out.append(masked)
+            i = min(end + 2, len(lines))
+            continue
+        out.append(line)
+        i += 1
+    return "\n".join(out)
+
+
+def check_forbidden_ev_codes(content: str, locale: str, page: str, path: Path, is_04b: bool) -> list[str]:
+    """Flag EV-001..EV-999 (taxonomy) but not EV-YYYYMMDD-NNN. On 04b, mask history block first."""
+    if is_04b:
+        content = mask_04b_history_block(content)
+    content = mask_artifact_ids(content)
     errors = []
-    masked = mask_artifact_ids(content)
-    for m in FORBIDDEN_EV_TAXONOMY_CODE.finditer(masked):
-        # Get line number
-        line_no = masked[: m.start()].count("\n") + 1
-        line_start = masked.rfind("\n", 0, m.start()) + 1
-        line_end = masked.find("\n", m.end())
+    for m in FORBIDDEN_EV_TAXONOMY_CODE.finditer(content):
+        line_no = content[: m.start()].count("\n") + 1
+        line_start = content.rfind("\n", 0, m.start()) + 1
+        line_end = content.find("\n", m.end())
         if line_end == -1:
-            line_end = len(masked)
-        line = masked[line_start:line_end].strip()
+            line_end = len(content)
+        line = content[line_start:line_end].strip()
         if len(line) > 120:
             line = line[:117] + "..."
         errors.append(f"[{locale}] {page}: forbidden taxonomy code EV-NNN at line ~{line_no}: {line!r}")
@@ -165,15 +199,15 @@ def main() -> int:
                 all_errors.append(f"[{locale}] {page}: failed to read {path}: {e}")
                 continue
 
-            # Forbidden: EV taxonomy codes (all locales, all critical pages except 04b which documents the policy)
-            if page != "04b-id-policy-namespace":
-                all_errors.extend(check_forbidden_ev_codes(content, locale, page, path))
+            is_04b = page == "04b-id-policy-namespace"
+            # Forbidden: EV taxonomy codes (all locales, all critical pages; on 04b history block is masked)
+            all_errors.extend(check_forbidden_ev_codes(content, locale, page, path, is_04b))
             # Forbidden: "EV Evidence Type" (en 03/04 only)
             all_errors.extend(check_forbidden_ev_evidence_type(content, locale, page))
             # Required: LG on 03, 04, 05
             all_errors.extend(check_required_lg(content, locale, page))
             # Required: 04b has Namespace/ID Policy
-            if page == "04b-id-policy-namespace":
+            if is_04b:
                 all_errors.extend(check_required_04b(content, locale, path))
 
     if all_errors:

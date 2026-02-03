@@ -6,7 +6,7 @@ description: Plantillas y guía de uso de Paquetes de Evidencia AIMO. Estructura
 
 Esta sección define las plantillas de Paquetes de Evidencia y su uso. Un Paquete de Evidencia es una colección de documentación que demuestra gobernanza y cumplimiento para un sistema de IA.
 
-## Espacio de nombres: tipos de documento Evidence Pack (EP) vs Taxonomy Evidence Type (EV)
+## Espacio de nombres: tipos de documento Evidence Pack (EP) vs Taxonomy Log/Event Type (LG)
 
 > **Importante**: **EP-01..EP-07** identifican *tipos de documento* (tipos de archivo del Evidence Pack). **LG-001, LG-002, …** en la [Taxonomía](./03-taxonomy.md) identifican *tipos de log/registro* (Registro de Solicitud, Registro de Revisión/Aprobación, etc.). **EV-** reservado para ID de artefactos Evidence. Use EP para estructura del pack y LG para clasificación de evidencia del ciclo de vida.
 

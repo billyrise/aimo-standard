@@ -29,8 +29,8 @@ jobs:
 
       - name: i18n Quality Gates
         run: |
-          echo "=== Bidi Control Chars (Trojan Source) ==="
-          python tooling/checks/lint_bidi_control_chars.py
+          echo "=== Bidi Control Chars (Trojan Source) + Format (Cf) ==="
+          python tooling/checks/lint_bidi_control_chars.py --check-format
           echo "=== EN Locale Purity (no CJK in docs/en) ==="
           python tooling/checks/lint_locale_purity.py
           echo "=== i18n Lint (Required Pages, Heading Consistency) ==="

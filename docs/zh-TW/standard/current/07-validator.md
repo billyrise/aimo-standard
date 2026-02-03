@@ -54,7 +54,7 @@ AIMO 驗證器確保證據包和相關人工產物符合 AIMO 標準結構描述
 檢查所有代碼符合預期格式：
 
 ```regex
-^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 ```
 
 ### 5. 結構描述驗證
@@ -103,7 +103,7 @@ check: |
 rule_id: code_format
 description: 所有代碼必須符合標準格式
 severity: error
-pattern: "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$"
+pattern: "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$"
 ```
 
 ### 規則：版本格式

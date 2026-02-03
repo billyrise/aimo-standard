@@ -39,7 +39,7 @@ Controllare che ogni dimensione richiesta abbia almeno un codice:
 | IM (Integration Mode) | Esattamente 1 codice |
 | RS (Risk Surface) | Almeno 1 codice |
 | OB (Outcome / Benefit) | Opzionale (0 o più) |
-| EV (Evidence Type) | Almeno 1 codice |
+| LG (Log/Event Type) | Almeno 1 codice |
 
 ### 3. Controllo Esistenza nel Dizionario
 
@@ -54,7 +54,7 @@ Validare che tutti i codici esistano nel dizionario della tassonomia:
 Controllare che tutti i codici corrispondano al formato atteso:
 
 ```regex
-^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 ```
 
 ### 5. Validazione Schema
@@ -103,7 +103,7 @@ check: |
 rule_id: code_format
 description: Tutti i codici devono corrispondere al formato standard
 severity: error
-pattern: "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$"
+pattern: "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$"
 ```
 
 ### Regola: Formato Versione

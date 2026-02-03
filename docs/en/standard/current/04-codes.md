@@ -25,7 +25,7 @@ All AIMO codes follow the format: **`<PREFIX>-<TOKEN>`**
 - `IM-002` - Integration Mode: SaaS Integrated
 - `RS-001` - Risk Surface: Data Leakage
 - `OB-001` - Outcome/Benefit: Efficiency
-- `EV-001` - Evidence Type: Request Record
+- `LG-001` - Log/Event Type: Request Record
 
 ## Namespaces
 
@@ -40,7 +40,7 @@ The AIMO taxonomy uses 8 dimension namespaces:
 | **IM** | Integration Mode | `IM-` | 7 |
 | **RS** | Risk Surface | `RS-` | 8 |
 | **OB** | Outcome / Benefit | `OB-` | 7 |
-| **EV** | Evidence Type | `EV-` | 15 |
+| **LG** | Log/Event Type | `LG-` | 15 |
 
 **Total: 91 codes across 8 dimensions**
 
@@ -87,7 +87,7 @@ For each AI system or use case, you MUST specify at least one code from each req
 | CH | 1 or more | Access channels |
 | IM | Exactly 1 | Integration mode |
 | RS | 1 or more | Risk categories |
-| EV | 1 or more | Evidence types |
+| LG | 1 or more | Log/event types |
 
 ### Optional Dimensions
 
@@ -106,7 +106,9 @@ When documenting an AI system, codes from multiple dimensions are combined. The 
 5. IM (Integration Mode)
 6. RS (Risk Surface)
 7. OB (Outcome / Benefit)
-8. EV (Evidence Type)
+8. LG (Log/Event Type)
+
+See [ID Policy / Namespace](./04b-id-policy-namespace.md): **EV-** is reserved for Evidence *artifact* IDs only; taxonomy log/event dimension uses **LG-** (e.g. LG-001 … LG-015).
 
 **Example composition:**
 
@@ -118,7 +120,7 @@ CH: CH-001
 IM: IM-002
 RS: RS-001, RS-003
 OB: OB-001
-EV: EV-001, EV-002
+LG: LG-001, LG-002
 ```
 
 ## Lifecycle
@@ -191,7 +193,7 @@ See [Validator](./07-validator.md) for implementation details.
 ## SSOT Reference
 
 !!! info "Source of Truth"
-    The authoritative definition is `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+    The authoritative definitions are `data/taxonomy/canonical.yaml` and `data/taxonomy/i18n/*.yaml`. The file `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` is **generated** from the SSOT. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
 
 ## Related Pages
 

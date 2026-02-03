@@ -40,7 +40,7 @@ La tassonomia AIMO utilizza 8 namespace dimensionali:
 | **IM** | Integration Mode | `IM-` | 7 |
 | **RS** | Risk Surface | `RS-` | 8 |
 | **OB** | Outcome / Benefit | `OB-` | 7 |
-| **EV** | Evidence Type | `EV-` | 15 |
+| **LG** | Log/Event Type | `LG-` | 15 |
 
 **Totale: 91 codici in 8 dimensioni**
 
@@ -87,7 +87,7 @@ Per ogni sistema IA o caso d'uso, DEVI specificare almeno un codice da ogni dime
 | CH | 1 o più | Canali di accesso |
 | IM | Esattamente 1 | Modalità di integrazione |
 | RS | 1 o più | Categorie di rischio |
-| EV | 1 o più | Tipi di evidence |
+| LG | 1 o più | Tipi di log/evento |
 
 ### Dimensioni Opzionali
 
@@ -106,7 +106,7 @@ Quando si documenta un sistema IA, i codici da più dimensioni vengono combinati
 5. IM (Integration Mode)
 6. RS (Risk Surface)
 7. OB (Outcome / Benefit)
-8. EV (Evidence Type)
+8. LG (Log/Event Type)
 
 **Esempio di composizione:**
 

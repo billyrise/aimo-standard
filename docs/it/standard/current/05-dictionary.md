@@ -87,7 +87,7 @@ La versione corrente del dizionario è **v0.1.0** e contiene:
 | IM | Integration Mode | 7 | 0 | 7 |
 | RS | Risk Surface | 8 | 0 | 8 |
 | OB | Outcome / Benefit | 7 | 0 | 7 |
-| EV | Evidence Type | 15 | 0 | 15 |
+| LG | Log/Event Type | 15 | 0 | 15 |
 | **Totale** | | **91** | **0** | **91** |
 
 !!! note "Liste Complete dei Codici"

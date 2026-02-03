@@ -54,7 +54,7 @@ AIMO 검증기는 증거 팩 및 관련 산출물이 AIMO 표준 스키마 및 �
 모든 코드가 예상 형식과 일치하는지 확인:
 
 ```regex
-^(FS|UC|DT|CH|IM|RS|OB|EV)-\d{3}$
+^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
 ```
 
 ### 5. 스키마 검증
@@ -103,7 +103,7 @@ check: |
 rule_id: code_format
 description: 모든 코드가 표준 형식과 일치해야 함
 severity: error
-pattern: "^(FS|UC|DT|CH|IM|RS|OB|EV)-\\d{3}$"
+pattern: "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$"
 ```
 
 ### 규칙: 버전 형식
