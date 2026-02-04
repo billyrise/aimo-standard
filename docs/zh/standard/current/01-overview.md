@@ -4,7 +4,7 @@ description: AIMO 标准概述。定义用于AI治理审计的共享分类法、
 
 # 概述
 
-AIMO 标准定义了：
+**AIMO** 是 **AI Management Office**（AI 管理办公室）的缩写。AIMO 标准定义了：
 - 共享分类法
 - 代码系统
 - 初始字典

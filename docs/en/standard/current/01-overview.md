@@ -4,7 +4,7 @@ description: Overview of AIMO Standard. Defines shared taxonomy, code system, di
 
 # Overview
 
-AIMO Standard defines:
+**AIMO** stands for **AI Management Office**. AIMO Standard defines:
 - a shared taxonomy
 - a code system
 - an initial dictionary

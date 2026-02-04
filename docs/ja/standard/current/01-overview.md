@@ -4,7 +4,7 @@ description: AIMO Standard概要。共通タクソノミー、コード体系、
 
 # 概要
 
-AIMO Standard は以下を定義します。
+**AIMO** は **AI Management Office**（AI マネジメントオフィス）の略称です。AIMO Standard は以下を定義します。
 - タクソノミー
 - コード体系
 - 初期辞書

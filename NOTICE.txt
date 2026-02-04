@@ -5,5 +5,5 @@ This repository contains documentation and reference artifacts for the AIMO Stan
 SPDX-License-Identifier: Apache-2.0
 
 Trademark Notice:
-AIMOaaS is a trademark of RISEby inc. (trademark application pending).
+AIMOaaS is a trademark of RISEby Inc. (trademark application pending; registration not yet granted).
 See TRADEMARKS.md for usage guidelines.

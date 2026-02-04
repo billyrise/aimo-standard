@@ -4,20 +4,11 @@ description: AIMO 商標指引 - AIMO 標誌的使用規則、符合性徽章要
 
 # 商標
 
-本頁記錄 AIMO 相關標誌的商標使用指引。
+本頁說明本網站所涉名稱的商標狀態與使用指引。
 
-## 涵蓋的標誌
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending; registration not yet granted). "AIMO" is a registered trademark owned by third parties in various jurisdictions (including Japan); RISEby Inc. does not claim ownership. "AIMO Standard" and "Certified AIMO" are not registered by RISEby. "Certified AIMO" is a provisional name; no active certification scheme exists.
 
-| 標誌 | 類型 |
-| ---- | ---- |
-| AIMO | 文字標誌 |
-| AIMO Standard | 文字標誌 |
-| AIMOaaS | 文字標誌 |
-| Certified AIMO | 文字標誌（保留） |
-
-## 商標所有權
-
-**AIMOaaS 是 RISEby inc. 的商標（商標申請中）。**
+準確的商標歸屬與申請狀態請見以上 English notice。
 
 ## 標記指引
 

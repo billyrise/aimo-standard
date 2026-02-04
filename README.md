@@ -1,6 +1,6 @@
 # AIMO Standard (SSOT)
 
-This repository is the single source of truth (SSOT) for:
+**AIMO** stands for **AI Management Office**. This repository is the single source of truth (SSOT) for:
 - Human-readable specification website (HTML)
 - Machine-consumable artifacts (schemas, templates, examples)
 - Official PDF releases for audit/approval workflows

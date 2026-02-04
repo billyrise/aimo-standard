@@ -4,7 +4,7 @@ description: Vue d'ensemble du standard AIMO. Définit la taxonomie partagée, l
 
 # Vue d'ensemble
 
-Le standard AIMO définit :
+**AIMO** signifie **AI Management Office**. Le standard AIMO définit :
 - une taxonomie partagée
 - un système de codes
 - un dictionnaire initial

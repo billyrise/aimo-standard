@@ -4,7 +4,7 @@ description: AIMO 标准 - AI治理和审计的开放标准。具有8个维度�
 
 # AIMO 标准
 
-本站托管人类可读的 AIMO 标准规范。
+**AIMO** 是 **AI Management Office**（AI 管理办公室）的缩写。本站托管人类可读的 AIMO 标准规范。
 
 ## 为什么现在需要代理式AI审计
 

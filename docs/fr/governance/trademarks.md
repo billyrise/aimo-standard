@@ -4,20 +4,11 @@ description: Directives de marques AIMO - Règles d'utilisation des marques AIMO
 
 # Marques
 
-Cette page documente les directives d'utilisation des marques liées à AIMO.
+Cette page documente les directives d'utilisation des noms et marques mentionnés sur ce site.
 
-## Marques couvertes
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending; registration not yet granted). "AIMO" is a registered trademark owned by third parties in various jurisdictions (including Japan); RISEby Inc. does not claim ownership. "AIMO Standard" and "Certified AIMO" are not registered by RISEby. "Certified AIMO" is a provisional name; no active certification scheme exists.
 
-| Marque | Type |
-| ---- | ---- |
-| AIMO | Marque verbale |
-| AIMO Standard | Marque verbale |
-| AIMOaaS | Marque verbale |
-| Certified AIMO | Marque verbale (réservée) |
-
-## Propriété des marques
-
-**AIMOaaS est une marque de RISEby inc. (dépôt de marque en cours).**
+Pour le statut exact des marques, voir l'English notice ci-dessus.
 
 ## Conseils de marquage
 

@@ -4,7 +4,7 @@ description: Panoramica dello Standard AIMO. Definisce tassonomia condivisa, cod
 
 # Panoramica
 
-Lo Standard AIMO definisce:
+**AIMO** sta per **AI Management Office**. Lo Standard AIMO definisce:
 - una tassonomia condivisa
 - un code system
 - un dizionario iniziale

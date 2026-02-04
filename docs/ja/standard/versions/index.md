@@ -42,6 +42,10 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 
 リリース手順の詳細は [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) および [release ワークフロー](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml) を参照してください。バージョンテーブルと Changelog はリリース準備の一環で更新され、デプロイ済みバージョンと常に一致します。
 
+## 法的・商標に関する注意
+
+商標の帰属・使用（「AIMO」が第三者の登録商標であること、RISEby が商標出願しているのは AIMOaaS のみであることを含む）は [Governance → 商標](../../governance/trademarks.md) およびリポジトリの [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) に記載しています。最新の商標・法的注意は、最新リリースのドキュメントまたは上記 TRADEMARKS.md を参照してください。
+
 ## 監査人向け：正規 URL とバージョン固定
 
 監査報告書で特定バージョンを引用し、再現性を確保するには：

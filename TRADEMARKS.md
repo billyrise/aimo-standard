@@ -25,27 +25,37 @@ This policy does **not** restrict:
 | **Conformance** | Meeting all MUST requirements in the normative specification |
 | **Certification** | Official recognition by the AIMO Standard maintainers (not currently offered) |
 
-## Covered Marks
+## RISEby trademarks (filed / pending)
 
-The following marks are covered by this policy (non-exhaustive):
+The following mark has been filed for trademark registration by RISEby Inc. Registration has not yet been granted.
 
-| Mark | Type | Usage |
-| ---- | ---- | ----- |
-| **AIMO** | Word mark | Core project name |
-| **AIMO Standard** | Word mark | The specification and its artifacts |
-| **AIMOaaS** | Word mark | Related platform/service |
-| **Certified AIMO** | Word mark | Reserved for future certification program |
-| **AIMO logos** | Logo marks | Visual assets (when published) |
+| Mark | Type | Status |
+| --- | --- | --- |
+| AIMOaaS | Word mark | Trademark application pending (registration not yet granted) |
 
-## Trademark Ownership
+**Trademark ownership notice:**  
+AIMOaaS is a trademark of RISEby Inc. (trademark application pending).
 
-**AIMOaaS is a trademark of RISEby inc. (trademark application pending).**
+## Project and specification names (not registered trademarks)
 
-The following marks are owned by or licensed to RISEby inc.:
+The following names are used in this project as project/specification identifiers. They are not registered trademarks of RISEby Inc. at this time.
 
-| Mark | Owner | Status |
-| ---- | ----- | ------ |
-| AIMOaaS | RISEby inc. | Application pending |
+| Name | Use in this project | Trademark status (RISEby) |
+| --- | --- | --- |
+| AIMO | Project / concept name | Not owned; not registered by RISEby |
+| AIMO Standard | Specification name | Not registered by RISEby |
+| Certified AIMO | Provisional name for a future program | Not registered by RISEby |
+
+### Important notice regarding "AIMO"
+
+"AIMO" is a registered trademark owned by third parties in various jurisdictions (including Japan).  
+RISEby Inc. does not claim ownership of "AIMO" as a trademark.  
+Use of "AIMO" in this project is solely to identify this project/specification and does not imply affiliation, sponsorship, endorsement, or association with any trademark owners.
+
+### Notice regarding "Certified AIMO"
+
+"Certified AIMO" is a provisional name for a potential future certification program.  
+It is not currently a registered trademark, and no active certification scheme is in operation under this name at this time.
 
 ## Marking Guidance (Pre-Registration)
 
@@ -53,7 +63,7 @@ While trademark applications are pending, the following rules apply:
 
 ### Permitted Expressions
 
-- "AIMOaaS is a trademark of RISEby inc. (trademark application pending)."
+- "AIMOaaS is a trademark of RISEby Inc. (trademark application pending)."
 - "AIMOaaS (trademark application pending)"
 - Use of "TM" symbol is optional but not required
 
@@ -206,7 +216,7 @@ A: Yes, if you meet conformance requirements and clearly state the version.
 A: No, this is prohibited without explicit permission.
 
 **Q: Is there an official certification program?**
-A: Not currently. "Certified AIMO" is reserved for potential future use.
+A: Not currently. "Certified AIMO" is a provisional name for a potential future program; no active certification scheme exists under this name.
 
 **Q: Can I redistribute AIMO Standard materials?**
 A: Yes, under Apache-2.0 license terms with proper attribution.

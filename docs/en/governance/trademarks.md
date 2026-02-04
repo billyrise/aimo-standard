@@ -4,24 +4,43 @@ description: AIMO trademark guidelines - Usage rules for AIMO marks, conformance
 
 # Trademarks
 
-This page documents trademark usage guidelines for AIMO-related marks.
+This page describes the trademark status and usage guidance for names referenced in this site.
 
-## Covered Marks
+## RISEby trademarks (filed / pending)
 
-| Mark | Type |
-| ---- | ---- |
-| AIMO | Word mark |
-| AIMO Standard | Word mark |
-| AIMOaaS | Word mark |
-| Certified AIMO | Word mark (reserved) |
+The following mark has been filed for trademark registration by RISEby Inc. Registration has not yet been granted.
 
-## Trademark Ownership
+| Mark | Type | Status |
+| --- | --- | --- |
+| AIMOaaS | Word mark | Trademark application pending (registration not yet granted) |
 
-**AIMOaaS is a trademark of RISEby inc. (trademark application pending).**
+**Trademark ownership notice:**  
+AIMOaaS is a trademark of RISEby Inc. (trademark application pending).
+
+## Project and specification names (not registered trademarks)
+
+The following names are used on this site as project/specification identifiers. They are not registered trademarks of RISEby Inc. at this time.
+
+| Name | Use on this site | Trademark status (RISEby) |
+| --- | --- | --- |
+| AIMO | Project / concept name | Not owned; not registered by RISEby |
+| AIMO Standard | Specification name | Not registered by RISEby |
+| Certified AIMO | Provisional name for a future program | Not registered by RISEby |
+
+### Important notice regarding "AIMO"
+
+"AIMO" is a registered trademark owned by third parties in various jurisdictions (including Japan).  
+RISEby Inc. does not claim ownership of "AIMO" as a trademark.  
+Use of "AIMO" on this site is solely to identify this project/specification and does not imply affiliation, sponsorship, endorsement, or association with any trademark owners.
+
+### Notice regarding "Certified AIMO"
+
+"Certified AIMO" is a provisional name for a potential future certification program.  
+It is not currently a registered trademark, and no active certification scheme is in operation under this name at this time.
 
 ## Marking Guidance
 
-While trademark applications are pending:
+For AIMOaaS (trademark application pending):
 
 - **Permitted**: "trademark application pending", "TM" symbol (optional)
 - **Prohibited**: "Registered trademark", ® symbol, registration numbers
@@ -77,7 +96,7 @@ See [How to Cite](cite.md) for citation format.
 
 ## Full Policy
 
-See [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) for the complete trademark policy.
+See [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) for the complete trademark policy. If you are viewing a frozen release (e.g. a versioned URL), the trademark status above applies to this snapshot; for the very latest status see the [latest release](/latest/governance/trademarks/) or the repository TRADEMARKS.md.
 
 ## Related Pages
 

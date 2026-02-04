@@ -34,6 +34,10 @@ description: AIMO 표준 버전 이력. 감사자 준비 PDF, 기계 판독 가�
 
 릴리스 프로세스 세부사항은 [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) 및 [릴리스 워크플로우](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml)를 참조하세요. 버전 테이블과 Changelog는 릴리스 준비의 일부로 업데이트되어 배포된 버전과 항상 일치합니다.
 
+## 법적 및 상표 고지
+
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → 상표](../../governance/trademarks.md) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
+
 ## 감사인용: 표준 URL 및 버전 고정
 
 감사 보고서에서 특정 버전을 인용하고 재현 가능성을 보장하려면:

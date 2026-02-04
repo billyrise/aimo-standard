@@ -34,6 +34,10 @@ description: AIMO 標準版本歷史。包含稽核員就緒 PDF、機器可讀�
 
 發布流程詳情請見 [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) 與 [release 工作流程](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml)。版本表與 Changelog 會作為發布準備的一部分更新，以始終與已部署版本一致。
 
+## 法律與商標聲明
+
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → 商標](../../governance/trademarks.md) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
+
 ## 給稽核員：正規 URL 與版本固定
 
 在稽核報告中引用特定版本並確保可重現性時：

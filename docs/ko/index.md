@@ -4,7 +4,7 @@ description: AIMO 표준 - AI 거버넌스 및 감사를 위한 오픈 표준. A
 
 # AIMO 표준
 
-이 사이트는 사람이 읽을 수 있는 AIMO 표준 사양을 호스팅합니다.
+**AIMO**는 **AI Management Office**의 약칭입니다. 이 사이트는 사람이 읽을 수 있는 AIMO 표준 사양을 호스팅합니다.
 
 ## 지금 에이전틱 AI 감사가 필요한 이유
 

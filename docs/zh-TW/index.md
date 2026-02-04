@@ -4,7 +4,7 @@ description: AIMO 標準 - AI 治理和稽核的開放標準。具有 8 個維�
 
 # AIMO 標準
 
-本網站託管人類可讀的 AIMO 標準規格。
+**AIMO** 是 **AI Management Office**（AI 管理辦公室）的縮寫。本網站託管人類可讀的 AIMO 標準規格。
 
 ## 為什麼現在需要代理式 AI 稽核
 

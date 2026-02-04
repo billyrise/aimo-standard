@@ -4,20 +4,11 @@ description: AIMO商標ガイドライン - AIMO商標の使用ルール、適�
 
 # 商標
 
-本ページでは、AIMO 関連商標の使用ガイドラインを説明する。
+本ページでは、AIMO 関連の名称の商標上の取扱いと使用ガイドラインを説明する。
 
-## 対象商標
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending; registration not yet granted). "AIMO" is a registered trademark owned by third parties in various jurisdictions (including Japan); RISEby Inc. does not claim ownership. "AIMO Standard" and "Certified AIMO" are not registered by RISEby. "Certified AIMO" is a provisional name; no active certification scheme exists.
 
-| 商標 | 種別 |
-| ---- | ---- |
-| AIMO | 文字商標 |
-| AIMO Standard | 文字商標 |
-| AIMOaaS | 文字商標 |
-| Certified AIMO | 文字商標（予約） |
-
-## 商標の帰属
-
-**AIMOaaS は、ライズバイ株式会社（英語名称 RISEby inc.）の商標（出願中）です。**
+正確な商標の帰属・出願状況は上記の English notice を参照してください。RISEby が商標出願しているのは AIMOaaS のみです。
 
 ## 表記ガイダンス
 

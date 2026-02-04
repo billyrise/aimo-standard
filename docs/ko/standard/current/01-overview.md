@@ -4,7 +4,7 @@ description: AIMO 표준 개요. AI 거버넌스 감사를 위한 공유 분류�
 
 # 개요
 
-AIMO 표준은 다음을 정의합니다:
+**AIMO**는 **AI Management Office**의 약칭입니다. AIMO 표준은 다음을 정의합니다:
 - 공유 분류체계
 - 코드 시스템
 - 초기 딕셔너리

@@ -1,0 +1,120 @@
+# Re-deploy an existing version from main (repair deploy)
+# Use only for critical fixes (e.g. legal/trademark content, AIMO abbreviation)
+# that must appear in already-released version URLs. See VERSIONING.md.
+# Does NOT update /latest/ or create a new GitHub Release.
+
+name: repair-deploy-versions
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to re-deploy from main (overwrites existing content)'
+        required: true
+        type: choice
+        options:
+          - '0.1.0'
+          - '0.1.1'
+        default: '0.1.1'
+      dry_run:
+        description: 'Dry run - build only, do not push to gh-pages'
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+env:
+  LANG: C.UTF-8
+  LC_ALL: C.UTF-8
+
+jobs:
+  repair-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            tooling/requirements.txt
+
+      - name: Install system deps for WeasyPrint (optional for doc build)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libpango-1.0-0 libpangocairo-1.0-0 libcairo2 libgdk-pixbuf2.0-0 \
+            fonts-noto-cjk fonts-noto-core fonts-noto-color-emoji || true
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+          pip install -r tooling/requirements.txt 2>/dev/null || true
+
+      - name: Build documentation
+        run: python -m mkdocs build --strict
+
+      - name: Configure git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Re-deploy version to gh-pages (overwrite existing)
+        if: ${{ inputs.dry_run == false }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          VERSION="${{ inputs.version }}"
+          
+          echo "=== Re-deploying version $VERSION from main ==="
+          echo "This will OVERWRITE the content at /$VERSION/ with the current main branch build."
+          echo ""
+          
+          git fetch origin gh-pages:gh-pages 2>/dev/null || {
+            echo "ERROR: Could not fetch gh-pages branch"
+            exit 1
+          }
+          
+          # Deploy current build to the version directory (mike overwrites if exists)
+          mike deploy --push "$VERSION"
+          
+          echo ""
+          echo "=== Done ==="
+          echo "Version /$VERSION/ has been updated with content from main."
+          echo "/latest/ was NOT changed."
+          echo ""
+          mike list
+
+      - name: Dry run notice
+        if: ${{ inputs.dry_run == true }}
+        run: |
+          echo "=== DRY RUN ==="
+          echo "Build succeeded. No deploy was performed."
+          echo ""
+          echo "To re-deploy version ${{ inputs.version }} for real, run this workflow again with dry_run=false."
+
+      - name: Summary
+        run: |
+          echo "## Repair Deploy (re-deploy existing version)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Property | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Version | ${{ inputs.version }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Source | main branch |" >> $GITHUB_STEP_SUMMARY
+          echo "| Dry Run | ${{ inputs.dry_run }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ inputs.dry_run }}" == "true" ]; then
+            echo "**Status:** Dry run - build OK, no deploy" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Status:** Deployed main content to /${{ inputs.version }}/" >> $GITHUB_STEP_SUMMARY
+          fi

@@ -4,7 +4,7 @@ description: Visão geral do AIMO Standard. Define taxonomia compartilhada, sist
 
 # Visão Geral
 
-AIMO Standard define:
+**AIMO** significa **AI Management Office**. AIMO Standard define:
 - uma taxonomia compartilhada
 - um sistema de códigos
 - um dicionário inicial

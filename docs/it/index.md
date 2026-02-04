@@ -4,7 +4,7 @@ description: Standard AIMO - Standard aperto per la governance e l'audit dell'IA
 
 # Standard AIMO
 
-Questo sito ospita la specifica dello Standard AIMO in formato leggibile.
+**AIMO** sta per **AI Management Office**. Questo sito ospita la specifica dello Standard AIMO in formato leggibile.
 
 ## Perché gli audit dell'IA agente sono necessari ora
 

@@ -4,7 +4,7 @@ description: AIMO Standard - Offener Standard für KI-Governance und Audit. Taxo
 
 # AIMO Standard
 
-Diese Website hostet die menschenlesbare AIMO Standard-Spezifikation.
+**AIMO** steht für **AI Management Office**. Diese Website hostet die menschenlesbare AIMO Standard-Spezifikation.
 
 ## Warum agentenbasierte KI-Audits jetzt benötigt werden
 

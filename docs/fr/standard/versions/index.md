@@ -34,6 +34,10 @@ La **définition faisant autorité de « latest »** est le tag **latest** des [
 
 Pour les détails du processus de release, voir [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) et le [workflow release](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml). Le tableau des versions et le Changelog sont mis à jour dans le cadre de la préparation du release pour qu’ils correspondent toujours à la version déployée.
 
+## Avis juridiques et marques
+
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → Marques](../../governance/trademarks.md) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
+
 ## Pour les auditeurs : URL canonique et épinglage de version
 
 Pour citer une version précise dans les rapports d’audit et assurer la reproductibilité :

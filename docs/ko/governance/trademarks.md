@@ -4,20 +4,11 @@ description: AIMO 상표 지침 - AIMO 마크 사용 규칙, 적합성 배지 �
 
 # 상표
 
-이 페이지는 AIMO 관련 마크에 대한 상표 사용 지침을 문서화합니다.
+이 페이지는 본 사이트에서 참조하는 명칭의 상표 상태 및 사용 지침을 설명합니다.
 
-## 해당 마크
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending; registration not yet granted). "AIMO" is a registered trademark owned by third parties in various jurisdictions (including Japan); RISEby Inc. does not claim ownership. "AIMO Standard" and "Certified AIMO" are not registered by RISEby. "Certified AIMO" is a provisional name; no active certification scheme exists.
 
-| 마크 | 유형 |
-| ---- | ---- |
-| AIMO | 문자 마크 |
-| AIMO Standard | 문자 마크 |
-| AIMOaaS | 문자 마크 |
-| Certified AIMO | 문자 마크 (예약됨) |
-
-## 상표 소유
-
-**AIMOaaS는 RISEby inc.의 상표입니다 (상표 출원 중).**
+정확한 상표 귀속 및 출원 상태는 위 English notice를 참조하세요.
 
 ## 마킹 지침
 

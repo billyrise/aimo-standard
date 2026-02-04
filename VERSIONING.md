@@ -66,10 +66,18 @@ The `release.yml` workflow handles this.
 
 ### 3. Non-Negotiable Rules
 
-1. **Never rewrite a released version.** If `/0.1.x/` needs fixes, release a new PATCH (e.g. `0.1.x` → next patch).
+1. **Never rewrite a released version** — except when the project explicitly approves a **repair re-deploy** for critical reasons (see [Re-deployment (repair) of existing versions](#re-deployment-repair-of-existing-versions) below). Otherwise, if `/0.1.x/` needs fixes, release a new PATCH (e.g. `0.1.x` → next patch).
 2. **`latest` is an alias, not a version.** Only the release workflow (tag push) updates it; nothing else must change `/latest/`.
 3. **`dev` is explicitly unreleased.** Must have noindex; not for audit citations.
 4. **alias_type must be `redirect`** (not `copy`) to prevent content drift.
+
+### Re-deployment (repair) of existing versions
+
+For **critical, highest-priority fixes** (e.g. legal/trademark corrections, mandatory disclosure such as “AIMO = AI Management Office”), the project **may** re-deploy an already-released version so that the same versioned URL serves the corrected content. This is an explicit exception to the usual immutability rule.
+
+- **Approved use**: Trademark and legal notice corrections; AIMO abbreviation (AI Management Office) and other non-normative clarification that must appear on all versioned URLs.
+- **How**: Use the manual workflow **Repair deploy versions** (`.github/workflows/repair-deploy-versions.yml`). It builds from `main` and deploys to the chosen version (e.g. `0.1.0`, `0.1.1`), overwriting that version’s deployed content. It does **not** change `/latest/` or create a new GitHub Release.
+- **Versions eligible for repair**: Listed in the workflow (e.g. `0.1.0`, `0.1.1`). Run the workflow once per version to repair. Prefer dry run first, then run with `dry_run: false` to deploy.
 
 ### 5. Standard governance (v0.1.1)
 
@@ -144,3 +152,4 @@ mike list
 - [Versions Page](https://standard.aimoaas.com/latest/standard/versions/)
 - [SEO & Canonical Policy](https://standard.aimoaas.com/latest/governance/seo-canonical-policy/)
 - [Releases Hub](https://standard.aimoaas.com/latest/releases/)
+- **Repair re-deploy**: [repair-deploy-versions.yml](.github/workflows/repair-deploy-versions.yml) — manual workflow to re-deploy an existing version from `main` (for critical legal/trademark or disclosure fixes only).

@@ -4,7 +4,7 @@ description: AIMO 標準概述。定義共享分類法、代碼系統、字典�
 
 # 概述
 
-AIMO 標準定義：
+**AIMO** 是 **AI Management Office**（AI 管理辦公室）的縮寫。AIMO 標準定義：
 - 共享分類法
 - 代碼系統
 - 初始字典

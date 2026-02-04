@@ -4,7 +4,7 @@ description: AIMO Standard - Padrão aberto para governança e auditoria de IA. 
 
 # AIMO Standard
 
-Este site hospeda a especificação legível do AIMO Standard.
+**AIMO** significa **AI Management Office**. Este site hospeda a especificação legível do AIMO Standard.
 
 ## Por que auditorias de IA agêntica são necessárias agora
 

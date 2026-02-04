@@ -42,6 +42,10 @@ The **authoritative definition of "latest"** is the [GitHub Releases](https://gi
 
 For release process details, see [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) and the [release workflow](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml). The Versions table and Changelog are updated as part of release preparation so that they always match the deployed version.
 
+## Legal and trademark notices
+
+Trademark status and usage (including third-party ownership of "AIMO" and the fact that only AIMOaaS is filed by RISEby Inc.) are described in [Governance → Trademarks](../../governance/trademarks.md) and in the repository [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md). For the most current trademark and legal notices, use the documentation of the latest release or the linked TRADEMARKS.md.
+
 ## For auditors: Canonical URL and version pinning
 
 To cite a specific version in audit reports and ensure reproducibility:
