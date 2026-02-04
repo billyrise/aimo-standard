@@ -96,7 +96,7 @@ See [How to Cite](cite.md) for citation format.
 
 ## Full Policy
 
-See [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) for the complete trademark policy. If you are viewing a frozen release (e.g. a versioned URL), the trademark status above applies to this snapshot; for the very latest status see the [latest release](/latest/governance/trademarks/) or the repository TRADEMARKS.md.
+See [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) for the complete trademark policy. If you are viewing a frozen release (e.g. a versioned URL), the trademark status above applies to this snapshot; for the very latest status see the [latest release on the site](https://standard.aimoaas.com/latest/governance/trademarks/) or the [repository TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
 
 ## Related Pages
 
