@@ -708,6 +708,8 @@
       
         
       
+        
+      
     
     
     
@@ -1006,6 +1008,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard/current/10-roadmap-v0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap (v0.2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1279,6 +1304,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1399,6 +1428,52 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../artifacts/signature-verification-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signature verification roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artifacts/justified-non-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justified Non-Compliance (JNC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1423,7 +1498,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1440,14 +1515,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2052,6 +2127,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-format-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      出力形式（--format）と CI での使い分け
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       チェックする内容
@@ -2119,7 +2203,11 @@
 <pre><code class="language-bash">pip install jsonschema   # 未インストールの場合
 </code></pre>
 <p><strong>2. サンプルバンドルに対してバリデーションを実行</strong></p>
-<pre><code class="language-bash">python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+<pre><code class="language-bash"># ルート JSON 単体
+python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+
+# Evidence Bundle ディレクトリ（v0.1 最小例：manifest / object_index / payload_index / signing / hash_chain を検証）
+python validator/src/validate.py examples/evidence_bundle_v01_minimal
 </code></pre>
 <p><strong>3. レポートを読み、エラー/警告を修正</strong></p>
 <p>出力例（成功）：</p>
@@ -2131,7 +2219,46 @@
 &lt;root&gt;: 'dictionary' is a required property
 &lt;root&gt;: 'evidence' is a required property
 </code></pre>
-<p>終了コード: <code>0</code> = 成功, <code>1</code> = バリデーションエラー, <code>2</code> = 使用法エラー</p>
+<p><strong>終了コード</strong>: <code>0</code> = 成功, <code>1</code> = バリデーションエラー, <code>2</code> = 使用法エラー（引数不足など）</p>
+<hr />
+<h2 id="-format-ci">出力形式（--format）と CI での使い分け</h2>
+<table>
+<thead>
+<tr>
+<th>オプション</th>
+<th>用途</th>
+<th>出力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default</code>（省略時）</td>
+<td>ローカルでの確認</td>
+<td>人間向けメッセージ（OK / エラー一覧）</td>
+</tr>
+<tr>
+<td><code>--format json</code></td>
+<td>CI・スクリプト向け</td>
+<td>機械可読 JSON（<code>valid</code>, <code>errors</code>, <code>warnings</code>, <code>path</code>, <code>profiles_valid</code>）</td>
+</tr>
+<tr>
+<td><code>--format sarif</code></td>
+<td>GitHub Code Scanning</td>
+<td>SARIF 2.1.0（ruleId, level, location, message）。提出前ゲートとして Code Scanning に結果を載せる際に使用。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例（Evidence Bundle v0.1 最小例の検証）</strong></p>
+<pre><code class="language-bash"># ローカルで成功確認
+python validator/src/validate.py examples/evidence_bundle_v01_minimal
+
+# JSON で結果を取得（CI でパースする場合）
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format json
+
+# SARIF をファイルに保存（Code Scanning アップロード用）
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format sarif &gt; dist/validator.sarif
+</code></pre>
+<p><strong>GitHub 上での見え方</strong>: Quality Gate ワークフローで <code>--format sarif</code> の結果を <code>upload-sarif</code> により Code Scanning に送信している。PR でバリデータが失敗すると、Code Scanning の「Security」タブに <code>aimo-standard/validation</code> の結果として表示され、どのパスでどのエラーかが確認できる。</p>
 <hr />
 <h2 id="_1">チェックする内容</h2>
 <ul>

@@ -708,6 +708,8 @@
       
         
       
+        
+      
     
     
     
@@ -1006,6 +1008,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard/current/10-roadmap-v0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap (v0.2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1281,6 +1306,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1460,6 +1489,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Coverage Map (YAML) vs Profiles (JSON)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v01-official-profiles-frozen-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.1 official profiles (frozen set)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-update-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profile update policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1509,6 +1562,52 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../signature-verification-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signature verification roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../justified-non-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justified Non-Compliance (JNC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1536,7 +1635,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1553,14 +1652,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2202,6 +2301,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Coverage Map (YAML) vs Profiles (JSON)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v01-official-profiles-frozen-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.1 official profiles (frozen set)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-update-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profile update policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2402,9 +2525,63 @@
 <p><em>This table summarizes the integrity guarantees that the <a href="../../validator/">Validator</a> checks for v0.1 bundles. Custody (storage, access control, retention) is implementation-defined.</em></p>
 <hr />
 <h2 id="coverage-map-yaml-vs-profiles-json">Coverage Map (YAML) vs Profiles (JSON)</h2>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Status</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Coverage Map YAML</strong> (<code>coverage_map/coverage_map.yaml</code> or similar)</td>
+<td><strong>Informative</strong></td>
+<td>High-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements.</td>
+</tr>
+<tr>
+<td><strong>Profile JSONs</strong> (<code>coverage_map/profiles/*.json</code>)</td>
+<td><strong>Normative</strong></td>
+<td>Conversion specifications validated against <code>schemas/jsonschema/aimo-profile.schema.json</code>. They define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). The <a href="../../validator/">Validator</a> runs <code>--validate-profiles</code> to ensure all official profile JSONs conform to the schema (profile_id PR-* pattern, target enum, target_version, mappings).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="v01-official-profiles-frozen-set">v0.1 official profiles (frozen set)</h3>
+<p>The v0.1 release includes <strong>three</strong> normative profile JSONs, all validated by the validator:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>profile_id</th>
+<th>target</th>
+<th>target_version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>iso42001.json</code></td>
+<td>PR-ISO42001-v0.1</td>
+<td>ISO_42001</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code>nist_ai_rmf.json</code></td>
+<td>PR-NIST-AI-RMF-v0.1</td>
+<td>NIST_AI_RMF</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code>eu_ai_act_annex_iv.json</code></td>
+<td>PR-EU-AI-ACT-ANNEX-IV-v0.1</td>
+<td>EU_AI_ACT_ANNEX_IV</td>
+<td>Annex IV</td>
+</tr>
+</tbody>
+</table>
+<h3 id="profile-update-policy">Profile update policy</h3>
 <ul>
-<li><strong><code>coverage_map/coverage_map.yaml</code></strong> is <strong>Informative</strong>: it describes high-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements.</li>
-<li><strong>Profile JSONs</strong> in <strong><code>coverage_map/profiles/</code></strong> (e.g. <code>iso42001.json</code>, <code>nist_ai_rmf.json</code>, <code>eu_ai_act_annex_iv.json</code>) are <strong>normative conversion specifications</strong>: they conform to <code>schemas/jsonschema/aimo-profile.schema.json</code> and define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). Validators may use them to check that a bundle satisfies a given profile (required mappings present). See <a href="../../validator/">Validator</a> for profile-based validation when implemented.</li>
+<li><strong>ISO 42001 / NIST AI RMF</strong>: New versions of the target framework may be added as new profile files or new <code>target_version</code> values in a future standard version; v0.1 profiles remain frozen for the v0.1 release.</li>
+<li><strong>EU AI Act Annex IV</strong>: Annex IV and related articles may be updated by regulators; profile mappings may be updated via <strong>PATCH</strong> (e.g. 0.1.x) to follow wording or clause changes while keeping the same profile_id for continuity. Implementers should align with the version referenced in the profile’s <code>target_version</code> and release notes.</li>
 </ul>
 <hr />
 <h2 id="see-also">See also</h2>

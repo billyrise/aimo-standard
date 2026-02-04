@@ -713,6 +713,8 @@
       
         
       
+        
+      
     
     
     
@@ -1011,6 +1013,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../standard/current/10-roadmap-v0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap (v0.2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1286,6 +1311,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1465,6 +1494,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Coverage Map（YAML）と Profile（JSON）の関係">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v01-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.1 公式 profiles（凍結セット）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profile 更新方針
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1514,6 +1567,52 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../signature-verification-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signature verification roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../justified-non-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justified Non-Compliance (JNC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1541,7 +1640,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1558,14 +1657,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2207,6 +2306,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Coverage Map（YAML）と Profile（JSON）の関係">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v01-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.1 公式 profiles（凍結セット）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profile 更新方針
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2407,9 +2530,63 @@
 <p><em>上記は v0.1 バンドルに対して <a href="../../validator/">Validator</a> が検証する整合性保証の要約。Custody（保管・アクセス制御・保持）は実装定義。</em></p>
 <hr />
 <h2 id="coverage-mapyaml-profilejson">Coverage Map（YAML）と Profile（JSON）の関係</h2>
+<table>
+<thead>
+<tr>
+<th>成果物</th>
+<th>位置づけ</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Coverage Map YAML</strong>（<code>coverage_map/coverage_map.yaml</code> 等）</td>
+<td><strong>Informative</strong></td>
+<td>AIMO 証跡/成果物と外部フレームワーク（ISO 42001、NIST AI RMF、EU AI Act 等）の高レベルな対応テーマの説明。規範的な検証要件は課さない。</td>
+</tr>
+<tr>
+<td><strong>Profile JSON</strong>（<code>coverage_map/profiles/*.json</code>）</td>
+<td><strong>Normative</strong></td>
+<td><code>schemas/jsonschema/aimo-profile.schema.json</code> で検証される変換仕様。機械可読なマッピングを定義。<a href="../../validator/">Validator</a> の <code>--validate-profiles</code> で公式 Profile JSON のスキーマ適合を検証する（profile_id の PR-* パターン、target 列挙、target_version、mappings）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="v01-profiles">v0.1 公式 profiles（凍結セット）</h3>
+<p>v0.1 リリースに含まれる<strong>規範的</strong> Profile JSON は <strong>3 本</strong>。いずれもバリデータで検証される。</p>
+<table>
+<thead>
+<tr>
+<th>ファイル</th>
+<th>profile_id</th>
+<th>target</th>
+<th>target_version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>iso42001.json</code></td>
+<td>PR-ISO42001-v0.1</td>
+<td>ISO_42001</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code>nist_ai_rmf.json</code></td>
+<td>PR-NIST-AI-RMF-v0.1</td>
+<td>NIST_AI_RMF</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><code>eu_ai_act_annex_iv.json</code></td>
+<td>PR-EU-AI-ACT-ANNEX-IV-v0.1</td>
+<td>EU_AI_ACT_ANNEX_IV</td>
+<td>Annex IV</td>
+</tr>
+</tbody>
+</table>
+<h3 id="profile">Profile 更新方針</h3>
 <ul>
-<li><strong><code>coverage_map/coverage_map.yaml</code></strong> は <strong>Informative</strong>：AIMO の証跡/成果物と外部フレームワーク（ISO 42001、NIST AI RMF、EU AI Act 等）との高レベルな対応テーマを説明する。規範的な検証要件は課さない。</li>
-<li><strong><code>coverage_map/profiles/</code></strong> 配下の <strong>Profile JSON</strong>（例：<code>iso42001.json</code>, <code>nist_ai_rmf.json</code>, <code>eu_ai_act_annex_iv.json</code>）は <strong>規範的な変換仕様</strong>：<code>schemas/jsonschema/aimo-profile.schema.json</code> に準拠し、機械可読なマッピング（どの AIMO オブジェクトがどのフレームワーク条項に対応するか）を定義する。バリデータはプロファイル適合チェック（必須マッピングの充足）に利用可能。実装は <a href="../../validator/">Validator</a> を参照。</li>
+<li><strong>ISO 42001 / NIST AI RMF</strong>：対象フレームワークの新バージョンは、将来の標準バージョンで新規 Profile ファイルまたは新 <code>target_version</code> として追加可能。v0.1 の Profile は v0.1 リリースとして凍結。</li>
+<li><strong>EU AI Act Annex IV</strong>：Annex IV および関連条文は規制側で更新される場合がある。条文・文言変更に追随するため、<strong>PATCH</strong>（例 0.1.x）で Profile のマッピングを更新することがある（profile_id は継続）。実装者は Profile の <code>target_version</code> およびリリースノートで参照される版に合わせること。</li>
 </ul>
 <hr />
 <h2 id="_1">関連</h2>

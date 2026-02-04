@@ -18,7 +18,7 @@
         <link rel="prev" href="../08-changelog/">
       
       
-        <link rel="next" href="../../versions/">
+        <link rel="next" href="../10-roadmap-v0.2/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -725,6 +725,8 @@
       
         
       
+        
+      
     
     
     
@@ -1060,6 +1062,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v01-must" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.1 規範 MUST（まとめ）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#must" class="md-nav__link">
     <span class="md-ellipsis">
       ルート必須構成（MUST）
@@ -1089,6 +1100,15 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      将来拡張（情報提供）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
       関連
     </span>
   </a>
@@ -1099,6 +1119,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-roadmap-v0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap (v0.2)
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1380,6 +1423,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1500,6 +1547,52 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../artifacts/signature-verification-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signature verification roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/justified-non-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justified Non-Compliance (JNC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1524,7 +1617,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1541,14 +1634,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2139,6 +2232,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v01-must" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.1 規範 MUST（まとめ）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#must" class="md-nav__link">
     <span class="md-ellipsis">
       ルート必須構成（MUST）
@@ -2167,6 +2269,15 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      将来拡張（情報提供）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       関連
     </span>
@@ -2210,6 +2321,15 @@
 
 <h1 id="evidence-bundle-v01">Evidence Bundle ルート構造（v0.1）</h1>
 <p>本ページは Evidence Bundle の<strong>規範的</strong>ルート構成とマニフェストを定義する。バリデータは、これらの要件を満たさないバンドルをスキーマ検証の前に拒否しなければならない。</p>
+<h2 id="v01-must">v0.1 規範 MUST（まとめ）</h2>
+<ul>
+<li>バンドルルートに <strong>manifest.json</strong> が存在することは必須。</li>
+<li><strong>object_index</strong> と <strong>payload_index</strong>：各エントリに <strong>sha256</strong>（64 文字小 hex）が必須。path は相対で <code>../</code> 禁止・ルート外参照禁止。</li>
+<li><strong>signing.signatures</strong> は空でない配列であること（空配列は無効）。</li>
+<li>各署名エントリは <strong>path</strong>（signatures/ 配下、パストラバーサル禁止）、<strong>targets</strong>（配列・最低1要素）を持ち、バンドル内の少なくとも1件の署名が <strong>targets</strong> に <strong>manifest.json</strong> を含むこと（マニフェスト署名は必須）。</li>
+<li><strong>hash_chain</strong>：v0.1 では <strong>algorithm</strong>、<strong>head</strong>、<strong>path</strong>（hashes/ 配下）、<strong>covers</strong>（少なくとも <strong>manifest.json</strong> と <strong>objects/index.json</strong>）を必須とする。</li>
+</ul>
+<p>バリデータはこれらを満たさないバンドルを拒否すること（MUST）。JSON Schema および参照バリデータは同一ルールを実装する。</p>
 <h2 id="must">ルート必須構成（MUST）</h2>
 <p>バンドルルートに以下が存在することは MUST とする。</p>
 <table>
@@ -2251,7 +2371,7 @@
 <p>提出時、上記のいずれかが欠けているバンドルは MUST NOT とする。バリデータはルート構成が不完全な場合、明確なメッセージで失敗することは MUST とする。</p>
 <h2 id="integrity-custody">Integrity（規範）と Custody（実装側）</h2>
 <ul>
-<li><strong>Integrity</strong> は v0.1 で<strong>規範</strong>とする：マニフェスト、索引ファイルの sha256、マニフェストに対する署名の存在を必須とする。バリデータは以下をチェックすることは MUST とする：必須ディレクトリ・ファイルの存在、manifest.json の存在と有効性、object_index / payload_index に列挙された全ファイルの存在と sha256 一致、signatures/ にマニフェストを対象とする署名が少なくとも1つ存在すること（v0.1 では存在と参照のみ；検証は v0.1 の範囲外）。</li>
+<li><strong>Integrity</strong> は v0.1 で<strong>規範</strong>とする：マニフェスト、索引ファイルの sha256、マニフェストに対する署名の存在を必須とする。バリデータは以下をチェックすることは MUST とする：必須ディレクトリ・ファイルの存在、manifest.json の存在と有効性、object_index / payload_index に列挙された全ファイルの存在と sha256 一致、signatures/ にマニフェストを対象とする署名が少なくとも1つ存在すること（v0.1：存在と参照のみ；v0.1.1：検証用メタデータは RECOMMENDED；v0.2 予定：暗号学的検証をスコープに含める）。</li>
 <li><strong>Custody</strong>（保管・アクセス制御・保持）は<strong>実装側</strong>で定義する。標準は保管方法を規定しない。提出時点で Integrity 要件を満たすことを要求する。</li>
 </ul>
 <h2 id="manifestjsonmust">manifest.json（MUST 項目）</h2>
@@ -2307,14 +2427,52 @@
 </tr>
 </tbody>
 </table>
+<p><strong>v0.1.1 オプション署名メタデータ（第三者による再実施のため RECOMMENDED）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>フィールド</th>
+<th>型</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>signer_identity</strong></td>
+<td>string</td>
+<td>署名者識別（例 PGP フィンガープリント、did:key）。</td>
+</tr>
+<tr>
+<td><strong>signed_at</strong></td>
+<td>string (date-time)</td>
+<td>署名適用日時（ISO 8601）。</td>
+</tr>
+<tr>
+<td><strong>verification_command</strong></td>
+<td>string</td>
+<td>監査人が再検証するための例示 CLI コマンド。</td>
+</tr>
+<tr>
+<td><strong>canonicalization</strong></td>
+<td>string</td>
+<td>署名対象ペイロードの正規化方式：<code>rfc8785_json</code>、<code>cbor</code>、<code>unspecified</code>。</td>
+</tr>
+</tbody>
+</table>
+<p>Integrity と検証：<strong>v0.1</strong> — 参照と存在のみ。<strong>v0.1.1</strong> — 検証用メタデータは RECOMMENDED。<strong>v0.2</strong>（予定）— 暗号学的検証をスコープに含める。</p>
 <ul>
 <li><strong>sha256</strong> は 64 文字の小 hex であること（MUST）。</li>
 <li><strong>path</strong> は相対パスとし、<code>../</code> および先頭 <code>/</code> を含んではならない（MUST）。パスは Evidence Bundle ルート内に留まること（MUST）。</li>
 </ul>
 <p>JSON Schema: <code>schemas/jsonschema/evidence_bundle_manifest.schema.json</code> を参照。</p>
-<h2 id="_1">関連</h2>
+<h2 id="_1">将来拡張（情報提供）</h2>
+<ul>
+<li><strong>Control/Requirement リンク</strong>: 将来バージョンで、Evidence Bundle 要素を Control または Requirement 識別子へリンクする標準方式を追加する可能性がある（例：NIST OSCAL 等へのエクスポート用）。v0.1 および v0.1.1 では不要。</li>
+</ul>
+<h2 id="_2">関連</h2>
 <ul>
 <li><a href="../../../artifacts/evidence-bundle/">Evidence Bundle（概要）</a></li>
+<li><a href="../../../artifacts/signature-verification-roadmap/">署名検証ロードマップ</a></li>
 <li><a href="../../../validator/">Validator</a></li>
 <li><a href="../../../artifacts/minimum-evidence/">Minimum Evidence Requirements</a></li>
 </ul>

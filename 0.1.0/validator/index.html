@@ -703,6 +703,8 @@
       
         
       
+        
+      
     
     
     
@@ -1001,6 +1003,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard/current/10-roadmap-v0.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap (v0.2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1274,6 +1299,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1394,6 +1423,52 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../artifacts/signature-verification-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signature verification roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artifacts/justified-non-compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Justified Non-Compliance (JNC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1418,7 +1493,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1435,14 +1510,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2047,6 +2122,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#output-formats-format-and-ci-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output formats (--format) and CI usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-it-checks" class="md-nav__link">
     <span class="md-ellipsis">
       What it checks
@@ -2114,7 +2198,11 @@
 <pre><code class="language-bash">pip install jsonschema   # if not already installed
 </code></pre>
 <p><strong>2. Run validation against a sample bundle</strong></p>
-<pre><code class="language-bash">python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+<pre><code class="language-bash"># Single root JSON file
+python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+
+# Evidence Bundle directory (v0.1 minimal: validates manifest, object_index, payload_index, signing, hash_chain)
+python validator/src/validate.py examples/evidence_bundle_v01_minimal
 </code></pre>
 <p><strong>3. Read the report and fix errors/warnings</strong></p>
 <p>Example output (success):</p>
@@ -2126,7 +2214,46 @@
 &lt;root&gt;: 'dictionary' is a required property
 &lt;root&gt;: 'evidence' is a required property
 </code></pre>
-<p>Exit codes: <code>0</code> = success, <code>1</code> = validation errors, <code>2</code> = usage error.</p>
+<p><strong>Exit codes</strong>: <code>0</code> = success, <code>1</code> = validation errors, <code>2</code> = usage error (e.g. missing path or options).</p>
+<hr />
+<h2 id="output-formats-format-and-ci-usage">Output formats (--format) and CI usage</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Use case</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default</code> (omit)</td>
+<td>Local inspection</td>
+<td>Human-readable message (OK / error list)</td>
+</tr>
+<tr>
+<td><code>--format json</code></td>
+<td>CI and scripts</td>
+<td>Machine-readable JSON (<code>valid</code>, <code>errors</code>, <code>warnings</code>, <code>path</code>, <code>profiles_valid</code>)</td>
+</tr>
+<tr>
+<td><code>--format sarif</code></td>
+<td>GitHub Code Scanning</td>
+<td>SARIF 2.1.0 (ruleId, level, location, message). Use when feeding results into Code Scanning as a pre-submission gate.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: validating the Evidence Bundle v0.1 minimal sample</strong></p>
+<pre><code class="language-bash"># Local success check
+python validator/src/validate.py examples/evidence_bundle_v01_minimal
+
+# Get result as JSON (for CI parsing)
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format json
+
+# Write SARIF to a file (for Code Scanning upload)
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format sarif &gt; dist/validator.sarif
+</code></pre>
+<p><strong>How it appears on GitHub</strong>: The Quality Gate workflow runs the validator with <code>--format sarif</code> and uploads the result via <code>upload-sarif</code>. When validation fails on a PR, the Security tab (Code Scanning) shows results for <code>aimo-standard/validation</code> so you can see which path and which error failed.</p>
 <hr />
 <h2 id="what-it-checks">What it checks</h2>
 <ul>
