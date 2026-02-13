@@ -82,6 +82,8 @@ extra:
     alias: true
     # Default version for redirects
     default: latest
+  # Root URL for header version links (mike rewrites site_url per version; this stays fixed)
+  site_root: https://standard.aimoaas.com/
   # Dev deployment flag (set to true by deploy-dev.yml for noindex)
   is_dev_deploy: false
 

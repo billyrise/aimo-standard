@@ -15,7 +15,8 @@ on:
         options:
           - '0.1.0'
           - '0.1.1'
-        default: '0.1.1'
+          - '0.1.2'
+        default: '0.1.2'
       dry_run:
         description: 'Dry run - build only, do not push to gh-pages'
         required: false
