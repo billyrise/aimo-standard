@@ -245,17 +245,6 @@
     </div>
     
     
-    
-    <div class="md-header__version-links" style="display:flex;align-items:center;gap:0.5rem;margin-right:0.25rem;font-size:0.8rem;">
-      <a href="https://standard.aimoaas.com/latest/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Latest</a>
-      <span style="color:var(--md-default-fg-color--lighter,inherit);" aria-hidden="true">|</span>
-      <a href="https://standard.aimoaas.com/dev/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Dev</a>
-      <span style="color:var(--md-default-fg-color--lighter,inherit);" aria-hidden="true">|</span>
-      <a href="https://standard.aimoaas.com/latest/standard/versions/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Versions</a>
-    </div>
-    
-    
-    
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
@@ -2563,6 +2552,12 @@
 </div>
 
 
+
+<nav class="md-version-bar" style="background:var(--md-default-fg-color--lightest, #eee);color:var(--md-default-fg-color--light);padding:6px 1rem;font-size:0.8rem;text-align:right;" aria-label="Version">
+  <a href="https://standard.aimoaas.com/latest/">Latest</a> | <a href="https://standard.aimoaas.com/dev/">Dev</a> | <a href="https://standard.aimoaas.com/latest/standard/versions/">Versions</a>
+</nav>
+
+
                   
 
 
@@ -2773,14 +2768,20 @@ site_url: https://standard.aimoaas.com/
     Site paths use version numbers without the <code>v</code> prefix. For version <code>v1.0.0</code>, use <code>/1.0.0/</code> in URLs.</p>
 <h2 id="technical-implementation">Technical Implementation</h2>
 <h3 id="generated-html-example">Generated HTML Example</h3>
-<p>Every generated HTML page includes canonical and hreflang tags in the <code>&lt;head&gt;</code>:</p>
-<pre><code class="language-html">&lt;!-- Canonical (always points to Production) --&gt;
+<p>Every generated HTML page includes canonical and hreflang tags in the <code>&lt;head&gt;</code>. The canonical URL depends on whether the page is served under <code>/latest/</code> or a versioned path.</p>
+<p><strong>When rendered under <code>/latest/</code></strong> (alias redirect), the canonical may point at the resolved version or at <code>/latest/</code> per deployment choice:</p>
+<pre><code class="language-html">&lt;!-- Example: latest alias --&gt;
 &lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
-
-&lt;!-- Language alternates --&gt;
 &lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
 &lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/latest/ja/governance/&quot;&gt;
 &lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
+</code></pre>
+<p><strong>When rendered under a versioned path</strong> (e.g. <code>/0.1.2/</code>), the canonical MUST include the versioned prefix so that audit citations point at the frozen snapshot. When rendered under <code>/{X.Y.Z}/</code>, canonical must include the versioned prefix.</p>
+<pre><code class="language-html">&lt;!-- Example: versioned snapshot (e.g. /0.1.2/) --&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.1.2/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/0.1.2/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/0.1.2/ja/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/0.1.2/governance/&quot;&gt;
 </code></pre>
 <h3 id="robotstxt">robots.txt</h3>
 <p>Production is <strong>fully crawlable</strong>. There is no global crawler block. Only the <code>/dev/</code> preview path is disallowed.</p>
@@ -2837,7 +2838,7 @@ site/governance/index.html:&lt;link rel=&quot;canonical&quot; href=&quot;https:/
 <h2 id="related-documentation">Related Documentation</h2>
 <ul>
 <li><a href="../trust-package/">Trust Package</a> — Auditor-ready materials</li>
-<li><a href="../../releases/">Releases</a> — Version history and changelog</li>
+<li><a href="../releases/">Releases</a> — Version history and changelog</li>
 <li><a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> — Version policy</li>
 </ul>
 
@@ -2873,7 +2874,7 @@ site/governance/index.html:&lt;link rel=&quot;canonical&quot; href=&quot;https:/
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024-2026 AIMO Standard Contributors
+      Copyright &copy; 2025-2026 AIMO Standard Contributors
     </div>
   
   

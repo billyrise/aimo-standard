@@ -250,17 +250,6 @@
     </div>
     
     
-    
-    <div class="md-header__version-links" style="display:flex;align-items:center;gap:0.5rem;margin-right:0.25rem;font-size:0.8rem;">
-      <a href="https://standard.aimoaas.com/latest/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Latest</a>
-      <span style="color:var(--md-default-fg-color--lighter,inherit);" aria-hidden="true">|</span>
-      <a href="https://standard.aimoaas.com/dev/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Dev</a>
-      <span style="color:var(--md-default-fg-color--lighter,inherit);" aria-hidden="true">|</span>
-      <a href="https://standard.aimoaas.com/latest/standard/versions/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Versions</a>
-    </div>
-    
-    
-    
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
@@ -2582,6 +2571,12 @@
 </div>
 
 
+
+<nav class="md-version-bar" style="background:var(--md-default-fg-color--lightest, #eee);color:var(--md-default-fg-color--light);padding:6px 1rem;font-size:0.8rem;text-align:right;" aria-label="Version">
+  <a href="https://standard.aimoaas.com/latest/">Latest</a> | <a href="https://standard.aimoaas.com/dev/">Dev</a> | <a href="https://standard.aimoaas.com/latest/standard/versions/">Versions</a>
+</nav>
+
+
                   
 
 
@@ -2623,8 +2618,10 @@
 <pre><code>- **Structure**: `data/taxonomy/canonical.yaml` (codes, status, lifecycle)
 - **Translations**: `data/taxonomy/i18n/*.yaml` (labels, definitions per language)
 
-CSV files are **generated artifacts** for distribution. See [Releases](../../releases/index.md) for downloads.
+CSV files are **generated artifacts** for distribution. See [Releases](../../../releases/) for downloads.
 </code></pre>
+<p>!!! note "Standard release version vs dictionary/taxonomy versions"
+    The AIMO Standard <strong>release version</strong> (site/release, e.g. <code>/0.1.2/</code>) and the <strong>dictionary content version</strong> (or <strong>taxonomy schema version</strong>) are not necessarily the same. In 0.1.x they often align; future releases may version them independently. For audit citations, prefer the Standard release version (<code>/X.Y.Z/</code>); in Evidence, state <code>taxonomy_version</code> and <code>dictionary_version</code> where applicable.</p>
 <h2 id="column-schema">Column Schema</h2>
 <p>The canonical dictionary uses <strong>18 columns</strong> (language-neutral structure):</p>
 <h3 id="identification-columns-5">Identification Columns (5)</h3>
@@ -2651,7 +2648,7 @@ CSV files are **generated artifacts** for distribution. See [Releases](../../rel
 <td><code>standard_version</code></td>
 <td>Yes</td>
 <td>SemVer format</td>
-<td><code>0.1.0</code></td>
+<td><code>0.1.0</code> <em>(example; use the Standard release version you align to)</em></td>
 </tr>
 <tr>
 <td>3</td>
@@ -2891,7 +2888,7 @@ CSV files are **generated artifacts** for distribution. See [Releases](../../rel
 </table>
 <p>!!! note "Complete Code Listings"
     The complete list of 91 codes is available in the generated CSV artifacts. This documentation page provides column definitions and usage guidance. For detailed code definitions:</p>
-<pre><code>- **Download**: See [Releases](../../releases/index.md) for per-language CSV files
+<pre><code>- **Download**: See [Releases](../../../releases/) for per-language CSV files
 - **Per-language CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
 - **Legacy EN/JA mixed CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (frozen, for backward compatibility only)
 </code></pre>
@@ -3067,7 +3064,7 @@ CSV files are **generated artifacts** for distribution. See [Releases](../../rel
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024-2026 AIMO Standard Contributors
+      Copyright &copy; 2025-2026 AIMO Standard Contributors
     </div>
   
   

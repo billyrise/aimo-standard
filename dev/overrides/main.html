@@ -150,5 +150,11 @@
   Development Preview — Not for audit citation. Use <a href="{{ config.site_url }}latest/" style="color:#fff;text-decoration:underline;">/latest/</a> or a versioned URL (e.g. /0.0.3/). <a href="{{ config.site_url }}latest/governance/cite/" style="color:#fff;text-decoration:underline;">How to cite</a> · <a href="{{ config.site_url }}latest/releases/" style="color:#fff;text-decoration:underline;">Releases</a>
 </div>
 {% endif %}
+{% set _root = config.extra.site_root | d(config.site_url, true) %}
+{% if _root %}
+<nav class="md-version-bar" style="background:var(--md-default-fg-color--lightest, #eee);color:var(--md-default-fg-color--light);padding:6px 1rem;font-size:0.8rem;text-align:right;" aria-label="Version">
+  <a href="{{ _root }}latest/">Latest</a> | <a href="{{ _root }}dev/">Dev</a> | <a href="{{ _root }}latest/standard/versions/">Versions</a>
+</nav>
+{% endif %}
 {{ super() }}
 {% endblock %}

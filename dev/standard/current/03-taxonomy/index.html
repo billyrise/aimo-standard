@@ -250,17 +250,6 @@
     </div>
     
     
-    
-    <div class="md-header__version-links" style="display:flex;align-items:center;gap:0.5rem;margin-right:0.25rem;font-size:0.8rem;">
-      <a href="https://standard.aimoaas.com/latest/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Latest</a>
-      <span style="color:var(--md-default-fg-color--lighter,inherit);" aria-hidden="true">|</span>
-      <a href="https://standard.aimoaas.com/dev/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Dev</a>
-      <span style="color:var(--md-default-fg-color--lighter,inherit);" aria-hidden="true">|</span>
-      <a href="https://standard.aimoaas.com/latest/standard/versions/" class="md-header__version-link" style="color:var(--md-default-fg-color--light,inherit);text-decoration:none;white-space:nowrap;">Versions</a>
-    </div>
-    
-    
-    
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
@@ -2600,6 +2589,12 @@
 </div>
 
 
+
+<nav class="md-version-bar" style="background:var(--md-default-fg-color--lightest, #eee);color:var(--md-default-fg-color--light);padding:6px 1rem;font-size:0.8rem;text-align:right;" aria-label="Version">
+  <a href="https://standard.aimoaas.com/latest/">Latest</a> | <a href="https://standard.aimoaas.com/dev/">Dev</a> | <a href="https://standard.aimoaas.com/latest/standard/versions/">Versions</a>
+</nav>
+
+
                   
 
 
@@ -2648,10 +2643,14 @@
 <h2 id="examples-of-aiagentic-specific-risks-why-an-ai-specific-standard-is-needed">Examples of AI/agentic-specific risks (why an AI-specific standard is needed)</h2>
 <p>Traditional security controls (e.g., ISMS) alone often fail to capture LLM/agent-specific failure modes and autonomous agent deviations (e.g., unintended tool execution, recursive loops) in an <strong>audit-explainable</strong> manner.
 AIMO Taxonomy provides a shared language to classify these AI-specific risks and connect them to evidence requirements and remediation workflows.</p>
-<p>(Reference examples for differentiation. The codes below are illustrative placeholders; the official code system follows the Standard definitions.)
-- AG-01 Runaway Loop / Recursion
-- AG-02 Unauthorized Tool Use (confused deputy-style misuse)
-- AG-03 Privilege Boundary Drift</p>
+<p>!!! warning "Reference examples only — not normative codes"
+    The codes below are <strong>illustrative placeholders</strong> and are <strong>NOT</strong> part of the normative AIMO code system. They are reference examples for differentiation; the official code system follows the Standard definitions in <a href="../04-codes/">Codes</a> and <a href="../05-dictionary/">Dictionary</a>.</p>
+<ul>
+<li><strong>AG-01</strong> Runaway Loop / Recursion</li>
+<li><strong>AG-02</strong> Unauthorized Tool Use (confused deputy-style misuse)</li>
+<li><strong>AG-03</strong> Privilege Boundary Drift</li>
+</ul>
+<p>Do not use AG-* in submissions; use normative dimensions and codes defined in Codes/Dictionary.</p>
 <h2 id="dimensions-overview">Dimensions Overview</h2>
 <p>AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-letter prefix.</p>
 <table>
@@ -3257,7 +3256,7 @@ LG: LG-001 (Request Record), LG-002 (Review/Approval Record)
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024-2026 AIMO Standard Contributors
+      Copyright &copy; 2025-2026 AIMO Standard Contributors
     </div>
   
   
