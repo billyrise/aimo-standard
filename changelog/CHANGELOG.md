@@ -9,6 +9,24 @@ This changelog follows [Semantic Versioning](https://semver.org/) principles:
 
 ---
 
+## [0.1.2] - (release date TBD) {#version-012}
+
+### Summary (auditor-facing)
+
+v0.1.2 is a **PATCH** release: backward-compatible fixes and clarifications. It adds EU AI Act references normalization (Docs/SSOT), improves Annex IV sample bundle completeness (signatures/hashes/payload), adds optional JNC schema and validator check, and adds validator audit report outputs (audit-json/audit-html). All v0.1.0 and v0.1.1 Evidence Bundles remain valid.
+
+### Added
+
+- **Validator audit report outputs**: Validator can emit audit-oriented reports in `audit-json` and `audit-html` formats for submission and review workflows.
+- **Optional JNC schema and validator check**: Optional Justified Non-Compliance schema and validator check for adopters who document exceptions; remains informative and non-normative.
+
+### Changed
+
+- **EU AI Act references normalization**: Docs and SSOT clarify and normalize EU AI Act references; mapping is informative only and does not constitute legal advice.
+- **Annex IV sample bundle completeness**: Annex IV sample Evidence Bundle adds signatures, hashes, and payload alignment for completeness; profile and mappings clarified.
+
+---
+
 ## [0.1.1] - (release date TBD) {#version-011}
 
 ### Summary (auditor-facing)

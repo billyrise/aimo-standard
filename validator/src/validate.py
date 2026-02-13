@@ -505,6 +505,8 @@ def emit_audit_html(report: dict[str, Any]) -> str:
         f'<tr><td>{r.get("severity", "")}</td><td>{r.get("check_id", "")}</td><td>{r.get("message", "")}</td><td>{r.get("path") or ""}</td></tr>'
         for r in results
     )
+    no_issues_row = '<tr><td colspan="4">No issues.</td></tr>'
+    tbody_rows = rows if rows else no_issues_row
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -536,7 +538,7 @@ th {{ background: #f5f5f5; }}
 <table>
 <thead><tr><th>Severity</th><th>Check</th><th>Message</th><th>Path</th></tr></thead>
 <tbody>
-{rows if rows else "<tr><td colspan=\"4\">No issues.</td></tr>"}
+{tbody_rows}
 </tbody>
 </table>
 <p class="note">This report describes evidence readiness and integrity checks only. It does not constitute legal or compliance advice.</p>

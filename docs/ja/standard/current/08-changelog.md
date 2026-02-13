@@ -80,6 +80,18 @@ v1.0.0: FS-007 削除 (status: removed)
 
 ## 変更履歴
 
+### バージョン 0.1.2 {#version-012}
+
+**概要：** PATCH リリース（非破壊）。ドキュメント/SSOT における EU AI Act 参照の正規化（情報提供マッピングのみ。法律助言ではない）。Annex IV サンプルバンドルの完全性を改善（署名・ハッシュ・ペイロード）。オプションの JNC スキーマとバリデータチェックを追加。バリデータの監査レポート出力（audit-json、audit-html）を追加。詳細はリポジトリ [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) を参照。
+
+### バージョン 0.1.1 {#version-011}
+
+**概要：** PATCH リリース。検証用のオプション署名メタデータ、Coverage Map の audit_questions、Normative/Informative およびガバナンスの明確化、v0.2 ロードマップ。詳細はリポジトリ [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) を参照。
+
+### バージョン 0.1.0 {#version-010}
+
+**概要：** 規範的 Evidence Bundle 構造、ID 名前空間（EV/LG）、プロファイル、バリデータ。破壊的変更：タクソノミーで EV→LG。詳細はリポジトリ [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) を参照。
+
 ### 未リリース（名前空間と規範の修正）
 
 **概要：** EV コード衝突の解消、EV（索引）と Evidence Pack（ペイロード）の明確化、/dev の監査誤引用防止の強化。
