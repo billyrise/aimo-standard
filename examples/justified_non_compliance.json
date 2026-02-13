@@ -1,0 +1,24 @@
+{
+  "version": "0.1.2",
+  "non_compliances": [
+    {
+      "id": "JNC-001",
+      "aimo_item_ref": "minimum-evidence:exception",
+      "title": "Model monitoring dashboard not implemented in Phase 1",
+      "rationale": "Phase 1 scope is limited to offline evaluation; live monitoring is planned for Phase 2 after pilot deployment.",
+      "risk_assessment": {
+        "likelihood": "low",
+        "impact": "medium",
+        "mitigation": "Manual quarterly review by Data Science Lead and sign-off until dashboard is deployed."
+      },
+      "approver": {
+        "name": "Jane Doe",
+        "role": "CTO",
+        "approval_date": "2026-02-01"
+      },
+      "review_schedule": "quarterly",
+      "sunset_condition": "When model is used for regulated decisions or Phase 2 monitoring goes live.",
+      "references": ["EV-001", "REQ-MON-01"]
+    }
+  ]
+}

@@ -291,6 +291,34 @@ def validate_bundle(bundle_root: Path) -> list[str]:
     return errors
 
 
+# logical_id values that trigger JNC schema validation (case-insensitive)
+JNC_LOGICAL_IDS = frozenset({"jnc", "justified_non_compliance"})
+
+
+def schema_validate_jnc(bundle_root: Path, jnc_path: Path) -> list[str]:
+    """
+    Validate a JNC payload file against aimo-jnc.schema.json.
+    Returns list of error messages; empty if valid.
+    """
+    errors: list[str] = []
+    try:
+        payload = json.loads(jnc_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        errors.append(f"JNC payload invalid JSON ({jnc_path.relative_to(bundle_root)}): {e}")
+        return errors
+    try:
+        schema = load_schema("aimo-jnc.schema.json")
+    except Exception as e:
+        errors.append(f"Failed to load aimo-jnc.schema.json: {e}")
+        return errors
+    validator = Draft202012Validator(schema)
+    for err in sorted(validator.iter_errors(payload), key=lambda e: e.path):
+        path_str = ".".join(str(x) for x in err.path) if err.path else "<root>"
+        rel = jnc_path.relative_to(bundle_root)
+        errors.append(f"JNC {rel}: {path_str}: {err.message}")
+    return errors
+
+
 def run_validation(path: Path) -> tuple[bool, list[str], list[str]]:
     """
     Run validation on path (file or bundle dir). Returns (valid, errors, warnings).
@@ -307,6 +335,24 @@ def run_validation(path: Path) -> tuple[bool, list[str], list[str]]:
             errors.append(BUNDLE_INTEGRITY_REJECT_MESSAGE)
             errors.extend(bundle_errors)
             return False, errors, []
+        # Optional JNC: if payload_index has logical_id JNC/jnc/JUSTIFIED_NON_COMPLIANCE, schema-validate that payload
+        try:
+            manifest = json.loads((path / "manifest.json").read_text(encoding="utf-8"))
+            for pl in manifest.get("payload_index", []):
+                logical_id = (pl.get("logical_id") or "").strip().lower().replace("-", "_")
+                if logical_id not in JNC_LOGICAL_IDS:
+                    continue
+                rel = pl.get("path", "")
+                ok, resolved, _ = _check_path_under_root(path, rel, subdir=None, label="payload_index.path")
+                if not ok or not resolved or not resolved.is_file():
+                    continue  # already reported by validate_bundle
+                jnc_errors = schema_validate_jnc(path, resolved)
+                if jnc_errors:
+                    errors.append("JNC schema validation failed")
+                    errors.extend(jnc_errors)
+                    return False, errors, []
+        except (json.JSONDecodeError, OSError):
+            pass  # manifest already validated
         return True, [], []
 
     # Root JSON mode
