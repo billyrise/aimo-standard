@@ -29,7 +29,7 @@ In practice, an organization may decide not to implement a specific control or e
 
 The normative schema for the JNC payload is:
 
-- **Schema file:** [schemas/jsonschema/aimo-jnc.schema.json](../../../schemas/jsonschema/aimo-jnc.schema.json)
+- **Schema file:** [schemas/jsonschema/aimo-jnc.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/aimo-jnc.schema.json)
 
 It defines a `version` (e.g. `0.1.2`) and a `non_compliances` array. Each entry includes:
 
@@ -39,7 +39,7 @@ It defines a `version` (e.g. `0.1.2`) and a `non_compliances` array. Each entry 
 - `review_schedule`: `quarterly` | `monthly` | `annually` | `ad-hoc`
 - Optional: `sunset_condition`, `references`
 
-See the schema and [examples/justified_non_compliance.json](../../../examples/justified_non_compliance.json) for a minimal valid example.
+See the schema and [examples/justified_non_compliance.json](https://github.com/billyrise/aimo-standard/blob/main/examples/justified_non_compliance.json) for a minimal valid example.
 
 ## Alignment
 
