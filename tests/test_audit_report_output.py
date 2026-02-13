@@ -1,6 +1,5 @@
 """Tests for validator audit-json and audit-html report output."""
 import json
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -13,19 +12,15 @@ SCHEMA_PATH = ROOT / "schemas" / "jsonschema" / "aimo-validation-report.schema.j
 BUNDLE_MINIMAL = ROOT / "examples" / "evidence_bundle_v01_minimal"
 BUNDLE_ANNEX_IV = ROOT / "examples" / "evidence_bundle_v01_annex_iv_sample"
 
-# Avoid DeprecationWarning (e.g. jsonschema.RefResolver) leaking into output in CI
-_ENV = os.environ.copy()
-_ENV["PYTHONWARNINGS"] = "ignore"
-
 
 def _run_validator(args: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess:
-    cmd = [sys.executable, str(VALIDATE_PY)] + args
+    """Run validator subprocess. -W ignore keeps DeprecationWarning off stdout/stderr in CI."""
+    cmd = [sys.executable, "-W", "ignore", str(VALIDATE_PY)] + args
     return subprocess.run(
         cmd,
         capture_output=True,
         text=True,
         cwd=cwd or ROOT,
-        env=_ENV,
     )
 
 
