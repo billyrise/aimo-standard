@@ -1,5 +1,6 @@
 """Tests for validator audit-json and audit-html report output."""
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -12,10 +13,20 @@ SCHEMA_PATH = ROOT / "schemas" / "jsonschema" / "aimo-validation-report.schema.j
 BUNDLE_MINIMAL = ROOT / "examples" / "evidence_bundle_v01_minimal"
 BUNDLE_ANNEX_IV = ROOT / "examples" / "evidence_bundle_v01_annex_iv_sample"
 
+# Avoid DeprecationWarning (e.g. jsonschema.RefResolver) leaking into output in CI
+_ENV = os.environ.copy()
+_ENV["PYTHONWARNINGS"] = "ignore"
+
 
 def _run_validator(args: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess:
     cmd = [sys.executable, str(VALIDATE_PY)] + args
-    return subprocess.run(cmd, capture_output=True, text=True, cwd=cwd or ROOT)
+    return subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        cwd=cwd or ROOT,
+        env=_ENV,
+    )
 
 
 def _load_report_schema() -> dict:
@@ -71,19 +82,23 @@ def test_audit_html_to_file_contains_html(tmp_path):
 
 def test_audit_json_failure_reports_passed_false_and_errors_positive(tmp_path):
     """When validation fails, audit-json has summary.passed=false and summary.errors > 0."""
-    # Create a broken bundle: missing manifest.json
-    broken = tmp_path / "broken_bundle"
-    broken.mkdir()
-    (broken / "objects").mkdir()
-    (broken / "payloads").mkdir()
-    (broken / "signatures").mkdir()
-    (broken / "hashes").mkdir()
+    # Create a broken bundle: missing manifest.json (use resolve() for consistent absolute path in CI)
+    broken = (tmp_path / "broken_bundle").resolve()
+    broken.mkdir(parents=True, exist_ok=True)
+    (broken / "objects").mkdir(exist_ok=True)
+    (broken / "payloads").mkdir(exist_ok=True)
+    (broken / "signatures").mkdir(exist_ok=True)
+    (broken / "hashes").mkdir(exist_ok=True)
     # No manifest.json -> validator will fail
     r = _run_validator([str(broken), "--format", "audit-json"])
     assert r.returncode != 0, (
         f"Expected non-zero exit for broken bundle (exit={r.returncode}); stdout={r.stdout[:500]!r}; stderr={r.stderr!r}"
     )
     raw = r.stdout.strip()
+    if not raw:
+        raise AssertionError(
+            f"Validator produced no stdout (exit={r.returncode}). Stderr may indicate crash: {r.stderr[:800]!r}"
+        )
     try:
         data = json.loads(raw)
     except json.JSONDecodeError as e:

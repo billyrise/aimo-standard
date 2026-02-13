@@ -92,6 +92,8 @@ jobs:
           python tooling/checks/check_version_alias.py --check
 
       - name: Run Tests
+        env:
+          PYTHONWARNINGS: ignore
         run: python -m pytest tests/ validator/tests/ -v --tb=short
 
       - name: Build Documentation
