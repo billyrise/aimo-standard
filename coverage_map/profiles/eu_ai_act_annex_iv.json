@@ -3,16 +3,76 @@
   "target": "EU_AI_ACT_ANNEX_IV",
   "target_version": "Annex IV",
   "audit_questions": [
-    "Does the technical documentation include a general description of the AI system (intended purpose, provider, version, deployment)?",
-    "Is the development process documented (methods, design choices, data, human oversight)?",
-    "Are monitoring, functioning, and control of the system described?",
-    "Is risk management documented and linked to evidence?",
-    "Are relevant lifecycle changes and post-market monitoring plan documented?",
-    "Is there an EU declaration of conformity (or reference) for the high-risk AI system?"
+    "Does the technical documentation include a general description of the AI system (intended purpose, provider, version, deployment context)?",
+    "Is the system architecture and components (high-level) described?",
+    "Are data and data governance documented (training/validation sources, PII/confidential handling)?",
+    "Is the development process documented (methods, design choices)?",
+    "Is human oversight described (procedures, responsible roles)?",
+    "Is risk management documented (main risk categories, mitigation; reference to exceptions/JNC where applicable)?",
+    "Are monitoring, control and logging described (log location, retention)?",
+    "Is a post-market monitoring plan (high-level) documented?",
+    "Is there an EU declaration of conformity (or reference)?"
   ],
   "mappings": [
-    {"source_object_ref": "Summary", "target_field": "Documentation", "required": true},
-    {"source_object_ref": "dictionary", "target_field": "Record-keeping", "required": true},
-    {"source_object_ref": "evidence", "target_field": "Technical documentation", "required": true}
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:1 (general description)",
+      "required": true
+    },
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:2 (system architecture & components)",
+      "required": true
+    },
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:3 (data & data governance)",
+      "required": true
+    },
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:4 (development process)",
+      "required": true
+    },
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:5 (human oversight)",
+      "required": true
+    },
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:6 (risk management)",
+      "required": true
+    },
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:7 (monitoring, control & logging)",
+      "required": true
+    },
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:8 (post-market monitoring)",
+      "required": true
+    },
+    {
+      "source_object_ref": "payload:ANNEXIV_TECHDOC",
+      "target_field": "AnnexIV:9 (EU declaration of conformity)",
+      "required": false
+    },
+    {
+      "source_object_ref": "Summary",
+      "target_field": "AnnexIV (technical documentation summary)",
+      "required": true
+    },
+    {
+      "source_object_ref": "dictionary",
+      "target_field": "Record-keeping / terminology",
+      "required": true
+    },
+    {
+      "source_object_ref": "evidence",
+      "target_field": "Technical documentation evidence",
+      "required": true
+    }
   ]
 }
