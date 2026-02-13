@@ -9,7 +9,7 @@ This changelog follows [Semantic Versioning](https://semver.org/) principles:
 
 ---
 
-## [0.1.2] - (release date TBD) {#version-012}
+## [0.1.2] - 2026-02-13 {#version-012}
 
 ### Summary (auditor-facing)
 
@@ -27,7 +27,7 @@ v0.1.2 is a **PATCH** release: backward-compatible fixes and clarifications. It 
 
 ---
 
-## [0.1.1] - (release date TBD) {#version-011}
+## [0.1.1] - 2026-02-04 {#version-011}
 
 ### Summary (auditor-facing)
 
@@ -54,7 +54,7 @@ v0.1.1 is a **PATCH** release: backward-compatible additions and clarifications.
 
 ---
 
-## [0.1.0] - (release date TBD)
+## [0.1.0] - 2026-02-03
 
 ### Summary (auditor-facing)
 

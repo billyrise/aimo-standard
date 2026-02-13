@@ -4,7 +4,7 @@ site_url: https://standard.aimoaas.com/
 repo_url: https://github.com/billyrise/aimo-standard
 edit_uri: edit/main/docs/en/
 site_author: AIMO Standard Contributors
-copyright: Copyright &copy; 2024-2026 AIMO Standard Contributors
+copyright: Copyright &copy; 2025-2026 AIMO Standard Contributors
 
 theme:
   name: material
