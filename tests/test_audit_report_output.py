@@ -80,7 +80,10 @@ def test_audit_json_failure_reports_passed_false_and_errors_positive(tmp_path):
     (broken / "hashes").mkdir()
     # No manifest.json -> validator will fail
     r = _run_validator([str(broken), "--format", "audit-json"])
-    assert r.returncode != 0
-    data = json.loads(r.stdout)
+    assert r.returncode != 0, f"Expected non-zero exit; stderr: {r.stderr!r}"
+    try:
+        data = json.loads(r.stdout)
+    except json.JSONDecodeError as e:
+        raise AssertionError(f"Validator stdout is not valid JSON (stderr: {r.stderr!r})") from e
     assert data.get("summary", {}).get("passed") is False
     assert data.get("summary", {}).get("errors", 0) > 0
