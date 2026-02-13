@@ -1,0 +1,31 @@
+{
+  "report_version": "0.1",
+  "generated_at": "2026-02-13T12:00:00Z",
+  "validator": {
+    "name": "aimo-validator",
+    "version": "0.1.1"
+  },
+  "aimo_standard": {
+    "version": "0.1.0"
+  },
+  "bundle": {
+    "path": "/path/to/bundle",
+    "bundle_id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "bundle_version": "0.1.0",
+    "scope_ref": "SC-001"
+  },
+  "summary": {
+    "passed": true,
+    "errors": 0,
+    "warnings": 1
+  },
+  "results": [
+    {
+      "severity": "warning",
+      "check_id": "aimo-standard/validation",
+      "message": "taxonomy_dictionary.json not found, skipping dictionary consistency check",
+      "path": null,
+      "details": {}
+    }
+  ]
+}

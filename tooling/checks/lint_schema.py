@@ -61,6 +61,9 @@ SCHEMA_EXAMPLE_MAP = {
     "aimo-profile.schema.json": [
         "coverage_map/profiles/*.json",
     ],
+    "aimo-validation-report.schema.json": [
+        "examples/validation_report_example.json",
+    ],
 }
 
 
