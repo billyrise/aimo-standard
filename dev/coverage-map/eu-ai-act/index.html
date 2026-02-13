@@ -1303,6 +1303,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#effective-dates-applicability-high-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effective dates / applicability (high-level)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2188,6 +2197,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#effective-dates-applicability-high-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effective dates / applicability (high-level)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2238,6 +2256,7 @@
 <li><a href="../../governance/human-oversight-protocol/">Human Oversight Protocol</a></li>
 </ul>
 <p>This page maps selected EU AI Act themes (documentation, record-keeping, risk management, human oversight, transparency) to AIMO evidence and artifacts. It is high-level only and does <strong>not</strong> constitute legal advice or guarantee conformity. Verify against the official legal text.</p>
+<p><strong>Reference:</strong> Regulation (EU) 2024/1689 (Artificial Intelligence Act). All article numbers below refer to that regulation.</p>
 <h2 id="mapping-table">Mapping table</h2>
 <table>
 <thead>
@@ -2251,84 +2270,131 @@
 </thead>
 <tbody>
 <tr>
-<td>Art 9 – Risk management (obligations)</td>
+<td>Art 4 – AI literacy</td>
 <td><a href="../../standard/current/02-scope/">Scope</a></td>
-<td>request, review, exception</td>
+<td>Summary, EV; review</td>
 <td>templates/ev/</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>Cross-cutting; evidence of organisational capability/training (high-level). Not legal advice. Verify against official text.</td>
 </tr>
 <tr>
-<td>Art 10 – Data governance</td>
+<td>Art 9 – Risk management system</td>
+<td><a href="../../standard/current/02-scope/">Scope</a></td>
+<td>request, review, exception, renewal</td>
+<td>templates/ev/</td>
+<td>High-risk AI systems (Title III). Not legal advice. Verify against official text.</td>
+</tr>
+<tr>
+<td>Art 10 – Data and data governance</td>
 <td><a href="../../standard/current/05-dictionary/">Dictionary</a></td>
 <td>Dictionary, EV</td>
 <td>schemas/jsonschema/; schema_validate_dictionary</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>Not legal advice. Verify against official text.</td>
 </tr>
 <tr>
-<td>Art 11 – Documentation (high-risk)</td>
+<td>Art 11 – Technical documentation (high-risk)</td>
 <td><a href="../../standard/current/06-ev-template/">EV Template</a>, <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a></td>
 <td>EV, Dictionary, Summary; request, review</td>
-<td>schemas/jsonschema/, templates/ev/; <strong>Annex IV sample</strong>: <a href="../../examples/">Examples &gt; EU Annex IV sample</a> (<code>examples/evidence_bundle_v01_annex_iv_sample/</code>); profile: <code>coverage_map/profiles/eu_ai_act_annex_iv.json</code></td>
-<td>High-level only; not legal advice. Verify against official text. Annex IV technical documentation sample is provided as a minimal package.</td>
+<td>schemas/jsonschema/, templates/ev/; <strong>Annex IV</strong>: see <a href="../../examples/">Examples &gt; EU Annex IV sample</a> (<code>examples/evidence_bundle_v01_annex_iv_sample/</code>); profile: <code>coverage_map/profiles/eu_ai_act_annex_iv.json</code>. Annex IV sample is provided; see Examples for details (further sample content in a future release).</td>
+<td>High-level only; not legal advice. Verify against official text.</td>
 </tr>
 <tr>
 <td>Art 12 – Record-keeping</td>
 <td><a href="../../artifacts/evidence-bundle/">Evidence Bundle</a>, <a href="../../artifacts/minimum-evidence/">Minimum Evidence</a></td>
 <td>EV, change_log, request, review</td>
 <td>examples/evidence_bundle_minimal/; schema_validate_ev</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>Not legal advice. Verify against official text.</td>
 </tr>
 <tr>
-<td>Art 13 – Transparency (user information)</td>
+<td>Art 13 – Transparency and provision of information to deployers/users</td>
 <td><a href="../../standard/current/02-scope/">Scope</a></td>
 <td>Summary, EV; review</td>
 <td>templates/ev/</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>High-risk context. Not legal advice. Verify against official text.</td>
 </tr>
 <tr>
 <td>Art 14 – Human oversight</td>
 <td><a href="../../artifacts/minimum-evidence/">Minimum Evidence</a></td>
-<td>review, exception; review, exception</td>
+<td>review, exception</td>
 <td>templates/ev/ev_template.md</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>Not legal advice. Verify against official text.</td>
 </tr>
 <tr>
-<td>Art 17 – Risk management (high-risk)</td>
-<td><a href="../../standard/current/02-scope/">Scope</a></td>
-<td>request, review, exception, renewal</td>
+<td>Art 15 – Accuracy, robustness, cybersecurity</td>
+<td><a href="../../artifacts/minimum-evidence/">Minimum Evidence</a></td>
+<td>EV (evidence codes / risk codes, high-level)</td>
 <td>templates/ev/</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>High-level mapping only. Not legal advice. Verify against official text.</td>
 </tr>
 <tr>
-<td>Art 26 – Transparency (limited risk)</td>
+<td>Art 17 – Quality management system</td>
 <td><a href="../../standard/current/02-scope/">Scope</a></td>
+<td>Summary, review (organisation process)</td>
+<td>templates/ev/</td>
+<td>Distinct from Art 9 (risk management system). Not legal advice. Verify against official text.</td>
+</tr>
+<tr>
+<td>Transparency obligations (use-case dependent)</td>
+<td><a href="../../standard/current/02-scope/">Scope</a>, <a href="../../artifacts/minimum-evidence/">Minimum Evidence</a></td>
 <td>Summary, EV; review</td>
 <td>templates/ev/</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>Applicable provisions depend on use case (e.g. limited-risk, deployer duties). Not legal advice. Verify against official text.</td>
 </tr>
 <tr>
-<td>Art 29 – Documentation (general-purpose AI)</td>
-<td><a href="../../standard/current/06-ev-template/">EV Template</a></td>
-<td>EV, Dictionary, Summary; request, review</td>
+<td>GPAI models obligations</td>
+<td><a href="../../standard/current/06-ev-template/">EV Template</a>, <a href="../../artifacts/evidence-bundle/">Evidence Bundle</a></td>
+<td>EV Template, Evidence Bundle (evidence-structuring framework)</td>
 <td>schemas/jsonschema/; schema_validate_ev</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
-</tr>
-<tr>
-<td>Art 52 – Transparency (deployer)</td>
-<td><a href="../../artifacts/minimum-evidence/">Minimum Evidence</a></td>
-<td>EV, Summary; review</td>
-<td>templates/ev/</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>AIMO provides a framework for organising evidence; actual obligations are defined by the regulation. Not legal advice. Verify against official text.</td>
 </tr>
 <tr>
 <td>Recitals – Accountability</td>
 <td><a href="../../artifacts/evidence-bundle/">Evidence Bundle</a></td>
 <td>EV, request, review, change_log</td>
 <td>examples/evidence_bundle_minimal/; schema_validate_ev</td>
-<td>High-level only; not legal advice. Verify against official text.</td>
+<td>Not legal advice. Verify against official text.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="effective-dates-applicability-high-level">Effective dates / applicability (high-level)</h2>
+<p>The following is a <strong>high-level, non-exhaustive</strong> summary of key application dates under Regulation (EU) 2024/1689. It is <strong>not legal advice</strong> and does not guarantee accuracy. Always confirm with the <strong>official legal text</strong> and competent authorities.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Date (approximate)</th>
+<th>What applies (high-level)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entry into force</td>
+<td>August 2024</td>
+<td>Regulation in force; most substantive obligations not yet applicable.</td>
+</tr>
+<tr>
+<td>First application</td>
+<td>February 2025</td>
+<td>Prohibited practices (unacceptable risk); certain AI literacy–related provisions.</td>
+</tr>
+<tr>
+<td>GPAI codes of practice</td>
+<td>May 2025</td>
+<td>Codes of practice for general-purpose AI models to be ready.</td>
+</tr>
+<tr>
+<td>Notified bodies, GPAI, governance</td>
+<td>August 2025</td>
+<td>Rules on notified bodies, GPAI, governance, confidentiality, penalties.</td>
+</tr>
+<tr>
+<td>High-risk systems</td>
+<td>2026–2027</td>
+<td>Full applicability for high-risk AI systems; compliance and enforcement.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Official reference:</strong> <a href="https://eur-lex.europa.eu/eli/reg/2024/1689">Regulation (EU) 2024/1689</a> (EUR-Lex). For a timeline overview, see also the <a href="https://artificialintelligenceact.eu/implementation-timeline">EU AI Act implementation timeline</a> (external; not an official EU source).</p>
+<p>This page is for explanatory use only. <strong>You must verify applicability and dates against the official regulation and any implementing or amending acts.</strong></p>
 
 
 
