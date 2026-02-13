@@ -92,7 +92,7 @@ jobs:
           python tooling/checks/check_version_alias.py --check
 
       - name: Run Tests
-        run: pytest -q
+        run: python -m pytest tests/ validator/tests/ -q
 
       - name: Build Documentation
         run: |
