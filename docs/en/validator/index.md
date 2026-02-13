@@ -52,6 +52,8 @@ Schema validation failed:
 | `default` (omit) | Local inspection | Human-readable message (OK / error list) |
 | `--format json` | CI and scripts | Machine-readable JSON (`valid`, `errors`, `warnings`, `path`, `profiles_valid`) |
 | `--format sarif` | GitHub Code Scanning | SARIF 2.1.0 (ruleId, level, location, message). Use when feeding results into Code Scanning as a pre-submission gate. |
+| `--format audit-json` | Audit attachment (machine-readable) | Validation report with metadata (validator version, AIMO standard version, bundle info, summary, results). Use with `--output <path>` to write to a file. |
+| `--format audit-html` | Audit attachment (human-readable) | Same content as HTML for review or printing. You can export to PDF via the browser’s print dialog. Use with `--output <path>` to write to a file. |
 
 **Example: validating the Evidence Bundle v0.1 minimal sample**
 
@@ -65,6 +67,32 @@ python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate
 # Write SARIF to a file (for Code Scanning upload)
 python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format sarif > dist/validator.sarif
 ```
+
+### Audit report output
+
+For audit attachment, use **audit-json** (machine-readable) or **audit-html** (human-readable, printable). These outputs summarize evidence readiness and integrity checks (bundle manifest, hash chain, signatures, schema validation). They do **not** constitute legal or compliance advice.
+
+- **`--format audit-json`** — JSON report with `report_version`, `generated_at`, `validator`, `aimo_standard`, `bundle`, `summary`, and `results`. Suitable for tooling and archiving.
+- **`--format audit-html`** — HTML report with the same information; you can print or save as PDF from your browser.
+
+Use **`--output <path>`** to write the report to a file; if omitted, output is written to stdout.
+
+```bash
+# Audit report (JSON) to file
+aimo validate <path-to-bundle> --format audit-json --output aimo_validation_report.json
+
+# Audit report (HTML) to file
+aimo validate <path-to-bundle> --format audit-html --output aimo_validation_report.html
+```
+
+If you run the validator as a script:
+
+```bash
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --format audit-json --output aimo_validation_report.json
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --format audit-html --output aimo_validation_report.html
+```
+
+HTML reports can be converted to PDF using the browser’s print function (e.g. “Save as PDF”). This feature is for evidence readiness and integrity reporting only; it does not provide assurance or legal advice.
 
 **How it appears on GitHub**: The Quality Gate workflow runs the validator with `--format sarif` and uploads the result via `upload-sarif`. When validation fails on a PR, the Security tab (Code Scanning) shows results for `aimo-standard/validation` so you can see which path and which error failed.
 

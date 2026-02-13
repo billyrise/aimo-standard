@@ -162,6 +162,17 @@ The validator focuses on structural conformance, not content quality:
 | ID uniqueness | Not currently enforced |
 | Integrity hashes | Adopter responsibility |
 
+## Audit report outputs (informative, v0.1.2)
+
+From v0.1.2, the validator can emit **audit report** outputs intended for attachment to evidence packages (e.g. for auditors). These are **informative** only: they do not change normative bundle pre-checks or schema checks.
+
+| Format | Purpose |
+|--------|--------|
+| `--format audit-json` | Machine-readable report: `report_version`, `generated_at`, validator and AIMO standard version, bundle metadata, `summary` (passed, errors, warnings), and `results` (severity, check_id, message, path). Use `--output <path>` to write to a file. |
+| `--format audit-html` | Human-readable HTML report with the same information; suitable for printing or saving as PDF via the browser. Use `--output <path>` to write to a file. |
+
+These reports describe **evidence readiness and integrity checks** (manifest, hash chain, signatures, schema validation). They do not constitute assurance, compliance, or legal advice. Version bump to 0.1.2 is applied in a separate release step.
+
 ## Reference Implementation
 
 A reference implementation is provided in Python:

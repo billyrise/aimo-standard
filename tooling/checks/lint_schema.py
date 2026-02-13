@@ -64,6 +64,9 @@ SCHEMA_EXAMPLE_MAP = {
     "aimo-jnc.schema.json": [
         "examples/justified_non_compliance.json",
     ],
+    "aimo-validation-report.schema.json": [
+        "examples/validation_report_example.json",
+    ],
 }
 
 
