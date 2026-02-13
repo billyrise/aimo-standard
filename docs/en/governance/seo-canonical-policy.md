@@ -115,16 +115,26 @@ Versioned snapshots are frozen at release time and will not change.
 
 ### Generated HTML Example
 
-Every generated HTML page includes canonical and hreflang tags in the `<head>`:
+Every generated HTML page includes canonical and hreflang tags in the `<head>`. The canonical URL depends on whether the page is served under `/latest/` or a versioned path.
+
+**When rendered under `/latest/`** (alias redirect), the canonical may point at the resolved version or at `/latest/` per deployment choice:
 
 ```html
-<!-- Canonical (always points to Production) -->
+<!-- Example: latest alias -->
 <link rel="canonical" href="https://standard.aimoaas.com/latest/governance/">
-
-<!-- Language alternates -->
 <link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/governance/">
 <link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/governance/">
 <link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/governance/">
+```
+
+**When rendered under a versioned path** (e.g. `/0.1.2/`), the canonical MUST include the versioned prefix so that audit citations point at the frozen snapshot. When rendered under `/{X.Y.Z}/`, canonical must include the versioned prefix.
+
+```html
+<!-- Example: versioned snapshot (e.g. /0.1.2/) -->
+<link rel="canonical" href="https://standard.aimoaas.com/0.1.2/governance/">
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.2/governance/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.2/ja/governance/">
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/0.1.2/governance/">
 ```
 
 ### robots.txt
@@ -206,5 +216,5 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 ## Related Documentation
 
 - [Trust Package](trust-package.md) — Auditor-ready materials
-- [Releases](../releases/index.md) — Version history and changelog
+- [Releases](../releases/) — Version history and changelog
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Version policy
