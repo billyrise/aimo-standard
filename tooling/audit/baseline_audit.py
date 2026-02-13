@@ -168,6 +168,19 @@ def check_broken_links() -> list[AuditItem]:
                 if resolved_with_md.exists():
                     resolved = resolved_with_md
 
+            # Fallback: links to releases/ may use ../../../releases/ (for built site URL)
+            # but in source tree the file is docs/<locale>/releases/index.md
+            if not resolved.exists() and target_path.rstrip("/").endswith("releases"):
+                try:
+                    rel_parts = md_file.relative_to(DOCS).parts
+                    if len(rel_parts) >= 1:
+                        locale = rel_parts[0]
+                        alt = DOCS / locale / "releases" / "index.md"
+                        if alt.exists():
+                            resolved = alt
+                except ValueError:
+                    pass
+
             if not resolved.exists():
                 rel_file = md_file.relative_to(ROOT)
                 items.append(AuditItem(
