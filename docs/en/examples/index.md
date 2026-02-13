@@ -8,7 +8,7 @@ This section points to end-to-end and minimal examples that show how artifacts a
 
 - **Minimal bundle**: `examples/minimal/` in the repository (e.g., `sample_ev.json`, `sample_dictionary.json`).
 - **Evidence Bundle (minimal)**: `examples/evidence_bundle_v01_minimal/` — normative minimal Bundle (manifest, object_index, payload_index, hash_chain, signing); see [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence](../artifacts/minimum-evidence.md).
-- **Evidence Bundle (EU AI Act Annex IV sample)**: `examples/evidence_bundle_v01_annex_iv_sample/` — official sample aligned with EU AI Act Annex IV technical documentation for high-risk AI; same structure as minimal, with root payload content oriented to Annex IV (general description, development, monitoring, risk management, conformity, post-market monitoring). See [EU AI Act mapping](../coverage-map/eu-ai-act.md) and profile `coverage_map/profiles/eu_ai_act_annex_iv.json`.
+- **Evidence Bundle (EU AI Act Annex IV sample)**: `examples/evidence_bundle_v01_annex_iv_sample/` — official sample aligned with EU AI Act Annex IV technical documentation for high-risk AI; same structure as minimal, with root payload and an Annex IV technical documentation payload (`payloads/ANNEXIV_technical_documentation.md`). The bundle includes `signatures/` and `hashes/` and satisfies normative Evidence Bundle v0.1 path and coverage requirements. See [EU AI Act mapping](../coverage-map/eu-ai-act.md) and profile `coverage_map/profiles/eu_ai_act_annex_iv.json`.
 - **Schema alignment**: validate against `schemas/jsonschema/` and [Standard](../standard/current/index.md).
 - **Audit-ready packaging**: see the [Trust Package](../governance/trust-package.md).
 
