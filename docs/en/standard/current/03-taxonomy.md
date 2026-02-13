@@ -33,10 +33,14 @@ The taxonomy is a classification system only. It does not:
 Traditional security controls (e.g., ISMS) alone often fail to capture LLM/agent-specific failure modes and autonomous agent deviations (e.g., unintended tool execution, recursive loops) in an **audit-explainable** manner.
 AIMO Taxonomy provides a shared language to classify these AI-specific risks and connect them to evidence requirements and remediation workflows.
 
-(Reference examples for differentiation. The codes below are illustrative placeholders; the official code system follows the Standard definitions.)
-- AG-01 Runaway Loop / Recursion
-- AG-02 Unauthorized Tool Use (confused deputy-style misuse)
-- AG-03 Privilege Boundary Drift
+!!! warning "Reference examples only — not normative codes"
+    The codes below are **illustrative placeholders** and are **NOT** part of the normative AIMO code system. They are reference examples for differentiation; the official code system follows the Standard definitions in [Codes](./04-codes.md) and [Dictionary](./05-dictionary.md).
+
+- **AG-01** Runaway Loop / Recursion
+- **AG-02** Unauthorized Tool Use (confused deputy-style misuse)
+- **AG-03** Privilege Boundary Drift
+
+Do not use AG-* in submissions; use normative dimensions and codes defined in Codes/Dictionary.
 
 ## Dimensions Overview
 
