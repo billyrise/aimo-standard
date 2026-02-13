@@ -24,6 +24,7 @@ import argparse
 import re
 import sys
 from pathlib import Path
+from typing import List, Optional
 
 # Pages we inspect (under standard/current/)
 CRITICAL_PAGES = [
@@ -52,7 +53,7 @@ HISTORY_START = re.compile(r"Previously|従来|used\s+\*\*EV-001\*\*", re.IGNORE
 HISTORY_CONTAINS_EV = re.compile(r"EV-\d{3}")
 
 
-def discover_locales(site_dir: Path) -> list[str]:
+def discover_locales(site_dir: Path) -> List[str]:
     """Find locale dirs under site/ that contain standard/current/."""
     if not site_dir.is_dir():
         return []
@@ -63,7 +64,7 @@ def discover_locales(site_dir: Path) -> list[str]:
     return sorted(locales)
 
 
-def find_index(site_dir: Path, locale: str, page: str) -> Path | None:
+def find_index(site_dir: Path, locale: str, page: str) -> Optional[Path]:
     """Return path to index.html for (locale, page), or None if missing."""
     p = site_dir / locale / "standard" / "current" / page / "index.html"
     return p if p.exists() else None
@@ -102,7 +103,7 @@ def mask_04b_history_block(content: str) -> str:
     return "\n".join(out)
 
 
-def check_forbidden_ev_codes(content: str, locale: str, page: str, path: Path, is_04b: bool) -> list[str]:
+def check_forbidden_ev_codes(content: str, locale: str, page: str, path: Path, is_04b: bool) -> List[str]:
     """Flag EV-001..EV-999 (taxonomy) but not EV-YYYYMMDD-NNN. On 04b, mask history block first."""
     if is_04b:
         content = mask_04b_history_block(content)
@@ -121,7 +122,7 @@ def check_forbidden_ev_codes(content: str, locale: str, page: str, path: Path, i
     return errors
 
 
-def check_forbidden_ev_evidence_type(content: str, locale: str, page: str) -> list[str]:
+def check_forbidden_ev_evidence_type(content: str, locale: str, page: str) -> List[str]:
     """Flag 'EV Evidence Type' in en 03-taxonomy / 04-codes only."""
     if locale != "en" or page not in ("03-taxonomy", "04-codes"):
         return []
@@ -139,7 +140,7 @@ def check_forbidden_ev_evidence_type(content: str, locale: str, page: str) -> li
     return errors
 
 
-def check_required_lg(content: str, locale: str, page: str) -> list[str]:
+def check_required_lg(content: str, locale: str, page: str) -> List[str]:
     """Require at least one LG-NNN on 03-taxonomy, 04-codes, 05-dictionary."""
     if page not in ("03-taxonomy", "04-codes", "05-dictionary"):
         return []
@@ -148,7 +149,7 @@ def check_required_lg(content: str, locale: str, page: str) -> list[str]:
     return []
 
 
-def check_required_04b(content: str, locale: str, path: Path) -> list[str]:
+def check_required_04b(content: str, locale: str, path: Path) -> List[str]:
     """04b must contain Namespace or ID Policy (or id-policy-namespace)."""
     if not REQUIRED_04B_PATTERN.search(content):
         return [f"[{locale}] 04b-id-policy-namespace: required 'Namespace' or 'ID Policy' not found in {path}"]
@@ -184,7 +185,7 @@ def main() -> int:
         print("ERROR: no locales found under site dir (no standard/current/ subdirs)")
         return 1
 
-    all_errors: list[str] = []
+    all_errors: List[str] = []
 
     for locale in locales:
         for page in CRITICAL_PAGES:
