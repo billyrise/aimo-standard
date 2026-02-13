@@ -333,16 +333,43 @@ mappings:
     validator_refs: n/a
     notes: "Informative mapping; verify against NIST publication."
 
-  # --- EU AI Act (10–20) ---
+  # --- EU AI Act (Regulation (EU) 2024/1689) ---
   - framework_id: eu_ai_act
-    framework_ref: "Art 11 – Documentation (high-risk)"
-    framework_topic: "Technical documentation"
+    framework_ref: "Art 4 – AI literacy"
+    framework_topic: "AI literacy (organisational capability / training)"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [Summary, EV, review]
+    minimum_evidence_refs: [review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "High-level only; AIMO evidence readiness perspective. Not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 9 – Risk management system"
+    framework_topic: "Risk management system (high-risk)"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [request, review, exception, renewal]
+    minimum_evidence_refs: [request, review, exception, renewal]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 10 – Data and data governance"
+    framework_topic: "Data and data governance"
+    aimo_requirements: [standard/current/05-dictionary]
+    evidence_bundle_items: [Dictionary, EV]
+    minimum_evidence_refs: []
+    artifacts: [schemas/jsonschema/]
+    validator_refs: schema_validate_dictionary
+    notes: "High-level only; not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Art 11 – Technical documentation (high-risk)"
+    framework_topic: "Technical documentation; Annex IV"
     aimo_requirements: [standard/current/06-ev-template, artifacts/evidence-bundle]
     evidence_bundle_items: [EV, Dictionary, Summary]
     minimum_evidence_refs: [request, review]
-    artifacts: [schemas/jsonschema/, templates/ev/]
+    artifacts: [schemas/jsonschema/, templates/ev/, coverage_map/profiles/eu_ai_act_annex_iv.json]
     validator_refs: schema_validate_ev
-    notes: "High-level only; not legal advice. Verify against official text."
+    notes: "Evidence Bundle and Annex IV profile; not legal advice. Verify against official text."
   - framework_id: eu_ai_act
     framework_ref: "Art 12 – Record-keeping"
     framework_topic: "Record-keeping"
@@ -351,15 +378,6 @@ mappings:
     minimum_evidence_refs: [request, review, change_log]
     artifacts: [examples/evidence_bundle_minimal/]
     validator_refs: schema_validate_ev
-    notes: "High-level only; not legal advice. Verify against official text."
-  - framework_id: eu_ai_act
-    framework_ref: "Art 13 – Transparency (user information)"
-    framework_topic: "Transparency and user information"
-    aimo_requirements: [standard/current/02-scope]
-    evidence_bundle_items: [Summary, EV]
-    minimum_evidence_refs: [review]
-    artifacts: [templates/ev/]
-    validator_refs: n/a
     notes: "High-level only; not legal advice. Verify against official text."
   - framework_id: eu_ai_act
     framework_ref: "Art 14 – Human oversight"
@@ -371,23 +389,41 @@ mappings:
     validator_refs: n/a
     notes: "High-level only; not legal advice. Verify against official text."
   - framework_id: eu_ai_act
-    framework_ref: "Art 17 – Risk management (high-risk)"
-    framework_topic: "Risk management system"
-    aimo_requirements: [standard/current/02-scope]
-    evidence_bundle_items: [request, review, exception, renewal]
-    minimum_evidence_refs: [request, review, exception, renewal]
+    framework_ref: "Art 15 – Accuracy, robustness, cybersecurity"
+    framework_topic: "Accuracy, robustness, cybersecurity"
+    aimo_requirements: [artifacts/minimum-evidence]
+    evidence_bundle_items: [EV]
+    minimum_evidence_refs: []
     artifacts: [templates/ev/]
     validator_refs: n/a
-    notes: "High-level only; not legal advice. Verify against official text."
+    notes: "High-level link to evidence/risk codes only; not legal advice. Verify against official text."
   - framework_id: eu_ai_act
-    framework_ref: "Art 29 – Documentation (general-purpose AI)"
-    framework_topic: "Documentation for GPAI"
-    aimo_requirements: [standard/current/06-ev-template]
+    framework_ref: "Art 17 – Quality management system"
+    framework_topic: "Quality management system (provider)"
+    aimo_requirements: [standard/current/02-scope]
+    evidence_bundle_items: [Summary, review]
+    minimum_evidence_refs: [review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Organisation process; high-level only. Not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "Transparency obligations (use-case dependent)"
+    framework_topic: "Transparency (e.g. limited-risk, deployer)"
+    aimo_requirements: [standard/current/02-scope, artifacts/minimum-evidence]
+    evidence_bundle_items: [Summary, EV]
+    minimum_evidence_refs: [review]
+    artifacts: [templates/ev/]
+    validator_refs: n/a
+    notes: "Applicable articles depend on use case; high-level only. Not legal advice. Verify against official text."
+  - framework_id: eu_ai_act
+    framework_ref: "GPAI models obligations"
+    framework_topic: "General-purpose AI (evidence-structuring framework)"
+    aimo_requirements: [standard/current/06-ev-template, artifacts/evidence-bundle]
     evidence_bundle_items: [EV, Dictionary, Summary]
     minimum_evidence_refs: [request, review]
     artifacts: [schemas/jsonschema/]
     validator_refs: schema_validate_ev
-    notes: "High-level only; not legal advice. Verify against official text."
+    notes: "AIMO provides evidence framework only; obligations per regulation. Not legal advice. Verify against official text."
   - framework_id: eu_ai_act
     framework_ref: "Recitals – Accountability"
     framework_topic: "Accountability and traceability"
@@ -396,42 +432,6 @@ mappings:
     minimum_evidence_refs: [request, review, change_log]
     artifacts: [examples/evidence_bundle_minimal/]
     validator_refs: schema_validate_ev
-    notes: "High-level only; not legal advice. Verify against official text."
-  - framework_id: eu_ai_act
-    framework_ref: "Art 9 – Risk management (obligations)"
-    framework_topic: "Risk management obligations"
-    aimo_requirements: [standard/current/02-scope]
-    evidence_bundle_items: [request, review, exception]
-    minimum_evidence_refs: [request, review, exception]
-    artifacts: [templates/ev/]
-    validator_refs: n/a
-    notes: "High-level only; not legal advice. Verify against official text."
-  - framework_id: eu_ai_act
-    framework_ref: "Art 10 – Data governance"
-    framework_topic: "Data and data governance"
-    aimo_requirements: [standard/current/05-dictionary]
-    evidence_bundle_items: [Dictionary, EV]
-    minimum_evidence_refs: []
-    artifacts: [schemas/jsonschema/]
-    validator_refs: schema_validate_dictionary
-    notes: "High-level only; not legal advice. Verify against official text."
-  - framework_id: eu_ai_act
-    framework_ref: "Art 26 – Transparency (limited risk)"
-    framework_topic: "Transparency for limited-risk AI"
-    aimo_requirements: [standard/current/02-scope]
-    evidence_bundle_items: [Summary, EV]
-    minimum_evidence_refs: [review]
-    artifacts: [templates/ev/]
-    validator_refs: n/a
-    notes: "High-level only; not legal advice. Verify against official text."
-  - framework_id: eu_ai_act
-    framework_ref: "Art 52 – Transparency (deployer)"
-    framework_topic: "Transparency obligations for deployers"
-    aimo_requirements: [artifacts/minimum-evidence]
-    evidence_bundle_items: [EV, Summary]
-    minimum_evidence_refs: [review]
-    artifacts: [templates/ev/]
-    validator_refs: n/a
     notes: "High-level only; not legal advice. Verify against official text."
 
   # --- ISO/IEC 27001/27002 (10–15) ---
