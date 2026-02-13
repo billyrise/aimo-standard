@@ -27,7 +27,10 @@ The dictionary enables:
     - **Structure**: `data/taxonomy/canonical.yaml` (codes, status, lifecycle)
     - **Translations**: `data/taxonomy/i18n/*.yaml` (labels, definitions per language)
 
-    CSV files are **generated artifacts** for distribution. See [Releases](../../releases/index.md) for downloads.
+    CSV files are **generated artifacts** for distribution. See [Releases](../../../releases/) for downloads.
+
+!!! note "Standard release version vs dictionary/taxonomy versions"
+    The AIMO Standard **release version** (site/release, e.g. `/0.1.2/`) and the **dictionary content version** (or **taxonomy schema version**) are not necessarily the same. In 0.1.x they often align; future releases may version them independently. For audit citations, prefer the Standard release version (`/X.Y.Z/`); in Evidence, state `taxonomy_version` and `dictionary_version` where applicable.
 
 ## Column Schema
 
@@ -38,7 +41,7 @@ The canonical dictionary uses **18 columns** (language-neutral structure):
 | # | Column | Required | Description | Example |
 | --- | --- | --- | --- | --- |
 | 1 | `standard_id` | Yes | Standard identifier | `AIMO-STD` |
-| 2 | `standard_version` | Yes | SemVer format | `0.1.0` |
+| 2 | `standard_version` | Yes | SemVer format | `0.1.0` *(example; use the Standard release version you align to)* |
 | 3 | `dimension_id` | Yes | Two-letter dimension ID | `FS`, `UC`, `DT` |
 | 4 | `dimension_name` | Yes | Dimension name | `Functional Scope` |
 | 5 | `code` | Yes | Full code | `UC-001` |
@@ -93,7 +96,7 @@ The current dictionary version is **v0.1.0** and contains:
 !!! note "Complete Code Listings"
     The complete list of 91 codes is available in the generated CSV artifacts. This documentation page provides column definitions and usage guidance. For detailed code definitions:
 
-    - **Download**: See [Releases](../../releases/index.md) for per-language CSV files
+    - **Download**: See [Releases](../../../releases/) for per-language CSV files
     - **Per-language CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
     - **Legacy EN/JA mixed CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (frozen, for backward compatibility only)
 
@@ -191,7 +194,7 @@ Example: `X-ACME-UC-901` for ACME Corporation's custom use case code.
 
 ## Downloads
 
-See [Releases](../../releases/index.md) for downloadable packages containing the dictionary and related files.
+See [Releases](../../../releases/) for downloadable packages containing the dictionary and related files.
 
 ## Related Pages
 
