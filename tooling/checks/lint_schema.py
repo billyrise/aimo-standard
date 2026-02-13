@@ -61,6 +61,9 @@ SCHEMA_EXAMPLE_MAP = {
     "aimo-profile.schema.json": [
         "coverage_map/profiles/*.json",
     ],
+    "aimo-jnc.schema.json": [
+        "examples/justified_non_compliance.json",
+    ],
 }
 
 

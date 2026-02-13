@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://standard.aimoaas.com/schemas/aimo-jnc.schema.json",
+  "title": "AIMO Justified Non-Compliance (JNC)",
+  "description": "Optional payload for documenting and justifying intentional non-compliance with AIMO requirements or evidence items. v0.1.2 optional; not legal advice; does not constitute assurance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "non_compliances"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema version. v0.1.2 uses 0.1.2.",
+      "pattern": "^0\\.1\\.2$"
+    },
+    "non_compliances": {
+      "type": "array",
+      "description": "List of justified non-compliance entries.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "aimo_item_ref",
+          "title",
+          "rationale",
+          "risk_assessment",
+          "approver",
+          "review_schedule"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for this JNC entry (e.g. JNC-001)."
+          },
+          "aimo_item_ref": {
+            "type": "string",
+            "description": "Reference to the AIMO requirement or evidence item (e.g. minimum-evidence:exception, artifact:...)."
+          },
+          "title": {
+            "type": "string",
+            "description": "Short title of the non-compliance."
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Business or technical justification for the exception."
+          },
+          "risk_assessment": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["likelihood", "impact", "mitigation"],
+            "properties": {
+              "likelihood": {
+                "type": "string",
+                "enum": ["low", "medium", "high"],
+                "description": "Likelihood of risk materializing."
+              },
+              "impact": {
+                "type": "string",
+                "enum": ["low", "medium", "high"],
+                "description": "Impact if risk materializes."
+              },
+              "mitigation": {
+                "type": "string",
+                "description": "Mitigation or compensatory controls."
+              }
+            }
+          },
+          "approver": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "role", "approval_date"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the approver."
+              },
+              "role": {
+                "type": "string",
+                "description": "Role of the approver (e.g. CTO, DPO)."
+              },
+              "approval_date": {
+                "type": "string",
+                "format": "date",
+                "description": "Date of approval (YYYY-MM-DD)."
+              }
+            }
+          },
+          "review_schedule": {
+            "type": "string",
+            "enum": ["quarterly", "monthly", "annually", "ad-hoc"],
+            "description": "When this exception is reviewed."
+          },
+          "sunset_condition": {
+            "type": "string",
+            "description": "Optional condition under which this exception is retired."
+          },
+          "references": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Optional references (e.g. EV-..., REQ-...)."
+          }
+        }
+      }
+    }
+  }
+}
