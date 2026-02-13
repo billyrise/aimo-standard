@@ -80,6 +80,10 @@ Each official release includes:
 
 ## Change History
 
+### Version 0.1.2 {#version-012}
+
+**Summary:** PATCH release (non-breaking). Normalizes EU AI Act references in docs/SSOT (informative mapping only; not legal advice). Improves Annex IV sample bundle completeness (signatures, hashes, payload). Adds optional JNC schema and validator check. Adds validator audit report outputs (audit-json, audit-html). See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
 ### Version 0.1.1 {#version-011}
 
 **Summary:** PATCH release. Optional signature metadata for verification, Coverage Map audit_questions, Normative/Informative and governance clarifications, v0.2 roadmap. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
