@@ -1161,6 +1161,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#audit-report-outputs-informative-v012" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit report outputs (informative, v0.1.2)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference-implementation" class="md-nav__link">
     <span class="md-ellipsis">
       Reference Implementation
@@ -2530,6 +2539,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#audit-report-outputs-informative-v012" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit report outputs (informative, v0.1.2)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference-implementation" class="md-nav__link">
     <span class="md-ellipsis">
       Reference Implementation
@@ -2851,6 +2869,27 @@ codes.RS[1]: warning: Code 'RS-002' is deprecated in v0.2.0
 </tr>
 </tbody>
 </table>
+<h2 id="audit-report-outputs-informative-v012">Audit report outputs (informative, v0.1.2)</h2>
+<p>From v0.1.2, the validator can emit <strong>audit report</strong> outputs intended for attachment to evidence packages (e.g. for auditors). These are <strong>informative</strong> only: they do not change normative bundle pre-checks or schema checks.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--format audit-json</code></td>
+<td>Machine-readable report: <code>report_version</code>, <code>generated_at</code>, validator and AIMO standard version, bundle metadata, <code>summary</code> (passed, errors, warnings), and <code>results</code> (severity, check_id, message, path). Use <code>--output &lt;path&gt;</code> to write to a file.</td>
+</tr>
+<tr>
+<td><code>--format audit-html</code></td>
+<td>Human-readable HTML report with the same information; suitable for printing or saving as PDF via the browser. Use <code>--output &lt;path&gt;</code> to write to a file.</td>
+</tr>
+</tbody>
+</table>
+<p>These reports describe <strong>evidence readiness and integrity checks</strong> (manifest, hash chain, signatures, schema validation). They do not constitute assurance, compliance, or legal advice. Version bump to 0.1.2 is applied in a separate release step.</p>
 <h2 id="reference-implementation">Reference Implementation</h2>
 <p>A reference implementation is provided in Python:</p>
 <pre><code>validator/src/validate.py
