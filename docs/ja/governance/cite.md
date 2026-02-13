@@ -25,20 +25,20 @@ GitHub はこのファイルから引用情報を自動表示する。
   author = {{AIMO Standard Contributors}},
   title = {AIMO Standard},
   url = {https://standard.aimoaas.com/},
-  version = {0.1.1},
+  version = {0.1.2},
   year = {2026}
 }
 ```
 
 ### APA スタイル
 
-> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.1.1) [Software]. https://standard.aimoaas.com/
+> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.1.2) [Software]. https://standard.aimoaas.com/
 
 ## バージョン固有の引用
 
 特定バージョンを引用する場合：
 
-> AIMO Standard Contributors. (2026). AIMO Standard v0.1.1. https://github.com/billyrise/aimo-standard/releases/tag/v0.1.1
+> AIMO Standard Contributors. (2026). AIMO Standard v0.1.2. https://github.com/billyrise/aimo-standard/releases/tag/v0.1.2
 
 ## 監査ドキュメント
 
@@ -47,7 +47,7 @@ GitHub はこのファイルから引用情報を自動表示する。
 | 項目 | 値 |
 | ---- | -- |
 | 標準名 | AIMO Standard |
-| バージョン | （使用バージョンを指定、例：v0.1.1） |
+| バージョン | （使用バージョンを指定、例：v0.1.2） |
 | ウェブサイト | https://standard.aimoaas.com/ |
 | リポジトリ | https://github.com/billyrise/aimo-standard |
 | リリース | https://github.com/billyrise/aimo-standard/releases |
@@ -61,11 +61,11 @@ GitHub はこのファイルから引用情報を自動表示する。
 | 用途 | URL |
 | ---- | --- |
 | 最新ドキュメント | https://standard.aimoaas.com/latest/ |
-| 特定バージョン | https://standard.aimoaas.com/0.1.1/ |
+| 特定バージョン | https://standard.aimoaas.com/0.1.2/ |
 | GitHub リリース | https://github.com/billyrise/aimo-standard/releases |
 
 !!! note "サイトパスのフォーマット"
-    サイトパスでは `v` プレフィックスを省略します。バージョン `v0.1.1` の場合、URLでは `/0.1.1/` を使用します。
+    サイトパスでは `v` プレフィックスを省略します。バージョン `v0.1.2` の場合、URLでは `/0.1.2/` を使用します。
 
 ### 避けるべき URL
 
