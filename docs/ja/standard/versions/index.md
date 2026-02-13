@@ -9,7 +9,7 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 ## 最新リリース
 
 !!! success "現在のバージョン"
-    **v0.1.2** (2025-02-13) — [ドキュメントを見る](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.2)
+    **v0.1.2** (2026-02-13) — [ドキュメントを見る](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.2)
 
 ## バージョン履歴
 
@@ -77,7 +77,7 @@ AIMO Standard では三つのバージョン概念を使用します。現行リ
 
     ```bash
     # 特定バージョンの全アセットをダウンロード
-    VERSION=v0.1.1
+    VERSION=v0.1.2
     BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
 
     curl -LO "${BASE_URL}/trust_package.pdf"
@@ -180,7 +180,7 @@ AIMO Standard では三つのバージョン概念を使用します。現行リ
 
 ```bash
 # GitHub CLI でリリースアセットをダウンロード
-VERSION=v0.1.1
+VERSION=v0.1.2
 gh release download "$VERSION" --repo billyrise/aimo-standard
 
 # 各アセットの attestation を検証
