@@ -81,7 +81,7 @@ AIMO 標準假設：
 
 ## 相關頁面
 
-- [信任套件](trust-package.md) — 稽核員就緒材料中心
-- [人工監督協議](human-oversight-protocol.md) — 機器與人工審查邊界
-- [最低證據要求](../artifacts/minimum-evidence.md) — 必要層級生命週期檢查清單
-- [覆蓋範圍對應方法論](../coverage-map/methodology.md) — 對應是什麼和不是什麼
+- [信任套件](../trust-package/) — 稽核員就緒材料中心
+- [人工監督協議](../human-oversight-protocol/) — 機器與人工審查邊界
+- [最低證據要求](../../artifacts/minimum-evidence/) — 必要層級生命週期檢查清單
+- [覆蓋範圍對應方法論](../../coverage-map/methodology/) — 對應是什麼和不是什麼

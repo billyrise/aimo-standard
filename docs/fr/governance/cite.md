@@ -74,6 +74,6 @@ Utilisez ces URL dans la documentation officielle :
 
 ## Pages connexes
 
-- [Package de confiance](trust-package.md) — Matériaux prêts pour les auditeurs
-- [Gouvernance](index.md) — Gouvernance du projet
-- [Licence](license.md) — Termes de licence
+- [Package de confiance](../trust-package/) — Matériaux prêts pour les auditeurs
+- [Gouvernance](../) — Gouvernance du projet
+- [Licence](../license/) — Termes de licence

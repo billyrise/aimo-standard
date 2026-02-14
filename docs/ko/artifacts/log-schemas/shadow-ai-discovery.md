@@ -58,7 +58,7 @@ description: Shadow AI 검색 로그 스키마 - 기업에서 승인되지 않�
     - **PII, 자격 증명 또는 프롬프트 내용을** 로그 필드에 직접 **포함하지 마세요**.
     - `evidence_ref`를 사용하여 별도로 저장된 민감한 콘텐츠를 참조하세요.
     - 로그 저장소에 적절한 접근 통제를 적용하세요.
-    - [최소 증거 요구사항](../minimum-evidence.md)에 맞춘 데이터 보존 정책을 고려하세요.
+    - [최소 증거 요구사항](../../minimum-evidence/)에 맞춘 데이터 보존 정책을 고려하세요.
 
 ## JSON Schema
 
@@ -91,7 +91,7 @@ description: Shadow AI 검색 로그 스키마 - 기업에서 승인되지 않�
 
 ## 관련 페이지
 
-- [로그 스키마 인덱스](index.md)
-- [에이전트 활동 로그](agent-activity.md)
-- [최소 증거 요구사항](../minimum-evidence.md)
-- [분류체계: IM-007 Shadow/미관리](../../standard/current/03-taxonomy.md)
+- [로그 스키마 인덱스](../)
+- [에이전트 활동 로그](../agent-activity/)
+- [최소 증거 요구사항](../../minimum-evidence/)
+- [분류체계: IM-007 Shadow/미관리](../../../standard/current/03-taxonomy/)

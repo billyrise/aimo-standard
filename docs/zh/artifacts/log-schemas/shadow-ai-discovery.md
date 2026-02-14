@@ -58,7 +58,7 @@ description: 影子AI发现日志模式 - 用于记录企业中未经批准的AI
     - **不要直接在日志字段中嵌入** PII、凭证或提示词内容。
     - 使用 `evidence_ref` 引用单独存储的敏感内容。
     - 对日志存储应用适当的访问控制。
-    - 考虑与 [最低证据要求](../minimum-evidence.md) 对齐的数据保留策略。
+    - 考虑与 [最低证据要求](../../minimum-evidence/) 对齐的数据保留策略。
 
 ## JSON Schema
 
@@ -91,7 +91,7 @@ description: 影子AI发现日志模式 - 用于记录企业中未经批准的AI
 
 ## 相关页面
 
-- [日志模式索引](index.md)
-- [代理活动日志](agent-activity.md)
-- [最低证据要求](../minimum-evidence.md)
-- [分类法：IM-007 影子/非托管](../../standard/current/03-taxonomy.md)
+- [日志模式索引](../)
+- [代理活动日志](../agent-activity/)
+- [最低证据要求](../../minimum-evidence/)
+- [分类法：IM-007 影子/非托管](../../../standard/current/03-taxonomy/)

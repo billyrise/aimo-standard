@@ -107,7 +107,7 @@ Descargar: [agent-activity.schema.json](https://github.com/billyrise/aimo-standa
 
 ## Páginas relacionadas
 
-- [Índice de Esquemas de Registro](index.md)
-- [Registro de Descubrimiento de Shadow AI](shadow-ai-discovery.md)
-- [Requisitos Mínimos de Evidencia](../minimum-evidence.md)
-- [Taxonomía: UC-010 Automatización Agéntica](../../standard/current/03-taxonomy.md)
+- [Índice de Esquemas de Registro](../)
+- [Registro de Descubrimiento de Shadow AI](../shadow-ai-discovery/)
+- [Requisitos Mínimos de Evidencia](../../minimum-evidence/)
+- [Taxonomía: UC-010 Automatización Agéntica](../../../standard/current/03-taxonomy/)

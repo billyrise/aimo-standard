@@ -36,8 +36,8 @@ Readers must verify against the authoritative text of each framework or regulati
 
 ## Relationship to Evidence Bundle and Minimum Evidence Requirements
 
-- **[Evidence Bundle](../artifacts/evidence-bundle.md)**: Defines the bundle structure, TOC, and traceability. Coverage Map rows reference Evidence Bundle sections (e.g. EV, Dictionary, Summary, change_log, request, review, exception, renewal).
-- **[Minimum Evidence Requirements](../artifacts/minimum-evidence.md)**: Defines MUST-level lifecycle groups (request, review, exception, renewal, change_log, integrity). Coverage Map rows reference these groups in `minimum_evidence_refs`.
+- **[Evidence Bundle](../../artifacts/evidence-bundle/)**: Defines the bundle structure, TOC, and traceability. Coverage Map rows reference Evidence Bundle sections (e.g. EV, Dictionary, Summary, change_log, request, review, exception, renewal).
+- **[Minimum Evidence Requirements](../../artifacts/minimum-evidence/)**: Defines MUST-level lifecycle groups (request, review, exception, renewal, change_log, integrity). Coverage Map rows reference these groups in `minimum_evidence_refs`.
 
 Use the Coverage Map to see which Evidence Bundle items and Minimum Evidence groups support explainability for a given external requirement.
 
@@ -46,12 +46,12 @@ Use the Coverage Map to see which Evidence Bundle items and Minimum Evidence gro
 !!! warning "Important"
     The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
 
-See [Responsibility Boundary](../governance/responsibility-boundary.md) for scope, assumptions, and adopter responsibilities.
+See [Responsibility Boundary](../../governance/responsibility-boundary/) for scope, assumptions, and adopter responsibilities.
 
 ## Audit journey
 
 From this page, continue to:
 
-1. **Framework mappings**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Validate**: [Validator](../validator/index.md) — run structural checks
+1. **Framework mappings**: [ISO 42001](../iso-42001/), [NIST AI RMF](../nist-ai-rmf/), [EU AI Act](../eu-ai-act/), [ISMS](../isms/)
+2. **Validate**: [Validator](../../validator/) — run structural checks
 3. **Download**: [Releases](../../releases/) — get release assets

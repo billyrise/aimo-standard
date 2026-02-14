@@ -66,9 +66,10 @@ AIMO Standardはドキュメントのバージョン管理に[mike](https://gith
 ファイルをコピーする代わりに、`/latest/` にはリダイレクトページが含まれます：
 
 ```html
+<!-- Latest alias (redirect stub); canonical points to versioned snapshot -->
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.0.1/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
+<meta http-equiv="refresh" content="0; url=../{X.Y.Z}/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/">
 ```
 
 これにより：
@@ -196,6 +197,6 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 
 ## 関連ドキュメント
 
-- [Trust Package](trust-package.md) — 監査対応資料
+- [Trust Package](../trust-package/) — 監査対応資料
 - [Releases](../../releases/) — バージョン履歴と変更履歴
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — バージョンポリシー

@@ -44,7 +44,7 @@ Al usar materiales del AIMO Standard:
 1. Incluir el aviso de licencia en distribuciones
 2. Proporcionar atribución (ver [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
 3. Indicar modificaciones significativas (si las hay)
-4. No usar marcas comerciales sin permiso (ver [Marcas Comerciales](trademarks.md))
+4. No usar marcas comerciales sin permiso (ver [Marcas Comerciales](../trademarks/))
 
 ## Archivo NOTICE
 
@@ -72,5 +72,5 @@ R: Sí, pero debe notar las modificaciones y no puede reclamar conformidad con e
 
 ## Páginas Relacionadas
 
-- [Marcas Comerciales](trademarks.md) — Uso de marcas comerciales
-- [Gobernanza](index.md) — Gobernanza del proyecto
+- [Marcas Comerciales](../trademarks/) — Uso de marcas comerciales
+- [Gobernanza](../) — Gobernanza del proyecto

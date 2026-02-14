@@ -32,8 +32,8 @@ description: 커버리지 맵 방법론 - AIMO가 외부 프레임워크에 매�
 
 ## 증거 번들 및 최소 증거 요구사항과의 관계
 
-- **[증거 번들](../artifacts/evidence-bundle.md)**: 번들 구조, 목차 및 추적성을 정의합니다. 커버리지 맵 행은 증거 번들 섹션(예: EV, Dictionary, Summary, change_log, request, review, exception, renewal)을 참조합니다.
-- **[최소 증거 요구사항](../artifacts/minimum-evidence.md)**: MUST 수준 생명주기 그룹(request, review, exception, renewal, change_log, integrity)을 정의합니다. 커버리지 맵 행은 `minimum_evidence_refs`에서 이 그룹을 참조합니다.
+- **[증거 번들](../../artifacts/evidence-bundle/)**: 번들 구조, 목차 및 추적성을 정의합니다. 커버리지 맵 행은 증거 번들 섹션(예: EV, Dictionary, Summary, change_log, request, review, exception, renewal)을 참조합니다.
+- **[최소 증거 요구사항](../../artifacts/minimum-evidence/)**: MUST 수준 생명주기 그룹(request, review, exception, renewal, change_log, integrity)을 정의합니다. 커버리지 맵 행은 `minimum_evidence_refs`에서 이 그룹을 참조합니다.
 
 커버리지 맵을 사용하여 어떤 증거 번들 항목 및 최소 증거 그룹이 주어진 외부 요구사항에 대한 설명 가능성을 지원하는지 확인하세요.
 
@@ -42,12 +42,12 @@ description: 커버리지 맵 방법론 - AIMO가 외부 프레임워크에 매�
 !!! warning "중요"
     AIMO 표준은 **설명 가능성 및 증거 준비**를 지원합니다. 법률 자문을 제공하거나, 컴플라이언스를 보장하거나, 어떤 규정 또는 프레임워크에 대한 적합성을 인증하지 **않습니다**. 채택자는 권위 있는 텍스트와 대조하여 주장을 확인하고 적절한 전문 자문을 받아야 합니다.
 
-범위, 가정 및 채택자 책임에 대해서는 [책임 경계](../governance/responsibility-boundary.md)를 참조하세요.
+범위, 가정 및 채택자 책임에 대해서는 [책임 경계](../../governance/responsibility-boundary/)를 참조하세요.
 
 ## 감사 여정
 
 이 페이지에서 다음으로 계속하세요:
 
-1. **프레임워크 매핑**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **검증**: [검증기](../validator/index.md) — 구조적 검사 실행
+1. **프레임워크 매핑**: [ISO 42001](../iso-42001/), [NIST AI RMF](../nist-ai-rmf/), [EU AI Act](../eu-ai-act/), [ISMS](../isms/)
+2. **검증**: [검증기](../../validator/) — 구조적 검사 실행
 3. **다운로드**: [릴리스](../../releases/) — 릴리스 자산 획득

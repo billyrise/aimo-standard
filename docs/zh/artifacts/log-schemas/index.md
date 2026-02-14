@@ -30,11 +30,11 @@ description: AIMO 日志模式 - 用于AI证据的厂商中立日志格式。包
 
 | 模式 | 用途 | 下载 |
 | --- | --- | --- |
-| [影子AI发现日志](shadow-ai-discovery.md) | 未经批准的AI使用检测和清点 | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [代理活动日志](agent-activity.md) | 代理式AI权限行使和工具执行 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [影子AI发现日志](shadow-ai-discovery/) | 未经批准的AI使用检测和清点 | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [代理活动日志](agent-activity/) | 代理式AI权限行使和工具执行 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
 ## 相关页面
 
-- [最低证据要求](../minimum-evidence.md) — MUST 级别证据清单
-- [证据包](../evidence-bundle.md) — 包结构和目录
-- [分类法](../../standard/current/03-taxonomy.md) — 分类代码（包括 UC-010 代理式自动化、IM-007 影子/非托管）
+- [最低证据要求](../minimum-evidence/) — MUST 级别证据清单
+- [证据包](../evidence-bundle/) — 包结构和目录
+- [分类法](../../standard/current/03-taxonomy/) — 分类代码（包括 UC-010 代理式自动化、IM-007 影子/非托管）

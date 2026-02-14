@@ -51,15 +51,15 @@ Exit-Codes: `0` = Erfolg, `1` = Validierungsfehler, `2` = Nutzungsfehler.
 
 - **Inhaltsgenauigkeit**: Der Validator prüft Struktur, nicht Bedeutung
 - **Compliance-Garantie**: Bestandene Validierung garantiert keine regulatorische Compliance
-- **Menschliche Beurteilung**: Kontextabhängige Entscheidungen erfordern menschliche Überprüfung (siehe [Human Oversight Protocol](../governance/human-oversight-protocol.md))
+- **Menschliche Beurteilung**: Kontextabhängige Entscheidungen erfordern menschliche Überprüfung (siehe [Human Oversight Protocol](../governance/human-oversight-protocol/))
 - **Automatische Log-Sammlung**: Der Validator validiert eingereichte Evidence; er sammelt keine Logs
 
 ---
 
 ## Ressourcen
 
-- **Spezifikation**: [Standard > Aktuell > Validator](../standard/current/07-validator.md) — Regeln, Referenzprüfungen und wie Validierung sich auf Evidence bezieht.
+- **Spezifikation**: [Standard > Aktuell > Validator](../standard/current/07-validator/) — Regeln, Referenzprüfungen und wie Validierung sich auf Evidence bezieht.
 - **Regeln und Implementierung**: Repository `validator/rules/` (Prüfungen), `validator/src/` (Referenzimplementierung). Ausführung und CI-Nutzung sind in der Spezifikation beschrieben.
 - **Interpretation**: Was ein Validierungs-"Fehlschlag" für Prüfer bedeutet (in der Spezifikation erklärt).
 
-Für Konformität und Artefakt-Nutzung siehe [Konformität](../conformance/index.md) und [Artefakte](../artifacts/index.md).
+Für Konformität und Artefakt-Nutzung siehe [Konformität](../conformance/) und [Artefakte](../artifacts/).

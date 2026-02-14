@@ -107,7 +107,7 @@ Télécharger : [agent-activity.schema.json](https://github.com/billyrise/aimo-s
 
 ## Pages connexes
 
-- [Index des schémas de journaux](index.md)
-- [Journal de découverte de Shadow AI](shadow-ai-discovery.md)
-- [Exigences minimales de preuves](../minimum-evidence.md)
-- [Taxonomie : UC-010 Automatisation agentique](../../standard/current/03-taxonomy.md)
+- [Index des schémas de journaux](../)
+- [Journal de découverte de Shadow AI](../shadow-ai-discovery/)
+- [Exigences minimales de preuves](../../minimum-evidence/)
+- [Taxonomie : UC-010 Automatisation agentique](../../../standard/current/03-taxonomy/)

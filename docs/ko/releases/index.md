@@ -14,7 +14,7 @@ description: AIMO 표준 릴리스 - 버전화된 PDF, 산출물 및 체크섬 �
 
 전체 **검증 절차**(자산 다운로드, 체크섬 검증, 빌드 출처 증명)는 PDF뿐만 아니라 영구 웹 페이지로도 제공됩니다:
 
-- **[Standard → 버전 → 검증 절차](../standard/versions/index.md)** — 단계별 체크섬 검증(Linux/macOS/Windows) 및 출처 증명.
+- **[Standard → 버전 → 검증 절차](../standard/versions/)** — 단계별 체크섬 검증(Linux/macOS/Windows) 및 출처 증명.
 
 릴리스 자산을 검증하거나 감사 산출물에 검증 단계를 문서화할 때 이 페이지를 사용하세요.
 
@@ -87,18 +87,18 @@ description: AIMO 표준 릴리스 - 버전화된 PDF, 산출물 및 체크섬 �
 
 ## 리소스
 
-- **버전 이력 테이블**: [표준 > 버전](../standard/versions/index.md) — 모든 릴리스 자산(PDF, ZIP, SHA256)에 대한 직접 링크가 있는 버전 테이블
-- **변경로그 (사양)**: [표준 > 현재 > 변경로그](../standard/current/08-changelog.md) — 규범적 및 비규범적 변경 이력.
+- **버전 이력 테이블**: [표준 > 버전](../standard/versions/) — 모든 릴리스 자산(PDF, ZIP, SHA256)에 대한 직접 링크가 있는 버전 테이블
+- **변경로그 (사양)**: [표준 > 현재 > 변경로그](../standard/current/08-changelog/) — 규범적 및 비규범적 변경 이력.
 - **릴리스 프로세스**: `vX.Y.Z` 태그, CI 빌드, `dist/` 아래 PDF, 체크섬, GitHub Release 자산. 저장소의 [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) 및 [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) 참조.
 - **마이그레이션 가이드**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — 호환성 깨는 변경에 대한 업그레이드 경로.
 
-거버넌스 및 버전 정책은 [거버넌스](../governance/index.md)를 참조하세요.
+거버넌스 및 버전 정책은 [거버넌스](../governance/)를 참조하세요.
 
 ## 제출 패키지 준비
 
 감사 제출을 위해 증거를 준비할 때:
 
-1. **증거 번들 생성**: [증거 번들](../artifacts/evidence-bundle.md) 및 [최소 증거 요구사항](../artifacts/minimum-evidence.md)에 따라 EV 레코드, 딕셔너리, 요약 및 변경 로그를 생성합니다.
+1. **증거 번들 생성**: [증거 번들](../artifacts/evidence-bundle/) 및 [최소 증거 요구사항](../artifacts/minimum-evidence/)에 따라 EV 레코드, 딕셔너리, 요약 및 변경 로그를 생성합니다.
 2. **검증기 실행**: `python validator/src/validate.py bundle/root.json`을 실행하여 구조적 일관성을 확인합니다. 진행하기 전에 모든 오류를 수정하세요.
 3. **체크섬 생성**: 검증용 SHA-256 체크섬을 생성합니다:
 
@@ -126,7 +126,7 @@ description: AIMO 표준 릴리스 - 버전화된 PDF, 산출물 및 체크섬 �
 5. **버전 정합 문서화**: 증거가 정합하는 AIMO 표준 릴리스(예: `v1.0.0`)를 명시합니다.
 6. **제출**: 패키지, 체크섬 및 버전 참조를 감사자에게 제공합니다.
 
-전체 준비 가이드는 [신뢰 패키지](../governance/trust-package.md)를 참조하세요.
+전체 준비 가이드는 [신뢰 패키지](../governance/trust-package/)를 참조하세요.
 
 ## 감사자용: 검증 절차
 
@@ -139,11 +139,11 @@ description: AIMO 표준 릴리스 - 버전화된 PDF, 산출물 및 체크섬 �
 !!! tip "독립적으로 도구 획득"
     감사자는 검증기와 스키마를 제출 당사자가 아닌 공식 AIMO 표준 릴리스에서 직접 다운로드해야 합니다.
 
-전체 검증 절차(체크섬, 증명, 단계별)는 **[Standard → 버전 → 검증 절차](../standard/versions/index.md)**를 참조하세요. 감사자 준비 자료는 [신뢰 패키지](../governance/trust-package.md)도 참조하세요.
+전체 검증 절차(체크섬, 증명, 단계별)는 **[Standard → 버전 → 검증 절차](../standard/versions/)**를 참조하세요. 감사자 준비 자료는 [신뢰 패키지](../governance/trust-package/)도 참조하세요.
 
 ## 과대 주장 금지 선언
 
 !!! warning "중요"
     AIMO 표준은 **설명 가능성 및 증거 준비**를 지원합니다. 법률 자문을 제공하거나, 컴플라이언스를 보장하거나, 어떤 규정 또는 프레임워크에 대한 적합성을 인증하지 **않습니다**. 채택자는 권위 있는 텍스트와 대조하여 주장을 확인하고 적절한 전문 자문을 받아야 합니다.
 
-범위, 가정 및 채택자 책임은 [책임 경계](../governance/responsibility-boundary.md)를 참조하세요.
+범위, 가정 및 채택자 책임은 [책임 경계](../governance/responsibility-boundary/)를 참조하세요.

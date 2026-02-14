@@ -20,34 +20,34 @@ Il Trust Package PDF consolida i materiali pronti per l'auditor in un singolo do
 
 ## Cosa ottieni
 
-- **Conformità**: come dichiarare la conformità e cosa significano i livelli — [Conformità](../conformance/index.md)
-- **Mappa di Copertura**: mappatura verso standard esterni — [Indice Mappa di Copertura](../coverage-map/index.md), [Metodologia Mappa di Copertura](../coverage-map/methodology.md)
-- **Standard**: requisiti e definizioni normative — [Standard (Corrente)](../standard/current/index.md)
-- **Tassonomia**: sistema di classificazione a 8 dimensioni per la governance dell'IA — [Tassonomia](../standard/current/03-taxonomy.md), [Codici](../standard/current/04-codes.md), [Dizionario](../standard/current/05-dictionary.md)
-- **Evidence Bundle**: struttura, TOC, tracciabilità — [Evidence Bundle](../artifacts/evidence-bundle.md)
-- **Requisiti Minimi di Evidence**: checklist MUST-level per ciclo di vita — [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md)
-- **Validator**: regole e controlli di riferimento — [Validator](../validator/index.md)
-- **Esempi**: bundle di esempio pronti per l'audit — [Esempi](../examples/index.md)
+- **Conformità**: come dichiarare la conformità e cosa significano i livelli — [Conformità](../../conformance/)
+- **Mappa di Copertura**: mappatura verso standard esterni — [Indice Mappa di Copertura](../../coverage-map/), [Metodologia Mappa di Copertura](../../coverage-map/methodology/)
+- **Standard**: requisiti e definizioni normative — [Standard (Corrente)](../../standard/current/)
+- **Tassonomia**: sistema di classificazione a 8 dimensioni per la governance dell'IA — [Tassonomia](../../standard/current/03-taxonomy/), [Codici](../../standard/current/04-codes/), [Dizionario](../../standard/current/05-dictionary/)
+- **Evidence Bundle**: struttura, TOC, tracciabilità — [Evidence Bundle](../../artifacts/evidence-bundle/)
+- **Requisiti Minimi di Evidence**: checklist MUST-level per ciclo di vita — [Requisiti Minimi di Evidence](../../artifacts/minimum-evidence/)
+- **Validator**: regole e controlli di riferimento — [Validator](../../validator/)
+- **Esempi**: bundle di esempio pronti per l'audit — [Esempi](../../examples/)
 - **Release**: cronologia delle modifiche e distribuzione — [Release](../../releases/)
-- **Governance**: politiche, sicurezza, licenze — [Governance](../governance/index.md)
+- **Governance**: politiche, sicurezza, licenze — [Governance](../../governance/)
 
 ## Set minimo per la prontezza all'audit
 
 | Elemento | Dove trovarlo | Risultato / cosa dimostra |
 | --- | --- | --- |
-| Livelli di conformità | [Conformità](../conformance/index.md) | Come dichiarare la conformità e l'ambito dell'evidence richiesta |
-| Mappatura di copertura | [Indice Mappa di Copertura](../coverage-map/index.md), [Metodologia Mappa di Copertura](../coverage-map/methodology.md) | Spiegabilità verso normative e standard esterni |
-| Tassonomia & Dizionario | [Tassonomia](../standard/current/03-taxonomy.md), [Codici](../standard/current/04-codes.md), [Dizionario](../standard/current/05-dictionary.md) | Sistema di classificazione per i sistemi IA (8 dimensioni, 91 codici) |
-| Artefatti di evidence | [Evidence Bundle](../artifacts/evidence-bundle.md), [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md), [Template EV](../standard/current/06-ev-template.md) | Quali dati devono esistere per supportare la tracciabilità |
-| Controlli del validator | [Validator](../validator/index.md) | Come verificare la coerenza interna e la completezza |
-| Bundle di esempio | [Esempi](../examples/index.md) | Come appare in pratica un pacchetto pronto per l'audit |
-| Controllo delle modifiche | [Release](../../releases/), [Governance](../governance/index.md) | Come gli aggiornamenti sono gestiti e comunicati |
-| Sicurezza / Licenza / Marchi | [Governance](../governance/index.md) | Postura legale e di sicurezza per le decisioni di adozione |
+| Livelli di conformità | [Conformità](../../conformance/) | Come dichiarare la conformità e l'ambito dell'evidence richiesta |
+| Mappatura di copertura | [Indice Mappa di Copertura](../../coverage-map/), [Metodologia Mappa di Copertura](../../coverage-map/methodology/) | Spiegabilità verso normative e standard esterni |
+| Tassonomia & Dizionario | [Tassonomia](../../standard/current/03-taxonomy/), [Codici](../../standard/current/04-codes/), [Dizionario](../../standard/current/05-dictionary/) | Sistema di classificazione per i sistemi IA (8 dimensioni, 91 codici) |
+| Artefatti di evidence | [Evidence Bundle](../../artifacts/evidence-bundle/), [Requisiti Minimi di Evidence](../../artifacts/minimum-evidence/), [Template EV](../../standard/current/06-ev-template/) | Quali dati devono esistere per supportare la tracciabilità |
+| Controlli del validator | [Validator](../../validator/) | Come verificare la coerenza interna e la completezza |
+| Bundle di esempio | [Esempi](../../examples/) | Come appare in pratica un pacchetto pronto per l'audit |
+| Controllo delle modifiche | [Release](../../releases/), [Governance](../../governance/) | Come gli aggiornamenti sono gestiti e comunicati |
+| Sicurezza / Licenza / Marchi | [Governance](../../governance/) | Postura legale e di sicurezza per le decisioni di adozione |
 
 ## Come citare
 
 Usare il README del repository per la guida alle citazioni e il contesto; la governance punta alle politiche autorevoli.
-Vedere [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) e [Governance](../governance/index.md).
+Vedere [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) e [Governance](../../governance/).
 
 ## Contenuto dello zip degli artefatti
 
@@ -65,13 +65,13 @@ L'`aimo-standard-artifacts.zip` include:
 
 Lo Standard AIMO fornisce un formato di evidence strutturato e un framework di spiegabilità. **Non** fornisce consulenza legale, certificazione di conformità, valutazione del rischio o esecuzione di audit.
 
-Per la definizione completa dell'ambito, le assunzioni e le responsabilità degli adottanti, vedere [Confini di Responsabilità](responsibility-boundary.md).
+Per la definizione completa dell'ambito, le assunzioni e le responsabilità degli adottanti, vedere [Confini di Responsabilità](../responsibility-boundary/).
 
 ## Come preparare un pacchetto di submission
 
 Seguire questi passaggi per preparare una submission pronta per l'audit:
 
-1. **Generare l'Evidence Bundle**: Creare record EV, Dizionario, Riepilogo e Change Log secondo [Evidence Bundle](../artifacts/evidence-bundle.md) e [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md).
+1. **Generare l'Evidence Bundle**: Creare record EV, Dizionario, Riepilogo e Change Log secondo [Evidence Bundle](../../artifacts/evidence-bundle/) e [Requisiti Minimi di Evidence](../../artifacts/minimum-evidence/).
 2. **Eseguire il Validator**: Eseguire `python validator/src/validate.py bundle/root.json` per controllare la coerenza strutturale. Correggere eventuali errori prima di procedere.
 3. **Creare i Checksum**: Generare checksum SHA-256 per tutti i file della submission:
 
@@ -109,14 +109,14 @@ Per gli asset di release e la verifica, vedere [Release](../../releases/).
 !!! warning "Importante"
     Lo Standard AIMO supporta **spiegabilità e prontezza dell'evidence**. **Non** fornisce consulenza legale, garantisce conformità o certifica la conformità a qualsiasi normativa o framework. Gli adottanti devono verificare le dichiarazioni contro i testi autorevoli e ottenere consulenza professionale quando appropriato.
 
-Vedere [Confini di Responsabilità](responsibility-boundary.md) per dettagli su ambito, assunzioni e responsabilità degli adottanti.
+Vedere [Confini di Responsabilità](../responsibility-boundary/) per dettagli su ambito, assunzioni e responsabilità degli adottanti.
 
 ## Per gli auditor: Procedura di verifica
 
 Quando si riceve una submission di evidence, gli auditor dovrebbero verificare l'integrità e la struttura usando i seguenti passaggi:
 
 !!! success "Build Provenance Disponibile"
-    Tutti gli asset di release includono attestazioni di build firmate crittograficamente. Vedere [Procedura di Verifica](../standard/versions/index.md#4-verify-build-provenance-attestation) per i passaggi di verifica delle attestazioni.
+    Tutti gli asset di release includono attestazioni di build firmate crittograficamente. Vedere [Procedura di Verifica](../../standard/versions/#4-verify-build-provenance-attestation) per i passaggi di verifica delle attestazioni.
 
 ### Passaggio 1: Verificare i checksum (SHA-256)
 
@@ -228,9 +228,9 @@ Controllare che la submission referenzi una release ufficiale dello Standard AIM
 
 Da questa pagina, il percorso di audit raccomandato è:
 
-1. **Sistema di classificazione**: [Tassonomia](../standard/current/03-taxonomy.md) + [Dizionario](../standard/current/05-dictionary.md) — comprendere il sistema di codici a 8 dimensioni
-2. **Struttura dell'evidence**: [Evidence Bundle](../artifacts/evidence-bundle.md) — comprendere il TOC del bundle e la tracciabilità
-3. **Evidence richiesta**: [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md) — checklist MUST-level per ciclo di vita
-4. **Allineamento ai framework**: [Mappa di Copertura](../coverage-map/index.md) + [Metodologia](../coverage-map/methodology.md) — vedere come AIMO si mappa ai framework esterni
-5. **Validazione**: [Validator](../validator/index.md) — eseguire controlli di coerenza strutturale
+1. **Sistema di classificazione**: [Tassonomia](../../standard/current/03-taxonomy/) + [Dizionario](../../standard/current/05-dictionary/) — comprendere il sistema di codici a 8 dimensioni
+2. **Struttura dell'evidence**: [Evidence Bundle](../../artifacts/evidence-bundle/) — comprendere il TOC del bundle e la tracciabilità
+3. **Evidence richiesta**: [Requisiti Minimi di Evidence](../../artifacts/minimum-evidence/) — checklist MUST-level per ciclo di vita
+4. **Allineamento ai framework**: [Mappa di Copertura](../../coverage-map/) + [Metodologia](../../coverage-map/methodology/) — vedere come AIMO si mappa ai framework esterni
+5. **Validazione**: [Validator](../../validator/) — eseguire controlli di coerenza strutturale
 6. **Download**: [Release](../../releases/) — ottenere gli asset di release e verificare i checksum

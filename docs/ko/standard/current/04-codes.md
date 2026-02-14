@@ -161,7 +161,7 @@ LG: LG-001, LG-002
 
 ### 버전 관리
 
-코드 변경은 [시맨틱 버전 관리](./08-changelog.md)를 따릅니다:
+코드 변경은 [시맨틱 버전 관리](../08-changelog/)를 따릅니다:
 
 - **MAJOR**: 코드 제거 또는 호환성 깨는 변경
 - **MINOR**: 새 코드 추가, 코드 폐기
@@ -186,16 +186,16 @@ LG: LG-001, LG-002
 4. 코드 형식이 `<PREFIX>-<TOKEN>` 패턴과 일치함 (예: `UC-001`)
 5. 폐기된 코드에 경고 플래그 지정
 
-구현 세부사항은 [검증기](./07-validator.md)를 참조하세요.
+구현 세부사항은 [검증기](../07-validator/)를 참조하세요.
 
 ## SSOT 참조
 
 !!! info "진실 공급원"
-    권위 있는 정의는 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`입니다. 이 페이지는 설명 목적입니다. 업데이트 워크플로우는 [현지화 가이드](../../contributing/localization.md)를 참조하세요.
+    권위 있는 정의는 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`입니다. 이 페이지는 설명 목적입니다. 업데이트 워크플로우는 [현지화 가이드](../../../contributing/localization/)를 참조하세요.
 
 ## 관련 페이지
 
-- [분류체계](./03-taxonomy.md) - 전체 차원 정의
-- [딕셔너리](./05-dictionary.md) - 완전한 코드 목록 및 열 정의
-- [검증기](./07-validator.md) - 검증 규칙
-- [변경로그](./08-changelog.md) - 버전 이력
+- [분류체계](../03-taxonomy/) - 전체 차원 정의
+- [딕셔너리](../05-dictionary/) - 완전한 코드 목록 및 열 정의
+- [검증기](../07-validator/) - 검증 규칙
+- [변경로그](../08-changelog/) - 버전 이력

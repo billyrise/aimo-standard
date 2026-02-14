@@ -19,7 +19,7 @@ La taxonomie sert trois objectifs principaux du point de vue de l'audit :
 ## Ce que ce n'est pas (non-déclaration excessive)
 
 !!! warning "Important"
-    Le standard AIMO soutient **l'explicabilité et la préparation des preuves**. Il ne fournit **pas** d'avis juridique, ne garantit pas la conformité et ne certifie pas la conformité à une réglementation ou cadre. Voir [Périmètre de responsabilité](../../governance/responsibility-boundary.md) pour les détails.
+    Le standard AIMO soutient **l'explicabilité et la préparation des preuves**. Il ne fournit **pas** d'avis juridique, ne garantit pas la conformité et ne certifie pas la conformité à une réglementation ou cadre. Voir [Périmètre de responsabilité](../../../governance/responsibility-boundary/) pour les détails.
 
 La taxonomie est uniquement un système de classification. Elle ne :
 
@@ -34,7 +34,7 @@ Les contrôles de sécurité traditionnels (ex. ISMS) seuls échouent souvent à
 La taxonomie AIMO fournit un langage partagé pour classifier ces risques spécifiques à l'IA et les connecter aux exigences de preuves et flux de travail de remédiation.
 
 !!! warning "Exemples de référence uniquement — pas des codes normatifs"
-    Les codes ci-dessous sont des **espaces réservés illustratifs** et ne font **pas** partie du système de codes normatif AIMO. Ne les utilisez pas dans les soumissions ; utilisez les dimensions et codes normatifs dans [Codes](./04-codes.md) et [Dictionary](./05-dictionary.md).
+    Les codes ci-dessous sont des **espaces réservés illustratifs** et ne font **pas** partie du système de codes normatif AIMO. Ne les utilisez pas dans les soumissions ; utilisez les dimensions et codes normatifs dans [Codes](../04-codes/) et [Dictionary](../05-dictionary/).
 
 - **AG-01** Boucle/récursion incontrôlée
 - **AG-02** Utilisation d'outil non autorisée (mauvais usage de type confused deputy)
@@ -97,7 +97,7 @@ Catégorise l'utilisation de l'IA par le type de tâche ou d'interaction. **Sél
 | UC-009 | Recherche/RAG | Récupération et questions-réponses basées sur RAG. |
 | UC-010 | Automatisation agentique | Agents autonomes ou semi-autonomes exécutant des actions. |
 
-Voir [Dictionnaire](./05-dictionary.md) pour la liste complète des 30 codes UC.
+Voir [Dictionnaire](../05-dictionary/) pour la liste complète des 30 codes UC.
 
 ### DT : Type de données
 
@@ -208,7 +208,7 @@ Chaque document de preuve référence des codes de plusieurs dimensions pour cla
 
 ### Référence au dictionnaire
 
-Pour les définitions complètes des codes incluant les notes de portée et exemples, référez-vous au [Dictionnaire](./05-dictionary.md).
+Pour les définitions complètes des codes incluant les notes de portée et exemples, référez-vous au [Dictionnaire](../05-dictionary/).
 
 ### Exemple de classification
 
@@ -226,11 +226,11 @@ LG: LG-001 (Enregistrement de demande), LG-002 (Enregistrement de revue/approbat
 ## Référence SSOT
 
 !!! info "Source de vérité"
-    La définition faisant autorité est `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Cette page est explicative. Voir [Guide de localisation](../../contributing/localization.md) pour les flux de travail de mise à jour.
+    La définition faisant autorité est `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Cette page est explicative. Voir [Guide de localisation](../../../contributing/localization/) pour les flux de travail de mise à jour.
 
 ## Pages connexes
 
-- [Codes](./04-codes.md) - Format de code, conventions de nommage et cycle de vie
-- [Dictionnaire](./05-dictionary.md) - Listes complètes de codes et définitions de colonnes
-- [Modèles de preuves](./06-ev-template.md) - Comment utiliser les codes dans les preuves
-- [Périmètre de responsabilité](../../governance/responsibility-boundary.md) - Déclaration de non-déclaration excessive
+- [Codes](../04-codes/) - Format de code, conventions de nommage et cycle de vie
+- [Dictionnaire](../05-dictionary/) - Listes complètes de codes et définitions de colonnes
+- [Modèles de preuves](../06-ev-template/) - Comment utiliser les codes dans les preuves
+- [Périmètre de responsabilité](../../../governance/responsibility-boundary/) - Déclaration de non-déclaration excessive

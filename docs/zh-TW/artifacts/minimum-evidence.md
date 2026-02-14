@@ -107,6 +107,6 @@ description: AIMO 最低證據要求。按生命週期（請求、審查、核�
 
 此最低要求集支援可解釋性和證據就緒；它本身不提供法律建議或保證合規性。
 
-請參閱[證據包](evidence-bundle.md)了解套件結構和目錄；請參閱 [EV 範本](../standard/current/06-ev-template.md)和結構描述了解欄位層級對齊。
+請參閱[證據包](../evidence-bundle/)了解套件結構和目錄；請參閱 [EV 範本](../../standard/current/06-ev-template/)和結構描述了解欄位層級對齊。
 
-另請參閱：[日誌結構描述](log-schemas/index.md) — Shadow AI 發現和代理活動證據的標準化日誌格式。
+另請參閱：[日誌結構描述](../log-schemas/) — Shadow AI 發現和代理活動證據的標準化日誌格式。

@@ -107,6 +107,6 @@ Choisissez un profil basé sur votre tolérance au risque et vos exigences régl
 
 Cet ensemble minimum soutient l'explicabilité et la préparation des preuves ; il ne fournit pas en lui-même de conseils juridiques et ne garantit pas la conformité.
 
-Voir [Lot de preuves](evidence-bundle.md) pour la structure du lot et la TDM ; voir [Modèle EV](../standard/current/06-ev-template.md) et les schémas pour l'alignement au niveau des champs.
+Voir [Lot de preuves](../evidence-bundle/) pour la structure du lot et la TDM ; voir [Modèle EV](../../standard/current/06-ev-template/) et les schémas pour l'alignement au niveau des champs.
 
-Voir aussi : [Schémas de journaux](log-schemas/index.md) — formats de journaux normalisés pour les preuves de découverte de Shadow AI et d'activité des agents.
+Voir aussi : [Schémas de journaux](../log-schemas/) — formats de journaux normalisés pour les preuves de découverte de Shadow AI et d'activité des agents.

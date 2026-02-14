@@ -20,34 +20,34 @@ Le PDF du package de confiance consolide les matériaux prêts pour les auditeur
 
 ## Ce que vous obtenez
 
-- **Conformité** : comment déclarer la conformité et ce que signifient les niveaux — [Conformité](../conformance/index.md)
-- **Carte de couverture** : correspondance avec les standards externes — [Index carte de couverture](../coverage-map/index.md), [Méthodologie carte de couverture](../coverage-map/methodology.md)
-- **Standard** : exigences et définitions normatives — [Standard (Actuel)](../standard/current/index.md)
-- **Taxonomie** : système de classification à 8 dimensions pour la gouvernance IA — [Taxonomie](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionnaire](../standard/current/05-dictionary.md)
-- **Lot de preuves** : structure, TDM, traçabilité — [Lot de preuves](../artifacts/evidence-bundle.md)
-- **Exigences minimales de preuves** : liste de contrôle OBLIGATOIRE par cycle de vie — [Exigences minimales de preuves](../artifacts/minimum-evidence.md)
-- **Validateur** : règles et vérifications de référence — [Validateur](../validator/index.md)
-- **Exemples** : lots d'échantillons prêts pour l'audit — [Exemples](../examples/index.md)
+- **Conformité** : comment déclarer la conformité et ce que signifient les niveaux — [Conformité](../../conformance/)
+- **Carte de couverture** : correspondance avec les standards externes — [Index carte de couverture](../../coverage-map/), [Méthodologie carte de couverture](../../coverage-map/methodology/)
+- **Standard** : exigences et définitions normatives — [Standard (Actuel)](../../standard/current/)
+- **Taxonomie** : système de classification à 8 dimensions pour la gouvernance IA — [Taxonomie](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionnaire](../../standard/current/05-dictionary/)
+- **Lot de preuves** : structure, TDM, traçabilité — [Lot de preuves](../../artifacts/evidence-bundle/)
+- **Exigences minimales de preuves** : liste de contrôle OBLIGATOIRE par cycle de vie — [Exigences minimales de preuves](../../artifacts/minimum-evidence/)
+- **Validateur** : règles et vérifications de référence — [Validateur](../../validator/)
+- **Exemples** : lots d'échantillons prêts pour l'audit — [Exemples](../../examples/)
 - **Versions** : historique des changements et distribution — [Versions](../../releases/)
-- **Gouvernance** : politiques, sécurité, licences — [Gouvernance](../governance/index.md)
+- **Gouvernance** : politiques, sécurité, licences — [Gouvernance](../../governance/)
 
 ## Ensemble minimum pour la préparation à l'audit
 
 | Élément | Où le trouver | Résultat / ce que cela prouve |
 | --- | --- | --- |
-| Niveaux de conformité | [Conformité](../conformance/index.md) | Comment déclarer la conformité et le périmètre des preuves requises |
-| Correspondance de couverture | [Index carte de couverture](../coverage-map/index.md), [Méthodologie carte de couverture](../coverage-map/methodology.md) | Explicabilité par rapport aux réglementations et standards externes |
-| Taxonomie et dictionnaire | [Taxonomie](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionnaire](../standard/current/05-dictionary.md) | Système de classification pour les systèmes IA (8 dimensions, 91 codes) |
-| Artefacts de preuves | [Lot de preuves](../artifacts/evidence-bundle.md), [Preuves minimales](../artifacts/minimum-evidence.md), [Modèle EV](../standard/current/06-ev-template.md) | Quelles données doivent exister pour soutenir la traçabilité |
-| Vérifications du validateur | [Validateur](../validator/index.md) | Comment vérifier la cohérence et la complétude internes |
-| Lot d'exemple | [Exemples](../examples/index.md) | À quoi ressemble un package prêt pour l'audit en pratique |
-| Contrôle des changements | [Versions](../../releases/), [Gouvernance](../governance/index.md) | Comment les mises à jour sont gérées et communiquées |
-| Sécurité / Licence / Marques | [Gouvernance](../governance/index.md) | Posture juridique et de sécurité pour les décisions d'adoption |
+| Niveaux de conformité | [Conformité](../../conformance/) | Comment déclarer la conformité et le périmètre des preuves requises |
+| Correspondance de couverture | [Index carte de couverture](../../coverage-map/), [Méthodologie carte de couverture](../../coverage-map/methodology/) | Explicabilité par rapport aux réglementations et standards externes |
+| Taxonomie et dictionnaire | [Taxonomie](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionnaire](../../standard/current/05-dictionary/) | Système de classification pour les systèmes IA (8 dimensions, 91 codes) |
+| Artefacts de preuves | [Lot de preuves](../../artifacts/evidence-bundle/), [Preuves minimales](../../artifacts/minimum-evidence/), [Modèle EV](../../standard/current/06-ev-template/) | Quelles données doivent exister pour soutenir la traçabilité |
+| Vérifications du validateur | [Validateur](../../validator/) | Comment vérifier la cohérence et la complétude internes |
+| Lot d'exemple | [Exemples](../../examples/) | À quoi ressemble un package prêt pour l'audit en pratique |
+| Contrôle des changements | [Versions](../../releases/), [Gouvernance](../../governance/) | Comment les mises à jour sont gérées et communiquées |
+| Sécurité / Licence / Marques | [Gouvernance](../../governance/) | Posture juridique et de sécurité pour les décisions d'adoption |
 
 ## Comment citer
 
 Utilisez le README du dépôt pour les conseils de citation et le contexte ; la gouvernance renvoie aux politiques faisant autorité.
-Voir [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) et [Gouvernance](../governance/index.md).
+Voir [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) et [Gouvernance](../../governance/).
 
 ## Contenu du zip d'artefacts
 
@@ -65,13 +65,13 @@ Le `aimo-standard-artifacts.zip` inclut :
 
 Le standard AIMO fournit un format de preuves structuré et un cadre d'explicabilité. Il ne fournit **pas** d'avis juridique, de certification de conformité, d'évaluation des risques ou d'exécution d'audit.
 
-Pour la définition complète du périmètre, les hypothèses et les responsabilités des adopteurs, voir [Périmètre de responsabilité](responsibility-boundary.md).
+Pour la définition complète du périmètre, les hypothèses et les responsabilités des adopteurs, voir [Périmètre de responsabilité](../responsibility-boundary/).
 
 ## Comment préparer un package de soumission
 
 Suivez ces étapes pour préparer une soumission prête pour l'audit :
 
-1. **Générer le lot de preuves** : Créez les enregistrements EV, dictionnaire, résumé et journal des modifications selon [Lot de preuves](../artifacts/evidence-bundle.md) et [Exigences minimales de preuves](../artifacts/minimum-evidence.md).
+1. **Générer le lot de preuves** : Créez les enregistrements EV, dictionnaire, résumé et journal des modifications selon [Lot de preuves](../../artifacts/evidence-bundle/) et [Exigences minimales de preuves](../../artifacts/minimum-evidence/).
 2. **Exécuter le validateur** : Exécutez `python validator/src/validate.py bundle/root.json` pour vérifier la cohérence structurelle. Corrigez les erreurs avant de continuer.
 3. **Créer les checksums** : Générez les checksums SHA-256 pour tous les fichiers de soumission :
 
@@ -109,14 +109,14 @@ Pour les actifs de version et la vérification, voir [Versions](../../releases/)
 !!! warning "Important"
     Le standard AIMO soutient **l'explicabilité et la préparation des preuves**. Il ne fournit **pas** d'avis juridique, ne garantit pas la conformité et ne certifie pas la conformité à une réglementation ou cadre. Les adopteurs doivent vérifier les déclarations par rapport aux textes faisant autorité et obtenir des conseils professionnels si nécessaire.
 
-Voir [Périmètre de responsabilité](responsibility-boundary.md) pour les détails sur le périmètre, les hypothèses et les responsabilités des adopteurs.
+Voir [Périmètre de responsabilité](../responsibility-boundary/) pour les détails sur le périmètre, les hypothèses et les responsabilités des adopteurs.
 
 ## Pour les auditeurs : procédure de vérification
 
 Lors de la réception d'une soumission de preuves, les auditeurs doivent vérifier l'intégrité et la structure en utilisant les étapes suivantes :
 
 !!! success "Provenance de build disponible"
-    Tous les actifs de version incluent des attestations de provenance de build signées cryptographiquement. Voir [Procédure de vérification](../standard/versions/index.md#4-verify-build-provenance-attestation) pour les étapes de vérification d'attestation.
+    Tous les actifs de version incluent des attestations de provenance de build signées cryptographiquement. Voir [Procédure de vérification](../../standard/versions/#4-verify-build-provenance-attestation) pour les étapes de vérification d'attestation.
 
 ### Étape 1 : Vérifier les checksums (SHA-256)
 
@@ -228,9 +228,9 @@ Vérifiez que la soumission référence une version officielle du standard AIMO 
 
 Depuis cette page, le parcours d'audit recommandé est :
 
-1. **Système de classification** : [Taxonomie](../standard/current/03-taxonomy.md) + [Dictionnaire](../standard/current/05-dictionary.md) — comprendre le système de codes à 8 dimensions
-2. **Structure des preuves** : [Lot de preuves](../artifacts/evidence-bundle.md) — comprendre la TDM du lot et la traçabilité
-3. **Preuves requises** : [Exigences minimales de preuves](../artifacts/minimum-evidence.md) — liste de contrôle OBLIGATOIRE par cycle de vie
-4. **Alignement des cadres** : [Carte de couverture](../coverage-map/index.md) + [Méthodologie](../coverage-map/methodology.md) — voir comment AIMO correspond aux cadres externes
-5. **Validation** : [Validateur](../validator/index.md) — exécuter les vérifications de cohérence structurelle
+1. **Système de classification** : [Taxonomie](../../standard/current/03-taxonomy/) + [Dictionnaire](../../standard/current/05-dictionary/) — comprendre le système de codes à 8 dimensions
+2. **Structure des preuves** : [Lot de preuves](../../artifacts/evidence-bundle/) — comprendre la TDM du lot et la traçabilité
+3. **Preuves requises** : [Exigences minimales de preuves](../../artifacts/minimum-evidence/) — liste de contrôle OBLIGATOIRE par cycle de vie
+4. **Alignement des cadres** : [Carte de couverture](../../coverage-map/) + [Méthodologie](../../coverage-map/methodology/) — voir comment AIMO correspond aux cadres externes
+5. **Validation** : [Validateur](../../validator/) — exécuter les vérifications de cohérence structurelle
 6. **Téléchargement** : [Versions](../../releases/) — obtenir les actifs de version et vérifier les checksums

@@ -97,6 +97,6 @@ Vedere [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CO
 
 ## Pagine Correlate
 
-- [Governance](index.md) — Governance del progetto
-- [Guida alla Localizzazione](../contributing/localization.md) — Dettagli i18n
-- [Confini di Responsabilità](responsibility-boundary.md) — Cosa fornisce AIMO
+- [Governance](../) — Governance del progetto
+- [Guida alla Localizzazione](../../contributing/localization/) — Dettagli i18n
+- [Confini di Responsabilità](../responsibility-boundary/) — Cosa fornisce AIMO

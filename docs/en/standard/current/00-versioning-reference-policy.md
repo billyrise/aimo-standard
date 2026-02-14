@@ -43,7 +43,7 @@ This page defines the **operational policy** for documentation URLs. Third parti
 
 ## See also
 
-- [Versions](../versions/index.md) — Version history, SSOT for “latest,” and verification procedure
-- [Changelog](08-changelog.md) — Normative change history
+- [Versions](../../versions/) — Version history, SSOT for “latest,” and verification procedure
+- [Changelog](../08-changelog/) — Normative change history
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Full versioning policy and release flow
 - [Release workflow](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml) — How tagging updates `/latest/` and deploys `/X.Y.Z/`

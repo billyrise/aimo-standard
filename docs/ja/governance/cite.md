@@ -74,6 +74,6 @@ GitHub はこのファイルから引用情報を自動表示する。
 
 ## 関連ページ
 
-- [Trust Package](trust-package.md) — 監査対応資料
-- [ガバナンス](index.md) — プロジェクトガバナンス
-- [ライセンス](license.md) — ライセンス条件
+- [Trust Package](../trust-package/) — 監査対応資料
+- [ガバナンス](../) — プロジェクトガバナンス
+- [ライセンス](../license/) — ライセンス条件

@@ -291,4 +291,4 @@ mkdocs build --strict
 ## Páginas Relacionadas
 
 - [Versiones](../../releases/) — Paquetes descargables
-- [Gobernanza](../governance/index.md) — Gobernanza del proyecto
+- [Gobernanza](../../governance/) — Gobernanza del proyecto

@@ -53,7 +53,7 @@ AIMO 딕셔너리는 분류체계 내의 모든 유효한 코드의 권위 있�
 | 9 | `examples` | 아니요 | 파이프로 구분된 예시 | `chatbot\|recommendation` |
 
 !!! note "번역"
-    정본 데이터 모델은 번역을 언어 팩(`data/taxonomy/i18n/*.yaml`)으로 분리합니다. 각 언어 팩은 현지화된 `dimension_name`, `label` 및 `definition` 값을 제공합니다. 자세한 내용은 [현지화 가이드](../../contributing/localization.md)를 참조하세요.
+    정본 데이터 모델은 번역을 언어 팩(`data/taxonomy/i18n/*.yaml`)으로 분리합니다. 각 언어 팩은 현지화된 `dimension_name`, `label` 및 `definition` 값을 제공합니다. 자세한 내용은 [현지화 가이드](../../../contributing/localization/)를 참조하세요.
 
 ### 생명주기 열 (6개)
 
@@ -195,8 +195,8 @@ X-<ORG>-<DIM>-<TOKEN>
 
 ## 관련 페이지
 
-- [분류체계](./03-taxonomy.md) - 차원 정의 및 코드 테이블
-- [코드](./04-codes.md) - 코드 형식, 명명 및 생명주기
-- [증거 템플릿](./06-ev-template.md) - 템플릿에서 코드가 사용되는 방법
-- [검증기](./07-validator.md) - 코드 검증 규칙
-- [변경로그](./08-changelog.md) - 버전 이력
+- [분류체계](../03-taxonomy/) - 차원 정의 및 코드 테이블
+- [코드](../04-codes/) - 코드 형식, 명명 및 생명주기
+- [증거 템플릿](../06-ev-template/) - 템플릿에서 코드가 사용되는 방법
+- [검증기](../07-validator/) - 코드 검증 규칙
+- [변경로그](../08-changelog/) - 버전 이력

@@ -20,34 +20,34 @@ El PDF del Paquete de Confianza consolida materiales listos para auditores en un
 
 ## Qué obtiene
 
-- **Conformidad**: cómo reclamar cumplimiento y qué significan los niveles — [Conformidad](../conformance/index.md)
-- **Mapa de Cobertura**: mapeo a estándares externos — [Índice de Mapa de Cobertura](../coverage-map/index.md), [Metodología del Mapa de Cobertura](../coverage-map/methodology.md)
-- **Estándar**: requisitos y definiciones normativas — [Estándar (Actual)](../standard/current/index.md)
-- **Taxonomía**: sistema de clasificación de 8 dimensiones para gobernanza de IA — [Taxonomía](../standard/current/03-taxonomy.md), [Códigos](../standard/current/04-codes.md), [Diccionario](../standard/current/05-dictionary.md)
-- **Paquete de Evidencia**: estructura, TOC, trazabilidad — [Paquete de Evidencia](../artifacts/evidence-bundle.md)
-- **Requisitos Mínimos de Evidencia**: lista de verificación de nivel DEBE por ciclo de vida — [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md)
-- **Validador**: reglas y verificaciones de referencia — [Validador](../validator/index.md)
-- **Ejemplos**: paquetes de muestra listos para auditoría — [Ejemplos](../examples/index.md)
+- **Conformidad**: cómo reclamar cumplimiento y qué significan los niveles — [Conformidad](../../conformance/)
+- **Mapa de Cobertura**: mapeo a estándares externos — [Índice de Mapa de Cobertura](../../coverage-map/), [Metodología del Mapa de Cobertura](../../coverage-map/methodology/)
+- **Estándar**: requisitos y definiciones normativas — [Estándar (Actual)](../../standard/current/)
+- **Taxonomía**: sistema de clasificación de 8 dimensiones para gobernanza de IA — [Taxonomía](../../standard/current/03-taxonomy/), [Códigos](../../standard/current/04-codes/), [Diccionario](../../standard/current/05-dictionary/)
+- **Paquete de Evidencia**: estructura, TOC, trazabilidad — [Paquete de Evidencia](../../artifacts/evidence-bundle/)
+- **Requisitos Mínimos de Evidencia**: lista de verificación de nivel DEBE por ciclo de vida — [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/)
+- **Validador**: reglas y verificaciones de referencia — [Validador](../../validator/)
+- **Ejemplos**: paquetes de muestra listos para auditoría — [Ejemplos](../../examples/)
 - **Versiones**: historial de cambios y distribución — [Versiones](../../releases/)
-- **Gobernanza**: políticas, seguridad, licencias — [Gobernanza](../governance/index.md)
+- **Gobernanza**: políticas, seguridad, licencias — [Gobernanza](../../governance/)
 
 ## Conjunto mínimo para preparación de auditoría
 
 | Elemento | Dónde encontrarlo | Resultado / qué demuestra |
 | --- | --- | --- |
-| Niveles de conformidad | [Conformidad](../conformance/index.md) | Cómo reclamar cumplimiento y el alcance de evidencia requerida |
-| Mapeo de cobertura | [Índice de Mapa de Cobertura](../coverage-map/index.md), [Metodología del Mapa de Cobertura](../coverage-map/methodology.md) | Explicabilidad contra regulaciones y estándares externos |
-| Taxonomía y Diccionario | [Taxonomía](../standard/current/03-taxonomy.md), [Códigos](../standard/current/04-codes.md), [Diccionario](../standard/current/05-dictionary.md) | Sistema de clasificación para sistemas de IA (8 dimensiones, 91 códigos) |
-| Artefactos de evidencia | [Paquete de Evidencia](../artifacts/evidence-bundle.md), [Evidencia Mínima](../artifacts/minimum-evidence.md), [Plantilla EV](../standard/current/06-ev-template.md) | Qué datos deben existir para soportar trazabilidad |
-| Verificaciones del validador | [Validador](../validator/index.md) | Cómo verificar consistencia y completitud interna |
-| Paquete de ejemplo | [Ejemplos](../examples/index.md) | Cómo se ve un paquete listo para auditoría en práctica |
-| Control de cambios | [Versiones](../../releases/), [Gobernanza](../governance/index.md) | Cómo se gestionan y comunican las actualizaciones |
-| Seguridad / Licencia / Marcas | [Gobernanza](../governance/index.md) | Postura legal y de seguridad para decisiones de adopción |
+| Niveles de conformidad | [Conformidad](../../conformance/) | Cómo reclamar cumplimiento y el alcance de evidencia requerida |
+| Mapeo de cobertura | [Índice de Mapa de Cobertura](../../coverage-map/), [Metodología del Mapa de Cobertura](../../coverage-map/methodology/) | Explicabilidad contra regulaciones y estándares externos |
+| Taxonomía y Diccionario | [Taxonomía](../../standard/current/03-taxonomy/), [Códigos](../../standard/current/04-codes/), [Diccionario](../../standard/current/05-dictionary/) | Sistema de clasificación para sistemas de IA (8 dimensiones, 91 códigos) |
+| Artefactos de evidencia | [Paquete de Evidencia](../../artifacts/evidence-bundle/), [Evidencia Mínima](../../artifacts/minimum-evidence/), [Plantilla EV](../../standard/current/06-ev-template/) | Qué datos deben existir para soportar trazabilidad |
+| Verificaciones del validador | [Validador](../../validator/) | Cómo verificar consistencia y completitud interna |
+| Paquete de ejemplo | [Ejemplos](../../examples/) | Cómo se ve un paquete listo para auditoría en práctica |
+| Control de cambios | [Versiones](../../releases/), [Gobernanza](../../governance/) | Cómo se gestionan y comunican las actualizaciones |
+| Seguridad / Licencia / Marcas | [Gobernanza](../../governance/) | Postura legal y de seguridad para decisiones de adopción |
 
 ## Cómo citar
 
 Use el README del repositorio para guía de citación y contexto; los enlaces de gobernanza apuntan a las políticas autoritativas.
-Consulte [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) y [Gobernanza](../governance/index.md).
+Consulte [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) y [Gobernanza](../../governance/).
 
 ## Contenido del zip de artefactos
 
@@ -65,13 +65,13 @@ El `aimo-standard-artifacts.zip` incluye:
 
 El AIMO Standard proporciona un formato de evidencia estructurado y marco de explicabilidad. **No** proporciona asesoramiento legal, certificación de cumplimiento, evaluación de riesgos ni ejecución de auditoría.
 
-Para la definición completa de alcance, suposiciones y responsabilidades del adoptante, consulte [Límite de Responsabilidad](responsibility-boundary.md).
+Para la definición completa de alcance, suposiciones y responsabilidades del adoptante, consulte [Límite de Responsabilidad](../responsibility-boundary/).
 
 ## Cómo preparar un paquete de envío
 
 Siga estos pasos para preparar un envío listo para auditoría:
 
-1. **Generar Paquete de Evidencia**: Cree registros EV, Diccionario, Resumen y Registro de Cambios según [Paquete de Evidencia](../artifacts/evidence-bundle.md) y [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md).
+1. **Generar Paquete de Evidencia**: Cree registros EV, Diccionario, Resumen y Registro de Cambios según [Paquete de Evidencia](../../artifacts/evidence-bundle/) y [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/).
 2. **Ejecutar Validador**: Ejecute `python validator/src/validate.py bundle/root.json` para verificar consistencia estructural. Corrija cualquier error antes de continuar.
 3. **Crear Checksums**: Genere checksums SHA-256 para todos los archivos de envío:
 
@@ -109,14 +109,14 @@ Para activos de release y verificación, consulte [Versiones](../../releases/).
 !!! warning "Importante"
     El AIMO Standard soporta **explicabilidad y preparación de evidencia**. **No** proporciona asesoramiento legal, garantiza cumplimiento ni certifica conformidad con ninguna regulación o marco. Los adoptantes deben verificar reclamaciones contra textos autoritativos y obtener asesoramiento profesional según sea apropiado.
 
-Consulte [Límite de Responsabilidad](responsibility-boundary.md) para detalles sobre alcance, suposiciones y responsabilidades del adoptante.
+Consulte [Límite de Responsabilidad](../responsibility-boundary/) para detalles sobre alcance, suposiciones y responsabilidades del adoptante.
 
 ## Para auditores: Procedimiento de verificación
 
 Al recibir un envío de evidencia, los auditores deben verificar integridad y estructura usando los siguientes pasos:
 
 !!! success "Procedencia de Build Disponible"
-    Todos los activos de release incluyen atestaciones de procedencia de build firmadas criptográficamente. Consulte [Procedimiento de Verificación](../standard/versions/index.md#4-verify-build-provenance-attestation) para pasos de verificación de atestación.
+    Todos los activos de release incluyen atestaciones de procedencia de build firmadas criptográficamente. Consulte [Procedimiento de Verificación](../../standard/versions/#4-verify-build-provenance-attestation) para pasos de verificación de atestación.
 
 ### Paso 1: Verificar checksums (SHA-256)
 
@@ -228,9 +228,9 @@ Verifique que el envío referencia un release oficial del AIMO Standard:
 
 Desde esta página, el recorrido de auditoría recomendado es:
 
-1. **Sistema de clasificación**: [Taxonomía](../standard/current/03-taxonomy.md) + [Diccionario](../standard/current/05-dictionary.md) — comprenda el sistema de códigos de 8 dimensiones
-2. **Estructura de evidencia**: [Paquete de Evidencia](../artifacts/evidence-bundle.md) — comprenda TOC del paquete y trazabilidad
-3. **Evidencia requerida**: [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md) — lista de verificación de nivel DEBE por ciclo de vida
-4. **Alineación de marco**: [Mapa de Cobertura](../coverage-map/index.md) + [Metodología](../coverage-map/methodology.md) — vea cómo AIMO mapea a marcos externos
-5. **Validación**: [Validador](../validator/index.md) — ejecute verificaciones de consistencia estructural
+1. **Sistema de clasificación**: [Taxonomía](../../standard/current/03-taxonomy/) + [Diccionario](../../standard/current/05-dictionary/) — comprenda el sistema de códigos de 8 dimensiones
+2. **Estructura de evidencia**: [Paquete de Evidencia](../../artifacts/evidence-bundle/) — comprenda TOC del paquete y trazabilidad
+3. **Evidencia requerida**: [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/) — lista de verificación de nivel DEBE por ciclo de vida
+4. **Alineación de marco**: [Mapa de Cobertura](../../coverage-map/) + [Metodología](../../coverage-map/methodology/) — vea cómo AIMO mapea a marcos externos
+5. **Validación**: [Validador](../../validator/) — ejecute verificaciones de consistencia estructural
 6. **Descargar**: [Versiones](../../releases/) — obtenga activos de release y verifique checksums

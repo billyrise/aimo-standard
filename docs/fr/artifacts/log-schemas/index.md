@@ -30,11 +30,11 @@ Cette section définit des **formats de journaux normalisés** pour les preuves 
 
 | Schéma | Objectif | Télécharger |
 | --- | --- | --- |
-| [Journal de découverte de Shadow AI](shadow-ai-discovery.md) | Détection et inventaire de l'utilisation non approuvée de l'IA | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [Journal d'activité des agents](agent-activity.md) | Exercice des privilèges d'IA agentique et exécution d'outils | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Journal de découverte de Shadow AI](shadow-ai-discovery/) | Détection et inventaire de l'utilisation non approuvée de l'IA | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [Journal d'activité des agents](agent-activity/) | Exercice des privilèges d'IA agentique et exécution d'outils | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
 ## Pages connexes
 
-- [Exigences minimales de preuves](../minimum-evidence.md) — Liste de contrôle OBLIGATOIRE des preuves
-- [Lot de preuves](../evidence-bundle.md) — Structure du lot et TDM
-- [Taxonomie](../../standard/current/03-taxonomy.md) — Codes de classification (incluant UC-010 Automatisation agentique, IM-007 Shadow/Non géré)
+- [Exigences minimales de preuves](../minimum-evidence/) — Liste de contrôle OBLIGATOIRE des preuves
+- [Lot de preuves](../evidence-bundle/) — Structure du lot et TDM
+- [Taxonomie](../../standard/current/03-taxonomy/) — Codes de classification (incluant UC-010 Automatisation agentique, IM-007 Shadow/Non géré)

@@ -97,6 +97,6 @@ PR 제출 시 확인:
 
 ## 관련 페이지
 
-- [거버넌스](index.md) — 프로젝트 거버넌스
-- [현지화 가이드](../contributing/localization.md) — i18n 세부사항
-- [책임 경계](responsibility-boundary.md) — AIMO가 제공하는 것
+- [거버넌스](../) — 프로젝트 거버넌스
+- [현지화 가이드](../../contributing/localization/) — i18n 세부사항
+- [책임 경계](../responsibility-boundary/) — AIMO가 제공하는 것

@@ -6,7 +6,7 @@ description: AIMOバリデータ - Evidence PackがAIMO Standardスキーマに�
 
 AIMOバリデータは、Evidence Packおよび関連アーティファクトがAIMO Standardスキーマと要件に準拠していることを確認します。
 
-関連：[人による監督プロトコル](../../governance/human-oversight-protocol.md) — 機械チェックと人の判断の責任境界。
+関連：[人による監督プロトコル](../../../governance/human-oversight-protocol/) — 機械チェックと人の判断の責任境界。
 
 ## バリデータが検証する対象（必須ファイルセット）
 
@@ -15,16 +15,16 @@ AIMOバリデータは、Evidence Packおよび関連アーティファクトが
 | アーティファクト | 目的 | 正規の場所（リリースごと） |
 |------------------|------|----------------------------|
 | **Evidence Pack マニフェスト** | ルートマニフェスト（`root.json` 等） | スキーマ: [evidence_pack_manifest.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/evidence_pack_manifest.schema.json)；リリース ZIP: `schemas/jsonschema/` |
-| **Dictionary** | マニフェストで使用する taxonomy コード | [Evidence Bundle](../../artifacts/evidence-bundle.md) 構造；[Dictionary](./05-dictionary.md) 仕様 |
-| **Minimum Evidence Requirements** | 監査人・実装者向けチェックリスト | [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md) |
+| **Dictionary** | マニフェストで使用する taxonomy コード | [Evidence Bundle](../../../artifacts/evidence-bundle/) 構造；[Dictionary](../05-dictionary/) 仕様 |
+| **Minimum Evidence Requirements** | 監査人・実装者向けチェックリスト | [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) |
 
-バリデータは法的・規制上の適合を保証しません。構造がスキーマとコード体系に準拠しているかを検証します。含める証跡のチェックリストは [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md) を参照してください。
+バリデータは法的・規制上の適合を保証しません。構造がスキーマとコード体系に準拠しているかを検証します。含める証跡のチェックリストは [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) を参照してください。
 
 **特定バージョンの正規 URL**：準拠するバージョン（例：`v0.0.3`）の [GitHub Release](https://github.com/billyrise/aimo-standard/releases) からスキーマとバリデータを取得してください。リリース ZIP（`aimo-standard-artifacts.zip`）には `schemas/jsonschema/`、テンプレート、バリデータルールが含まれます。
 
 ## 実運用でのValidator
 
-30秒クイックスタート（インストール、実行、出力の解釈）は [Validator ハブ](../../validator/index.md) を参照。
+30秒クイックスタート（インストール、実行、出力の解釈）は [Validator ハブ](../../../validator/) を参照。
 
 ## バリデータMVP要件
 
@@ -216,7 +216,7 @@ Validation: PASSED
 
 ## 参照
 
-- [タクソノミー](./03-taxonomy.md) - 次元定義
-- [コード](./04-codes.md) - コードフォーマット
-- [辞書](./05-dictionary.md) - コード辞書
-- [バリデータルール](../../validator/index.md) - 完全なルールドキュメント
+- [タクソノミー](../03-taxonomy/) - 次元定義
+- [コード](../04-codes/) - コードフォーマット
+- [辞書](../05-dictionary/) - コード辞書
+- [バリデータルール](../../../validator/) - 完全なルールドキュメント

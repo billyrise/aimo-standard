@@ -45,4 +45,4 @@ Such a structure would align with:
 ## Status
 
 - **v0.1 / v0.1.1**: No JNC schema or requirement. Adopters may document exceptions outside the bundle.
-- **v0.2 (planned)**: JNC may be introduced as an optional, informative mechanism; see [v0.2 roadmap](../standard/current/10-roadmap-v0.2.md).
+- **v0.2 (planned)**: JNC may be introduced as an optional, informative mechanism; see [v0.2 roadmap](../../standard/current/10-roadmap-v0.2/).

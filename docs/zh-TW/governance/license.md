@@ -44,7 +44,7 @@ AIMO 標準根據 **Apache License, Version 2.0** 授權。
 1. 在發布中包含授權聲明
 2. 提供署名（請參閱 [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt)）
 3. 說明重大修改（如有）
-4. 未經許可不得使用商標（請參閱[商標](trademarks.md)）
+4. 未經許可不得使用商標（請參閱[商標](../trademarks/)）
 
 ## NOTICE 檔案
 
@@ -72,5 +72,5 @@ AIMO 標準可能包含或參照第三方元件。每個元件保留其原始授
 
 ## 相關頁面
 
-- [商標](trademarks.md) — 商標使用
-- [治理](index.md) — 專案治理
+- [商標](../trademarks/) — 商標使用
+- [治理](../) — 專案治理

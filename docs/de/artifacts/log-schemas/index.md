@@ -30,11 +30,11 @@ Dieser Abschnitt definiert **normalisierte Log-Formate** für Evidence, das in e
 
 | Schema | Zweck | Download |
 | --- | --- | --- |
-| [Shadow AI Discovery Log](shadow-ai-discovery.md) | Erkennung und Inventarisierung nicht genehmigter KI-Nutzung | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [Agent Activity Log](agent-activity.md) | Agentenbasierte KI-Berechtigungsausübung und Tool-Ausführung | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Shadow AI Discovery Log](shadow-ai-discovery/) | Erkennung und Inventarisierung nicht genehmigter KI-Nutzung | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [Agent Activity Log](agent-activity/) | Agentenbasierte KI-Berechtigungsausübung und Tool-Ausführung | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
 ## Verwandte Seiten
 
-- [Mindestanforderungen an Evidence](../minimum-evidence.md) — MUSS-Evidence-Checkliste
-- [Evidence Bundle](../evidence-bundle.md) — Bundle-Struktur und TOC
-- [Taxonomie](../../standard/current/03-taxonomy.md) — Klassifizierungscodes (einschließlich UC-010 Agentic Automation, IM-007 Shadow/Unmanaged)
+- [Mindestanforderungen an Evidence](../minimum-evidence/) — MUSS-Evidence-Checkliste
+- [Evidence Bundle](../evidence-bundle/) — Bundle-Struktur und TOC
+- [Taxonomie](../../standard/current/03-taxonomy/) — Klassifizierungscodes (einschließlich UC-010 Agentic Automation, IM-007 Shadow/Unmanaged)

@@ -19,7 +19,7 @@ La tassonomia serve tre scopi primari dal punto di vista dell'audit:
 ## Cosa Non È (Non Sovra-dichiarazione)
 
 !!! warning "Importante"
-    Lo Standard AIMO supporta **spiegabilità e prontezza dell'evidence**. **Non** fornisce consulenza legale, garantisce conformità o certifica la conformità a qualsiasi normativa o framework. Vedere [Confini di Responsabilità](../../governance/responsibility-boundary.md) per i dettagli.
+    Lo Standard AIMO supporta **spiegabilità e prontezza dell'evidence**. **Non** fornisce consulenza legale, garantisce conformità o certifica la conformità a qualsiasi normativa o framework. Vedere [Confini di Responsabilità](../../../governance/responsibility-boundary/) per i dettagli.
 
 La tassonomia è solo un sistema di classificazione. Non:
 
@@ -34,7 +34,7 @@ I controlli di sicurezza tradizionali (es. ISMS) da soli spesso non riescono a c
 La Tassonomia AIMO fornisce un linguaggio condiviso per classificare questi rischi specifici dell'IA e collegarli ai requisiti di evidence e ai workflow di remediation.
 
 !!! warning "Solo esempi di riferimento — non codici normativi"
-    I codici seguenti sono **placeholder illustrativi** e **non** fanno parte del sistema di codici normativo AIMO. Non usarli nelle submission; usare dimensioni e codici normativi in [Codes](./04-codes.md) e [Dictionary](./05-dictionary.md).
+    I codici seguenti sono **placeholder illustrativi** e **non** fanno parte del sistema di codici normativo AIMO. Non usarli nelle submission; usare dimensioni e codici normativi in [Codes](../04-codes/) e [Dictionary](../05-dictionary/).
 
 - **AG-01** Loop/Ricorsione Fuori Controllo
 - **AG-02** Uso Non Autorizzato di Strumenti (abuso stile confused deputy)
@@ -97,7 +97,7 @@ Categorizza l'uso dell'IA per il tipo di attività o interazione. **Selezionare 
 | UC-009 | Search/RAG | Recupero basato su RAG e risposta a domande. |
 | UC-010 | Agentic Automation | Agent autonomi o semi-autonomi che eseguono azioni. |
 
-Vedere [Dizionario](./05-dictionary.md) per la lista completa dei 30 codici UC.
+Vedere [Dizionario](../05-dictionary/) per la lista completa dei 30 codici UC.
 
 ### DT: Data Type
 
@@ -208,7 +208,7 @@ Ogni documento Evidence referenzia codici da più dimensioni per classificare il
 
 ### Referenziare il Dizionario
 
-Per definizioni complete dei codici incluse note sull'ambito ed esempi, fare riferimento al [Dizionario](./05-dictionary.md).
+Per definizioni complete dei codici incluse note sull'ambito ed esempi, fare riferimento al [Dizionario](../05-dictionary/).
 
 ### Esempio di Classificazione
 
@@ -226,11 +226,11 @@ LG: LG-001 (Request Record), LG-002 (Review/Approval Record)
 ## Riferimento SSOT
 
 !!! info "Fonte di Verità"
-    La definizione autorevole è `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Questa pagina è esplicativa. Vedere [Guida alla Localizzazione](../../contributing/localization.md) per i workflow di aggiornamento.
+    La definizione autorevole è `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Questa pagina è esplicativa. Vedere [Guida alla Localizzazione](../../../contributing/localization/) per i workflow di aggiornamento.
 
 ## Pagine Correlate
 
-- [Codici](./04-codes.md) - Formato dei codici, convenzioni di denominazione e ciclo di vita
-- [Dizionario](./05-dictionary.md) - Liste complete dei codici e definizioni delle colonne
-- [Template di Evidence](./06-ev-template.md) - Come usare i codici nell'evidence
-- [Confini di Responsabilità](../../governance/responsibility-boundary.md) - Dichiarazione di non sovra-dichiarazione
+- [Codici](../04-codes/) - Formato dei codici, convenzioni di denominazione e ciclo di vita
+- [Dizionario](../05-dictionary/) - Liste complete dei codici e definizioni delle colonne
+- [Template di Evidence](../06-ev-template/) - Come usare i codici nell'evidence
+- [Confini di Responsabilità](../../../governance/responsibility-boundary/) - Dichiarazione di non sovra-dichiarazione

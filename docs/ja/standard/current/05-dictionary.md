@@ -53,7 +53,7 @@ AIMO辞書は、タクソノミー内のすべての有効なコードの正式�
 | 9 | `examples` | いいえ | パイプ区切りの例 | `chatbot\|recommendation` |
 
 !!! note "翻訳"
-    正規データモデルでは翻訳を言語パック（`data/taxonomy/i18n/*.yaml`）に分離しています。各言語パックは`dimension_name`、`label`、`definition`のローカライズ版を提供します。詳細は[ローカリゼーションガイド](../../contributing/localization.md)を参照してください。
+    正規データモデルでは翻訳を言語パック（`data/taxonomy/i18n/*.yaml`）に分離しています。各言語パックは`dimension_name`、`label`、`definition`のローカライズ版を提供します。詳細は[ローカリゼーションガイド](../../../contributing/localization/)を参照してください。
 
 ### ライフサイクル列（6）
 
@@ -195,8 +195,8 @@ X-<ORG>-<DIM>-<TOKEN>
 
 ## 関連ページ
 
-- [タクソノミー](./03-taxonomy.md) - 次元定義とコードテーブル
-- [コード](./04-codes.md) - コードフォーマット、命名、ライフサイクル
-- [証跡テンプレート](./06-ev-template.md) - テンプレートでのコードの使用方法
-- [バリデータ](./07-validator.md) - コードバリデーションルール
-- [変更履歴](./08-changelog.md) - バージョン履歴
+- [タクソノミー](../03-taxonomy/) - 次元定義とコードテーブル
+- [コード](../04-codes/) - コードフォーマット、命名、ライフサイクル
+- [証跡テンプレート](../06-ev-template/) - テンプレートでのコードの使用方法
+- [バリデータ](../07-validator/) - コードバリデーションルール
+- [変更履歴](../08-changelog/) - バージョン履歴

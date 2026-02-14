@@ -98,8 +98,8 @@ v1.0.0: FS-007 削除 (status: removed)
 
 #### 変更
 
-- **Evidence Pack ドキュメント種別（EP 名前空間）：** Evidence Pack のファイル種別は **EP-01..EP-07**（ドキュメント種別）を使用。Taxonomy の **LG-001, LG-002, …** はログ/記録種別（申請記録、審査/承認記録など）。**EV-** は Evidence 成果物ID 専用。[Evidence Pack テンプレート](./06-ev-template.md) および [IDポリシー / 名前空間](./04b-id-policy-namespace.md) を参照。スキーマ：`evidence_files[].file_id` のパターンは `^EP-\\d{2}$`。`ev_type` は **LG-xxx** を使用。
-- **規範的関係：** [Evidence Bundle](../../artifacts/evidence-bundle.md) に以下を規範として明記。EV レコード（JSON）は索引／台帳。Evidence Pack ファイルはペイロード。EV レコードは evidence_file_ids（例：EP-01）および／またはハッシュでペイロードを参照することを SHOULD。最小提出セット = EV JSON + Dictionary + Summary + Change Log + Evidence Pack。
+- **Evidence Pack ドキュメント種別（EP 名前空間）：** Evidence Pack のファイル種別は **EP-01..EP-07**（ドキュメント種別）を使用。Taxonomy の **LG-001, LG-002, …** はログ/記録種別（申請記録、審査/承認記録など）。**EV-** は Evidence 成果物ID 専用。[Evidence Pack テンプレート](../06-ev-template/) および [IDポリシー / 名前空間](../04b-id-policy-namespace/) を参照。スキーマ：`evidence_files[].file_id` のパターンは `^EP-\\d{2}$`。`ev_type` は **LG-xxx** を使用。
+- **規範的関係：** [Evidence Bundle](../../../artifacts/evidence-bundle/) に以下を規範として明記。EV レコード（JSON）は索引／台帳。Evidence Pack ファイルはペイロード。EV レコードは evidence_file_ids（例：EP-01）および／またはハッシュでペイロードを参照することを SHOULD。最小提出セット = EV JSON + Dictionary + Summary + Change Log + Evidence Pack。
 - **/dev 誤引用防止：** 開発プレビューページに赤帯バナーを表示。「Development Preview — Not for audit citation. Use /latest/ or a versioned URL.」/dev/ ページの canonical は /latest/ を指す。noindex は従来どおり。
 
 ### バージョン 0.0.1（2026-02-02）
@@ -166,6 +166,6 @@ v1.0.0: FS-007 削除 (status: removed)
 
 ## 参照
 
-- [タクソノミー](./03-taxonomy.md) - 次元定義
-- [辞書](./05-dictionary.md) - コード辞書
-- [バージョニングポリシー](../../governance/index.md) - バージョニングポリシー（リポジトリルートの VERSIONING.md を参照）
+- [タクソノミー](../03-taxonomy/) - 次元定義
+- [辞書](../05-dictionary/) - コード辞書
+- [バージョニングポリシー](../../../governance/) - バージョニングポリシー（リポジトリルートの VERSIONING.md を参照）

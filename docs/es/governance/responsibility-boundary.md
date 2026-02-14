@@ -81,7 +81,7 @@ Esta declaración aplica a toda la documentación del AIMO Standard, incluyendo 
 
 ## Páginas relacionadas
 
-- [Paquete de Confianza](trust-package.md) — centro de materiales listos para auditores
-- [Protocolo de Supervisión Humana](human-oversight-protocol.md) — límite de revisión máquina vs. humano
-- [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md) — lista de verificación de ciclo de vida de nivel DEBE
-- [Metodología del Mapa de Cobertura](../coverage-map/methodology.md) — qué es y qué no es el mapeo
+- [Paquete de Confianza](../trust-package/) — centro de materiales listos para auditores
+- [Protocolo de Supervisión Humana](../human-oversight-protocol/) — límite de revisión máquina vs. humano
+- [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/) — lista de verificación de ciclo de vida de nivel DEBE
+- [Metodología del Mapa de Cobertura](../../coverage-map/methodology/) — qué es y qué no es el mapeo

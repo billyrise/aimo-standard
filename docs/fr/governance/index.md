@@ -6,20 +6,20 @@ description: Centre de gouvernance du standard AIMO - Gouvernance du projet, pol
 
 Cette section est le centre pour la gouvernance du projet, la sécurité, les licences, les citations et les directives de contribution.
 
-Commencez ici pour les matériaux prêts pour les auditeurs : **[Package de confiance](trust-package.md)**.
+Commencez ici pour les matériaux prêts pour les auditeurs : **[Package de confiance](trust-package/)**.
 
 ## Pages de gouvernance
 
 | Page | Description |
 | ---- | ----------- |
-| [Package de confiance](trust-package.md) | Centre des matériaux prêts pour les auditeurs |
-| [Périmètre de responsabilité](responsibility-boundary.md) | Ce que fournit et ne fournit pas AIMO |
-| [Sécurité](security.md) | Signalement de vulnérabilités et politique de sécurité |
-| [Licence](license.md) | Termes de licence (Apache-2.0) |
-| [Marques](trademarks.md) | Directives d'utilisation des marques |
-| [Comment citer](cite.md) | Conseils de citation pour articles et audits |
-| [Contribuer](contributing.md) | Comment contribuer au standard AIMO |
-| [Politique SEO et canonique](seo-canonical-policy.md) | Conseils de canonicalisation des URL |
+| [Package de confiance](trust-package/) | Centre des matériaux prêts pour les auditeurs |
+| [Périmètre de responsabilité](responsibility-boundary/) | Ce que fournit et ne fournit pas AIMO |
+| [Sécurité](security/) | Signalement de vulnérabilités et politique de sécurité |
+| [Licence](license/) | Termes de licence (Apache-2.0) |
+| [Marques](trademarks/) | Directives d'utilisation des marques |
+| [Comment citer](cite/) | Conseils de citation pour articles et audits |
+| [Contribuer](contributing/) | Comment contribuer au standard AIMO |
+| [Politique SEO et canonique](seo-canonical-policy/) | Conseils de canonicalisation des URL |
 
 ## Fichiers de politique du dépôt
 
@@ -41,14 +41,14 @@ Les fichiers suivants se trouvent à la racine du dépôt et contiennent les pol
 
 Pour les auditeurs et réviseurs de conformité, l'ordre de lecture recommandé :
 
-1. **[Package de confiance](trust-package.md)** — Vue d'ensemble des matériaux prêts pour l'audit
-2. **[Périmètre de responsabilité](responsibility-boundary.md)** — Périmètre et responsabilités des adopteurs
-3. **[Sécurité](security.md)** — Posture de sécurité et politique de divulgation
-4. **[Licence](license.md)** — Termes de licence pour l'adoption
-5. **[Comment citer](cite.md)** — Citation pour la documentation d'audit
+1. **[Package de confiance](trust-package/)** — Vue d'ensemble des matériaux prêts pour l'audit
+2. **[Périmètre de responsabilité](responsibility-boundary/)** — Périmètre et responsabilités des adopteurs
+3. **[Sécurité](security/)** — Posture de sécurité et politique de divulgation
+4. **[Licence](license/)** — Termes de licence pour l'adoption
+5. **[Comment citer](cite/)** — Citation pour la documentation d'audit
 
 ## Pages connexes
 
 - [Versions](../../releases/) — Instantanés de version et changelog
-- [Conformité](../conformance/index.md) — Niveaux de conformité
-- [Guide de localisation](../contributing/localization.md) — Flux de travail i18n
+- [Conformité](../conformance/) — Niveaux de conformité
+- [Guide de localisation](../contributing/localization/) — Flux de travail i18n

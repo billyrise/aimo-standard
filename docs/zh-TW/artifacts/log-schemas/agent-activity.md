@@ -107,7 +107,7 @@ description: 代理活動日誌格式 - 用於企業中代理式 AI 權限執行
 
 ## 相關頁面
 
-- [日誌結構描述索引](index.md)
-- [Shadow AI 發現日誌](shadow-ai-discovery.md)
-- [最低證據要求](../minimum-evidence.md)
-- [分類法：UC-010 代理式自動化](../../standard/current/03-taxonomy.md)
+- [日誌結構描述索引](../)
+- [Shadow AI 發現日誌](../shadow-ai-discovery/)
+- [最低證據要求](../../minimum-evidence/)
+- [分類法：UC-010 代理式自動化](../../../standard/current/03-taxonomy/)

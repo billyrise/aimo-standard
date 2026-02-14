@@ -32,8 +32,8 @@ Les lecteurs doivent vérifier par rapport au texte faisant autorité de chaque 
 
 ## Relation avec le lot de preuves et les exigences minimales de preuves
 
-- **[Lot de preuves](../artifacts/evidence-bundle.md)** : Définit la structure du lot, la TDM et la traçabilité. Les lignes de la carte de couverture référencent les sections du lot de preuves (ex. EV, Dictionary, Summary, change_log, demande, revue, exception, renouvellement).
-- **[Exigences minimales de preuves](../artifacts/minimum-evidence.md)** : Définit les groupes de cycle de vie OBLIGATOIRES (demande, revue, exception, renouvellement, change_log, intégrité). Les lignes de la carte de couverture référencent ces groupes dans `minimum_evidence_refs`.
+- **[Lot de preuves](../../artifacts/evidence-bundle/)** : Définit la structure du lot, la TDM et la traçabilité. Les lignes de la carte de couverture référencent les sections du lot de preuves (ex. EV, Dictionary, Summary, change_log, demande, revue, exception, renouvellement).
+- **[Exigences minimales de preuves](../../artifacts/minimum-evidence/)** : Définit les groupes de cycle de vie OBLIGATOIRES (demande, revue, exception, renouvellement, change_log, intégrité). Les lignes de la carte de couverture référencent ces groupes dans `minimum_evidence_refs`.
 
 Utilisez la carte de couverture pour voir quels éléments du lot de preuves et groupes de preuves minimales soutiennent l'explicabilité pour une exigence externe donnée.
 
@@ -42,12 +42,12 @@ Utilisez la carte de couverture pour voir quels éléments du lot de preuves et 
 !!! warning "Important"
     Le standard AIMO soutient **l'explicabilité et la préparation des preuves**. Il ne fournit **pas** d'avis juridique, ne garantit pas la conformité et ne certifie pas la conformité à une réglementation ou un cadre. Les adopteurs doivent vérifier les déclarations par rapport aux textes faisant autorité et obtenir des conseils professionnels si nécessaire.
 
-Voir [Périmètre de responsabilité](../governance/responsibility-boundary.md) pour le périmètre, les hypothèses et les responsabilités des adopteurs.
+Voir [Périmètre de responsabilité](../../governance/responsibility-boundary/) pour le périmètre, les hypothèses et les responsabilités des adopteurs.
 
 ## Parcours d'audit
 
 Depuis cette page, continuez vers :
 
-1. **Correspondances de cadres** : [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Valider** : [Validateur](../validator/index.md) — exécuter les vérifications structurelles
+1. **Correspondances de cadres** : [ISO 42001](../iso-42001/), [NIST AI RMF](../nist-ai-rmf/), [EU AI Act](../eu-ai-act/), [ISMS](../isms/)
+2. **Valider** : [Validateur](../../validator/) — exécuter les vérifications structurelles
 3. **Télécharger** : [Versions](../../releases/) — obtenir les actifs de version

@@ -97,6 +97,6 @@ PR 提出時に確認：
 
 ## 関連ページ
 
-- [ガバナンス](index.md) — プロジェクトガバナンス
-- [ローカライゼーションガイド](../contributing/localization.md) — i18n 詳細
-- [責任境界](responsibility-boundary.md) — AIMO が提供するもの
+- [ガバナンス](../) — プロジェクトガバナンス
+- [ローカライゼーションガイド](../../contributing/localization/) — i18n 詳細
+- [責任境界](../responsibility-boundary/) — AIMO が提供するもの

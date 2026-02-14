@@ -14,7 +14,7 @@ This section is a hub for versioned releases, changelog, migration, and distribu
 
 The full **auditor verification procedure** (download assets, verify checksums, optional build provenance) is available as a permanent page and is not PDF-only:
 
-- **[Standard → Versions → Verification Procedure](../standard/versions/index.md#verification-procedure)** — step-by-step checksum verification (Linux/macOS/Windows) and build provenance attestation.
+- **[Standard → Versions → Verification Procedure](../standard/versions/#verification-procedure)** — step-by-step checksum verification (Linux/macOS/Windows) and build provenance attestation.
 
 Use this page when you need to verify release assets or document your verification steps in audit deliverables.
 
@@ -87,18 +87,18 @@ The `aimo-standard-artifacts.zip` contains:
 
 ## Resources
 
-- **Version History Table**: [Standard > Versions](../standard/versions/index.md) — version table with direct links to all release assets (PDF, ZIP, SHA256)
-- **Changelog (spec)**: [Standard > Current > Changelog](../standard/current/08-changelog.md) — normative and non-normative change history.
+- **Version History Table**: [Standard > Versions](../standard/versions/) — version table with direct links to all release assets (PDF, ZIP, SHA256)
+- **Changelog (spec)**: [Standard > Current > Changelog](../standard/current/08-changelog/) — normative and non-normative change history.
 - **Release process**: tagging `vX.Y.Z`, CI build, PDF under `dist/`, checksums, GitHub Release assets. See [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) and [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) in the repository.
 - **Migration guide**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — upgrade paths for breaking changes.
 
-For governance and versioning policy, see [Governance](../governance/index.md).
+For governance and versioning policy, see [Governance](../governance/).
 
 ## Preparing your submission package
 
 When preparing evidence for audit submission:
 
-1. **Create your Evidence Bundle**: Follow [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) to create EV records, Dictionary, Summary, and Change Log.
+1. **Create your Evidence Bundle**: Follow [Evidence Bundle](../artifacts/evidence-bundle/) and [Minimum Evidence Requirements](../artifacts/minimum-evidence/) to create EV records, Dictionary, Summary, and Change Log.
 2. **Run the Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix all errors before proceeding.
 3. **Generate Checksums**: Create SHA-256 checksums for verification:
 
@@ -126,7 +126,7 @@ When preparing evidence for audit submission:
 5. **Document version alignment**: Note which AIMO Standard release (e.g., `v1.0.0`) your evidence aligns with.
 6. **Deliver**: Provide the package, checksums, and version reference to your auditor.
 
-For the complete preparation guide, see [Trust Package](../governance/trust-package.md).
+For the complete preparation guide, see [Trust Package](../governance/trust-package/).
 
 ## For auditors: Verification procedure
 
@@ -139,11 +139,11 @@ Auditors receiving evidence submissions should verify integrity and structure:
 !!! tip "Obtain tools independently"
     Auditors should download the validator and schemas directly from the official AIMO Standard release, not from the submitting party.
 
-For the full verification procedure (checksums, attestation, step-by-step), see **[Standard → Versions → Verification Procedure](../standard/versions/index.md#verification-procedure)**. See also [Trust Package](../governance/trust-package.md) for auditor-ready materials.
+For the full verification procedure (checksums, attestation, step-by-step), see **[Standard → Versions → Verification Procedure](../standard/versions/#verification-procedure)**. See also [Trust Package](../governance/trust-package/) for auditor-ready materials.
 
 ## Non-overclaim statement
 
 !!! warning "Important"
     The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
 
-See [Responsibility Boundary](../governance/responsibility-boundary.md) for scope, assumptions, and adopter responsibilities.
+See [Responsibility Boundary](../governance/responsibility-boundary/) for scope, assumptions, and adopter responsibilities.

@@ -72,7 +72,7 @@ JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json` を参照
 
 ## 関連
 
-- [Evidence Bundle（概要）](../../artifacts/evidence-bundle.md)
-- [署名検証ロードマップ](../../artifacts/signature-verification-roadmap.md)
-- [Validator](../../validator/index.md)
-- [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md)
+- [Evidence Bundle（概要）](../../../artifacts/evidence-bundle/)
+- [署名検証ロードマップ](../../../artifacts/signature-verification-roadmap/)
+- [Validator](../../../validator/)
+- [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/)

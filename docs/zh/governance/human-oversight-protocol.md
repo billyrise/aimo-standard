@@ -28,7 +28,7 @@ AIMO 验证器和类似的自动化工具可以检查：
 | **完整性检查** | 验证哈希格式和存在性（不重新计算内容） |
 | **字典验证** | 确认代码存在于分类法字典中 |
 
-请参阅 [验证器](../standard/current/07-validator.md) 了解详细的验证规则和参考实现。
+请参阅 [验证器](../../standard/current/07-validator/) 了解详细的验证规则和参考实现。
 
 ## 需要人工审查的内容（人在回路中范围）
 
@@ -73,7 +73,7 @@ AIMO 验证器和类似的自动化工具可以检查：
 | **整改计划** | 计划的行动、负责人和解决问题的时间表 |
 | **签字** | 正式证明审查已完成 |
 
-这些记录应按照 [最低证据要求](../artifacts/minimum-evidence.md) 包含在证据包中。
+这些记录应按照 [最低证据要求](../../artifacts/minimum-evidence/) 包含在证据包中。
 
 ## 不过度声明
 
@@ -89,7 +89,7 @@ AIMO 验证器和类似的自动化工具可以检查：
 
 ## 相关页面
 
-- [验证器](../standard/current/07-validator.md) — 自动化验证规则和参考实现
-- [责任边界](responsibility-boundary.md) — AIMO 提供什么与采用者责任
-- [最低证据要求](../artifacts/minimum-evidence.md) — MUST 级别证据清单
-- [信任包](trust-package.md) — 审计师就绪材料中心
+- [验证器](../../standard/current/07-validator/) — 自动化验证规则和参考实现
+- [责任边界](../responsibility-boundary/) — AIMO 提供什么与采用者责任
+- [最低证据要求](../../artifacts/minimum-evidence/) — MUST 级别证据清单
+- [信任包](../trust-package/) — 审计师就绪材料中心

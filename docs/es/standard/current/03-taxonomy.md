@@ -19,7 +19,7 @@ La taxonomía sirve tres propósitos principales desde una perspectiva de audito
 ## Qué No Es (No Sobre-Reclamar)
 
 !!! warning "Importante"
-    El AIMO Standard soporta **explicabilidad y preparación de evidencia**. **No** proporciona asesoramiento legal, garantiza cumplimiento ni certifica conformidad con ninguna regulación o marco. Consulte [Límite de Responsabilidad](../../governance/responsibility-boundary.md) para detalles.
+    El AIMO Standard soporta **explicabilidad y preparación de evidencia**. **No** proporciona asesoramiento legal, garantiza cumplimiento ni certifica conformidad con ninguna regulación o marco. Consulte [Límite de Responsabilidad](../../../governance/responsibility-boundary/) para detalles.
 
 La taxonomía es solo un sistema de clasificación. No:
 
@@ -34,7 +34,7 @@ Los controles de seguridad tradicionales (ej., ISMS) solos a menudo fallan en ca
 La Taxonomía AIMO proporciona un lenguaje compartido para clasificar estos riesgos específicos de IA y conectarlos con requisitos de evidencia y flujos de trabajo de remediación.
 
 !!! warning "Solo ejemplos de referencia — no son códigos normativos"
-    Los códigos siguientes son **marcadores de posición ilustrativos** y **no** forman parte del sistema de códigos normativo AIMO. No los use en envíos; use las dimensiones y códigos normativos en [Codes](./04-codes.md) y [Dictionary](./05-dictionary.md).
+    Los códigos siguientes son **marcadores de posición ilustrativos** y **no** forman parte del sistema de códigos normativo AIMO. No los use en envíos; use las dimensiones y códigos normativos en [Codes](../04-codes/) y [Dictionary](../05-dictionary/).
 
 - **AG-01** Bucle Desbocado / Recursión
 - **AG-02** Uso No Autorizado de Herramientas (mal uso estilo deputy confundido)
@@ -97,7 +97,7 @@ Categoriza el uso de IA por el tipo de tarea o interacción. **Seleccione uno o 
 | UC-009 | Búsqueda/RAG | Recuperación basada en RAG y respuesta a preguntas. |
 | UC-010 | Automatización Agéntica | Agentes autónomos o semi-autónomos ejecutando acciones. |
 
-Consulte [Diccionario](./05-dictionary.md) para la lista completa de 30 códigos UC.
+Consulte [Diccionario](../05-dictionary/) para la lista completa de 30 códigos UC.
 
 ### DT: Tipo de Datos
 
@@ -208,7 +208,7 @@ Cada documento de evidencia referencia códigos de múltiples dimensiones para c
 
 ### Referenciando el Diccionario
 
-Para definiciones completas de códigos incluyendo notas de alcance y ejemplos, consulte el [Diccionario](./05-dictionary.md).
+Para definiciones completas de códigos incluyendo notas de alcance y ejemplos, consulte el [Diccionario](../05-dictionary/).
 
 ### Ejemplo de Clasificación
 
@@ -226,11 +226,11 @@ LG: LG-001 (Registro de Solicitud), LG-002 (Registro de Revisión/Aprobación)
 ## Referencia SSOT
 
 !!! info "Fuente de Verdad"
-    La definición autoritativa es `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Esta página es explicativa. Consulte [Guía de Localización](../../contributing/localization.md) para flujos de trabajo de actualización.
+    La definición autoritativa es `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Esta página es explicativa. Consulte [Guía de Localización](../../../contributing/localization/) para flujos de trabajo de actualización.
 
 ## Páginas Relacionadas
 
-- [Códigos](./04-codes.md) - Formato de código, convenciones de nomenclatura y ciclo de vida
-- [Diccionario](./05-dictionary.md) - Listados completos de códigos y definiciones de columnas
-- [Plantillas de Evidencia](./06-ev-template.md) - Cómo usar códigos en evidencia
-- [Límite de Responsabilidad](../../governance/responsibility-boundary.md) - Declaración de no sobre-reclamación
+- [Códigos](../04-codes/) - Formato de código, convenciones de nomenclatura y ciclo de vida
+- [Diccionario](../05-dictionary/) - Listados completos de códigos y definiciones de columnas
+- [Plantillas de Evidencia](../06-ev-template/) - Cómo usar códigos en evidencia
+- [Límite de Responsabilidad](../../../governance/responsibility-boundary/) - Declaración de no sobre-reclamación

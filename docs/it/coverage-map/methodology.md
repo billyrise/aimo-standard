@@ -32,8 +32,8 @@ I lettori devono verificare contro il testo autorevole di ogni framework o norma
 
 ## Relazione con Evidence Bundle e Requisiti Minimi di Evidence
 
-- **[Evidence Bundle](../artifacts/evidence-bundle.md)**: Definisce la struttura del bundle, il TOC e la tracciabilità. Le righe della Mappa di Copertura referenziano le sezioni dell'Evidence Bundle (es. EV, Dizionario, Riepilogo, change_log, richiesta, revisione, eccezione, rinnovo).
-- **[Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md)**: Definisce i gruppi del ciclo di vita MUST-level (richiesta, revisione, eccezione, rinnovo, change_log, integrità). Le righe della Mappa di Copertura referenziano questi gruppi in `minimum_evidence_refs`.
+- **[Evidence Bundle](../../artifacts/evidence-bundle/)**: Definisce la struttura del bundle, il TOC e la tracciabilità. Le righe della Mappa di Copertura referenziano le sezioni dell'Evidence Bundle (es. EV, Dizionario, Riepilogo, change_log, richiesta, revisione, eccezione, rinnovo).
+- **[Requisiti Minimi di Evidence](../../artifacts/minimum-evidence/)**: Definisce i gruppi del ciclo di vita MUST-level (richiesta, revisione, eccezione, rinnovo, change_log, integrità). Le righe della Mappa di Copertura referenziano questi gruppi in `minimum_evidence_refs`.
 
 Usare la Mappa di Copertura per vedere quali elementi dell'Evidence Bundle e gruppi dei Requisiti Minimi supportano la spiegabilità per un dato requisito esterno.
 
@@ -42,12 +42,12 @@ Usare la Mappa di Copertura per vedere quali elementi dell'Evidence Bundle e gru
 !!! warning "Importante"
     Lo Standard AIMO supporta **spiegabilità e prontezza dell'evidence**. **Non** fornisce consulenza legale, garantisce conformità o certifica la conformità a qualsiasi normativa o framework. Gli adottanti devono verificare le dichiarazioni contro i testi autorevoli e ottenere consulenza professionale quando appropriato.
 
-Vedere [Confini di Responsabilità](../governance/responsibility-boundary.md) per ambito, assunzioni e responsabilità degli adottanti.
+Vedere [Confini di Responsabilità](../../governance/responsibility-boundary/) per ambito, assunzioni e responsabilità degli adottanti.
 
 ## Percorso di audit
 
 Da questa pagina, continuare verso:
 
-1. **Mappature framework**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Validazione**: [Validator](../validator/index.md) — eseguire controlli strutturali
+1. **Mappature framework**: [ISO 42001](../iso-42001/), [NIST AI RMF](../nist-ai-rmf/), [EU AI Act](../eu-ai-act/), [ISMS](../isms/)
+2. **Validazione**: [Validator](../../validator/) — eseguire controlli strutturali
 3. **Download**: [Release](../../releases/) — ottenere gli asset di release

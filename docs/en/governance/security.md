@@ -66,5 +66,5 @@ See [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.
 
 ## Related Pages
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
+- [Trust Package](../trust-package/) — Auditor-ready materials
+- [Governance](../) — Project governance

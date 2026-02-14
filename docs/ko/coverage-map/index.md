@@ -14,23 +14,23 @@ description: AIMO 커버리지 맵 - 감사 준비를 위한 AIMO 표준과 주�
 
 1. 외부 요구사항(예: ISO/NIST/EU AI Act/ISMS)에서 시작하여 매핑된 AIMO 표준 요소를 찾습니다.
 2. 연결된 AIMO 요소를 사용하여 필요한 산출물 및 최소 증거 요구사항을 식별합니다.
-3. 검증기를 사용하여 완전성과 일관성을 검증하고, 필요한 경우 인간 검토를 적용합니다([인간 감독 프로토콜](../governance/human-oversight-protocol.md) 참조).
+3. 검증기를 사용하여 완전성과 일관성을 검증하고, 필요한 경우 인간 검토를 적용합니다([인간 감독 프로토콜](../governance/human-oversight-protocol/) 참조).
 
 **주요 리소스:**
 
-- [분류체계](../standard/current/03-taxonomy.md) — 분류 코드
-- [최소 증거 요구사항](../artifacts/minimum-evidence.md) — MUST 수준 체크리스트
-- [증거 번들](../artifacts/evidence-bundle.md) — 번들 구조 및 목차
-- [로그 스키마](../artifacts/log-schemas/index.md) — Shadow AI / 에이전트 활동 증거
-- [검증기](../validator/index.md) — 구조적 일관성 검사
-- [인간 감독 프로토콜](../governance/human-oversight-protocol.md) — 기계 vs. 인간 검토 경계
+- [분류체계](../standard/current/03-taxonomy/) — 분류 코드
+- [최소 증거 요구사항](../artifacts/minimum-evidence/) — MUST 수준 체크리스트
+- [증거 번들](../artifacts/evidence-bundle/) — 번들 구조 및 목차
+- [로그 스키마](../artifacts/log-schemas/) — Shadow AI / 에이전트 활동 증거
+- [검증기](../validator/) — 구조적 일관성 검사
+- [인간 감독 프로토콜](../governance/human-oversight-protocol/) — 기계 vs. 인간 검토 경계
 
 ---
 
 이 섹션은 감사 설명 가능성을 위해 AIMO 표준 증거 및 산출물을 외부 프레임워크 및 규정에 매핑합니다. 컴플라이언스를 보장하거나 법률 자문을 제공하지 **않습니다**.
 
-- **[방법론](methodology.md)**: 매핑이 무엇이고 무엇이 아닌지; 사용 방법; 업데이트 정책; [증거 번들](../artifacts/evidence-bundle.md) 및 [최소 증거 요구사항](../artifacts/minimum-evidence.md)과의 관계.
-- **ISO/IEC 42001**: [ISO/IEC 42001 매핑](iso-42001.md) — AI 관리 시스템 주제.
-- **NIST AI RMF**: [NIST AI RMF 매핑](nist-ai-rmf.md) — Govern, Map, Measure, Manage.
-- **EU AI Act**: [EU AI Act 매핑](eu-ai-act.md) — 고수준 문서화 및 기록 보존 (법률 해석 아님).
-- **ISMS 뷰**: [ISMS 매핑](isms.md) — ISO/IEC 27001/27002 주제 (변경 관리, 접근 통제, 로깅, 증거 무결성).
+- **[방법론](methodology/)**: 매핑이 무엇이고 무엇이 아닌지; 사용 방법; 업데이트 정책; [증거 번들](../artifacts/evidence-bundle/) 및 [최소 증거 요구사항](../artifacts/minimum-evidence/)과의 관계.
+- **ISO/IEC 42001**: [ISO/IEC 42001 매핑](iso-42001/) — AI 관리 시스템 주제.
+- **NIST AI RMF**: [NIST AI RMF 매핑](nist-ai-rmf/) — Govern, Map, Measure, Manage.
+- **EU AI Act**: [EU AI Act 매핑](eu-ai-act/) — 고수준 문서화 및 기록 보존 (법률 해석 아님).
+- **ISMS 뷰**: [ISMS 매핑](isms/) — ISO/IEC 27001/27002 주제 (변경 관리, 접근 통제, 로깅, 증거 무결성).

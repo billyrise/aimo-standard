@@ -9,14 +9,14 @@ description: AIMO 표준 버전 이력. 감사자 준비 PDF, 기계 판독 가�
 ## 최신 릴리스
 
 !!! success "현재 버전"
-    **v0.0.2** (2026-02-02) — [문서 보기](../current/index.md) | [GitHub 릴리스](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2)
+    **v0.0.2** (2026-02-02) — [문서 보기](../current/) | [GitHub 릴리스](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2)
 
 ## 버전 이력
 
 | 버전 | 날짜 | 릴리스 노트 | PDF (EN) | PDF (JA) | 산출물 | 체크섬 |
 | :------ | :--- | :------------ | :------- | :------- | :-------- | :-------- |
-| **v0.0.2** | 2026-02-02 | [변경로그](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
-| **v0.0.1** | 2026-02-02 | [변경로그](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
+| **v0.0.2** | 2026-02-02 | [변경로그](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
+| **v0.0.1** | 2026-02-02 | [변경로그](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
 
 !!! note "데이터 소스"
     이 버전 테이블은 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)와 동기화됩니다. 각 릴리스 태그(`vX.Y.Z`)는 사양의 고정 스냅샷에 해당합니다.
@@ -36,7 +36,7 @@ description: AIMO 표준 버전 이력. 감사자 준비 PDF, 기계 판독 가�
 
 ## 법적 및 상표 고지
 
-**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → 상표](../../governance/trademarks.md) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → 상표](../../governance/trademarks/) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
 
 ## 감사인용: 표준 URL 및 버전 고정
 
@@ -225,7 +225,7 @@ AIMO 표준은 [시맨틱 버전 관리](https://semver.org/) (SemVer)를 따릅
 
 호환성 깨는 변경이 있는 버전 간 업그레이드 시:
 
-1. [변경로그](../current/08-changelog.md)에서 호환성 깨는 변경 확인
+1. [변경로그](../current/08-changelog/)에서 호환성 깨는 변경 확인
 2. 특정 업그레이드 경로에 대해 [마이그레이션 가이드](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) 검토
 3. 새 스키마 요구사항에 맞게 증거 번들 업데이트
 4. 컴플라이언스 확인을 위해 검증기 재실행
@@ -268,6 +268,6 @@ AIMO 표준은 [시맨틱 버전 관리](https://semver.org/) (SemVer)를 따릅
 ## 리소스
 
 - **[릴리스 허브](../../../releases/)** — 제출 준비, 감사자 검증, 과대 주장 금지 선언
-- **[신뢰 패키지](../../governance/trust-package.md)** — 감사자 준비 보증 자료
-- **[변경로그 (상세)](../current/08-changelog.md)** — 폐기 추적이 있는 전체 변경 이력
+- **[신뢰 패키지](../../governance/trust-package/)** — 감사자 준비 보증 자료
+- **[변경로그 (상세)](../current/08-changelog/)** — 폐기 추적이 있는 전체 변경 이력
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — 완전한 버전 관리 정책

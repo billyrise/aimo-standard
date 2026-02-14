@@ -81,7 +81,7 @@ AIMO 표준은 다음을 가정합니다:
 
 ## 관련 페이지
 
-- [신뢰 패키지](trust-package.md) — 감사자 준비 자료 허브
-- [인간 감독 프로토콜](human-oversight-protocol.md) — 기계 vs. 인간 검토 경계
-- [최소 증거 요구사항](../artifacts/minimum-evidence.md) — MUST 수준 생명주기 체크리스트
-- [커버리지 맵 방법론](../coverage-map/methodology.md) — 매핑이 무엇이고 무엇이 아닌지
+- [신뢰 패키지](../trust-package/) — 감사자 준비 자료 허브
+- [인간 감독 프로토콜](../human-oversight-protocol/) — 기계 vs. 인간 검토 경계
+- [최소 증거 요구사항](../../artifacts/minimum-evidence/) — MUST 수준 생명주기 체크리스트
+- [커버리지 맵 방법론](../../coverage-map/methodology/) — 매핑이 무엇이고 무엇이 아닌지

@@ -58,7 +58,7 @@ This schema defines a vendor-neutral format for logs that document the detection
     - **Do not embed** PII, credentials, or prompt content directly in log fields.
     - Use `evidence_ref` to reference separately stored sensitive content.
     - Apply appropriate access controls to log storage.
-    - Consider data retention policies aligned with [Minimum Evidence Requirements](../minimum-evidence.md).
+    - Consider data retention policies aligned with [Minimum Evidence Requirements](../../minimum-evidence/).
 
 ## JSON Schema
 
@@ -91,7 +91,7 @@ Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-st
 
 ## Related pages
 
-- [Log Schemas index](index.md)
-- [Agent Activity Log](agent-activity.md)
-- [Minimum Evidence Requirements](../minimum-evidence.md)
-- [Taxonomy: IM-007 Shadow/Unmanaged](../../standard/current/03-taxonomy.md)
+- [Log Schemas index](../)
+- [Agent Activity Log](../agent-activity/)
+- [Minimum Evidence Requirements](../../minimum-evidence/)
+- [Taxonomy: IM-007 Shadow/Unmanaged](../../../standard/current/03-taxonomy/)

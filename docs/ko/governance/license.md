@@ -44,7 +44,7 @@ AIMO 표준 자료 사용 시:
 1. 배포에 라이선스 고지 포함
 2. 저작자 표시 제공 ([NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) 참조)
 3. 중요한 수정이 있는 경우 명시
-4. 허가 없이 상표 사용 금지 ([상표](trademarks.md) 참조)
+4. 허가 없이 상표 사용 금지 ([상표](../trademarks/) 참조)
 
 ## NOTICE 파일
 
@@ -72,5 +72,5 @@ A: 예, 하지만 수정 사항을 명시해야 하며 수정된 스키마로 �
 
 ## 관련 페이지
 
-- [상표](trademarks.md) — 상표 사용
-- [거버넌스](index.md) — 프로젝트 거버넌스
+- [상표](../trademarks/) — 상표 사용
+- [거버넌스](../) — 프로젝트 거버넌스

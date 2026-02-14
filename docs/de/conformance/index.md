@@ -9,23 +9,23 @@ Dieser Abschnitt definiert, wie Organisationen die Compliance mit dem AIMO Stand
 ## Zweck
 
 - **Was Sie beanspruchen können**: Ausrichtung an der Evidence-Struktur und den Nachverfolgbarkeitsanforderungen des AIMO Standards.
-- **Was Sie nicht beanspruchen können**: Rechtliche Compliance, Zertifizierung oder behördliche Genehmigung. Siehe [Verantwortungsgrenze](../governance/responsibility-boundary.md).
+- **Was Sie nicht beanspruchen können**: Rechtliche Compliance, Zertifizierung oder behördliche Genehmigung. Siehe [Verantwortungsgrenze](../governance/responsibility-boundary/).
 
 ## Erwartetes Evidence
 
 Um Konformität nachzuweisen, müssen Organisationen Folgendes bereitstellen:
 
-1. **Evidence Bundle**: Strukturierte EV-Datensätze gemäß [Artefakte](../artifacts/index.md) und [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md).
-2. **Validator-Ergebnisse**: Erfolgreiche Ausgabe des Validators — siehe [Validator](../validator/index.md).
-3. **Versionsreferenz**: Explizite AIMO Standard-Version — siehe [Versionen](../standard/versions/index.md).
+1. **Evidence Bundle**: Strukturierte EV-Datensätze gemäß [Artefakte](../artifacts/) und [Mindestanforderungen an Evidence](../artifacts/minimum-evidence/).
+2. **Validator-Ergebnisse**: Erfolgreiche Ausgabe des Validators — siehe [Validator](../validator/).
+3. **Versionsreferenz**: Explizite AIMO Standard-Version — siehe [Versionen](../standard/versions/).
 
 ## Keine Überbeanspruchung
 
 !!! warning "Wichtig"
-    Konformität zum AIMO Standard demonstriert **Evidence-Bereitschaft und Nachverfolgbarkeit**, nicht rechtliche Compliance oder Zertifizierung. Siehe [Verantwortungsgrenze](../governance/responsibility-boundary.md).
+    Konformität zum AIMO Standard demonstriert **Evidence-Bereitschaft und Nachverfolgbarkeit**, nicht rechtliche Compliance oder Zertifizierung. Siehe [Verantwortungsgrenze](../governance/responsibility-boundary/).
 
 ## Verwandte Seiten
 
-- [Trust Package](../governance/trust-package.md) — Konsolidierter Einstiegspunkt für Prüfer
-- [Standard (Aktuell)](../standard/current/index.md) — Normative Anforderungen
-- [Artefakte](../artifacts/index.md) — Evidence-Struktur
+- [Trust Package](../governance/trust-package/) — Konsolidierter Einstiegspunkt für Prüfer
+- [Standard (Aktuell)](../standard/current/) — Normative Anforderungen
+- [Artefakte](../artifacts/) — Evidence-Struktur

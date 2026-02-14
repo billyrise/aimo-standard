@@ -30,11 +30,11 @@ Esta seção define **formatos de log normalizados** para evidências que podem 
 
 | Schema | Propósito | Download |
 | --- | --- | --- |
-| [Log de Descoberta de Shadow AI](shadow-ai-discovery.md) | Detecção e inventário de uso não aprovado de IA | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [Log de Atividade de Agente](agent-activity.md) | Exercício de privilégios de IA agêntica e execução de ferramentas | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Log de Descoberta de Shadow AI](shadow-ai-discovery/) | Detecção e inventário de uso não aprovado de IA | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [Log de Atividade de Agente](agent-activity/) | Exercício de privilégios de IA agêntica e execução de ferramentas | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
 ## Páginas relacionadas
 
-- [Requisitos Mínimos de Evidências](../minimum-evidence.md) — Checklist de evidências de nível DEVE
-- [Pacote de Evidências](../evidence-bundle.md) — Estrutura do pacote e sumário
-- [Taxonomia](../../standard/current/03-taxonomy.md) — Códigos de classificação (incluindo UC-010 Automação Agêntica, IM-007 Shadow/Não Gerenciado)
+- [Requisitos Mínimos de Evidências](../minimum-evidence/) — Checklist de evidências de nível DEVE
+- [Pacote de Evidências](../evidence-bundle/) — Estrutura do pacote e sumário
+- [Taxonomia](../../standard/current/03-taxonomy/) — Códigos de classificação (incluindo UC-010 Automação Agêntica, IM-007 Shadow/Não Gerenciado)

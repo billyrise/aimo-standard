@@ -77,7 +77,7 @@ See the JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json`.
 
 ## References
 
-- [Evidence Bundle (artifact overview)](../../artifacts/evidence-bundle.md) — purpose and TOC
-- [Signature verification roadmap](../../artifacts/signature-verification-roadmap.md) — v0.1.1 metadata and v0.2 verification plan
-- [Validator](../../validator/index.md) — how the validator enforces this structure
-- [Minimum Evidence Requirements](../../artifacts/minimum-evidence.md) — MUST-level checklist
+- [Evidence Bundle (artifact overview)](../../../artifacts/evidence-bundle/) — purpose and TOC
+- [Signature verification roadmap](../../../artifacts/signature-verification-roadmap/) — v0.1.1 metadata and v0.2 verification plan
+- [Validator](../../../validator/) — how the validator enforces this structure
+- [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) — MUST-level checklist

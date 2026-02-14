@@ -97,6 +97,6 @@ Siehe [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CON
 
 ## Verwandte Seiten
 
-- [Governance](index.md) — Projekt-Governance
-- [Lokalisierungsleitfaden](../contributing/localization.md) — i18n-Details
-- [Verantwortungsgrenze](responsibility-boundary.md) — Was AIMO bereitstellt
+- [Governance](../) — Projekt-Governance
+- [Lokalisierungsleitfaden](../../contributing/localization/) — i18n-Details
+- [Verantwortungsgrenze](../responsibility-boundary/) — Was AIMO bereitstellt

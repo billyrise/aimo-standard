@@ -107,7 +107,7 @@ description: エージェント活動ログ形式 - 企業内のエージェン�
 
 ## 関連ページ
 
-- [ログスキーマ索引](index.md)
-- [Shadow AI 検知ログ](shadow-ai-discovery.md)
-- [Minimum Evidence Requirements](../minimum-evidence.md)
-- [タクソノミー: UC-010 エージェント自動化](../../standard/current/03-taxonomy.md)
+- [ログスキーマ索引](../)
+- [Shadow AI 検知ログ](../shadow-ai-discovery/)
+- [Minimum Evidence Requirements](../../minimum-evidence/)
+- [タクソノミー: UC-010 エージェント自動化](../../../standard/current/03-taxonomy/)

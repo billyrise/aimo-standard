@@ -148,6 +148,6 @@ Questo file segue lo schema `changelog.schema.json` e può essere parsato progra
 
 ## Riferimenti
 
-- [Tassonomia](./03-taxonomy.md) - Definizioni delle dimensioni
-- [Dizionario](./05-dictionary.md) - Dizionario dei codici
-- [Politica di Versionamento](../../governance/index.md) - Politica di versionamento (vedere VERSIONING.md nella root del repository)
+- [Tassonomia](../03-taxonomy/) - Definizioni delle dimensioni
+- [Dizionario](../05-dictionary/) - Dizionario dei codici
+- [Politica di Versionamento](../../../governance/) - Politica di versionamento (vedere VERSIONING.md nella root del repository)

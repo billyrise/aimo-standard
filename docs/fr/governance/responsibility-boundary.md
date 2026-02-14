@@ -81,7 +81,7 @@ Cette déclaration s'applique à toute la documentation du standard AIMO, y comp
 
 ## Pages connexes
 
-- [Package de confiance](trust-package.md) — centre des matériaux prêts pour les auditeurs
-- [Protocole de surveillance humaine](human-oversight-protocol.md) — limite entre revue machine et humaine
-- [Exigences minimales de preuves](../artifacts/minimum-evidence.md) — liste de contrôle OBLIGATOIRE du cycle de vie
-- [Méthodologie de la carte de couverture](../coverage-map/methodology.md) — ce qu'est et n'est pas la correspondance
+- [Package de confiance](../trust-package/) — centre des matériaux prêts pour les auditeurs
+- [Protocole de surveillance humaine](../human-oversight-protocol/) — limite entre revue machine et humaine
+- [Exigences minimales de preuves](../../artifacts/minimum-evidence/) — liste de contrôle OBLIGATOIRE du cycle de vie
+- [Méthodologie de la carte de couverture](../../coverage-map/methodology/) — ce qu'est et n'est pas la correspondance

@@ -30,11 +30,11 @@ This section defines **normalized log formats** for evidence that can be include
 
 | Schema | Purpose | Download |
 | --- | --- | --- |
-| [Shadow AI Discovery Log](shadow-ai-discovery.md) | Unapproved AI usage detection and inventory | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [Agent Activity Log](agent-activity.md) | Agentic AI privilege exercise and tool execution | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Shadow AI Discovery Log](shadow-ai-discovery/) | Unapproved AI usage detection and inventory | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [Agent Activity Log](agent-activity/) | Agentic AI privilege exercise and tool execution | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
 ## Related pages
 
-- [Minimum Evidence Requirements](../minimum-evidence.md) — MUST-level evidence checklist
-- [Evidence Bundle](../evidence-bundle.md) — Bundle structure and TOC
-- [Taxonomy](../../standard/current/03-taxonomy.md) — Classification codes (including UC-010 Agentic Automation, IM-007 Shadow/Unmanaged)
+- [Minimum Evidence Requirements](../minimum-evidence/) — MUST-level evidence checklist
+- [Evidence Bundle](../evidence-bundle/) — Bundle structure and TOC
+- [Taxonomy](../../standard/current/03-taxonomy/) — Classification codes (including UC-010 Agentic Automation, IM-007 Shadow/Unmanaged)

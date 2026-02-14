@@ -148,6 +148,6 @@ Diese Datei folgt dem `changelog.schema.json`-Schema und kann programmgesteuert 
 
 ## Referenzen
 
-- [Taxonomie](./03-taxonomy.md) - Dimensionsdefinitionen
-- [Dictionary](./05-dictionary.md) - Code-Dictionary
-- [Versionierungsrichtlinie](../../governance/index.md) - Versionierungsrichtlinie (siehe VERSIONING.md im Repository-Root)
+- [Taxonomie](../03-taxonomy/) - Dimensionsdefinitionen
+- [Dictionary](../05-dictionary/) - Code-Dictionary
+- [Versionierungsrichtlinie](../../../governance/) - Versionierungsrichtlinie (siehe VERSIONING.md im Repository-Root)

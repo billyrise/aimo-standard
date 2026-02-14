@@ -107,6 +107,6 @@ Wählen Sie ein Profil basierend auf Ihrer Risikotoleranz und regulatorischen An
 
 Diese Mindestanforderungen unterstützen Erklärbarkeit und Evidence-Bereitschaft; sie bieten selbst keine Rechtsberatung und garantieren keine Compliance.
 
-Siehe [Evidence Bundle](evidence-bundle.md) für Bundle-Struktur und TOC; siehe [EV-Template](../standard/current/06-ev-template.md) und Schemas für Feldebenen-Ausrichtung.
+Siehe [Evidence Bundle](../evidence-bundle/) für Bundle-Struktur und TOC; siehe [EV-Template](../../standard/current/06-ev-template/) und Schemas für Feldebenen-Ausrichtung.
 
-Siehe auch: [Log Schemas](log-schemas/index.md) — normalisierte Log-Formate für Shadow AI-Erkennung und Agentenaktivitäts-Evidence.
+Siehe auch: [Log Schemas](../log-schemas/) — normalisierte Log-Formate für Shadow AI-Erkennung und Agentenaktivitäts-Evidence.

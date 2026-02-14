@@ -10,34 +10,34 @@ description: AIMO Standard - Padrão aberto para governança e auditoria de IA. 
 
 O risco empresarial de IA é cada vez mais impulsionado por **Shadow AI (uso não aprovado de IA)** e **IA agêntica (agentes autônomos) com amplos privilégios de ferramentas**, tornando os controles tradicionais de ISMS/TI insuficientes para rastreabilidade e explicações de auditoria.
 O AIMO Standard classifica o uso de IA com uma linguagem compartilhada (Taxonomia), define requisitos mínimos de evidências e garante consistência via Validador — acelerando a auditabilidade e remediação.
-Nota: O AIMO Standard não fornece aconselhamento jurídico nem garante automaticamente conformidade com qualquer regulamentação/padrão específico (veja [Mapa de Cobertura](coverage-map/index.md)).
+Nota: O AIMO Standard não fornece aconselhamento jurídico nem garante automaticamente conformidade com qualquer regulamentação/padrão específico (veja [Mapa de Cobertura](coverage-map/)).
 
-- [Taxonomia](standard/current/03-taxonomy.md) (linguagem compartilhada)
-- [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md)
-- [Validador](validator/index.md) (verificações de consistência)
+- [Taxonomia](standard/current/03-taxonomy/) (linguagem compartilhada)
+- [Requisitos Mínimos de Evidências](artifacts/minimum-evidence/)
+- [Validador](validator/) (verificações de consistência)
 
 **Seções principais**
 
-1. [Padrão](standard/index.md) — Especificação ([Atual](standard/current/index.md) | [Versões](standard/versions/index.md)), [Conformidade](conformance/index.md), [Mapa de Cobertura](coverage-map/index.md)
-2. [Artefatos](artifacts/index.md) — Taxonomia, sistema de códigos, dicionário, templates de evidências, schemas
-3. [Validador](validator/index.md) — Regras, verificações de referência, como executar
-4. [Exemplos](examples/index.md) — Amostras completas e mínimas
+1. [Padrão](standard/) — Especificação ([Atual](standard/current/) | [Versões](standard/versions/)), [Conformidade](conformance/), [Mapa de Cobertura](coverage-map/)
+2. [Artefatos](artifacts/) — Taxonomia, sistema de códigos, dicionário, templates de evidências, schemas
+3. [Validador](validator/) — Regras, verificações de referência, como executar
+4. [Exemplos](examples/) — Amostras completas e mínimas
 5. [Releases](releases/) — Changelog, migração, checksums, PDF
-6. [Governança](governance/index.md) — Versionamento, segurança, licença, marcas registradas, [Contribuição](contributing/localization.md)
+6. [Governança](governance/) — Versionamento, segurança, licença, marcas registradas, [Contribuição](contributing/localization/)
 
 **Links rápidos por audiência**
 
-- **Para auditores**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Dicionário](standard/current/05-dictionary.md), [Pacote de Evidências](artifacts/evidence-bundle.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Mapa de Cobertura](coverage-map/index.md), [Validador](validator/index.md), [Releases](releases/)
-- **Para segurança**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Limite de Responsabilidade](governance/responsibility-boundary.md), [Governança](governance/index.md), [Validador](validator/index.md), [Padrão > Template EV](standard/current/06-ev-template.md)
-- **Para operações de TI**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Releases](releases/), [Validador](validator/index.md), [Exemplos](examples/index.md), [Conformidade](conformance/index.md)
-- **Para jurídico/compras**: [Trust Package](governance/trust-package.md), [Limite de Responsabilidade](governance/responsibility-boundary.md), [Metodologia do Mapa de Cobertura](coverage-map/methodology.md), [Releases](releases/), [Governança](governance/index.md) (licença, marcas registradas)
+- **Para auditores**: [Trust Package](governance/trust-package/), [Taxonomia](standard/current/03-taxonomy/), [Dicionário](standard/current/05-dictionary/), [Pacote de Evidências](artifacts/evidence-bundle/), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence/), [Mapa de Cobertura](coverage-map/), [Validador](validator/), [Releases](releases/)
+- **Para segurança**: [Trust Package](governance/trust-package/), [Taxonomia](standard/current/03-taxonomy/), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence/), [Limite de Responsabilidade](governance/responsibility-boundary/), [Governança](governance/), [Validador](validator/), [Padrão > Template EV](standard/current/06-ev-template/)
+- **Para operações de TI**: [Trust Package](governance/trust-package/), [Taxonomia](standard/current/03-taxonomy/), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence/), [Releases](releases/), [Validador](validator/), [Exemplos](examples/), [Conformidade](conformance/)
+- **Para jurídico/compras**: [Trust Package](governance/trust-package/), [Limite de Responsabilidade](governance/responsibility-boundary/), [Metodologia do Mapa de Cobertura](coverage-map/methodology/), [Releases](releases/), [Governança](governance/) (licença, marcas registradas)
 
 **Jornada de auditoria** (caminho de 2 cliques):
 
-1. [Trust Package](governance/trust-package.md) — comece aqui para materiais prontos para auditoria
-2. [Taxonomia](standard/current/03-taxonomy.md) + [Dicionário](standard/current/05-dictionary.md) — entenda o sistema de códigos de 8 dimensões
-3. [Pacote de Evidências](artifacts/evidence-bundle.md) — estrutura e sumário
-4. [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md) — checklist de nível DEVE
-5. [Mapa de Cobertura](coverage-map/index.md) + [Metodologia](coverage-map/methodology.md) — mapeamentos de frameworks
-6. [Validador](validator/index.md) — execute verificações estruturais
+1. [Trust Package](governance/trust-package/) — comece aqui para materiais prontos para auditoria
+2. [Taxonomia](standard/current/03-taxonomy/) + [Dicionário](standard/current/05-dictionary/) — entenda o sistema de códigos de 8 dimensões
+3. [Pacote de Evidências](artifacts/evidence-bundle/) — estrutura e sumário
+4. [Requisitos Mínimos de Evidências](artifacts/minimum-evidence/) — checklist de nível DEVE
+5. [Mapa de Cobertura](coverage-map/) + [Metodologia](coverage-map/methodology/) — mapeamentos de frameworks
+6. [Validador](validator/) — execute verificações estruturais
 7. [Releases](releases/) — baixe ativos e verifique

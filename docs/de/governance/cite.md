@@ -74,6 +74,6 @@ Verwenden Sie diese URLs in offizieller Dokumentation:
 
 ## Verwandte Seiten
 
-- [Trust Package](trust-package.md) — Prüfungsbereite Materialien
-- [Governance](index.md) — Projekt-Governance
-- [Lizenz](license.md) — Lizenzbedingungen
+- [Trust Package](../trust-package/) — Prüfungsbereite Materialien
+- [Governance](../) — Projekt-Governance
+- [Lizenz](../license/) — Lizenzbedingungen

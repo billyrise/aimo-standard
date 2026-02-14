@@ -74,6 +74,6 @@ Use these URLs in official documentation:
 
 ## Related Pages
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
-- [Governance](index.md) — Project governance
-- [License](license.md) — Licensing terms
+- [Trust Package](../trust-package/) — Auditor-ready materials
+- [Governance](../) — Project governance
+- [License](../license/) — Licensing terms

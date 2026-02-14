@@ -53,7 +53,7 @@ O dicionário canônico usa **18 colunas** (estrutura neutra de idioma):
 | 9 | `examples` | Não | Exemplos separados por pipe | `chatbot\|recommendation` |
 
 !!! note "Traduções"
-    O modelo de dados canônico separa traduções em pacotes de idioma (`data/taxonomy/i18n/*.yaml`). Cada pacote de idioma fornece valores localizados de `dimension_name`, `label` e `definition`. Veja [Guia de Localização](../../contributing/localization.md) para detalhes.
+    O modelo de dados canônico separa traduções em pacotes de idioma (`data/taxonomy/i18n/*.yaml`). Cada pacote de idioma fornece valores localizados de `dimension_name`, `label` e `definition`. Veja [Guia de Localização](../../../contributing/localization/) para detalhes.
 
 ### Colunas de Ciclo de Vida (6)
 
@@ -195,8 +195,8 @@ Veja [Releases](../../../releases/) para pacotes para download contendo o dicion
 
 ## Páginas Relacionadas
 
-- [Taxonomia](./03-taxonomy.md) - Definições de dimensão e tabelas de código
-- [Códigos](./04-codes.md) - Formato de código, nomenclatura e ciclo de vida
-- [Templates de Evidências](./06-ev-template.md) - Como códigos são usados em templates
-- [Validador](./07-validator.md) - Regras de validação de código
-- [Changelog](./08-changelog.md) - Histórico de versões
+- [Taxonomia](../03-taxonomy/) - Definições de dimensão e tabelas de código
+- [Códigos](../04-codes/) - Formato de código, nomenclatura e ciclo de vida
+- [Templates de Evidências](../06-ev-template/) - Como códigos são usados em templates
+- [Validador](../07-validator/) - Regras de validação de código
+- [Changelog](../08-changelog/) - Histórico de versões

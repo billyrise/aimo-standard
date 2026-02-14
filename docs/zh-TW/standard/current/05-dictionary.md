@@ -53,7 +53,7 @@ AIMO 字典是分類法內所有有效代碼的權威清單。它提供每個代
 | 9 | `examples` | 否 | 管道分隔的範例 | `chatbot\|recommendation` |
 
 !!! note "翻譯"
-    規範資料模型將翻譯分離到語言套件（`data/taxonomy/i18n/*.yaml`）。每個語言套件提供本地化的 `dimension_name`、`label` 和 `definition` 值。請參閱[在地化指南](../../contributing/localization.md)了解詳情。
+    規範資料模型將翻譯分離到語言套件（`data/taxonomy/i18n/*.yaml`）。每個語言套件提供本地化的 `dimension_name`、`label` 和 `definition` 值。請參閱[在地化指南](../../../contributing/localization/)了解詳情。
 
 ### 生命週期欄位（6）
 
@@ -195,8 +195,8 @@ X-<ORG>-<DIM>-<TOKEN>
 
 ## 相關頁面
 
-- [分類法](./03-taxonomy.md) - 維度定義和代碼表
-- [代碼](./04-codes.md) - 代碼格式、命名和生命週期
-- [證據範本](./06-ev-template.md) - 如何在範本中使用代碼
-- [驗證器](./07-validator.md) - 代碼驗證規則
-- [變更日誌](./08-changelog.md) - 版本歷史
+- [分類法](../03-taxonomy/) - 維度定義和代碼表
+- [代碼](../04-codes/) - 代碼格式、命名和生命週期
+- [證據範本](../06-ev-template/) - 如何在範本中使用代碼
+- [驗證器](../07-validator/) - 代碼驗證規則
+- [變更日誌](../08-changelog/) - 版本歷史

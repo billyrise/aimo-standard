@@ -36,5 +36,5 @@ v0.1.1 では、監査人が将来再検証できるように、`manifest.json` 
 
 ## 参照
 
-- [Evidence Bundle 構造](../standard/current/09-evidence-bundle-structure.md)
-- [v0.2 ロードマップ](../standard/current/10-roadmap-v0.2.md)
+- [Evidence Bundle 構造](../../standard/current/09-evidence-bundle-structure/)
+- [v0.2 ロードマップ](../../standard/current/10-roadmap-v0.2/)

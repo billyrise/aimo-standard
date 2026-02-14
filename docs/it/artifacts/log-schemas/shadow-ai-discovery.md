@@ -58,7 +58,7 @@ Questo schema definisce un formato vendor-neutral per i log che documentano il r
     - **Non incorporare** PII, credenziali o contenuto dei prompt direttamente nei campi del log.
     - Utilizzare `evidence_ref` per referenziare contenuti sensibili memorizzati separatamente.
     - Applicare controlli di accesso appropriati allo storage dei log.
-    - Considerare politiche di conservazione dei dati allineate con i [Requisiti Minimi di Evidence](../minimum-evidence.md).
+    - Considerare politiche di conservazione dei dati allineate con i [Requisiti Minimi di Evidence](../../minimum-evidence/).
 
 ## JSON Schema
 
@@ -91,7 +91,7 @@ Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-st
 
 ## Pagine correlate
 
-- [Indice Log Schemas](index.md)
-- [Log Attività Agent](agent-activity.md)
-- [Requisiti Minimi di Evidence](../minimum-evidence.md)
-- [Tassonomia: IM-007 Shadow/Non Gestito](../../standard/current/03-taxonomy.md)
+- [Indice Log Schemas](../)
+- [Log Attività Agent](../agent-activity/)
+- [Requisiti Minimi di Evidence](../../minimum-evidence/)
+- [Tassonomia: IM-007 Shadow/Non Gestito](../../../standard/current/03-taxonomy/)

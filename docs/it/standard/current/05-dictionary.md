@@ -53,7 +53,7 @@ Il dizionario canonico utilizza **18 colonne** (struttura neutrale rispetto alla
 | 9 | `examples` | No | Esempi separati da pipe | `chatbot\|recommendation` |
 
 !!! note "Traduzioni"
-    Il modello dati canonico separa le traduzioni in language pack (`data/taxonomy/i18n/*.yaml`). Ogni language pack fornisce valori localizzati per `dimension_name`, `label` e `definition`. Vedere [Guida alla Localizzazione](../../contributing/localization.md) per i dettagli.
+    Il modello dati canonico separa le traduzioni in language pack (`data/taxonomy/i18n/*.yaml`). Ogni language pack fornisce valori localizzati per `dimension_name`, `label` e `definition`. Vedere [Guida alla Localizzazione](../../../contributing/localization/) per i dettagli.
 
 ### Colonne del Ciclo di Vita (6)
 
@@ -195,8 +195,8 @@ Vedere [Release](../../../releases/) per pacchetti scaricabili contenenti il diz
 
 ## Pagine Correlate
 
-- [Tassonomia](./03-taxonomy.md) - Definizioni delle dimensioni e tabelle dei codici
-- [Codici](./04-codes.md) - Formato, denominazione e ciclo di vita dei codici
-- [Template di Evidence](./06-ev-template.md) - Come i codici sono usati nei template
-- [Validator](./07-validator.md) - Regole di validazione dei codici
-- [Changelog](./08-changelog.md) - Cronologia delle versioni
+- [Tassonomia](../03-taxonomy/) - Definizioni delle dimensioni e tabelle dei codici
+- [Codici](../04-codes/) - Formato, denominazione e ciclo di vita dei codici
+- [Template di Evidence](../06-ev-template/) - Come i codici sono usati nei template
+- [Validator](../07-validator/) - Regole di validazione dei codici
+- [Changelog](../08-changelog/) - Cronologia delle versioni

@@ -6,7 +6,7 @@ description: AIMO最小証跡要件。ライフサイクル別（申請、レビ
 
 本ページは、監査人・実装者向けの **Minimum Evidence Requirements** チェックリストです。ライフサイクル別に整理した MUST レベルの最小証跡要件を定義します。説明可能性と証跡準備を支えるものであり、法的助言の提供や適合の保証は行いません。
 
-提出物の準備・レビュー時は [Evidence Bundle](evidence-bundle.md) と [Validator](../standard/current/07-validator.md) とあわせて本ページを参照してください。
+提出物の準備・レビュー時は [Evidence Bundle](../evidence-bundle/) と [Validator](../../standard/current/07-validator/) とあわせて本ページを参照してください。
 
 ## 1) Request（申請）
 
@@ -109,6 +109,6 @@ description: AIMO最小証跡要件。ライフサイクル別（申請、レビ
 
 本最小セットは説明可能性と証跡準備を支援する。法的助言の提供および適合の保証は行わない。
 
-バンドル構造と TOC は [Evidence Bundle](evidence-bundle.md)、フィールドレベルの整合は [EV Template](../standard/current/06-ev-template.md) およびスキーマを参照。
+バンドル構造と TOC は [Evidence Bundle](../evidence-bundle/)、フィールドレベルの整合は [EV Template](../../standard/current/06-ev-template/) およびスキーマを参照。
 
-関連：[ログスキーマ](log-schemas/index.md) — Shadow AI 検知およびエージェント活動証跡のための正規化ログ形式。
+関連：[ログスキーマ](../log-schemas/) — Shadow AI 検知およびエージェント活動証跡のための正規化ログ形式。

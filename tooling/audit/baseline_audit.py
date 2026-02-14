@@ -24,7 +24,7 @@ import re
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import NamedTuple
+from typing import NamedTuple, Optional
 
 import yaml
 
@@ -81,6 +81,47 @@ def load_mkdocs_nav() -> list[str]:
     nav = config.get("nav", [])
     extract_nav_files(nav)
     return nav_files
+
+
+def resolve_link_url_style(current_path_under_docs: Path, link_target: str, docs_root: Path) -> Optional[Path]:
+    """
+    Resolve a relative link the same way the built site does (URL path segments).
+    current_path_under_docs: e.g. Path('ja/artifacts/evidence-bundle-coverage-map.md')
+    link_target: e.g. '../minimum-evidence/' -> target is docs/ja/artifacts/minimum-evidence
+    """
+    # Current page path as segments (URL has no .md; last part is stem)
+    parts = list(current_path_under_docs.parts)
+    if not parts:
+        return None
+    if parts[-1].endswith(".md"):
+        parts[-1] = Path(parts[-1]).stem
+    # Normalize link into segments
+    raw = link_target.rstrip("/").split("#")[0]
+    if not raw:
+        return None
+    link_segments = [p for p in raw.split("/") if p and p != "."]
+    for seg in link_segments:
+        if seg == "..":
+            if len(parts) <= 1:
+                return None
+            parts.pop()
+        else:
+            parts.append(seg)
+    if not parts:
+        return None
+    candidate = docs_root.joinpath(*parts)
+    if candidate.is_dir():
+        candidate = candidate / "index.md"
+    if not candidate.exists():
+        # Try .md: with_suffix works only when name has no other dots (e.g. 10-roadmap-v0.2)
+        with_md = candidate.parent / (candidate.name + ".md")
+        if with_md.exists():
+            return with_md
+        if not candidate.suffix:
+            with_md = candidate.with_suffix(".md")
+            if with_md.exists():
+                return with_md
+    return candidate if candidate.exists() else None
 
 
 def extract_markdown_links(content: str) -> list[tuple[int, str, str]]:
@@ -153,18 +194,20 @@ def check_broken_links() -> list[AuditItem]:
             # Resolve relative path
             if target_path.startswith('/'):
                 # Absolute from docs root
-                resolved = DOCS / target_path.lstrip('/')
+                resolved = DOCS / target_path.lstrip('/').rstrip('/')
             else:
-                # Relative from current file
-                resolved = (md_file.parent / target_path).resolve()
+                # Relative from current file (normalize trailing slash for pretty-URL links)
+                resolved = (md_file.parent / target_path.rstrip('/')).resolve()
 
             # Handle directory links (should have index.md)
             if resolved.is_dir():
                 resolved = resolved / "index.md"
 
-            # Add .md extension if needed
+            # Add .md extension if needed (pretty-URL links use path/ which points to path.md in source)
             if not resolved.suffix and not resolved.exists():
-                resolved_with_md = Path(str(resolved) + ".md")
+                resolved_with_md = resolved.with_suffix(".md")
+                if not resolved_with_md.exists():
+                    resolved_with_md = resolved.parent / (resolved.name + ".md")
                 if resolved_with_md.exists():
                     resolved = resolved_with_md
 
@@ -178,6 +221,47 @@ def check_broken_links() -> list[AuditItem]:
                         alt = DOCS / locale / "releases" / "index.md"
                         if alt.exists():
                             resolved = alt
+                except ValueError:
+                    pass
+
+            # Fallback: relative links are written for built URL (e.g. /ja/0.1.2/artifacts/);
+            # ../../standard/... from there means /ja/0.1.2/standard/... but in source
+            # file-relative ../../ goes to docs/, so resolve to docs/<locale>/standard/...
+            if not resolved.exists() and not target_path.startswith("/"):
+                try:
+                    rel_parts = md_file.relative_to(DOCS).parts
+                    if len(rel_parts) >= 1:
+                        locale = rel_parts[0]
+                        # resolved is e.g. .../docs/standard/current/03-taxonomy
+                        try:
+                            under_docs = resolved.relative_to(DOCS)
+                        except ValueError:
+                            under_docs = None
+                        if under_docs is not None and under_docs.parts and under_docs.parts[0] not in ("en", "ja", "es", "fr", "de", "pt", "it", "zh", "zh-TW", "ko"):
+                            # path has no locale; try under current file's locale
+                            alt = DOCS / locale / under_docs
+                            if alt.is_dir():
+                                alt = alt / "index.md"
+                            if not alt.exists():
+                                alt_md = alt.parent / (alt.name + ".md")
+                                if alt_md.exists():
+                                    alt = alt_md
+                                elif not alt.suffix:
+                                    alt_md = alt.with_suffix(".md")
+                                    if alt_md.exists():
+                                        alt = alt_md
+                            if alt.exists():
+                                resolved = alt
+                except (ValueError, IndexError):
+                    pass
+
+            # Fallback: resolve relative links using URL-path rules (built site behavior)
+            if not resolved.exists() and not target_path.startswith("/"):
+                try:
+                    current_under_docs = md_file.relative_to(DOCS)
+                    url_resolved = resolve_link_url_style(current_under_docs, target_path, DOCS)
+                    if url_resolved is not None:
+                        resolved = url_resolved
                 except ValueError:
                     pass
 

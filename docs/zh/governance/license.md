@@ -44,7 +44,7 @@ AIMO 标准根据 **Apache License, Version 2.0** 许可。
 1. 在分发中包含许可声明
 2. 提供归属（参见 [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt)）
 3. 声明重大修改（如有）
-4. 未经许可不得使用商标（参见 [商标](trademarks.md)）
+4. 未经许可不得使用商标（参见 [商标](../trademarks/)）
 
 ## NOTICE 文件
 
@@ -72,5 +72,5 @@ AIMO 标准可能包含或引用第三方组件。每个组件保留其原始许
 
 ## 相关页面
 
-- [商标](trademarks.md) — 商标使用
-- [治理](index.md) — 项目治理
+- [商标](../trademarks/) — 商标使用
+- [治理](../) — 项目治理

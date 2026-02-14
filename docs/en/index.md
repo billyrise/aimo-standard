@@ -10,34 +10,34 @@ description: AIMO (AI Management Office) Standard - Open standard for AI governa
 
 Enterprise AI risk is increasingly driven by **Shadow AI (unapproved AI use)** and **agentic AI (autonomous agents) with broad tool privileges**, making traditional ISMS/IT controls insufficient for traceability and audit explanations.
 AIMO Standard classifies AI usage with a shared language (Taxonomy), defines minimum evidence requirements, and enforces consistency via a Validator—accelerating auditability and remediation.
-Note: AIMO Standard does not provide legal advice or automatically guarantee compliance with any specific regulation/standard (see [Coverage Map](coverage-map/index.md)).
+Note: AIMO Standard does not provide legal advice or automatically guarantee compliance with any specific regulation/standard (see [Coverage Map](coverage-map/)).
 
-- [Taxonomy](standard/current/03-taxonomy.md) (shared language)
-- [Minimum Evidence Requirements](artifacts/minimum-evidence.md)
-- [Validator](validator/index.md) (consistency checks)
+- [Taxonomy](standard/current/03-taxonomy/) (shared language)
+- [Minimum Evidence Requirements](artifacts/minimum-evidence/)
+- [Validator](validator/) (consistency checks)
 
 **Top-level sections**
 
-1. [Standard](standard/index.md) — Specification ([Current](standard/current/index.md) | [Versions](standard/versions/index.md)), [Conformance](conformance/index.md), [Coverage Map](coverage-map/index.md)
-2. [Artifacts](artifacts/index.md) — Taxonomy, code system, dictionary, evidence templates, schemas
-3. [Validator](validator/index.md) — Rules, reference checks, how to run
-4. [Examples](examples/index.md) — End-to-end and minimal samples
+1. [Standard](standard/) — Specification ([Current](standard/current/) | [Versions](standard/versions/)), [Conformance](conformance/), [Coverage Map](coverage-map/)
+2. [Artifacts](artifacts/) — Taxonomy, code system, dictionary, evidence templates, schemas
+3. [Validator](validator/) — Rules, reference checks, how to run
+4. [Examples](examples/) — End-to-end and minimal samples
 5. [Releases](releases/) — Changelog, migration, checksums, PDF
-6. [Governance](governance/index.md) — Versioning, security, license, trademarks, [Contributing](contributing/localization.md)
+6. [Governance](governance/) — Versioning, security, license, trademarks, [Contributing](contributing/localization/)
 
 **Quick links by audience**
 
-- **For auditors**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Dictionary](standard/current/05-dictionary.md), [Evidence Bundle](artifacts/evidence-bundle.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Coverage Map](coverage-map/index.md), [Validator](validator/index.md), [Releases](releases/)
-- **For security**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Governance](governance/index.md), [Validator](validator/index.md), [Standard > EV Template](standard/current/06-ev-template.md)
-- **For IT ops**: [Trust Package](governance/trust-package.md), [Taxonomy](standard/current/03-taxonomy.md), [Minimum Evidence Requirements](artifacts/minimum-evidence.md), [Releases](releases/), [Validator](validator/index.md), [Examples](examples/index.md), [Conformance](conformance/index.md)
-- **For legal/procurement**: [Trust Package](governance/trust-package.md), [Responsibility Boundary](governance/responsibility-boundary.md), [Coverage Map Methodology](coverage-map/methodology.md), [Releases](releases/), [Governance](governance/index.md) (license, trademarks)
+- **For auditors**: [Trust Package](governance/trust-package/), [Taxonomy](standard/current/03-taxonomy/), [Dictionary](standard/current/05-dictionary/), [Evidence Bundle](artifacts/evidence-bundle/), [Minimum Evidence Requirements](artifacts/minimum-evidence/), [Coverage Map](coverage-map/), [Validator](validator/), [Releases](releases/)
+- **For security**: [Trust Package](governance/trust-package/), [Taxonomy](standard/current/03-taxonomy/), [Minimum Evidence Requirements](artifacts/minimum-evidence/), [Responsibility Boundary](governance/responsibility-boundary/), [Governance](governance/), [Validator](validator/), [Standard > EV Template](standard/current/06-ev-template/)
+- **For IT ops**: [Trust Package](governance/trust-package/), [Taxonomy](standard/current/03-taxonomy/), [Minimum Evidence Requirements](artifacts/minimum-evidence/), [Releases](releases/), [Validator](validator/), [Examples](examples/), [Conformance](conformance/)
+- **For legal/procurement**: [Trust Package](governance/trust-package/), [Responsibility Boundary](governance/responsibility-boundary/), [Coverage Map Methodology](coverage-map/methodology/), [Releases](releases/), [Governance](governance/) (license, trademarks)
 
 **Audit journey** (2-click path):
 
-1. [Trust Package](governance/trust-package.md) — start here for auditor-ready materials
-2. [Taxonomy](standard/current/03-taxonomy.md) + [Dictionary](standard/current/05-dictionary.md) — understand the 8-dimension code system
-3. [Evidence Bundle](artifacts/evidence-bundle.md) — structure and TOC
-4. [Minimum Evidence Requirements](artifacts/minimum-evidence.md) — MUST-level checklist
-5. [Coverage Map](coverage-map/index.md) + [Methodology](coverage-map/methodology.md) — framework mappings
-6. [Validator](validator/index.md) — run structural checks
+1. [Trust Package](governance/trust-package/) — start here for auditor-ready materials
+2. [Taxonomy](standard/current/03-taxonomy/) + [Dictionary](standard/current/05-dictionary/) — understand the 8-dimension code system
+3. [Evidence Bundle](artifacts/evidence-bundle/) — structure and TOC
+4. [Minimum Evidence Requirements](artifacts/minimum-evidence/) — MUST-level checklist
+5. [Coverage Map](coverage-map/) + [Methodology](coverage-map/methodology/) — framework mappings
+6. [Validator](validator/) — run structural checks
 7. [Releases](releases/) — download assets and verify

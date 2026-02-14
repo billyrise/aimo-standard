@@ -6,20 +6,20 @@ description: AIMO 标准治理中心 - 项目治理、安全政策、许可、�
 
 本节是项目治理、安全、许可、引用和贡献指南的中心。
 
-从这里开始获取审计师就绪材料：**[信任包](trust-package.md)**。
+从这里开始获取审计师就绪材料：**[信任包](trust-package/)**。
 
 ## 治理页面
 
 | 页面 | 描述 |
 | ---- | ----------- |
-| [信任包](trust-package.md) | 审计师就绪材料中心 |
-| [责任边界](responsibility-boundary.md) | AIMO 提供和不提供什么 |
-| [安全](security.md) | 漏洞报告和安全政策 |
-| [许可证](license.md) | 许可条款（Apache-2.0） |
-| [商标](trademarks.md) | 商标使用指南 |
-| [如何引用](cite.md) | 论文和审计的引用指南 |
-| [贡献](contributing.md) | 如何为 AIMO 标准做贡献 |
-| [SEO 与规范策略](seo-canonical-policy.md) | URL规范化指南 |
+| [信任包](trust-package/) | 审计师就绪材料中心 |
+| [责任边界](responsibility-boundary/) | AIMO 提供和不提供什么 |
+| [安全](security/) | 漏洞报告和安全政策 |
+| [许可证](license/) | 许可条款（Apache-2.0） |
+| [商标](trademarks/) | 商标使用指南 |
+| [如何引用](cite/) | 论文和审计的引用指南 |
+| [贡献](contributing/) | 如何为 AIMO 标准做贡献 |
+| [SEO 与规范策略](seo-canonical-policy/) | URL规范化指南 |
 
 ## 仓库政策文件
 
@@ -41,14 +41,14 @@ description: AIMO 标准治理中心 - 项目治理、安全政策、许可、�
 
 对于审计师和合规审查员，推荐的阅读顺序：
 
-1. **[信任包](trust-package.md)** — 审计就绪材料概述
-2. **[责任边界](responsibility-boundary.md)** — 范围和采用者责任
-3. **[安全](security.md)** — 安全态势和披露政策
-4. **[许可证](license.md)** — 采用的许可条款
-5. **[如何引用](cite.md)** — 审计文档的引用
+1. **[信任包](trust-package/)** — 审计就绪材料概述
+2. **[责任边界](responsibility-boundary/)** — 范围和采用者责任
+3. **[安全](security/)** — 安全态势和披露政策
+4. **[许可证](license/)** — 采用的许可条款
+5. **[如何引用](cite/)** — 审计文档的引用
 
 ## 相关页面
 
 - [发布](../../releases/) — 发布快照和变更日志
-- [符合性](../conformance/index.md) — 符合性级别
-- [本地化指南](../contributing/localization.md) — i18n 工作流程
+- [符合性](../conformance/) — 符合性级别
+- [本地化指南](../contributing/localization/) — i18n 工作流程

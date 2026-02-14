@@ -148,6 +148,6 @@ v1.0.0: FS-007 제거 (status: removed)
 
 ## 참조
 
-- [분류체계](./03-taxonomy.md) - 차원 정의
-- [딕셔너리](./05-dictionary.md) - 코드 딕셔너리
-- [버전 관리 정책](../../governance/index.md) - 버전 관리 정책 (저장소 루트의 VERSIONING.md 참조)
+- [분류체계](../03-taxonomy/) - 차원 정의
+- [딕셔너리](../05-dictionary/) - 코드 딕셔너리
+- [버전 관리 정책](../../../governance/) - 버전 관리 정책 (저장소 루트의 VERSIONING.md 참조)

@@ -6,20 +6,20 @@ description: AIMO 標準治理中心 - 專案治理、安全政策、授權、�
 
 本節是專案治理、安全、授權、引用和貢獻指引的中心。
 
-從這裡開始取得稽核員就緒材料：**[信任套件](trust-package.md)**。
+從這裡開始取得稽核員就緒材料：**[信任套件](trust-package/)**。
 
 ## 治理頁面
 
 | 頁面 | 說明 |
 | ---- | ----------- |
-| [信任套件](trust-package.md) | 稽核員就緒材料中心 |
-| [責任邊界](responsibility-boundary.md) | AIMO 提供和不提供的內容 |
-| [安全](security.md) | 漏洞報告和安全政策 |
-| [授權](license.md) | 授權條款（Apache-2.0） |
-| [商標](trademarks.md) | 商標使用指引 |
-| [如何引用](cite.md) | 論文和稽核的引用指引 |
-| [貢獻](contributing.md) | 如何貢獻 AIMO 標準 |
-| [SEO 與規範政策](seo-canonical-policy.md) | URL 規範化指引 |
+| [信任套件](trust-package/) | 稽核員就緒材料中心 |
+| [責任邊界](responsibility-boundary/) | AIMO 提供和不提供的內容 |
+| [安全](security/) | 漏洞報告和安全政策 |
+| [授權](license/) | 授權條款（Apache-2.0） |
+| [商標](trademarks/) | 商標使用指引 |
+| [如何引用](cite/) | 論文和稽核的引用指引 |
+| [貢獻](contributing/) | 如何貢獻 AIMO 標準 |
+| [SEO 與規範政策](seo-canonical-policy/) | URL 規範化指引 |
 
 ## 儲存庫政策檔案
 
@@ -41,14 +41,14 @@ description: AIMO 標準治理中心 - 專案治理、安全政策、授權、�
 
 對於稽核員和合規審查者，建議的閱讀順序：
 
-1. **[信任套件](trust-package.md)** — 稽核就緒材料概述
-2. **[責任邊界](responsibility-boundary.md)** — 範圍和採用者責任
-3. **[安全](security.md)** — 安全態勢和揭露政策
-4. **[授權](license.md)** — 採用的授權條款
-5. **[如何引用](cite.md)** — 稽核文件的引用
+1. **[信任套件](trust-package/)** — 稽核就緒材料概述
+2. **[責任邊界](responsibility-boundary/)** — 範圍和採用者責任
+3. **[安全](security/)** — 安全態勢和揭露政策
+4. **[授權](license/)** — 採用的授權條款
+5. **[如何引用](cite/)** — 稽核文件的引用
 
 ## 相關頁面
 
 - [發布](../../releases/) — 發布快照和變更日誌
-- [符合性](../conformance/index.md) — 符合性等級
-- [在地化指南](../contributing/localization.md) — i18n 工作流程
+- [符合性](../conformance/) — 符合性等級
+- [在地化指南](../contributing/localization/) — i18n 工作流程

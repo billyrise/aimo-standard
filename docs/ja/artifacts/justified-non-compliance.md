@@ -20,4 +20,4 @@ description: Justified Non-Compliance（JNC）の将来拡張の概念説明。v
 ## ステータス
 
 - **v0.1 / v0.1.1**: JNC スキーマ・要求はなし。採用者はバンドル外で例外を文書化可能。
-- **v0.2（予定）**: JNC をオプションの情報提供機構として導入する可能性あり。[v0.2 ロードマップ](../standard/current/10-roadmap-v0.2.md) を参照。
+- **v0.2（予定）**: JNC をオプションの情報提供機構として導入する可能性あり。[v0.2 ロードマップ](../../standard/current/10-roadmap-v0.2/) を参照。

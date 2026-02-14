@@ -14,7 +14,7 @@ Dieser Abschnitt ist ein Hub für versionierte Releases, Changelog, Migration un
 
 Das vollständige **Verifizierungsverfahren** (Download der Assets, Prüfsummenverifizierung, Build-Provenienz-Attestierung) ist als dauerhafte Webseite verfügbar, nicht nur als PDF:
 
-- **[Standard → Versionen → Verifizierungsverfahren](../standard/versions/index.md)** — schrittweise Prüfsummenverifizierung (Linux/macOS/Windows) und Attestierung der Provenienz.
+- **[Standard → Versionen → Verifizierungsverfahren](../standard/versions/)** — schrittweise Prüfsummenverifizierung (Linux/macOS/Windows) und Attestierung der Provenienz.
 
 Nutzen Sie diese Seite, wenn Sie Release-Assets verifizieren oder Verifizierungsschritte in Prüfungsdeliverables dokumentieren müssen.
 
@@ -87,18 +87,18 @@ Das `aimo-standard-artifacts.zip` enthält:
 
 ## Ressourcen
 
-- **Versionshistorie-Tabelle**: [Standard > Versionen](../standard/versions/index.md) — Versionstabelle mit direkten Links zu allen Release-Assets (PDF, ZIP, SHA256)
-- **Changelog (Spezifikation)**: [Standard > Aktuell > Changelog](../standard/current/08-changelog.md) — normative und nicht-normative Änderungshistorie.
+- **Versionshistorie-Tabelle**: [Standard > Versionen](../standard/versions/) — Versionstabelle mit direkten Links zu allen Release-Assets (PDF, ZIP, SHA256)
+- **Changelog (Spezifikation)**: [Standard > Aktuell > Changelog](../standard/current/08-changelog/) — normative und nicht-normative Änderungshistorie.
 - **Release-Prozess**: Tagging `vX.Y.Z`, CI-Build, PDF unter `dist/`, Prüfsummen, GitHub Release-Assets. Siehe [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) und [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) im Repository.
 - **Migrationsleitfaden**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — Upgrade-Pfade für Breaking Changes.
 
-Für Governance- und Versionierungsrichtlinie siehe [Governance](../governance/index.md).
+Für Governance- und Versionierungsrichtlinie siehe [Governance](../governance/).
 
 ## Einreichungspaket vorbereiten
 
 Bei der Vorbereitung von Evidence für Audit-Einreichung:
 
-1. **Evidence Bundle erstellen**: Folgen Sie [Evidence Bundle](../artifacts/evidence-bundle.md) und [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md), um EV-Datensätze, Dictionary, Summary und Change Log zu erstellen.
+1. **Evidence Bundle erstellen**: Folgen Sie [Evidence Bundle](../artifacts/evidence-bundle/) und [Mindestanforderungen an Evidence](../artifacts/minimum-evidence/), um EV-Datensätze, Dictionary, Summary und Change Log zu erstellen.
 2. **Validator ausführen**: Führen Sie `python validator/src/validate.py bundle/root.json` aus, um strukturelle Konsistenz zu prüfen. Beheben Sie alle Fehler vor dem Fortfahren.
 3. **Prüfsummen generieren**: SHA-256-Prüfsummen zur Verifizierung erstellen:
 
@@ -126,7 +126,7 @@ Bei der Vorbereitung von Evidence für Audit-Einreichung:
 5. **Versionsausrichtung dokumentieren**: Notieren Sie, mit welchem AIMO Standard Release (z.B. `v1.0.0`) Ihr Evidence ausgerichtet ist.
 6. **Übergeben**: Stellen Sie das Paket, Prüfsummen und Versionsreferenz Ihrem Prüfer bereit.
 
-Für den vollständigen Vorbereitungsleitfaden siehe [Trust Package](../governance/trust-package.md).
+Für den vollständigen Vorbereitungsleitfaden siehe [Trust Package](../governance/trust-package/).
 
 ## Für Prüfer: Verifizierungsverfahren
 
@@ -139,11 +139,11 @@ Prüfer, die Evidence-Einreichungen erhalten, sollten Integrität und Struktur v
 !!! tip "Tools unabhängig beziehen"
     Prüfer sollten Validator und Schemas direkt vom offiziellen AIMO Standard Release herunterladen, nicht von der einreichenden Partei.
 
-Für das vollständige Verifizierungsverfahren (Prüfsummen, Attestierung, Schritt-für-Schritt) siehe **[Standard → Versionen → Verifizierungsverfahren](../standard/versions/index.md)**. Siehe auch [Trust Package](../governance/trust-package.md) für prüfungsbereite Materialien.
+Für das vollständige Verifizierungsverfahren (Prüfsummen, Attestierung, Schritt-für-Schritt) siehe **[Standard → Versionen → Verifizierungsverfahren](../standard/versions/)**. Siehe auch [Trust Package](../governance/trust-package/) für prüfungsbereite Materialien.
 
 ## Keine-Überbeanspruchung-Erklärung
 
 !!! warning "Wichtig"
     Der AIMO Standard unterstützt **Erklärbarkeit und Evidence-Bereitschaft**. Er bietet **keine** Rechtsberatung, garantiert keine Compliance und zertifiziert keine Konformität mit Vorschriften oder Frameworks. Anwender müssen Ansprüche gegen maßgebliche Texte verifizieren und bei Bedarf professionelle Beratung einholen.
 
-Siehe [Verantwortungsgrenze](../governance/responsibility-boundary.md) für Umfang, Annahmen und Anwenderverantwortlichkeiten.
+Siehe [Verantwortungsgrenze](../governance/responsibility-boundary/) für Umfang, Annahmen und Anwenderverantwortlichkeiten.

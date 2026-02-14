@@ -6,20 +6,20 @@ description: AIMO Standardガバナンスハブ - プロジェクトガバナン
 
 このセクションは、プロジェクトガバナンス、セキュリティ、ライセンス、引用、コントリビュートガイドラインのハブです。
 
-監査対応資料はこちらから: **[Trust Package](trust-package.md)**。
+監査対応資料はこちらから: **[Trust Package](trust-package/)**。
 
 ## ガバナンスページ
 
 | ページ | 説明 |
 | ------ | ---- |
-| [Trust Package](trust-package.md) | 監査対応資料ハブ |
-| [責任境界](responsibility-boundary.md) | AIMO が提供するもの・しないもの |
-| [セキュリティ](security.md) | 脆弱性報告・セキュリティポリシー |
-| [ライセンス](license.md) | ライセンス条件（Apache-2.0） |
-| [商標](trademarks.md) | 商標使用ガイドライン |
-| [引用方法](cite.md) | 論文・監査向け引用ガイダンス |
-| [コントリビュート](contributing.md) | AIMO Standard への貢献方法 |
-| [SEO & Canonical ポリシー](seo-canonical-policy.md) | URL 正規化ガイダンス |
+| [Trust Package](trust-package/) | 監査対応資料ハブ |
+| [責任境界](responsibility-boundary/) | AIMO が提供するもの・しないもの |
+| [セキュリティ](security/) | 脆弱性報告・セキュリティポリシー |
+| [ライセンス](license/) | ライセンス条件（Apache-2.0） |
+| [商標](trademarks/) | 商標使用ガイドライン |
+| [引用方法](cite/) | 論文・監査向け引用ガイダンス |
+| [コントリビュート](contributing/) | AIMO Standard への貢献方法 |
+| [SEO & Canonical ポリシー](seo-canonical-policy/) | URL 正規化ガイダンス |
 
 ## リポジトリポリシーファイル
 
@@ -41,14 +41,14 @@ description: AIMO Standardガバナンスハブ - プロジェクトガバナン
 
 監査人・コンプライアンス担当者向けの推奨読み順：
 
-1. **[Trust Package](trust-package.md)** — 監査対応資料の概要
-2. **[責任境界](responsibility-boundary.md)** — スコープと採用者責任
-3. **[セキュリティ](security.md)** — セキュリティ体制と開示ポリシー
-4. **[ライセンス](license.md)** — 採用のためのライセンス条件
-5. **[引用方法](cite.md)** — 監査ドキュメント向け引用
+1. **[Trust Package](trust-package/)** — 監査対応資料の概要
+2. **[責任境界](responsibility-boundary/)** — スコープと採用者責任
+3. **[セキュリティ](security/)** — セキュリティ体制と開示ポリシー
+4. **[ライセンス](license/)** — 採用のためのライセンス条件
+5. **[引用方法](cite/)** — 監査ドキュメント向け引用
 
 ## 関連ページ
 
 - [Releases](../../releases/) — リリーススナップショットと変更履歴
-- [Conformance](../conformance/index.md) — 適合性レベル
-- [ローカライゼーションガイド](../contributing/localization.md) — i18n ワークフロー
+- [Conformance](../conformance/) — 適合性レベル
+- [ローカライゼーションガイド](../contributing/localization/) — i18n ワークフロー

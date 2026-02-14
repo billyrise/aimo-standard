@@ -6,20 +6,20 @@ description: Centro de gobernanza de AIMO Standard - Gobernanza del proyecto, po
 
 Esta sección es el centro para gobernanza del proyecto, seguridad, licencias, citación y guías de contribución.
 
-Comience aquí para materiales listos para auditores: **[Paquete de Confianza](trust-package.md)**.
+Comience aquí para materiales listos para auditores: **[Paquete de Confianza](trust-package/)**.
 
 ## Páginas de Gobernanza
 
 | Página | Descripción |
 | ---- | ----------- |
-| [Paquete de Confianza](trust-package.md) | Centro de materiales listos para auditores |
-| [Límite de Responsabilidad](responsibility-boundary.md) | Qué proporciona y qué no proporciona AIMO |
-| [Seguridad](security.md) | Reporte de vulnerabilidades y política de seguridad |
-| [Licencia](license.md) | Términos de licencia (Apache-2.0) |
-| [Marcas Comerciales](trademarks.md) | Guías de uso de marcas comerciales |
-| [Cómo Citar](cite.md) | Guía de citación para artículos y auditorías |
-| [Contribuir](contributing.md) | Cómo contribuir al AIMO Standard |
-| [Política SEO y Canónica](seo-canonical-policy.md) | Guía de canonicalización de URLs |
+| [Paquete de Confianza](trust-package/) | Centro de materiales listos para auditores |
+| [Límite de Responsabilidad](responsibility-boundary/) | Qué proporciona y qué no proporciona AIMO |
+| [Seguridad](security/) | Reporte de vulnerabilidades y política de seguridad |
+| [Licencia](license/) | Términos de licencia (Apache-2.0) |
+| [Marcas Comerciales](trademarks/) | Guías de uso de marcas comerciales |
+| [Cómo Citar](cite/) | Guía de citación para artículos y auditorías |
+| [Contribuir](contributing/) | Cómo contribuir al AIMO Standard |
+| [Política SEO y Canónica](seo-canonical-policy/) | Guía de canonicalización de URLs |
 
 ## Archivos de Política del Repositorio
 
@@ -41,14 +41,14 @@ Los siguientes archivos viven en la raíz del repositorio y contienen políticas
 
 Para auditores y revisores de cumplimiento, el orden de lectura recomendado:
 
-1. **[Paquete de Confianza](trust-package.md)** — Descripción general de materiales listos para auditoría
-2. **[Límite de Responsabilidad](responsibility-boundary.md)** — Alcance y responsabilidades del adoptante
-3. **[Seguridad](security.md)** — Postura de seguridad y política de divulgación
-4. **[Licencia](license.md)** — Términos de licencia para adopción
-5. **[Cómo Citar](cite.md)** — Citación para documentación de auditoría
+1. **[Paquete de Confianza](trust-package/)** — Descripción general de materiales listos para auditoría
+2. **[Límite de Responsabilidad](responsibility-boundary/)** — Alcance y responsabilidades del adoptante
+3. **[Seguridad](security/)** — Postura de seguridad y política de divulgación
+4. **[Licencia](license/)** — Términos de licencia para adopción
+5. **[Cómo Citar](cite/)** — Citación para documentación de auditoría
 
 ## Páginas Relacionadas
 
 - [Versiones](../../releases/) — Snapshots de versiones y registro de cambios
-- [Conformidad](../conformance/index.md) — Niveles de conformidad
-- [Guía de Localización](../contributing/localization.md) — Flujo de trabajo i18n
+- [Conformidad](../conformance/) — Niveles de conformidad
+- [Guía de Localización](../contributing/localization/) — Flujo de trabajo i18n

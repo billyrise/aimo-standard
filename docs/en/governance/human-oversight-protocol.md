@@ -28,7 +28,7 @@ The AIMO Validator and similar automated tools can check:
 | **Integrity checks** | Validate hash format and presence (not recomputation against content) |
 | **Dictionary validation** | Confirm that codes exist in the taxonomy dictionary |
 
-See [Validator](../standard/current/07-validator.md) for detailed validation rules and reference implementation.
+See [Validator](../../standard/current/07-validator/) for detailed validation rules and reference implementation.
 
 ## What requires human review (Human-in-the-Loop scope)
 
@@ -73,7 +73,7 @@ Organizations implementing human oversight should document:
 | **Remediation plan** | Planned actions, owners, and timelines for addressing issues |
 | **Sign-off** | Formal attestation that review was completed |
 
-These records should be included in the Evidence Bundle per [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
+These records should be included in the Evidence Bundle per [Minimum Evidence Requirements](../../artifacts/minimum-evidence/).
 
 ## Non-overclaim
 
@@ -89,7 +89,7 @@ These records should be included in the Evidence Bundle per [Minimum Evidence Re
 
 ## Related pages
 
-- [Validator](../standard/current/07-validator.md) — automated validation rules and reference implementation
-- [Responsibility Boundary](responsibility-boundary.md) — what AIMO provides vs. adopter responsibilities
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level evidence checklist
-- [Trust Package](trust-package.md) — auditor-ready materials hub
+- [Validator](../../standard/current/07-validator/) — automated validation rules and reference implementation
+- [Responsibility Boundary](../responsibility-boundary/) — what AIMO provides vs. adopter responsibilities
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST-level evidence checklist
+- [Trust Package](../trust-package/) — auditor-ready materials hub

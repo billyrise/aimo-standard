@@ -9,14 +9,14 @@ description: AIMO 標準版本歷史。包含稽核員就緒 PDF、機器可讀�
 ## 最新發布
 
 !!! success "當前版本"
-    **v0.0.2** (2026-02-02) — [檢視文件](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2)
+    **v0.0.2** (2026-02-02) — [檢視文件](../current/) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2)
 
 ## 版本歷史
 
 | 版本 | 日期 | 發布說明 | PDF (EN) | PDF (JA) | 人工產物 | 校驗和 |
 | :------ | :--- | :------------ | :------- | :------- | :-------- | :-------- |
-| **v0.0.2** | 2026-02-02 | [變更日誌](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
-| **v0.0.1** | 2026-02-02 | [變更日誌](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
+| **v0.0.2** | 2026-02-02 | [變更日誌](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
+| **v0.0.1** | 2026-02-02 | [變更日誌](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
 
 !!! note "資料來源"
     此版本表與 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) 同步。每個發布標籤（`vX.Y.Z`）對應一個凍結的規格快照。
@@ -36,7 +36,7 @@ description: AIMO 標準版本歷史。包含稽核員就緒 PDF、機器可讀�
 
 ## 法律與商標聲明
 
-**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → 商標](../../governance/trademarks.md) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → 商標](../../governance/trademarks/) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
 
 ## 給稽核員：正規 URL 與版本固定
 
@@ -225,7 +225,7 @@ AIMO 標準遵循[語意化版本控制](https://semver.org/)（SemVer）：
 
 在具有破壞性變更的版本之間升級時：
 
-1. 檢查[變更日誌](../current/08-changelog.md)了解破壞性變更
+1. 檢查[變更日誌](../current/08-changelog/)了解破壞性變更
 2. 查閱[遷移指南](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md)了解特定的升級路徑
 3. 更新您的證據包以符合新的結構描述要求
 4. 重新執行驗證器以驗證符合性
@@ -268,6 +268,6 @@ AIMO 標準遵循[語意化版本控制](https://semver.org/)（SemVer）：
 ## 資源
 
 - **[發布中心](../../../releases/)** — 提交準備、稽核員驗證、不過度聲明聲明
-- **[信任套件](../../governance/trust-package.md)** — 稽核員就緒保證材料
-- **[變更日誌（詳細）](../current/08-changelog.md)** — 包含棄用追蹤的完整變更歷史
+- **[信任套件](../../governance/trust-package/)** — 稽核員就緒保證材料
+- **[變更日誌（詳細）](../current/08-changelog/)** — 包含棄用追蹤的完整變更歷史
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — 完整版本政策

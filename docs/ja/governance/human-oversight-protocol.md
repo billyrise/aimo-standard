@@ -28,7 +28,7 @@ AIMO バリデータおよび類似の自動ツールは以下をチェックで
 | **完全性チェック** | ハッシュの形式と存在を検証（コンテンツとの再計算は行わない） |
 | **辞書検証** | コードがタクソノミー辞書に存在することを確認 |
 
-詳細なバリデーションルールとリファレンス実装は [バリデータ](../standard/current/07-validator.md) を参照。
+詳細なバリデーションルールとリファレンス実装は [バリデータ](../../standard/current/07-validator/) を参照。
 
 ## 人による審査が必要なこと（Human-in-the-Loop スコープ）
 
@@ -73,7 +73,7 @@ AIMO バリデータおよび類似の自動ツールは以下をチェックで
 | **是正計画** | 問題対処のための計画、担当者、タイムライン |
 | **サインオフ** | 審査が完了したことの正式な宣誓 |
 
-これらの記録は [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) に従い Evidence Bundle に含めるべきである。
+これらの記録は [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) に従い Evidence Bundle に含めるべきである。
 
 ## 非過剰主張
 
@@ -89,7 +89,7 @@ AIMO バリデータおよび類似の自動ツールは以下をチェックで
 
 ## 関連ページ
 
-- [バリデータ](../standard/current/07-validator.md) — 自動検証ルールとリファレンス実装
-- [責任境界](responsibility-boundary.md) — AIMO が提供するもの vs 採用者の責任
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST レベル証跡チェックリスト
-- [Trust Package](trust-package.md) — 監査対応資料ハブ
+- [バリデータ](../../standard/current/07-validator/) — 自動検証ルールとリファレンス実装
+- [責任境界](../responsibility-boundary/) — AIMO が提供するもの vs 採用者の責任
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST レベル証跡チェックリスト
+- [Trust Package](../trust-package/) — 監査対応資料ハブ

@@ -19,7 +19,7 @@ AIMOタクソノミーは、AIシステム、その利用、および関連す�
 ## 非過大主張（Non-Overclaim）
 
 !!! warning "重要"
-    AIMO Standardは**説明可能性と証跡準備**を支援します。法的助言の提供、コンプライアンスの保証、規制やフレームワークへの適合の認証を行うものでは**ありません**。詳細は[責任境界](../../governance/responsibility-boundary.md)を参照してください。
+    AIMO Standardは**説明可能性と証跡準備**を支援します。法的助言の提供、コンプライアンスの保証、規制やフレームワークへの適合の認証を行うものでは**ありません**。詳細は[責任境界](../../../governance/responsibility-boundary/)を参照してください。
 
 タクソノミーは分類体系のみです。以下を行うものではありません：
 
@@ -34,13 +34,13 @@ AIMOタクソノミーは、AIシステム、その利用、および関連す�
 AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類し、Evidence要件・是正プロセスへ接続することを目的とします。
 
 !!! warning "参照例にすぎません — 規範コードではありません"
-    以下のコードは**説明用の仮例**であり、規範的なAIMOコード体系の一部**ではありません**。提出・運用には使用せず、[Codes](./04-codes.md)と[Dictionary](./05-dictionary.md)の規範的定義に従ってください。
+    以下のコードは**説明用の仮例**であり、規範的なAIMOコード体系の一部**ではありません**。提出・運用には使用せず、[Codes](../04-codes/)と[Dictionary](../05-dictionary/)の規範的定義に従ってください。
 
 - **AG-01** Runaway Loop / Recursion（自律反復による逸脱）
 - **AG-02** Unauthorized Tool Use（意図しないツール実行・confused deputy化）
 - **AG-03** Privilege Boundary Drift（権限境界の曖昧化・拡大）
 
-AG-* を提出に使用しないでください。[Codes](./04-codes.md)と[Dictionary](./05-dictionary.md)の規範的次元・コードを使用してください。
+AG-* を提出に使用しないでください。[Codes](../04-codes/)と[Dictionary](../05-dictionary/)の規範的次元・コードを使用してください。
 
 ## 次元の概要
 
@@ -59,7 +59,7 @@ AIMOはAIユースケースを分類するために8つの次元を使用しま�
 
 **合計: 8次元にわたる91コード**
 
-[IDポリシー / 名前空間](./04b-id-policy-namespace.md)を参照：**EV-** は Evidence *成果物*ID 専用。タクソノミーのログ/記録次元は **LG-**（例：LG-001 … LG-015）を使用。
+[IDポリシー / 名前空間](../04b-id-policy-namespace/)を参照：**EV-** は Evidence *成果物*ID 専用。タクソノミーのログ/記録次元は **LG-**（例：LG-001 … LG-015）を使用。
 
 ### 使用ルール
 
@@ -99,7 +99,7 @@ AIが支援するビジネス機能による分類。**正確に1つを選択。
 | UC-009 | Search/RAG | 検索/RAG | RAGによる検索・質問応答。 |
 | UC-010 | Agentic Automation | エージェント自動化 | 自律/半自律エージェントによるアクション実行。 |
 
-30個のUCコードの完全なリストは[辞書](./05-dictionary.md)を参照してください。
+30個のUCコードの完全なリストは[辞書](../05-dictionary/)を参照してください。
 
 ### DT: Data Type / データ種別
 
@@ -178,7 +178,7 @@ AI利用から期待される成果・ベネフィット。**任意；0個以上
 
 ### LG: Log/Event Type / ログ/記録種別
 
-必要な/収集するログ/記録の種類。**1つ以上を選択。**（[IDポリシー / 名前空間](./04b-id-policy-namespace.md)参照：**EV-** は Evidence *成果物*ID 専用。）
+必要な/収集するログ/記録の種類。**1つ以上を選択。**（[IDポリシー / 名前空間](../04b-id-policy-namespace/)参照：**EV-** は Evidence *成果物*ID 専用。）
 
 | コード | ラベル（EN） | ラベル（JA） | 定義 |
 | --- | --- | --- | --- |
@@ -210,7 +210,7 @@ AI利用から期待される成果・ベネフィット。**任意；0個以上
 
 ### 辞書の参照
 
-スコープノートや例を含む完全なコード定義については、[辞書](./05-dictionary.md)を参照してください。
+スコープノートや例を含む完全なコード定義については、[辞書](../05-dictionary/)を参照してください。
 
 ### 分類例
 
@@ -228,11 +228,11 @@ LG: LG-001（申請記録）, LG-002（審査/承認記録）
 ## SSOT参照
 
 !!! info "正式なソース"
-    正式な定義は `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` です。このページは説明用です。更新ワークフローについては[ローカライゼーションガイド](../../contributing/localization.md)を参照してください。
+    正式な定義は `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` です。このページは説明用です。更新ワークフローについては[ローカライゼーションガイド](../../../contributing/localization/)を参照してください。
 
 ## 関連ページ
 
-- [コード](./04-codes.md) - コードフォーマット、命名規則、ライフサイクル
-- [辞書](./05-dictionary.md) - 完全なコード一覧と列定義
-- [証跡テンプレート](./06-ev-template.md) - 証跡でのコードの使用方法
-- [責任境界](../../governance/responsibility-boundary.md) - 非過大主張声明
+- [コード](../04-codes/) - コードフォーマット、命名規則、ライフサイクル
+- [辞書](../05-dictionary/) - 完全なコード一覧と列定義
+- [証跡テンプレート](../06-ev-template/) - 証跡でのコードの使用方法
+- [責任境界](../../../governance/responsibility-boundary/) - 非過大主張声明

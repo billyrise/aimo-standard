@@ -51,15 +51,15 @@ Schema validation failed:
 
 - **內容準確性**：驗證器檢查結構，而非含義
 - **合規保證**：通過驗證不保證法規合規性
-- **人工判斷**：依賴情境的決策需要人工審查（請參閱[人工監督協議](../governance/human-oversight-protocol.md)）
+- **人工判斷**：依賴情境的決策需要人工審查（請參閱[人工監督協議](../governance/human-oversight-protocol/)）
 - **自動日誌收集**：驗證器驗證提交的證據；它不收集日誌
 
 ---
 
 ## 資源
 
-- **規格**：[標準 > 當前 > 驗證器](../standard/current/07-validator.md) — 規則、參考檢查，以及驗證如何與證據相關。
+- **規格**：[標準 > 當前 > 驗證器](../standard/current/07-validator/) — 規則、參考檢查，以及驗證如何與證據相關。
 - **規則和實作**：儲存庫 `validator/rules/`（檢查）、`validator/src/`（參考實作）。執行和 CI 使用在規格中說明。
 - **解讀**：驗證「失敗」對稽核員意味著什麼（在規格中解釋）。
 
-如需符合性和人工產物使用，請參閱[符合性](../conformance/index.md)和[人工產物](../artifacts/index.md)。
+如需符合性和人工產物使用，請參閱[符合性](../conformance/)和[人工產物](../artifacts/)。

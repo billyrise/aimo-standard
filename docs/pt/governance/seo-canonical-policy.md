@@ -67,8 +67,9 @@ Em vez de copiar arquivos, `/latest/` contém páginas de redirect apontando par
 
 ```html
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.0.1/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
+<!-- Latest alias (redirect stub); canonical points to versioned snapshot -->
+<meta http-equiv="refresh" content="0; url=../{X.Y.Z}/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/">
 ```
 
 Isso garante:
@@ -196,6 +197,6 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 
 ## Documentação Relacionada
 
-- [Trust Package](trust-package.md) — Materiais prontos para auditoria
+- [Trust Package](../trust-package/) — Materiais prontos para auditoria
 - [Releases](../../releases/) — Histórico de versões e changelog
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Política de versões

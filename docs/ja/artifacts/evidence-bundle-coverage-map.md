@@ -26,9 +26,9 @@ description: Evidence Bundle Coverage Map テンプレ（v0.1）。監査向け�
 |------|------|-------------------|
 | **object_index** | 列挙オブジェクト（メタデータ・索引）。各要素: `id`, `type`, `path`, `sha256`。 | 例: `objects/index.json`（index 型）。 |
 | **payload_index** | ペイロード（ルート EV JSON、Evidence Pack 等）。各要素: `logical_id`, `path`, `sha256`, `mime`, `size`。 | 例: `payloads/root.json`（ルート AIMO EV JSON）。 |
-| **EV 種別** | エビデンスレコード（ルートまたはペイロード内）— request, review, exception, renewal, change log。 | [Evidence Pack Template](../standard/current/06-ev-template.md) および [Minimum Evidence Requirements](minimum-evidence.md) に準拠。 |
+| **EV 種別** | エビデンスレコード（ルートまたはペイロード内）— request, review, exception, renewal, change log。 | [Evidence Pack Template](../../standard/current/06-ev-template/) および [Minimum Evidence Requirements](../minimum-evidence/) に準拠。 |
 
-*object_index / payload_index は拡張可能。path はバンドルルート内に留め、[Evidence Bundle ルート構造（v0.1）](../standard/current/09-evidence-bundle-structure.md) を満たすこと。*
+*object_index / payload_index は拡張可能。path はバンドルルート内に留め、[Evidence Bundle ルート構造（v0.1）](../../standard/current/09-evidence-bundle-structure/) を満たすこと。*
 
 ---
 
@@ -38,10 +38,10 @@ description: Evidence Bundle Coverage Map テンプレ（v0.1）。監査向け�
 
 | フレームワーク | 本バンドルでの利用 | 参照 |
 |----------------|--------------------|------|
-| **ISO/IEC 42001** | 任意：本バンドルがカバーする AI MS テーマを記載。 | [Coverage Map → ISO 42001](../coverage-map/iso-42001.md) |
-| **EU AI Act** | 任意：ドキュメント・記録保持の対応レベル。 | [Coverage Map → EU AI Act](../coverage-map/eu-ai-act.md) |
-| **NIST AI RMF** | 任意：Govern, Map, Measure, Manage の対応。 | [Coverage Map → NIST AI RMF](../coverage-map/nist-ai-rmf.md) |
-| **ISMS (27001/27002)** | 任意：変更管理、アクセス、ログ、整合性。 | [Coverage Map → ISMS](../coverage-map/isms.md) |
+| **ISO/IEC 42001** | 任意：本バンドルがカバーする AI MS テーマを記載。 | [Coverage Map → ISO 42001](../../coverage-map/iso-42001/) |
+| **EU AI Act** | 任意：ドキュメント・記録保持の対応レベル。 | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/) |
+| **NIST AI RMF** | 任意：Govern, Map, Measure, Manage の対応。 | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/) |
+| **ISMS (27001/27002)** | 任意：変更管理、アクセス、ログ、整合性。 | [Coverage Map → ISMS](../../coverage-map/isms/) |
 
 *「本バンドルでの利用」は提出ごとに記入。標準は特定のコントロール網羅を要求しない。*
 
@@ -69,7 +69,7 @@ description: Evidence Bundle Coverage Map テンプレ（v0.1）。監査向け�
 | **署名の存在** | `signatures/` に少なくとも 1 つの署名ファイル；マニフェストの `signing.signatures[]` で `path` と `targets` を参照（v0.1 では targets に `manifest.json` を含む MUST）。暗号検証は v0.1 範囲外。 |
 | **Hash chain** | マニフェストの `hash_chain`：`algorithm`, `head`（64 文字 hex）, `path`（`hashes/` 配下のファイル）, `covers`（v0.1 で `manifest.json` と `objects/index.json` を含む MUST）。`hash_chain.path` のファイルが存在。 |
 
-*上記は v0.1 バンドルに対して [Validator](../validator/index.md) が検証する整合性保証の要約。Custody（保管・アクセス制御・保持）は実装定義。*
+*上記は v0.1 バンドルに対して [Validator](../../validator/) が検証する整合性保証の要約。Custody（保管・アクセス制御・保持）は実装定義。*
 
 ---
 
@@ -78,7 +78,7 @@ description: Evidence Bundle Coverage Map テンプレ（v0.1）。監査向け�
 | 成果物 | 位置づけ | 目的 |
 |--------|----------|------|
 | **Coverage Map YAML**（`coverage_map/coverage_map.yaml` 等） | **Informative** | AIMO 証跡/成果物と外部フレームワーク（ISO 42001、NIST AI RMF、EU AI Act 等）の高レベルな対応テーマの説明。規範的な検証要件は課さない。 |
-| **Profile JSON**（`coverage_map/profiles/*.json`） | **Normative** | `schemas/jsonschema/aimo-profile.schema.json` で検証される変換仕様。機械可読なマッピングを定義。[Validator](../validator/index.md) の `--validate-profiles` で公式 Profile JSON のスキーマ適合を検証する（profile_id の PR-* パターン、target 列挙、target_version、mappings）。 |
+| **Profile JSON**（`coverage_map/profiles/*.json`） | **Normative** | `schemas/jsonschema/aimo-profile.schema.json` で検証される変換仕様。機械可読なマッピングを定義。[Validator](../../validator/) の `--validate-profiles` で公式 Profile JSON のスキーマ適合を検証する（profile_id の PR-* パターン、target 列挙、target_version、mappings）。 |
 
 ### v0.1 公式 profiles（凍結セット）
 
@@ -99,8 +99,8 @@ v0.1 リリースに含まれる**規範的** Profile JSON は **3 本**。い�
 
 ## 関連
 
-- [Evidence Bundle（概要）](evidence-bundle.md)
-- [Evidence Bundle ルート構造（v0.1）](../standard/current/09-evidence-bundle-structure.md)
-- [Minimum Evidence Requirements](minimum-evidence.md)
-- [Coverage Map（フレームワーク対応）](../coverage-map/index.md)
-- [Validator](../validator/index.md)
+- [Evidence Bundle（概要）](../evidence-bundle/)
+- [Evidence Bundle ルート構造（v0.1）](../../standard/current/09-evidence-bundle-structure/)
+- [Minimum Evidence Requirements](../minimum-evidence/)
+- [Coverage Map（フレームワーク対応）](../../coverage-map/)
+- [Validator](../../validator/)

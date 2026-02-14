@@ -32,8 +32,8 @@ description: 覆盖映射方法论 - AIMO 如何映射到外部框架。在审�
 
 ## 与证据包和最低证据要求的关系
 
-- **[证据包](../artifacts/evidence-bundle.md)**：定义包结构、目录和可追溯性。覆盖映射行引用证据包部分（如 EV、Dictionary、Summary、change_log、request、review、exception、renewal）。
-- **[最低证据要求](../artifacts/minimum-evidence.md)**：定义 MUST 级别的生命周期组（request、review、exception、renewal、change_log、integrity）。覆盖映射行在 `minimum_evidence_refs` 中引用这些组。
+- **[证据包](../../artifacts/evidence-bundle/)**：定义包结构、目录和可追溯性。覆盖映射行引用证据包部分（如 EV、Dictionary、Summary、change_log、request、review、exception、renewal）。
+- **[最低证据要求](../../artifacts/minimum-evidence/)**：定义 MUST 级别的生命周期组（request、review、exception、renewal、change_log、integrity）。覆盖映射行在 `minimum_evidence_refs` 中引用这些组。
 
 使用覆盖映射来查看哪些证据包项目和最低证据组支持给定外部要求的可解释性。
 
@@ -42,12 +42,12 @@ description: 覆盖映射方法论 - AIMO 如何映射到外部框架。在审�
 !!! warning "重要提示"
     AIMO 标准支持**可解释性和证据就绪**。它**不**提供法律建议、保证合规或认证符合任何法规或框架。采用者必须根据权威文本验证声明，并在适当时获取专业建议。
 
-参见 [责任边界](../governance/responsibility-boundary.md) 了解范围、假设和采用者责任。
+参见 [责任边界](../../governance/responsibility-boundary/) 了解范围、假设和采用者责任。
 
 ## 审计旅程
 
 从此页面继续：
 
-1. **框架映射**：[ISO 42001](iso-42001.md)、[NIST AI RMF](nist-ai-rmf.md)、[欧盟AI法案](eu-ai-act.md)、[ISMS](isms.md)
-2. **验证**：[验证器](../validator/index.md) — 运行结构检查
+1. **框架映射**：[ISO 42001](../iso-42001/)、[NIST AI RMF](../nist-ai-rmf/)、[欧盟AI法案](../eu-ai-act/)、[ISMS](../isms/)
+2. **验证**：[验证器](../../validator/) — 运行结构检查
 3. **下载**：[发布](../../releases/) — 获取发布资产

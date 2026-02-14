@@ -58,7 +58,7 @@ description: Shadow AI 發現日誌結構描述 - 用於記錄企業中未經核
     - **請勿嵌入** PII、憑證或提示內容到日誌欄位中。
     - 使用 `evidence_ref` 參照單獨儲存的敏感內容。
     - 對日誌儲存套用適當的存取控制。
-    - 考慮與[最低證據要求](../minimum-evidence.md)一致的資料保留政策。
+    - 考慮與[最低證據要求](../../minimum-evidence/)一致的資料保留政策。
 
 ## JSON Schema
 
@@ -91,7 +91,7 @@ description: Shadow AI 發現日誌結構描述 - 用於記錄企業中未經核
 
 ## 相關頁面
 
-- [日誌結構描述索引](index.md)
-- [代理活動日誌](agent-activity.md)
-- [最低證據要求](../minimum-evidence.md)
-- [分類法：IM-007 Shadow/未受管理](../../standard/current/03-taxonomy.md)
+- [日誌結構描述索引](../)
+- [代理活動日誌](../agent-activity/)
+- [最低證據要求](../../minimum-evidence/)
+- [分類法：IM-007 Shadow/未受管理](../../../standard/current/03-taxonomy/)

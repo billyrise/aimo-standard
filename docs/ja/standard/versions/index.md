@@ -9,18 +9,18 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 ## 最新リリース
 
 !!! success "現在のバージョン"
-    **v0.1.2** (2026-02-13) — [ドキュメントを見る](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.2)
+    **v0.1.2** (2026-02-13) — [ドキュメントを見る](../current/) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.2)
 
 ## バージョン履歴
 
 | バージョン | 日付 | リリースノート | PDF (EN) | PDF (JA) | アーティファクト | チェックサム |
 | :--------- | :--- | :------------- | :------- | :------- | :--------------- | :----------- |
-| **v0.1.2** | 2026-02-13 | [Changelog](../current/08-changelog.md#version-012) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/SHA256SUMS.txt) |
-| **v0.1.1** | 2026-02-04 | [Changelog](../current/08-changelog.md#version-011) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/SHA256SUMS.txt) |
-| **v0.1.0** | 2026-02-03 | [Changelog](../current/08-changelog.md#version-010) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/SHA256SUMS.txt) |
-| **v0.0.3** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/SHA256SUMS.txt) |
-| **v0.0.2** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
-| **v0.0.1** | 2026-02-02 | [Changelog](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
+| **v0.1.2** | 2026-02-13 | [Changelog](../current/08-changelog/#version-012) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/SHA256SUMS.txt) |
+| **v0.1.1** | 2026-02-04 | [Changelog](../current/08-changelog/#version-011) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/SHA256SUMS.txt) |
+| **v0.1.0** | 2026-02-03 | [Changelog](../current/08-changelog/#version-010) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/SHA256SUMS.txt) |
+| **v0.0.3** | 2026-02-02 | [Changelog](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/SHA256SUMS.txt) |
+| **v0.0.2** | 2026-02-02 | [Changelog](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
+| **v0.0.1** | 2026-02-02 | [Changelog](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
 
 !!! note "データソース"
     このバージョンテーブルは [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) と同期しています。各リリースタグ（`vX.Y.Z`）は仕様の固定スナップショットに対応します。
@@ -45,7 +45,7 @@ description: AIMO Standardバージョン履歴。監査対応PDF、機械可読
 
 ## 法的・商標に関する注意
 
-商標の帰属・使用（「AIMO」が第三者の登録商標であること、RISEby が商標出願しているのは AIMOaaS のみであることを含む）は [Governance → 商標](../../governance/trademarks.md) およびリポジトリの [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) に記載しています。最新の商標・法的注意は、最新リリースのドキュメントまたは上記 TRADEMARKS.md を参照してください。
+商標の帰属・使用（「AIMO」が第三者の登録商標であること、RISEby が商標出願しているのは AIMOaaS のみであることを含む）は [Governance → 商標](../../governance/trademarks/) およびリポジトリの [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) に記載しています。最新の商標・法的注意は、最新リリースのドキュメントまたは上記 TRADEMARKS.md を参照してください。
 
 ## 監査人向け：正規 URL とバージョン固定
 
@@ -228,13 +228,13 @@ AIMO Standard は [Semantic Versioning](https://semver.org/) (SemVer) に従い�
 | **MINOR** | 0.X.0 | 後方互換の追加 |
 | **PATCH** | 0.0.X | 修正と明確化 |
 
-**運用規約**（URL の意味と MUST ルール）は [バージョニング・参照方針](../current/00-versioning-reference-policy.md) を参照。完全なバージョニングポリシーは [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照してください。
+**運用規約**（URL の意味と MUST ルール）は [バージョニング・参照方針](../current/00-versioning-reference-policy/) を参照。完全なバージョニングポリシーは [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照してください。
 
 ## 移行
 
 破壊的変更を含むバージョン間のアップグレード時：
 
-1. [Changelog](../current/08-changelog.md) で破壊的変更を確認
+1. [Changelog](../current/08-changelog/) で破壊的変更を確認
 2. [移行ガイド](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) で具体的なアップグレードパスを確認
 3. Evidence Bundle を新しいスキーマ要件に合わせて更新
 4. バリデータを再実行して準拠を検証
@@ -277,6 +277,6 @@ AIMO Standard は [Semantic Versioning](https://semver.org/) (SemVer) に従い�
 ## リソース
 
 - **[リリースハブ](../../../releases/)** — 提出準備、監査人による検証、非過剰主張ステートメント
-- **[Trust Package](../../governance/trust-package.md)** — 監査対応保証資料
-- **[Changelog（詳細）](../current/08-changelog.md)** — 廃止追跡を含む完全な変更履歴
+- **[Trust Package](../../governance/trust-package/)** — 監査対応保証資料
+- **[Changelog（詳細）](../current/08-changelog/)** — 廃止追跡を含む完全な変更履歴
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — 完全なバージョニングポリシー

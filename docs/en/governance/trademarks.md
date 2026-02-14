@@ -71,7 +71,7 @@ You may cite AIMO Standard in:
 - Research publications
 - Training materials (with attribution)
 
-See [How to Cite](cite.md) for citation format.
+See [How to Cite](../cite/) for citation format.
 
 ## Prohibited Uses
 
@@ -100,6 +100,6 @@ See [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMA
 
 ## Related Pages
 
-- [License](license.md) — Licensing terms
-- [How to Cite](cite.md) — Citation guidance
-- [Governance](index.md) — Project governance
+- [License](../license/) — Licensing terms
+- [How to Cite](../cite/) — Citation guidance
+- [Governance](../) — Project governance

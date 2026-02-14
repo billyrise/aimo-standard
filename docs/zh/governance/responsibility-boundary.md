@@ -81,7 +81,7 @@ AIMO 标准假设：
 
 ## 相关页面
 
-- [信任包](trust-package.md) — 审计师就绪材料中心
-- [人工监督协议](human-oversight-protocol.md) — 机器与人工审查边界
-- [最低证据要求](../artifacts/minimum-evidence.md) — MUST 级别生命周期清单
-- [覆盖映射方法论](../coverage-map/methodology.md) — 映射是什么和不是什么
+- [信任包](../trust-package/) — 审计师就绪材料中心
+- [人工监督协议](../human-oversight-protocol/) — 机器与人工审查边界
+- [最低证据要求](../../artifacts/minimum-evidence/) — MUST 级别生命周期清单
+- [覆盖映射方法论](../../coverage-map/methodology/) — 映射是什么和不是什么

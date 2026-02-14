@@ -32,8 +32,8 @@ description: 覆蓋範圍對應方法論 - AIMO 如何對應到外部框架。�
 
 ## 與證據包和最低證據要求的關係
 
-- **[證據包](../artifacts/evidence-bundle.md)**：定義套件結構、目錄和可追溯性。覆蓋範圍對應行參照證據包章節（例如 EV、Dictionary、Summary、change_log、request、review、exception、renewal）。
-- **[最低證據要求](../artifacts/minimum-evidence.md)**：定義必要層級生命週期群組（request、review、exception、renewal、change_log、integrity）。覆蓋範圍對應行在 `minimum_evidence_refs` 中參照這些群組。
+- **[證據包](../../artifacts/evidence-bundle/)**：定義套件結構、目錄和可追溯性。覆蓋範圍對應行參照證據包章節（例如 EV、Dictionary、Summary、change_log、request、review、exception、renewal）。
+- **[最低證據要求](../../artifacts/minimum-evidence/)**：定義必要層級生命週期群組（request、review、exception、renewal、change_log、integrity）。覆蓋範圍對應行在 `minimum_evidence_refs` 中參照這些群組。
 
 使用覆蓋範圍對應查看哪些證據包項目和最低證據群組支援特定外部要求的可解釋性。
 
@@ -42,12 +42,12 @@ description: 覆蓋範圍對應方法論 - AIMO 如何對應到外部框架。�
 !!! warning "重要"
     AIMO 標準支援**可解釋性和證據就緒**。它**不**提供法律建議、保證合規性或認證符合任何法規或框架。採用者必須對照權威文本驗證聲明並視情況取得專業建議。
 
-請參閱[責任邊界](../governance/responsibility-boundary.md)了解範圍、假設和採用者責任。
+請參閱[責任邊界](../../governance/responsibility-boundary/)了解範圍、假設和採用者責任。
 
 ## 稽核旅程
 
 從本頁面繼續：
 
-1. **框架對應**：[ISO 42001](iso-42001.md)、[NIST AI RMF](nist-ai-rmf.md)、[歐盟 AI 法案](eu-ai-act.md)、[ISMS](isms.md)
-2. **驗證**：[驗證器](../validator/index.md) — 執行結構檢查
+1. **框架對應**：[ISO 42001](../iso-42001/)、[NIST AI RMF](../nist-ai-rmf/)、[歐盟 AI 法案](../eu-ai-act/)、[ISMS](../isms/)
+2. **驗證**：[驗證器](../../validator/) — 執行結構檢查
 3. **下載**：[發布](../../releases/) — 取得發布資產

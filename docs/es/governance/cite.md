@@ -74,6 +74,6 @@ Use estas URLs en documentación oficial:
 
 ## Páginas Relacionadas
 
-- [Paquete de Confianza](trust-package.md) — Materiales listos para auditores
-- [Gobernanza](index.md) — Gobernanza del proyecto
-- [Licencia](license.md) — Términos de licencia
+- [Paquete de Confianza](../trust-package/) — Materiales listos para auditores
+- [Gobernanza](../) — Gobernanza del proyecto
+- [Licencia](../license/) — Términos de licencia
