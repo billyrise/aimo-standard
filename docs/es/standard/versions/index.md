@@ -267,7 +267,7 @@ Cada release crea un snapshot de documentación congelado accesible en:
 
 ## Recursos
 
-- **[Centro de Versiones](../../releases/index.md)** — Preparación de envío, verificación de auditor, declaración de no sobre-reclamación
+- **[Centro de Versiones](../../../releases/)** — Preparación de envío, verificación de auditor, declaración de no sobre-reclamación
 - **[Paquete de Confianza](../../governance/trust-package.md)** — Materiales de aseguramiento listos para auditores
 - **[Registro de Cambios (detallado)](../current/08-changelog.md)** — Historial completo de cambios con seguimiento de deprecación
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Política de versionado completa

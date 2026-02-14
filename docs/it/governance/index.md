@@ -49,6 +49,6 @@ Per auditor e revisori di conformità, l'ordine di lettura raccomandato:
 
 ## Pagine Correlate
 
-- [Release](../releases/index.md) — Snapshot delle release e changelog
+- [Release](../../releases/) — Snapshot delle release e changelog
 - [Conformità](../conformance/index.md) — Livelli di conformità
 - [Guida alla Localizzazione](../contributing/localization.md) — Workflow i18n

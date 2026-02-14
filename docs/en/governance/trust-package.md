@@ -28,7 +28,7 @@ The Trust Package PDF consolidates auditor-ready materials into a single documen
 - **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
 - **Validator**: rules and reference checks — [Validator](../validator/index.md)
 - **Examples**: audit-ready sample bundles — [Examples](../examples/index.md)
-- **Releases**: change history and distribution — [Releases](../releases/index.md)
+- **Releases**: change history and distribution — [Releases](../../releases/)
 - **Governance**: policies, security, licensing — [Governance](../governance/index.md)
 
 ## Minimum set for audit-readiness
@@ -41,7 +41,7 @@ The Trust Package PDF consolidates auditor-ready materials into a single documen
 | Evidence artifacts | [Evidence Bundle](../artifacts/evidence-bundle.md), [Minimum Evidence](../artifacts/minimum-evidence.md), [EV Template](../standard/current/06-ev-template.md) | What data must exist to support traceability |
 | Validator checks | [Validator](../validator/index.md) | How to verify internal consistency and completeness |
 | Example bundle | [Examples](../examples/index.md) | What an audit-ready package looks like in practice |
-| Change control | [Releases](../releases/index.md), [Governance](../governance/index.md) | How updates are managed and communicated |
+| Change control | [Releases](../../releases/), [Governance](../governance/index.md) | How updates are managed and communicated |
 | Security / License / Trademarks | [Governance](../governance/index.md) | Legal and security posture for adoption decisions |
 
 ## How to cite
@@ -102,7 +102,7 @@ Follow these steps to prepare an audit-ready submission:
 5. **Reference Release Version**: Note which AIMO Standard version (e.g., `v1.0.0`) your bundle aligns with.
 6. **Deliver**: Provide the zip, checksums, and version reference to your auditor or compliance function.
 
-For release assets and verification, see [Releases](../releases/index.md).
+For release assets and verification, see [Releases](../../releases/).
 
 ## Non-overclaim statement
 
@@ -233,4 +233,4 @@ From this page, the recommended audit journey is:
 3. **Required evidence**: [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist by lifecycle
 4. **Framework alignment**: [Coverage Map](../coverage-map/index.md) + [Methodology](../coverage-map/methodology.md) — see how AIMO maps to external frameworks
 5. **Validation**: [Validator](../validator/index.md) — run structural consistency checks
-6. **Download**: [Releases](../releases/index.md) — get release assets and verify checksums
+6. **Download**: [Releases](../../releases/) — get release assets and verify checksums

@@ -37,8 +37,8 @@ site_url: https://standard.aimoaas.com/
 
 | 언어 | URL 패턴 | 예시 |
 |----------|-------------|---------|
-| 영어 (기본) | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
-| 일본어 | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
+| 영어 (기본) | `https://standard.aimoaas.com/{X.Y.Z}/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| 일본어 | `https://standard.aimoaas.com/{X.Y.Z}/ja/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/ja/governance/` |
 
 각 언어 버전은 자체 정식이며 다른 언어에 대한 `hreflang` 대체와 영어 버전을 가리키는 `x-default`를 포함합니다.
 
@@ -88,10 +88,10 @@ AIMO 표준은 `alias_type: redirect`로 문서 버전화를 위해 [mike](https
 
 | 사용 사례 | 권장 URL |
 |----------|-----------------|
-| 현재 안정 사양 | `https://standard.aimoaas.com/latest/standard/current/` |
+| 현재 안정 사양 | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
 | 특정 버전 (감사용) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
-| 거버넌스 및 정책 | `https://standard.aimoaas.com/latest/governance/` |
-| 신뢰 패키지 | `https://standard.aimoaas.com/latest/governance/trust-package/` |
+| 거버넌스 및 정책 | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| 신뢰 패키지 | `https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/` |
 
 ### 인용하지 말아야 할 것
 
@@ -119,12 +119,12 @@ https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 
 ```html
 <!-- 정식 (항상 프로덕션을 가리킴) -->
-<link rel="canonical" href="https://standard.aimoaas.com/latest/governance/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 
 <!-- 언어 대체 -->
-<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/governance/">
-<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/governance/">
-<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/governance/">
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/{X.Y.Z}/ja/governance/">
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 ```
 
 ### robots.txt
@@ -197,5 +197,5 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 ## 관련 문서
 
 - [신뢰 패키지](trust-package.md) — 감사자 준비 자료
-- [릴리스](../releases/index.md) — 버전 이력 및 변경로그
+- [릴리스](../../releases/) — 버전 이력 및 변경로그
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 버전 정책

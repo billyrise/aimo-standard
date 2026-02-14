@@ -54,4 +54,4 @@ From this page, continue to:
 
 1. **Framework mappings**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
 2. **Validate**: [Validator](../validator/index.md) — run structural checks
-3. **Download**: [Releases](../releases/index.md) — get release assets
+3. **Download**: [Releases](../../releases/) — get release assets

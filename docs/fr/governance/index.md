@@ -49,6 +49,6 @@ Pour les auditeurs et réviseurs de conformité, l'ordre de lecture recommandé 
 
 ## Pages connexes
 
-- [Versions](../releases/index.md) — Instantanés de version et changelog
+- [Versions](../../releases/) — Instantanés de version et changelog
 - [Conformité](../conformance/index.md) — Niveaux de conformité
 - [Guide de localisation](../contributing/localization.md) — Flux de travail i18n

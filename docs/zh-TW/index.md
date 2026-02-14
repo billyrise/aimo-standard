@@ -22,15 +22,15 @@ AIMO 標準使用共享語言（分類法）分類 AI 使用，定義最低證�
 2. [人工產物](artifacts/index.md) — 分類法、代碼系統、字典、證據範本、結構描述
 3. [驗證器](validator/index.md) — 規則、參考檢查、如何執行
 4. [範例](examples/index.md) — 端對端和最小樣本
-5. [發布](releases/index.md) — 變更日誌、遷移、校驗和、PDF
+5. [發布](releases/) — 變更日誌、遷移、校驗和、PDF
 6. [治理](governance/index.md) — 版本控制、安全、授權、商標、[貢獻](contributing/localization.md)
 
 **按受眾的快速連結**
 
-- **稽核員**：[信任套件](governance/trust-package.md)、[分類法](standard/current/03-taxonomy.md)、[字典](standard/current/05-dictionary.md)、[證據包](artifacts/evidence-bundle.md)、[最低證據要求](artifacts/minimum-evidence.md)、[覆蓋範圍對應](coverage-map/index.md)、[驗證器](validator/index.md)、[發布](releases/index.md)
+- **稽核員**：[信任套件](governance/trust-package.md)、[分類法](standard/current/03-taxonomy.md)、[字典](standard/current/05-dictionary.md)、[證據包](artifacts/evidence-bundle.md)、[最低證據要求](artifacts/minimum-evidence.md)、[覆蓋範圍對應](coverage-map/index.md)、[驗證器](validator/index.md)、[發布](releases/)
 - **安全**：[信任套件](governance/trust-package.md)、[分類法](standard/current/03-taxonomy.md)、[最低證據要求](artifacts/minimum-evidence.md)、[責任邊界](governance/responsibility-boundary.md)、[治理](governance/index.md)、[驗證器](validator/index.md)、[標準 > EV 範本](standard/current/06-ev-template.md)
-- **IT 營運**：[信任套件](governance/trust-package.md)、[分類法](standard/current/03-taxonomy.md)、[最低證據要求](artifacts/minimum-evidence.md)、[發布](releases/index.md)、[驗證器](validator/index.md)、[範例](examples/index.md)、[符合性](conformance/index.md)
-- **法務/採購**：[信任套件](governance/trust-package.md)、[責任邊界](governance/responsibility-boundary.md)、[覆蓋範圍對應方法論](coverage-map/methodology.md)、[發布](releases/index.md)、[治理](governance/index.md)（授權、商標）
+- **IT 營運**：[信任套件](governance/trust-package.md)、[分類法](standard/current/03-taxonomy.md)、[最低證據要求](artifacts/minimum-evidence.md)、[發布](releases/)、[驗證器](validator/index.md)、[範例](examples/index.md)、[符合性](conformance/index.md)
+- **法務/採購**：[信任套件](governance/trust-package.md)、[責任邊界](governance/responsibility-boundary.md)、[覆蓋範圍對應方法論](coverage-map/methodology.md)、[發布](releases/)、[治理](governance/index.md)（授權、商標）
 
 **稽核旅程**（2 次點擊路徑）：
 
@@ -40,4 +40,4 @@ AIMO 標準使用共享語言（分類法）分類 AI 使用，定義最低證�
 4. [最低證據要求](artifacts/minimum-evidence.md) — 必要層級檢查清單
 5. [覆蓋範圍對應](coverage-map/index.md) + [方法論](coverage-map/methodology.md) — 框架對應
 6. [驗證器](validator/index.md) — 執行結構檢查
-7. [發布](releases/index.md) — 下載資產並驗證
+7. [發布](releases/) — 下載資產並驗證

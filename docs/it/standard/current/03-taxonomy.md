@@ -33,10 +33,14 @@ La tassonomia è solo un sistema di classificazione. Non:
 I controlli di sicurezza tradizionali (es. ISMS) da soli spesso non riescono a catturare i modi di fallimento specifici degli LLM/agent e le deviazioni degli agent autonomi (es. esecuzione di strumenti non intenzionata, loop ricorsivi) in modo **spiegabile per l'audit**.
 La Tassonomia AIMO fornisce un linguaggio condiviso per classificare questi rischi specifici dell'IA e collegarli ai requisiti di evidence e ai workflow di remediation.
 
-(Esempi di riferimento per la differenziazione. I codici sotto sono placeholder illustrativi; il code system ufficiale segue le definizioni dello Standard.)
-- AG-01 Loop/Ricorsione Fuori Controllo
-- AG-02 Uso Non Autorizzato di Strumenti (abuso stile confused deputy)
-- AG-03 Deriva dei Confini di Privilegio
+!!! warning "Solo esempi di riferimento — non codici normativi"
+    I codici seguenti sono **placeholder illustrativi** e **non** fanno parte del sistema di codici normativo AIMO. Non usarli nelle submission; usare dimensioni e codici normativi in [Codes](./04-codes.md) e [Dictionary](./05-dictionary.md).
+
+- **AG-01** Loop/Ricorsione Fuori Controllo
+- **AG-02** Uso Non Autorizzato di Strumenti (abuso stile confused deputy)
+- **AG-03** Deriva dei Confini di Privilegio
+
+Non usare AG-* nelle submission; usare le dimensioni e i codici normativi definiti in Codes/Dictionary.
 
 ## Panoramica delle Dimensioni
 

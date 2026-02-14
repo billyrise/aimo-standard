@@ -60,4 +60,4 @@ Desde esta página, el recorrido de auditoría típico continúa:
 1. **Siguiente**: [Requisitos Mínimos de Evidencia](minimum-evidence.md) — lista de verificación de nivel DEBE por ciclo de vida
 2. **Luego**: [Mapa de Cobertura](../coverage-map/index.md) — mapeo a marcos externos
 3. **Validar**: [Validador](../validator/index.md) — ejecutar verificaciones estructurales
-4. **Descargar**: [Versiones](../releases/index.md) — obtener activos de versión y verificar sumas de verificación
+4. **Descargar**: [Versiones](../../releases/) — obtener activos de versión y verificar sumas de verificación

@@ -27,7 +27,7 @@ Il dizionario abilita:
     - **Struttura**: `data/taxonomy/canonical.yaml` (codici, stato, ciclo di vita)
     - **Traduzioni**: `data/taxonomy/i18n/*.yaml` (etichette, definizioni per lingua)
 
-    I file CSV sono **artefatti generati** per la distribuzione. Vedere [Release](../../releases/index.md) per i download.
+    I file CSV sono **artefatti generati** per la distribuzione. Vedere [Release](../../../releases/) per i download.
 
 ## Schema delle Colonne
 
@@ -93,7 +93,7 @@ La versione corrente del dizionario è **v0.1.0** e contiene:
 !!! note "Liste Complete dei Codici"
     La lista completa dei 91 codici è disponibile negli artefatti CSV generati. Questa pagina di documentazione fornisce definizioni delle colonne e guida all'uso. Per definizioni dettagliate dei codici:
 
-    - **Download**: Vedere [Release](../../releases/index.md) per i file CSV per lingua
+    - **Download**: Vedere [Release](../../../releases/) per i file CSV per lingua
     - **CSV per lingua**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
     - **CSV legacy EN/JA misto**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (congelato, solo per retrocompatibilità)
 
@@ -191,7 +191,7 @@ Esempio: `X-ACME-UC-901` per un codice di caso d'uso personalizzato di ACME Corp
 
 ## Download
 
-Vedere [Release](../../releases/index.md) per pacchetti scaricabili contenenti il dizionario e file correlati.
+Vedere [Release](../../../releases/) per pacchetti scaricabili contenenti il dizionario e file correlati.
 
 ## Pagine Correlate
 

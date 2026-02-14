@@ -28,7 +28,7 @@ Le PDF du package de confiance consolide les matériaux prêts pour les auditeur
 - **Exigences minimales de preuves** : liste de contrôle OBLIGATOIRE par cycle de vie — [Exigences minimales de preuves](../artifacts/minimum-evidence.md)
 - **Validateur** : règles et vérifications de référence — [Validateur](../validator/index.md)
 - **Exemples** : lots d'échantillons prêts pour l'audit — [Exemples](../examples/index.md)
-- **Versions** : historique des changements et distribution — [Versions](../releases/index.md)
+- **Versions** : historique des changements et distribution — [Versions](../../releases/)
 - **Gouvernance** : politiques, sécurité, licences — [Gouvernance](../governance/index.md)
 
 ## Ensemble minimum pour la préparation à l'audit
@@ -41,7 +41,7 @@ Le PDF du package de confiance consolide les matériaux prêts pour les auditeur
 | Artefacts de preuves | [Lot de preuves](../artifacts/evidence-bundle.md), [Preuves minimales](../artifacts/minimum-evidence.md), [Modèle EV](../standard/current/06-ev-template.md) | Quelles données doivent exister pour soutenir la traçabilité |
 | Vérifications du validateur | [Validateur](../validator/index.md) | Comment vérifier la cohérence et la complétude internes |
 | Lot d'exemple | [Exemples](../examples/index.md) | À quoi ressemble un package prêt pour l'audit en pratique |
-| Contrôle des changements | [Versions](../releases/index.md), [Gouvernance](../governance/index.md) | Comment les mises à jour sont gérées et communiquées |
+| Contrôle des changements | [Versions](../../releases/), [Gouvernance](../governance/index.md) | Comment les mises à jour sont gérées et communiquées |
 | Sécurité / Licence / Marques | [Gouvernance](../governance/index.md) | Posture juridique et de sécurité pour les décisions d'adoption |
 
 ## Comment citer
@@ -102,7 +102,7 @@ Suivez ces étapes pour préparer une soumission prête pour l'audit :
 5. **Référencer la version** : Notez quelle version du standard AIMO (ex. `v1.0.0`) votre lot est aligné.
 6. **Livrer** : Fournissez le zip, les checksums et la référence de version à votre auditeur ou fonction de conformité.
 
-Pour les actifs de version et la vérification, voir [Versions](../releases/index.md).
+Pour les actifs de version et la vérification, voir [Versions](../../releases/).
 
 ## Déclaration de non-déclaration excessive
 
@@ -233,4 +233,4 @@ Depuis cette page, le parcours d'audit recommandé est :
 3. **Preuves requises** : [Exigences minimales de preuves](../artifacts/minimum-evidence.md) — liste de contrôle OBLIGATOIRE par cycle de vie
 4. **Alignement des cadres** : [Carte de couverture](../coverage-map/index.md) + [Méthodologie](../coverage-map/methodology.md) — voir comment AIMO correspond aux cadres externes
 5. **Validation** : [Validateur](../validator/index.md) — exécuter les vérifications de cohérence structurelle
-6. **Téléchargement** : [Versions](../releases/index.md) — obtenir les actifs de version et vérifier les checksums
+6. **Téléchargement** : [Versions](../../releases/) — obtenir les actifs de version et vérifier les checksums

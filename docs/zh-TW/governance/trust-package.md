@@ -28,7 +28,7 @@ description: AIMO 信任套件 - 稽核員就緒材料包。稽核員、法務�
 - **最低證據要求**：按生命週期的必要層級檢查清單 — [最低證據要求](../artifacts/minimum-evidence.md)
 - **驗證器**：規則和參考檢查 — [驗證器](../validator/index.md)
 - **範例**：稽核就緒的樣本套件 — [範例](../examples/index.md)
-- **發布**：變更歷史和發布 — [發布](../releases/index.md)
+- **發布**：變更歷史和發布 — [發布](../../releases/)
 - **治理**：政策、安全、授權 — [治理](../governance/index.md)
 
 ## 稽核就緒的最低要求集
@@ -41,7 +41,7 @@ description: AIMO 信任套件 - 稽核員就緒材料包。稽核員、法務�
 | 證據人工產物 | [證據包](../artifacts/evidence-bundle.md)、[最低證據](../artifacts/minimum-evidence.md)、[EV 範本](../standard/current/06-ev-template.md) | 支援可追溯性必須存在的資料 |
 | 驗證器檢查 | [驗證器](../validator/index.md) | 如何驗證內部一致性和完整性 |
 | 範例套件 | [範例](../examples/index.md) | 稽核就緒套件在實務中的樣子 |
-| 變更控制 | [發布](../releases/index.md)、[治理](../governance/index.md) | 更新如何管理和溝通 |
+| 變更控制 | [發布](../../releases/)、[治理](../governance/index.md) | 更新如何管理和溝通 |
 | 安全 / 授權 / 商標 | [治理](../governance/index.md) | 採用決策的法律和安全態勢 |
 
 ## 如何引用
@@ -102,7 +102,7 @@ AIMO 標準提供結構化證據格式和可解釋性框架。它**不**提供�
 5. **參照發布版本**：記錄您的套件對齊的 AIMO 標準版本（例如 `v1.0.0`）。
 6. **交付**：將 zip、校驗和和版本參照提供給您的稽核員或合規功能。
 
-如需發布資產和驗證，請參閱[發布](../releases/index.md)。
+如需發布資產和驗證，請參閱[發布](../../releases/)。
 
 ## 不過度聲明聲明
 
@@ -233,4 +233,4 @@ python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 3. **必要證據**：[最低證據要求](../artifacts/minimum-evidence.md) — 按生命週期的必要層級檢查清單
 4. **框架對齊**：[覆蓋範圍對應](../coverage-map/index.md) + [方法論](../coverage-map/methodology.md) — 查看 AIMO 如何對應到外部框架
 5. **驗證**：[驗證器](../validator/index.md) — 執行結構一致性檢查
-6. **下載**：[發布](../releases/index.md) — 取得發布資產並驗證校驗和
+6. **下載**：[發布](../../releases/) — 取得發布資產並驗證校驗和

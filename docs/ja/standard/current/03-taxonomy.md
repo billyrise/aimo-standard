@@ -33,10 +33,14 @@ AIMOタクソノミーは、AIシステム、その利用、および関連す�
 従来のセキュリティ統制（例：ISMS）だけでは、LLM/エージェント特有の失敗モードや、自律エージェントの権限行使による逸脱（例：意図しないツール実行、再帰的ループ）を、**監査で説明可能な形**に落とし込むのが困難です。
 AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類し、Evidence要件・是正プロセスへ接続することを目的とします。
 
-（参考：差別化の例。以下のコードは説明用の仮例であり、正式コード体系は本標準の定義に従います）
-- AG-01 Runaway Loop / Recursion（自律反復による逸脱）
-- AG-02 Unauthorized Tool Use（意図しないツール実行・confused deputy化）
-- AG-03 Privilege Boundary Drift（権限境界の曖昧化・拡大）
+!!! warning "参照例にすぎません — 規範コードではありません"
+    以下のコードは**説明用の仮例**であり、規範的なAIMOコード体系の一部**ではありません**。提出・運用には使用せず、[Codes](./04-codes.md)と[Dictionary](./05-dictionary.md)の規範的定義に従ってください。
+
+- **AG-01** Runaway Loop / Recursion（自律反復による逸脱）
+- **AG-02** Unauthorized Tool Use（意図しないツール実行・confused deputy化）
+- **AG-03** Privilege Boundary Drift（権限境界の曖昧化・拡大）
+
+AG-* を提出に使用しないでください。[Codes](./04-codes.md)と[Dictionary](./05-dictionary.md)の規範的次元・コードを使用してください。
 
 ## 次元の概要
 

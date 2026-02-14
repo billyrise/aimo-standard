@@ -60,4 +60,4 @@ Von dieser Seite aus setzt sich die typische Audit-Reise fort:
 1. **Weiter**: [Mindestanforderungen an Evidence](minimum-evidence.md) — MUSS-Checkliste nach Lifecycle
 2. **Dann**: [Coverage Map](../coverage-map/index.md) — Zuordnung zu externen Frameworks
 3. **Validieren**: [Validator](../validator/index.md) — Strukturprüfungen durchführen
-4. **Download**: [Releases](../releases/index.md) — Release-Assets herunterladen und Prüfsummen verifizieren
+4. **Download**: [Releases](../../releases/) — Release-Assets herunterladen und Prüfsummen verifizieren

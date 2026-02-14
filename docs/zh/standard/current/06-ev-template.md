@@ -148,7 +148,7 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 - 模式：`source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
 - 示例：`source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-请参阅 [发布](../../releases/index.md) 获取可下载的包。
+请参阅 [发布](../../../releases/) 获取可下载的包。
 
 ## 分发模式
 

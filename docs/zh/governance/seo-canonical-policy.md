@@ -37,8 +37,8 @@ site_url: https://standard.aimoaas.com/
 
 | 语言 | URL 模式 | 示例 |
 |----------|-------------|---------|
-| 英语（默认） | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
-| 日语 | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
+| 英语（默认） | `https://standard.aimoaas.com/{X.Y.Z}/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| 日语 | `https://standard.aimoaas.com/{X.Y.Z}/ja/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/ja/governance/` |
 
 每个语言版本是自规范的，并包含指向其他语言的 `hreflang` 备选，以及指向英语版本的 `x-default`。
 
@@ -88,10 +88,10 @@ AIMO 标准使用 [mike](https://github.com/jimporter/mike) 进行文档版本�
 
 | 用例 | 推荐URL |
 |----------|-----------------|
-| 当前稳定规范 | `https://standard.aimoaas.com/latest/standard/current/` |
+| 当前稳定规范 | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
 | 特定版本（用于审计） | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
-| 治理与政策 | `https://standard.aimoaas.com/latest/governance/` |
-| 信任包 | `https://standard.aimoaas.com/latest/governance/trust-package/` |
+| 治理与政策 | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| 信任包 | `https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/` |
 
 ### 不要引用
 
@@ -119,12 +119,12 @@ https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
 
 ```html
 <!-- 规范（始终指向生产） -->
-<link rel="canonical" href="https://standard.aimoaas.com/latest/governance/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 
 <!-- 语言备选 -->
-<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/governance/">
-<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/governance/">
-<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/governance/">
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/{X.Y.Z}/ja/governance/">
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 ```
 
 ### robots.txt
@@ -197,5 +197,5 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 ## 相关文档
 
 - [信任包](trust-package.md) — 审计师就绪材料
-- [发布](../releases/index.md) — 版本历史和变更日志
+- [发布](../../releases/) — 版本历史和变更日志
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 版本政策

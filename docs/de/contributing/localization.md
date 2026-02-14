@@ -210,7 +210,7 @@ Für detaillierte technische Spezifikation siehe `tooling/i18n/TRANSLATION_SYNC_
     - `index.md`
     - `standard/current/*.md`
     - `governance/index.md`
-    - `releases/index.md`
+    - `releases/`
 
 ## Hinzufügen einer neuen Sprache (5 Schritte)
 
@@ -290,5 +290,5 @@ mkdocs build --strict
 
 ## Verwandte Seiten
 
-- [Releases](../releases/index.md) — Herunterladbare Pakete
+- [Releases](../../releases/) — Herunterladbare Pakete
 - [Governance](../governance/index.md) — Projekt-Governance

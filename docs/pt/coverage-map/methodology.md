@@ -50,4 +50,4 @@ A partir desta página, continue para:
 
 1. **Mapeamentos de framework**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
 2. **Validar**: [Validador](../validator/index.md) — execute verificações estruturais
-3. **Download**: [Releases](../releases/index.md) — obtenha ativos de release
+3. **Download**: [Releases](../../releases/) — obtenha ativos de release

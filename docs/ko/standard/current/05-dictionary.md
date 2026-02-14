@@ -27,7 +27,7 @@ AIMO 딕셔너리는 분류체계 내의 모든 유효한 코드의 권위 있�
     - **구조**: `data/taxonomy/canonical.yaml` (코드, 상태, 생명주기)
     - **번역**: `data/taxonomy/i18n/*.yaml` (언어별 레이블, 정의)
 
-    CSV 파일은 배포를 위한 **생성된 산출물**입니다. 다운로드는 [릴리스](../../releases/index.md)를 참조하세요.
+    CSV 파일은 배포를 위한 **생성된 산출물**입니다. 다운로드는 [릴리스](../../../releases/)를 참조하세요.
 
 ## 열 스키마
 
@@ -93,7 +93,7 @@ AIMO 딕셔너리는 분류체계 내의 모든 유효한 코드의 권위 있�
 !!! note "완전한 코드 목록"
     91개 코드의 완전한 목록은 생성된 CSV 산출물에서 이용 가능합니다. 이 문서 페이지는 열 정의 및 사용 지침을 제공합니다. 상세 코드 정의는:
 
-    - **다운로드**: 언어별 CSV 파일은 [릴리스](../../releases/index.md) 참조
+    - **다운로드**: 언어별 CSV 파일은 [릴리스](../../../releases/) 참조
     - **언어별 CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
     - **레거시 EN/JA 혼합 CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (동결, 이전 호환성 전용)
 
@@ -191,7 +191,7 @@ X-<ORG>-<DIM>-<TOKEN>
 
 ## 다운로드
 
-딕셔너리 및 관련 파일이 포함된 다운로드 가능 패키지는 [릴리스](../../releases/index.md)를 참조하세요.
+딕셔너리 및 관련 파일이 포함된 다운로드 가능 패키지는 [릴리스](../../../releases/)를 참조하세요.
 
 ## 관련 페이지
 

@@ -27,7 +27,7 @@ AIMO 字典是分類法內所有有效代碼的權威清單。它提供每個代
     - **結構**：`data/taxonomy/canonical.yaml`（代碼、狀態、生命週期）
     - **翻譯**：`data/taxonomy/i18n/*.yaml`（每種語言的標籤、定義）
 
-    CSV 檔案是用於發布的**產生的人工產物**。請參閱[發布](../../releases/index.md)了解下載。
+    CSV 檔案是用於發布的**產生的人工產物**。請參閱[發布](../../../releases/)了解下載。
 
 ## 欄位結構描述
 
@@ -93,7 +93,7 @@ AIMO 字典是分類法內所有有效代碼的權威清單。它提供每個代
 !!! note "完整代碼清單"
     完整的 91 個代碼清單可在產生的 CSV 人工產物中取得。本文件頁面提供欄位定義和使用指引。如需詳細的代碼定義：
 
-    - **下載**：請參閱[發布](../../releases/index.md)了解各語言 CSV 檔案
+    - **下載**：請參閱[發布](../../../releases/)了解各語言 CSV 檔案
     - **各語言 CSV**：`artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
     - **舊版 EN/JA 混合 CSV**：`source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv`（凍結，僅用於向後相容性）
 
@@ -191,7 +191,7 @@ X-<ORG>-<DIM>-<TOKEN>
 
 ## 下載
 
-請參閱[發布](../../releases/index.md)了解包含字典和相關檔案的可下載套件。
+請參閱[發布](../../../releases/)了解包含字典和相關檔案的可下載套件。
 
 ## 相關頁面
 

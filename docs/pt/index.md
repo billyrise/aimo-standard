@@ -22,15 +22,15 @@ Nota: O AIMO Standard não fornece aconselhamento jurídico nem garante automati
 2. [Artefatos](artifacts/index.md) — Taxonomia, sistema de códigos, dicionário, templates de evidências, schemas
 3. [Validador](validator/index.md) — Regras, verificações de referência, como executar
 4. [Exemplos](examples/index.md) — Amostras completas e mínimas
-5. [Releases](releases/index.md) — Changelog, migração, checksums, PDF
+5. [Releases](releases/) — Changelog, migração, checksums, PDF
 6. [Governança](governance/index.md) — Versionamento, segurança, licença, marcas registradas, [Contribuição](contributing/localization.md)
 
 **Links rápidos por audiência**
 
-- **Para auditores**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Dicionário](standard/current/05-dictionary.md), [Pacote de Evidências](artifacts/evidence-bundle.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Mapa de Cobertura](coverage-map/index.md), [Validador](validator/index.md), [Releases](releases/index.md)
+- **Para auditores**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Dicionário](standard/current/05-dictionary.md), [Pacote de Evidências](artifacts/evidence-bundle.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Mapa de Cobertura](coverage-map/index.md), [Validador](validator/index.md), [Releases](releases/)
 - **Para segurança**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Limite de Responsabilidade](governance/responsibility-boundary.md), [Governança](governance/index.md), [Validador](validator/index.md), [Padrão > Template EV](standard/current/06-ev-template.md)
-- **Para operações de TI**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Releases](releases/index.md), [Validador](validator/index.md), [Exemplos](examples/index.md), [Conformidade](conformance/index.md)
-- **Para jurídico/compras**: [Trust Package](governance/trust-package.md), [Limite de Responsabilidade](governance/responsibility-boundary.md), [Metodologia do Mapa de Cobertura](coverage-map/methodology.md), [Releases](releases/index.md), [Governança](governance/index.md) (licença, marcas registradas)
+- **Para operações de TI**: [Trust Package](governance/trust-package.md), [Taxonomia](standard/current/03-taxonomy.md), [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md), [Releases](releases/), [Validador](validator/index.md), [Exemplos](examples/index.md), [Conformidade](conformance/index.md)
+- **Para jurídico/compras**: [Trust Package](governance/trust-package.md), [Limite de Responsabilidade](governance/responsibility-boundary.md), [Metodologia do Mapa de Cobertura](coverage-map/methodology.md), [Releases](releases/), [Governança](governance/index.md) (licença, marcas registradas)
 
 **Jornada de auditoria** (caminho de 2 cliques):
 
@@ -40,4 +40,4 @@ Nota: O AIMO Standard não fornece aconselhamento jurídico nem garante automati
 4. [Requisitos Mínimos de Evidências](artifacts/minimum-evidence.md) — checklist de nível DEVE
 5. [Mapa de Cobertura](coverage-map/index.md) + [Metodologia](coverage-map/methodology.md) — mapeamentos de frameworks
 6. [Validador](validator/index.md) — execute verificações estruturais
-7. [Releases](releases/index.md) — baixe ativos e verifique
+7. [Releases](releases/) — baixe ativos e verifique

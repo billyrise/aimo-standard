@@ -267,7 +267,7 @@ AIMO 표준은 [시맨틱 버전 관리](https://semver.org/) (SemVer)를 따릅
 
 ## 리소스
 
-- **[릴리스 허브](../../releases/index.md)** — 제출 준비, 감사자 검증, 과대 주장 금지 선언
+- **[릴리스 허브](../../../releases/)** — 제출 준비, 감사자 검증, 과대 주장 금지 선언
 - **[신뢰 패키지](../../governance/trust-package.md)** — 감사자 준비 보증 자료
 - **[변경로그 (상세)](../current/08-changelog.md)** — 폐기 추적이 있는 전체 변경 이력
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — 완전한 버전 관리 정책

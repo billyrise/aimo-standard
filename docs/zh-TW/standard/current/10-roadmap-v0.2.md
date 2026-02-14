@@ -23,4 +23,4 @@ This page summarizes planned directions for a **future major version** (v0.2). I
 
 - [v0.1 object model scope](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md) — v0.1 MUST vs reserved
 - [Signature verification roadmap](../../artifacts/signature-verification-roadmap.md) — signing and verification evolution
-- [Releases](../../releases/index.md) — release assets and changelog
+- [Releases](../../../releases/) — release assets and changelog

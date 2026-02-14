@@ -60,4 +60,4 @@ A partir desta página, a jornada típica de auditoria continua:
 1. **Próximo**: [Requisitos Mínimos de Evidências](minimum-evidence.md) — checklist de nível DEVE por ciclo de vida
 2. **Depois**: [Mapa de Cobertura](../coverage-map/index.md) — mapeamento para frameworks externos
 3. **Validar**: [Validador](../validator/index.md) — execute verificações estruturais
-4. **Download**: [Releases](../releases/index.md) — obtenha ativos de release e verifique checksums
+4. **Download**: [Releases](../../releases/) — obtenha ativos de release e verifique checksums

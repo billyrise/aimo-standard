@@ -267,7 +267,7 @@ Ogni release crea uno snapshot di documentazione congelato accessibile su:
 
 ## Risorse
 
-- **[Hub Release](../../releases/index.md)** — Preparazione della submission, verifica per auditor, dichiarazione di non sovra-dichiarazione
+- **[Hub Release](../../../releases/)** — Preparazione della submission, verifica per auditor, dichiarazione di non sovra-dichiarazione
 - **[Trust Package](../../governance/trust-package.md)** — Materiali di assicurazione pronti per l'auditor
 - **[Changelog (dettagliato)](../current/08-changelog.md)** — Cronologia completa delle modifiche con tracciamento deprecazioni
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Politica di versionamento completa

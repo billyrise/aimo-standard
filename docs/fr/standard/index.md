@@ -28,4 +28,4 @@ Pour les versions officielles figées et les instantanés versionnés, voir [Ver
 - **[Conformité](../conformance/index.md)** — Comment se conformer au standard et niveaux de conformité
 - **[Carte de couverture](../coverage-map/index.md)** — Correspondance avec les cadres externes (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 
-Pour les actifs de version téléchargeables et les PDF, voir [Versions](../releases/index.md).
+Pour les actifs de version téléchargeables et les PDF, voir [Versions](../releases/).

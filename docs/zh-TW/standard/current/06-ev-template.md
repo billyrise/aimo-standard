@@ -148,7 +148,7 @@ description: AIMO 證據包範本和使用指南。使用索引管理和稽核�
 - 結構描述：`source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
 - 範例：`source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-請參閱[發布](../../releases/index.md)了解可下載的套件。
+請參閱[發布](../../../releases/)了解可下載的套件。
 
 ## 發布模型
 

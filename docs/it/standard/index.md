@@ -28,4 +28,4 @@ Per le release ufficiali congelate e gli snapshot versionati, vedere [Versioni](
 - **[Conformità](../conformance/index.md)** — Come conformarsi allo standard e livelli di conformità
 - **[Mappa di Copertura](../coverage-map/index.md)** — Mappatura verso framework esterni (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 
-Per asset di release scaricabili e PDF, vedere [Release](../releases/index.md).
+Per asset di release scaricabili e PDF, vedere [Release](../releases/).

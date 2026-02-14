@@ -28,4 +28,4 @@ description: AIMO 표준 사양 허브. 현재 버전, 버전 이력, 적합성 
 - **[적합성](../conformance/index.md)** — 표준 준수 방법 및 적합성 수준
 - **[커버리지 맵](../coverage-map/index.md)** — 외부 프레임워크에 대한 매핑 (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 
-다운로드 가능 릴리스 자산 및 PDF는 [릴리스](../releases/index.md)를 참조하세요.
+다운로드 가능 릴리스 자산 및 PDF는 [릴리스](../releases/)를 참조하세요.

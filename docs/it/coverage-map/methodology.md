@@ -50,4 +50,4 @@ Da questa pagina, continuare verso:
 
 1. **Mappature framework**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
 2. **Validazione**: [Validator](../validator/index.md) — eseguire controlli strutturali
-3. **Download**: [Release](../releases/index.md) — ottenere gli asset di release
+3. **Download**: [Release](../../releases/) — ottenere gli asset di release

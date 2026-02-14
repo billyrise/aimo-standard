@@ -28,7 +28,7 @@ Il Trust Package PDF consolida i materiali pronti per l'auditor in un singolo do
 - **Requisiti Minimi di Evidence**: checklist MUST-level per ciclo di vita — [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md)
 - **Validator**: regole e controlli di riferimento — [Validator](../validator/index.md)
 - **Esempi**: bundle di esempio pronti per l'audit — [Esempi](../examples/index.md)
-- **Release**: cronologia delle modifiche e distribuzione — [Release](../releases/index.md)
+- **Release**: cronologia delle modifiche e distribuzione — [Release](../../releases/)
 - **Governance**: politiche, sicurezza, licenze — [Governance](../governance/index.md)
 
 ## Set minimo per la prontezza all'audit
@@ -41,7 +41,7 @@ Il Trust Package PDF consolida i materiali pronti per l'auditor in un singolo do
 | Artefatti di evidence | [Evidence Bundle](../artifacts/evidence-bundle.md), [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md), [Template EV](../standard/current/06-ev-template.md) | Quali dati devono esistere per supportare la tracciabilità |
 | Controlli del validator | [Validator](../validator/index.md) | Come verificare la coerenza interna e la completezza |
 | Bundle di esempio | [Esempi](../examples/index.md) | Come appare in pratica un pacchetto pronto per l'audit |
-| Controllo delle modifiche | [Release](../releases/index.md), [Governance](../governance/index.md) | Come gli aggiornamenti sono gestiti e comunicati |
+| Controllo delle modifiche | [Release](../../releases/), [Governance](../governance/index.md) | Come gli aggiornamenti sono gestiti e comunicati |
 | Sicurezza / Licenza / Marchi | [Governance](../governance/index.md) | Postura legale e di sicurezza per le decisioni di adozione |
 
 ## Come citare
@@ -102,7 +102,7 @@ Seguire questi passaggi per preparare una submission pronta per l'audit:
 5. **Referenziare la Versione di Release**: Annotare quale versione dello Standard AIMO (es. `v1.0.0`) il bundle è allineato.
 6. **Consegnare**: Fornire lo zip, i checksum e il riferimento alla versione al proprio auditor o funzione di conformità.
 
-Per gli asset di release e la verifica, vedere [Release](../releases/index.md).
+Per gli asset di release e la verifica, vedere [Release](../../releases/).
 
 ## Dichiarazione di non sovra-dichiarazione
 
@@ -233,4 +233,4 @@ Da questa pagina, il percorso di audit raccomandato è:
 3. **Evidence richiesta**: [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md) — checklist MUST-level per ciclo di vita
 4. **Allineamento ai framework**: [Mappa di Copertura](../coverage-map/index.md) + [Metodologia](../coverage-map/methodology.md) — vedere come AIMO si mappa ai framework esterni
 5. **Validazione**: [Validator](../validator/index.md) — eseguire controlli di coerenza strutturale
-6. **Download**: [Release](../releases/index.md) — ottenere gli asset di release e verificare i checksum
+6. **Download**: [Release](../../releases/) — ottenere gli asset di release e verificare i checksum

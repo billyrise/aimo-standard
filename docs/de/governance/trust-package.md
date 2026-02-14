@@ -28,7 +28,7 @@ Das Trust Package PDF konsolidiert prüfungsbereite Materialien in einem einzige
 - **Mindestanforderungen an Evidence**: MUSS-Checkliste nach Lifecycle — [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md)
 - **Validator**: Regeln und Referenzprüfungen — [Validator](../validator/index.md)
 - **Beispiele**: Prüfungsbereite Beispiel-Bundles — [Beispiele](../examples/index.md)
-- **Releases**: Änderungshistorie und Distribution — [Releases](../releases/index.md)
+- **Releases**: Änderungshistorie und Distribution — [Releases](../../releases/)
 - **Governance**: Richtlinien, Sicherheit, Lizenzierung — [Governance](../governance/index.md)
 
 ## Mindestset für Audit-Bereitschaft
@@ -41,7 +41,7 @@ Das Trust Package PDF konsolidiert prüfungsbereite Materialien in einem einzige
 | Evidence-Artefakte | [Evidence Bundle](../artifacts/evidence-bundle.md), [Mindestanforderungen](../artifacts/minimum-evidence.md), [EV-Template](../standard/current/06-ev-template.md) | Welche Daten existieren müssen, um Nachverfolgbarkeit zu unterstützen |
 | Validator-Prüfungen | [Validator](../validator/index.md) | Wie interne Konsistenz und Vollständigkeit verifiziert werden |
 | Beispiel-Bundle | [Beispiele](../examples/index.md) | Wie ein prüfungsbereites Paket in der Praxis aussieht |
-| Änderungskontrolle | [Releases](../releases/index.md), [Governance](../governance/index.md) | Wie Updates verwaltet und kommuniziert werden |
+| Änderungskontrolle | [Releases](../../releases/), [Governance](../governance/index.md) | Wie Updates verwaltet und kommuniziert werden |
 | Sicherheit / Lizenz / Marken | [Governance](../governance/index.md) | Rechtliche und Sicherheitsposition für Einführungsentscheidungen |
 
 ## Zitierung
@@ -102,7 +102,7 @@ Folgen Sie diesen Schritten, um eine prüfungsbereite Einreichung vorzubereiten:
 5. **Release-Version referenzieren**: Notieren Sie, welche AIMO Standard-Version (z.B. `v1.0.0`) Ihr Bundle verwendet.
 6. **Übergeben**: Stellen Sie ZIP, Prüfsummen und Versionsreferenz Ihrem Prüfer oder Ihrer Compliance-Funktion bereit.
 
-Für Release-Assets und Verifizierung siehe [Releases](../releases/index.md).
+Für Release-Assets und Verifizierung siehe [Releases](../../releases/).
 
 ## Keine-Überbeanspruchung-Erklärung
 
@@ -233,4 +233,4 @@ Von dieser Seite aus ist die empfohlene Audit-Reise:
 3. **Erforderliches Evidence**: [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md) — MUSS-Checkliste nach Lifecycle
 4. **Framework-Ausrichtung**: [Coverage Map](../coverage-map/index.md) + [Methodologie](../coverage-map/methodology.md) — sehen, wie AIMO externen Frameworks zugeordnet ist
 5. **Validierung**: [Validator](../validator/index.md) — strukturelle Konsistenzprüfungen ausführen
-6. **Download**: [Releases](../releases/index.md) — Release-Assets herunterladen und Prüfsummen verifizieren
+6. **Download**: [Releases](../../releases/) — Release-Assets herunterladen und Prüfsummen verifizieren

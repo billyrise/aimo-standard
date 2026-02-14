@@ -50,4 +50,4 @@ Depuis cette page, continuez vers :
 
 1. **Correspondances de cadres** : [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
 2. **Valider** : [Validateur](../validator/index.md) — exécuter les vérifications structurelles
-3. **Télécharger** : [Versions](../releases/index.md) — obtenir les actifs de version
+3. **Télécharger** : [Versions](../../releases/) — obtenir les actifs de version

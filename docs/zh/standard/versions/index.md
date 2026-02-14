@@ -267,7 +267,7 @@ AIMO 标准遵循 [语义版本控制](https://semver.org/)（SemVer）：
 
 ## 资源
 
-- **[发布中心](../../releases/index.md)** — 提交准备、审计师验证、不过度声明声明
+- **[发布中心](../../../releases/)** — 提交准备、审计师验证、不过度声明声明
 - **[信任包](../../governance/trust-package.md)** — 审计师就绪的保证材料
 - **[变更日志（详细）](../current/08-changelog.md)** — 带弃用跟踪的完整变更历史
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — 完整版本控制政策

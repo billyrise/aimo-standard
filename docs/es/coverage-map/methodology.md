@@ -50,4 +50,4 @@ Desde esta página, continúe a:
 
 1. **Mapeos de marcos**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
 2. **Validar**: [Validador](../validator/index.md) — ejecutar verificaciones estructurales
-3. **Descargar**: [Versiones](../releases/index.md) — obtener activos de versión
+3. **Descargar**: [Versiones](../../releases/) — obtener activos de versión

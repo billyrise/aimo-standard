@@ -148,7 +148,7 @@ Templates de Evidence Pack estão disponíveis no repositório. Use **file_id** 
 - Schema: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
 - Exemplo: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-Veja [Releases](../../releases/index.md) para pacotes para download.
+Veja [Releases](../../../releases/) para pacotes para download.
 
 ## Modelo de Distribuição
 

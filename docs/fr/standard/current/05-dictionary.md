@@ -27,7 +27,7 @@ Le dictionnaire permet :
     - **Structure** : `data/taxonomy/canonical.yaml` (codes, statut, cycle de vie)
     - **Traductions** : `data/taxonomy/i18n/*.yaml` (libellés, définitions par langue)
 
-    Les fichiers CSV sont des **artefacts générés** pour la distribution. Voir [Versions](../../releases/index.md) pour les téléchargements.
+    Les fichiers CSV sont des **artefacts générés** pour la distribution. Voir [Versions](../../../releases/) pour les téléchargements.
 
 ## Schéma de colonnes
 
@@ -93,7 +93,7 @@ La version actuelle du dictionnaire est **v0.1.0** et contient :
 !!! note "Listes complètes de codes"
     La liste complète des 91 codes est disponible dans les artefacts CSV générés. Cette page de documentation fournit les définitions de colonnes et les conseils d'utilisation. Pour les définitions détaillées des codes :
 
-    - **Téléchargement** : Voir [Versions](../../releases/index.md) pour les fichiers CSV par langue
+    - **Téléchargement** : Voir [Versions](../../../releases/) pour les fichiers CSV par langue
     - **CSV par langue** : `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
     - **CSV hérité mixte EN/JA** : `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (figé, pour rétrocompatibilité uniquement)
 
@@ -191,7 +191,7 @@ Exemple : `X-ACME-UC-901` pour le code de cas d'usage personnalisé d'ACME Corpo
 
 ## Téléchargements
 
-Voir [Versions](../../releases/index.md) pour les packages téléchargeables contenant le dictionnaire et les fichiers associés.
+Voir [Versions](../../../releases/) pour les packages téléchargeables contenant le dictionnaire et les fichiers associés.
 
 ## Pages connexes
 

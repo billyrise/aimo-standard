@@ -22,15 +22,15 @@ AIMO 标准使用共享语言（分类法）对AI使用进行分类，定义最�
 2. [工件](artifacts/index.md) — 分类法、代码系统、字典、证据模板、模式
 3. [验证器](validator/index.md) — 规则、参考检查、如何运行
 4. [示例](examples/index.md) — 端到端和最小示例
-5. [发布](releases/index.md) — 变更日志、迁移、校验和、PDF
+5. [发布](releases/) — 变更日志、迁移、校验和、PDF
 6. [治理](governance/index.md) — 版本管理、安全、许可、商标、[贡献](contributing/localization.md)
 
 **按受众的快速链接**
 
-- **审计师**：[信任包](governance/trust-package.md)、[分类法](standard/current/03-taxonomy.md)、[字典](standard/current/05-dictionary.md)、[证据包](artifacts/evidence-bundle.md)、[最低证据要求](artifacts/minimum-evidence.md)、[覆盖映射](coverage-map/index.md)、[验证器](validator/index.md)、[发布](releases/index.md)
+- **审计师**：[信任包](governance/trust-package.md)、[分类法](standard/current/03-taxonomy.md)、[字典](standard/current/05-dictionary.md)、[证据包](artifacts/evidence-bundle.md)、[最低证据要求](artifacts/minimum-evidence.md)、[覆盖映射](coverage-map/index.md)、[验证器](validator/index.md)、[发布](releases/)
 - **安全**：[信任包](governance/trust-package.md)、[分类法](standard/current/03-taxonomy.md)、[最低证据要求](artifacts/minimum-evidence.md)、[责任边界](governance/responsibility-boundary.md)、[治理](governance/index.md)、[验证器](validator/index.md)、[标准 > EV 模板](standard/current/06-ev-template.md)
-- **IT运维**：[信任包](governance/trust-package.md)、[分类法](standard/current/03-taxonomy.md)、[最低证据要求](artifacts/minimum-evidence.md)、[发布](releases/index.md)、[验证器](validator/index.md)、[示例](examples/index.md)、[符合性](conformance/index.md)
-- **法律/采购**：[信任包](governance/trust-package.md)、[责任边界](governance/responsibility-boundary.md)、[覆盖映射方法论](coverage-map/methodology.md)、[发布](releases/index.md)、[治理](governance/index.md)（许可、商标）
+- **IT运维**：[信任包](governance/trust-package.md)、[分类法](standard/current/03-taxonomy.md)、[最低证据要求](artifacts/minimum-evidence.md)、[发布](releases/)、[验证器](validator/index.md)、[示例](examples/index.md)、[符合性](conformance/index.md)
+- **法律/采购**：[信任包](governance/trust-package.md)、[责任边界](governance/responsibility-boundary.md)、[覆盖映射方法论](coverage-map/methodology.md)、[发布](releases/)、[治理](governance/index.md)（许可、商标）
 
 **审计旅程**（2次点击路径）：
 
@@ -40,4 +40,4 @@ AIMO 标准使用共享语言（分类法）对AI使用进行分类，定义最�
 4. [最低证据要求](artifacts/minimum-evidence.md) — MUST 级别清单
 5. [覆盖映射](coverage-map/index.md) + [方法论](coverage-map/methodology.md) — 框架映射
 6. [验证器](validator/index.md) — 运行结构检查
-7. [发布](releases/index.md) — 下载资产并验证
+7. [发布](releases/) — 下载资产并验证

@@ -148,7 +148,7 @@ Evidence Packテンプレートはリポジトリ内で利用可能です。マ�
 - スキーマ: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
 - 例: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-ダウンロード可能なパッケージは[リリース](../../releases/index.md)を参照してください。
+ダウンロード可能なパッケージは[リリース](../../../releases/)を参照してください。
 
 ## 配布モデル
 

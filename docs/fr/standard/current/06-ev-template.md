@@ -148,7 +148,7 @@ Les modèles Evidence Pack sont disponibles dans le dépôt. Utilisez **file_id*
 - Schéma : `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
 - Exemple : `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-Voir [Versions](../../releases/index.md) pour les packages téléchargeables.
+Voir [Versions](../../../releases/) pour les packages téléchargeables.
 
 ## Modèle de distribution
 

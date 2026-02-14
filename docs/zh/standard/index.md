@@ -28,4 +28,4 @@ description: AIMO 标准规范中心。访问当前版本、版本历史、符�
 - **[符合性](../conformance/index.md)** — 如何符合标准和符合性级别
 - **[覆盖映射](../coverage-map/index.md)** — 与外部框架的映射（ISO 42001、NIST AI RMF、欧盟AI法案、ISMS）
 
-有关可下载的发布资产和 PDF，请参阅 [发布](../releases/index.md)。
+有关可下载的发布资产和 PDF，请参阅 [发布](../releases/)。

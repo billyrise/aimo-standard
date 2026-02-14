@@ -60,4 +60,4 @@ description: AIMO 證據包結構。包含目錄、可追溯性和人工產物�
 1. **下一步**：[最低證據要求](minimum-evidence.md) — 按生命週期的必要層級檢查清單
 2. **然後**：[覆蓋範圍對應](../coverage-map/index.md) — 對應到外部框架
 3. **驗證**：[驗證器](../validator/index.md) — 執行結構檢查
-4. **下載**：[發布](../releases/index.md) — 取得發布資產並驗證校驗和
+4. **下載**：[發布](../../releases/) — 取得發布資產並驗證校驗和
