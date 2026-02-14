@@ -6,11 +6,11 @@ description: AIMO 验证器 - 确保证据包符合 AIMO 标准模式。合规�
 
 AIMO 验证器确保证据包和相关工件符合 AIMO 标准模式和要求。
 
-另请参阅：[人工监督协议](../../governance/human-oversight-protocol.md) — 机器与人工审查的责任边界。
+另请参阅：[人工监督协议](../../../governance/human-oversight-protocol/) — 机器与人工审查的责任边界。
 
 ## 实践中的验证器
 
-有关30秒快速入门（安装、运行、解释输出），请参阅 [验证器中心](../../validator/index.md)。
+有关30秒快速入门（安装、运行、解释输出），请参阅 [验证器中心](../../../validator/)。
 
 ## 验证器 MVP 要求
 
@@ -202,7 +202,7 @@ python validator/src/validate.py <manifest.json>
 
 ## 参考
 
-- [分类法](./03-taxonomy.md) - 维度定义
-- [代码](./04-codes.md) - 代码格式
-- [字典](./05-dictionary.md) - 代码字典
-- [验证器规则](../../validator/index.md) - 完整规则文档
+- [分类法](../03-taxonomy/) - 维度定义
+- [代码](../04-codes/) - 代码格式
+- [字典](../05-dictionary/) - 代码字典
+- [验证器规则](../../../validator/) - 完整规则文档

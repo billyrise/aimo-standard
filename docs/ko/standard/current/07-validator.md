@@ -6,11 +6,11 @@ description: AIMO 검증기 - 증거 팩이 AIMO 표준 스키마에 부합하�
 
 AIMO 검증기는 증거 팩 및 관련 산출물이 AIMO 표준 스키마 및 요구사항에 부합하는지 확인합니다.
 
-참조: [인간 감독 프로토콜](../../governance/human-oversight-protocol.md) — 기계 vs. 인간 검토의 책임 경계.
+참조: [인간 감독 프로토콜](../../../governance/human-oversight-protocol/) — 기계 vs. 인간 검토의 책임 경계.
 
 ## 실제 검증기
 
-30초 빠른 시작(설치, 실행, 출력 해석)은 [검증기 허브](../../validator/index.md)를 참조하세요.
+30초 빠른 시작(설치, 실행, 출력 해석)은 [검증기 허브](../../../validator/)를 참조하세요.
 
 ## 검증기 MVP 요구사항
 
@@ -202,7 +202,7 @@ Validation: PASSED
 
 ## 참조
 
-- [분류체계](./03-taxonomy.md) - 차원 정의
-- [코드](./04-codes.md) - 코드 형식
-- [딕셔너리](./05-dictionary.md) - 코드 딕셔너리
-- [검증기 규칙](../../validator/index.md) - 전체 규칙 문서
+- [분류체계](../03-taxonomy/) - 차원 정의
+- [코드](../04-codes/) - 코드 형식
+- [딕셔너리](../05-dictionary/) - 코드 딕셔너리
+- [검증기 규칙](../../../validator/) - 전체 규칙 문서

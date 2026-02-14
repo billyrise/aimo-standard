@@ -67,8 +67,9 @@ AIMO 표준은 `alias_type: redirect`로 문서 버전화를 위해 [mike](https
 
 ```html
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.0.1/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
+<!-- Latest alias (redirect stub); canonical points to versioned snapshot -->
+<meta http-equiv="refresh" content="0; url=../{X.Y.Z}/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/">
 ```
 
 이것은 다음을 보장합니다:
@@ -196,6 +197,6 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 
 ## 관련 문서
 
-- [신뢰 패키지](trust-package.md) — 감사자 준비 자료
+- [신뢰 패키지](../trust-package/) — 감사자 준비 자료
 - [릴리스](../../releases/) — 버전 이력 및 변경로그
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 버전 정책

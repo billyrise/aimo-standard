@@ -20,34 +20,34 @@ Das Trust Package PDF konsolidiert prüfungsbereite Materialien in einem einzige
 
 ## Was Sie erhalten
 
-- **Konformität**: Wie man Compliance beansprucht und was die Stufen bedeuten — [Konformität](../conformance/index.md)
-- **Coverage Map**: Zuordnung zu externen Standards — [Coverage Map-Index](../coverage-map/index.md), [Coverage Map-Methodologie](../coverage-map/methodology.md)
-- **Standard**: Normative Anforderungen und Definitionen — [Standard (Aktuell)](../standard/current/index.md)
-- **Taxonomie**: 8-Dimensionen-Klassifizierungssystem für KI-Governance — [Taxonomie](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md)
-- **Evidence Bundle**: Struktur, TOC, Nachverfolgbarkeit — [Evidence Bundle](../artifacts/evidence-bundle.md)
-- **Mindestanforderungen an Evidence**: MUSS-Checkliste nach Lifecycle — [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md)
-- **Validator**: Regeln und Referenzprüfungen — [Validator](../validator/index.md)
-- **Beispiele**: Prüfungsbereite Beispiel-Bundles — [Beispiele](../examples/index.md)
+- **Konformität**: Wie man Compliance beansprucht und was die Stufen bedeuten — [Konformität](../../conformance/)
+- **Coverage Map**: Zuordnung zu externen Standards — [Coverage Map-Index](../../coverage-map/), [Coverage Map-Methodologie](../../coverage-map/methodology/)
+- **Standard**: Normative Anforderungen und Definitionen — [Standard (Aktuell)](../../standard/current/)
+- **Taxonomie**: 8-Dimensionen-Klassifizierungssystem für KI-Governance — [Taxonomie](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/)
+- **Evidence Bundle**: Struktur, TOC, Nachverfolgbarkeit — [Evidence Bundle](../../artifacts/evidence-bundle/)
+- **Mindestanforderungen an Evidence**: MUSS-Checkliste nach Lifecycle — [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/)
+- **Validator**: Regeln und Referenzprüfungen — [Validator](../../validator/)
+- **Beispiele**: Prüfungsbereite Beispiel-Bundles — [Beispiele](../../examples/)
 - **Releases**: Änderungshistorie und Distribution — [Releases](../../releases/)
-- **Governance**: Richtlinien, Sicherheit, Lizenzierung — [Governance](../governance/index.md)
+- **Governance**: Richtlinien, Sicherheit, Lizenzierung — [Governance](../../governance/)
 
 ## Mindestset für Audit-Bereitschaft
 
 | Element | Wo zu finden | Ergebnis / Was es beweist |
 | --- | --- | --- |
-| Konformitätsstufen | [Konformität](../conformance/index.md) | Wie man Compliance beansprucht und der Umfang des erforderlichen Evidence |
-| Coverage Mapping | [Coverage Map-Index](../coverage-map/index.md), [Coverage Map-Methodologie](../coverage-map/methodology.md) | Erklärbarkeit gegenüber externen Vorschriften und Standards |
-| Taxonomie & Dictionary | [Taxonomie](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md) | Klassifizierungssystem für KI-Systeme (8 Dimensionen, 91 Codes) |
-| Evidence-Artefakte | [Evidence Bundle](../artifacts/evidence-bundle.md), [Mindestanforderungen](../artifacts/minimum-evidence.md), [EV-Template](../standard/current/06-ev-template.md) | Welche Daten existieren müssen, um Nachverfolgbarkeit zu unterstützen |
-| Validator-Prüfungen | [Validator](../validator/index.md) | Wie interne Konsistenz und Vollständigkeit verifiziert werden |
-| Beispiel-Bundle | [Beispiele](../examples/index.md) | Wie ein prüfungsbereites Paket in der Praxis aussieht |
-| Änderungskontrolle | [Releases](../../releases/), [Governance](../governance/index.md) | Wie Updates verwaltet und kommuniziert werden |
-| Sicherheit / Lizenz / Marken | [Governance](../governance/index.md) | Rechtliche und Sicherheitsposition für Einführungsentscheidungen |
+| Konformitätsstufen | [Konformität](../../conformance/) | Wie man Compliance beansprucht und der Umfang des erforderlichen Evidence |
+| Coverage Mapping | [Coverage Map-Index](../../coverage-map/), [Coverage Map-Methodologie](../../coverage-map/methodology/) | Erklärbarkeit gegenüber externen Vorschriften und Standards |
+| Taxonomie & Dictionary | [Taxonomie](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/) | Klassifizierungssystem für KI-Systeme (8 Dimensionen, 91 Codes) |
+| Evidence-Artefakte | [Evidence Bundle](../../artifacts/evidence-bundle/), [Mindestanforderungen](../../artifacts/minimum-evidence/), [EV-Template](../../standard/current/06-ev-template/) | Welche Daten existieren müssen, um Nachverfolgbarkeit zu unterstützen |
+| Validator-Prüfungen | [Validator](../../validator/) | Wie interne Konsistenz und Vollständigkeit verifiziert werden |
+| Beispiel-Bundle | [Beispiele](../../examples/) | Wie ein prüfungsbereites Paket in der Praxis aussieht |
+| Änderungskontrolle | [Releases](../../releases/), [Governance](../../governance/) | Wie Updates verwaltet und kommuniziert werden |
+| Sicherheit / Lizenz / Marken | [Governance](../../governance/) | Rechtliche und Sicherheitsposition für Einführungsentscheidungen |
 
 ## Zitierung
 
 Verwenden Sie die Repository-README für Zitierhinweise und Kontext; Governance verlinkt zu den maßgeblichen Richtlinien.
-Siehe [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) und [Governance](../governance/index.md).
+Siehe [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) und [Governance](../../governance/).
 
 ## Artefakte-ZIP-Inhalte
 
@@ -65,13 +65,13 @@ Das `aimo-standard-artifacts.zip` enthält:
 
 Der AIMO Standard bietet ein strukturiertes Evidence-Format und Erklärbarkeitsrahmen. Er bietet **keine** Rechtsberatung, Compliance-Zertifizierung, Risikobewertung oder Audit-Durchführung.
 
-Für die vollständige Umfangsdefinition, Annahmen und Anwenderverantwortlichkeiten siehe [Verantwortungsgrenze](responsibility-boundary.md).
+Für die vollständige Umfangsdefinition, Annahmen und Anwenderverantwortlichkeiten siehe [Verantwortungsgrenze](../responsibility-boundary/).
 
 ## Wie man ein Einreichungspaket vorbereitet
 
 Folgen Sie diesen Schritten, um eine prüfungsbereite Einreichung vorzubereiten:
 
-1. **Evidence Bundle generieren**: EV-Datensätze, Dictionary, Summary und Change Log gemäß [Evidence Bundle](../artifacts/evidence-bundle.md) und [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md) erstellen.
+1. **Evidence Bundle generieren**: EV-Datensätze, Dictionary, Summary und Change Log gemäß [Evidence Bundle](../../artifacts/evidence-bundle/) und [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) erstellen.
 2. **Validator ausführen**: `python validator/src/validate.py bundle/root.json` ausführen, um strukturelle Konsistenz zu prüfen. Fehler vor dem Fortfahren beheben.
 3. **Prüfsummen erstellen**: SHA-256-Prüfsummen für alle Einreichungsdateien generieren:
 
@@ -109,14 +109,14 @@ Für Release-Assets und Verifizierung siehe [Releases](../../releases/).
 !!! warning "Wichtig"
     Der AIMO Standard unterstützt **Erklärbarkeit und Evidence-Bereitschaft**. Er bietet **keine** Rechtsberatung, garantiert keine Compliance und zertifiziert keine Konformität mit Vorschriften oder Frameworks. Anwender müssen Ansprüche gegen maßgebliche Texte verifizieren und bei Bedarf professionelle Beratung einholen.
 
-Siehe [Verantwortungsgrenze](responsibility-boundary.md) für Details zu Umfang, Annahmen und Anwenderverantwortlichkeiten.
+Siehe [Verantwortungsgrenze](../responsibility-boundary/) für Details zu Umfang, Annahmen und Anwenderverantwortlichkeiten.
 
 ## Für Prüfer: Verifizierungsverfahren
 
 Bei Erhalt einer Evidence-Einreichung sollten Prüfer Integrität und Struktur mit den folgenden Schritten verifizieren:
 
 !!! success "Build-Provenienz verfügbar"
-    Alle Release-Assets enthalten kryptografisch signierte Build-Attestierungen. Siehe [Verifizierungsverfahren](../standard/versions/index.md#4-verify-build-provenance-attestation) für Attestierungsverifizierungsschritte.
+    Alle Release-Assets enthalten kryptografisch signierte Build-Attestierungen. Siehe [Verifizierungsverfahren](../../standard/versions/#4-verify-build-provenance-attestation) für Attestierungsverifizierungsschritte.
 
 ### Schritt 1: Prüfsummen verifizieren (SHA-256)
 
@@ -228,9 +228,9 @@ Prüfen, dass die Einreichung ein offizielles AIMO Standard Release referenziert
 
 Von dieser Seite aus ist die empfohlene Audit-Reise:
 
-1. **Klassifizierungssystem**: [Taxonomie](../standard/current/03-taxonomy.md) + [Dictionary](../standard/current/05-dictionary.md) — das 8-Dimensionen-Code-System verstehen
-2. **Evidence-Struktur**: [Evidence Bundle](../artifacts/evidence-bundle.md) — Bundle-TOC und Nachverfolgbarkeit verstehen
-3. **Erforderliches Evidence**: [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md) — MUSS-Checkliste nach Lifecycle
-4. **Framework-Ausrichtung**: [Coverage Map](../coverage-map/index.md) + [Methodologie](../coverage-map/methodology.md) — sehen, wie AIMO externen Frameworks zugeordnet ist
-5. **Validierung**: [Validator](../validator/index.md) — strukturelle Konsistenzprüfungen ausführen
+1. **Klassifizierungssystem**: [Taxonomie](../../standard/current/03-taxonomy/) + [Dictionary](../../standard/current/05-dictionary/) — das 8-Dimensionen-Code-System verstehen
+2. **Evidence-Struktur**: [Evidence Bundle](../../artifacts/evidence-bundle/) — Bundle-TOC und Nachverfolgbarkeit verstehen
+3. **Erforderliches Evidence**: [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) — MUSS-Checkliste nach Lifecycle
+4. **Framework-Ausrichtung**: [Coverage Map](../../coverage-map/) + [Methodologie](../../coverage-map/methodology/) — sehen, wie AIMO externen Frameworks zugeordnet ist
+5. **Validierung**: [Validator](../../validator/) — strukturelle Konsistenzprüfungen ausführen
 6. **Download**: [Releases](../../releases/) — Release-Assets herunterladen und Prüfsummen verifizieren

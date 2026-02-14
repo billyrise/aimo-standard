@@ -291,4 +291,4 @@ mkdocs build --strict
 ## 相关页面
 
 - [发布](../../releases/) — 可下载的包
-- [治理](../governance/index.md) — 项目治理
+- [治理](../../governance/) — 项目治理

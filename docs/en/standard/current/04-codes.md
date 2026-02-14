@@ -108,7 +108,7 @@ When documenting an AI system, codes from multiple dimensions are combined. The 
 7. OB (Outcome / Benefit)
 8. LG (Log/Event Type)
 
-See [ID Policy / Namespace](./04b-id-policy-namespace.md): **EV-** is reserved for Evidence *artifact* IDs only; taxonomy log/event dimension uses **LG-** (e.g. LG-001 … LG-015).
+See [ID Policy / Namespace](../04b-id-policy-namespace/): **EV-** is reserved for Evidence *artifact* IDs only; taxonomy log/event dimension uses **LG-** (e.g. LG-001 … LG-015).
 
 **Example composition:**
 
@@ -163,7 +163,7 @@ The dictionary tracks lifecycle with these fields:
 
 ### Versioning
 
-Code changes follow [Semantic Versioning](./08-changelog.md):
+Code changes follow [Semantic Versioning](../08-changelog/):
 
 - **MAJOR**: Code removal or breaking changes
 - **MINOR**: New codes added, codes deprecated
@@ -188,16 +188,16 @@ The validator checks:
 4. Code format matches `<PREFIX>-<TOKEN>` pattern (e.g., `UC-001`)
 5. Deprecated codes are flagged with warnings
 
-See [Validator](./07-validator.md) for implementation details.
+See [Validator](../07-validator/) for implementation details.
 
 ## SSOT Reference
 
 !!! info "Source of Truth"
-    The authoritative definitions are `data/taxonomy/canonical.yaml` and `data/taxonomy/i18n/*.yaml`. The file `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` is **generated** from the SSOT. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+    The authoritative definitions are `data/taxonomy/canonical.yaml` and `data/taxonomy/i18n/*.yaml`. The file `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` is **generated** from the SSOT. This page is explanatory. See [Localization Guide](../../../contributing/localization/) for update workflows.
 
 ## Related Pages
 
-- [Taxonomy](./03-taxonomy.md) - Full dimension definitions
-- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
-- [Validator](./07-validator.md) - Validation rules
-- [Changelog](./08-changelog.md) - Version history
+- [Taxonomy](../03-taxonomy/) - Full dimension definitions
+- [Dictionary](../05-dictionary/) - Complete code listings and column definitions
+- [Validator](../07-validator/) - Validation rules
+- [Changelog](../08-changelog/) - Version history

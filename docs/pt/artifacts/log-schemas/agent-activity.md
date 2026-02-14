@@ -107,7 +107,7 @@ Download: [agent-activity.schema.json](https://github.com/billyrise/aimo-standar
 
 ## Páginas relacionadas
 
-- [Índice de Schemas de Log](index.md)
-- [Log de Descoberta de Shadow AI](shadow-ai-discovery.md)
-- [Requisitos Mínimos de Evidências](../minimum-evidence.md)
-- [Taxonomia: UC-010 Automação Agêntica](../../standard/current/03-taxonomy.md)
+- [Índice de Schemas de Log](../)
+- [Log de Descoberta de Shadow AI](../shadow-ai-discovery/)
+- [Requisitos Mínimos de Evidências](../../minimum-evidence/)
+- [Taxonomia: UC-010 Automação Agêntica](../../../standard/current/03-taxonomy/)

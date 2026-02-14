@@ -291,4 +291,4 @@ mkdocs build --strict
 ## 相關頁面
 
 - [發布](../../releases/) — 可下載的套件
-- [治理](../governance/index.md) — 專案治理
+- [治理](../../governance/) — 專案治理

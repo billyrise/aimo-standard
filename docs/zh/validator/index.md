@@ -51,15 +51,15 @@ Schema validation failed:
 
 - **内容准确性**：验证器检查结构，而非含义
 - **合规保证**：通过验证不保证监管合规
-- **人工判断**：依赖上下文的决策需要人工审查（参见 [人工监督协议](../governance/human-oversight-protocol.md)）
+- **人工判断**：依赖上下文的决策需要人工审查（参见 [人工监督协议](../governance/human-oversight-protocol/)）
 - **自动日志收集**：验证器验证提交的证据；它不收集日志
 
 ---
 
 ## 资源
 
-- **规范**：[标准 > 当前 > 验证器](../standard/current/07-validator.md) — 规则、参考检查以及验证与证据的关系。
+- **规范**：[标准 > 当前 > 验证器](../standard/current/07-validator/) — 规则、参考检查以及验证与证据的关系。
 - **规则和实现**：仓库 `validator/rules/`（检查）、`validator/src/`（参考实现）。运行和 CI 使用在规范中描述。
 - **解释**：验证"失败"对审计师意味着什么（在规范中解释）。
 
-有关符合性和工件使用，请参阅 [符合性](../conformance/index.md) 和 [工件](../artifacts/index.md)。
+有关符合性和工件使用，请参阅 [符合性](../conformance/) 和 [工件](../artifacts/)。

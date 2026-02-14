@@ -32,8 +32,8 @@ Los lectores deben verificar contra el texto autoritativo de cada marco o regula
 
 ## Relación con Paquete de Evidencia y Requisitos Mínimos de Evidencia
 
-- **[Paquete de Evidencia](../artifacts/evidence-bundle.md)**: Define la estructura del paquete, TOC y trazabilidad. Las filas del Mapa de Cobertura referencian secciones del Paquete de Evidencia (ej. EV, Diccionario, Resumen, change_log, solicitud, revisión, excepción, renovación).
-- **[Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md)**: Define grupos de ciclo de vida de nivel DEBE (solicitud, revisión, excepción, renovación, change_log, integridad). Las filas del Mapa de Cobertura referencian estos grupos en `minimum_evidence_refs`.
+- **[Paquete de Evidencia](../../artifacts/evidence-bundle/)**: Define la estructura del paquete, TOC y trazabilidad. Las filas del Mapa de Cobertura referencian secciones del Paquete de Evidencia (ej. EV, Diccionario, Resumen, change_log, solicitud, revisión, excepción, renovación).
+- **[Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/)**: Define grupos de ciclo de vida de nivel DEBE (solicitud, revisión, excepción, renovación, change_log, integridad). Las filas del Mapa de Cobertura referencian estos grupos en `minimum_evidence_refs`.
 
 Use el Mapa de Cobertura para ver qué elementos del Paquete de Evidencia y grupos de Evidencia Mínima soportan explicabilidad para un requisito externo dado.
 
@@ -42,12 +42,12 @@ Use el Mapa de Cobertura para ver qué elementos del Paquete de Evidencia y grup
 !!! warning "Importante"
     El AIMO Standard soporta **explicabilidad y preparación de evidencia**. **No** proporciona asesoramiento legal, garantiza cumplimiento ni certifica conformidad con ninguna regulación o marco. Los adoptantes deben verificar reclamaciones contra textos autoritativos y obtener asesoramiento profesional según sea apropiado.
 
-Consulte [Límite de Responsabilidad](../governance/responsibility-boundary.md) para alcance, suposiciones y responsabilidades del adoptante.
+Consulte [Límite de Responsabilidad](../../governance/responsibility-boundary/) para alcance, suposiciones y responsabilidades del adoptante.
 
 ## Recorrido de auditoría
 
 Desde esta página, continúe a:
 
-1. **Mapeos de marcos**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Validar**: [Validador](../validator/index.md) — ejecutar verificaciones estructurales
+1. **Mapeos de marcos**: [ISO 42001](../iso-42001/), [NIST AI RMF](../nist-ai-rmf/), [EU AI Act](../eu-ai-act/), [ISMS](../isms/)
+2. **Validar**: [Validador](../../validator/) — ejecutar verificaciones estructurales
 3. **Descargar**: [Versiones](../../releases/) — obtener activos de versión

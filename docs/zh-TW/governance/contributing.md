@@ -97,6 +97,6 @@ mkdocs build --strict
 
 ## 相關頁面
 
-- [治理](index.md) — 專案治理
-- [在地化指南](../contributing/localization.md) — i18n 詳細資訊
-- [責任邊界](responsibility-boundary.md) — AIMO 提供的內容
+- [治理](../) — 專案治理
+- [在地化指南](../../contributing/localization/) — i18n 詳細資訊
+- [責任邊界](../responsibility-boundary/) — AIMO 提供的內容

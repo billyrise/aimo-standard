@@ -30,11 +30,11 @@ description: AIMO 日誌結構描述 - AI 證據的廠商中立日誌格式。�
 
 | 結構描述 | 用途 | 下載 |
 | --- | --- | --- |
-| [Shadow AI 發現日誌](shadow-ai-discovery.md) | 未經核准 AI 使用的偵測和清查 | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [代理活動日誌](agent-activity.md) | 代理式 AI 權限執行和工具執行 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Shadow AI 發現日誌](shadow-ai-discovery/) | 未經核准 AI 使用的偵測和清查 | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [代理活動日誌](agent-activity/) | 代理式 AI 權限執行和工具執行 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
 ## 相關頁面
 
-- [最低證據要求](../minimum-evidence.md) — 必要層級證據檢查清單
-- [證據包](../evidence-bundle.md) — 套件結構和目錄
-- [分類法](../../standard/current/03-taxonomy.md) — 分類代碼（包含 UC-010 代理式自動化、IM-007 Shadow/未受管理）
+- [最低證據要求](../minimum-evidence/) — 必要層級證據檢查清單
+- [證據包](../evidence-bundle/) — 套件結構和目錄
+- [分類法](../../standard/current/03-taxonomy/) — 分類代碼（包含 UC-010 代理式自動化、IM-007 Shadow/未受管理）

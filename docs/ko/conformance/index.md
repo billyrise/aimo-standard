@@ -9,23 +9,23 @@ description: AIMO 표준 적합성 수준. 조직이 컴플라이언스를 주�
 ## 목적
 
 - **주장할 수 있는 것**: AIMO 표준의 증거 구조 및 추적성 요구사항과의 정합.
-- **주장할 수 없는 것**: 법적 컴플라이언스, 인증 또는 규제 승인. [책임 경계](../governance/responsibility-boundary.md)를 참조하세요.
+- **주장할 수 없는 것**: 법적 컴플라이언스, 인증 또는 규제 승인. [책임 경계](../governance/responsibility-boundary/)를 참조하세요.
 
 ## 예상 증거
 
 적합성을 입증하기 위해 조직은 다음을 제공해야 합니다:
 
-1. **증거 번들**: [산출물](../artifacts/index.md) 및 [최소 증거 요구사항](../artifacts/minimum-evidence.md)에 따른 구조화된 EV 레코드.
-2. **검증기 결과**: 검증기의 통과 출력 — [검증기](../validator/index.md) 참조.
-3. **버전 참조**: 명시적 AIMO 표준 버전 — [버전](../standard/versions/index.md) 참조.
+1. **증거 번들**: [산출물](../artifacts/) 및 [최소 증거 요구사항](../artifacts/minimum-evidence/)에 따른 구조화된 EV 레코드.
+2. **검증기 결과**: 검증기의 통과 출력 — [검증기](../validator/) 참조.
+3. **버전 참조**: 명시적 AIMO 표준 버전 — [버전](../standard/versions/) 참조.
 
 ## 과대 주장 금지
 
 !!! warning "중요"
-    AIMO 표준 적합성은 **증거 준비 및 추적성**을 입증하며, 법적 컴플라이언스나 인증이 아닙니다. [책임 경계](../governance/responsibility-boundary.md)를 참조하세요.
+    AIMO 표준 적합성은 **증거 준비 및 추적성**을 입증하며, 법적 컴플라이언스나 인증이 아닙니다. [책임 경계](../governance/responsibility-boundary/)를 참조하세요.
 
 ## 관련 페이지
 
-- [신뢰 패키지](../governance/trust-package.md) — 감사자를 위한 통합 진입점
-- [표준 (현재)](../standard/current/index.md) — 규범적 요구사항
-- [산출물](../artifacts/index.md) — 증거 구조
+- [신뢰 패키지](../governance/trust-package/) — 감사자를 위한 통합 진입점
+- [표준 (현재)](../standard/current/) — 규범적 요구사항
+- [산출물](../artifacts/) — 증거 구조

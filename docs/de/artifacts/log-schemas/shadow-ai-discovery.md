@@ -58,7 +58,7 @@ Dieses Schema definiert ein herstellerneutrales Format für Protokolle, die die 
     - **Betten Sie keine** personenbezogenen Daten, Anmeldeinformationen oder Prompt-Inhalte direkt in Log-Felder ein.
     - Verwenden Sie `evidence_ref`, um separat gespeicherte sensible Inhalte zu referenzieren.
     - Wenden Sie entsprechende Zugriffskontrollen auf die Log-Speicherung an.
-    - Berücksichtigen Sie Datenaufbewahrungsrichtlinien, die an den [Mindestanforderungen an Evidence](../minimum-evidence.md) ausgerichtet sind.
+    - Berücksichtigen Sie Datenaufbewahrungsrichtlinien, die an den [Mindestanforderungen an Evidence](../../minimum-evidence/) ausgerichtet sind.
 
 ## JSON Schema
 
@@ -91,7 +91,7 @@ Download: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-st
 
 ## Verwandte Seiten
 
-- [Log Schemas-Index](index.md)
-- [Agent Activity Log](agent-activity.md)
-- [Mindestanforderungen an Evidence](../minimum-evidence.md)
-- [Taxonomie: IM-007 Shadow/Unmanaged](../../standard/current/03-taxonomy.md)
+- [Log Schemas-Index](../)
+- [Agent Activity Log](../agent-activity/)
+- [Mindestanforderungen an Evidence](../../minimum-evidence/)
+- [Taxonomie: IM-007 Shadow/Unmanaged](../../../standard/current/03-taxonomy/)

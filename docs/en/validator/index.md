@@ -108,15 +108,15 @@ HTML reports can be converted to PDF using the browser’s print function (e.g. 
 
 - **Content accuracy**: validator checks structure, not meaning
 - **Compliance guarantee**: passing validation does not guarantee regulatory compliance
-- **Human judgment**: context-dependent decisions require human review (see [Human Oversight Protocol](../governance/human-oversight-protocol.md))
+- **Human judgment**: context-dependent decisions require human review (see [Human Oversight Protocol](../governance/human-oversight-protocol/))
 - **Automatic log collection**: validator validates submitted evidence; it does not collect logs
 
 ---
 
 ## Resources
 
-- **Specification**: [Standard > Current > Validator](../standard/current/07-validator.md) — rules, reference checks, and how validation relates to evidence.
+- **Specification**: [Standard > Current > Validator](../standard/current/07-validator/) — rules, reference checks, and how validation relates to evidence.
 - **Rules and implementation**: repository `validator/rules/` (checks), `validator/src/` (reference implementation). Run and CI usage are described in the spec.
 - **Interpretation**: what a validation "fail" means for auditors (explained in the spec).
 
-For conformance and artifact usage, see [Conformance](../conformance/index.md) and [Artifacts](../artifacts/index.md).
+For conformance and artifact usage, see [Conformance](../conformance/) and [Artifacts](../artifacts/).

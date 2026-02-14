@@ -291,4 +291,4 @@ mkdocs build --strict
 ## 関連ページ
 
 - [Releases](../../releases/) — ダウンロード可能なパッケージ
-- [Governance](../governance/index.md) — プロジェクトガバナンス
+- [Governance](../../governance/) — プロジェクトガバナンス

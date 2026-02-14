@@ -43,7 +43,7 @@ description: ドキュメント URL のバージョニング・参照方針。�
 
 ## 関連
 
-- [Versions（バージョン一覧）](../versions/index.md) — バージョン履歴、「latest」の SSOT、検証手順
-- [Changelog](08-changelog.md) — 規範的変更履歴
+- [Versions（バージョン一覧）](../../versions/) — バージョン履歴、「latest」の SSOT、検証手順
+- [Changelog](../08-changelog/) — 規範的変更履歴
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 完全なバージョニング方針とリリースフロー
 - [Release workflow](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml) — タグ付けにより `/latest/` が更新され `/X.Y.Z/` がデプロイされる手順

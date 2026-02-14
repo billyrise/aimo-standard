@@ -30,11 +30,11 @@ description: AIMOログスキーマ - AI証跡用ベンダー非依存ログ形�
 
 | スキーマ | 目的 | ダウンロード |
 | --- | --- | --- |
-| [Shadow AI 検知ログ](shadow-ai-discovery.md) | 未承認AI利用の検知と棚卸し | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [エージェント活動ログ](agent-activity.md) | エージェントAIの権限行使とツール実行 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Shadow AI 検知ログ](shadow-ai-discovery/) | 未承認AI利用の検知と棚卸し | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [エージェント活動ログ](agent-activity/) | エージェントAIの権限行使とツール実行 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
 ## 関連ページ
 
-- [Minimum Evidence Requirements](../minimum-evidence.md) — MUST レベル証跡チェックリスト
-- [Evidence Bundle](../evidence-bundle.md) — バンドル構造と TOC
-- [タクソノミー](../../standard/current/03-taxonomy.md) — 分類コード（UC-010 エージェント自動化、IM-007 シャドー/未管理を含む）
+- [Minimum Evidence Requirements](../minimum-evidence/) — MUST レベル証跡チェックリスト
+- [Evidence Bundle](../evidence-bundle/) — バンドル構造と TOC
+- [タクソノミー](../../standard/current/03-taxonomy/) — 分類コード（UC-010 エージェント自動化、IM-007 シャドー/未管理を含む）

@@ -36,8 +36,8 @@ v0.1.1 から、マッピングに **audit_questions**（監査で想定され�
 
 ## Relationship to Evidence Bundle and Minimum Evidence Requirements
 
-- **[Evidence Bundle](../artifacts/evidence-bundle.md)**: バンドル構造、TOC、追跡可能性を定義する。Coverage Map の行は Evidence Bundle のセクション（EV, Dictionary, Summary, change_log, request, review, exception, renewal）を参照する。
-- **[Minimum Evidence Requirements](../artifacts/minimum-evidence.md)**: MUST レベルのライフサイクルグループ（request, review, exception, renewal, change_log, integrity）を定義する。Coverage Map の行は `minimum_evidence_refs` でこれらのグループを参照する。
+- **[Evidence Bundle](../../artifacts/evidence-bundle/)**: バンドル構造、TOC、追跡可能性を定義する。Coverage Map の行は Evidence Bundle のセクション（EV, Dictionary, Summary, change_log, request, review, exception, renewal）を参照する。
+- **[Minimum Evidence Requirements](../../artifacts/minimum-evidence/)**: MUST レベルのライフサイクルグループ（request, review, exception, renewal, change_log, integrity）を定義する。Coverage Map の行は `minimum_evidence_refs` でこれらのグループを参照する。
 
 ある外部要求について、どの Evidence Bundle 項目と Minimum Evidence グループが説明可能性を支えるかは、Coverage Map で確認する。
 
@@ -46,12 +46,12 @@ v0.1.1 から、マッピングに **audit_questions**（監査で想定され�
 !!! warning "重要"
     AIMO Standard は**説明可能性と証跡準備**を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も**行わない**。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。
 
-スコープ、前提条件、採用者責任は [責任境界](../governance/responsibility-boundary.md) を参照。
+スコープ、前提条件、採用者責任は [責任境界](../../governance/responsibility-boundary/) を参照。
 
 ## 監査ジャーニー
 
 本ページから以下へ続く：
 
-1. **フレームワーク対応表**: [ISO 42001](iso-42001.md)、[NIST AI RMF](nist-ai-rmf.md)、[EU AI Act](eu-ai-act.md)、[ISMS](isms.md)
-2. **検証**: [Validator](../validator/index.md) — 構造チェックを実行
+1. **フレームワーク対応表**: [ISO 42001](../iso-42001/)、[NIST AI RMF](../nist-ai-rmf/)、[EU AI Act](../eu-ai-act/)、[ISMS](../isms/)
+2. **検証**: [Validator](../../validator/) — 構造チェックを実行
 3. **ダウンロード**: [Releases](../../releases/) — リリースアセットを取得

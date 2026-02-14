@@ -6,11 +6,11 @@ description: Validator AIMO - Assicura che gli Evidence Pack siano conformi agli
 
 Il Validator AIMO assicura che gli Evidence Pack e gli artefatti correlati siano conformi agli schemi e ai requisiti dello Standard AIMO.
 
-Vedere anche: [Protocollo di Supervisione Umana](../../governance/human-oversight-protocol.md) — confine di responsabilità per revisione macchina vs. umana.
+Vedere anche: [Protocollo di Supervisione Umana](../../../governance/human-oversight-protocol/) — confine di responsabilità per revisione macchina vs. umana.
 
 ## Validator in pratica
 
-Per un quickstart di 30 secondi (installazione, esecuzione, interpretazione dell'output), vedere [Hub del Validator](../../validator/index.md).
+Per un quickstart di 30 secondi (installazione, esecuzione, interpretazione dell'output), vedere [Hub del Validator](../../../validator/).
 
 ## Requisiti MVP del Validator
 
@@ -202,7 +202,7 @@ Le regole del validator seguono SemVer:
 
 ## Riferimenti
 
-- [Tassonomia](./03-taxonomy.md) - Definizioni delle dimensioni
-- [Codici](./04-codes.md) - Formato dei codici
-- [Dizionario](./05-dictionary.md) - Dizionario dei codici
-- [Regole del Validator](../../validator/index.md) - Documentazione completa delle regole
+- [Tassonomia](../03-taxonomy/) - Definizioni delle dimensioni
+- [Codici](../04-codes/) - Formato dei codici
+- [Dizionario](../05-dictionary/) - Dizionario dei codici
+- [Regole del Validator](../../../validator/) - Documentazione completa delle regole

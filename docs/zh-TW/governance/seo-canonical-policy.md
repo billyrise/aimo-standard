@@ -67,8 +67,9 @@ AIMO 標準使用 [mike](https://github.com/jimporter/mike) 進行文件版本�
 
 ```html
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.0.1/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
+<!-- Latest alias (redirect stub); canonical points to versioned snapshot -->
+<meta http-equiv="refresh" content="0; url=../{X.Y.Z}/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/">
 ```
 
 這確保：
@@ -196,6 +197,6 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 
 ## 相關文件
 
-- [信任套件](trust-package.md) — 稽核員就緒材料
+- [信任套件](../trust-package/) — 稽核員就緒材料
 - [發布](../../releases/) — 版本歷史和變更日誌
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 版本政策

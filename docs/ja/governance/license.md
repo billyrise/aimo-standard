@@ -44,7 +44,7 @@ AIMO Standard 資料を利用する際：
 1. 配布物にライセンス通知を含める
 2. 帰属表示を提供（[NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) 参照）
 3. 重大な変更がある場合は明記
-4. 商標は許可なく使用しない（[商標](trademarks.md) 参照）
+4. 商標は許可なく使用しない（[商標](../trademarks/) 参照）
 
 ## NOTICE ファイル
 
@@ -72,5 +72,5 @@ A: 可能だが、変更を明記し、変更したスキーマでは適合を�
 
 ## 関連ページ
 
-- [商標](trademarks.md) — 商標使用
-- [ガバナンス](index.md) — プロジェクトガバナンス
+- [商標](../trademarks/) — 商標使用
+- [ガバナンス](../) — プロジェクトガバナンス

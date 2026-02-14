@@ -7,8 +7,8 @@ description: Exemplos do AIMO Standard - Pacotes de amostra completos e mínimos
 Esta seção aponta para exemplos completos e mínimos que mostram como os artefatos são montados.
 
 - **Pacote mínimo**: `examples/minimal/` no repositório (ex: `sample_ev.json`, `sample_dictionary.json`).
-- **Pacote de Evidências (mínimo)**: `examples/evidence_bundle_minimal/` — root.json com request, review, change_log opcionais; veja [Pacote de Evidências](../artifacts/evidence-bundle.md) e [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md).
-- **Alinhamento de schema**: valide contra `schemas/jsonschema/` e [Padrão](../standard/current/index.md).
-- **Empacotamento pronto para auditoria**: veja o [Trust Package](../governance/trust-package.md).
+- **Pacote de Evidências (mínimo)**: `examples/evidence_bundle_minimal/` — root.json com request, review, change_log opcionais; veja [Pacote de Evidências](../artifacts/evidence-bundle/) e [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence/).
+- **Alinhamento de schema**: valide contra `schemas/jsonschema/` e [Padrão](../standard/current/).
+- **Empacotamento pronto para auditoria**: veja o [Trust Package](../governance/trust-package/).
 
 Cobertura detalhada de cenários é adicionada em unidades de mudança posteriores.

@@ -19,7 +19,7 @@ AIMO 分类法提供了一个结构化的分类系统，用于对AI系统、其�
 ## 这不是什么（不过度声明）
 
 !!! warning "重要提示"
-    AIMO 标准支持**可解释性和证据就绪**。它**不**提供法律建议、保证合规或认证符合任何法规或框架。详情请参阅 [责任边界](../../governance/responsibility-boundary.md)。
+    AIMO 标准支持**可解释性和证据就绪**。它**不**提供法律建议、保证合规或认证符合任何法规或框架。详情请参阅 [责任边界](../../../governance/responsibility-boundary/)。
 
 分类法仅是一个分类系统。它不：
 
@@ -34,7 +34,7 @@ AIMO 分类法提供了一个结构化的分类系统，用于对AI系统、其�
 AIMO 分类法提供了一种共享语言来分类这些AI特定风险，并将它们与证据要求和整改工作流程联系起来。
 
 !!! warning "仅供参考 — 非规范代码"
-    以下代码为**说明性占位符**，**不属于**规范性 AIMO 代码体系。请勿在提交或运营中使用；请使用 [Codes](./04-codes.md) 和 [Dictionary](./05-dictionary.md) 中的规范性定义。
+    以下代码为**说明性占位符**，**不属于**规范性 AIMO 代码体系。请勿在提交或运营中使用；请使用 [Codes](../04-codes/) 和 [Dictionary](../05-dictionary/) 中的规范性定义。
 
 - **AG-01** 失控循环/递归
 - **AG-02** 未授权工具使用（混淆代理式滥用）
@@ -97,7 +97,7 @@ AIMO 使用8个维度对AI用例进行分类。每个维度都有唯一的2字�
 | UC-009 | 搜索/RAG | 基于RAG的检索和问答。 |
 | UC-010 | 代理式自动化 | 执行操作的自主或半自主代理。 |
 
-请参阅 [字典](./05-dictionary.md) 获取30个UC代码的完整列表。
+请参阅 [字典](../05-dictionary/) 获取30个UC代码的完整列表。
 
 ### DT：数据类型
 
@@ -208,7 +208,7 @@ AIMO 使用8个维度对AI用例进行分类。每个维度都有唯一的2字�
 
 ### 参考字典
 
-有关完整的代码定义，包括范围说明和示例，请参阅 [字典](./05-dictionary.md)。
+有关完整的代码定义，包括范围说明和示例，请参阅 [字典](../05-dictionary/)。
 
 ### 分类示例
 
@@ -226,11 +226,11 @@ LG: LG-001 (请求记录), LG-002 (审查/批准记录)
 ## SSOT 参考
 
 !!! info "事实来源"
-    权威定义是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本页是解释性的。有关更新工作流程，请参阅 [本地化指南](../../contributing/localization.md)。
+    权威定义是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本页是解释性的。有关更新工作流程，请参阅 [本地化指南](../../../contributing/localization/)。
 
 ## 相关页面
 
-- [代码](./04-codes.md) - 代码格式、命名约定和生命周期
-- [字典](./05-dictionary.md) - 完整的代码列表和列定义
-- [证据模板](./06-ev-template.md) - 如何在证据中使用代码
-- [责任边界](../../governance/responsibility-boundary.md) - 不过度声明声明
+- [代码](../04-codes/) - 代码格式、命名约定和生命周期
+- [字典](../05-dictionary/) - 完整的代码列表和列定义
+- [证据模板](../06-ev-template/) - 如何在证据中使用代码
+- [责任边界](../../../governance/responsibility-boundary/) - 不过度声明声明

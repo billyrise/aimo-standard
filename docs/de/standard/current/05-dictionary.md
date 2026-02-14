@@ -53,7 +53,7 @@ Das kanonische Dictionary verwendet **18 Spalten** (sprachneutrale Struktur):
 | 9 | `examples` | Nein | Pipe-getrennte Beispiele | `chatbot\|recommendation` |
 
 !!! note "Übersetzungen"
-    Das kanonische Datenmodell trennt Übersetzungen in Sprachpakete (`data/taxonomy/i18n/*.yaml`). Jedes Sprachpaket bietet lokalisierte `dimension_name`, `label` und `definition`-Werte. Siehe [Lokalisierungsleitfaden](../../contributing/localization.md) für Details.
+    Das kanonische Datenmodell trennt Übersetzungen in Sprachpakete (`data/taxonomy/i18n/*.yaml`). Jedes Sprachpaket bietet lokalisierte `dimension_name`, `label` und `definition`-Werte. Siehe [Lokalisierungsleitfaden](../../../contributing/localization/) für Details.
 
 ### Lifecycle-Spalten (6)
 
@@ -195,8 +195,8 @@ Siehe [Releases](../../../releases/) für herunterladbare Pakete mit Dictionary 
 
 ## Verwandte Seiten
 
-- [Taxonomie](./03-taxonomy.md) - Dimensionsdefinitionen und Code-Tabellen
-- [Codes](./04-codes.md) - Code-Format, Benennung und Lifecycle
-- [Evidence-Templates](./06-ev-template.md) - Wie Codes in Templates verwendet werden
-- [Validator](./07-validator.md) - Code-Validierungsregeln
-- [Changelog](./08-changelog.md) - Versionshistorie
+- [Taxonomie](../03-taxonomy/) - Dimensionsdefinitionen und Code-Tabellen
+- [Codes](../04-codes/) - Code-Format, Benennung und Lifecycle
+- [Evidence-Templates](../06-ev-template/) - Wie Codes in Templates verwendet werden
+- [Validator](../07-validator/) - Code-Validierungsregeln
+- [Changelog](../08-changelog/) - Versionshistorie

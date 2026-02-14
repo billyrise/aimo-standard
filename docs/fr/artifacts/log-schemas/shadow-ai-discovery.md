@@ -58,7 +58,7 @@ Ce schéma définit un format neutre vis-à-vis des fournisseurs pour les journa
     - **Ne pas intégrer** de données personnelles, identifiants ou contenu de prompt directement dans les champs de journal.
     - Utilisez `evidence_ref` pour référencer du contenu sensible stocké séparément.
     - Appliquez des contrôles d'accès appropriés au stockage des journaux.
-    - Considérez des politiques de rétention des données alignées avec les [exigences minimales de preuves](../minimum-evidence.md).
+    - Considérez des politiques de rétention des données alignées avec les [exigences minimales de preuves](../../minimum-evidence/).
 
 ## Schéma JSON
 
@@ -91,7 +91,7 @@ Télécharger : [shadow-ai-discovery.schema.json](https://github.com/billyrise/a
 
 ## Pages connexes
 
-- [Index des schémas de journaux](index.md)
-- [Journal d'activité des agents](agent-activity.md)
-- [Exigences minimales de preuves](../minimum-evidence.md)
-- [Taxonomie : IM-007 Shadow/Non géré](../../standard/current/03-taxonomy.md)
+- [Index des schémas de journaux](../)
+- [Journal d'activité des agents](../agent-activity/)
+- [Exigences minimales de preuves](../../minimum-evidence/)
+- [Taxonomie : IM-007 Shadow/Non géré](../../../standard/current/03-taxonomy/)

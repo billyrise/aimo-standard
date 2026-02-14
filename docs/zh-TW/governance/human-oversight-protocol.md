@@ -28,7 +28,7 @@ AIMO 驗證器和類似的自動化工具可以檢查：
 | **完整性檢查** | 驗證雜湊格式和存在（非針對內容重新計算） |
 | **字典驗證** | 確認代碼存在於分類字典中 |
 
-請參閱[驗證器](../standard/current/07-validator.md)了解詳細的驗證規則和參考實作。
+請參閱[驗證器](../../standard/current/07-validator/)了解詳細的驗證規則和參考實作。
 
 ## 需要人工審查的內容（人機協作範圍）
 
@@ -73,7 +73,7 @@ AIMO 驗證器和類似的自動化工具可以檢查：
 | **補救計畫** | 計劃的行動、負責人和處理問題的時程 |
 | **簽核** | 正式證明審查已完成 |
 
-這些記錄應根據[最低證據要求](../artifacts/minimum-evidence.md)納入證據包中。
+這些記錄應根據[最低證據要求](../../artifacts/minimum-evidence/)納入證據包中。
 
 ## 不過度聲明
 
@@ -89,7 +89,7 @@ AIMO 驗證器和類似的自動化工具可以檢查：
 
 ## 相關頁面
 
-- [驗證器](../standard/current/07-validator.md) — 自動化驗證規則和參考實作
-- [責任邊界](responsibility-boundary.md) — AIMO 提供的內容與採用者責任
-- [最低證據要求](../artifacts/minimum-evidence.md) — 必要層級證據檢查清單
-- [信任套件](trust-package.md) — 稽核員就緒材料中心
+- [驗證器](../../standard/current/07-validator/) — 自動化驗證規則和參考實作
+- [責任邊界](../responsibility-boundary/) — AIMO 提供的內容與採用者責任
+- [最低證據要求](../../artifacts/minimum-evidence/) — 必要層級證據檢查清單
+- [信任套件](../trust-package/) — 稽核員就緒材料中心

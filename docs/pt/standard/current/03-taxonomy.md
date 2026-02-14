@@ -19,7 +19,7 @@ A taxonomia serve três propósitos primários do ponto de vista de auditoria:
 ## O que Não É (Não-Sobrereivindicação)
 
 !!! warning "Importante"
-    O AIMO Standard suporta **explicabilidade e prontidão de evidências**. Ele **não** fornece aconselhamento jurídico, garante conformidade, nem certifica conformidade com qualquer regulamentação ou framework. Veja [Limite de Responsabilidade](../../governance/responsibility-boundary.md) para detalhes.
+    O AIMO Standard suporta **explicabilidade e prontidão de evidências**. Ele **não** fornece aconselhamento jurídico, garante conformidade, nem certifica conformidade com qualquer regulamentação ou framework. Veja [Limite de Responsabilidade](../../../governance/responsibility-boundary/) para detalhes.
 
 A taxonomia é apenas um sistema de classificação. Ela não:
 
@@ -34,7 +34,7 @@ Controles de segurança tradicionais (ex: ISMS) sozinhos frequentemente falham e
 A Taxonomia AIMO fornece uma linguagem compartilhada para classificar esses riscos específicos de IA e conectá-los a requisitos de evidências e fluxos de trabalho de remediação.
 
 !!! warning "Apenas exemplos de referência — não são códigos normativos"
-    Os códigos abaixo são **placeholders ilustrativos** e **não** fazem parte do sistema de códigos normativo AIMO. Não os use em submissões; use as dimensões e códigos normativos em [Codes](./04-codes.md) e [Dictionary](./05-dictionary.md).
+    Os códigos abaixo são **placeholders ilustrativos** e **não** fazem parte do sistema de códigos normativo AIMO. Não os use em submissões; use as dimensões e códigos normativos em [Codes](../04-codes/) e [Dictionary](../05-dictionary/).
 
 - **AG-01** Loop/Recursão Descontrolada
 - **AG-02** Uso Não Autorizado de Ferramenta (uso indevido estilo confused deputy)
@@ -97,7 +97,7 @@ Categoriza uso de IA pelo tipo de tarefa ou interação. **Selecione um ou mais.
 | UC-009 | Busca/RAG | Recuperação e resposta a perguntas baseada em RAG. |
 | UC-010 | Automação Agêntica | Agentes autônomos ou semi-autônomos executando ações. |
 
-Veja [Dicionário](./05-dictionary.md) para a lista completa de 30 códigos UC.
+Veja [Dicionário](../05-dictionary/) para a lista completa de 30 códigos UC.
 
 ### DT: Tipo de Dados
 
@@ -208,7 +208,7 @@ Cada documento de evidências referencia códigos de múltiplas dimensões para 
 
 ### Referenciando o Dicionário
 
-Para definições completas de códigos incluindo notas de escopo e exemplos, consulte o [Dicionário](./05-dictionary.md).
+Para definições completas de códigos incluindo notas de escopo e exemplos, consulte o [Dicionário](../05-dictionary/).
 
 ### Exemplo de Classificação
 
@@ -226,11 +226,11 @@ LG: LG-001 (Registro de Solicitação), LG-002 (Registro de Revisão/Aprovação
 ## Referência SSOT
 
 !!! info "Fonte de Verdade"
-    A definição autoritativa é `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Esta página é explicativa. Veja [Guia de Localização](../../contributing/localization.md) para fluxos de trabalho de atualização.
+    A definição autoritativa é `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Esta página é explicativa. Veja [Guia de Localização](../../../contributing/localization/) para fluxos de trabalho de atualização.
 
 ## Páginas Relacionadas
 
-- [Códigos](./04-codes.md) - Formato de código, convenções de nomenclatura e ciclo de vida
-- [Dicionário](./05-dictionary.md) - Listagens completas de códigos e definições de colunas
-- [Templates de Evidências](./06-ev-template.md) - Como usar códigos em evidências
-- [Limite de Responsabilidade](../../governance/responsibility-boundary.md) - Declaração de não-sobrereivindicação
+- [Códigos](../04-codes/) - Formato de código, convenções de nomenclatura e ciclo de vida
+- [Dicionário](../05-dictionary/) - Listagens completas de códigos e definições de colunas
+- [Templates de Evidências](../06-ev-template/) - Como usar códigos em evidências
+- [Limite de Responsabilidade](../../../governance/responsibility-boundary/) - Declaração de não-sobrereivindicação

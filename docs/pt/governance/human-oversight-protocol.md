@@ -28,7 +28,7 @@ O Validador AIMO e ferramentas automatizadas similares podem verificar:
 | **Verificações de integridade** | Validar formato e presença de hash (não recálculo contra conteúdo) |
 | **Validação de dicionário** | Confirmar que códigos existem no dicionário de taxonomia |
 
-Veja [Validador](../standard/current/07-validator.md) para regras de validação detalhadas e implementação de referência.
+Veja [Validador](../../standard/current/07-validator/) para regras de validação detalhadas e implementação de referência.
 
 ## O que requer revisão humana (escopo Human-in-the-Loop)
 
@@ -73,7 +73,7 @@ Organizações implementando supervisão humana devem documentar:
 | **Plano de remediação** | Ações planejadas, responsáveis e cronogramas para abordar issues |
 | **Sign-off** | Atestação formal de que revisão foi concluída |
 
-Esses registros devem ser incluídos no Pacote de Evidências conforme [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md).
+Esses registros devem ser incluídos no Pacote de Evidências conforme [Requisitos Mínimos de Evidências](../../artifacts/minimum-evidence/).
 
 ## Não-sobrereivindicação
 
@@ -89,7 +89,7 @@ Esses registros devem ser incluídos no Pacote de Evidências conforme [Requisit
 
 ## Páginas relacionadas
 
-- [Validador](../standard/current/07-validator.md) — regras de validação automatizada e implementação de referência
-- [Limite de Responsabilidade](responsibility-boundary.md) — o que AIMO fornece vs. responsabilidades do adotante
-- [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md) — checklist de evidências de nível DEVE
-- [Trust Package](trust-package.md) — hub de materiais prontos para auditoria
+- [Validador](../../standard/current/07-validator/) — regras de validação automatizada e implementação de referência
+- [Limite de Responsabilidade](../responsibility-boundary/) — o que AIMO fornece vs. responsabilidades do adotante
+- [Requisitos Mínimos de Evidências](../../artifacts/minimum-evidence/) — checklist de evidências de nível DEVE
+- [Trust Package](../trust-package/) — hub de materiais prontos para auditoria

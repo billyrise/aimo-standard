@@ -28,7 +28,7 @@ Il Validator AIMO e strumenti automatizzati simili possono controllare:
 | **Controlli di integrità** | Validare il formato e la presenza degli hash (non il ricalcolo contro il contenuto) |
 | **Validazione del dizionario** | Confermare che i codici esistano nel dizionario della tassonomia |
 
-Vedere [Validator](../standard/current/07-validator.md) per regole di validazione dettagliate e implementazione di riferimento.
+Vedere [Validator](../../standard/current/07-validator/) per regole di validazione dettagliate e implementazione di riferimento.
 
 ## Cosa richiede revisione umana (ambito Human-in-the-Loop)
 
@@ -73,7 +73,7 @@ Le organizzazioni che implementano la supervisione umana dovrebbero documentare:
 | **Piano di remediation** | Azioni pianificate, responsabili e tempistiche per affrontare i problemi |
 | **Sign-off** | Attestazione formale che la revisione è stata completata |
 
-Questi record dovrebbero essere inclusi nell'Evidence Bundle secondo i [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md).
+Questi record dovrebbero essere inclusi nell'Evidence Bundle secondo i [Requisiti Minimi di Evidence](../../artifacts/minimum-evidence/).
 
 ## Non sovra-dichiarazione
 
@@ -89,7 +89,7 @@ Questi record dovrebbero essere inclusi nell'Evidence Bundle secondo i [Requisit
 
 ## Pagine correlate
 
-- [Validator](../standard/current/07-validator.md) — regole di validazione automatizzata e implementazione di riferimento
-- [Confini di Responsabilità](responsibility-boundary.md) — cosa fornisce AIMO vs. responsabilità degli adottanti
-- [Requisiti Minimi di Evidence](../artifacts/minimum-evidence.md) — checklist MUST-level per evidence
-- [Trust Package](trust-package.md) — hub dei materiali pronti per l'auditor
+- [Validator](../../standard/current/07-validator/) — regole di validazione automatizzata e implementazione di riferimento
+- [Confini di Responsabilità](../responsibility-boundary/) — cosa fornisce AIMO vs. responsabilità degli adottanti
+- [Requisiti Minimi di Evidence](../../artifacts/minimum-evidence/) — checklist MUST-level per evidence
+- [Trust Package](../trust-package/) — hub dei materiali pronti per l'auditor

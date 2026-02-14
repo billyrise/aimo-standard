@@ -8,24 +8,24 @@ Cette section contient la spécification du standard AIMO et les ressources asso
 
 ## Version actuelle
 
-La section [Actuel](current/index.md) contient la dernière version de travail de la spécification :
+La section [Actuel](current/) contient la dernière version de travail de la spécification :
 
-- [Vue d'ensemble](current/01-overview.md) — Objectif et buts
-- [Périmètre](current/02-scope.md) — Ce qui est dans et hors périmètre
-- [Taxonomie](current/03-taxonomy.md) — Système de classification à 8 dimensions
-- [Codes](current/04-codes.md) — Identifiants de codes et structure
-- [Dictionnaire](current/05-dictionary.md) — Termes et définitions
-- [Modèle EV](current/06-ev-template.md) — Structure des enregistrements de preuves
-- [Validateur](current/07-validator.md) — Spécification des règles de validation
-- [Changelog](current/08-changelog.md) — Changements normatifs et non-normatifs
+- [Vue d'ensemble](current/01-overview/) — Objectif et buts
+- [Périmètre](current/02-scope/) — Ce qui est dans et hors périmètre
+- [Taxonomie](current/03-taxonomy/) — Système de classification à 8 dimensions
+- [Codes](current/04-codes/) — Identifiants de codes et structure
+- [Dictionnaire](current/05-dictionary/) — Termes et définitions
+- [Modèle EV](current/06-ev-template/) — Structure des enregistrements de preuves
+- [Validateur](current/07-validator/) — Spécification des règles de validation
+- [Changelog](current/08-changelog/) — Changements normatifs et non-normatifs
 
 ## Versions passées
 
-Pour les versions officielles figées et les instantanés versionnés, voir [Versions](versions/index.md).
+Pour les versions officielles figées et les instantanés versionnés, voir [Versions](versions/).
 
 ## Sections connexes
 
-- **[Conformité](../conformance/index.md)** — Comment se conformer au standard et niveaux de conformité
-- **[Carte de couverture](../coverage-map/index.md)** — Correspondance avec les cadres externes (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+- **[Conformité](../conformance/)** — Comment se conformer au standard et niveaux de conformité
+- **[Carte de couverture](../coverage-map/)** — Correspondance avec les cadres externes (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 
 Pour les actifs de version téléchargeables et les PDF, voir [Versions](../releases/).

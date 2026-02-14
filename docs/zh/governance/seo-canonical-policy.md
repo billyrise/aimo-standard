@@ -67,8 +67,9 @@ AIMO 标准使用 [mike](https://github.com/jimporter/mike) 进行文档版本�
 
 ```html
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.0.1/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
+<!-- Latest alias (redirect stub); canonical points to versioned snapshot -->
+<meta http-equiv="refresh" content="0; url=../{X.Y.Z}/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/">
 ```
 
 这确保：
@@ -196,6 +197,6 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 
 ## 相关文档
 
-- [信任包](trust-package.md) — 审计师就绪材料
+- [信任包](../trust-package/) — 审计师就绪材料
 - [发布](../../releases/) — 版本历史和变更日志
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 版本政策

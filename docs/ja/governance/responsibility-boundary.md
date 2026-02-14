@@ -81,7 +81,7 @@ AIMO Standard は以下を前提とする：
 
 ## 関連ページ
 
-- [Trust Package](trust-package.md) — 監査対応資料ハブ
-- [人による監督プロトコル](human-oversight-protocol.md) — 機械と人の判断の責任境界
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST レベルライフサイクルチェックリスト
-- [Coverage Map Methodology](../coverage-map/methodology.md) — マッピングの位置づけ
+- [Trust Package](../trust-package/) — 監査対応資料ハブ
+- [人による監督プロトコル](../human-oversight-protocol/) — 機械と人の判断の責任境界
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST レベルライフサイクルチェックリスト
+- [Coverage Map Methodology](../../coverage-map/methodology/) — マッピングの位置づけ

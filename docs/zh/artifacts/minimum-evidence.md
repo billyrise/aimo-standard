@@ -107,6 +107,6 @@ description: AIMO 最低证据要求。按生命周期（请求、审查、批�
 
 此最小集支持可解释性和证据就绪；它本身不提供法律建议或保证合规。
 
-请参阅 [证据包](evidence-bundle.md) 了解包结构和目录；请参阅 [EV 模板](../standard/current/06-ev-template.md) 和模式了解字段级对齐。
+请参阅 [证据包](../evidence-bundle/) 了解包结构和目录；请参阅 [EV 模板](../../standard/current/06-ev-template/) 和模式了解字段级对齐。
 
-另请参阅：[日志模式](log-schemas/index.md) — 用于影子AI发现和代理活动证据的标准化日志格式。
+另请参阅：[日志模式](../log-schemas/) — 用于影子AI发现和代理活动证据的标准化日志格式。

@@ -28,7 +28,7 @@ AIMO 검증기 및 유사한 자동화 도구가 확인할 수 있는 것:
 | **무결성 검사** | 해시 형식 및 존재 검증 (내용에 대한 재계산 아님) |
 | **딕셔너리 검증** | 코드가 분류체계 딕셔너리에 존재하는지 확인 |
 
-상세 검증 규칙 및 참조 구현은 [검증기](../standard/current/07-validator.md)를 참조하세요.
+상세 검증 규칙 및 참조 구현은 [검증기](../../standard/current/07-validator/)를 참조하세요.
 
 ## 인간 검토가 필요한 것 (Human-in-the-Loop 범위)
 
@@ -73,7 +73,7 @@ AIMO 검증기 및 유사한 자동화 도구가 확인할 수 있는 것:
 | **해결 계획** | 문제 해결을 위한 계획된 조치, 담당자 및 일정 |
 | **승인** | 검토가 완료되었다는 공식 증명 |
 
-이러한 기록은 [최소 증거 요구사항](../artifacts/minimum-evidence.md)에 따라 증거 번들에 포함되어야 합니다.
+이러한 기록은 [최소 증거 요구사항](../../artifacts/minimum-evidence/)에 따라 증거 번들에 포함되어야 합니다.
 
 ## 과대 주장 금지
 
@@ -89,7 +89,7 @@ AIMO 검증기 및 유사한 자동화 도구가 확인할 수 있는 것:
 
 ## 관련 페이지
 
-- [검증기](../standard/current/07-validator.md) — 자동화된 검증 규칙 및 참조 구현
-- [책임 경계](responsibility-boundary.md) — AIMO가 제공하는 것 vs. 채택자 책임
-- [최소 증거 요구사항](../artifacts/minimum-evidence.md) — MUST 수준 증거 체크리스트
-- [신뢰 패키지](trust-package.md) — 감사자 준비 자료 허브
+- [검증기](../../standard/current/07-validator/) — 자동화된 검증 규칙 및 참조 구현
+- [책임 경계](../responsibility-boundary/) — AIMO가 제공하는 것 vs. 채택자 책임
+- [최소 증거 요구사항](../../artifacts/minimum-evidence/) — MUST 수준 증거 체크리스트
+- [신뢰 패키지](../trust-package/) — 감사자 준비 자료 허브

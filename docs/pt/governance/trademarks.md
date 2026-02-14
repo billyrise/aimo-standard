@@ -43,7 +43,7 @@ Você pode citar AIMO Standard em:
 - Publicações de pesquisa
 - Materiais de treinamento (com atribuição)
 
-Veja [Como Citar](cite.md) para formato de citação.
+Veja [Como Citar](../cite/) para formato de citação.
 
 ## Usos Proibidos
 
@@ -72,6 +72,6 @@ Veja [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEM
 
 ## Páginas Relacionadas
 
-- [Licença](license.md) — Termos de licenciamento
-- [Como Citar](cite.md) — Orientação de citação
-- [Governança](index.md) — Governança do projeto
+- [Licença](../license/) — Termos de licenciamento
+- [Como Citar](../cite/) — Orientação de citação
+- [Governança](../) — Governança do projeto

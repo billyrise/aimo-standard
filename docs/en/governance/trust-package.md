@@ -20,34 +20,34 @@ The Trust Package PDF consolidates auditor-ready materials into a single documen
 
 ## What you get
 
-- **Conformance**: how to claim compliance and what levels mean — [Conformance](../conformance/index.md)
-- **Coverage Map**: mapping to external standards — [Coverage Map index](../coverage-map/index.md), [Coverage Map methodology](../coverage-map/methodology.md)
-- **Standard**: normative requirements and definitions — [Standard (Current)](../standard/current/index.md)
-- **Taxonomy**: 8-dimension classification system for AI governance — [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md)
-- **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](../artifacts/evidence-bundle.md)
-- **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../artifacts/minimum-evidence.md)
-- **Validator**: rules and reference checks — [Validator](../validator/index.md)
-- **Examples**: audit-ready sample bundles — [Examples](../examples/index.md)
+- **Conformance**: how to claim compliance and what levels mean — [Conformance](../../conformance/)
+- **Coverage Map**: mapping to external standards — [Coverage Map index](../../coverage-map/), [Coverage Map methodology](../../coverage-map/methodology/)
+- **Standard**: normative requirements and definitions — [Standard (Current)](../../standard/current/)
+- **Taxonomy**: 8-dimension classification system for AI governance — [Taxonomy](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/)
+- **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](../../artifacts/evidence-bundle/)
+- **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- **Validator**: rules and reference checks — [Validator](../../validator/)
+- **Examples**: audit-ready sample bundles — [Examples](../../examples/)
 - **Releases**: change history and distribution — [Releases](../../releases/)
-- **Governance**: policies, security, licensing — [Governance](../governance/index.md)
+- **Governance**: policies, security, licensing — [Governance](../../governance/)
 
 ## Minimum set for audit-readiness
 
 | Item | Where to find it | Outcome / what it proves |
 | --- | --- | --- |
-| Conformance levels | [Conformance](../conformance/index.md) | How to claim compliance and the scope of evidence required |
-| Coverage mapping | [Coverage Map index](../coverage-map/index.md), [Coverage Map methodology](../coverage-map/methodology.md) | Explainability against external regulations and standards |
-| Taxonomy & Dictionary | [Taxonomy](../standard/current/03-taxonomy.md), [Codes](../standard/current/04-codes.md), [Dictionary](../standard/current/05-dictionary.md) | Classification system for AI systems (8 dimensions, 91 codes) |
-| Evidence artifacts | [Evidence Bundle](../artifacts/evidence-bundle.md), [Minimum Evidence](../artifacts/minimum-evidence.md), [EV Template](../standard/current/06-ev-template.md) | What data must exist to support traceability |
-| Validator checks | [Validator](../validator/index.md) | How to verify internal consistency and completeness |
-| Example bundle | [Examples](../examples/index.md) | What an audit-ready package looks like in practice |
-| Change control | [Releases](../../releases/), [Governance](../governance/index.md) | How updates are managed and communicated |
-| Security / License / Trademarks | [Governance](../governance/index.md) | Legal and security posture for adoption decisions |
+| Conformance levels | [Conformance](../../conformance/) | How to claim compliance and the scope of evidence required |
+| Coverage mapping | [Coverage Map index](../../coverage-map/), [Coverage Map methodology](../../coverage-map/methodology/) | Explainability against external regulations and standards |
+| Taxonomy & Dictionary | [Taxonomy](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/) | Classification system for AI systems (8 dimensions, 91 codes) |
+| Evidence artifacts | [Evidence Bundle](../../artifacts/evidence-bundle/), [Minimum Evidence](../../artifacts/minimum-evidence/), [EV Template](../../standard/current/06-ev-template/) | What data must exist to support traceability |
+| Validator checks | [Validator](../../validator/) | How to verify internal consistency and completeness |
+| Example bundle | [Examples](../../examples/) | What an audit-ready package looks like in practice |
+| Change control | [Releases](../../releases/), [Governance](../../governance/) | How updates are managed and communicated |
+| Security / License / Trademarks | [Governance](../../governance/) | Legal and security posture for adoption decisions |
 
 ## How to cite
 
 Use the repository README for citation guidance and context; governance links to the authoritative policies.
-See [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) and [Governance](../governance/index.md).
+See [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) and [Governance](../../governance/).
 
 ## Artifacts zip contents
 
@@ -65,13 +65,13 @@ The `aimo-standard-artifacts.zip` includes:
 
 The AIMO Standard provides a structured evidence format and explainability framework. It does **not** provide legal advice, compliance certification, risk assessment, or audit execution.
 
-For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](responsibility-boundary.md).
+For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](../responsibility-boundary/).
 
 ## How to prepare a submission package
 
 Follow these steps to prepare an audit-ready submission:
 
-1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../artifacts/evidence-bundle.md) and [Minimum Evidence Requirements](../artifacts/minimum-evidence.md).
+1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../../artifacts/evidence-bundle/) and [Minimum Evidence Requirements](../../artifacts/minimum-evidence/).
 2. **Run Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix any errors before proceeding.
 3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
 
@@ -109,14 +109,14 @@ For release assets and verification, see [Releases](../../releases/).
 !!! warning "Important"
     The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
 
-See [Responsibility Boundary](responsibility-boundary.md) for details on scope, assumptions, and adopter responsibilities.
+See [Responsibility Boundary](../responsibility-boundary/) for details on scope, assumptions, and adopter responsibilities.
 
 ## For auditors: Verification procedure
 
 When receiving an evidence submission, auditors should verify integrity and structure using the following steps:
 
 !!! success "Build Provenance Available"
-    All release assets include cryptographically signed build attestations. See [Verification Procedure](../standard/versions/index.md#4-verify-build-provenance-attestation) for attestation verification steps.
+    All release assets include cryptographically signed build attestations. See [Verification Procedure](../../standard/versions/#4-verify-build-provenance-attestation) for attestation verification steps.
 
 ### Step 1: Verify checksums (SHA-256)
 
@@ -228,9 +228,9 @@ Check that the submission references an official AIMO Standard release:
 
 From this page, the recommended audit journey is:
 
-1. **Classification system**: [Taxonomy](../standard/current/03-taxonomy.md) + [Dictionary](../standard/current/05-dictionary.md) — understand the 8-dimension code system
-2. **Evidence structure**: [Evidence Bundle](../artifacts/evidence-bundle.md) — understand bundle TOC and traceability
-3. **Required evidence**: [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level checklist by lifecycle
-4. **Framework alignment**: [Coverage Map](../coverage-map/index.md) + [Methodology](../coverage-map/methodology.md) — see how AIMO maps to external frameworks
-5. **Validation**: [Validator](../validator/index.md) — run structural consistency checks
+1. **Classification system**: [Taxonomy](../../standard/current/03-taxonomy/) + [Dictionary](../../standard/current/05-dictionary/) — understand the 8-dimension code system
+2. **Evidence structure**: [Evidence Bundle](../../artifacts/evidence-bundle/) — understand bundle TOC and traceability
+3. **Required evidence**: [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST-level checklist by lifecycle
+4. **Framework alignment**: [Coverage Map](../../coverage-map/) + [Methodology](../../coverage-map/methodology/) — see how AIMO maps to external frameworks
+5. **Validation**: [Validator](../../validator/) — run structural consistency checks
 6. **Download**: [Releases](../../releases/) — get release assets and verify checksums

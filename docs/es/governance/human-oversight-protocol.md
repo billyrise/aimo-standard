@@ -28,7 +28,7 @@ El Validador AIMO y herramientas automatizadas similares pueden verificar:
 | **Verificaciones de integridad** | Validar formato y presencia de hash (no recálculo contra contenido) |
 | **Validación de diccionario** | Confirmar que los códigos existen en el diccionario de taxonomía |
 
-Consulte [Validador](../standard/current/07-validator.md) para reglas de validación detalladas e implementación de referencia.
+Consulte [Validador](../../standard/current/07-validator/) para reglas de validación detalladas e implementación de referencia.
 
 ## Qué requiere revisión humana (alcance Human-in-the-Loop)
 
@@ -73,7 +73,7 @@ Las organizaciones implementando supervisión humana deben documentar:
 | **Plan de remediación** | Acciones planificadas, responsables y cronogramas para abordar issues |
 | **Firma** | Atestación formal de que la revisión fue completada |
 
-Estos registros deben incluirse en el Paquete de Evidencia según [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md).
+Estos registros deben incluirse en el Paquete de Evidencia según [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/).
 
 ## No sobre-reclamar
 
@@ -89,7 +89,7 @@ Estos registros deben incluirse en el Paquete de Evidencia según [Requisitos M�
 
 ## Páginas relacionadas
 
-- [Validador](../standard/current/07-validator.md) — reglas de validación automatizada e implementación de referencia
-- [Límite de Responsabilidad](responsibility-boundary.md) — qué proporciona AIMO vs. responsabilidades del adoptante
-- [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md) — lista de verificación de evidencia de nivel DEBE
-- [Paquete de Confianza](trust-package.md) — centro de materiales listos para auditores
+- [Validador](../../standard/current/07-validator/) — reglas de validación automatizada e implementación de referencia
+- [Límite de Responsabilidad](../responsibility-boundary/) — qué proporciona AIMO vs. responsabilidades del adoptante
+- [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/) — lista de verificación de evidencia de nivel DEBE
+- [Paquete de Confianza](../trust-package/) — centro de materiales listos para auditores

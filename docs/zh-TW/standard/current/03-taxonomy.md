@@ -19,7 +19,7 @@ AIMO 分類法提供一個結構化的分類系統，用於分類 AI 系統、�
 ## 這不是什麼（不過度聲明）
 
 !!! warning "重要"
-    AIMO 標準支援**可解釋性和證據就緒**。它**不**提供法律建議、保證合規性或認證符合任何法規或框架。請參閱[責任邊界](../../governance/responsibility-boundary.md)了解詳情。
+    AIMO 標準支援**可解釋性和證據就緒**。它**不**提供法律建議、保證合規性或認證符合任何法規或框架。請參閱[責任邊界](../../../governance/responsibility-boundary/)了解詳情。
 
 分類法僅是分類系統。它不會：
 
@@ -34,7 +34,7 @@ AIMO 分類法提供一個結構化的分類系統，用於分類 AI 系統、�
 AIMO 分類法提供共享語言來分類這些 AI 特定風險，並將它們連接到證據要求和補救工作流程。
 
 !!! warning "僅供參考 — 非規範代碼"
-    以下代碼為**說明性佔位符**，**不屬於**規範性 AIMO 代碼體系。請勿在提交或營運中使用；請使用 [Codes](./04-codes.md) 與 [Dictionary](./05-dictionary.md) 中的規範性定義。
+    以下代碼為**說明性佔位符**，**不屬於**規範性 AIMO 代碼體系。請勿在提交或營運中使用；請使用 [Codes](../04-codes/) 與 [Dictionary](../05-dictionary/) 中的規範性定義。
 
 - **AG-01** 失控迴圈 / 遞迴
 - **AG-02** 未授權工具使用（混淆代理人式濫用）
@@ -97,7 +97,7 @@ AIMO 使用 8 個維度來分類 AI 使用案例。每個維度有唯一的 2 �
 | UC-009 | 搜尋/RAG | 基於 RAG 的檢索和問答。 |
 | UC-010 | 代理式自動化 | 執行動作的自主或半自主代理。 |
 
-請參閱[字典](./05-dictionary.md)了解完整的 30 個 UC 代碼清單。
+請參閱[字典](../05-dictionary/)了解完整的 30 個 UC 代碼清單。
 
 ### DT：資料類型
 
@@ -208,7 +208,7 @@ AIMO 使用 8 個維度來分類 AI 使用案例。每個維度有唯一的 2 �
 
 ### 參照字典
 
-如需完整的代碼定義，包括範圍說明和範例，請參閱[字典](./05-dictionary.md)。
+如需完整的代碼定義，包括範圍說明和範例，請參閱[字典](../05-dictionary/)。
 
 ### 分類範例
 
@@ -226,11 +226,11 @@ LG: LG-001 (請求記錄), LG-002 (審查/核准記錄)
 ## SSOT 參照
 
 !!! info "事實來源"
-    權威定義是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本頁是解釋性的。請參閱[在地化指南](../../contributing/localization.md)了解更新工作流程。
+    權威定義是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本頁是解釋性的。請參閱[在地化指南](../../../contributing/localization/)了解更新工作流程。
 
 ## 相關頁面
 
-- [代碼](./04-codes.md) - 代碼格式、命名慣例和生命週期
-- [字典](./05-dictionary.md) - 完整代碼清單和欄位定義
-- [證據範本](./06-ev-template.md) - 如何在證據中使用代碼
-- [責任邊界](../../governance/responsibility-boundary.md) - 不過度聲明聲明
+- [代碼](../04-codes/) - 代碼格式、命名慣例和生命週期
+- [字典](../05-dictionary/) - 完整代碼清單和欄位定義
+- [證據範本](../06-ev-template/) - 如何在證據中使用代碼
+- [責任邊界](../../../governance/responsibility-boundary/) - 不過度聲明聲明

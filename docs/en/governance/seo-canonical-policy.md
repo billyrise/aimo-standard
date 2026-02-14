@@ -66,9 +66,10 @@ AIMO Standard uses [mike](https://github.com/jimporter/mike) for documentation v
 Instead of copying files, `/latest/` contains redirect pages pointing to the current release:
 
 ```html
+<!-- Latest alias (redirect stub): /latest/ → resolved version; canonical points to versioned snapshot -->
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.0.1/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
+<meta http-equiv="refresh" content="0; url=../{X.Y.Z}/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/">
 ```
 
 This ensures:
@@ -115,26 +116,18 @@ Versioned snapshots are frozen at release time and will not change.
 
 ### Generated HTML Example
 
-Every generated HTML page includes canonical and hreflang tags in the `<head>`. The canonical URL depends on whether the page is served under `/latest/` or a versioned path.
+Every generated HTML page includes canonical and hreflang tags in the `<head>`. Two patterns apply:
 
-**When rendered under a versioned path** (e.g. `/0.1.2/`), the canonical MUST point at the versioned URL. Example with placeholder `{X.Y.Z}`:
+**1. Latest alias (redirect stub)** — Pages under `/latest/` redirect to the current release; the canonical and hreflang in the stub point at the versioned snapshot (see snippet above in "How alias_type: redirect works").
+
+**2. Versioned snapshot canonical** — When the page is served under `/{X.Y.Z}/`, the canonical MUST point at the versioned URL so that audit citations use a frozen snapshot:
 
 ```html
-<!-- Example: versioned canonical (e.g. /0.1.2/) -->
+<!-- Versioned snapshot (e.g. /{X.Y.Z}/governance/) -->
 <link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 <link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 <link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/{X.Y.Z}/ja/governance/">
 <link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
-```
-
-**When rendered under a versioned path** (e.g. `/0.1.2/`), the canonical MUST include the versioned prefix so that audit citations point at the frozen snapshot. When rendered under `/{X.Y.Z}/`, canonical must include the versioned prefix.
-
-```html
-<!-- Example: versioned snapshot (e.g. /0.1.2/) -->
-<link rel="canonical" href="https://standard.aimoaas.com/0.1.2/governance/">
-<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/0.1.2/governance/">
-<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/0.1.2/ja/governance/">
-<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/0.1.2/governance/">
 ```
 
 ### robots.txt
@@ -215,6 +208,6 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 
 ## Related Documentation
 
-- [Trust Package](trust-package.md) — Auditor-ready materials
+- [Trust Package](../trust-package/) — Auditor-ready materials
 - [Releases](../../releases/) — Version history and changelog
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Version policy

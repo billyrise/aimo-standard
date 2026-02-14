@@ -39,6 +39,6 @@ description: AIMO v0.1 IDポリシーと名前空間の分離 - EVはEvidence（
 
 ## 参照
 
-- [タクソノミー](./03-taxonomy.md) — 次元 **LG: ログ/記録種別**
-- [Evidence Pack テンプレート](./06-ev-template.md) — `codes.LG` および `ev_codes` / `ev_type` は **LG-xxx** を使用
-- [バリデータ](./07-validator.md) — 名前空間・衝突チェック
+- [タクソノミー](../03-taxonomy/) — 次元 **LG: ログ/記録種別**
+- [Evidence Pack テンプレート](../06-ev-template/) — `codes.LG` および `ev_codes` / `ev_type` は **LG-xxx** を使用
+- [バリデータ](../07-validator/) — 名前空間・衝突チェック

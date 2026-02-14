@@ -53,7 +53,7 @@ Le dictionnaire canonique utilise **18 colonnes** (structure neutre linguistique
 | 9 | `examples` | Non | Exemples séparés par pipe | `chatbot\|recommendation` |
 
 !!! note "Traductions"
-    Le modèle de données canonique sépare les traductions dans des packs de langue (`data/taxonomy/i18n/*.yaml`). Chaque pack de langue fournit des valeurs localisées `dimension_name`, `label` et `definition`. Voir [Guide de localisation](../../contributing/localization.md) pour les détails.
+    Le modèle de données canonique sépare les traductions dans des packs de langue (`data/taxonomy/i18n/*.yaml`). Chaque pack de langue fournit des valeurs localisées `dimension_name`, `label` et `definition`. Voir [Guide de localisation](../../../contributing/localization/) pour les détails.
 
 ### Colonnes de cycle de vie (6)
 
@@ -195,8 +195,8 @@ Voir [Versions](../../../releases/) pour les packages téléchargeables contenan
 
 ## Pages connexes
 
-- [Taxonomie](./03-taxonomy.md) - Définitions de dimensions et tableaux de codes
-- [Codes](./04-codes.md) - Format de code, nommage et cycle de vie
-- [Modèles de preuves](./06-ev-template.md) - Comment les codes sont utilisés dans les modèles
-- [Validateur](./07-validator.md) - Règles de validation des codes
-- [Changelog](./08-changelog.md) - Historique des versions
+- [Taxonomie](../03-taxonomy/) - Définitions de dimensions et tableaux de codes
+- [Codes](../04-codes/) - Format de code, nommage et cycle de vie
+- [Modèles de preuves](../06-ev-template/) - Comment les codes sont utilisés dans les modèles
+- [Validateur](../07-validator/) - Règles de validation des codes
+- [Changelog](../08-changelog/) - Historique des versions

@@ -52,4 +52,4 @@ A JNC structure aligns with:
 
 - **v0.1 / v0.1.1**: No JNC schema or requirement. Adopters may document exceptions outside the bundle.
 - **v0.1.2**: JNC is **optional**. If present in the Evidence Bundle, it is schema-validated. Not required for bundle validity.
-- **v0.2 (planned)**: Further evolution may be described in the [v0.2 roadmap](../standard/current/10-roadmap-v0.2.md).
+- **v0.2 (planned)**: Further evolution may be described in the [v0.2 roadmap](../../standard/current/10-roadmap-v0.2/).

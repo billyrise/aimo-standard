@@ -32,8 +32,8 @@ Leitores devem verificar contra o texto autoritativo de cada framework ou regula
 
 ## Relação com Pacote de Evidências e Requisitos Mínimos de Evidências
 
-- **[Pacote de Evidências](../artifacts/evidence-bundle.md)**: Define a estrutura do pacote, sumário e rastreabilidade. Linhas do Mapa de Cobertura referenciam seções do Pacote de Evidências (ex: EV, Dictionary, Summary, change_log, request, review, exception, renewal).
-- **[Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md)**: Define grupos de ciclo de vida de nível DEVE (solicitação, revisão, exceção, renovação, change_log, integridade). Linhas do Mapa de Cobertura referenciam esses grupos em `minimum_evidence_refs`.
+- **[Pacote de Evidências](../../artifacts/evidence-bundle/)**: Define a estrutura do pacote, sumário e rastreabilidade. Linhas do Mapa de Cobertura referenciam seções do Pacote de Evidências (ex: EV, Dictionary, Summary, change_log, request, review, exception, renewal).
+- **[Requisitos Mínimos de Evidências](../../artifacts/minimum-evidence/)**: Define grupos de ciclo de vida de nível DEVE (solicitação, revisão, exceção, renovação, change_log, integridade). Linhas do Mapa de Cobertura referenciam esses grupos em `minimum_evidence_refs`.
 
 Use o Mapa de Cobertura para ver quais itens do Pacote de Evidências e grupos de Requisitos Mínimos de Evidências suportam explicabilidade para um dado requisito externo.
 
@@ -42,12 +42,12 @@ Use o Mapa de Cobertura para ver quais itens do Pacote de Evidências e grupos d
 !!! warning "Importante"
     O AIMO Standard suporta **explicabilidade e prontidão de evidências**. Ele **não** fornece aconselhamento jurídico, garante conformidade, nem certifica conformidade com qualquer regulamentação ou framework. Adotantes devem verificar reivindicações contra textos autoritativos e obter aconselhamento profissional conforme apropriado.
 
-Veja [Limite de Responsabilidade](../governance/responsibility-boundary.md) para escopo, suposições e responsabilidades do adotante.
+Veja [Limite de Responsabilidade](../../governance/responsibility-boundary/) para escopo, suposições e responsabilidades do adotante.
 
 ## Jornada de auditoria
 
 A partir desta página, continue para:
 
-1. **Mapeamentos de framework**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Validar**: [Validador](../validator/index.md) — execute verificações estruturais
+1. **Mapeamentos de framework**: [ISO 42001](../iso-42001/), [NIST AI RMF](../nist-ai-rmf/), [EU AI Act](../eu-ai-act/), [ISMS](../isms/)
+2. **Validar**: [Validador](../../validator/) — execute verificações estruturais
 3. **Download**: [Releases](../../releases/) — obtenha ativos de release

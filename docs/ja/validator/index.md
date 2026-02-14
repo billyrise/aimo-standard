@@ -80,15 +80,15 @@ python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate
 
 - **コンテンツの正確性**: バリデータは構造をチェックし、意味はチェックしない
 - **準拠保証**: バリデーション合格は規制への準拠を保証しない
-- **人の判断**: 文脈依存の判断は人によるレビューが必要（[人による監督プロトコル](../governance/human-oversight-protocol.md)参照）
+- **人の判断**: 文脈依存の判断は人によるレビューが必要（[人による監督プロトコル](../governance/human-oversight-protocol/)参照）
 - **ログの自動収集**: バリデータは提出された証跡を検証するが、ログを収集しない
 
 ---
 
 ## リソース
 
-- **仕様**: [Standard > Current > Validator](../standard/current/07-validator.md) — ルール、参照チェック、検証と証跡の関係。
+- **仕様**: [Standard > Current > Validator](../standard/current/07-validator/) — ルール、参照チェック、検証と証跡の関係。
 - **ルールと実装**: リポジトリの `validator/rules/`（チェック）、`validator/src/`（参照実装）。実行方法と CI での利用は仕様に記載。
 - **解釈**: 検証「失敗」が監査上何を意味するか（仕様で説明）。
 
-適合性とアーティファクトの利用については [Conformance](../conformance/index.md) と [Artifacts](../artifacts/index.md) を参照。
+適合性とアーティファクトの利用については [Conformance](../conformance/) と [Artifacts](../artifacts/) を参照。

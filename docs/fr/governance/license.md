@@ -44,7 +44,7 @@ Lors de l'utilisation des matériaux du standard AIMO :
 1. Inclure l'avis de licence dans les distributions
 2. Fournir une attribution (voir [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
 3. Indiquer les modifications significatives (le cas échéant)
-4. Ne pas utiliser les marques sans permission (voir [Marques](trademarks.md))
+4. Ne pas utiliser les marques sans permission (voir [Marques](../trademarks/))
 
 ## Fichier NOTICE
 
@@ -72,5 +72,5 @@ R : Oui, mais vous devez noter les modifications et ne pouvez pas déclarer la c
 
 ## Pages connexes
 
-- [Marques](trademarks.md) — Utilisation des marques
-- [Gouvernance](index.md) — Gouvernance du projet
+- [Marques](../trademarks/) — Utilisation des marques
+- [Gouvernance](../) — Gouvernance du projet

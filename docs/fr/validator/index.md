@@ -51,15 +51,15 @@ Codes de sortie : `0` = succès, `1` = erreurs de validation, `2` = erreur d'uti
 
 - **Exactitude du contenu** : le validateur vérifie la structure, pas la signification
 - **Garantie de conformité** : passer la validation ne garantit pas la conformité réglementaire
-- **Jugement humain** : les décisions dépendantes du contexte nécessitent une revue humaine (voir [Protocole de surveillance humaine](../governance/human-oversight-protocol.md))
+- **Jugement humain** : les décisions dépendantes du contexte nécessitent une revue humaine (voir [Protocole de surveillance humaine](../governance/human-oversight-protocol/))
 - **Collecte automatique de journaux** : le validateur valide les preuves soumises ; il ne collecte pas les journaux
 
 ---
 
 ## Ressources
 
-- **Spécification** : [Standard > Actuel > Validateur](../standard/current/07-validator.md) — règles, vérifications de référence et comment la validation se rapporte aux preuves.
+- **Spécification** : [Standard > Actuel > Validateur](../standard/current/07-validator/) — règles, vérifications de référence et comment la validation se rapporte aux preuves.
 - **Règles et implémentation** : dépôt `validator/rules/` (vérifications), `validator/src/` (implémentation de référence). L'exécution et l'utilisation CI sont décrites dans la spec.
 - **Interprétation** : ce qu'un "échec" de validation signifie pour les auditeurs (expliqué dans la spec).
 
-Pour la conformité et l'utilisation des artefacts, voir [Conformité](../conformance/index.md) et [Artefacts](../artifacts/index.md).
+Pour la conformité et l'utilisation des artefacts, voir [Conformité](../conformance/) et [Artefacts](../artifacts/).

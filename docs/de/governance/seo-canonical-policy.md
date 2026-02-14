@@ -67,8 +67,9 @@ Anstatt Dateien zu kopieren, enthält `/latest/` Weiterleitungsseiten, die auf d
 
 ```html
 <!-- /latest/index.html -->
-<meta http-equiv="refresh" content="0; url=../0.0.1/">
-<link rel="canonical" href="https://standard.aimoaas.com/0.0.1/">
+<!-- Latest alias (redirect stub); canonical points to versioned snapshot -->
+<meta http-equiv="refresh" content="0; url=../{X.Y.Z}/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/">
 ```
 
 Dies stellt sicher:
@@ -196,6 +197,6 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 
 ## Verwandte Dokumentation
 
-- [Trust Package](trust-package.md) — Prüfungsbereite Materialien
+- [Trust Package](../trust-package/) — Prüfungsbereite Materialien
 - [Releases](../../releases/) — Versionshistorie und Changelog
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Versionsrichtlinie

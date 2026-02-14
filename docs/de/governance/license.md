@@ -44,7 +44,7 @@ Bei Verwendung von AIMO Standard-Materialien:
 1. Lizenzhinweis in Distributionen einschließen
 2. Urheberrechtshinweis bereitstellen (siehe [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
 3. Wesentliche Modifikationen angeben (falls vorhanden)
-4. Marken nicht ohne Genehmigung verwenden (siehe [Marken](trademarks.md))
+4. Marken nicht ohne Genehmigung verwenden (siehe [Marken](../trademarks/))
 
 ## NOTICE-Datei
 
@@ -72,5 +72,5 @@ A: Ja, aber Sie müssen Modifikationen vermerken und können keine Konformität 
 
 ## Verwandte Seiten
 
-- [Marken](trademarks.md) — Markennutzung
-- [Governance](index.md) — Projekt-Governance
+- [Marken](../trademarks/) — Markennutzung
+- [Governance](../) — Projekt-Governance

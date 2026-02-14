@@ -8,7 +8,7 @@ Esta seção define os templates de Evidence Pack e seu uso. Um Evidence Pack é
 
 ## Namespace: tipos de documento Evidence Pack (EP) vs Taxonomy Log/Event Type (LG)
 
-> **Importante**: **EP-01..EP-07** identificam *tipos de documento* (tipos de arquivo Evidence Pack). **LG-001, LG-002, …** na [Taxonomia](./03-taxonomy.md) identificam *tipos de log/registro* (Registro de Solicitação, Registro de Revisão/Aprovação, etc.). **EV-** reservado para IDs de artefato Evidence. Use EP para estrutura do pack e LG para classificação de evidência do ciclo de vida.
+> **Importante**: **EP-01..EP-07** identificam *tipos de documento* (tipos de arquivo Evidence Pack). **LG-001, LG-002, …** na [Taxonomia](../03-taxonomy/) identificam *tipos de log/registro* (Registro de Solicitação, Registro de Revisão/Aprovação, etc.). **EV-** reservado para IDs de artefato Evidence. Use EP para estrutura do pack e LG para classificação de evidência do ciclo de vida.
 
 ## Princípio Chave: Gestão de Índice e Diff
 
@@ -164,7 +164,7 @@ Empresas recebem templates através de seus auditores, consultores ou equipes in
 
 ## Referências
 
-- [Taxonomia](./03-taxonomy.md) - Definições de dimensão
-- [Códigos](./04-codes.md) - Formato de código
-- [Validador](./07-validator.md) - Regras de validação
-- [Pacote de Evidências](../../artifacts/evidence-bundle.md) - Estrutura do pacote
+- [Taxonomia](../03-taxonomy/) - Definições de dimensão
+- [Códigos](../04-codes/) - Formato de código
+- [Validador](../07-validator/) - Regras de validação
+- [Pacote de Evidências](../../../artifacts/evidence-bundle/) - Estrutura do pacote

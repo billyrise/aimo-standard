@@ -26,9 +26,9 @@ description: Evidence Bundle Coverage Map template (v0.1). Informative one-page 
 |----------|----------|------------------------|
 | **object_index** | Enumerated objects (metadata, indexes). Each entry: `id`, `type`, `path`, `sha256`. | e.g. `objects/index.json` (index type). |
 | **payload_index** | Payload files (root EV JSON, Evidence Pack files). Each entry: `logical_id`, `path`, `sha256`, `mime`, `size`. | e.g. `payloads/root.json` (root AIMO EV JSON). |
-| **EV types** | Evidence records (in root or linked payloads) — request, review, exception, renewal, change log. | Aligned with [Evidence Pack Template](../standard/current/06-ev-template.md) and [Minimum Evidence Requirements](minimum-evidence.md). |
+| **EV types** | Evidence records (in root or linked payloads) — request, review, exception, renewal, change log. | Aligned with [Evidence Pack Template](../../standard/current/06-ev-template/) and [Minimum Evidence Requirements](../minimum-evidence/). |
 
-*Implementers may extend object_index and payload_index; paths MUST remain within the bundle root and satisfy the [Evidence Bundle root structure (v0.1)](../standard/current/09-evidence-bundle-structure.md).*
+*Implementers may extend object_index and payload_index; paths MUST remain within the bundle root and satisfy the [Evidence Bundle root structure (v0.1)](../../standard/current/09-evidence-bundle-structure/).*
 
 ---
 
@@ -38,10 +38,10 @@ Mapping to external frameworks is **for reference only**; the standard does not 
 
 | Framework | Use in this bundle | Reference |
 |-----------|--------------------|-----------|
-| **ISO/IEC 42001** | Optional: document which AI MS themes this bundle supports. | [Coverage Map → ISO 42001](../coverage-map/iso-42001.md) |
-| **EU AI Act** | Optional: high-level documentation/record-keeping alignment. | [Coverage Map → EU AI Act](../coverage-map/eu-ai-act.md) |
-| **NIST AI RMF** | Optional: Govern, Map, Measure, Manage mapping. | [Coverage Map → NIST AI RMF](../coverage-map/nist-ai-rmf.md) |
-| **ISMS (27001/27002)** | Optional: change management, access, logging, integrity. | [Coverage Map → ISMS](../coverage-map/isms.md) |
+| **ISO/IEC 42001** | Optional: document which AI MS themes this bundle supports. | [Coverage Map → ISO 42001](../../coverage-map/iso-42001/) |
+| **EU AI Act** | Optional: high-level documentation/record-keeping alignment. | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/) |
+| **NIST AI RMF** | Optional: Govern, Map, Measure, Manage mapping. | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/) |
+| **ISMS (27001/27002)** | Optional: change management, access, logging, integrity. | [Coverage Map → ISMS](../../coverage-map/isms/) |
 
 *Fill in "Use in this bundle" per submission; the standard does not require any specific control coverage.*
 
@@ -69,21 +69,21 @@ Mapping to external frameworks is **for reference only**; the standard does not 
 | **Signature existence** | At least one signature file in `signatures/`; manifest references it via `signing.signatures[]` with `path` and `targets` (v0.1 MUST include `manifest.json` in targets). Cryptographic verification is out of scope for v0.1. |
 | **Hash chain** | `hash_chain` in manifest: `algorithm`, `head` (64-char hex), `path` (file under `hashes/`), `covers` (v0.1 MUST include `manifest.json` and `objects/index.json`). File at `hash_chain.path` exists. |
 
-*This table summarizes the integrity guarantees that the [Validator](../validator/index.md) checks for v0.1 bundles. Custody (storage, access control, retention) is implementation-defined.*
+*This table summarizes the integrity guarantees that the [Validator](../../validator/) checks for v0.1 bundles. Custody (storage, access control, retention) is implementation-defined.*
 
 ---
 
 ## Coverage Map (YAML) vs Profiles (JSON)
 
 - **`coverage_map/coverage_map.yaml`** is **Informative**: it describes high-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements.
-- **Profile JSONs** in **`coverage_map/profiles/`** (e.g. `iso42001.json`, `nist_ai_rmf.json`, `eu_ai_act_annex_iv.json`) are **normative conversion specifications**: they conform to `schemas/jsonschema/aimo-profile.schema.json` and define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). Validators may use them to check that a bundle satisfies a given profile (required mappings present). See [Validator](../validator/index.md) for profile-based validation when implemented.
+- **Profile JSONs** in **`coverage_map/profiles/`** (e.g. `iso42001.json`, `nist_ai_rmf.json`, `eu_ai_act_annex_iv.json`) are **normative conversion specifications**: they conform to `schemas/jsonschema/aimo-profile.schema.json` and define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). Validators may use them to check that a bundle satisfies a given profile (required mappings present). See [Validator](../../validator/) for profile-based validation when implemented.
 
 ---
 
 ## See also
 
-- [Evidence Bundle (artifact overview)](evidence-bundle.md)
-- [Evidence Bundle root structure (v0.1)](../standard/current/09-evidence-bundle-structure.md)
-- [Minimum Evidence Requirements](minimum-evidence.md)
-- [Coverage Map (framework mappings)](../coverage-map/index.md)
-- [Validator](../validator/index.md)
+- [Evidence Bundle (artifact overview)](../evidence-bundle/)
+- [Evidence Bundle root structure (v0.1)](../../standard/current/09-evidence-bundle-structure/)
+- [Minimum Evidence Requirements](../minimum-evidence/)
+- [Coverage Map (framework mappings)](../../coverage-map/)
+- [Validator](../../validator/)

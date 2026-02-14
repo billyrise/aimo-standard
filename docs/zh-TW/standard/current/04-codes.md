@@ -161,7 +161,7 @@ LG: LG-001, LG-002
 
 ### 版本控制
 
-代碼變更遵循[語意化版本控制](./08-changelog.md)：
+代碼變更遵循[語意化版本控制](../08-changelog/)：
 
 - **MAJOR**：代碼移除或破壞性變更
 - **MINOR**：新增代碼、代碼棄用
@@ -186,16 +186,16 @@ LG: LG-001, LG-002
 4. 代碼格式符合 `<PREFIX>-<TOKEN>` 模式（例如 `UC-001`）
 5. 已棄用的代碼標記警告
 
-請參閱[驗證器](./07-validator.md)了解實作詳情。
+請參閱[驗證器](../07-validator/)了解實作詳情。
 
 ## SSOT 參照
 
 !!! info "事實來源"
-    權威定義是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本頁是解釋性的。請參閱[在地化指南](../../contributing/localization.md)了解更新工作流程。
+    權威定義是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本頁是解釋性的。請參閱[在地化指南](../../../contributing/localization/)了解更新工作流程。
 
 ## 相關頁面
 
-- [分類法](./03-taxonomy.md) - 完整維度定義
-- [字典](./05-dictionary.md) - 完整代碼清單和欄位定義
-- [驗證器](./07-validator.md) - 驗證規則
-- [變更日誌](./08-changelog.md) - 版本歷史
+- [分類法](../03-taxonomy/) - 完整維度定義
+- [字典](../05-dictionary/) - 完整代碼清單和欄位定義
+- [驗證器](../07-validator/) - 驗證規則
+- [變更日誌](../08-changelog/) - 版本歷史

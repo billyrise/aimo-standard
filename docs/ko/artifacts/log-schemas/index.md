@@ -30,11 +30,11 @@ description: AIMO 로그 스키마 - AI 증거를 위한 벤더 중립 로그 �
 
 | 스키마 | 목적 | 다운로드 |
 | --- | --- | --- |
-| [Shadow AI 검색 로그](shadow-ai-discovery.md) | 승인되지 않은 AI 사용 탐지 및 인벤토리 | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
-| [에이전트 활동 로그](agent-activity.md) | 에이전틱 AI 권한 행사 및 도구 실행 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+| [Shadow AI 검색 로그](shadow-ai-discovery/) | 승인되지 않은 AI 사용 탐지 및 인벤토리 | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [에이전트 활동 로그](agent-activity/) | 에이전틱 AI 권한 행사 및 도구 실행 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
 
 ## 관련 페이지
 
-- [최소 증거 요구사항](../minimum-evidence.md) — MUST 수준 증거 체크리스트
-- [증거 번들](../evidence-bundle.md) — 번들 구조 및 목차
-- [분류체계](../../standard/current/03-taxonomy.md) — 분류 코드 (UC-010 에이전틱 자동화, IM-007 Shadow/미관리 포함)
+- [최소 증거 요구사항](../minimum-evidence/) — MUST 수준 증거 체크리스트
+- [증거 번들](../evidence-bundle/) — 번들 구조 및 목차
+- [분류체계](../../standard/current/03-taxonomy/) — 분류 코드 (UC-010 에이전틱 자동화, IM-007 Shadow/미관리 포함)

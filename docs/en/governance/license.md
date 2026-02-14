@@ -44,7 +44,7 @@ When using AIMO Standard materials:
 1. Include the license notice in distributions
 2. Provide attribution (see [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
 3. State significant modifications (if any)
-4. Do not use trademarks without permission (see [Trademarks](trademarks.md))
+4. Do not use trademarks without permission (see [Trademarks](../trademarks/))
 
 ## NOTICE File
 
@@ -72,5 +72,5 @@ A: Yes, but you must note modifications and cannot claim conformance with modifi
 
 ## Related Pages
 
-- [Trademarks](trademarks.md) — Trademark usage
-- [Governance](index.md) — Project governance
+- [Trademarks](../trademarks/) — Trademark usage
+- [Governance](../) — Project governance

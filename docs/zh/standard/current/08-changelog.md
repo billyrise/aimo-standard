@@ -148,6 +148,6 @@ v1.0.0: FS-007 删除 (status: removed)
 
 ## 参考
 
-- [分类法](./03-taxonomy.md) - 维度定义
-- [字典](./05-dictionary.md) - 代码字典
-- [版本控制政策](../../governance/index.md) - 版本控制政策（参见仓库根目录中的 VERSIONING.md）
+- [分类法](../03-taxonomy/) - 维度定义
+- [字典](../05-dictionary/) - 代码字典
+- [版本控制政策](../../../governance/) - 版本控制政策（参见仓库根目录中的 VERSIONING.md）

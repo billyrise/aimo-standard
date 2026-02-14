@@ -6,20 +6,20 @@ description: AIMO Standard governance hub - Project governance, security policie
 
 This section is the hub for project governance, security, licensing, citation, and contribution guidelines.
 
-Start here for auditor-ready materials: **[Trust Package](trust-package.md)**.
+Start here for auditor-ready materials: **[Trust Package](trust-package/)**.
 
 ## Governance Pages
 
 | Page | Description |
 | ---- | ----------- |
-| [Trust Package](trust-package.md) | Auditor-ready materials hub |
-| [Responsibility Boundary](responsibility-boundary.md) | What AIMO provides and does not provide |
-| [Security](security.md) | Vulnerability reporting and security policy |
-| [License](license.md) | Licensing terms (Apache-2.0) |
-| [Trademarks](trademarks.md) | Trademark usage guidelines |
-| [How to Cite](cite.md) | Citation guidance for papers and audits |
-| [Contributing](contributing.md) | How to contribute to AIMO Standard |
-| [SEO & Canonical Policy](seo-canonical-policy.md) | URL canonicalization guidance |
+| [Trust Package](trust-package/) | Auditor-ready materials hub |
+| [Responsibility Boundary](responsibility-boundary/) | What AIMO provides and does not provide |
+| [Security](security/) | Vulnerability reporting and security policy |
+| [License](license/) | Licensing terms (Apache-2.0) |
+| [Trademarks](trademarks/) | Trademark usage guidelines |
+| [How to Cite](cite/) | Citation guidance for papers and audits |
+| [Contributing](contributing/) | How to contribute to AIMO Standard |
+| [SEO & Canonical Policy](seo-canonical-policy/) | URL canonicalization guidance |
 
 ## Repository Policy Files
 
@@ -41,14 +41,14 @@ The following files live in the repository root and contain authoritative polici
 
 For auditors and compliance reviewers, the recommended reading order:
 
-1. **[Trust Package](trust-package.md)** — Overview of audit-ready materials
-2. **[Responsibility Boundary](responsibility-boundary.md)** — Scope and adopter responsibilities
-3. **[Security](security.md)** — Security posture and disclosure policy
-4. **[License](license.md)** — Licensing terms for adoption
-5. **[How to Cite](cite.md)** — Citation for audit documentation
+1. **[Trust Package](trust-package/)** — Overview of audit-ready materials
+2. **[Responsibility Boundary](responsibility-boundary/)** — Scope and adopter responsibilities
+3. **[Security](security/)** — Security posture and disclosure policy
+4. **[License](license/)** — Licensing terms for adoption
+5. **[How to Cite](cite/)** — Citation for audit documentation
 
 ## Related Pages
 
 - [Releases](../../releases/) — Release snapshots and changelog
-- [Conformance](../conformance/index.md) — Conformance levels
-- [Localization Guide](../contributing/localization.md) — i18n workflow
+- [Conformance](../conformance/) — Conformance levels
+- [Localization Guide](../contributing/localization/) — i18n workflow

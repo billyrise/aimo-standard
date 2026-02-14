@@ -6,20 +6,20 @@ description: AIMO Standard Governance-Hub - Projekt-Governance, Sicherheitsricht
 
 Dieser Abschnitt ist der Hub für Projekt-Governance, Sicherheit, Lizenzierung, Zitierung und Beitragsrichtlinien.
 
-Starten Sie hier für prüfungsbereite Materialien: **[Trust Package](trust-package.md)**.
+Starten Sie hier für prüfungsbereite Materialien: **[Trust Package](trust-package/)**.
 
 ## Governance-Seiten
 
 | Seite | Beschreibung |
 | ---- | ----------- |
-| [Trust Package](trust-package.md) | Prüfungsbereite Materialien-Hub |
-| [Verantwortungsgrenze](responsibility-boundary.md) | Was AIMO bereitstellt und nicht bereitstellt |
-| [Sicherheit](security.md) | Schwachstellenmeldung und Sicherheitsrichtlinie |
-| [Lizenz](license.md) | Lizenzbedingungen (Apache-2.0) |
-| [Marken](trademarks.md) | Richtlinien zur Markennutzung |
-| [Zitierung](cite.md) | Zitierhinweise für Veröffentlichungen und Audits |
-| [Beitragen](contributing.md) | Wie man zum AIMO Standard beiträgt |
-| [SEO & Canonical Policy](seo-canonical-policy.md) | URL-Kanonisierungsrichtlinien |
+| [Trust Package](trust-package/) | Prüfungsbereite Materialien-Hub |
+| [Verantwortungsgrenze](responsibility-boundary/) | Was AIMO bereitstellt und nicht bereitstellt |
+| [Sicherheit](security/) | Schwachstellenmeldung und Sicherheitsrichtlinie |
+| [Lizenz](license/) | Lizenzbedingungen (Apache-2.0) |
+| [Marken](trademarks/) | Richtlinien zur Markennutzung |
+| [Zitierung](cite/) | Zitierhinweise für Veröffentlichungen und Audits |
+| [Beitragen](contributing/) | Wie man zum AIMO Standard beiträgt |
+| [SEO & Canonical Policy](seo-canonical-policy/) | URL-Kanonisierungsrichtlinien |
 
 ## Repository-Richtliniendateien
 
@@ -41,14 +41,14 @@ Die folgenden Dateien befinden sich im Repository-Stammverzeichnis und enthalten
 
 Für Prüfer und Compliance-Reviewer ist die empfohlene Lesereihenfolge:
 
-1. **[Trust Package](trust-package.md)** — Übersicht der prüfungsbereiten Materialien
-2. **[Verantwortungsgrenze](responsibility-boundary.md)** — Umfang und Anwenderverantwortlichkeiten
-3. **[Sicherheit](security.md)** — Sicherheitsstatus und Offenlegungsrichtlinie
-4. **[Lizenz](license.md)** — Lizenzbedingungen für die Einführung
-5. **[Zitierung](cite.md)** — Zitierung für Audit-Dokumentation
+1. **[Trust Package](trust-package/)** — Übersicht der prüfungsbereiten Materialien
+2. **[Verantwortungsgrenze](responsibility-boundary/)** — Umfang und Anwenderverantwortlichkeiten
+3. **[Sicherheit](security/)** — Sicherheitsstatus und Offenlegungsrichtlinie
+4. **[Lizenz](license/)** — Lizenzbedingungen für die Einführung
+5. **[Zitierung](cite/)** — Zitierung für Audit-Dokumentation
 
 ## Verwandte Seiten
 
 - [Releases](../../releases/) — Release-Snapshots und Changelog
-- [Konformität](../conformance/index.md) — Konformitätsstufen
-- [Lokalisierungsleitfaden](../contributing/localization.md) — i18n-Workflow
+- [Konformität](../conformance/) — Konformitätsstufen
+- [Lokalisierungsleitfaden](../contributing/localization/) — i18n-Workflow

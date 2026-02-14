@@ -28,7 +28,7 @@ Der AIMO Validator und ähnliche automatisierte Tools können prüfen:
 | **Integritätsprüfungen** | Hash-Format und -Vorhandensein validieren (keine Neuberechnung gegen Inhalt) |
 | **Dictionary-Validierung** | Bestätigen, dass Codes im Taxonomie-Dictionary existieren |
 
-Siehe [Validator](../standard/current/07-validator.md) für detaillierte Validierungsregeln und Referenzimplementierung.
+Siehe [Validator](../../standard/current/07-validator/) für detaillierte Validierungsregeln und Referenzimplementierung.
 
 ## Was menschliche Überprüfung erfordert (Human-in-the-Loop-Umfang)
 
@@ -73,7 +73,7 @@ Organisationen, die Human Oversight implementieren, sollten dokumentieren:
 | **Behebungsplan** | Geplante Maßnahmen, Verantwortliche und Zeitpläne zur Problembehebung |
 | **Abzeichnung** | Formelle Bestätigung, dass die Überprüfung abgeschlossen wurde |
 
-Diese Datensätze sollten im Evidence Bundle gemäß den [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md) enthalten sein.
+Diese Datensätze sollten im Evidence Bundle gemäß den [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) enthalten sein.
 
 ## Keine Überbeanspruchung
 
@@ -89,7 +89,7 @@ Diese Datensätze sollten im Evidence Bundle gemäß den [Mindestanforderungen a
 
 ## Verwandte Seiten
 
-- [Validator](../standard/current/07-validator.md) — Automatisierte Validierungsregeln und Referenzimplementierung
-- [Verantwortungsgrenze](responsibility-boundary.md) — Was AIMO bereitstellt vs. Anwenderverantwortlichkeiten
-- [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md) — MUSS-Evidence-Checkliste
-- [Trust Package](trust-package.md) — Prüfungsbereite Materialien-Hub
+- [Validator](../../standard/current/07-validator/) — Automatisierte Validierungsregeln und Referenzimplementierung
+- [Verantwortungsgrenze](../responsibility-boundary/) — Was AIMO bereitstellt vs. Anwenderverantwortlichkeiten
+- [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) — MUSS-Evidence-Checkliste
+- [Trust Package](../trust-package/) — Prüfungsbereite Materialien-Hub

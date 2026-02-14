@@ -8,7 +8,7 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 
 ## 命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Log/Event Type（LG）
 
-> **重要**：**EP-01..EP-07** 表示*文档类型*（证据包文件类型）。**LG-001、LG-002、…** 在[分类法](./03-taxonomy.md)中表示*日志/记录类型*（请求记录、审查/批准记录等）。**EV-** 专用于 Evidence 成果物 ID。请勿混用：EP 用于包结构，LG 用于生命周期证据分类。
+> **重要**：**EP-01..EP-07** 表示*文档类型*（证据包文件类型）。**LG-001、LG-002、…** 在[分类法](../03-taxonomy/)中表示*日志/记录类型*（请求记录、审查/批准记录等）。**EV-** 专用于 Evidence 成果物 ID。请勿混用：EP 用于包结构，LG 用于生命周期证据分类。
 
 ## 关键原则：索引和差异管理
 
@@ -164,7 +164,7 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 
 ## 参考
 
-- [分类法](./03-taxonomy.md) - 维度定义
-- [代码](./04-codes.md) - 代码格式
-- [验证器](./07-validator.md) - 验证规则
-- [证据包](../../artifacts/evidence-bundle.md) - 包结构
+- [分类法](../03-taxonomy/) - 维度定义
+- [代码](../04-codes/) - 代码格式
+- [验证器](../07-validator/) - 验证规则
+- [证据包](../../../artifacts/evidence-bundle/) - 包结构

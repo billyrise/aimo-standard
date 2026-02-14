@@ -107,6 +107,6 @@ description: AIMO 최소 증거 요구사항. AI 거버넌스 증거 준비를 �
 
 이 최소 세트는 설명 가능성과 증거 준비를 지원하며; 그 자체로 법률 자문을 제공하거나 컴플라이언스를 보장하지 않습니다.
 
-번들 구조 및 목차에 대해서는 [증거 번들](evidence-bundle.md)을; 필드 수준 정렬에 대해서는 [EV 템플릿](../standard/current/06-ev-template.md) 및 스키마를 참조하세요.
+번들 구조 및 목차에 대해서는 [증거 번들](../evidence-bundle/)을; 필드 수준 정렬에 대해서는 [EV 템플릿](../../standard/current/06-ev-template/) 및 스키마를 참조하세요.
 
-참조: [로그 스키마](log-schemas/index.md) — Shadow AI 검색 및 에이전트 활동 증거를 위한 정규화된 로그 형식.
+참조: [로그 스키마](../log-schemas/) — Shadow AI 검색 및 에이전트 활동 증거를 위한 정규화된 로그 형식.

@@ -6,7 +6,7 @@ description: AIMO minimum evidence requirements. MUST-level checklist by lifecyc
 
 This page is the **Minimum Evidence Requirements** checklist for auditors and implementers. It defines the minimum evidence requirements as a MUST-level checklist, grouped by lifecycle. It supports explainability and evidence readiness; it does not provide legal advice or guarantee compliance.
 
-Use this page together with [Evidence Bundle](evidence-bundle.md) and the [Validator](../standard/current/07-validator.md) when preparing or reviewing submissions.
+Use this page together with [Evidence Bundle](../evidence-bundle/) and the [Validator](../../standard/current/07-validator/) when preparing or reviewing submissions.
 
 ## 1) Request
 
@@ -109,6 +109,6 @@ Choose a profile based on your risk tolerance and regulatory requirements. These
 
 This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.
 
-See [Evidence Bundle](evidence-bundle.md) for bundle structure and TOC; see [EV Template](../standard/current/06-ev-template.md) and schemas for field-level alignment.
+See [Evidence Bundle](../evidence-bundle/) for bundle structure and TOC; see [EV Template](../../standard/current/06-ev-template/) and schemas for field-level alignment.
 
-See also: [Log Schemas](log-schemas/index.md) — normalized log formats for Shadow AI discovery and agent activity evidence.
+See also: [Log Schemas](../log-schemas/) — normalized log formats for Shadow AI discovery and agent activity evidence.

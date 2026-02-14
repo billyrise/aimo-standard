@@ -32,8 +32,8 @@ Leser müssen gegen den maßgeblichen Text jedes Frameworks oder jeder Vorschrif
 
 ## Beziehung zum Evidence Bundle und Mindestanforderungen an Evidence
 
-- **[Evidence Bundle](../artifacts/evidence-bundle.md)**: Definiert die Bundle-Struktur, TOC und Nachverfolgbarkeit. Coverage Map-Zeilen referenzieren Evidence Bundle-Abschnitte (z.B. EV, Dictionary, Summary, change_log, request, review, exception, renewal).
-- **[Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md)**: Definiert MUSS-Lifecycle-Gruppen (request, review, exception, renewal, change_log, integrity). Coverage Map-Zeilen referenzieren diese Gruppen in `minimum_evidence_refs`.
+- **[Evidence Bundle](../../artifacts/evidence-bundle/)**: Definiert die Bundle-Struktur, TOC und Nachverfolgbarkeit. Coverage Map-Zeilen referenzieren Evidence Bundle-Abschnitte (z.B. EV, Dictionary, Summary, change_log, request, review, exception, renewal).
+- **[Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/)**: Definiert MUSS-Lifecycle-Gruppen (request, review, exception, renewal, change_log, integrity). Coverage Map-Zeilen referenzieren diese Gruppen in `minimum_evidence_refs`.
 
 Verwenden Sie die Coverage Map, um zu sehen, welche Evidence Bundle-Elemente und Mindestanforderungen-Gruppen die Erklärbarkeit für eine gegebene externe Anforderung unterstützen.
 
@@ -42,12 +42,12 @@ Verwenden Sie die Coverage Map, um zu sehen, welche Evidence Bundle-Elemente und
 !!! warning "Wichtig"
     Der AIMO Standard unterstützt **Erklärbarkeit und Evidence-Bereitschaft**. Er bietet **keine** Rechtsberatung, garantiert keine Compliance und zertifiziert keine Konformität mit einer Vorschrift oder einem Framework. Anwender müssen Ansprüche gegen maßgebliche Texte prüfen und bei Bedarf professionelle Beratung einholen.
 
-Siehe [Verantwortungsgrenze](../governance/responsibility-boundary.md) für Umfang, Annahmen und Anwenderverantwortlichkeiten.
+Siehe [Verantwortungsgrenze](../../governance/responsibility-boundary/) für Umfang, Annahmen und Anwenderverantwortlichkeiten.
 
 ## Audit-Reise
 
 Von dieser Seite aus weiter zu:
 
-1. **Framework-Zuordnungen**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
-2. **Validieren**: [Validator](../validator/index.md) — strukturelle Prüfungen durchführen
+1. **Framework-Zuordnungen**: [ISO 42001](../iso-42001/), [NIST AI RMF](../nist-ai-rmf/), [EU AI Act](../eu-ai-act/), [ISMS](../isms/)
+2. **Validieren**: [Validator](../../validator/) — strukturelle Prüfungen durchführen
 3. **Download**: [Releases](../../releases/) — Release-Assets herunterladen

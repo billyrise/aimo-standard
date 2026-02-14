@@ -19,7 +19,7 @@ The taxonomy serves three primary purposes from an audit perspective:
 ## What It Is Not (Non-Overclaim)
 
 !!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. See [Responsibility Boundary](../../governance/responsibility-boundary.md) for details.
+    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. See [Responsibility Boundary](../../../governance/responsibility-boundary/) for details.
 
 The taxonomy is a classification system only. It does not:
 
@@ -34,7 +34,7 @@ Traditional security controls (e.g., ISMS) alone often fail to capture LLM/agent
 AIMO Taxonomy provides a shared language to classify these AI-specific risks and connect them to evidence requirements and remediation workflows.
 
 !!! warning "Reference examples only — not normative codes"
-    The codes below are **illustrative placeholders** and are **NOT** part of the normative AIMO code system. They are reference examples for differentiation; the official code system follows the Standard definitions in [Codes](./04-codes.md) and [Dictionary](./05-dictionary.md).
+    The codes below are **illustrative placeholders** and are **NOT** part of the normative AIMO code system. They are reference examples for differentiation; the official code system follows the Standard definitions in [Codes](../04-codes/) and [Dictionary](../05-dictionary/).
 
 - **AG-01** Runaway Loop / Recursion
 - **AG-02** Unauthorized Tool Use (confused deputy-style misuse)
@@ -59,7 +59,7 @@ AIMO uses 8 dimensions to classify AI use cases. Each dimension has a unique 2-l
 
 **Total: 91 codes across 8 dimensions**
 
-See [ID Policy / Namespace](./04b-id-policy-namespace.md): **EV-** is reserved for Evidence *artifact* IDs only; taxonomy log/event dimension uses **LG-** (e.g. LG-001 … LG-015).
+See [ID Policy / Namespace](../04b-id-policy-namespace/): **EV-** is reserved for Evidence *artifact* IDs only; taxonomy log/event dimension uses **LG-** (e.g. LG-001 … LG-015).
 
 ### Usage Rules
 
@@ -99,7 +99,7 @@ Categorizes AI use by the type of task or interaction. **Select one or more.** F
 | UC-009 | Search/RAG | RAG-based retrieval and question answering. |
 | UC-010 | Agentic Automation | Autonomous or semi-autonomous agents executing actions. |
 
-See [Dictionary](./05-dictionary.md) for the complete list of 30 UC codes.
+See [Dictionary](../05-dictionary/) for the complete list of 30 UC codes.
 
 ### DT: Data Type
 
@@ -178,7 +178,7 @@ Categorizes the expected outcomes or benefits from AI use. **Optional; select ze
 
 ### LG: Log/Event Type
 
-Categorizes the types of log/event/record evidence required or collected. **Select one or more.** (See [ID Policy / Namespace](./04b-id-policy-namespace.md): **EV-** is reserved for Evidence *artifact* IDs only.)
+Categorizes the types of log/event/record evidence required or collected. **Select one or more.** (See [ID Policy / Namespace](../04b-id-policy-namespace/): **EV-** is reserved for Evidence *artifact* IDs only.)
 
 | Code | Label | Definition |
 | --- | --- | --- |
@@ -210,7 +210,7 @@ Each evidence document references codes from multiple dimensions to classify the
 
 ### Referencing the Dictionary
 
-For complete code definitions including scope notes and examples, refer to the [Dictionary](./05-dictionary.md).
+For complete code definitions including scope notes and examples, refer to the [Dictionary](../05-dictionary/).
 
 ### Example Classification
 
@@ -228,11 +228,11 @@ LG: LG-001 (Request Record), LG-002 (Review/Approval Record)
 ## SSOT Reference
 
 !!! info "Source of Truth"
-    The authoritative definitions are `data/taxonomy/canonical.yaml` and `data/taxonomy/i18n/*.yaml`. The file `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` is **generated** from the SSOT. This page is explanatory. See [Localization Guide](../../contributing/localization.md) for update workflows.
+    The authoritative definitions are `data/taxonomy/canonical.yaml` and `data/taxonomy/i18n/*.yaml`. The file `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` is **generated** from the SSOT. This page is explanatory. See [Localization Guide](../../../contributing/localization/) for update workflows.
 
 ## Related Pages
 
-- [Codes](./04-codes.md) - Code format, naming conventions, and lifecycle
-- [Dictionary](./05-dictionary.md) - Complete code listings and column definitions
-- [Evidence Templates](./06-ev-template.md) - How to use codes in evidence
-- [Responsibility Boundary](../../governance/responsibility-boundary.md) - Non-overclaim statement
+- [Codes](../04-codes/) - Code format, naming conventions, and lifecycle
+- [Dictionary](../05-dictionary/) - Complete code listings and column definitions
+- [Evidence Templates](../06-ev-template/) - How to use codes in evidence
+- [Responsibility Boundary](../../../governance/responsibility-boundary/) - Non-overclaim statement

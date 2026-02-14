@@ -51,15 +51,15 @@ Schema validation failed:
 
 - **내용 정확성**: 검증기는 구조를 확인하며, 의미가 아님
 - **컴플라이언스 보장**: 검증 통과가 규제 컴플라이언스를 보장하지 않음
-- **인간 판단**: 맥락 의존적 결정은 인간 검토가 필요 ([인간 감독 프로토콜](../governance/human-oversight-protocol.md) 참조)
+- **인간 판단**: 맥락 의존적 결정은 인간 검토가 필요 ([인간 감독 프로토콜](../governance/human-oversight-protocol/) 참조)
 - **자동 로그 수집**: 검증기는 제출된 증거를 검증하며; 로그를 수집하지 않음
 
 ---
 
 ## 리소스
 
-- **사양**: [표준 > 현재 > 검증기](../standard/current/07-validator.md) — 규칙, 참조 검사 및 검증이 증거와 어떻게 관련되는지.
+- **사양**: [표준 > 현재 > 검증기](../standard/current/07-validator/) — 규칙, 참조 검사 및 검증이 증거와 어떻게 관련되는지.
 - **규칙 및 구현**: 저장소 `validator/rules/` (검사), `validator/src/` (참조 구현). 실행 및 CI 사용은 사양에 설명되어 있습니다.
 - **해석**: 감사자에게 검증 "실패"가 의미하는 것 (사양에서 설명됨).
 
-적합성 및 산출물 사용에 대해서는 [적합성](../conformance/index.md) 및 [산출물](../artifacts/index.md)을 참조하세요.
+적합성 및 산출물 사용에 대해서는 [적합성](../conformance/) 및 [산출물](../artifacts/)을 참조하세요.

@@ -6,11 +6,11 @@ description: AIMO 驗證器 - 確保證據包符合 AIMO 標準結構描述。�
 
 AIMO 驗證器確保證據包和相關人工產物符合 AIMO 標準結構描述和要求。
 
-另請參閱：[人工監督協議](../../governance/human-oversight-protocol.md) — 機器與人工審查的責任邊界。
+另請參閱：[人工監督協議](../../../governance/human-oversight-protocol/) — 機器與人工審查的責任邊界。
 
 ## 驗證器實務
 
-如需 30 秒快速入門（安裝、執行、解讀輸出），請參閱[驗證器中心](../../validator/index.md)。
+如需 30 秒快速入門（安裝、執行、解讀輸出），請參閱[驗證器中心](../../../validator/)。
 
 ## 驗證器 MVP 要求
 
@@ -202,7 +202,7 @@ Validation: PASSED
 
 ## 參照
 
-- [分類法](./03-taxonomy.md) - 維度定義
-- [代碼](./04-codes.md) - 代碼格式
-- [字典](./05-dictionary.md) - 代碼字典
-- [驗證器規則](../../validator/index.md) - 完整規則文件
+- [分類法](../03-taxonomy/) - 維度定義
+- [代碼](../04-codes/) - 代碼格式
+- [字典](../05-dictionary/) - 代碼字典
+- [驗證器規則](../../../validator/) - 完整規則文件

@@ -107,6 +107,6 @@ Elija un perfil basado en su tolerancia al riesgo y requisitos regulatorios. Est
 
 Este conjunto mínimo respalda la explicabilidad y preparación de evidencia; no proporciona en sí mismo asesoramiento legal ni garantiza cumplimiento.
 
-Consulte [Paquete de Evidencia](evidence-bundle.md) para estructura del paquete y TOC; consulte [Plantilla EV](../standard/current/06-ev-template.md) y esquemas para alineación a nivel de campo.
+Consulte [Paquete de Evidencia](../evidence-bundle/) para estructura del paquete y TOC; consulte [Plantilla EV](../../standard/current/06-ev-template/) y esquemas para alineación a nivel de campo.
 
-Consulte también: [Esquemas de Registro](log-schemas/index.md) — formatos de registro normalizados para evidencia de descubrimiento de Shadow AI y actividad de agentes.
+Consulte también: [Esquemas de Registro](../log-schemas/) — formatos de registro normalizados para evidencia de descubrimiento de Shadow AI y actividad de agentes.

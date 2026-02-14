@@ -107,6 +107,6 @@ Scegliere un profilo in base alla tolleranza al rischio e ai requisiti normativi
 
 Questo set minimo supporta la spiegabilità e la prontezza dell'evidence; non fornisce di per sé consulenza legale né garantisce la conformità.
 
-Vedere [Evidence Bundle](evidence-bundle.md) per la struttura del bundle e il TOC; vedere [Template EV](../standard/current/06-ev-template.md) e gli schemi per l'allineamento a livello di campo.
+Vedere [Evidence Bundle](../evidence-bundle/) per la struttura del bundle e il TOC; vedere [Template EV](../../standard/current/06-ev-template/) e gli schemi per l'allineamento a livello di campo.
 
-Vedere anche: [Schemi Log](log-schemas/index.md) — formati di log normalizzati per evidence di scoperta Shadow AI e attività agent.
+Vedere anche: [Schemi Log](../log-schemas/) — formati di log normalizzati per evidence di scoperta Shadow AI e attività agent.

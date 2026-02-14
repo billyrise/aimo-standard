@@ -51,15 +51,15 @@ Códigos de salida: `0` = éxito, `1` = errores de validación, `2` = error de u
 
 - **Precisión del contenido**: el validador verifica estructura, no significado
 - **Garantía de cumplimiento**: pasar la validación no garantiza cumplimiento regulatorio
-- **Juicio humano**: decisiones dependientes del contexto requieren revisión humana (consulte [Protocolo de Supervisión Humana](../governance/human-oversight-protocol.md))
+- **Juicio humano**: decisiones dependientes del contexto requieren revisión humana (consulte [Protocolo de Supervisión Humana](../governance/human-oversight-protocol/))
 - **Recopilación automática de registros**: el validador valida evidencia enviada; no recopila registros
 
 ---
 
 ## Recursos
 
-- **Especificación**: [Estándar > Actual > Validador](../standard/current/07-validator.md) — reglas, verificaciones de referencia y cómo se relaciona la validación con la evidencia.
+- **Especificación**: [Estándar > Actual > Validador](../standard/current/07-validator/) — reglas, verificaciones de referencia y cómo se relaciona la validación con la evidencia.
 - **Reglas e implementación**: repositorio `validator/rules/` (verificaciones), `validator/src/` (implementación de referencia). El uso de ejecución y CI se describe en la especificación.
 - **Interpretación**: qué significa un "fallo" de validación para auditores (explicado en la especificación).
 
-Para conformidad y uso de artefactos, consulte [Conformidad](../conformance/index.md) y [Artefactos](../artifacts/index.md).
+Para conformidad y uso de artefactos, consulte [Conformidad](../conformance/) y [Artefactos](../artifacts/).

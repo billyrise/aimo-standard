@@ -58,7 +58,7 @@ Este esquema define un formato neutral a proveedores para registros que document
     - **No incruste** PII, credenciales o contenido de prompts directamente en campos de registro.
     - Use `evidence_ref` para referenciar contenido sensible almacenado por separado.
     - Aplique controles de acceso apropiados al almacenamiento de registros.
-    - Considere políticas de retención de datos alineadas con [Requisitos Mínimos de Evidencia](../minimum-evidence.md).
+    - Considere políticas de retención de datos alineadas con [Requisitos Mínimos de Evidencia](../../minimum-evidence/).
 
 ## JSON Schema
 
@@ -91,7 +91,7 @@ Descargar: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-s
 
 ## Páginas relacionadas
 
-- [Índice de Esquemas de Registro](index.md)
-- [Registro de Actividad de Agente](agent-activity.md)
-- [Requisitos Mínimos de Evidencia](../minimum-evidence.md)
-- [Taxonomía: IM-007 Shadow/No Gestionado](../../standard/current/03-taxonomy.md)
+- [Índice de Esquemas de Registro](../)
+- [Registro de Actividad de Agente](../agent-activity/)
+- [Requisitos Mínimos de Evidencia](../../minimum-evidence/)
+- [Taxonomía: IM-007 Shadow/No Gestionado](../../../standard/current/03-taxonomy/)

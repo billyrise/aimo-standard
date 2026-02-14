@@ -81,7 +81,7 @@ Diese Erklärung gilt für alle AIMO Standard-Dokumentation, einschließlich Tru
 
 ## Verwandte Seiten
 
-- [Trust Package](trust-package.md) — Prüfungsbereite Materialien-Hub
-- [Human Oversight Protocol](human-oversight-protocol.md) — Grenze zwischen maschineller und menschlicher Überprüfung
-- [Mindestanforderungen an Evidence](../artifacts/minimum-evidence.md) — MUSS-Lifecycle-Checkliste
-- [Coverage Map Methodologie](../coverage-map/methodology.md) — Was die Zuordnung ist und nicht ist
+- [Trust Package](../trust-package/) — Prüfungsbereite Materialien-Hub
+- [Human Oversight Protocol](../human-oversight-protocol/) — Grenze zwischen maschineller und menschlicher Überprüfung
+- [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) — MUSS-Lifecycle-Checkliste
+- [Coverage Map Methodologie](../../coverage-map/methodology/) — Was die Zuordnung ist und nicht ist

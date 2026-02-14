@@ -161,7 +161,7 @@ El diccionario rastrea el ciclo de vida con estos campos:
 
 ### Versionado
 
-Los cambios de código siguen [Semantic Versioning](./08-changelog.md):
+Los cambios de código siguen [Semantic Versioning](../08-changelog/):
 
 - **MAJOR**: Eliminación de código o cambios disruptivos
 - **MINOR**: Nuevos códigos agregados, códigos deprecados
@@ -186,16 +186,16 @@ El validador verifica:
 4. El formato de código coincide con el patrón `<PREFIJO>-<TOKEN>` (ej., `UC-001`)
 5. Los códigos deprecados se marcan con advertencias
 
-Consulte [Validador](./07-validator.md) para detalles de implementación.
+Consulte [Validador](../07-validator/) para detalles de implementación.
 
 ## Referencia SSOT
 
 !!! info "Fuente de Verdad"
-    La definición autoritativa es `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Esta página es explicativa. Consulte [Guía de Localización](../../contributing/localization.md) para flujos de trabajo de actualización.
+    La definición autoritativa es `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Esta página es explicativa. Consulte [Guía de Localización](../../../contributing/localization/) para flujos de trabajo de actualización.
 
 ## Páginas Relacionadas
 
-- [Taxonomía](./03-taxonomy.md) - Definiciones completas de dimensiones
-- [Diccionario](./05-dictionary.md) - Listados completos de códigos y definiciones de columnas
-- [Validador](./07-validator.md) - Reglas de validación
-- [Registro de Cambios](./08-changelog.md) - Historial de versiones
+- [Taxonomía](../03-taxonomy/) - Definiciones completas de dimensiones
+- [Diccionario](../05-dictionary/) - Listados completos de códigos y definiciones de columnas
+- [Validador](../07-validator/) - Reglas de validación
+- [Registro de Cambios](../08-changelog/) - Historial de versiones

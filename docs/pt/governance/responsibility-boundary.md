@@ -81,7 +81,7 @@ Esta declaração se aplica a toda documentação do AIMO Standard, incluindo Tr
 
 ## Páginas relacionadas
 
-- [Trust Package](trust-package.md) — hub de materiais prontos para auditoria
-- [Protocolo de Supervisão Humana](human-oversight-protocol.md) — limite de revisão máquina vs. humano
-- [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md) — checklist de ciclo de vida de nível DEVE
-- [Metodologia do Mapa de Cobertura](../coverage-map/methodology.md) — o que o mapeamento é e não é
+- [Trust Package](../trust-package/) — hub de materiais prontos para auditoria
+- [Protocolo de Supervisão Humana](../human-oversight-protocol/) — limite de revisão máquina vs. humano
+- [Requisitos Mínimos de Evidências](../../artifacts/minimum-evidence/) — checklist de ciclo de vida de nível DEVE
+- [Metodologia do Mapa de Cobertura](../../coverage-map/methodology/) — o que o mapeamento é e não é

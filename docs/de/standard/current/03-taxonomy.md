@@ -19,7 +19,7 @@ Die Taxonomie dient drei Hauptzwecken aus Audit-Perspektive:
 ## Was sie nicht ist (Keine Überbeanspruchung)
 
 !!! warning "Wichtig"
-    Der AIMO Standard unterstützt **Erklärbarkeit und Evidence-Bereitschaft**. Er bietet **keine** Rechtsberatung, garantiert keine Compliance und zertifiziert keine Konformität mit Vorschriften oder Frameworks. Siehe [Verantwortungsgrenze](../../governance/responsibility-boundary.md) für Details.
+    Der AIMO Standard unterstützt **Erklärbarkeit und Evidence-Bereitschaft**. Er bietet **keine** Rechtsberatung, garantiert keine Compliance und zertifiziert keine Konformität mit Vorschriften oder Frameworks. Siehe [Verantwortungsgrenze](../../../governance/responsibility-boundary/) für Details.
 
 Die Taxonomie ist nur ein Klassifizierungssystem. Sie:
 
@@ -34,7 +34,7 @@ Traditionelle Sicherheitskontrollen (z.B. ISMS) allein erfassen oft keine LLM-/a
 AIMO Taxonomie bietet eine gemeinsame Sprache, um diese KI-spezifischen Risiken zu klassifizieren und sie mit Evidence-Anforderungen und Behebungs-Workflows zu verbinden.
 
 !!! warning "Nur Referenzbeispiele — keine normativen Codes"
-    Die folgenden Codes sind **illustrative Platzhalter** und gehören **nicht** zum normativen AIMO-Code-System. Verwenden Sie sie nicht in Einreichungen; verwenden Sie die normativen Dimensionen und Codes in [Codes](./04-codes.md) und [Dictionary](./05-dictionary.md).
+    Die folgenden Codes sind **illustrative Platzhalter** und gehören **nicht** zum normativen AIMO-Code-System. Verwenden Sie sie nicht in Einreichungen; verwenden Sie die normativen Dimensionen und Codes in [Codes](../04-codes/) und [Dictionary](../05-dictionary/).
 
 - **AG-01** Runaway Loop / Rekursion
 - **AG-02** Nicht autorisierte Tool-Nutzung (Confused-Deputy-artiger Missbrauch)
@@ -97,7 +97,7 @@ Kategorisiert KI-Nutzung nach Art der Aufgabe oder Interaktion. **Wählen Sie ei
 | UC-009 | Search/RAG | RAG-basiertes Retrieval und Fragebeantwortung. |
 | UC-010 | Agentic Automation | Autonome oder semi-autonome Agenten, die Aktionen ausführen. |
 
-Siehe [Dictionary](./05-dictionary.md) für die vollständige Liste von 30 UC-Codes.
+Siehe [Dictionary](../05-dictionary/) für die vollständige Liste von 30 UC-Codes.
 
 ### DT: Datentyp
 
@@ -208,7 +208,7 @@ Jedes Evidence-Dokument referenziert Codes aus mehreren Dimensionen, um das doku
 
 ### Referenzierung des Dictionary
 
-Für vollständige Code-Definitionen einschließlich Geltungsbereich-Hinweisen und Beispielen siehe [Dictionary](./05-dictionary.md).
+Für vollständige Code-Definitionen einschließlich Geltungsbereich-Hinweisen und Beispielen siehe [Dictionary](../05-dictionary/).
 
 ### Beispielklassifizierung
 
@@ -226,11 +226,11 @@ LG: LG-001 (Antragsdatensatz), LG-002 (Prüfungs-/Genehmigungsdatensatz)
 ## SSOT-Referenz
 
 !!! info "Quelle der Wahrheit"
-    Die maßgebliche Definition ist `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Diese Seite ist erklärend. Siehe [Lokalisierungsleitfaden](../../contributing/localization.md) für Update-Workflows.
+    Die maßgebliche Definition ist `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Diese Seite ist erklärend. Siehe [Lokalisierungsleitfaden](../../../contributing/localization/) für Update-Workflows.
 
 ## Verwandte Seiten
 
-- [Codes](./04-codes.md) - Code-Format, Namenskonventionen und Lifecycle
-- [Dictionary](./05-dictionary.md) - Vollständige Code-Listen und Spaltendefinitionen
-- [Evidence-Templates](./06-ev-template.md) - Wie Codes in Evidence verwendet werden
-- [Verantwortungsgrenze](../../governance/responsibility-boundary.md) - Keine-Überbeanspruchung-Erklärung
+- [Codes](../04-codes/) - Code-Format, Namenskonventionen und Lifecycle
+- [Dictionary](../05-dictionary/) - Vollständige Code-Listen und Spaltendefinitionen
+- [Evidence-Templates](../06-ev-template/) - Wie Codes in Evidence verwendet werden
+- [Verantwortungsgrenze](../../../governance/responsibility-boundary/) - Keine-Überbeanspruchung-Erklärung

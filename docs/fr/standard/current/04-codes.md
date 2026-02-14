@@ -161,7 +161,7 @@ Le dictionnaire suit le cycle de vie avec ces champs :
 
 ### Versionnement
 
-Les changements de codes suivent le [versionnement sémantique](./08-changelog.md) :
+Les changements de codes suivent le [versionnement sémantique](../08-changelog/) :
 
 - **MAJEUR** : Suppression de code ou changements cassants
 - **MINEUR** : Nouveaux codes ajoutés, codes dépréciés
@@ -186,16 +186,16 @@ Le validateur vérifie :
 4. Le format de code correspond au pattern `<PRÉFIXE>-<TOKEN>` (ex. `UC-001`)
 5. Les codes dépréciés sont signalés avec des avertissements
 
-Voir [Validateur](./07-validator.md) pour les détails d'implémentation.
+Voir [Validateur](../07-validator/) pour les détails d'implémentation.
 
 ## Référence SSOT
 
 !!! info "Source de vérité"
-    La définition faisant autorité est `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Cette page est explicative. Voir [Guide de localisation](../../contributing/localization.md) pour les flux de travail de mise à jour.
+    La définition faisant autorité est `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Cette page est explicative. Voir [Guide de localisation](../../../contributing/localization/) pour les flux de travail de mise à jour.
 
 ## Pages connexes
 
-- [Taxonomie](./03-taxonomy.md) - Définitions complètes des dimensions
-- [Dictionnaire](./05-dictionary.md) - Listes complètes de codes et définitions de colonnes
-- [Validateur](./07-validator.md) - Règles de validation
-- [Changelog](./08-changelog.md) - Historique des versions
+- [Taxonomie](../03-taxonomy/) - Définitions complètes des dimensions
+- [Dictionnaire](../05-dictionary/) - Listes complètes de codes et définitions de colonnes
+- [Validateur](../07-validator/) - Règles de validation
+- [Changelog](../08-changelog/) - Historique des versions

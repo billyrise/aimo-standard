@@ -44,7 +44,7 @@ Quando usi i materiali dello Standard AIMO:
 1. Includere l'avviso di licenza nelle distribuzioni
 2. Fornire attribuzione (vedere [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt))
 3. Indicare le modifiche significative (se presenti)
-4. Non usare i marchi senza permesso (vedere [Marchi](trademarks.md))
+4. Non usare i marchi senza permesso (vedere [Marchi](../trademarks/))
 
 ## File NOTICE
 
@@ -72,5 +72,5 @@ R: Sì, ma devi indicare le modifiche e non puoi dichiarare conformità con sche
 
 ## Pagine Correlate
 
-- [Marchi](trademarks.md) — Uso dei marchi
-- [Governance](index.md) — Governance del progetto
+- [Marchi](../trademarks/) — Uso dei marchi
+- [Governance](../) — Governance del progetto

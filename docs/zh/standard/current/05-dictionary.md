@@ -53,7 +53,7 @@ AIMO 字典是分类法中所有有效代码的权威列表。它为每个代码
 | 9 | `examples` | 否 | 管道分隔的示例 | `chatbot\|recommendation` |
 
 !!! note "翻译"
-    规范数据模型将翻译分离到语言包（`data/taxonomy/i18n/*.yaml`）中。每个语言包提供本地化的 `dimension_name`、`label` 和 `definition` 值。详情请参阅 [本地化指南](../../contributing/localization.md)。
+    规范数据模型将翻译分离到语言包（`data/taxonomy/i18n/*.yaml`）中。每个语言包提供本地化的 `dimension_name`、`label` 和 `definition` 值。详情请参阅 [本地化指南](../../../contributing/localization/)。
 
 ### 生命周期列（6）
 
@@ -195,8 +195,8 @@ X-<ORG>-<DIM>-<TOKEN>
 
 ## 相关页面
 
-- [分类法](./03-taxonomy.md) - 维度定义和代码表
-- [代码](./04-codes.md) - 代码格式、命名和生命周期
-- [证据模板](./06-ev-template.md) - 代码如何在模板中使用
-- [验证器](./07-validator.md) - 代码验证规则
-- [变更日志](./08-changelog.md) - 版本历史
+- [分类法](../03-taxonomy/) - 维度定义和代码表
+- [代码](../04-codes/) - 代码格式、命名和生命周期
+- [证据模板](../06-ev-template/) - 代码如何在模板中使用
+- [验证器](../07-validator/) - 代码验证规则
+- [变更日志](../08-changelog/) - 版本历史

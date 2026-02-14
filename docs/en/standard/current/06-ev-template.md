@@ -8,7 +8,7 @@ This section defines the Evidence Pack templates and their usage. An Evidence Pa
 
 ## Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)
 
-> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **LG-001, LG-002, …** in the [Taxonomy](./03-taxonomy.md) identify *log/event types* (Request Record, Review/Approval, Exception, etc.). **EV-** is reserved for [Evidence artifact IDs](./04b-id-policy-namespace.md) only. Use EP for pack structure and LG for lifecycle log/event classification.
+> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **LG-001, LG-002, …** in the [Taxonomy](../03-taxonomy/) identify *log/event types* (Request Record, Review/Approval, Exception, etc.). **EV-** is reserved for [Evidence artifact IDs](../04b-id-policy-namespace/) only. Use EP for pack structure and LG for lifecycle log/event classification.
 
 ## Key Principle: Index and Diff Management
 
@@ -51,7 +51,7 @@ Each Evidence Pack MUST include a manifest file containing:
 
 ### AIMO Codes (8 Dimensions)
 
-Each Evidence Pack MUST include codes from all 8 dimensions. The **LG** dimension lists *taxonomy* Log/Event Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07). See [ID Policy / Namespace](./04b-id-policy-namespace.md).
+Each Evidence Pack MUST include codes from all 8 dimensions. The **LG** dimension lists *taxonomy* Log/Event Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07). See [ID Policy / Namespace](../04b-id-policy-namespace/).
 
 ```json
 {
@@ -164,7 +164,7 @@ Enterprises receive templates through their auditors, consultants, or internal g
 
 ## References
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions
-- [Codes](./04-codes.md) - Code format
-- [Validator](./07-validator.md) - Validation rules
-- [Evidence Bundle](../../artifacts/evidence-bundle.md) - Bundle structure
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Codes](../04-codes/) - Code format
+- [Validator](../07-validator/) - Validation rules
+- [Evidence Bundle](../../../artifacts/evidence-bundle/) - Bundle structure

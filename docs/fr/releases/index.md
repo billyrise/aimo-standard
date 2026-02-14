@@ -14,7 +14,7 @@ Cette section est un centre pour les versions versionnées, changelog, migration
 
 La **procédure de vérification** complète (téléchargement des actifs, vérification des checksums, attestation de provenance) est disponible en page permanente, pas seulement en PDF :
 
-- **[Standard → Versions → Procédure de vérification](../standard/versions/index.md)** — vérification pas à pas des checksums (Linux/macOS/Windows) et attestation de provenance.
+- **[Standard → Versions → Procédure de vérification](../standard/versions/)** — vérification pas à pas des checksums (Linux/macOS/Windows) et attestation de provenance.
 
 Utilisez cette page lorsque vous devez vérifier les actifs de release ou documenter les étapes de vérification dans les livrables d’audit.
 
@@ -87,18 +87,18 @@ Le `aimo-standard-artifacts.zip` contient :
 
 ## Ressources
 
-- **Table d'historique des versions** : [Standard > Versions](../standard/versions/index.md) — table des versions avec liens directs vers tous les actifs de version (PDF, ZIP, SHA256)
-- **Changelog (spec)** : [Standard > Actuel > Changelog](../standard/current/08-changelog.md) — historique des changements normatifs et non-normatifs.
+- **Table d'historique des versions** : [Standard > Versions](../standard/versions/) — table des versions avec liens directs vers tous les actifs de version (PDF, ZIP, SHA256)
+- **Changelog (spec)** : [Standard > Actuel > Changelog](../standard/current/08-changelog/) — historique des changements normatifs et non-normatifs.
 - **Processus de release** : tagging `vX.Y.Z`, build CI, PDF sous `dist/`, checksums, actifs GitHub Release. Voir [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) et [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) dans le dépôt.
 - **Guide de migration** : [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — chemins de mise à niveau pour les changements cassants.
 
-Pour la gouvernance et la politique de versionnement, voir [Gouvernance](../governance/index.md).
+Pour la gouvernance et la politique de versionnement, voir [Gouvernance](../governance/).
 
 ## Préparer votre package de soumission
 
 Lors de la préparation des preuves pour soumission d'audit :
 
-1. **Créer votre lot de preuves** : Suivez [Lot de preuves](../artifacts/evidence-bundle.md) et [Exigences minimales de preuves](../artifacts/minimum-evidence.md) pour créer les enregistrements EV, dictionnaire, résumé et journal des modifications.
+1. **Créer votre lot de preuves** : Suivez [Lot de preuves](../artifacts/evidence-bundle/) et [Exigences minimales de preuves](../artifacts/minimum-evidence/) pour créer les enregistrements EV, dictionnaire, résumé et journal des modifications.
 2. **Exécuter le validateur** : Exécutez `python validator/src/validate.py bundle/root.json` pour vérifier la cohérence structurelle. Corrigez toutes les erreurs avant de continuer.
 3. **Générer les checksums** : Créez les checksums SHA-256 pour la vérification :
 
@@ -126,7 +126,7 @@ Lors de la préparation des preuves pour soumission d'audit :
 5. **Documenter l'alignement de version** : Notez quelle version du standard AIMO (ex. `v1.0.0`) vos preuves sont alignées.
 6. **Livrer** : Fournissez le package, les checksums et la référence de version à votre auditeur.
 
-Pour le guide de préparation complet, voir [Package de confiance](../governance/trust-package.md).
+Pour le guide de préparation complet, voir [Package de confiance](../governance/trust-package/).
 
 ## Pour les auditeurs : procédure de vérification
 
@@ -139,11 +139,11 @@ Les auditeurs recevant des soumissions de preuves doivent vérifier l'intégrit�
 !!! tip "Obtenir les outils de manière indépendante"
     Les auditeurs doivent télécharger le validateur et les schémas directement de la version officielle du standard AIMO, pas de la partie soumettante.
 
-Pour la procédure de vérification complète (checksums, attestation, pas à pas), voir **[Standard → Versions → Procédure de vérification](../standard/versions/index.md)**. Voir aussi [Package de confiance](../governance/trust-package.md) pour les matériaux prêts pour les auditeurs.
+Pour la procédure de vérification complète (checksums, attestation, pas à pas), voir **[Standard → Versions → Procédure de vérification](../standard/versions/)**. Voir aussi [Package de confiance](../governance/trust-package/) pour les matériaux prêts pour les auditeurs.
 
 ## Déclaration de non-déclaration excessive
 
 !!! warning "Important"
     Le standard AIMO soutient **l'explicabilité et la préparation des preuves**. Il ne fournit **pas** d'avis juridique, ne garantit pas la conformité et ne certifie pas la conformité à une réglementation ou cadre. Les adopteurs doivent vérifier les déclarations par rapport aux textes faisant autorité et obtenir des conseils professionnels si nécessaire.
 
-Voir [Périmètre de responsabilité](../governance/responsibility-boundary.md) pour le périmètre, les hypothèses et les responsabilités des adopteurs.
+Voir [Périmètre de responsabilité](../governance/responsibility-boundary/) pour le périmètre, les hypothèses et les responsabilités des adopteurs.

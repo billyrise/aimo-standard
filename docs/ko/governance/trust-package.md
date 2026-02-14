@@ -20,34 +20,34 @@ description: AIMO 신뢰 패키지 - 감사자 준비 자료 번들. 감사자, 
 
 ## 제공되는 것
 
-- **적합성**: 컴플라이언스 주장 방법 및 각 수준의 의미 — [적합성](../conformance/index.md)
-- **커버리지 맵**: 외부 표준에 대한 매핑 — [커버리지 맵 인덱스](../coverage-map/index.md), [커버리지 맵 방법론](../coverage-map/methodology.md)
-- **표준**: 규범적 요구사항 및 정의 — [표준 (현재)](../standard/current/index.md)
-- **분류체계**: AI 거버넌스를 위한 8차원 분류 시스템 — [분류체계](../standard/current/03-taxonomy.md), [코드](../standard/current/04-codes.md), [딕셔너리](../standard/current/05-dictionary.md)
-- **증거 번들**: 구조, 목차, 추적성 — [증거 번들](../artifacts/evidence-bundle.md)
-- **최소 증거 요구사항**: 생명주기별 MUST 수준 체크리스트 — [최소 증거 요구사항](../artifacts/minimum-evidence.md)
-- **검증기**: 규칙 및 참조 검사 — [검증기](../validator/index.md)
-- **예제**: 감사 준비 샘플 번들 — [예제](../examples/index.md)
+- **적합성**: 컴플라이언스 주장 방법 및 각 수준의 의미 — [적합성](../../conformance/)
+- **커버리지 맵**: 외부 표준에 대한 매핑 — [커버리지 맵 인덱스](../../coverage-map/), [커버리지 맵 방법론](../../coverage-map/methodology/)
+- **표준**: 규범적 요구사항 및 정의 — [표준 (현재)](../../standard/current/)
+- **분류체계**: AI 거버넌스를 위한 8차원 분류 시스템 — [분류체계](../../standard/current/03-taxonomy/), [코드](../../standard/current/04-codes/), [딕셔너리](../../standard/current/05-dictionary/)
+- **증거 번들**: 구조, 목차, 추적성 — [증거 번들](../../artifacts/evidence-bundle/)
+- **최소 증거 요구사항**: 생명주기별 MUST 수준 체크리스트 — [최소 증거 요구사항](../../artifacts/minimum-evidence/)
+- **검증기**: 규칙 및 참조 검사 — [검증기](../../validator/)
+- **예제**: 감사 준비 샘플 번들 — [예제](../../examples/)
 - **릴리스**: 변경 이력 및 배포 — [릴리스](../../releases/)
-- **거버넌스**: 정책, 보안, 라이선스 — [거버넌스](../governance/index.md)
+- **거버넌스**: 정책, 보안, 라이선스 — [거버넌스](../../governance/)
 
 ## 감사 준비를 위한 최소 세트
 
 | 항목 | 위치 | 결과 / 증명하는 것 |
 | --- | --- | --- |
-| 적합성 수준 | [적합성](../conformance/index.md) | 컴플라이언스 주장 방법 및 필요한 증거 범위 |
-| 커버리지 매핑 | [커버리지 맵 인덱스](../coverage-map/index.md), [커버리지 맵 방법론](../coverage-map/methodology.md) | 외부 규정 및 표준에 대한 설명 가능성 |
-| 분류체계 및 딕셔너리 | [분류체계](../standard/current/03-taxonomy.md), [코드](../standard/current/04-codes.md), [딕셔너리](../standard/current/05-dictionary.md) | AI 시스템 분류 시스템 (8차원, 91개 코드) |
-| 증거 산출물 | [증거 번들](../artifacts/evidence-bundle.md), [최소 증거](../artifacts/minimum-evidence.md), [EV 템플릿](../standard/current/06-ev-template.md) | 추적성 지원을 위해 존재해야 하는 데이터 |
-| 검증기 검사 | [검증기](../validator/index.md) | 내부 일관성 및 완전성 검증 방법 |
-| 예제 번들 | [예제](../examples/index.md) | 실제 감사 준비 패키지의 모습 |
-| 변경 통제 | [릴리스](../../releases/), [거버넌스](../governance/index.md) | 업데이트 관리 및 전달 방법 |
-| 보안 / 라이선스 / 상표 | [거버넌스](../governance/index.md) | 채택 결정을 위한 법적 및 보안 태세 |
+| 적합성 수준 | [적합성](../../conformance/) | 컴플라이언스 주장 방법 및 필요한 증거 범위 |
+| 커버리지 매핑 | [커버리지 맵 인덱스](../../coverage-map/), [커버리지 맵 방법론](../../coverage-map/methodology/) | 외부 규정 및 표준에 대한 설명 가능성 |
+| 분류체계 및 딕셔너리 | [분류체계](../../standard/current/03-taxonomy/), [코드](../../standard/current/04-codes/), [딕셔너리](../../standard/current/05-dictionary/) | AI 시스템 분류 시스템 (8차원, 91개 코드) |
+| 증거 산출물 | [증거 번들](../../artifacts/evidence-bundle/), [최소 증거](../../artifacts/minimum-evidence/), [EV 템플릿](../../standard/current/06-ev-template/) | 추적성 지원을 위해 존재해야 하는 데이터 |
+| 검증기 검사 | [검증기](../../validator/) | 내부 일관성 및 완전성 검증 방법 |
+| 예제 번들 | [예제](../../examples/) | 실제 감사 준비 패키지의 모습 |
+| 변경 통제 | [릴리스](../../releases/), [거버넌스](../../governance/) | 업데이트 관리 및 전달 방법 |
+| 보안 / 라이선스 / 상표 | [거버넌스](../../governance/) | 채택 결정을 위한 법적 및 보안 태세 |
 
 ## 인용 방법
 
 인용 지침 및 맥락은 저장소 README를 사용하세요; 거버넌스는 권위 있는 정책에 연결됩니다.
-[README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) 및 [거버넌스](../governance/index.md)를 참조하세요.
+[README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) 및 [거버넌스](../../governance/)를 참조하세요.
 
 ## 산출물 zip 내용
 
@@ -65,13 +65,13 @@ description: AIMO 신뢰 패키지 - 감사자 준비 자료 번들. 감사자, 
 
 AIMO 표준은 구조화된 증거 형식 및 설명 가능성 프레임워크를 제공합니다. 법률 자문, 컴플라이언스 인증, 리스크 평가 또는 감사 실행은 제공하지 **않습니다**.
 
-전체 범위 정의, 가정 및 채택자 책임은 [책임 경계](responsibility-boundary.md)를 참조하세요.
+전체 범위 정의, 가정 및 채택자 책임은 [책임 경계](../responsibility-boundary/)를 참조하세요.
 
 ## 제출 패키지 준비 방법
 
 감사 준비 제출을 준비하려면 다음 단계를 따르세요:
 
-1. **증거 번들 생성**: [증거 번들](../artifacts/evidence-bundle.md) 및 [최소 증거 요구사항](../artifacts/minimum-evidence.md)에 따라 EV 레코드, 딕셔너리, 요약 및 변경 로그를 생성합니다.
+1. **증거 번들 생성**: [증거 번들](../../artifacts/evidence-bundle/) 및 [최소 증거 요구사항](../../artifacts/minimum-evidence/)에 따라 EV 레코드, 딕셔너리, 요약 및 변경 로그를 생성합니다.
 2. **검증기 실행**: `python validator/src/validate.py bundle/root.json`을 실행하여 구조적 일관성을 확인합니다. 오류가 있으면 진행하기 전에 수정하세요.
 3. **체크섬 생성**: 모든 제출 파일에 대해 SHA-256 체크섬을 생성합니다:
 
@@ -109,14 +109,14 @@ AIMO 표준은 구조화된 증거 형식 및 설명 가능성 프레임워크�
 !!! warning "중요"
     AIMO 표준은 **설명 가능성 및 증거 준비**를 지원합니다. 법률 자문을 제공하거나, 컴플라이언스를 보장하거나, 어떤 규정 또는 프레임워크에 대한 적합성을 인증하지 **않습니다**. 채택자는 권위 있는 텍스트와 대조하여 주장을 확인하고 적절한 전문 자문을 받아야 합니다.
 
-범위, 가정 및 채택자 책임에 대한 자세한 내용은 [책임 경계](responsibility-boundary.md)를 참조하세요.
+범위, 가정 및 채택자 책임에 대한 자세한 내용은 [책임 경계](../responsibility-boundary/)를 참조하세요.
 
 ## 감사자용: 검증 절차
 
 증거 제출을 받을 때 감사자는 다음 단계를 사용하여 무결성 및 구조를 검증해야 합니다:
 
 !!! success "빌드 출처 이용 가능"
-    모든 릴리스 자산에는 암호화 서명된 빌드 증명이 포함됩니다. 증명 검증 단계는 [검증 절차](../standard/versions/index.md#4-verify-build-provenance-attestation)를 참조하세요.
+    모든 릴리스 자산에는 암호화 서명된 빌드 증명이 포함됩니다. 증명 검증 단계는 [검증 절차](../../standard/versions/#4-verify-build-provenance-attestation)를 참조하세요.
 
 ### 1단계: 체크섬 확인 (SHA-256)
 
@@ -228,9 +228,9 @@ python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 
 이 페이지에서 권장되는 감사 여정:
 
-1. **분류 시스템**: [분류체계](../standard/current/03-taxonomy.md) + [딕셔너리](../standard/current/05-dictionary.md) — 8차원 코드 시스템 이해
-2. **증거 구조**: [증거 번들](../artifacts/evidence-bundle.md) — 번들 목차 및 추적성 이해
-3. **필수 증거**: [최소 증거 요구사항](../artifacts/minimum-evidence.md) — 생명주기별 MUST 수준 체크리스트
-4. **프레임워크 정합**: [커버리지 맵](../coverage-map/index.md) + [방법론](../coverage-map/methodology.md) — AIMO가 외부 프레임워크에 매핑되는 방법 확인
-5. **검증**: [검증기](../validator/index.md) — 구조적 일관성 검사 실행
+1. **분류 시스템**: [분류체계](../../standard/current/03-taxonomy/) + [딕셔너리](../../standard/current/05-dictionary/) — 8차원 코드 시스템 이해
+2. **증거 구조**: [증거 번들](../../artifacts/evidence-bundle/) — 번들 목차 및 추적성 이해
+3. **필수 증거**: [최소 증거 요구사항](../../artifacts/minimum-evidence/) — 생명주기별 MUST 수준 체크리스트
+4. **프레임워크 정합**: [커버리지 맵](../../coverage-map/) + [방법론](../../coverage-map/methodology/) — AIMO가 외부 프레임워크에 매핑되는 방법 확인
+5. **검증**: [검증기](../../validator/) — 구조적 일관성 검사 실행
 6. **다운로드**: [릴리스](../../releases/) — 릴리스 자산 획득 및 체크섬 확인

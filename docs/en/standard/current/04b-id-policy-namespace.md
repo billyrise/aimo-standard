@@ -39,6 +39,6 @@ Validators **must** reject:
 
 ## References
 
-- [Taxonomy](./03-taxonomy.md) — dimension **LG: Log/Event Type**
-- [Evidence Pack Template](./06-ev-template.md) — `codes.LG` and `ev_codes` / `ev_type` use **LG-xxx**
-- [Validator](./07-validator.md) — namespace and collision checks
+- [Taxonomy](../03-taxonomy/) — dimension **LG: Log/Event Type**
+- [Evidence Pack Template](../06-ev-template/) — `codes.LG` and `ev_codes` / `ev_type` use **LG-xxx**
+- [Validator](../07-validator/) — namespace and collision checks

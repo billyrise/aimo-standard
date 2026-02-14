@@ -9,14 +9,14 @@ Los releases oficiales son snapshots congelados publicados con PDFs listos para 
 ## Última Versión
 
 !!! success "Versión Actual"
-    **v0.0.2** (2026-02-02) — [Ver Documentación](../current/index.md) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2)
+    **v0.0.2** (2026-02-02) — [Ver Documentación](../current/) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.0.2)
 
 ## Historial de Versiones
 
 | Versión | Fecha | Notas de Release | PDF (EN) | PDF (JA) | Artefactos | Checksums |
 | :------ | :--- | :------------ | :------- | :------- | :-------- | :-------- |
-| **v0.0.2** | 2026-02-02 | [Registro de Cambios](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
-| **v0.0.1** | 2026-02-02 | [Registro de Cambios](../current/08-changelog.md) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
+| **v0.0.2** | 2026-02-02 | [Registro de Cambios](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
+| **v0.0.1** | 2026-02-02 | [Registro de Cambios](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
 
 !!! note "Fuente de Datos"
     Esta tabla de versiones está sincronizada con [GitHub Releases](https://github.com/billyrise/aimo-standard/releases). Cada tag de release (`vX.Y.Z`) corresponde a un snapshot congelado de la especificación.
@@ -36,7 +36,7 @@ Para detalles del proceso de release, véase [VERSIONING.md](https://github.com/
 
 ## Avisos legales y de marcas
 
-**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → Marcas Comerciales](../../governance/trademarks.md) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending). "AIMO" is a registered trademark owned by third parties; RISEby Inc. does not claim ownership. For full trademark status and usage, see [Governance → Marcas Comerciales](../../governance/trademarks/) and [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md).
 
 ## Para auditores: URL canónica y fijación de versión
 
@@ -225,7 +225,7 @@ Para la política de versionado completa, consulte [VERSIONING.md](https://githu
 
 Al actualizar entre versiones con cambios disruptivos:
 
-1. Verifique el [Registro de Cambios](../current/08-changelog.md) para cambios disruptivos
+1. Verifique el [Registro de Cambios](../current/08-changelog/) para cambios disruptivos
 2. Revise la [Guía de Migración](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) para rutas de actualización específicas
 3. Actualice su Paquete de Evidencia para alinear con los nuevos requisitos de esquema
 4. Re-ejecute el validador para verificar cumplimiento
@@ -268,6 +268,6 @@ Cada release crea un snapshot de documentación congelado accesible en:
 ## Recursos
 
 - **[Centro de Versiones](../../../releases/)** — Preparación de envío, verificación de auditor, declaración de no sobre-reclamación
-- **[Paquete de Confianza](../../governance/trust-package.md)** — Materiales de aseguramiento listos para auditores
-- **[Registro de Cambios (detallado)](../current/08-changelog.md)** — Historial completo de cambios con seguimiento de deprecación
+- **[Paquete de Confianza](../../governance/trust-package/)** — Materiales de aseguramiento listos para auditores
+- **[Registro de Cambios (detallado)](../current/08-changelog/)** — Historial completo de cambios con seguimiento de deprecación
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Política de versionado completa

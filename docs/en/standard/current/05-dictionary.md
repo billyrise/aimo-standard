@@ -56,7 +56,7 @@ The canonical dictionary uses **18 columns** (language-neutral structure):
 | 9 | `examples` | No | Pipe-separated examples | `chatbot\|recommendation` |
 
 !!! note "Translations"
-    The canonical data model separates translations into language packs (`data/taxonomy/i18n/*.yaml`). Each language pack provides localized `dimension_name`, `label`, and `definition` values. See [Localization Guide](../../contributing/localization.md) for details.
+    The canonical data model separates translations into language packs (`data/taxonomy/i18n/*.yaml`). Each language pack provides localized `dimension_name`, `label`, and `definition` values. See [Localization Guide](../../../contributing/localization/) for details.
 
 ### Lifecycle Columns (6)
 
@@ -198,8 +198,8 @@ See [Releases](../../../releases/) for downloadable packages containing the dict
 
 ## Related Pages
 
-- [Taxonomy](./03-taxonomy.md) - Dimension definitions and code tables
-- [Codes](./04-codes.md) - Code format, naming, and lifecycle
-- [Evidence Templates](./06-ev-template.md) - How codes are used in templates
-- [Validator](./07-validator.md) - Code validation rules
-- [Changelog](./08-changelog.md) - Version history
+- [Taxonomy](../03-taxonomy/) - Dimension definitions and code tables
+- [Codes](../04-codes/) - Code format, naming, and lifecycle
+- [Evidence Templates](../06-ev-template/) - How codes are used in templates
+- [Validator](../07-validator/) - Code validation rules
+- [Changelog](../08-changelog/) - Version history

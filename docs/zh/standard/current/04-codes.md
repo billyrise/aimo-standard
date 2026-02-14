@@ -161,7 +161,7 @@ LG: LG-001, LG-002
 
 ### 版本控制
 
-代码更改遵循 [语义版本控制](./08-changelog.md)：
+代码更改遵循 [语义版本控制](../08-changelog/)：
 
 - **MAJOR**：代码删除或破坏性更改
 - **MINOR**：添加新代码、弃用代码
@@ -186,16 +186,16 @@ LG: LG-001, LG-002
 4. 代码格式匹配 `<前缀>-<标记>` 模式（例如 `UC-001`）
 5. 弃用的代码标记警告
 
-请参阅 [验证器](./07-validator.md) 了解实现详情。
+请参阅 [验证器](../07-validator/) 了解实现详情。
 
 ## SSOT 参考
 
 !!! info "事实来源"
-    权威定义是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本页是解释性的。有关更新工作流程，请参阅 [本地化指南](../../contributing/localization.md)。
+    权威定义是 `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`。本页是解释性的。有关更新工作流程，请参阅 [本地化指南](../../../contributing/localization/)。
 
 ## 相关页面
 
-- [分类法](./03-taxonomy.md) - 完整维度定义
-- [字典](./05-dictionary.md) - 完整代码列表和列定义
-- [验证器](./07-validator.md) - 验证规则
-- [变更日志](./08-changelog.md) - 版本历史
+- [分类法](../03-taxonomy/) - 完整维度定义
+- [字典](../05-dictionary/) - 完整代码列表和列定义
+- [验证器](../07-validator/) - 验证规则
+- [变更日志](../08-changelog/) - 版本历史

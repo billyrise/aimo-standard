@@ -28,7 +28,7 @@ Le validateur AIMO et les outils automatisés similaires peuvent vérifier :
 | **Vérifications d'intégrité** | Valider le format et la présence du hash (pas le recalcul par rapport au contenu) |
 | **Validation du dictionnaire** | Confirmer que les codes existent dans le dictionnaire de taxonomie |
 
-Voir [Validateur](../standard/current/07-validator.md) pour les règles de validation détaillées et l'implémentation de référence.
+Voir [Validateur](../../standard/current/07-validator/) pour les règles de validation détaillées et l'implémentation de référence.
 
 ## Ce qui nécessite une revue humaine (périmètre humain dans la boucle)
 
@@ -73,7 +73,7 @@ Les organisations implémentant la surveillance humaine doivent documenter :
 | **Plan de remédiation** | Actions planifiées, responsables et délais pour traiter les problèmes |
 | **Validation** | Attestation formelle que la revue a été complétée |
 
-Ces enregistrements doivent être inclus dans le lot de preuves selon les [Exigences minimales de preuves](../artifacts/minimum-evidence.md).
+Ces enregistrements doivent être inclus dans le lot de preuves selon les [Exigences minimales de preuves](../../artifacts/minimum-evidence/).
 
 ## Non-déclaration excessive
 
@@ -89,7 +89,7 @@ Ces enregistrements doivent être inclus dans le lot de preuves selon les [Exige
 
 ## Pages connexes
 
-- [Validateur](../standard/current/07-validator.md) — règles de validation automatisée et implémentation de référence
-- [Périmètre de responsabilité](responsibility-boundary.md) — ce que fournit AIMO vs responsabilités des adopteurs
-- [Exigences minimales de preuves](../artifacts/minimum-evidence.md) — liste de contrôle OBLIGATOIRE des preuves
-- [Package de confiance](trust-package.md) — centre des matériaux prêts pour les auditeurs
+- [Validateur](../../standard/current/07-validator/) — règles de validation automatisée et implémentation de référence
+- [Périmètre de responsabilité](../responsibility-boundary/) — ce que fournit AIMO vs responsabilités des adopteurs
+- [Exigences minimales de preuves](../../artifacts/minimum-evidence/) — liste de contrôle OBLIGATOIRE des preuves
+- [Package de confiance](../trust-package/) — centre des matériaux prêts pour les auditeurs

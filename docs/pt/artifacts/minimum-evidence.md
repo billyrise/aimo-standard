@@ -107,6 +107,6 @@ Escolha um perfil baseado em sua tolerância a riscos e requisitos regulatórios
 
 Este conjunto mínimo suporta explicabilidade e prontidão de evidências; não fornece aconselhamento jurídico nem garante conformidade por si só.
 
-Veja [Pacote de Evidências](evidence-bundle.md) para estrutura do pacote e sumário; veja [Template EV](../standard/current/06-ev-template.md) e schemas para alinhamento em nível de campo.
+Veja [Pacote de Evidências](../evidence-bundle/) para estrutura do pacote e sumário; veja [Template EV](../../standard/current/06-ev-template/) e schemas para alinhamento em nível de campo.
 
-Veja também: [Schemas de Log](log-schemas/index.md) — formatos de log normalizados para evidências de descoberta de Shadow AI e atividade de agentes.
+Veja também: [Schemas de Log](../log-schemas/) — formatos de log normalizados para evidências de descoberta de Shadow AI e atividade de agentes.

@@ -81,7 +81,7 @@ This statement applies to all AIMO Standard documentation, including Trust Packa
 
 ## Related pages
 
-- [Trust Package](trust-package.md) — auditor-ready materials hub
-- [Human Oversight Protocol](human-oversight-protocol.md) — machine vs. human review boundary
-- [Minimum Evidence Requirements](../artifacts/minimum-evidence.md) — MUST-level lifecycle checklist
-- [Coverage Map Methodology](../coverage-map/methodology.md) — what the mapping is and is not
+- [Trust Package](../trust-package/) — auditor-ready materials hub
+- [Human Oversight Protocol](../human-oversight-protocol/) — machine vs. human review boundary
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST-level lifecycle checklist
+- [Coverage Map Methodology](../../coverage-map/methodology/) — what the mapping is and is not

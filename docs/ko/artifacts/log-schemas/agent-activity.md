@@ -107,7 +107,7 @@ description: 에이전트 활동 로그 형식 - 기업의 에이전틱 AI 권�
 
 ## 관련 페이지
 
-- [로그 스키마 인덱스](index.md)
-- [Shadow AI 검색 로그](shadow-ai-discovery.md)
-- [최소 증거 요구사항](../minimum-evidence.md)
-- [분류체계: UC-010 에이전틱 자동화](../../standard/current/03-taxonomy.md)
+- [로그 스키마 인덱스](../)
+- [Shadow AI 검색 로그](../shadow-ai-discovery/)
+- [최소 증거 요구사항](../../minimum-evidence/)
+- [분류체계: UC-010 에이전틱 자동화](../../../standard/current/03-taxonomy/)

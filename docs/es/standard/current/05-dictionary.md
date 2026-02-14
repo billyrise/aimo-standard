@@ -53,7 +53,7 @@ El diccionario canónico usa **18 columnas** (estructura neutral al idioma):
 | 9 | `examples` | No | Ejemplos separados por pipe | `chatbot\|recommendation` |
 
 !!! note "Traducciones"
-    El modelo de datos canónico separa traducciones en paquetes de idioma (`data/taxonomy/i18n/*.yaml`). Cada paquete de idioma proporciona valores localizados de `dimension_name`, `label` y `definition`. Consulte [Guía de Localización](../../contributing/localization.md) para detalles.
+    El modelo de datos canónico separa traducciones en paquetes de idioma (`data/taxonomy/i18n/*.yaml`). Cada paquete de idioma proporciona valores localizados de `dimension_name`, `label` y `definition`. Consulte [Guía de Localización](../../../contributing/localization/) para detalles.
 
 ### Columnas de Ciclo de Vida (6)
 
@@ -195,8 +195,8 @@ Consulte [Versiones](../../../releases/) para paquetes descargables que contiene
 
 ## Páginas Relacionadas
 
-- [Taxonomía](./03-taxonomy.md) - Definiciones de dimensiones y tablas de códigos
-- [Códigos](./04-codes.md) - Formato de código, nomenclatura y ciclo de vida
-- [Plantillas de Evidencia](./06-ev-template.md) - Cómo se usan los códigos en plantillas
-- [Validador](./07-validator.md) - Reglas de validación de códigos
-- [Registro de Cambios](./08-changelog.md) - Historial de versiones
+- [Taxonomía](../03-taxonomy/) - Definiciones de dimensiones y tablas de códigos
+- [Códigos](../04-codes/) - Formato de código, nomenclatura y ciclo de vida
+- [Plantillas de Evidencia](../06-ev-template/) - Cómo se usan los códigos en plantillas
+- [Validador](../07-validator/) - Reglas de validación de códigos
+- [Registro de Cambios](../08-changelog/) - Historial de versiones

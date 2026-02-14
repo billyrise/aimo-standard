@@ -161,7 +161,7 @@ Das Dictionary verfolgt den Lifecycle mit diesen Feldern:
 
 ### Versionierung
 
-Code-Änderungen folgen [Semantic Versioning](./08-changelog.md):
+Code-Änderungen folgen [Semantic Versioning](../08-changelog/):
 
 - **MAJOR**: Code-Entfernung oder Breaking Changes
 - **MINOR**: Neue Codes hinzugefügt, Codes veraltet
@@ -186,16 +186,16 @@ Der Validator prüft:
 4. Code-Format entspricht dem Muster `<PRÄFIX>-<TOKEN>` (z.B. `UC-001`)
 5. Veraltete Codes werden mit Warnungen gekennzeichnet
 
-Siehe [Validator](./07-validator.md) für Implementierungsdetails.
+Siehe [Validator](../07-validator/) für Implementierungsdetails.
 
 ## SSOT-Referenz
 
 !!! info "Quelle der Wahrheit"
-    Die maßgebliche Definition ist `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Diese Seite ist erklärend. Siehe [Lokalisierungsleitfaden](../../contributing/localization.md) für Update-Workflows.
+    Die maßgebliche Definition ist `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv`. Diese Seite ist erklärend. Siehe [Lokalisierungsleitfaden](../../../contributing/localization/) für Update-Workflows.
 
 ## Verwandte Seiten
 
-- [Taxonomie](./03-taxonomy.md) - Vollständige Dimensionsdefinitionen
-- [Dictionary](./05-dictionary.md) - Vollständige Code-Listen und Spaltendefinitionen
-- [Validator](./07-validator.md) - Validierungsregeln
-- [Changelog](./08-changelog.md) - Versionshistorie
+- [Taxonomie](../03-taxonomy/) - Vollständige Dimensionsdefinitionen
+- [Dictionary](../05-dictionary/) - Vollständige Code-Listen und Spaltendefinitionen
+- [Validator](../07-validator/) - Validierungsregeln
+- [Changelog](../08-changelog/) - Versionshistorie
