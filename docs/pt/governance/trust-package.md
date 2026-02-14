@@ -28,7 +28,7 @@ O Trust Package PDF consolida materiais prontos para auditoria em um único docu
 - **Requisitos Mínimos de Evidências**: checklist de nível DEVE por ciclo de vida — [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md)
 - **Validador**: regras e verificações de referência — [Validador](../validator/index.md)
 - **Exemplos**: pacotes de amostra prontos para auditoria — [Exemplos](../examples/index.md)
-- **Releases**: histórico de mudanças e distribuição — [Releases](../releases/index.md)
+- **Releases**: histórico de mudanças e distribuição — [Releases](../../releases/)
 - **Governança**: políticas, segurança, licenciamento — [Governança](../governance/index.md)
 
 ## Conjunto mínimo para prontidão de auditoria
@@ -41,7 +41,7 @@ O Trust Package PDF consolida materiais prontos para auditoria em um único docu
 | Artefatos de evidências | [Pacote de Evidências](../artifacts/evidence-bundle.md), [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md), [Template EV](../standard/current/06-ev-template.md) | Quais dados devem existir para suportar rastreabilidade |
 | Verificações do validador | [Validador](../validator/index.md) | Como verificar consistência e completude interna |
 | Pacote exemplo | [Exemplos](../examples/index.md) | Como um pacote pronto para auditoria se parece na prática |
-| Controle de mudanças | [Releases](../releases/index.md), [Governança](../governance/index.md) | Como atualizações são gerenciadas e comunicadas |
+| Controle de mudanças | [Releases](../../releases/), [Governança](../governance/index.md) | Como atualizações são gerenciadas e comunicadas |
 | Segurança / Licença / Marcas | [Governança](../governance/index.md) | Postura jurídica e de segurança para decisões de adoção |
 
 ## Como citar
@@ -102,7 +102,7 @@ Siga estes passos para preparar uma submissão pronta para auditoria:
 5. **Referenciar Versão do Release**: Note qual versão do AIMO Standard (ex: `v1.0.0`) seu pacote está alinhado.
 6. **Entregar**: Forneça o zip, checksums e referência de versão para seu auditor ou função de conformidade.
 
-Para ativos de release e verificação, veja [Releases](../releases/index.md).
+Para ativos de release e verificação, veja [Releases](../../releases/).
 
 ## Declaração de não-sobrereivindicação
 
@@ -233,4 +233,4 @@ A partir desta página, a jornada de auditoria recomendada é:
 3. **Evidências necessárias**: [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence.md) — checklist de nível DEVE por ciclo de vida
 4. **Alinhamento de framework**: [Mapa de Cobertura](../coverage-map/index.md) + [Metodologia](../coverage-map/methodology.md) — veja como AIMO mapeia para frameworks externos
 5. **Validação**: [Validador](../validator/index.md) — execute verificações de consistência estrutural
-6. **Download**: [Releases](../releases/index.md) — obtenha ativos de release e verifique checksums
+6. **Download**: [Releases](../../releases/) — obtenha ativos de release e verifique checksums

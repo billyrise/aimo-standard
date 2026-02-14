@@ -150,7 +150,7 @@ description: AIMO 증거 팩 템플릿 및 사용 가이드. 인덱스 관리 �
 - 스키마: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
 - 예제: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-다운로드 가능 패키지는 [릴리스](../../releases/index.md)를 참조하세요.
+다운로드 가능 패키지는 [릴리스](../../../releases/)를 참조하세요.
 
 ## 배포 모델
 

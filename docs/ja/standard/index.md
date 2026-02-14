@@ -28,4 +28,4 @@ description: AIMO Standard仕様ハブ。現行版、バージョン履歴、適
 - **[Conformance](../conformance/index.md)** — 規格への適合方法と適合レベル
 - **[Coverage Map](../coverage-map/index.md)** — 外部フレームワークへのマッピング（ISO 42001、NIST AI RMF、EU AI Act、ISMS）
 
-ダウンロード可能なリリースアセットと PDF については、[Releases](../releases/index.md) を参照してください。
+ダウンロード可能なリリースアセットと PDF については、[Releases](../releases/) を参照してください。

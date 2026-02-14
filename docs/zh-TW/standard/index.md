@@ -28,4 +28,4 @@ description: AIMO 標準規格中心。存取當前版本、版本歷史、符�
 - **[符合性](../conformance/index.md)** — 如何符合標準和符合性等級
 - **[覆蓋範圍對應](../coverage-map/index.md)** — 與外部框架的對應（ISO 42001、NIST AI RMF、歐盟 AI 法案、ISMS）
 
-如需可下載的發布資產和 PDF，請參閱[發布](../releases/index.md)。
+如需可下載的發布資產和 PDF，請參閱[發布](../releases/)。

@@ -33,10 +33,14 @@ La taxonomie est uniquement un système de classification. Elle ne :
 Les contrôles de sécurité traditionnels (ex. ISMS) seuls échouent souvent à capturer les modes de défaillance spécifiques aux LLM/agents et les déviations d'agents autonomes (ex. exécution d'outil non intentionnelle, boucles récursives) d'une manière **explicable pour l'audit**.
 La taxonomie AIMO fournit un langage partagé pour classifier ces risques spécifiques à l'IA et les connecter aux exigences de preuves et flux de travail de remédiation.
 
-(Exemples de référence pour la différenciation. Les codes ci-dessous sont des espaces réservés illustratifs ; le système de codes officiel suit les définitions du Standard.)
-- AG-01 Boucle/récursion incontrôlée
-- AG-02 Utilisation d'outil non autorisée (mauvais usage de type confused deputy)
-- AG-03 Dérive des limites de privilèges
+!!! warning "Exemples de référence uniquement — pas des codes normatifs"
+    Les codes ci-dessous sont des **espaces réservés illustratifs** et ne font **pas** partie du système de codes normatif AIMO. Ne les utilisez pas dans les soumissions ; utilisez les dimensions et codes normatifs dans [Codes](./04-codes.md) et [Dictionary](./05-dictionary.md).
+
+- **AG-01** Boucle/récursion incontrôlée
+- **AG-02** Utilisation d'outil non autorisée (mauvais usage de type confused deputy)
+- **AG-03** Dérive des limites de privilèges
+
+N'utilisez pas AG-* dans les soumissions ; utilisez les dimensions et codes normatifs définis dans Codes/Dictionary.
 
 ## Vue d'ensemble des dimensions
 

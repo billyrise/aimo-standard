@@ -22,15 +22,15 @@ AIMO 표준은 공유 언어(분류체계)로 AI 사용을 분류하고, 최소 
 2. [산출물](artifacts/index.md) — 분류체계, 코드 시스템, 딕셔너리, 증거 템플릿, 스키마
 3. [검증기](validator/index.md) — 규칙, 참조 검사, 실행 방법
 4. [예제](examples/index.md) — 엔드투엔드 및 최소 샘플
-5. [릴리스](releases/index.md) — 변경로그, 마이그레이션, 체크섬, PDF
+5. [릴리스](releases/) — 변경로그, 마이그레이션, 체크섬, PDF
 6. [거버넌스](governance/index.md) — 버전 관리, 보안, 라이선스, 상표, [기여하기](contributing/localization.md)
 
 **대상별 빠른 링크**
 
-- **감사자용**: [신뢰 패키지](governance/trust-package.md), [분류체계](standard/current/03-taxonomy.md), [딕셔너리](standard/current/05-dictionary.md), [증거 번들](artifacts/evidence-bundle.md), [최소 증거 요구사항](artifacts/minimum-evidence.md), [커버리지 맵](coverage-map/index.md), [검증기](validator/index.md), [릴리스](releases/index.md)
+- **감사자용**: [신뢰 패키지](governance/trust-package.md), [분류체계](standard/current/03-taxonomy.md), [딕셔너리](standard/current/05-dictionary.md), [증거 번들](artifacts/evidence-bundle.md), [최소 증거 요구사항](artifacts/minimum-evidence.md), [커버리지 맵](coverage-map/index.md), [검증기](validator/index.md), [릴리스](releases/)
 - **보안용**: [신뢰 패키지](governance/trust-package.md), [분류체계](standard/current/03-taxonomy.md), [최소 증거 요구사항](artifacts/minimum-evidence.md), [책임 경계](governance/responsibility-boundary.md), [거버넌스](governance/index.md), [검증기](validator/index.md), [표준 > EV 템플릿](standard/current/06-ev-template.md)
-- **IT 운영용**: [신뢰 패키지](governance/trust-package.md), [분류체계](standard/current/03-taxonomy.md), [최소 증거 요구사항](artifacts/minimum-evidence.md), [릴리스](releases/index.md), [검증기](validator/index.md), [예제](examples/index.md), [적합성](conformance/index.md)
-- **법무/조달용**: [신뢰 패키지](governance/trust-package.md), [책임 경계](governance/responsibility-boundary.md), [커버리지 맵 방법론](coverage-map/methodology.md), [릴리스](releases/index.md), [거버넌스](governance/index.md) (라이선스, 상표)
+- **IT 운영용**: [신뢰 패키지](governance/trust-package.md), [분류체계](standard/current/03-taxonomy.md), [최소 증거 요구사항](artifacts/minimum-evidence.md), [릴리스](releases/), [검증기](validator/index.md), [예제](examples/index.md), [적합성](conformance/index.md)
+- **법무/조달용**: [신뢰 패키지](governance/trust-package.md), [책임 경계](governance/responsibility-boundary.md), [커버리지 맵 방법론](coverage-map/methodology.md), [릴리스](releases/), [거버넌스](governance/index.md) (라이선스, 상표)
 
 **감사 여정** (2클릭 경로):
 
@@ -40,4 +40,4 @@ AIMO 표준은 공유 언어(분류체계)로 AI 사용을 분류하고, 최소 
 4. [최소 증거 요구사항](artifacts/minimum-evidence.md) — MUST 수준 체크리스트
 5. [커버리지 맵](coverage-map/index.md) + [방법론](coverage-map/methodology.md) — 프레임워크 매핑
 6. [검증기](validator/index.md) — 구조적 검사 실행
-7. [릴리스](releases/index.md) — 자산 다운로드 및 확인
+7. [릴리스](releases/) — 자산 다운로드 및 확인

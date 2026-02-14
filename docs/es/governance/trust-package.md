@@ -28,7 +28,7 @@ El PDF del Paquete de Confianza consolida materiales listos para auditores en un
 - **Requisitos Mínimos de Evidencia**: lista de verificación de nivel DEBE por ciclo de vida — [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md)
 - **Validador**: reglas y verificaciones de referencia — [Validador](../validator/index.md)
 - **Ejemplos**: paquetes de muestra listos para auditoría — [Ejemplos](../examples/index.md)
-- **Versiones**: historial de cambios y distribución — [Versiones](../releases/index.md)
+- **Versiones**: historial de cambios y distribución — [Versiones](../../releases/)
 - **Gobernanza**: políticas, seguridad, licencias — [Gobernanza](../governance/index.md)
 
 ## Conjunto mínimo para preparación de auditoría
@@ -41,7 +41,7 @@ El PDF del Paquete de Confianza consolida materiales listos para auditores en un
 | Artefactos de evidencia | [Paquete de Evidencia](../artifacts/evidence-bundle.md), [Evidencia Mínima](../artifacts/minimum-evidence.md), [Plantilla EV](../standard/current/06-ev-template.md) | Qué datos deben existir para soportar trazabilidad |
 | Verificaciones del validador | [Validador](../validator/index.md) | Cómo verificar consistencia y completitud interna |
 | Paquete de ejemplo | [Ejemplos](../examples/index.md) | Cómo se ve un paquete listo para auditoría en práctica |
-| Control de cambios | [Versiones](../releases/index.md), [Gobernanza](../governance/index.md) | Cómo se gestionan y comunican las actualizaciones |
+| Control de cambios | [Versiones](../../releases/), [Gobernanza](../governance/index.md) | Cómo se gestionan y comunican las actualizaciones |
 | Seguridad / Licencia / Marcas | [Gobernanza](../governance/index.md) | Postura legal y de seguridad para decisiones de adopción |
 
 ## Cómo citar
@@ -102,7 +102,7 @@ Siga estos pasos para preparar un envío listo para auditoría:
 5. **Referenciar Versión de Release**: Note qué versión del AIMO Standard (ej., `v1.0.0`) su paquete alinea.
 6. **Entregar**: Proporcione el zip, checksums y referencia de versión a su auditor o función de cumplimiento.
 
-Para activos de release y verificación, consulte [Versiones](../releases/index.md).
+Para activos de release y verificación, consulte [Versiones](../../releases/).
 
 ## Declaración de no sobre-reclamación
 
@@ -233,4 +233,4 @@ Desde esta página, el recorrido de auditoría recomendado es:
 3. **Evidencia requerida**: [Requisitos Mínimos de Evidencia](../artifacts/minimum-evidence.md) — lista de verificación de nivel DEBE por ciclo de vida
 4. **Alineación de marco**: [Mapa de Cobertura](../coverage-map/index.md) + [Metodología](../coverage-map/methodology.md) — vea cómo AIMO mapea a marcos externos
 5. **Validación**: [Validador](../validator/index.md) — ejecute verificaciones de consistencia estructural
-6. **Descargar**: [Versiones](../releases/index.md) — obtenga activos de release y verifique checksums
+6. **Descargar**: [Versiones](../../releases/) — obtenga activos de release y verifique checksums

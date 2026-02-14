@@ -276,7 +276,7 @@ AIMO Standard は [Semantic Versioning](https://semver.org/) (SemVer) に従い�
 
 ## リソース
 
-- **[リリースハブ](../../releases/index.md)** — 提出準備、監査人による検証、非過剰主張ステートメント
+- **[リリースハブ](../../../releases/)** — 提出準備、監査人による検証、非過剰主張ステートメント
 - **[Trust Package](../../governance/trust-package.md)** — 監査対応保証資料
 - **[Changelog（詳細）](../current/08-changelog.md)** — 廃止追跡を含む完全な変更履歴
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — 完全なバージョニングポリシー

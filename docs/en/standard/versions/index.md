@@ -278,7 +278,7 @@ Each release creates a frozen documentation snapshot accessible at:
 
 ## Resources
 
-- **[Releases Hub](../../releases/index.md)** — Submission preparation, auditor verification, non-overclaim statement
+- **[Releases Hub](../../../releases/)** — Submission preparation, auditor verification, non-overclaim statement
 - **[Trust Package](../../governance/trust-package.md)** — Auditor-ready assurance materials
 - **[Changelog (detailed)](../current/08-changelog.md)** — Full change history with deprecation tracking
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Complete versioning policy

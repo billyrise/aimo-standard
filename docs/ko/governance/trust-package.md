@@ -28,7 +28,7 @@ description: AIMO 신뢰 패키지 - 감사자 준비 자료 번들. 감사자, 
 - **최소 증거 요구사항**: 생명주기별 MUST 수준 체크리스트 — [최소 증거 요구사항](../artifacts/minimum-evidence.md)
 - **검증기**: 규칙 및 참조 검사 — [검증기](../validator/index.md)
 - **예제**: 감사 준비 샘플 번들 — [예제](../examples/index.md)
-- **릴리스**: 변경 이력 및 배포 — [릴리스](../releases/index.md)
+- **릴리스**: 변경 이력 및 배포 — [릴리스](../../releases/)
 - **거버넌스**: 정책, 보안, 라이선스 — [거버넌스](../governance/index.md)
 
 ## 감사 준비를 위한 최소 세트
@@ -41,7 +41,7 @@ description: AIMO 신뢰 패키지 - 감사자 준비 자료 번들. 감사자, 
 | 증거 산출물 | [증거 번들](../artifacts/evidence-bundle.md), [최소 증거](../artifacts/minimum-evidence.md), [EV 템플릿](../standard/current/06-ev-template.md) | 추적성 지원을 위해 존재해야 하는 데이터 |
 | 검증기 검사 | [검증기](../validator/index.md) | 내부 일관성 및 완전성 검증 방법 |
 | 예제 번들 | [예제](../examples/index.md) | 실제 감사 준비 패키지의 모습 |
-| 변경 통제 | [릴리스](../releases/index.md), [거버넌스](../governance/index.md) | 업데이트 관리 및 전달 방법 |
+| 변경 통제 | [릴리스](../../releases/), [거버넌스](../governance/index.md) | 업데이트 관리 및 전달 방법 |
 | 보안 / 라이선스 / 상표 | [거버넌스](../governance/index.md) | 채택 결정을 위한 법적 및 보안 태세 |
 
 ## 인용 방법
@@ -102,7 +102,7 @@ AIMO 표준은 구조화된 증거 형식 및 설명 가능성 프레임워크�
 5. **릴리스 버전 참조**: 번들이 정합하는 AIMO 표준 버전(예: `v1.0.0`)을 명시합니다.
 6. **제출**: zip, 체크섬 및 버전 참조를 감사자 또는 컴플라이언스 기능에 제공합니다.
 
-릴리스 자산 및 검증은 [릴리스](../releases/index.md)를 참조하세요.
+릴리스 자산 및 검증은 [릴리스](../../releases/)를 참조하세요.
 
 ## 과대 주장 금지 선언
 
@@ -233,4 +233,4 @@ python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 3. **필수 증거**: [최소 증거 요구사항](../artifacts/minimum-evidence.md) — 생명주기별 MUST 수준 체크리스트
 4. **프레임워크 정합**: [커버리지 맵](../coverage-map/index.md) + [방법론](../coverage-map/methodology.md) — AIMO가 외부 프레임워크에 매핑되는 방법 확인
 5. **검증**: [검증기](../validator/index.md) — 구조적 일관성 검사 실행
-6. **다운로드**: [릴리스](../releases/index.md) — 릴리스 자산 획득 및 체크섬 확인
+6. **다운로드**: [릴리스](../../releases/) — 릴리스 자산 획득 및 체크섬 확인

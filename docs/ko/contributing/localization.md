@@ -210,7 +210,7 @@ python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
     - `index.md`
     - `standard/current/*.md`
     - `governance/index.md`
-    - `releases/index.md`
+    - `releases/`
 
 ## 새 언어 추가 (5단계)
 
@@ -290,5 +290,5 @@ mkdocs build --strict
 
 ## 관련 페이지
 
-- [릴리스](../releases/index.md) — 다운로드 가능 패키지
+- [릴리스](../../releases/) — 다운로드 가능 패키지
 - [거버넌스](../governance/index.md) — 프로젝트 거버넌스

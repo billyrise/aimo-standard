@@ -49,6 +49,6 @@ Para auditores y revisores de cumplimiento, el orden de lectura recomendado:
 
 ## Páginas Relacionadas
 
-- [Versiones](../releases/index.md) — Snapshots de versiones y registro de cambios
+- [Versiones](../../releases/) — Snapshots de versiones y registro de cambios
 - [Conformidad](../conformance/index.md) — Niveles de conformidad
 - [Guía de Localización](../contributing/localization.md) — Flujo de trabajo i18n

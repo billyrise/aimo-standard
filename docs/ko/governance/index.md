@@ -49,6 +49,6 @@ description: AIMO 표준 거버넌스 허브 - 프로젝트 거버넌스, 보안
 
 ## 관련 페이지
 
-- [릴리스](../releases/index.md) — 릴리스 스냅샷 및 변경로그
+- [릴리스](../../releases/) — 릴리스 스냅샷 및 변경로그
 - [적합성](../conformance/index.md) — 적합성 수준
 - [현지화 가이드](../contributing/localization.md) — i18n 워크플로우

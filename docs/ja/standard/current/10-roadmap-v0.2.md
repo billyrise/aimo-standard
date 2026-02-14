@@ -23,4 +23,4 @@ description: v0.2 の情報提供用ロードマップ。監査オブジェク�
 
 - [v0.1 オブジェクトモデルスコープ](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md)
 - [署名検証ロードマップ](../../artifacts/signature-verification-roadmap.md)
-- [Releases](../../releases/index.md)
+- [Releases](../../../releases/)

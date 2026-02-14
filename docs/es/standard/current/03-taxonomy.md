@@ -33,10 +33,14 @@ La taxonomía es solo un sistema de clasificación. No:
 Los controles de seguridad tradicionales (ej., ISMS) solos a menudo fallan en capturar modos de fallo específicos de LLM/agente y desviaciones de agentes autónomos (ej., ejecución no intencional de herramientas, bucles recursivos) de una manera **explicable para auditoría**.
 La Taxonomía AIMO proporciona un lenguaje compartido para clasificar estos riesgos específicos de IA y conectarlos con requisitos de evidencia y flujos de trabajo de remediación.
 
-(Ejemplos de referencia para diferenciación. Los códigos a continuación son marcadores de posición ilustrativos; el sistema de códigos oficial sigue las definiciones del Estándar.)
-- AG-01 Bucle Desbocado / Recursión
-- AG-02 Uso No Autorizado de Herramientas (mal uso estilo deputy confundido)
-- AG-03 Deriva de Límite de Privilegios
+!!! warning "Solo ejemplos de referencia — no son códigos normativos"
+    Los códigos siguientes son **marcadores de posición ilustrativos** y **no** forman parte del sistema de códigos normativo AIMO. No los use en envíos; use las dimensiones y códigos normativos en [Codes](./04-codes.md) y [Dictionary](./05-dictionary.md).
+
+- **AG-01** Bucle Desbocado / Recursión
+- **AG-02** Uso No Autorizado de Herramientas (mal uso estilo deputy confundido)
+- **AG-03** Deriva de Límite de Privilegios
+
+No use AG-* en envíos; use las dimensiones y códigos normativos definidos en Codes/Dictionary.
 
 ## Descripción General de Dimensiones
 

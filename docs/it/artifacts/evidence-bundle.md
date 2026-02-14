@@ -60,4 +60,4 @@ Da questa pagina, il tipico percorso di audit prosegue:
 1. **Prossimo**: [Requisiti Minimi di Evidence](minimum-evidence.md) — Checklist MUST-level per ciclo di vita
 2. **Poi**: [Mappa di Copertura](../coverage-map/index.md) — Mappatura ai framework esterni
 3. **Validazione**: [Validator](../validator/index.md) — Eseguire controlli strutturali
-4. **Download**: [Release](../releases/index.md) — Ottenere gli asset di release e verificare i checksum
+4. **Download**: [Release](../../releases/) — Ottenere gli asset di release e verificare i checksum

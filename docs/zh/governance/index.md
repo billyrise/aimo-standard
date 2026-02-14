@@ -49,6 +49,6 @@ description: AIMO 标准治理中心 - 项目治理、安全政策、许可、�
 
 ## 相关页面
 
-- [发布](../releases/index.md) — 发布快照和变更日志
+- [发布](../../releases/) — 发布快照和变更日志
 - [符合性](../conformance/index.md) — 符合性级别
 - [本地化指南](../contributing/localization.md) — i18n 工作流程

@@ -37,8 +37,8 @@ Diese `site_url`-Einstellung stellt sicher:
 
 | Sprache | URL-Muster | Beispiel |
 |----------|-------------|---------|
-| Englisch (Standard) | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
-| Japanisch | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
+| Englisch (Standard) | `https://standard.aimoaas.com/{X.Y.Z}/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| Japanisch | `https://standard.aimoaas.com/{X.Y.Z}/ja/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/ja/governance/` |
 
 Jede Sprachversion ist selbst-kanonisch und enthält `hreflang`-Alternativen zur anderen Sprache(n) plus `x-default` auf die englische Version zeigend.
 
@@ -88,10 +88,10 @@ Bei Zitierung des AIMO Standards in Auditberichten, Compliance-Dokumentation ode
 
 | Anwendungsfall | Empfohlene URL |
 |----------|-----------------|
-| Aktuelle stabile Spezifikation | `https://standard.aimoaas.com/latest/standard/current/` |
+| Aktuelle stabile Spezifikation | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
 | Bestimmte Version (für Audit) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
-| Governance & Richtlinien | `https://standard.aimoaas.com/latest/governance/` |
-| Trust Package | `https://standard.aimoaas.com/latest/governance/trust-package/` |
+| Governance & Richtlinien | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| Trust Package | `https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/` |
 
 ### NICHT zitieren
 
@@ -119,12 +119,12 @@ Jede generierte HTML-Seite enthält Canonical- und hreflang-Tags im `<head>`:
 
 ```html
 <!-- Canonical (zeigt immer auf Produktion) -->
-<link rel="canonical" href="https://standard.aimoaas.com/latest/governance/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 
 <!-- Sprachalternativen -->
-<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/governance/">
-<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/governance/">
-<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/governance/">
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/{X.Y.Z}/ja/governance/">
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 ```
 
 ### robots.txt
@@ -197,5 +197,5 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 ## Verwandte Dokumentation
 
 - [Trust Package](trust-package.md) — Prüfungsbereite Materialien
-- [Releases](../releases/index.md) — Versionshistorie und Changelog
+- [Releases](../../releases/) — Versionshistorie und Changelog
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Versionsrichtlinie

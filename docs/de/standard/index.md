@@ -28,4 +28,4 @@ Für offizielle eingefrorene Releases und versionierte Snapshots siehe [Versione
 - **[Konformität](../conformance/index.md)** — Wie man dem Standard entspricht und Konformitätsstufen
 - **[Coverage Map](../coverage-map/index.md)** — Zuordnung zu externen Frameworks (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 
-Für herunterladbare Release-Assets und PDFs siehe [Releases](../releases/index.md).
+Für herunterladbare Release-Assets und PDFs siehe [Releases](../releases/).

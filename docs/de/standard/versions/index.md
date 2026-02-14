@@ -267,7 +267,7 @@ Jedes Release erstellt einen eingefrorenen Dokumentations-Snapshot, der zugängl
 
 ## Ressourcen
 
-- **[Releases-Hub](../../releases/index.md)** — Einreichungsvorbereitung, Prüfer-Verifizierung, Keine-Überbeanspruchung-Erklärung
+- **[Releases-Hub](../../../releases/)** — Einreichungsvorbereitung, Prüfer-Verifizierung, Keine-Überbeanspruchung-Erklärung
 - **[Trust Package](../../governance/trust-package.md)** — Prüfungsbereite Assurance-Materialien
 - **[Changelog (detailliert)](../current/08-changelog.md)** — Vollständige Änderungshistorie mit Deprecation-Tracking
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Vollständige Versionierungsrichtlinie

@@ -33,10 +33,14 @@ Die Taxonomie ist nur ein Klassifizierungssystem. Sie:
 Traditionelle Sicherheitskontrollen (z.B. ISMS) allein erfassen oft keine LLM-/agentenspezifischen Fehlermodi und autonomen Agentenabweichungen (z.B. unbeabsichtigte Tool-Ausführung, rekursive Schleifen) auf eine **audit-erklärbare** Weise.
 AIMO Taxonomie bietet eine gemeinsame Sprache, um diese KI-spezifischen Risiken zu klassifizieren und sie mit Evidence-Anforderungen und Behebungs-Workflows zu verbinden.
 
-(Referenzbeispiele zur Differenzierung. Die folgenden Codes sind illustrative Platzhalter; das offizielle Code-System folgt den Standard-Definitionen.)
-- AG-01 Runaway Loop / Rekursion
-- AG-02 Nicht autorisierte Tool-Nutzung (Confused-Deputy-artiger Missbrauch)
-- AG-03 Berechtigungsgrenze-Drift
+!!! warning "Nur Referenzbeispiele — keine normativen Codes"
+    Die folgenden Codes sind **illustrative Platzhalter** und gehören **nicht** zum normativen AIMO-Code-System. Verwenden Sie sie nicht in Einreichungen; verwenden Sie die normativen Dimensionen und Codes in [Codes](./04-codes.md) und [Dictionary](./05-dictionary.md).
+
+- **AG-01** Runaway Loop / Rekursion
+- **AG-02** Nicht autorisierte Tool-Nutzung (Confused-Deputy-artiger Missbrauch)
+- **AG-03** Berechtigungsgrenze-Drift
+
+AG-* nicht in Einreichungen verwenden; normative Dimensionen und Codes aus Codes/Dictionary verwenden.
 
 ## Dimensionen-Übersicht
 

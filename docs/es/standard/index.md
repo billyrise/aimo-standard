@@ -28,4 +28,4 @@ Para releases oficiales congelados y snapshots versionados, consulte [Versiones]
 - **[Conformidad](../conformance/index.md)** — Cómo cumplir con el estándar y niveles de conformidad
 - **[Mapa de Cobertura](../coverage-map/index.md)** — Mapeo a marcos externos (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 
-Para activos de release descargables y PDFs, consulte [Versiones](../releases/index.md).
+Para activos de release descargables y PDFs, consulte [Versiones](../releases/).

@@ -267,7 +267,7 @@ Chaque version crée un instantané de documentation figée accessible à :
 
 ## Ressources
 
-- **[Hub des versions](../../releases/index.md)** — Préparation de soumission, vérification par l'auditeur, déclaration de non-déclaration excessive
+- **[Hub des versions](../../../releases/)** — Préparation de soumission, vérification par l'auditeur, déclaration de non-déclaration excessive
 - **[Package de confiance](../../governance/trust-package.md)** — Matériaux d'assurance prêts pour les auditeurs
 - **[Changelog (détaillé)](../current/08-changelog.md)** — Historique complet des changements avec suivi des dépréciations
 - **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — Politique de versionnement complète

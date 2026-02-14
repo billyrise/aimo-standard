@@ -37,8 +37,8 @@ This `site_url` setting ensures:
 
 | Language | URL Pattern | Example |
 |----------|-------------|---------|
-| English (default) | `https://standard.aimoaas.com/{path}` | `https://standard.aimoaas.com/governance/` |
-| Japanese | `https://standard.aimoaas.com/ja/{path}` | `https://standard.aimoaas.com/ja/governance/` |
+| English (default) | `https://standard.aimoaas.com/{X.Y.Z}/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| Japanese | `https://standard.aimoaas.com/{X.Y.Z}/ja/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/ja/governance/` |
 
 Each language version is self-canonical and includes `hreflang` alternates to the other language(s) plus `x-default` pointing to the English version.
 
@@ -88,10 +88,10 @@ When citing AIMO Standard in audit reports, compliance documentation, or externa
 
 | Use Case | Recommended URL |
 |----------|-----------------|
-| Current stable specification | `https://standard.aimoaas.com/latest/standard/current/` |
+| Current stable specification | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
 | Specific version (for audit) | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
-| Governance & policies | `https://standard.aimoaas.com/latest/governance/` |
-| Trust Package | `https://standard.aimoaas.com/latest/governance/trust-package/` |
+| Governance & policies | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| Trust Package | `https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/` |
 
 ### Do NOT Cite
 
@@ -117,14 +117,14 @@ Versioned snapshots are frozen at release time and will not change.
 
 Every generated HTML page includes canonical and hreflang tags in the `<head>`. The canonical URL depends on whether the page is served under `/latest/` or a versioned path.
 
-**When rendered under `/latest/`** (alias redirect), the canonical may point at the resolved version or at `/latest/` per deployment choice:
+**When rendered under a versioned path** (e.g. `/0.1.2/`), the canonical MUST point at the versioned URL. Example with placeholder `{X.Y.Z}`:
 
 ```html
-<!-- Example: latest alias -->
-<link rel="canonical" href="https://standard.aimoaas.com/latest/governance/">
-<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/latest/governance/">
-<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/latest/ja/governance/">
-<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/latest/governance/">
+<!-- Example: versioned canonical (e.g. /0.1.2/) -->
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/{X.Y.Z}/ja/governance/">
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
 ```
 
 **When rendered under a versioned path** (e.g. `/0.1.2/`), the canonical MUST include the versioned prefix so that audit citations point at the frozen snapshot. When rendered under `/{X.Y.Z}/`, canonical must include the versioned prefix.
@@ -216,5 +216,5 @@ site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.
 ## Related Documentation
 
 - [Trust Package](trust-package.md) — Auditor-ready materials
-- [Releases](../releases/) — Version history and changelog
+- [Releases](../../releases/) — Version history and changelog
 - [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — Version policy

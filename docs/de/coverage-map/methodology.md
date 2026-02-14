@@ -50,4 +50,4 @@ Von dieser Seite aus weiter zu:
 
 1. **Framework-Zuordnungen**: [ISO 42001](iso-42001.md), [NIST AI RMF](nist-ai-rmf.md), [EU AI Act](eu-ai-act.md), [ISMS](isms.md)
 2. **Validieren**: [Validator](../validator/index.md) — strukturelle Prüfungen durchführen
-3. **Download**: [Releases](../releases/index.md) — Release-Assets herunterladen
+3. **Download**: [Releases](../../releases/) — Release-Assets herunterladen

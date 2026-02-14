@@ -49,6 +49,6 @@ For auditors and compliance reviewers, the recommended reading order:
 
 ## Related Pages
 
-- [Releases](../releases/index.md) — Release snapshots and changelog
+- [Releases](../../releases/) — Release snapshots and changelog
 - [Conformance](../conformance/index.md) — Conformance levels
 - [Localization Guide](../contributing/localization.md) — i18n workflow

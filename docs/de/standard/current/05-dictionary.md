@@ -27,7 +27,7 @@ Das Dictionary ermöglicht:
     - **Struktur**: `data/taxonomy/canonical.yaml` (Codes, Status, Lifecycle)
     - **Übersetzungen**: `data/taxonomy/i18n/*.yaml` (Labels, Definitionen pro Sprache)
 
-    CSV-Dateien sind **generierte Artefakte** zur Distribution. Siehe [Releases](../../releases/index.md) für Downloads.
+    CSV-Dateien sind **generierte Artefakte** zur Distribution. Siehe [Releases](../../../releases/) für Downloads.
 
 ## Spalten-Schema
 
@@ -93,7 +93,7 @@ Die aktuelle Dictionary-Version ist **v0.1.0** und enthält:
 !!! note "Vollständige Code-Listen"
     Die vollständige Liste von 91 Codes ist in den generierten CSV-Artefakten verfügbar. Diese Dokumentationsseite bietet Spaltendefinitionen und Nutzungsanleitungen. Für detaillierte Code-Definitionen:
 
-    - **Download**: Siehe [Releases](../../releases/index.md) für Pro-Sprache-CSV-Dateien
+    - **Download**: Siehe [Releases](../../../releases/) für Pro-Sprache-CSV-Dateien
     - **Pro-Sprache-CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
     - **Legacy EN/JA gemischte CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` (eingefroren, nur für Rückwärtskompatibilität)
 
@@ -191,7 +191,7 @@ Beispiel: `X-ACME-UC-901` für ACMEs benutzerdefinierten Anwendungsfall-Code.
 
 ## Downloads
 
-Siehe [Releases](../../releases/index.md) für herunterladbare Pakete mit Dictionary und zugehörigen Dateien.
+Siehe [Releases](../../../releases/) für herunterladbare Pakete mit Dictionary und zugehörigen Dateien.
 
 ## Verwandte Seiten
 

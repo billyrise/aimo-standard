@@ -33,10 +33,14 @@ A taxonomia é apenas um sistema de classificação. Ela não:
 Controles de segurança tradicionais (ex: ISMS) sozinhos frequentemente falham em capturar modos de falha específicos de LLM/agente e desvios de agentes autônomos (ex: execução de ferramenta não intencional, loops recursivos) de maneira **explicável para auditoria**.
 A Taxonomia AIMO fornece uma linguagem compartilhada para classificar esses riscos específicos de IA e conectá-los a requisitos de evidências e fluxos de trabalho de remediação.
 
-(Exemplos de referência para diferenciação. Os códigos abaixo são placeholders ilustrativos; o sistema de códigos oficial segue as definições do Padrão.)
-- AG-01 Loop/Recursão Descontrolada
-- AG-02 Uso Não Autorizado de Ferramenta (uso indevido estilo confused deputy)
-- AG-03 Drift de Limite de Privilégio
+!!! warning "Apenas exemplos de referência — não são códigos normativos"
+    Os códigos abaixo são **placeholders ilustrativos** e **não** fazem parte do sistema de códigos normativo AIMO. Não os use em submissões; use as dimensões e códigos normativos em [Codes](./04-codes.md) e [Dictionary](./05-dictionary.md).
+
+- **AG-01** Loop/Recursão Descontrolada
+- **AG-02** Uso Não Autorizado de Ferramenta (uso indevido estilo confused deputy)
+- **AG-03** Drift de Limite de Privilégio
+
+Não use AG-* em submissões; use as dimensões e códigos normativos definidos em Codes/Dictionary.
 
 ## Visão Geral das Dimensões
 

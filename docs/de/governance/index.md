@@ -49,6 +49,6 @@ Für Prüfer und Compliance-Reviewer ist die empfohlene Lesereihenfolge:
 
 ## Verwandte Seiten
 
-- [Releases](../releases/index.md) — Release-Snapshots und Changelog
+- [Releases](../../releases/) — Release-Snapshots und Changelog
 - [Konformität](../conformance/index.md) — Konformitätsstufen
 - [Lokalisierungsleitfaden](../contributing/localization.md) — i18n-Workflow

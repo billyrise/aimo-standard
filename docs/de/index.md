@@ -22,15 +22,15 @@ Hinweis: AIMO Standard bietet keine Rechtsberatung und garantiert nicht automati
 2. [Artefakte](artifacts/index.md) — Taxonomie, Code-System, Dictionary, Evidence-Templates, Schemas
 3. [Validator](validator/index.md) — Regeln, Referenzprüfungen, Ausführung
 4. [Beispiele](examples/index.md) — End-to-End- und minimale Beispiele
-5. [Releases](releases/index.md) — Changelog, Migration, Prüfsummen, PDF
+5. [Releases](releases/) — Changelog, Migration, Prüfsummen, PDF
 6. [Governance](governance/index.md) — Versionierung, Sicherheit, Lizenz, Marken, [Beitragen](contributing/localization.md)
 
 **Schnelllinks nach Zielgruppe**
 
-- **Für Prüfer**: [Trust Package](governance/trust-package.md), [Taxonomie](standard/current/03-taxonomy.md), [Dictionary](standard/current/05-dictionary.md), [Evidence Bundle](artifacts/evidence-bundle.md), [Mindestanforderungen an Evidence](artifacts/minimum-evidence.md), [Coverage Map](coverage-map/index.md), [Validator](validator/index.md), [Releases](releases/index.md)
+- **Für Prüfer**: [Trust Package](governance/trust-package.md), [Taxonomie](standard/current/03-taxonomy.md), [Dictionary](standard/current/05-dictionary.md), [Evidence Bundle](artifacts/evidence-bundle.md), [Mindestanforderungen an Evidence](artifacts/minimum-evidence.md), [Coverage Map](coverage-map/index.md), [Validator](validator/index.md), [Releases](releases/)
 - **Für Sicherheit**: [Trust Package](governance/trust-package.md), [Taxonomie](standard/current/03-taxonomy.md), [Mindestanforderungen an Evidence](artifacts/minimum-evidence.md), [Verantwortungsgrenze](governance/responsibility-boundary.md), [Governance](governance/index.md), [Validator](validator/index.md), [Standard > EV-Template](standard/current/06-ev-template.md)
-- **Für IT-Betrieb**: [Trust Package](governance/trust-package.md), [Taxonomie](standard/current/03-taxonomy.md), [Mindestanforderungen an Evidence](artifacts/minimum-evidence.md), [Releases](releases/index.md), [Validator](validator/index.md), [Beispiele](examples/index.md), [Konformität](conformance/index.md)
-- **Für Recht/Beschaffung**: [Trust Package](governance/trust-package.md), [Verantwortungsgrenze](governance/responsibility-boundary.md), [Coverage Map Methodologie](coverage-map/methodology.md), [Releases](releases/index.md), [Governance](governance/index.md) (Lizenz, Marken)
+- **Für IT-Betrieb**: [Trust Package](governance/trust-package.md), [Taxonomie](standard/current/03-taxonomy.md), [Mindestanforderungen an Evidence](artifacts/minimum-evidence.md), [Releases](releases/), [Validator](validator/index.md), [Beispiele](examples/index.md), [Konformität](conformance/index.md)
+- **Für Recht/Beschaffung**: [Trust Package](governance/trust-package.md), [Verantwortungsgrenze](governance/responsibility-boundary.md), [Coverage Map Methodologie](coverage-map/methodology.md), [Releases](releases/), [Governance](governance/index.md) (Lizenz, Marken)
 
 **Audit-Reise** (2-Klick-Pfad):
 
@@ -40,4 +40,4 @@ Hinweis: AIMO Standard bietet keine Rechtsberatung und garantiert nicht automati
 4. [Mindestanforderungen an Evidence](artifacts/minimum-evidence.md) — MUSS-Checkliste
 5. [Coverage Map](coverage-map/index.md) + [Methodologie](coverage-map/methodology.md) — Framework-Zuordnungen
 6. [Validator](validator/index.md) — Strukturprüfungen durchführen
-7. [Releases](releases/index.md) — Assets herunterladen und verifizieren
+7. [Releases](releases/) — Assets herunterladen und verifizieren

@@ -49,6 +49,6 @@ description: AIMO Standardガバナンスハブ - プロジェクトガバナン
 
 ## 関連ページ
 
-- [Releases](../releases/index.md) — リリーススナップショットと変更履歴
+- [Releases](../../releases/) — リリーススナップショットと変更履歴
 - [Conformance](../conformance/index.md) — 適合性レベル
 - [ローカライゼーションガイド](../contributing/localization.md) — i18n ワークフロー

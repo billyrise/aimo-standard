@@ -27,7 +27,7 @@ AIMO 字典是分类法中所有有效代码的权威列表。它为每个代码
     - **结构**：`data/taxonomy/canonical.yaml`（代码、状态、生命周期）
     - **翻译**：`data/taxonomy/i18n/*.yaml`（每种语言的标签、定义）
 
-    CSV 文件是用于分发的**生成工件**。请参阅 [发布](../../releases/index.md) 进行下载。
+    CSV 文件是用于分发的**生成工件**。请参阅 [发布](../../../releases/) 进行下载。
 
 ## 列模式
 
@@ -93,7 +93,7 @@ AIMO 字典是分类法中所有有效代码的权威列表。它为每个代码
 !!! note "完整代码列表"
     91个代码的完整列表可在生成的CSV工件中获取。此文档页面提供列定义和使用指南。有关详细的代码定义：
 
-    - **下载**：请参阅 [发布](../../releases/index.md) 获取每种语言的CSV文件
+    - **下载**：请参阅 [发布](../../../releases/) 获取每种语言的CSV文件
     - **每种语言的CSV**：`artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
     - **旧版 EN/JA 混合CSV**：`source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv`（已冻结，仅用于向后兼容）
 
@@ -191,7 +191,7 @@ X-<ORG>-<DIM>-<TOKEN>
 
 ## 下载
 
-请参阅 [发布](../../releases/index.md) 获取包含字典和相关文件的可下载包。
+请参阅 [发布](../../../releases/) 获取包含字典和相关文件的可下载包。
 
 ## 相关页面
 

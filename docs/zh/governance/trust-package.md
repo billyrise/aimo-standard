@@ -28,7 +28,7 @@ description: AIMO 信任包 - 审计师就绪材料包。审计师、法律和IT
 - **最低证据要求**：按生命周期的 MUST 级别清单 — [最低证据要求](../artifacts/minimum-evidence.md)
 - **验证器**：规则和参考检查 — [验证器](../validator/index.md)
 - **示例**：审计就绪的示例包 — [示例](../examples/index.md)
-- **发布**：变更历史和分发 — [发布](../releases/index.md)
+- **发布**：变更历史和分发 — [发布](../../releases/)
 - **治理**：政策、安全、许可 — [治理](../governance/index.md)
 
 ## 审计就绪的最小集
@@ -41,7 +41,7 @@ description: AIMO 信任包 - 审计师就绪材料包。审计师、法律和IT
 | 证据工件 | [证据包](../artifacts/evidence-bundle.md)、[最低证据](../artifacts/minimum-evidence.md)、[EV 模板](../standard/current/06-ev-template.md) | 支持可追溯性必须存在的数据 |
 | 验证器检查 | [验证器](../validator/index.md) | 如何验证内部一致性和完整性 |
 | 示例包 | [示例](../examples/index.md) | 实践中审计就绪包的样子 |
-| 变更控制 | [发布](../releases/index.md)、[治理](../governance/index.md) | 如何管理和传达更新 |
+| 变更控制 | [发布](../../releases/)、[治理](../governance/index.md) | 如何管理和传达更新 |
 | 安全/许可证/商标 | [治理](../governance/index.md) | 采用决策的法律和安全态势 |
 
 ## 如何引用
@@ -102,7 +102,7 @@ AIMO 标准提供结构化的证据格式和可解释性框架。它**不**提�
 5. **引用发布版本**：记录您的包对齐的 AIMO 标准版本（例如 `v1.0.0`）。
 6. **交付**：将 zip、校验和和版本引用提供给您的审计师或合规职能部门。
 
-有关发布资产和验证，请参阅 [发布](../releases/index.md)。
+有关发布资产和验证，请参阅 [发布](../../releases/)。
 
 ## 不过度声明声明
 
@@ -233,4 +233,4 @@ python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 3. **必需证据**：[最低证据要求](../artifacts/minimum-evidence.md) — 按生命周期的 MUST 级别清单
 4. **框架对齐**：[覆盖映射](../coverage-map/index.md) + [方法论](../coverage-map/methodology.md) — 了解 AIMO 如何映射到外部框架
 5. **验证**：[验证器](../validator/index.md) — 运行结构一致性检查
-6. **下载**：[发布](../releases/index.md) — 获取发布资产并验证校验和
+6. **下载**：[发布](../../releases/) — 获取发布资产并验证校验和

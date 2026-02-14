@@ -210,7 +210,7 @@ python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
     - `index.md`
     - `standard/current/*.md`
     - `governance/index.md`
-    - `releases/index.md`
+    - `releases/`
 
 ## 添加新语言（5 步）
 
@@ -290,5 +290,5 @@ mkdocs build --strict
 
 ## 相关页面
 
-- [发布](../releases/index.md) — 可下载的包
+- [发布](../../releases/) — 可下载的包
 - [治理](../governance/index.md) — 项目治理

@@ -60,4 +60,4 @@ description: AIMO 证据包结构。包含目录、可追溯性和工件的审�
 1. **下一步**：[最低证据要求](minimum-evidence.md) — 按生命周期的 MUST 级别清单
 2. **然后**：[覆盖映射](../coverage-map/index.md) — 与外部框架的映射
 3. **验证**：[验证器](../validator/index.md) — 运行结构检查
-4. **下载**：[发布](../releases/index.md) — 获取发布资产并验证校验和
+4. **下载**：[发布](../../releases/) — 获取发布资产并验证校验和

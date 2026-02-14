@@ -60,4 +60,4 @@ Depuis cette page, le parcours d'audit typique continue :
 1. **Suivant** : [Exigences minimales de preuves](minimum-evidence.md) — liste de contrôle OBLIGATOIRE par cycle de vie
 2. **Ensuite** : [Carte de couverture](../coverage-map/index.md) — correspondance avec les cadres externes
 3. **Valider** : [Validateur](../validator/index.md) — exécuter les vérifications structurelles
-4. **Télécharger** : [Versions](../releases/index.md) — obtenir les actifs de version et vérifier les sommes de contrôle
+4. **Télécharger** : [Versions](../../releases/) — obtenir les actifs de version et vérifier les sommes de contrôle
