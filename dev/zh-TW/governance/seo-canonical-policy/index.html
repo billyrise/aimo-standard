@@ -2719,8 +2719,9 @@ site_url: https://standard.aimoaas.com/
 <p><strong>alias_type: redirect 的運作方式：</strong></p>
 <p>不是複製檔案，<code>/latest/</code> 包含指向目前發布的重新導向頁面：</p>
 <pre><code class="language-html">&lt;!-- /latest/index.html --&gt;
-&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../0.0.1/&quot;&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.0.1/&quot;&gt;
+&lt;!-- Latest alias (redirect stub); canonical points to versioned snapshot --&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../{X.Y.Z}/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/&quot;&gt;
 </code></pre>
 <p>這確保：</p>
 <ol>

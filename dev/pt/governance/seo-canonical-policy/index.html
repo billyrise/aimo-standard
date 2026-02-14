@@ -2719,8 +2719,9 @@ site_url: https://standard.aimoaas.com/
 <p><strong>Como alias_type: redirect funciona:</strong></p>
 <p>Em vez de copiar arquivos, <code>/latest/</code> contém páginas de redirect apontando para o release atual:</p>
 <pre><code class="language-html">&lt;!-- /latest/index.html --&gt;
-&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../0.0.1/&quot;&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.0.1/&quot;&gt;
+&lt;!-- Latest alias (redirect stub); canonical points to versioned snapshot --&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../{X.Y.Z}/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/&quot;&gt;
 </code></pre>
 <p>Isso garante:</p>
 <ol>

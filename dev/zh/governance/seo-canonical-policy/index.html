@@ -2719,8 +2719,9 @@ site_url: https://standard.aimoaas.com/
 <p><strong>alias_type: redirect 如何工作：</strong></p>
 <p><code>/latest/</code> 包含指向当前版本的重定向页面，而不是复制文件：</p>
 <pre><code class="language-html">&lt;!-- /latest/index.html --&gt;
-&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../0.0.1/&quot;&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.0.1/&quot;&gt;
+&lt;!-- Latest alias (redirect stub); canonical points to versioned snapshot --&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../{X.Y.Z}/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/&quot;&gt;
 </code></pre>
 <p>这确保：</p>
 <ol>

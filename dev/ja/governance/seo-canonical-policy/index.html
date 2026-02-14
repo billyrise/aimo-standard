@@ -2718,9 +2718,10 @@ site_url: https://standard.aimoaas.com/
 </table>
 <p><strong>alias_type: redirect の動作：</strong></p>
 <p>ファイルをコピーする代わりに、<code>/latest/</code> にはリダイレクトページが含まれます：</p>
-<pre><code class="language-html">&lt;!-- /latest/index.html --&gt;
-&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../0.0.1/&quot;&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.0.1/&quot;&gt;
+<pre><code class="language-html">&lt;!-- Latest alias (redirect stub); canonical points to versioned snapshot --&gt;
+&lt;!-- /latest/index.html --&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../{X.Y.Z}/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/&quot;&gt;
 </code></pre>
 <p>これにより：</p>
 <ol>

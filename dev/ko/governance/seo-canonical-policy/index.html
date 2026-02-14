@@ -2719,8 +2719,9 @@ site_url: https://standard.aimoaas.com/
 <p><strong>alias_type: redirect 작동 방식:</strong></p>
 <p>파일을 복사하는 대신 <code>/latest/</code>에는 현재 릴리스를 가리키는 리디렉션 페이지가 포함됩니다:</p>
 <pre><code class="language-html">&lt;!-- /latest/index.html --&gt;
-&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../0.0.1/&quot;&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.0.1/&quot;&gt;
+&lt;!-- Latest alias (redirect stub); canonical points to versioned snapshot --&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../{X.Y.Z}/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/&quot;&gt;
 </code></pre>
 <p>이것은 다음을 보장합니다:</p>
 <ol>

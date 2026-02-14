@@ -2713,9 +2713,10 @@ site_url: https://standard.aimoaas.com/
 </table>
 <p><strong>How alias_type: redirect works:</strong></p>
 <p>Instead of copying files, <code>/latest/</code> contains redirect pages pointing to the current release:</p>
-<pre><code class="language-html">&lt;!-- /latest/index.html --&gt;
-&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../0.0.1/&quot;&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.0.1/&quot;&gt;
+<pre><code class="language-html">&lt;!-- Latest alias (redirect stub): /latest/ → resolved version; canonical points to versioned snapshot --&gt;
+&lt;!-- /latest/index.html --&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../{X.Y.Z}/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/&quot;&gt;
 </code></pre>
 <p>This ensures:</p>
 <ol>
@@ -2768,20 +2769,14 @@ site_url: https://standard.aimoaas.com/
     Site paths use version numbers without the <code>v</code> prefix. For version <code>v1.0.0</code>, use <code>/1.0.0/</code> in URLs.</p>
 <h2 id="technical-implementation">Technical Implementation</h2>
 <h3 id="generated-html-example">Generated HTML Example</h3>
-<p>Every generated HTML page includes canonical and hreflang tags in the <code>&lt;head&gt;</code>. The canonical URL depends on whether the page is served under <code>/latest/</code> or a versioned path.</p>
-<p><strong>When rendered under a versioned path</strong> (e.g. <code>/0.1.2/</code>), the canonical MUST point at the versioned URL. Example with placeholder <code>{X.Y.Z}</code>:</p>
-<pre><code class="language-html">&lt;!-- Example: versioned canonical (e.g. /0.1.2/) --&gt;
+<p>Every generated HTML page includes canonical and hreflang tags in the <code>&lt;head&gt;</code>. Two patterns apply:</p>
+<p><strong>1. Latest alias (redirect stub)</strong> — Pages under <code>/latest/</code> redirect to the current release; the canonical and hreflang in the stub point at the versioned snapshot (see snippet above in "How alias_type: redirect works").</p>
+<p><strong>2. Versioned snapshot canonical</strong> — When the page is served under <code>/{X.Y.Z}/</code>, the canonical MUST point at the versioned URL so that audit citations use a frozen snapshot:</p>
+<pre><code class="language-html">&lt;!-- Versioned snapshot (e.g. /{X.Y.Z}/governance/) --&gt;
 &lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 &lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 &lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/ja/governance/&quot;&gt;
 &lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
-</code></pre>
-<p><strong>When rendered under a versioned path</strong> (e.g. <code>/0.1.2/</code>), the canonical MUST include the versioned prefix so that audit citations point at the frozen snapshot. When rendered under <code>/{X.Y.Z}/</code>, canonical must include the versioned prefix.</p>
-<pre><code class="language-html">&lt;!-- Example: versioned snapshot (e.g. /0.1.2/) --&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.1.2/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/0.1.2/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/0.1.2/ja/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/0.1.2/governance/&quot;&gt;
 </code></pre>
 <h3 id="robotstxt">robots.txt</h3>
 <p>Production is <strong>fully crawlable</strong>. There is no global crawler block. Only the <code>/dev/</code> preview path is disallowed.</p>
