@@ -2636,13 +2636,13 @@ site_url: https://standard.aimoaas.com/
 <tbody>
 <tr>
 <td>Inglés (predeterminado)</td>
-<td><code>https://standard.aimoaas.com/{path}</code></td>
-<td><code>https://standard.aimoaas.com/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/{path}</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/</code></td>
 </tr>
 <tr>
 <td>Japonés</td>
-<td><code>https://standard.aimoaas.com/ja/{path}</code></td>
-<td><code>https://standard.aimoaas.com/ja/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/ja/{path}</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/ja/governance/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2743,7 +2743,7 @@ site_url: https://standard.aimoaas.com/
 <tbody>
 <tr>
 <td>Especificación estable actual</td>
-<td><code>https://standard.aimoaas.com/latest/standard/current/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/standard/current/</code></td>
 </tr>
 <tr>
 <td>Versión específica (para auditoría)</td>
@@ -2751,11 +2751,11 @@ site_url: https://standard.aimoaas.com/
 </tr>
 <tr>
 <td>Gobernanza y políticas</td>
-<td><code>https://standard.aimoaas.com/latest/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/</code></td>
 </tr>
 <tr>
 <td>Paquete de Confianza</td>
-<td><code>https://standard.aimoaas.com/latest/governance/trust-package/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2775,12 +2775,12 @@ site_url: https://standard.aimoaas.com/
 <h3 id="ejemplo-de-html-generado">Ejemplo de HTML Generado</h3>
 <p>Cada página HTML generada incluye tags canónicos y hreflang en el <code>&lt;head&gt;</code>:</p>
 <pre><code class="language-html">&lt;!-- Canonical (siempre apunta a Producción) --&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 
 &lt;!-- Alternativas de idioma --&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/latest/ja/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/ja/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 </code></pre>
 <h3 id="robotstxt">robots.txt</h3>
 <pre><code>User-agent: *

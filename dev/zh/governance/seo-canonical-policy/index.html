@@ -2636,13 +2636,13 @@ site_url: https://standard.aimoaas.com/
 <tbody>
 <tr>
 <td>英语（默认）</td>
-<td><code>https://standard.aimoaas.com/{path}</code></td>
-<td><code>https://standard.aimoaas.com/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/{path}</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/</code></td>
 </tr>
 <tr>
 <td>日语</td>
-<td><code>https://standard.aimoaas.com/ja/{path}</code></td>
-<td><code>https://standard.aimoaas.com/ja/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/ja/{path}</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/ja/governance/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2743,7 +2743,7 @@ site_url: https://standard.aimoaas.com/
 <tbody>
 <tr>
 <td>当前稳定规范</td>
-<td><code>https://standard.aimoaas.com/latest/standard/current/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/standard/current/</code></td>
 </tr>
 <tr>
 <td>特定版本（用于审计）</td>
@@ -2751,11 +2751,11 @@ site_url: https://standard.aimoaas.com/
 </tr>
 <tr>
 <td>治理与政策</td>
-<td><code>https://standard.aimoaas.com/latest/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/</code></td>
 </tr>
 <tr>
 <td>信任包</td>
-<td><code>https://standard.aimoaas.com/latest/governance/trust-package/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2775,12 +2775,12 @@ site_url: https://standard.aimoaas.com/
 <h3 id="html">生成的HTML示例</h3>
 <p>每个生成的HTML页面在 <code>&lt;head&gt;</code> 中包含规范和 hreflang 标签：</p>
 <pre><code class="language-html">&lt;!-- 规范（始终指向生产） --&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 
 &lt;!-- 语言备选 --&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/latest/ja/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/ja/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 </code></pre>
 <h3 id="robotstxt">robots.txt</h3>
 <pre><code>User-agent: *

@@ -2648,10 +2648,14 @@
 <h2 id="aiagenticai">AI/Agentic特有リスクの例（なぜAI専用の基準が必要か）</h2>
 <p>従来のセキュリティ統制（例：ISMS）だけでは、LLM/エージェント特有の失敗モードや、自律エージェントの権限行使による逸脱（例：意図しないツール実行、再帰的ループ）を、<strong>監査で説明可能な形</strong>に落とし込むのが困難です。
 AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類し、Evidence要件・是正プロセスへ接続することを目的とします。</p>
-<p>（参考：差別化の例。以下のコードは説明用の仮例であり、正式コード体系は本標準の定義に従います）
-- AG-01 Runaway Loop / Recursion（自律反復による逸脱）
-- AG-02 Unauthorized Tool Use（意図しないツール実行・confused deputy化）
-- AG-03 Privilege Boundary Drift（権限境界の曖昧化・拡大）</p>
+<p>!!! warning "参照例にすぎません — 規範コードではありません"
+    以下のコードは<strong>説明用の仮例</strong>であり、規範的なAIMOコード体系の一部<strong>ではありません</strong>。提出・運用には使用せず、<a href="../04-codes/">Codes</a>と<a href="../05-dictionary/">Dictionary</a>の規範的定義に従ってください。</p>
+<ul>
+<li><strong>AG-01</strong> Runaway Loop / Recursion（自律反復による逸脱）</li>
+<li><strong>AG-02</strong> Unauthorized Tool Use（意図しないツール実行・confused deputy化）</li>
+<li><strong>AG-03</strong> Privilege Boundary Drift（権限境界の曖昧化・拡大）</li>
+</ul>
+<p>AG-* を提出に使用しないでください。<a href="../04-codes/">Codes</a>と<a href="../05-dictionary/">Dictionary</a>の規範的次元・コードを使用してください。</p>
 <h2 id="_3">次元の概要</h2>
 <p>AIMOはAIユースケースを分類するために8つの次元を使用します。各次元には固有の2文字のプレフィックスがあります。</p>
 <table>

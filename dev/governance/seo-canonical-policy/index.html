@@ -2631,13 +2631,13 @@ site_url: https://standard.aimoaas.com/
 <tbody>
 <tr>
 <td>English (default)</td>
-<td><code>https://standard.aimoaas.com/{path}</code></td>
-<td><code>https://standard.aimoaas.com/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/{path}</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/</code></td>
 </tr>
 <tr>
 <td>Japanese</td>
-<td><code>https://standard.aimoaas.com/ja/{path}</code></td>
-<td><code>https://standard.aimoaas.com/ja/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/ja/{path}</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/ja/governance/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2738,7 +2738,7 @@ site_url: https://standard.aimoaas.com/
 <tbody>
 <tr>
 <td>Current stable specification</td>
-<td><code>https://standard.aimoaas.com/latest/standard/current/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/standard/current/</code></td>
 </tr>
 <tr>
 <td>Specific version (for audit)</td>
@@ -2746,11 +2746,11 @@ site_url: https://standard.aimoaas.com/
 </tr>
 <tr>
 <td>Governance &amp; policies</td>
-<td><code>https://standard.aimoaas.com/latest/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/</code></td>
 </tr>
 <tr>
 <td>Trust Package</td>
-<td><code>https://standard.aimoaas.com/latest/governance/trust-package/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2769,12 +2769,12 @@ site_url: https://standard.aimoaas.com/
 <h2 id="technical-implementation">Technical Implementation</h2>
 <h3 id="generated-html-example">Generated HTML Example</h3>
 <p>Every generated HTML page includes canonical and hreflang tags in the <code>&lt;head&gt;</code>. The canonical URL depends on whether the page is served under <code>/latest/</code> or a versioned path.</p>
-<p><strong>When rendered under <code>/latest/</code></strong> (alias redirect), the canonical may point at the resolved version or at <code>/latest/</code> per deployment choice:</p>
-<pre><code class="language-html">&lt;!-- Example: latest alias --&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/latest/ja/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
+<p><strong>When rendered under a versioned path</strong> (e.g. <code>/0.1.2/</code>), the canonical MUST point at the versioned URL. Example with placeholder <code>{X.Y.Z}</code>:</p>
+<pre><code class="language-html">&lt;!-- Example: versioned canonical (e.g. /0.1.2/) --&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/ja/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 </code></pre>
 <p><strong>When rendered under a versioned path</strong> (e.g. <code>/0.1.2/</code>), the canonical MUST include the versioned prefix so that audit citations point at the frozen snapshot. When rendered under <code>/{X.Y.Z}/</code>, canonical must include the versioned prefix.</p>
 <pre><code class="language-html">&lt;!-- Example: versioned snapshot (e.g. /0.1.2/) --&gt;
@@ -2838,7 +2838,7 @@ site/governance/index.html:&lt;link rel=&quot;canonical&quot; href=&quot;https:/
 <h2 id="related-documentation">Related Documentation</h2>
 <ul>
 <li><a href="../trust-package/">Trust Package</a> — Auditor-ready materials</li>
-<li><a href="../releases/">Releases</a> — Version history and changelog</li>
+<li><a href="../../releases/">Releases</a> — Version history and changelog</li>
 <li><a href="https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md">VERSIONING.md</a> — Version policy</li>
 </ul>
 
