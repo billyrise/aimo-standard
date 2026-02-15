@@ -1,99 +1,99 @@
 ---
-description: Evidence Bundle Coverage Map template (v0.1). Informative one-page summary for auditors — scope, evidence types, controls mapping, exclusions, integrity proof.
+description: 증거 번들 커버리지 맵 템플릿(v0.1). 감사자용 1페이지 요약 — 범위, 증거 유형, 통제 매핑, 제외, 무결성 증명.
 ---
 <!-- aimo:translation_status=translated -->
 
-# Evidence Bundle Coverage Map (Template)
+# 증거 번들 커버리지 맵(템플릿)
 
-!!! info "Informative — recommended practice"
-    This page defines a **recommended practice template** for a one-page Evidence Bundle Coverage Map. It is **not** a normative requirement of the standard. Use it to document what a bundle covers and does not cover for auditor handoff. References (e.g. to frameworks) are stable; adoption is at the implementer's discretion.
+!!! info "참고 — 권장 사례"
+    이 페이지는 1페이지 증거 번들 커버리지 맵의 **권장 사례 템플릿**을 정의합니다. 표준의 **규범적 요건이 아닙니다**. 번들이 무엇을 포함·미포함하는지 감사 인수인계용으로 문서화할 때 사용합니다. 프레임워크 등에 대한 참조는 안정적이며, 채택은 구현자 재량입니다.
 
 ---
 
-## 1. Scope
+## 1. 범위
 
-| Item | Description |
+| 항목 | 설명 |
 |------|--------------|
-| **Scope reference** | `scope_ref` from the bundle manifest (e.g. `SC-001`). Links this bundle to the declared scope. |
-| **Bundle ID** | `bundle_id` (UUID) — unique identifier for this bundle. |
-| **Bundle version** | `bundle_version` (SemVer) — version of the bundle. |
-| **Period / snapshot** | Optional: time period or snapshot date this bundle represents (e.g. 2026-Q1, as-of 2026-02-03). |
+| **범위 참조** | 번들 manifest의 `scope_ref`(예: `SC-001`). 이 번들을 선언된 범위에 연결합니다. |
+| **Bundle ID** | `bundle_id`(UUID) — 이 번들의 고유 식별자. |
+| **Bundle 버전** | `bundle_version`(SemVer) — 번들 버전. |
+| **기간 / 스냅샷** | 선택: 이 번들이 나타내는 기간 또는 스냅샷 일자(예: 2026-Q1, as-of 2026-02-03). |
 
 ---
 
-## 2. Evidence types (EV / objects vs payloads)
+## 2. 증거 유형(EV / objects vs payloads)
 
-| Category | Contents | v0.1 minimal example |
+| 카테고리 | 내용 | v0.1 최소 예 |
 |----------|----------|------------------------|
-| **object_index** | Enumerated objects (metadata, indexes). Each entry: `id`, `type`, `path`, `sha256`. | e.g. `objects/index.json` (index type). |
-| **payload_index** | Payload files (root EV JSON, Evidence Pack files). Each entry: `logical_id`, `path`, `sha256`, `mime`, `size`. | e.g. `payloads/root.json` (root AIMO EV JSON). |
-| **EV types** | Evidence records (in root or linked payloads) — request, review, exception, renewal, change log. | Aligned with [Evidence Pack Template](../../standard/current/06-ev-template/) and [Minimum Evidence Requirements](../minimum-evidence/). |
+| **object_index** | 열거 객체(메타데이터, 인덱스). 각 항목: `id`, `type`, `path`, `sha256`. | 예: `objects/index.json`(index 유형). |
+| **payload_index** | 페이로드 파일(루트 EV JSON, Evidence Pack 파일). 각 항목: `logical_id`, `path`, `sha256`, `mime`, `size`. | 예: `payloads/root.json`(루트 AIMO EV JSON). |
+| **EV 유형** | 증거 기록(루트 또는 링크된 페이로드 내) — request, review, exception, renewal, change log. | [Evidence Pack 템플릿](../../standard/current/06-ev-template/) 및 [최소 증거 요구사항](../minimum-evidence/)에 맞춤. |
 
-*Implementers may extend object_index and payload_index; paths MUST remain within the bundle root and satisfy the [Evidence Bundle root structure (v0.1)](../../standard/current/09-evidence-bundle-structure/).*
+*구현자는 object_index와 payload_index를 확장할 수 있음. 경로는 번들 루트 내에 두고 [Evidence Bundle 루트 구조(v0.1)](../../standard/current/09-evidence-bundle-structure/)를 충족해야 함.*
 
 ---
 
-## 3. Controls mapping (reference only)
+## 3. 통제 매핑(참고만)
 
-Mapping to external frameworks is **for reference only**; the standard does not mandate compliance with any specific regulation.
+외부 프레임워크에 대한 매핑은 **참고용**이며, 표준은 특정 규제 준수를 강제하지 않습니다.
 
-| Framework | Use in this bundle | Reference |
+| 프레임워크 | 이 번들에서의 사용 | 참조 |
 |-----------|--------------------|-----------|
-| **ISO/IEC 42001** | Optional: document which AI MS themes this bundle supports. | [Coverage Map → ISO 42001](../../coverage-map/iso-42001/) |
-| **EU AI Act** | Optional: high-level documentation/record-keeping alignment. | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/) |
-| **NIST AI RMF** | Optional: Govern, Map, Measure, Manage mapping. | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/) |
-| **EU GPAI CoP** | Optional: Model Documentation Form; attach in External Forms, reference by logical_id. | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/); profile `eu_gp_ai_cop.json` |
-| **NIST AI RMF / GenAI** | Optional: GenAI profile (AI 600-1) artifacts. | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/); profile `nist_ai_600_1_genai.json` |
-| **UK ATRS** | Optional: ATRS record, procurement evaluation. | [Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/); profile `uk_atrs_procurement.json` |
-| **JP Gov GenAI procurement** | Optional: JP procurement checklist, AI Business Guidelines. | [Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/); profile `jp_gov_genai_procurement.json` |
-| **ISMS (27001/27002)** | Optional: change management, access, logging, integrity. | [Coverage Map → ISMS](../../coverage-map/isms/) |
+| **ISO/IEC 42001** | 선택: 이 번들이 지원하는 AI MS 주제 문서화. | [Coverage Map → ISO 42001](../../coverage-map/iso-42001/) |
+| **EU AI Act** | 선택: 고수준 문서/기록 유지 정렬. | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/) |
+| **NIST AI RMF** | 선택: Govern, Map, Measure, Manage 매핑. | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/) |
+| **EU GPAI CoP** | 선택: Model Documentation Form; External Forms에 첨부하고 logical_id로 참조. | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/); 프로파일 `eu_gp_ai_cop.json` |
+| **NIST AI RMF / GenAI** | 선택: GenAI 프로파일(AI 600-1) 산출물. | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/); 프로파일 `nist_ai_600_1_genai.json` |
+| **UK ATRS** | 선택: ATRS 기록, 조달 평가. | [Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/); 프로파일 `uk_atrs_procurement.json` |
+| **JP Gov GenAI 조달** | 선택: JP 조달 체크리스트, AI Business Guidelines. | [Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/); 프로파일 `jp_gov_genai_procurement.json` |
+| **ISMS (27001/27002)** | 선택: 변경 관리, 접근, 로깅, 무결성. | [Coverage Map → ISMS](../../coverage-map/isms/) |
 
-*Fill in “Use in this bundle” per submission; the standard does not require any specific control coverage.*
+*「이 번들에서의 사용」은 제출별로 기입. 표준은 특정 통제 적용 범위를 요구하지 않음.*
 
-### External Forms and manifest reference
+### External Forms 및 manifest 참조
 
-**External Forms** (official templates/checklists attached as-is) should be listed in the bundle **payload_index** with a stable `logical_id`, `path`, `sha256`, `mime`, and `size`. Auditors can then trace from the manifest to the file and verify the hash. See [EV Template — External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) and [EV Template — Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index).
+**External Forms**(공식 템플릿/체크리스트를 그대로 첨부)는 번들의 **payload_index**에 안정적인 `logical_id`, `path`, `sha256`, `mime`, `size`로 나열해야 합니다. 감사자는 manifest에서 파일을 추적하고 해시를 검증할 수 있습니다. [EV Template — External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) 및 [EV Template — Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index) 참조.
 
 ---
 
-## 4. Exclusions / assumptions
+## 4. 제외 / 가정
 
-| Area | What this bundle does **not** cover (example rows — adjust per submission) |
+| 영역 | 이 번들이 **다루지 않는** 내용(예시 행 — 제출별 조정) |
 |------|-------------------------------------------------------------------------------|
-| **Exclusions** | e.g. Systems or use cases out of scope; third-party components not evidenced; time period outside this bundle. |
-| **Assumptions** | e.g. Dictionary/taxonomy version; validator/schema version used; custody and retention are implementation-defined. |
-| **Limitations** | e.g. Signature verification is out of scope in v0.1; no legal interpretation of regulations. |
+| **제외** | 예: 범위 외 시스템/사용 사례, 증거 없는 제3자 구성요소, 이 번들 기간 외. |
+| **가정** | 예: Dictionary/분류체계 버전, 사용한 validator/스키마 버전, 보관·보존은 구현 정의. |
+| **한계** | 예: v0.1에서 서명 검증은 범위 외; 규제에 대한 법적 해석 없음. |
 
-*Replace placeholder text with submission-specific exclusions and assumptions.*
+*플레이스홀더를 제출별 제외·가정으로 교체.*
 
 ---
 
-## 5. Integrity proof summary (v0.1)
+## 5. 무결성 증명 요약(v0.1)
 
-| Element | What is provided (v0.1 normative) |
+| 요소 | 제공 내용(v0.1 규범) |
 |---------|----------------------------------|
-| **manifest.json** | Present and schema-valid; includes `object_index`, `payload_index`, `hash_chain`, `signing`. |
-| **sha256** | Every file in `object_index` and `payload_index` has a declared 64-char lowercase hex sha256; validator checks content match. |
-| **Index existence** | All listed paths exist under the bundle root; no path traversal (`../` or leading `/`). |
-| **Signature existence** | At least one signature file in `signatures/`; manifest references it via `signing.signatures[]` with `path` and `targets` (v0.1 MUST include `manifest.json` in targets). Cryptographic verification is out of scope for v0.1. |
-| **Hash chain** | `hash_chain` in manifest: `algorithm`, `head` (64-char hex), `path` (file under `hashes/`), `covers` (v0.1 MUST include `manifest.json` and `objects/index.json`). File at `hash_chain.path` exists. |
+| **manifest.json** | 존재하고 스키마 유효; `object_index`, `payload_index`, `hash_chain`, `signing` 포함. |
+| **sha256** | `object_index`와 `payload_index`의 모든 파일에 64자 소문자 hex sha256 선언; Validator가 내용 일치 검사. |
+| **인덱스 존재** | 나열된 경로는 번들 루트 아래에 존재; 경로 순회(`../` 또는 선행 `/`) 없음. |
+| **서명 존재** | `signatures/`에 최소 1개 서명 파일; manifest는 `signing.signatures[]`로 `path`와 `targets` 참조(v0.1에서 targets에 `manifest.json` MUST 포함). v0.1에서 암호 검증은 범위 외. |
+| **Hash chain** | manifest의 `hash_chain`: `algorithm`, `head`(64자 hex), `path`(`hashes/` 하위 파일), `covers`(v0.1에서 `manifest.json`과 `objects/index.json` MUST 포함). `hash_chain.path` 파일 존재. |
 
-*This table summarizes the integrity guarantees that the [Validator](../../validator/) checks for v0.1 bundles. Custody (storage, access control, retention) is implementation-defined.*
+*이 표는 [Validator](../../validator/)가 v0.1 번들에 대해 검사하는 무결성 보장 요약. Custody(저장, 접근 통제, 보존)는 구현 정의.*
 
 ---
 
-## Coverage Map (YAML) vs Profiles (JSON)
+## Coverage Map(YAML) vs 프로파일(JSON)
 
-| Artifact | Status | Purpose |
+| 산출물 | 상태 | 목적 |
 |----------|--------|---------|
-| **Coverage Map YAML** (`coverage_map/coverage_map.yaml` or similar) | **Informative** | High-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements. |
-| **Profile JSONs** (`coverage_map/profiles/*.json`) | **Normative** | Conversion specifications validated against `schemas/jsonschema/aimo-profile.schema.json`. They define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). The [Validator](../../validator/) runs `--validate-profiles` to ensure all official profile JSONs conform to the schema (profile_id PR-* pattern, target enum, target_version, mappings). |
+| **Coverage Map YAML**(`coverage_map/coverage_map.yaml` 등) | **참고** | AIMO 증거/산출물과 외부 프레임워크(ISO 42001, NIST AI RMF, EU AI Act 등) 간 고수준 매핑 주제, 설명 가능성용. 규범적 검증 요건을 부과하지 않음. |
+| **Profile JSON**(`coverage_map/profiles/*.json`) | **규범** | `schemas/jsonschema/aimo-profile.schema.json`로 검증하는 변환 사양. 기계 가독 매핑(어떤 AIMO 객체가 어떤 프레임워크 조항에 매핑되는지) 정의. [Validator](../../validator/)는 `--validate-profiles`로 모든 공식 profile JSON이 스키마(profile_id PR-* 패턴, target 열거, target_version, mappings)를 준수하는지 확인. |
 
-### Official profiles (validator-validated)
+### 공식 프로파일(Validator 검증)
 
-Profile JSONs live in `coverage_map/profiles/` and are validated by the validator (`--validate-profiles`). Naming: file name `<target>_<purpose>.json`; each includes `target_version`.
+Profile JSON은 `coverage_map/profiles/`에 있으며 Validator(`--validate-profiles`)로 검증됩니다. 명명: 파일명 `<target>_<purpose>.json`; 각 파일에 `target_version` 포함.
 
-| File | profile_id | target | target_version |
+| 파일 | profile_id | target | target_version |
 |------|------------|--------|----------------|
 | `iso42001.json` | PR-ISO42001-v0.1 | ISO_42001 | 1.0 |
 | `iso_42001_readiness.json` | PR-ISO42001-READINESS-v0.1 | ISO_42001 | 2023 |
@@ -105,18 +105,18 @@ Profile JSONs live in `coverage_map/profiles/` and are validated by the validato
 | `uk_atrs_procurement.json` | PR-UK-ATRS-v0.1 | UK_ATRS | current |
 | `jp_gov_genai_procurement.json` | PR-JP-GOV-GENAI-PROCUREMENT-v0.1 | JP_GOV_GENAI_PROCUREMENT | current |
 
-### Profile update policy
+### 프로파일 업데이트 정책
 
-- **EU AI Act refs (0.1.2)**: Article references for the EU AI Act in the coverage map and docs were aligned to Regulation (EU) 2024/1689 for consistent evidence readiness; informative only, not legal advice.
-- **ISO 42001 / NIST AI RMF**: New versions of the target framework may be added as new profile files or new `target_version` values in a future standard version; v0.1 profiles remain frozen for the v0.1 release.
-- **EU AI Act Annex IV**: Annex IV and related articles may be updated by regulators; profile mappings may be updated via **PATCH** (e.g. 0.1.x) to follow wording or clause changes while keeping the same profile_id for continuity. Implementers should align with the version referenced in the profile’s `target_version` and release notes.
+- **EU AI Act 참조(0.1.2)**: 증거 준비 일관성을 위해 Coverage Map 및 문서 내 EU AI Act 조문 참조를 Regulation (EU) 2024/1689에 맞춤. 참고이며 법적 해석 아님.
+- **ISO 42001 / NIST AI RMF**: 대상 프레임워크 신규 버전은 향후 표준 버전에서 새 프로파일 파일 또는 새 `target_version`으로 추가 가능. v0.1 프로파일은 v0.1 릴리스에서 고정.
+- **EU AI Act Annex IV**: Annex IV 및 관련 조문은 규제 기관에 의해 갱신될 수 있음. 프로파일 매핑은 **PATCH**(예: 0.1.x)로 문구/조항 변경을 반영하여 동일 profile_id로 연속 유지. 구현자는 프로파일의 `target_version` 및 릴리스 노트에서 참조하는 버전에 맞출 것.
 
 ---
 
-## See also
+## 참고
 
-- [Evidence Bundle (artifact overview)](../evidence-bundle/)
-- [Evidence Bundle root structure (v0.1)](../../standard/current/09-evidence-bundle-structure/)
-- [Minimum Evidence Requirements](../minimum-evidence/)
-- [Coverage Map (framework mappings)](../../coverage-map/)
+- [증거 번들(산출물 개요)](../evidence-bundle/)
+- [Evidence Bundle 루트 구조(v0.1)](../../standard/current/09-evidence-bundle-structure/)
+- [최소 증거 요구사항](../minimum-evidence/)
+- [Coverage Map(프레임워크 매핑)](../../coverage-map/)
 - [Validator](../../validator/)

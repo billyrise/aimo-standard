@@ -1,129 +1,127 @@
 ---
-description: AIMO minimum evidence requirements. MUST-level checklist by lifecycle (request, review, approval, change, renewal) for AI governance evidence readiness.
+description: AIMO 최소 증거 요구사항. AI 거버넌스 증거 준비를 위한 생명주기별(요청·검토·승인·변경·갱신) MUST 수준 체크리스트.
 ---
 <!-- aimo:translation_status=translated -->
 
-# Minimum Evidence Requirements
+# 최소 증거 요구사항(Minimum Evidence Requirements)
 
-This page is the **Minimum Evidence Requirements** checklist for auditors and implementers. It defines the minimum evidence requirements as a MUST-level checklist, grouped by lifecycle. It supports explainability and evidence readiness; it does not provide legal advice or guarantee compliance.
+이 페이지는 감사자·구현자를 위한 **최소 증거 요구사항** 체크리스트입니다. 생명주기별로 그룹화한 MUST 수준의 최소 증거 요구사항을 정의하며, 설명 가능성과 증거 준비를 지원합니다. 법률 자문이나 적합성 보장을 제공하지 않습니다.
 
-Use this page together with [Evidence Bundle](../evidence-bundle/) and the [Validator](../../standard/current/07-validator/) when preparing or reviewing submissions.
+제출물 준비·검토 시 [Evidence Bundle](../evidence-bundle/) 및 [Validator](../../standard/current/07-validator/)와 함께 사용하세요.
 
-## 1) Request
+## 1) 요청(Request)
 
-- **MUST fields**: identifier, timestamp(s), actor/role, scope (what is requested), rationale (why).
-- **MUST linkages**: request id referenced by review and by EV items that record the use.
-- **What it proves**: that use was requested and scoped before approval and use.
+- **MUST 필드**: 식별자, 타임스탬프, 행위자/역할, 범위(요청 내용), 근거(rationale).
+- **MUST 연계**: 검토 및 사용을 기록하는 EV 항목에서 요청 id를 참조할 수 있어야 함.
+- **증명 내용**: 사용이 승인·실행 전에 요청되었고 범위가 정해졌음.
 
-## 2) Review / Approval
+## 2) 검토 / 승인(Review / Approval)
 
-- **MUST fields**: identifier, timestamp(s), actor/role, decision (approved/rejected/conditional), scope, rationale, reference to request.
-- **MUST linkages**: review id referenced by EV and by any exception or renewal that follows.
-- **What it proves**: that a defined review and approval occurred before use (or exception).
+- **MUST 필드**: 식별자, 타임스탬프, 행위자/역할, 결정(승인/거부/조건부), 범위, 근거, 요청에 대한 참조.
+- **MUST 연계**: EV 및 후속 예외·갱신에서 검토 id를 참조할 수 있어야 함.
+- **증명 내용**: 사용(또는 예외) 전에 정의된 검토·승인이 이루어졌음.
 
-## 3) Exception
+## 3) 예외(Exception)
 
-- **MUST fields**: identifier, timestamp(s), scope, expiry (or deadline), compensating controls, rationale, reference to review/request.
-- **MUST linkages**: exception → compensating controls; exception → expiry; exception → renewal (when re-evaluation is due).
-- **What it proves**: that deviations are time-bound, have compensating controls, and are linked to renewal.
+- **MUST 필드**: 식별자, 타임스탬프, 범위, 만료(또는 기한), 보완 통제, 근거, 검토/요청에 대한 참조.
+- **MUST 연계**: 예외 → 보완 통제; 예외 → 만료; 예외 → 갱신(재평가 예정일).
+- **증명 내용**: 이탈이 기한이 있으며 보완 통제가 있고 갱신과 연결됨.
 
-## 4) Renewal / Re-evaluation
+## 4) 갱신 / 재평가(Renewal / Re-evaluation)
 
-- **MUST fields**: identifier, timestamp(s), actor/role, decision (renewed/revoked/conditional), references to prior exception/request/review/EV.
-- **MUST linkages**: renewal references the exception or approval being renewed; EV items can reference renewal id.
-- **What it proves**: that exceptions and approvals are re-evaluated and renewed or revoked on a defined basis.
+- **MUST 필드**: 식별자, 타임스탬프, 행위자/역할, 결정(갱신/철회/조건부), 이전 예외/요청/검토/EV에 대한 참조.
+- **MUST 연계**: 갱신은 갱신 대상 예외 또는 승인을 참조; EV 항목은 갱신 id를 참조 가능.
+- **증명 내용**: 예외·승인이 정의된 기준으로 재평가되어 갱신 또는 철회됨.
 
-## 5) Change Log
+## 5) 변경 로그(Change Log)
 
-- **MUST fields**: identifier, timestamp, actor/role, change description, references (e.g. to EV, request, review, exception, renewal affected).
-- **MUST linkages**: change log entries reference the artifacts they modify or that trigger the change.
-- **What it proves**: that changes to the bundle or its contents are recorded and traceable.
+- **MUST 필드**: 식별자, 타임스탬프, 행위자/역할, 변경 설명, 참조(영향받는 EV·요청·검토·예외·갱신 등).
+- **MUST 연계**: 변경 로그 항목은 수정하거나 촉발한 산출물을 참조.
+- **증명 내용**: 번들 또는 그 내용의 변경이 기록되고 추적 가능함.
 
-## 6) Integrity & Access
+## 6) 무결성 및 접근(Integrity & Access)
 
-Evidence integrity and access control are essential for audit reliance. While AIMO does not prescribe specific technical controls, adopters should document how these expectations are met.
+증거 무결성과 접근 통제는 감사 신뢰에 필수입니다. AIMO는 구체적 기술 통제를 규정하지 않으며, 채택자는 이 기대를 어떻게 충족하는지 문서화해야 합니다.
 
-### Access control guidance
+### 접근 통제 가이드
 
-| Aspect | Guidance |
+| 항목 | 가이드 |
 | --- | --- |
-| **Role-based access** | Define roles (e.g., evidence creator, reviewer, auditor, admin) and document who can create, read, update, or delete evidence. |
-| **Least privilege** | Grant minimum necessary access; restrict write access to authorized personnel. |
-| **Access logging** | Log access events (who, when, what) for audit trail purposes. |
-| **Separation of duties** | Where practical, separate evidence creation from approval roles. |
+| **역할 기반 접근** | 역할(증거 작성자, 검토자, 감사자, 관리자 등)을 정의하고 누가 증거를 생성·읽기·갱신·삭제할 수 있는지 문서화. |
+| **최소 권한** | 필요한 최소 접근만 부여; 쓰기는 권한 있는 담당자로 제한. |
+| **접근 로깅** | 감사 추적을 위해 접근 이벤트(누가, 언제, 무엇을) 기록. |
+| **직무 분리** | 가능한 범위에서 증거 작성과 승인 역할 분리. |
 
-### Retention guidance
+### 보존 가이드
 
-| Aspect | Guidance |
+| 항목 | 가이드 |
 | --- | --- |
-| **Retention period** | Define and document retention periods based on regulatory requirements and organizational policy (e.g., 5-7 years for financial audits). |
-| **Retention schedule** | Maintain a schedule showing what evidence is retained, for how long, and when it can be disposed. |
-| **Legal hold** | Support legal hold processes that suspend normal retention/deletion for litigation or investigation. |
+| **보존 기간** | 규제 요건과 조직 정책(예: 재무 감사 5–7년)에 따라 보존 기간 정의·문서화. |
+| **보존 일정** | 어떤 증거를 얼마나 보존하고 언제 폐기하는지 보여주는 일정 유지. |
+| **소송 홀드** | 소송·조사 시 일반 보존/삭제를 중단하는 절차 지원. |
 
-### Immutability options
+### 불변성 옵션
 
-| Option | Description |
+| 옵션 | 설명 |
 | --- | --- |
-| **Cryptographic hashing** | Generate SHA-256 (or stronger) hashes for evidence files; store hashes separately for verification. |
-| **WORM storage** | Use Write-Once-Read-Many storage for evidence archives to prevent modification. |
-| **Append-only logs** | Use append-only audit logs for change tracking. |
-| **Digital signatures** | Sign evidence bundles to prove authorship and detect tampering. |
+| **암호화 해시** | 증거 파일에 SHA-256(이상) 해시 생성; 검증용으로 해시 별도 보관. |
+| **WORM 저장** | 증거 아카이브의 변경 방지를 위해 일회 기록 다회 읽기(WORM) 저장 사용. |
+| **추가 전용 로그** | 변경 추적을 위해 추가 전용 감사 로그 사용. |
+| **디지털 서명** | 증거 번들에 서명하여 작성자를 증명하고 변경 여부 검사. |
 
-### Audit trail expectations
+### 감사 추적 기대
 
-| Element | What to document |
+| 요소 | 문서화할 내용 |
 | --- | --- |
-| **Change log** | Record who changed what, when, and why (see Change Log lifecycle group). |
-| **Access log** | Record who accessed evidence, when, and for what purpose. |
-| **System logs** | Retain relevant system logs (authentication, authorization) that support evidence integrity claims. |
-| **Verification records** | Document periodic integrity verification (hash checks, audit reviews). |
+| **변경 로그** | 누가 무엇을 언제 왜 변경했는지 기록(Change Log 생명주기 그룹 참조). |
+| **접근 로그** | 누가 언제 어떤 목적으로 증거에 접근했는지 기록. |
+| **시스템 로그** | 증거 무결성 주장을 지지하는 관련 시스템 로그(인증·인가) 보존. |
+| **검증 기록** | 정기 무결성 검증(해시 대조, 감사 검토) 문서화. |
 
-### What it proves
+### 증명 내용
 
-- **Evidence is preserved**: integrity mechanisms (hashing, WORM, signatures) demonstrate that evidence has not been tampered with.
-- **Access is controlled**: access logs and role definitions show who had access and that least privilege was applied.
-- **Audit reliance is supported**: together, these elements give auditors confidence in the reliability of evidence.
+- **증거가 보존됨**: 해시·WORM·서명 등 무결성 수단으로 증거가 변경되지 않았음을 보임.
+- **접근이 통제됨**: 접근 로그와 역할 정의로 누가 접근했는지 및 최소 권한 적용을 보임.
+- **감사 신뢰 지원**: 위 요소로 감사인이 증거 신뢰성에 확신을 가질 수 있음.
 
-### Recommended operational profiles
+### 권장 운영 프로파일
 
-Choose a profile based on your risk tolerance and regulatory requirements. These are recommendations, not mandates.
+위험 허용도와 규제 요건에 따라 프로파일을 선택하세요. 권장이며 필수는 아닙니다.
 
-| Aspect | Lightweight | Standard | Strict |
+| 항목 | 경량 | 표준 | 엄격 |
 | --- | --- | --- | --- |
-| **Use case** | Internal pilots, low-risk AI | Production systems, moderate risk | Regulated industries, high-risk AI |
-| **Retention period** | 1-2 years | 5-7 years | 7-10+ years or regulatory minimum |
-| **Immutability** | SHA-256 hashes | SHA-256 + append-only logs | WORM storage + digital signatures |
-| **Access control** | Role-based (basic) | Role-based + access logging | Separation of duties + full audit trail |
-| **Audit trail** | Change log only | Change log + access log | Full system logs + periodic verification |
-| **Verification frequency** | On-demand | Quarterly | Monthly or continuous |
-| **Validator usage** | Optional | Required before submission | Required + automated CI checks |
+| **용도** | 내부 파일럿, 저위험 AI | 프로덕션 시스템, 중간 위험 | 규제 산업, 고위험 AI |
+| **보존 기간** | 1–2년 | 5–7년 | 7–10년 이상 또는 규제 최소 |
+| **불변성** | SHA-256 해시 | SHA-256 + 추가 전용 로그 | WORM 저장 + 디지털 서명 |
+| **접근 통제** | 역할 기반(기본) | 역할 기반 + 접근 로깅 | 직무 분리 + 완전 감사 추적 |
+| **감사 추적** | 변경 로그만 | 변경 로그 + 접근 로그 | 전체 시스템 로그 + 정기 검증 |
+| **검증 빈도** | 수요 시 | 분기 | 월별 또는 연속 |
+| **Validator 사용** | 선택 | 제출 전 필수 | 필수 + CI 자동 검사 |
 
-!!! note "Retention periods are examples"
-    Retention periods shown are illustrative. Organizations must determine retention based on applicable laws, contracts, industry requirements, and internal policies.
+!!! note "보존 기간은 예시"
+    표시된 보존 기간은 예시입니다. 조직은 적용 법률·계약·산업 요건·내부 정책에 따라 보존을 결정해야 합니다.
 
-!!! tip "How to choose"
-    - **Lightweight**: Suitable for experimentation, internal tools, or low-stakes applications where formal audits are unlikely.
-    - **Standard**: Recommended for most production deployments where audits may occur but are not continuous.
-    - **Strict**: Required for regulated industries (finance, healthcare, government) or AI systems with significant risk impact.
+!!! tip "선택 방법"
+    - **경량**: 실험·내부 도구·정식 감사 가능성이 낮은 저위험 용도에 적합.
+    - **표준**: 감사가 있을 수 있으나 지속적이지 않은 대부분의 프로덕션 배포에 권장.
+    - **엄격**: 규제 산업(금융·의료·정부) 또는 위험 영향이 큰 AI 시스템에 필요.
 
-## Important note
+## 중요 안내
 
-This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.
+이 최소 집합은 설명 가능성과 증거 준비를 지원하며, 그 자체로 법률 자문이나 적합성 보장을 제공하지 않습니다.
 
-See [Evidence Bundle](../evidence-bundle/) for bundle structure and TOC; see [EV Template](../../standard/current/06-ev-template/) and schemas for field-level alignment.
+번들 구조와 TOC는 [Evidence Bundle](../evidence-bundle/), 필드 수준 정렬은 [EV Template](../../standard/current/06-ev-template/) 및 스키마를 참조. Shadow AI 발견·에이전트 활동 증거의 정규화 로그 형식은 [Log Schemas](../log-schemas/) 참조.
 
-See also: [Log Schemas](../log-schemas/) — normalized log formats for Shadow AI discovery and agent activity evidence.
+## 규제 오버레이(참고)
 
-## Regulatory overlays (informative)
+다음 **오버레이**는 특정 규제·조달 맥락에서 흔히 요구되는 추가 증거를 설명하는 **참고**입니다. EV Template의 [External Forms 섹션](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is)에 공식 템플릿·체크리스트를 그대로 첨부하고 manifest에서 logical_id로 참조하세요.
 
-The following **overlays** describe additional evidence often expected in specific regulatory or procurement contexts. They are **informative**; attach official templates/checklists as-is in the [External Forms section](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) of the EV Template and reference them by logical_id in the manifest.
-
-| Overlay | Additional artifacts typically expected | Where to attach | Profile (optional) |
+| 오버레이 | 통상 기대되는 추가 산출물 | 첨부 위치 | 프로파일(선택) |
 | --- | --- | --- | --- |
-| **EU High-Risk** | Risk management, technical documentation (Annex IV), logging, human oversight, transparency (Art 50), incident reporting | payload_index; Evidence Bundle + Annex IV profile | `eu_ai_act_annex_iv.json`, `eu_ai_act_high_risk.json` |
-| **EU GPAI CoP** | Model Documentation Form (transparency, copyright, safety & security) | External Forms; logical_id e.g. GPAI_MODEL_DOC_FORM | `eu_gp_ai_cop.json` |
-| **NIST GenAI** | GenAI profile artifacts (model adaptation, evaluation, monitoring) | payload_index; change_log; External Forms / GenAI records | `nist_ai_600_1_genai.json` |
-| **UK ATRS / procurement** | ATRS transparency record; accountability owner; procurement evaluation notes | External Forms; Summary, review | `uk_atrs_procurement.json` |
-| **JP procurement** | Government GenAI procurement checklist; AI Business Guidelines checklist | External Forms; logical_id e.g. JP_PROCUREMENT_CHECKLIST | `jp_gov_genai_procurement.json` |
+| **EU 고위험** | 위험 관리, 기술 문서(Annex IV), 로깅, 인간 감독, 투명성(Art 50), 사고 보고 | payload_index; Evidence Bundle + Annex IV 프로파일 | `eu_ai_act_annex_iv.json`, `eu_ai_act_high_risk.json` |
+| **EU GPAI CoP** | Model Documentation Form(투명성, 저작권, 안전·보안) | External Forms; logical_id 예: GPAI_MODEL_DOC_FORM | `eu_gp_ai_cop.json` |
+| **NIST GenAI** | GenAI 프로파일 산출물(모델 적응, 평가, 모니터링) | payload_index; change_log; External Forms / GenAI 기록 | `nist_ai_600_1_genai.json` |
+| **UK ATRS / 조달** | ATRS 투명성 기록, 책임 소유자, 조달 평가 메모 | External Forms; Summary, review | `uk_atrs_procurement.json` |
+| **JP 조달** | 정부 GenAI 조달 체크리스트, AI 비즈니스 가이드라인 체크리스트 | External Forms; logical_id 예: JP_PROCUREMENT_CHECKLIST | `jp_gov_genai_procurement.json` |
 
-Profile file names follow the pattern `coverage_map/profiles/<target>_<purpose>.json`; each includes `target_version`. See [Coverage Map — Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/) for UK and Japan; [EU AI Act](../../coverage-map/eu-ai-act/) and [NIST AI RMF](../../coverage-map/nist-ai-rmf/) for EU and NIST.
+프로파일 파일명은 `coverage_map/profiles/<target>_<purpose>.json` 형식이며, 각 파일에 `target_version`이 포함됩니다. 영국·일본은 [Coverage Map — Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/), EU·NIST는 [EU AI Act](../../coverage-map/eu-ai-act/) 및 [NIST AI RMF](../../coverage-map/nist-ai-rmf/) 참조.

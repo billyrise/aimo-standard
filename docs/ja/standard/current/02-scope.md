@@ -1,22 +1,22 @@
 ---
-description: Scope of AIMO Standard. Defines what the standard covers including AI classification, evidence requirements, and boundaries for enterprise governance.
+description: AIMO Standard のスコープ。AI 分類、証跡要件、企業ガバナンスの境界を含む標準の対象範囲を定義。
 ---
 <!-- aimo:translation_status=translated -->
 
-# Scope
+# スコープ（Scope）
 
-This standard specifies artifacts and validation rules to enable consistent analysis and reporting.
+本標準は、一貫した分析と報告を可能にするアーティファクトと検証ルールを規定します。
 
-Out of scope:
-- proprietary inference logic
-- vendor-specific scoring/weighting implementations
+スコープ外：
+- 独自の推論ロジック
+- ベンダー固有のスコアリング／重み付けの実装
 
-## Scope alignment with Management System standards (PDCA)
+## マネジメントシステム標準（PDCA）とのスコープ整合
 
-AIMO adds an **AI-specific taxonomy and evidence artifacts** that help operationalize management-system controls (Plan–Do–Check–Act) and make outputs auditable. It can be used **alongside** ISO/IEC 42001 and other management-system standards; it does not replace their texts. Coverage Map and profiles provide informative mappings only — adopters must verify against the authoritative framework.
+AIMO は、マネジメントシステムのコントロール（Plan–Do–Check–Act）の運用化と成果物の監査可能性を支援する**AI 固有のタクソノミーと証跡アーティファクト**を追加します。ISO/IEC 42001 や他のマネジメントシステム標準と**併用**でき、それらの本文に取って代わるものではありません。Coverage Map とプロファイルは参考用の対応のみを提供し、採用者は権威あるフレームワークに照らして確認する必要があります。
 
-**Adopter responsibilities**
+**採用者の責任**
 
-- Verify scope and applicability against the relevant management-system or regulatory text.
-- Maintain evidence and run the validator as part of audit preparation; certification decisions remain with accredited certification bodies.
-- See [Responsibility Boundary](../../governance/responsibility-boundary/) for what AIMO does and does not provide.
+- 関連するマネジメントシステムまたは規制の本文に照らしてスコープと適用性を確認すること。
+- 証跡を維持し、監査準備の一環として Validator を実行すること。認証の判断は認定認証機関が行います。
+- AIMO が提供するものとしないものについては [Responsibility Boundary](../../governance/responsibility-boundary/) を参照してください。

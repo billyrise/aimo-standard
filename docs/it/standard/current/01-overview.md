@@ -1,49 +1,49 @@
 ---
-description: Overview of AIMO Standard. Defines shared taxonomy, code system, dictionary, evidence templates, and validator checks for AI governance audits.
+description: Panoramica di AIMO Standard. Definisce tassonomia condivisa, sistema di codici, dizionario, modelli di evidenza e controlli del Validator per audit di governance IA.
 ---
 <!-- aimo:translation_status=translated -->
 
-# Overview
+# Panoramica（Overview）
 
-**AIMO** stands for **AI Management Office**. AIMO Standard defines:
-- a shared taxonomy
-- a code system
-- an initial dictionary
-- an EV template
-- validator checks (spec + minimal reference implementation)
+**AIMO** sta per **AI Management Office**. AIMO Standard definisce:
+- una tassonomia condivisa
+- un sistema di codici
+- un dizionario iniziale
+- un modello EV
+- controlli del Validator (specifica + implementazione di riferimento minima)
 
-This repository publishes:
-- human-readable spec (HTML)
-- machine-readable artifacts (schemas/templates/examples)
-- official PDF releases
+Questo repository pubblica:
+- specifica leggibile (HTML)
+- artefatti leggibili da macchina (schemi/modelli/esempi)
+- release PDF ufficiali
 
-## Positioning: Companion to ISO/IEC 42001 (AIMS)
+## Posizionamento: complemento a ISO/IEC 42001 (AIMS)
 
-AIMO Standard is an **implementation accelerator for evidence readiness and explainability** that can be used to support ISO/IEC 42001–aligned AI Management Systems (AIMS) and to structure audit-ready evidence. It does not replace ISO/IEC 42001 or any other management-system standard; it adds a taxonomy, evidence bundle structure, and coverage mapping that help operationalize and evidence those controls.
+AIMO Standard è un **acceleratore di implementazione per preparazione delle evidenze e spiegabilità**, utilizzabile per supportare Sistemi di Gestione IA (AIMS) allineati a ISO/IEC 42001 e per strutturare evidenze pronte per l’audit. Non sostituisce ISO/IEC 42001 né altre norme di sistemi di gestione; aggiunge tassonomia, struttura Evidence Bundle e Coverage Map che aiutano a operativizzare e documentare quei controlli.
 
-**What AIMO is**
+**Cosa fornisce AIMO**
 
-- Taxonomy and code system for AI governance classification
-- Evidence bundle structure (manifest, object_index, payload_index, integrity)
-- Validator and coverage mapping for traceability
-- Conformance levels (Foundation, Operational, Audit-Ready) — AIMO-only maturity tiers for evidence packaging
+- Tassonomia e sistema di codici per la classificazione della governance IA
+- Struttura Evidence Bundle (manifest, object_index, payload_index, integrità)
+- Validator e Coverage Map per la tracciabilità
+- Livelli di conformità (Foundation, Operational, Audit-Ready) — livelli di maturità solo AIMO per il confezionamento delle evidenze
 
-**What AIMO is not**
+**Cosa non fornisce AIMO**
 
-- Legal advice
-- ISO certification or a substitute for certification
-- A guarantee of regulatory compliance
-- A replacement for auditor judgment or accredited certification bodies
+- Consulenza legale
+- Certificazione ISO o sostituto della certificazione
+- Garanzia di conformità normativa
+- Sostituto del giudizio dell’auditor o degli organismi di certificazione accreditati
 
-**Why now**
+**Perché ora**
 
-- **ISO/IEC 42006** (published 2025-07) specifies requirements for bodies auditing and certifying AI management systems against ISO/IEC 42001, raising expectations for auditable evidence and traceability.
-- The **EU AI Act** is in progressive application (2025–2027); harmonised standards, when published in the Official Journal, will provide presumption of conformity. The EU AI Office is preparing practical guidelines during 2026 (high-risk classification, Article 50 transparency, incidents, QMS elements).
-- Adopters and certification bodies increasingly use ISO/IEC 42001 as a system layer for AI governance; AIMO helps structure evidence that supports that layer without claiming certification.
+- **ISO/IEC 42006** (pubblicata luglio 2025) specifica i requisiti per gli organismi che verificano e certificano i sistemi di gestione IA secondo ISO/IEC 42001, aumentando le aspettative su evidenze verificabili e tracciabilità.
+- L’**EU AI Act** è in applicazione progressiva (2025–2027); le norme armonizzate, una volta pubblicate nella Gazzetta ufficiale, forniranno presunzione di conformità. L’EU AI Office sta preparando linee guida pratiche nel 2026 (classificazione ad alto rischio, trasparenza Art. 50, incidenti, elementi QMS).
+- Adottanti e organismi di certificazione usano sempre più ISO/IEC 42001 come livello di sistema per la governance IA; AIMO aiuta a strutturare evidenze che supportano quel livello senza rivendicare certificazione.
 
-## References
+## Riferimenti
 
-- [ISO/IEC 42006](https://www.iso.org/standard/42006) — Requirements for bodies auditing and certifying AI management systems
-- [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / Commission-aligned; informative)
-- [European Commission — Clear guidelines for AI (Dec 4 2025)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — AI Office guidelines preparation (check Commission news for current URL)
-- [EPRS — EU AI Act implementation timeline (June 2025)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — Parliament briefing (informative)
+- [ISO/IEC 42006](https://www.iso.org/standard/42006) — Requisiti per organismi che verificano e certificano sistemi di gestione IA
+- [Calendario di applicazione EU AI Act](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / allineato Commissione; informativo)
+- [European Commission — Clear guidelines for AI (4 dic 2025)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — Preparazione linee guida AI Office (verificare notizie Commissione per URL attuale)
+- [EPRS — EU AI Act implementation timeline (giu 2025)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — Briefing Parlamento (informativo)

@@ -221,6 +221,13 @@ For detailed technical specification, see `tooling/i18n/TRANSLATION_SYNC_SPEC.md
 5. Run `mkdocs build --strict` to verify build
 6. Commit all changes together
 
+!!! tip "Reuse previous release translations to minimize work"
+    When fixing **translation gaps** for a new release (e.g. v0.1.2), always **check the previous release** (e.g. v0.1.1) first:
+    1. Get the translated file from the previous tag: `git show v0.1.1:docs/ja/governance/trust-package.md`
+    2. If the English source is **unchanged or only minor** (e.g. link path or one new section), **copy the previous translation** and apply only the **delta** (link path updates, new paragraphs, frontmatter).
+    3. Re-translate from scratch only when the English content has changed substantially.
+    This keeps translation effort minimal and preserves existing wording where it still matches.
+
 !!! note "Translation Priority"
     Not all translations need to be updated immediately. Tier 1 (critical) pages should be prioritized:
     

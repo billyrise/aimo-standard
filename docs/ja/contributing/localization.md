@@ -161,9 +161,9 @@ translation_status: current|outdated|needs_review
 
 | 値 | 意味 |
 | --- | --- |
-| `<!-- aimo:translation_status=source -->` | 英語正本ページ（`docs/en/`）。 |
-| `<!-- aimo:translation_status=translated -->` | 当該ロケールは英語ソースの翻訳済み。 |
-| `<!-- aimo:translation_status=untranslated -->` | 当該ロケールのファイルはあるが内容は英語のコピーで、翻訳待ち。 |
+| `` | 英語正本ページ（`docs/en/`）。 |
+| `` | 当該ロケールは英語ソースの翻訳済み。 |
+| `` | 当該ロケールのファイルはあるが内容は英語のコピーで、翻訳待ち。 |
 
 **使い方**
 
@@ -220,6 +220,13 @@ python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
 4. `python tooling/checks/lint_i18n.py` を実行して見出し整合性を確認
 5. `mkdocs build --strict` を実行してビルドを確認
 6. すべての変更をまとめてコミット
+
+!!! tip "前リリースの翻訳を流用して工数を抑える"
+    新リリース（例: v0.1.2）の**翻訳漏れ**を直すときは、**必ず前リリース（例: v0.1.1）の内容を確認**してください：
+    1. 前リリースの翻訳ファイルを取得：`git show v0.1.1:docs/ja/governance/trust-package.md`
+    2. 英語ソースが**同じか軽微な変更のみ**（リンクパスや1セクション追加など）なら、**前リリースの翻訳をコピー**し、**差分だけ**適用（リンクパスの更新、新段落、frontmatter）。
+    3. 英語の内容が大きく変わった場合のみ、ゼロから翻訳し直してください。
+    これにより翻訳工数を最小限にし、既存の表現を活かせます。
 
 !!! note "翻訳の優先度"
     すべての翻訳をすぐに更新する必要はありません。Tier 1（重要）ページを優先してください：

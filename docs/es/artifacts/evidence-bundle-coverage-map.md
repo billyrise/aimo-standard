@@ -56,42 +56,42 @@ Mapping to external frameworks is **for reference only**; the standard does not 
 
 ---
 
-## 4. Exclusions / assumptions
+## 4. Exclusiones / suposiciones
 
-| Area | What this bundle does **not** cover (example rows — adjust per submission) |
+| Área | Lo que este paquete **no** cubre (filas de ejemplo — ajustar por envío) |
 |------|-------------------------------------------------------------------------------|
-| **Exclusions** | e.g. Systems or use cases out of scope; third-party components not evidenced; time period outside this bundle. |
-| **Assumptions** | e.g. Dictionary/taxonomy version; validator/schema version used; custody and retention are implementation-defined. |
-| **Limitations** | e.g. Signature verification is out of scope in v0.1; no legal interpretation of regulations. |
+| **Exclusiones** | ej. Sistemas o casos de uso fuera de alcance; componentes de terceros no evidenciados; período fuera de este paquete. |
+| **Suposiciones** | ej. Versión de diccionario/taxonomía; versión de validador/esquema usada; custodia y retención son definidas por implementación. |
+| **Limitaciones** | ej. La verificación de firmas está fuera de alcance en v0.1; no hay interpretación legal de regulaciones. |
 
-*Replace placeholder text with submission-specific exclusions and assumptions.*
+*Sustituya el texto placeholder por exclusiones y suposiciones específicas del envío.*
 
 ---
 
-## 5. Integrity proof summary (v0.1)
+## 5. Resumen de prueba de integridad (v0.1)
 
-| Element | What is provided (v0.1 normative) |
+| Elemento | Lo que se proporciona (v0.1 normativo) |
 |---------|----------------------------------|
-| **manifest.json** | Present and schema-valid; includes `object_index`, `payload_index`, `hash_chain`, `signing`. |
-| **sha256** | Every file in `object_index` and `payload_index` has a declared 64-char lowercase hex sha256; validator checks content match. |
-| **Index existence** | All listed paths exist under the bundle root; no path traversal (`../` or leading `/`). |
-| **Signature existence** | At least one signature file in `signatures/`; manifest references it via `signing.signatures[]` with `path` and `targets` (v0.1 MUST include `manifest.json` in targets). Cryptographic verification is out of scope for v0.1. |
-| **Hash chain** | `hash_chain` in manifest: `algorithm`, `head` (64-char hex), `path` (file under `hashes/`), `covers` (v0.1 MUST include `manifest.json` and `objects/index.json`). File at `hash_chain.path` exists. |
+| **manifest.json** | Presente y válido según esquema; incluye `object_index`, `payload_index`, `hash_chain`, `signing`. |
+| **sha256** | Cada archivo en `object_index` y `payload_index` tiene un sha256 hex en minúsculas de 64 caracteres declarado; el validador comprueba la coincidencia de contenido. |
+| **Existencia de índice** | Todas las rutas listadas existen bajo la raíz del paquete; sin recorrido de ruta (`../` o `/` inicial). |
+| **Existencia de firma** | Al menos un archivo de firma en `signatures/`; el manifiesto lo referencía vía `signing.signatures[]` con `path` y `targets` (v0.1 DEBE incluir `manifest.json` en targets). La verificación criptográfica está fuera de alcance en v0.1. |
+| **Cadena de hash** | `hash_chain` en manifiesto: `algorithm`, `head` (64 caracteres hex), `path` (archivo bajo `hashes/`), `covers` (v0.1 DEBE incluir `manifest.json` y `objects/index.json`). Existe el archivo en `hash_chain.path`. |
 
-*This table summarizes the integrity guarantees that the [Validator](../../validator/) checks for v0.1 bundles. Custody (storage, access control, retention) is implementation-defined.*
+*Esta tabla resume las garantías de integridad que el [Validador](../../validator/) comprueba para paquetes v0.1. Custody (almacenamiento, control de acceso, retención) es definido por implementación.*
 
 ---
 
-## Coverage Map (YAML) vs Profiles (JSON)
+## Coverage Map (YAML) vs Perfiles (JSON)
 
-| Artifact | Status | Purpose |
+| Artefacto | Estado | Propósito |
 |----------|--------|---------|
-| **Coverage Map YAML** (`coverage_map/coverage_map.yaml` or similar) | **Informative** | High-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements. |
-| **Profile JSONs** (`coverage_map/profiles/*.json`) | **Normative** | Conversion specifications validated against `schemas/jsonschema/aimo-profile.schema.json`. They define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). The [Validator](../../validator/) runs `--validate-profiles` to ensure all official profile JSONs conform to the schema (profile_id PR-* pattern, target enum, target_version, mappings). |
+| **Coverage Map YAML** (`coverage_map/coverage_map.yaml` o similar) | **Informativo** | Temas de mapeo de alto nivel entre evidencia/artefactos AIMO y marcos externos (ISO 42001, NIST AI RMF, EU AI Act, etc.) para explicabilidad. No impone requisitos de validación normativos. |
+| **Profile JSONs** (`coverage_map/profiles/*.json`) | **Normativo** | Especificaciones de conversión validadas contra `schemas/jsonschema/aimo-profile.schema.json`. Definen mapeos legibles por máquina (p. ej. qué objetos AIMO se mapean a qué cláusulas de marco). El [Validador](../../validator/) ejecuta `--validate-profiles` para asegurar que todos los profile JSON oficiales conforman el esquema (patrón profile_id PR-*, enumeración target, target_version, mappings). |
 
-### Official profiles (validator-validated)
+### Perfiles oficiales (validados por validador)
 
-Profile JSONs live in `coverage_map/profiles/` and are validated by the validator (`--validate-profiles`). Naming: file name `<target>_<purpose>.json`; each includes `target_version`.
+Los Profile JSON están en `coverage_map/profiles/` y son validados por el validador (`--validate-profiles`). Nombres: nombre de archivo `<target>_<purpose>.json`; cada uno incluye `target_version`.
 
 | File | profile_id | target | target_version |
 |------|------------|--------|----------------|
@@ -105,18 +105,18 @@ Profile JSONs live in `coverage_map/profiles/` and are validated by the validato
 | `uk_atrs_procurement.json` | PR-UK-ATRS-v0.1 | UK_ATRS | current |
 | `jp_gov_genai_procurement.json` | PR-JP-GOV-GENAI-PROCUREMENT-v0.1 | JP_GOV_GENAI_PROCUREMENT | current |
 
-### Profile update policy
+### Política de actualización de perfiles
 
-- **EU AI Act refs (0.1.2)**: Article references for the EU AI Act in the coverage map and docs were aligned to Regulation (EU) 2024/1689 for consistent evidence readiness; informative only, not legal advice.
-- **ISO 42001 / NIST AI RMF**: New versions of the target framework may be added as new profile files or new `target_version` values in a future standard version; v0.1 profiles remain frozen for the v0.1 release.
-- **EU AI Act Annex IV**: Annex IV and related articles may be updated by regulators; profile mappings may be updated via **PATCH** (e.g. 0.1.x) to follow wording or clause changes while keeping the same profile_id for continuity. Implementers should align with the version referenced in the profile’s `target_version` and release notes.
+- **Refs EU AI Act (0.1.2)**: Las referencias a artículos del EU AI Act en el mapeo de cobertura y en la documentación se alinearon con el Reglamento (UE) 2024/1689 para una preparación de evidencia coherente; solo informativo, no asesoramiento legal.
+- **ISO 42001 / NIST AI RMF**: Nuevas versiones del marco objetivo pueden añadirse como nuevos archivos de perfil o nuevos valores `target_version` en una versión futura del estándar; los perfiles v0.1 permanecen congelados para la release v0.1.
+- **EU AI Act Annex IV**: El Anexo IV y los artículos relacionados pueden ser actualizados por los reguladores; los mapeos de perfil pueden actualizarse vía **PATCH** (ej. 0.1.x) para seguir cambios de redacción o cláusulas manteniendo el mismo profile_id para continuidad. Los implementadores deben alinearse con la versión referenciada en `target_version` del perfil y las notas de release.
 
 ---
 
-## See also
+## Véase también
 
-- [Evidence Bundle (artifact overview)](../evidence-bundle/)
-- [Evidence Bundle root structure (v0.1)](../../standard/current/09-evidence-bundle-structure/)
-- [Minimum Evidence Requirements](../minimum-evidence/)
-- [Coverage Map (framework mappings)](../../coverage-map/)
-- [Validator](../../validator/)
+- [Paquete de Evidencia (resumen de artefacto)](../evidence-bundle/)
+- [Estructura raíz del Paquete de Evidencia (v0.1)](../../standard/current/09-evidence-bundle-structure/)
+- [Requisitos Mínimos de Evidencia](../minimum-evidence/)
+- [Coverage Map (mapeos de marcos)](../../coverage-map/)
+- [Validador](../../validator/)

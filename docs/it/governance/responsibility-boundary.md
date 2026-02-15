@@ -1,97 +1,97 @@
 ---
-description: AIMO Responsibility Boundary - Defines what the standard provides vs. adopter responsibilities. Non-overclaim statement and scope limitations.
+description: Limite di responsabilità AIMO — Definisce cosa fornisce la norma vs. responsabilità degli adottanti. Dichiarazione di non sovraffermazione e limiti di ambito.
 ---
 <!-- aimo:translation_status=translated -->
 
-# Responsibility Boundary
+# Limite di responsabilità（Responsibility Boundary）
 
-This page defines what the AIMO Standard provides and does not provide, the assumptions it makes, and the responsibilities of adopters.
+Questa pagina definisce cosa fornisce e cosa non fornisce l'AIMO Standard, le ipotesi che fa e le responsabilità degli adottanti.
 
-## What AIMO Standard provides
+## Cosa fornisce l'AIMO Standard
 
-- **A structured evidence format**: schemas, templates, and taxonomy for AI governance evidence.
-- **Traceability framework**: lifecycle-based evidence linking (request → review → exception → renewal).
-- **Explainability support**: coverage mapping to external frameworks for audit discussions.
-- **Validation tooling**: reference validator and rules for structural consistency checks.
-- **Documentation**: normative specification, examples, and guidance.
+- **Un formato di evidenza strutturato**: schemi, modelli e tassonomia per evidenza di governance IA.
+- **Quadro di tracciabilità**: collegamento evidenze per ciclo di vita (richiesta → revisione → eccezione → rinnovo).
+- **Supporto alla spiegabilità**: mappatura di copertura verso framework esterni per discussioni di audit.
+- **Strumenti di validazione**: validatore di riferimento e regole per verifiche di coerenza strutturale.
+- **Documentazione**: specifica normativa, esempi e guida.
 
-## What AIMO Standard does NOT provide
+## Cosa l'AIMO Standard NON fornisce
 
-| Out-of-scope | Explanation |
+| Fuori ambito | Spiegazione |
 | --- | --- |
-| **Legal advice** | AIMO does not interpret laws or regulations. Consult qualified legal counsel for regulatory compliance. |
-| **Compliance certification** | Using AIMO does not certify compliance with any regulation or framework (ISO 42001, EU AI Act, NIST AI RMF, etc.). |
-| **"ISO certified by AIMO"** | AIMO does not issue certifications. Certification is performed by accredited certification bodies. |
-| **"EU AI Act compliant because of AIMO"** | AIMO structures evidence; it does not guarantee or certify regulatory compliance. |
-| **Risk assessment** | AIMO structures evidence but does not perform or validate AI risk assessments. |
-| **Technical controls** | AIMO does not implement access control, encryption, or other security controls; it documents expectations. |
-| **Audit execution** | AIMO provides materials for auditors but does not conduct audits. |
-| **AI model evaluation** | AIMO does not assess model performance, bias, or safety. |
+| **Consulenza legale** | AIMO non interpreta leggi o regolamenti. Consultare consulenza legale qualificata per conformità normativa. |
+| **Certificazione di conformità** | L'uso di AIMO non certifica la conformità a normative o framework (ISO 42001, EU AI Act, NIST AI RMF, ecc.). |
+| **"Certificato ISO da AIMO"** | AIMO non emette certificazioni. La certificazione è effettuata da organismi di certificazione accreditati. |
+| **"Conforme EU AI Act grazie ad AIMO"** | AIMO struttura le evidenze; non garantisce né certifica la conformità normativa. |
+| **Valutazione dei rischi** | AIMO struttura le evidenze ma non esegue né valida valutazioni del rischio IA. |
+| **Controlli tecnici** | AIMO non implementa controllo degli accessi, crittografia o altri controlli di sicurezza; documenta le aspettative. |
+| **Esecuzione dell'audit** | AIMO fornisce materiali agli auditor ma non conduce audit. |
+| **Valutazione di modelli IA** | AIMO non valuta prestazioni, bias o sicurezza dei modelli. |
 
-## Assumptions
+## Ipotesi
 
-The AIMO Standard assumes:
+L'AIMO Standard assume:
 
-1. **Adopters have governance processes**: request, review, approval, and exception workflows exist.
-2. **Adopters maintain evidence**: evidence is created, stored, and retained by the adopter's systems.
-3. **Adopters verify against authoritative texts**: when using Coverage Map, adopters check the original framework or regulation.
-4. **Tooling is optional**: the reference validator is a convenience; adopters may use their own validation.
+1. **Gli adottanti hanno processi di governance**: esistono flussi di richiesta, revisione, approvazione ed eccezione.
+2. **Gli adottanti mantengono le evidenze**: le evidenze sono create, memorizzate e conservate dai sistemi dell'adottante.
+3. **Gli adottanti verificano rispetto ai testi autorevoli**: nell'uso della Coverage Map, gli adottanti verificano il framework o il regolamento originale.
+4. **Gli strumenti sono opzionali**: il validatore di riferimento è una comodità; gli adottanti possono usare la propria validazione.
 
-## Adopter responsibilities
+## Responsabilità degli adottanti
 
-| Responsibility | Description |
+| Responsabilità | Descrizione |
 | --- | --- |
-| **Evidence creation** | Generate accurate, timely evidence records aligned with EV schema. |
-| **Evidence storage & retention** | Store evidence securely with appropriate access controls and retention periods. |
-| **Integrity & access control** | Implement controls (hashing, WORM, audit logs) to preserve evidence integrity. |
-| **Legal verification** | Verify compliance claims against authoritative legal texts and obtain legal advice as needed. |
-| **Continuous alignment** | Update evidence and mappings as AIMO Standard versions and external frameworks evolve. |
-| **Audit preparation** | Package evidence bundles and run validation before submission to auditors. |
+| **Creazione di evidenze** | Generare registri di evidenza accurati e tempestivi allineati allo schema EV. |
+| **Archiviazione e conservazione delle evidenze** | Conservare le evidenze in modo sicuro con controlli di accesso e periodi di conservazione adeguati. |
+| **Integrità e controllo di accesso** | Implementare controlli (hashing, WORM, log di audit) per preservare l'integrità delle evidenze. |
+| **Verifica legale** | Verificare le affermazioni di conformità rispetto ai testi legali autorevoli e ottenere consulenza legale se necessario. |
+| **Allineamento continuo** | Aggiornare evidenze e mappature al variare delle versioni dell'AIMO Standard e dei framework esterni. |
+| **Preparazione all'audit** | Impacchettare Evidence Bundle ed eseguire la validazione prima della consegna agli auditor. |
 
-## RACI Matrix
+## Matrice RACI
 
-The following RACI matrix clarifies responsibilities across AIMO Standard, Adopter, and Auditor roles.
+La seguente matrice RACI chiarisce le responsabilità tra AIMO Standard, Adottante e Auditor.
 
-| Activity | AIMO Standard | Adopter | Auditor |
+| Attività | AIMO Standard | Adottante | Auditor |
 | --- | :---: | :---: | :---: |
-| **Define evidence schema & templates** | R/A | I | I |
-| **Create evidence records** | — | R/A | I |
-| **Store & retain evidence** | — | R/A | I |
-| **Implement access controls** | — | R/A | I |
-| **Implement integrity controls (hash, WORM)** | — | R/A | I |
-| **Run validator on bundle** | C | R/A | C |
-| **Package submission (zip, checksums)** | C | R/A | I |
-| **Verify checksums (sha256)** | — | C | R/A |
-| **Verify bundle structure (validator)** | — | C | R/A |
-| **Interpret regulatory requirements** | — | R/A | C |
-| **Issue audit conclusion** | — | — | R/A |
-| **Provide legal advice** | — | — | — |
+| **Definire schema e modelli di evidenza** | R/A | I | I |
+| **Creare registri di evidenza** | — | R/A | I |
+| **Archiviare e conservare evidenze** | — | R/A | I |
+| **Implementare controlli di accesso** | — | R/A | I |
+| **Implementare controlli di integrità (hash, WORM)** | — | R/A | I |
+| **Eseguire validatore sul bundle** | C | R/A | C |
+| **Impacchettare consegna (zip, checksum)** | C | R/A | I |
+| **Verificare checksum (sha256)** | — | C | R/A |
+| **Verificare struttura del bundle (validatore)** | — | C | R/A |
+| **Interpretare requisiti normativi** | — | R/A | C |
+| **Emettere conclusione di audit** | — | — | R/A |
+| **Fornire consulenza legale** | — | — | — |
 
-**Legend**: R = Responsible, A = Accountable, C = Consulted, I = Informed, — = Not applicable
+**Legenda**: R = Responsabile, A = Accountable, C = Consultato, I = Informato, — = Non applicabile
 
-!!! note "Key takeaway"
-    AIMO Standard is responsible for **defining the format**. Adopters are responsible for **creating, storing, and validating evidence**. Auditors are responsible for **verifying submissions and issuing audit conclusions**.
+!!! note "Punto chiave"
+    L'AIMO Standard è responsabile di **definire il formato**. Gli adottanti sono responsabili di **creare, archiviare e validare le evidenze**. Gli auditor sono responsabili di **verificare le consegne e emettere le conclusioni di audit**.
 
-!!! warning "Non-certification notice"
-    AIMO Standard is informative; it does not certify compliance or provide legal advice. Audit conclusions and conformity assessments are the sole responsibility of qualified auditors and legal professionals.
+!!! warning "Avviso di non certificazione"
+    L'AIMO Standard è informativo; non certifica la conformità né fornisce consulenza legale. Le conclusioni di audit e le valutazioni di conformità sono di esclusiva responsabilità di auditor e professionisti legali qualificati.
 
-## Claims policy
+## Politica sulle affermazioni
 
-| Acceptable | Unacceptable |
+| Accettabile | Inaccettabile |
 | --- | --- |
-| "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator." | <!-- UNACCEPTABLE_CLAIMS_EXAMPLES --> "EU AI Act compliant", "ISO 42001 certified", "government approved" <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES --> |
-| "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies." | Claiming that AIMO certifies compliance or provides legal advice. |
+| "Un Evidence Bundle è stato prodotto secondo AIMO Standard v0.1.2 e validato strutturalmente dall'AIMO Validator." | "Conforme EU AI Act", "certificato ISO 42001", "approvato dal governo", ecc. |
+| "Utilizziamo gli artefatti AIMO per supportare la preparazione ISO/IEC 42001; le decisioni di certificazione spettano agli organismi di certificazione accreditati." | Affermare che AIMO certifica la conformità o fornisce consulenza legale. |
 
-## Non-overclaim statement
+## Dichiarazione di non sovraffermazione
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "Importante"
+    L'AIMO Standard supporta **spiegabilità e preparazione delle evidenze**. **Non** fornisce consulenza legale, **non** garantisce la conformità né **non** certifica la conformità a normative o framework. Gli adottanti devono verificare le affermazioni rispetto ai testi autorevoli e ottenere parere professionale se del caso.
 
-This statement applies to all AIMO Standard documentation, including Trust Package, Evidence Bundle, Minimum Evidence Requirements, Coverage Map, and Releases.
+Questa dichiarazione si applica a tutta la documentazione dell'AIMO Standard, inclusi Trust Package, Evidence Bundle, Minimum Evidence Requirements, Coverage Map e Releases.
 
-## Related pages
+## Pagine correlate
 
-- [Trust Package](../trust-package/) — auditor-ready materials hub
-- [Human Oversight Protocol](../human-oversight-protocol/) — machine vs. human review boundary
-- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST-level lifecycle checklist
-- [Coverage Map Methodology](../../coverage-map/methodology/) — what the mapping is and is not
+- [Trust Package](../trust-package/) — hub materiali pronti per l'audit
+- [Human Oversight Protocol](../human-oversight-protocol/) — confine revisione macchina vs. umana
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — checklist MUST per ciclo di vita
+- [Coverage Map Methodology](../../coverage-map/methodology/) — cos'è e cos'è il mapping

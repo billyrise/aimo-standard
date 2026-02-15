@@ -1,22 +1,22 @@
 ---
-description: Scope of AIMO Standard. Defines what the standard covers including AI classification, evidence requirements, and boundaries for enterprise governance.
+description: Ambito di AIMO Standard. Definisce cosa copre la norma, incl. classificazione IA, requisiti di evidenza e limiti di governance aziendale.
 ---
 <!-- aimo:translation_status=translated -->
 
-# Scope
+# Ambito（Scope）
 
-This standard specifies artifacts and validation rules to enable consistent analysis and reporting.
+Questa norma specifica artefatti e regole di validazione per consentire analisi e reporting coerenti.
 
-Out of scope:
-- proprietary inference logic
-- vendor-specific scoring/weighting implementations
+Fuori ambito:
+- logica di inferenza proprietaria
+- implementazioni di punteggio/pesatura specifiche del fornitore
 
-## Scope alignment with Management System standards (PDCA)
+## Allineamento dell’ambito con le norme di sistemi di gestione (PDCA)
 
-AIMO adds an **AI-specific taxonomy and evidence artifacts** that help operationalize management-system controls (Plan–Do–Check–Act) and make outputs auditable. It can be used **alongside** ISO/IEC 42001 and other management-system standards; it does not replace their texts. Coverage Map and profiles provide informative mappings only — adopters must verify against the authoritative framework.
+AIMO aggiunge **tassonomia e artefatti di evidenza specifici per l’IA** che aiutano a operativizzare i controlli dei sistemi di gestione (Plan–Do–Check–Act) e a rendere i risultati verificabili. Può essere usato **insieme a** ISO/IEC 42001 e altre norme di sistemi di gestione; non sostituisce i loro testi. Coverage Map e profili forniscono solo mappature informative — gli adottanti devono verificare rispetto al quadro di riferimento.
 
-**Adopter responsibilities**
+**Responsabilità degli adottanti**
 
-- Verify scope and applicability against the relevant management-system or regulatory text.
-- Maintain evidence and run the validator as part of audit preparation; certification decisions remain with accredited certification bodies.
-- See [Responsibility Boundary](../../governance/responsibility-boundary/) for what AIMO does and does not provide.
+- Verificare ambito e applicabilità rispetto al testo pertinente del sistema di gestione o normativo.
+- Mantenere le evidenze ed eseguire il Validator come parte della preparazione all’audit; le decisioni di certificazione spettano agli organismi di certificazione accreditati.
+- Vedere [Responsibility Boundary](../../governance/responsibility-boundary/) per cosa fornisce e non fornisce AIMO.

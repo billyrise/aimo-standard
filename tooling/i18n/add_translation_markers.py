@@ -40,13 +40,15 @@ def is_likely_english(text: str) -> bool:
     ascii_count = sum(1 for c in text if ord(c) < 128)
     return ascii_count >= 0.7 * len(text)
 
-def body_looks_same_as_en(lang_body: str, en_body: str, strict: bool = False) -> bool:
+def body_looks_same_as_en(lang_body: str, en_body: str, strict: bool = False, full_body: bool = False) -> bool:
     """True if content looks like untranslated copy of EN.
     Default: first content line identical.
-    strict=True: first 400 chars of body (after stripping marker) identical."""
-    # Remove our marker so it doesn't affect comparison
+    strict=True: first 400 chars of body (after stripping marker) identical.
+    full_body=True: entire body (after stripping marker) identical."""
     lang_clean = MARKER_RE.sub("", lang_body).strip()
     en_clean = en_body.strip()
+    if full_body:
+        return lang_clean == en_clean and len(en_clean) >= 20
     if strict:
         return lang_clean[:400] == en_clean[:400] and len(en_clean) >= 50
     lang_first = first_content_line(lang_clean)
@@ -68,8 +70,10 @@ def main():
     import argparse as _argparse
     p = _argparse.ArgumentParser(description="Add aimo:translation_status markers and list untranslated")
     p.add_argument("--strict", action="store_true", help="Use strict comparison (first 400 chars) to detect untranslated")
+    p.add_argument("--full-body", action="store_true", help="Treat as untranslated only when entire body equals EN (exact copy)")
     args = p.parse_args()
     strict = getattr(args, "strict", False)
+    full_body = getattr(args, "full_body", False)
 
     en_files = sorted(EN_DIR.rglob("*.md"))
     rel_paths = [f.relative_to(EN_DIR) for f in en_files]
@@ -98,7 +102,7 @@ def main():
             _, en_body = get_body_and_frontmatter(en_content)
             _, lang_body = get_body_and_frontmatter(lang_content)
 
-            if body_looks_same_as_en(lang_body, en_body, strict=strict):
+            if body_looks_same_as_en(lang_body, en_body, strict=strict, full_body=full_body):
                 marker = MARKER_UNTRANSLATED
                 untranslated_list.append((lang, str(rel)))
             else:

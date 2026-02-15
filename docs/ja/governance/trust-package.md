@@ -1,81 +1,80 @@
 ---
-description: AIMO Trust Package - Auditor-ready materials bundle. Minimum documentation for auditors, legal, and IT security to assess AI governance adoption readiness.
+description: AIMO Trust Package — 監査人向け資料パック。監査・法務・ITセキュリティが AI ガバナンス採用準備を評価するための最小ドキュメント。
 ---
 <!-- aimo:translation_status=translated -->
 
-# Trust Package (Assurance Package)
+# Trust Package（Assurance Package）
 
-This page bundles the minimum materials auditors, legal, and IT security need to assess adoption readiness.
-It is a hub only; detailed Evidence TOC and Coverage tables are maintained in their respective sections.
+本ページは、監査人・法務・ITセキュリティが採用準備を評価するために必要な最小資料をまとめたハブです。証跡の目次や Coverage 表の詳細は各セクションで管理されています。
 
-## Download
+## ダウンロード
 
-**[Download Trust Package PDF (Latest Release)](https://github.com/billyrise/aimo-standard/releases/latest)**
+**[Trust Package PDF のダウンロード（最新リリース）](https://github.com/billyrise/aimo-standard/releases/latest)**
 
-The Trust Package PDF consolidates auditor-ready materials into a single document. Each GitHub Release includes:
+Trust Package PDF は監査人向け資料を1つの文書に集約しています。各 GitHub リリースには以下が含まれます：
 
-- `trust_package.pdf` — English Trust Package
-- `trust_package.ja.pdf` — Japanese Trust Package
-- `aimo-standard-artifacts.zip` — Schemas, templates, examples, validator rules
-- `SHA256SUMS.txt` — Checksums for verification
+- `trust_package.pdf` — 英語版 Trust Package
+- `trust_package.ja.pdf` — 日本語版 Trust Package
+- `aimo-standard-artifacts.zip` — スキーマ、テンプレート、例、Validator ルール
+- `SHA256SUMS.txt` — 検証用チェックサム
 
-## What you get
+## 含まれる内容
 
-- **Conformance**: how to claim compliance and what levels mean — [Conformance](../../conformance/)
-- **Coverage Map**: mapping to external standards — [Coverage Map index](../../coverage-map/), [Coverage Map methodology](../../coverage-map/methodology/)
-- **Standard**: normative requirements and definitions — [Standard (Current)](../../standard/current/)
-- **Taxonomy**: 8-dimension classification system for AI governance — [Taxonomy](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/)
-- **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](../../artifacts/evidence-bundle/)
-- **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
-- **ISO/IEC 42001 Certification Readiness Toolkit**: fastest path to audit-ready evidence aligned to ISO 42001 — [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/). The toolkit supports preparation only; certification decisions are made by accredited certification bodies.
-- **Validator**: rules and reference checks — [Validator](../../validator/)
-- **Examples**: audit-ready sample bundles — [Examples](../../examples/)
-- **Releases**: change history and distribution — [Releases](../../releases/)
-- **Governance**: policies, security, licensing — [Governance](../../governance/)
+- **Conformance**: 適合の主張方法と各レベルの意味 — [Conformance](../../conformance/)
+- **Coverage Map**: 外部標準との対応 — [Coverage Map 索引](../../coverage-map/)、[Coverage Map 方法論](../../coverage-map/methodology/)
+- **Standard**: 規範要件と定義 — [Standard (Current)](../../standard/current/)
+- **Taxonomy**: AI ガバナンスの 8 次元分類 — [Taxonomy](../../standard/current/03-taxonomy/)、[Codes](../../standard/current/04-codes/)、[Dictionary](../../standard/current/05-dictionary/)
+- **Evidence Bundle**: 構造、目次、追跡可能性 — [Evidence Bundle](../../artifacts/evidence-bundle/)
+- **Minimum Evidence Requirements**: ライフサイクル別 MUST チェックリスト — [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- **ISO/IEC 42001 Certification Readiness Toolkit**: ISO 42001 に沿った監査可能証跡への最短経路 — [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/)。ツールキットは準備の支援のみ。認証の判断は認定認証機関が行います。
+- **Validator**: ルールと参照チェック — [Validator](../../validator/)
+- **Examples**: 監査可能なサンプルバンドル — [Examples](../../examples/)
+- **Releases**: 変更履歴と配布 — [Releases](../../releases/)
+- **Governance**: ポリシー、セキュリティ、ライセンス — [Governance](../../governance/)
 
-## Minimum set for audit-readiness
+## 監査準備の最小セット
 
-| Item | Where to find it | Outcome / what it proves |
+| 項目 | 参照先 | 成果／証明内容 |
 | --- | --- | --- |
-| Conformance levels | [Conformance](../../conformance/) | How to claim compliance and the scope of evidence required |
-| Coverage mapping | [Coverage Map index](../../coverage-map/), [Coverage Map methodology](../../coverage-map/methodology/) | Explainability against external regulations and standards |
-| Taxonomy & Dictionary | [Taxonomy](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/) | Classification system for AI systems (8 dimensions, 91 codes) |
-| Evidence artifacts | [Evidence Bundle](../../artifacts/evidence-bundle/), [Minimum Evidence](../../artifacts/minimum-evidence/), [EV Template](../../standard/current/06-ev-template/) | What data must exist to support traceability |
-| Validator checks | [Validator](../../validator/) | How to verify internal consistency and completeness |
-| Example bundle | [Examples](../../examples/) | What an audit-ready package looks like in practice |
-| Change control | [Releases](../../releases/), [Governance](../../governance/) | How updates are managed and communicated |
-| Security / License / Trademarks | [Governance](../../governance/) | Legal and security posture for adoption decisions |
+| 適合レベル | [Conformance](../../conformance/) | 適合の主張方法と必要な証跡の範囲 |
+| Coverage マッピング | [Coverage Map 索引](../../coverage-map/)、[Coverage Map 方法論](../../coverage-map/methodology/) | 外部規制・標準への説明可能性 |
+| Taxonomy & Dictionary | [Taxonomy](../../standard/current/03-taxonomy/)、[Codes](../../standard/current/04-codes/)、[Dictionary](../../standard/current/05-dictionary/) | AI システムの分類（8 次元、91 コード） |
+| 証跡アーティファクト | [Evidence Bundle](../../artifacts/evidence-bundle/)、[Minimum Evidence](../../artifacts/minimum-evidence/)、[EV Template](../../standard/current/06-ev-template/) | 追跡可能性を支える必要データ |
+| Validator チェック | [Validator](../../validator/) | 内部一貫性・完全性の検証方法 |
+| サンプルバンドル | [Examples](../../examples/) | 監査可能パッケージの実例 |
+| 変更管理 | [Releases](../../releases/)、[Governance](../../governance/) | 更新の管理・共有方法 |
+| セキュリティ／ライセンス／商標 | [Governance](../../governance/) | 採用判断のための法的・セキュリティ姿勢 |
 
-## How to cite
+## 引用方法
 
-Use the repository README for citation guidance and context; governance links to the authoritative policies.
-See [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) and [Governance](../../governance/).
+引用のガイダンスと文脈はリポジトリの README を、権威あるポリシーへのリンクは Governance を参照してください。
+[README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) および [Governance](../../governance/) を参照。
 
-## Artifacts zip contents
+## Artifacts zip の内容
 
-The `aimo-standard-artifacts.zip` includes:
+`aimo-standard-artifacts.zip` には以下が含まれます：
 
-- **Taxonomy (SSOT)**: `source_pack/03_taxonomy/` — Dictionary CSV (91 codes), YAML, code system
-- **JSON Schemas**: `schemas/jsonschema/` — Machine-readable validation schemas
-- **Templates**: `templates/ev/` — Evidence record templates (JSON + Markdown)
-- **Examples**: `examples/` — Minimal sample bundles for quick adoption
-- **Coverage Map**: `coverage_map/coverage_map.yaml` — Mapping to external standards
-- **Validator Rules**: `validator/rules/` — Validation rule definitions
-- **Governance docs**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt`, etc.
+- **Taxonomy (SSOT)**: `source_pack/03_taxonomy/` — 辞書 CSV（91 コード）、YAML、コード体系
+- **JSON Schemas**: `schemas/jsonschema/` — 機械可読な検証スキーマ
+- **Templates**: `templates/ev/` — 証跡レコードテンプレート（JSON + Markdown）
+- **Examples**: `examples/` — 迅速な採用のための最小サンプルバンドル
+- **Coverage Map**: `coverage_map/coverage_map.yaml` — 外部標準との対応
+- **Validator Rules**: `validator/rules/` — 検証ルール定義
+- **Governance ドキュメント**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt` 等
 
-## Responsibility boundary
+## 責任の境界
 
-The AIMO Standard provides a structured evidence format and explainability framework. It does **not** provide legal advice, compliance certification, risk assessment, or audit execution.
+AIMO Standard は構造化された証跡フォーマットと説明可能性の枠組みを提供します。**法的助言、コンプライアンス認証、リスク評価、監査の実行は提供しません**。
 
-For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](../responsibility-boundary/).
+スコープの定義、前提、採用者責任の詳細は [Responsibility Boundary](../responsibility-boundary/) を参照してください。
 
-## How to prepare a submission package
+## 提出パッケージの準備方法
 
-Follow these steps to prepare an audit-ready submission:
+監査可能な提出物を準備するには、次の手順に従ってください。
 
-1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../../artifacts/evidence-bundle/) and [Minimum Evidence Requirements](../../artifacts/minimum-evidence/). For ISO 42001–oriented readiness, see the [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/).
-2. **Run Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix any errors before proceeding.
-3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
+1. **Evidence Bundle の生成**: [Evidence Bundle](../../artifacts/evidence-bundle/) および [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) に従い、EV レコード、Dictionary、Summary、Change Log を作成してください。ISO 42001 を意識した準備については [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/) を参照してください。
+2. **Validator の実行**: `python validator/src/validate.py bundle/root.json` を実行して構造の一貫性を確認してください。エラーがあれば修正してから先に進んでください。
+3. **チェックサムの作成**: 提出する全ファイルの SHA-256 チェックサムを生成してください：
 
     === "Linux"
 
@@ -97,145 +96,145 @@ Follow these steps to prepare an audit-ready submission:
             "$hash  $($_.Name)"
         } | Out-File SHA256SUMS.txt -Encoding UTF8
         ```
-4. **Package Artifacts**: Create a zip archive of your evidence bundle:
+4. **アーティファクトのパッケージ化**: Evidence Bundle の zip アーカイブを作成してください：
    ```bash
    zip -r evidence_bundle.zip bundle_directory/
    ```
-5. **Reference Release Version**: Note which AIMO Standard version (e.g., `v1.0.0`) your bundle aligns with.
-6. **Deliver**: Provide the zip, checksums, and version reference to your auditor or compliance function.
+5. **リリースバージョンの参照**: バンドルが対応する AIMO Standard のバージョン（例: `v1.0.0`）を明記してください。
+6. **提出**: zip、チェックサム、バージョン参照を監査人またはコンプライアンス担当に提供してください。
 
-For release assets and verification, see [Releases](../../releases/).
+リリース資産と検証については [Releases](../../releases/) を参照してください。
 
-## Non-overclaim statement
+## 過大主張禁止
 
-!!! warning "Important: No certification, no assurance, no legal compliance claim"
-    - AIMO Standard defines an **evidence packaging and validation format**. It does not certify compliance with laws or standards.
-    - Audit/assurance opinions remain the responsibility of independent auditors and the adopting organization.
-    - **Appropriate claim:** "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
-    - **Inappropriate claim:** <!-- UNACCEPTABLE_CLAIMS_EXAMPLES --> "EU AI Act compliant", "ISO 42001 certified", "government approved". <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
+!!! warning "重要：認証・保証・法規適合の主張は行いません"
+    - AIMO Standard は**証跡のパッケージングと検証のフォーマット**を定義します。法令や標準への適合を認証するものではありません。
+    - 監査・保証の意見は、独立した監査人と採用組織の責任です。
+    - **適切な主張**: 「Evidence Bundle は AIMO Standard v0.1.2 に従って作成され、AIMO Validator により構造検証されました。」
+    - **不適切な主張**: 「EU AI Act 適合」「ISO 42001 認証取得」「政府承認」等。
 
-See [Responsibility Boundary](../responsibility-boundary/) for details on scope, assumptions, and adopter responsibilities.
+スコープ、前提、採用者責任の詳細は [Responsibility Boundary](../responsibility-boundary/) を参照してください。
 
-## For auditors: Verification procedure
+## 監査人向け：検証手順
 
-When receiving an evidence submission, auditors should verify integrity and structure using the following steps:
+証跡の提出物を受け取った際は、次の手順で整合性と構造を検証してください。
 
-!!! success "Build Provenance Available"
-    All release assets include cryptographically signed build attestations. See [Verification Procedure](../../standard/versions/#4-verify-build-provenance-attestation) for attestation verification steps.
+!!! success "ビルド出所の提供"
+    すべてのリリース資産には暗号署名付きのビルド attestation が含まれます。attestation の検証手順は [Verification Procedure](../../standard/versions/#4-verify-build-provenance-attestation) を参照してください。
 
-### Step 1: Verify checksums (SHA-256)
+### Step 1: チェックサムの検証（SHA-256）
 
 === "Linux"
 
     ```bash
-    # Download or receive SHA256SUMS.txt with the submission
-    # Verify all files match their recorded checksums
+    # 提出物とともに SHA256SUMS.txt をダウンロードまたは受け取る
+    # 全ファイルが記録されたチェックサムと一致することを確認
     sha256sum -c SHA256SUMS.txt
 
-    # Or verify individual files manually:
+    # または個別ファイルを手動で検証：
     sha256sum evidence_bundle.zip
-    # Compare output against the value in SHA256SUMS.txt
+    # 出力を SHA256SUMS.txt の値と比較
     ```
 
 === "macOS"
 
     ```bash
-    # Verify all files match their recorded checksums
+    # 全ファイルが記録されたチェックサムと一致することを確認
     shasum -a 256 -c SHA256SUMS.txt
 
-    # Or verify individual files manually:
+    # または個別ファイルを手動で検証：
     shasum -a 256 evidence_bundle.zip
-    # Compare output against the value in SHA256SUMS.txt
+    # 出力を SHA256SUMS.txt の値と比較
     ```
 
 === "Windows (PowerShell)"
 
     ```powershell
-    # Verify individual files
+    # 個別ファイルの検証
     Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
 
-    # Compare the Hash output with SHA256SUMS.txt
+    # Hash の出力を SHA256SUMS.txt と比較
     Get-Content .\SHA256SUMS.txt
     ```
 
-If any checksum fails, the submission should be rejected or re-requested.
+いずれかのチェックサムが失敗した場合は、提出物を却下するか再提出を求めてください。
 
-### Step 2: Verify bundle structure (Validator)
+### Step 2: バンドル構造の検証（Validator）
 
-**Prerequisites** (one-time setup):
+**前提**（初回のみ）：
 
 ```bash
-# Clone the official AIMO Standard release
+# 公式 AIMO Standard リリースをクローン
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
 
-# IMPORTANT: Use the exact version stated in the submission
-# Replace VERSION with the submitter's declared version (e.g., v0.0.1)
-VERSION=v0.0.1  # ← Match the version in the submission
+# 重要: 提出物に記載されたバージョンと一致させる
+# VERSION を提出者が申告したバージョン（例: v0.0.1）に置き換える
+VERSION=v0.0.1  # ← 提出物のバージョンに合わせる
 git checkout "$VERSION"
 
-# Set up Python environment
+# Python 環境のセットアップ
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-!!! warning "Version Matching"
-    Always use the exact AIMO Standard version stated in the submission. Using a different version may cause validation mismatches due to schema or rule changes between versions.
+!!! warning "バージョン一致"
+    提出物に記載された AIMO Standard のバージョンを必ず使用してください。異なるバージョンではスキーマやルールの違いにより検証結果が一致しない場合があります。
 
-**Run validation**:
+**検証の実行**:
 
 ```bash
-# Extract the submitted bundle
+# 提出されたバンドルを展開
 unzip evidence_bundle.zip -d bundle/
 
-# Run validator against the bundle's root.json
+# バンドルの root.json に対して Validator を実行
 python validator/src/validate.py bundle/root.json
 
-# Expected output: "validation OK" or list of errors
+# 想定出力: "validation OK" またはエラー一覧
 ```
 
-**Example** (using built-in sample):
+**例**（同梱サンプル使用）:
 
 ```bash
 python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 ```
 
-The validator checks:
+Validator は以下をチェックします：
 
-- Required files exist (EV records, Dictionary)
-- JSON files conform to schema
-- Cross-references (request_id, review_id, etc.) are valid
-- Timestamps are present and properly formatted
+- 必須ファイルの存在（EV レコード、Dictionary）
+- JSON がスキーマに準拠していること
+- 相互参照（request_id、review_id 等）が有効であること
+- タイムスタンプが存在し適切にフォーマットされていること
 
-### Step 3: Verify version alignment
+### Step 3: バージョン整合の確認
 
-Check that the submission references an official AIMO Standard release:
+提出物が公式 AIMO Standard リリースを参照していることを確認してください：
 
-1. Confirm the stated version (e.g., `v0.0.1`) exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
-2. Compare submitted schemas against the release artifacts
-3. Note any deviations from the official release
+1. 記載されたバージョン（例: `v0.0.1`）が [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認する
+2. 提出されたスキーマをリリース資産と比較する
+3. 公式リリースからの相違があれば記録する
 
-### What to look for
+### 確認ポイント
 
-| Check | Pass Criteria | Fail Action |
+| チェック | 合格基準 | 不合格時の対応 |
 | --- | --- | --- |
-| Checksums match | All `sha256sum -c` checks pass | Reject or re-request |
-| Validator passes | No errors from `validate.py` | Request fixes before acceptance |
-| Version exists | Release tag exists on GitHub | Clarify version alignment |
-| Required fields present | EV records have id, timestamp, source, summary | Request completion |
-| Traceability intact | Cross-references resolve correctly | Request linkage fixes |
+| チェックサム一致 | すべての `sha256sum -c` が成功 | 却下または再提出依頼 |
+| Validator 成功 | `validate.py` からエラーなし | 受領前に修正を依頼 |
+| バージョン存在 | GitHub にリリースタグが存在 | バージョン整合を確認 |
+| 必須フィールド | EV レコードに id、timestamp、source、summary がある | 完成を依頼 |
+| 追跡可能性 | 相互参照が正しく解決する | リンク修正を依頼 |
 
-!!! info "Auditor independence"
-    Auditors should obtain the validator and schemas directly from the official AIMO Standard release, not from the submitting party, to ensure verification independence.
+!!! info "監査人の独立性"
+    検証の独立性のため、Validator とスキーマは提出者ではなく公式 AIMO Standard リリースから直接取得してください。
 
-## Audit journey
+## 監査の流れ
 
-From this page, the recommended audit journey is:
+このページから推奨される監査の流れは以下のとおりです。
 
-1. **Classification system**: [Taxonomy](../../standard/current/03-taxonomy/) + [Dictionary](../../standard/current/05-dictionary/) — understand the 8-dimension code system
-2. **Evidence structure**: [Evidence Bundle](../../artifacts/evidence-bundle/) — understand bundle TOC and traceability
-3. **Required evidence**: [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST-level checklist by lifecycle
-4. **Framework alignment**: [Coverage Map](../../coverage-map/) + [Methodology](../../coverage-map/methodology/) — see how AIMO maps to external frameworks
-5. **Validation**: [Validator](../../validator/) — run structural consistency checks
-6. **Download**: [Releases](../../releases/) — get release assets and verify checksums
+1. **分類体系**: [Taxonomy](../../standard/current/03-taxonomy/) + [Dictionary](../../standard/current/05-dictionary/) — 8 次元コード体系の理解
+2. **証跡構造**: [Evidence Bundle](../../artifacts/evidence-bundle/) — バンドル目次と追跡可能性の理解
+3. **必要証跡**: [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — ライフサイクル別 MUST チェックリスト
+4. **フレームワーク対応**: [Coverage Map](../../coverage-map/) + [Methodology](../../coverage-map/methodology/) — AIMO と外部フレームワークの対応
+5. **検証**: [Validator](../../validator/) — 構造一貫性チェックの実行
+6. **ダウンロード**: [Releases](../../releases/) — リリース資産の取得とチェックサム検証

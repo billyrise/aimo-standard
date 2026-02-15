@@ -1,49 +1,49 @@
 ---
-description: Overview of AIMO Standard. Defines shared taxonomy, code system, dictionary, evidence templates, and validator checks for AI governance audits.
+description: Visão geral do AIMO Standard. Define taxonomia partilhada, sistema de códigos, dicionário, modelos de evidência e verificações do Validador para auditorias de governação de IA.
 ---
 <!-- aimo:translation_status=translated -->
 
-# Overview
+# Visão geral（Overview）
 
-**AIMO** stands for **AI Management Office**. AIMO Standard defines:
-- a shared taxonomy
-- a code system
-- an initial dictionary
-- an EV template
-- validator checks (spec + minimal reference implementation)
+**AIMO** significa **AI Management Office**. O AIMO Standard define:
+- uma taxonomia partilhada
+- um sistema de códigos
+- um dicionário inicial
+- um modelo EV
+- verificações do Validador (especificação + implementação de referência mínima)
 
-This repository publishes:
-- human-readable spec (HTML)
-- machine-readable artifacts (schemas/templates/examples)
-- official PDF releases
+Este repositório publica:
+- especificação legível por humanos (HTML)
+- artefactos legíveis por máquina (esquemas/modelos/exemplos)
+- lançamentos PDF oficiais
 
-## Positioning: Companion to ISO/IEC 42001 (AIMS)
+## Posicionamento: complemento à ISO/IEC 42001 (AIMS)
 
-AIMO Standard is an **implementation accelerator for evidence readiness and explainability** that can be used to support ISO/IEC 42001–aligned AI Management Systems (AIMS) and to structure audit-ready evidence. It does not replace ISO/IEC 42001 or any other management-system standard; it adds a taxonomy, evidence bundle structure, and coverage mapping that help operationalize and evidence those controls.
+O AIMO Standard é um **acelerador de implementação para preparação de evidência e explicabilidade** que pode ser usado para apoiar Sistemas de Gestão de IA (AIMS) alinhados com ISO/IEC 42001 e para estruturar evidência pronta para auditoria. Não substitui a ISO/IEC 42001 nem qualquer outra norma de sistema de gestão; acrescenta taxonomia, estrutura Evidence Bundle e Coverage Map que ajudam a operacionalizar e evidenciar esses controlos.
 
-**What AIMO is**
+**O que o AIMO fornece**
 
-- Taxonomy and code system for AI governance classification
-- Evidence bundle structure (manifest, object_index, payload_index, integrity)
-- Validator and coverage mapping for traceability
-- Conformance levels (Foundation, Operational, Audit-Ready) — AIMO-only maturity tiers for evidence packaging
+- Taxonomia e sistema de códigos para classificação de governação de IA
+- Estrutura Evidence Bundle (manifest, object_index, payload_index, integridade)
+- Validador e Coverage Map para rastreabilidade
+- Níveis de conformidade (Foundation, Operational, Audit-Ready) — níveis de maturidade exclusivos AIMO para empacotamento de evidência
 
-**What AIMO is not**
+**O que o AIMO não fornece**
 
-- Legal advice
-- ISO certification or a substitute for certification
-- A guarantee of regulatory compliance
-- A replacement for auditor judgment or accredited certification bodies
+- Aconselhamento jurídico
+- Certificação ISO ou substituto de certificação
+- Garantia de conformidade regulamentar
+- Substituição do juízo do auditor ou de organismos de certificação acreditados
 
-**Why now**
+**Porquê agora**
 
-- **ISO/IEC 42006** (published 2025-07) specifies requirements for bodies auditing and certifying AI management systems against ISO/IEC 42001, raising expectations for auditable evidence and traceability.
-- The **EU AI Act** is in progressive application (2025–2027); harmonised standards, when published in the Official Journal, will provide presumption of conformity. The EU AI Office is preparing practical guidelines during 2026 (high-risk classification, Article 50 transparency, incidents, QMS elements).
-- Adopters and certification bodies increasingly use ISO/IEC 42001 as a system layer for AI governance; AIMO helps structure evidence that supports that layer without claiming certification.
+- A **ISO/IEC 42006** (publicada julho 2025) especifica requisitos para organismos que auditam e certificam sistemas de gestão de IA contra a ISO/IEC 42001, elevando as expectativas de evidência auditável e rastreabilidade.
+- O **EU AI Act** está em aplicação progressiva (2025–2027); as normas harmonizadas, quando publicadas no Jornal Oficial, fornecerão presunção de conformidade. O EU AI Office está a preparar orientações práticas durante 2026 (classificação de alto risco, transparência Art. 50, incidentes, elementos QMS).
+- Adotantes e organismos de certificação usam cada vez mais a ISO/IEC 42001 como camada de sistema para governação de IA; o AIMO ajuda a estruturar evidência que suporta essa camada sem reivindicar certificação.
 
-## References
+## Referências
 
-- [ISO/IEC 42006](https://www.iso.org/standard/42006) — Requirements for bodies auditing and certifying AI management systems
-- [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / Commission-aligned; informative)
-- [European Commission — Clear guidelines for AI (Dec 4 2025)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — AI Office guidelines preparation (check Commission news for current URL)
-- [EPRS — EU AI Act implementation timeline (June 2025)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — Parliament briefing (informative)
+- [ISO/IEC 42006](https://www.iso.org/standard/42006) — Requisitos para organismos que auditam e certificam sistemas de gestão de IA
+- [Calendário de aplicação do EU AI Act](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / alinhado com a Comissão; informativo)
+- [European Commission — Clear guidelines for AI (4 dez 2025)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — Preparação das orientações da AI Office (consultar notícias da Comissão para URL atual)
+- [EPRS — EU AI Act implementation timeline (jun 2025)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — Briefing do Parlamento (informativo)

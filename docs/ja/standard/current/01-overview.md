@@ -1,49 +1,49 @@
 ---
-description: Overview of AIMO Standard. Defines shared taxonomy, code system, dictionary, evidence templates, and validator checks for AI governance audits.
+description: AIMO Standard の概要。AIガバナンス監査のための共通タクソノミー、コード体系、辞書、証跡テンプレート、Validator チェックを定義。
 ---
 <!-- aimo:translation_status=translated -->
 
-# Overview
+# 概要（Overview）
 
-**AIMO** stands for **AI Management Office**. AIMO Standard defines:
-- a shared taxonomy
-- a code system
-- an initial dictionary
-- an EV template
-- validator checks (spec + minimal reference implementation)
+**AIMO** は **AI Management Office** を表します。AIMO Standard は以下を定義します：
+- 共通タクソノミー
+- コード体系
+- 初期辞書
+- EV テンプレート
+- Validator チェック（仕様＋最小参照実装）
 
-This repository publishes:
-- human-readable spec (HTML)
-- machine-readable artifacts (schemas/templates/examples)
-- official PDF releases
+本リポジトリは以下を公開します：
+- 人間可読な仕様（HTML）
+- 機械可読なアーティファクト（スキーマ／テンプレート／例）
+- 公式 PDF リリース
 
-## Positioning: Companion to ISO/IEC 42001 (AIMS)
+## 位置づけ：ISO/IEC 42001（AIMS）のコンパニオン
 
-AIMO Standard is an **implementation accelerator for evidence readiness and explainability** that can be used to support ISO/IEC 42001–aligned AI Management Systems (AIMS) and to structure audit-ready evidence. It does not replace ISO/IEC 42001 or any other management-system standard; it adds a taxonomy, evidence bundle structure, and coverage mapping that help operationalize and evidence those controls.
+AIMO Standard は、**証跡準備と説明可能性のための実装アクセラレータ**であり、ISO/IEC 42001 に整合した AI マネジメントシステム（AIMS）の支援と監査可能な証跡の構造化に利用できます。ISO/IEC 42001 や他のマネジメントシステム規格に**取って代わるものではなく**、タクソノミー、Evidence Bundle 構造、Coverage Map を追加し、それらのコントロールの運用化と証跡化を支援します。
 
-**What AIMO is**
+**AIMO が提供するもの**
 
-- Taxonomy and code system for AI governance classification
-- Evidence bundle structure (manifest, object_index, payload_index, integrity)
-- Validator and coverage mapping for traceability
-- Conformance levels (Foundation, Operational, Audit-Ready) — AIMO-only maturity tiers for evidence packaging
+- AI ガバナンス分類のためのタクソノミーとコード体系
+- Evidence Bundle 構造（manifest、object_index、payload_index、整合性）
+- 追跡可能性のための Validator と Coverage Map
+- 適合レベル（Foundation、Operational、Audit-Ready）— 証跡パッケージングの AIMO 独自成熟度段階
 
-**What AIMO is not**
+**AIMO が提供しないもの**
 
-- Legal advice
-- ISO certification or a substitute for certification
-- A guarantee of regulatory compliance
-- A replacement for auditor judgment or accredited certification bodies
+- 法的助言
+- ISO 認証または認証の代替
+- 規制適合の保証
+- 監査人判断や認定認証機関の代替
 
-**Why now**
+**なぜ今か**
 
-- **ISO/IEC 42006** (published 2025-07) specifies requirements for bodies auditing and certifying AI management systems against ISO/IEC 42001, raising expectations for auditable evidence and traceability.
-- The **EU AI Act** is in progressive application (2025–2027); harmonised standards, when published in the Official Journal, will provide presumption of conformity. The EU AI Office is preparing practical guidelines during 2026 (high-risk classification, Article 50 transparency, incidents, QMS elements).
-- Adopters and certification bodies increasingly use ISO/IEC 42001 as a system layer for AI governance; AIMO helps structure evidence that supports that layer without claiming certification.
+- **ISO/IEC 42006**（2025-07 発行）は、ISO/IEC 42001 に基づく AI マネジメントシステムの監査・認証を行う機関の要件を規定し、監査可能な証跡と追跡可能性への期待を高めています。
+- **EU AI Act** は段階的適用中（2025–2027）。官報に公布された調和標準は適合の推定を提供します。EU AI Office は 2026 年に実務ガイドライン（ハイリスク分類、Art 50 透明性、インシデント、QMS 要素）の準備を進めています。
+- 採用者と認証機関は、AI ガバナンスのシステム層として ISO/IEC 42001 を利用するケースが増えており、AIMO は認証を主張せずにその層を支える証跡の構造化を支援します。
 
-## References
+## 参照
 
-- [ISO/IEC 42006](https://www.iso.org/standard/42006) — Requirements for bodies auditing and certifying AI management systems
-- [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / Commission-aligned; informative)
-- [European Commission — Clear guidelines for AI (Dec 4 2025)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — AI Office guidelines preparation (check Commission news for current URL)
-- [EPRS — EU AI Act implementation timeline (June 2025)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — Parliament briefing (informative)
+- [ISO/IEC 42006](https://www.iso.org/standard/42006) — AI マネジメントシステムの監査・認証を行う機関の要件
+- [EU AI Act 実施タイムライン](https://artificialintelligenceact.eu/implementation-timeline)（AI Act Service Desk／欧州委員会整合；参考）
+- [European Commission — Clear guidelines for AI (2025年12月4日)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — AI Office ガイドライン準備（最新 URL は委員会ニュースを確認）
+- [EPRS — EU AI Act implementation timeline (2025年6月)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — 議会ブリーフィング（参考）

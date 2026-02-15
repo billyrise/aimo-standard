@@ -1,22 +1,22 @@
 ---
-description: Scope of AIMO Standard. Defines what the standard covers including AI classification, evidence requirements, and boundaries for enterprise governance.
+description: AIMO Standard 范围。定义标准涵盖内容，包括 AI 分类、证据要求和企业治理边界。
 ---
 <!-- aimo:translation_status=translated -->
 
-# Scope
+# 范围（Scope）
 
-This standard specifies artifacts and validation rules to enable consistent analysis and reporting.
+本标准规定制品与验证规则，以实现一致的分析与报告。
 
-Out of scope:
-- proprietary inference logic
-- vendor-specific scoring/weighting implementations
+范围外：
+- 专有推理逻辑
+- 供应商特定的评分/加权实现
 
-## Scope alignment with Management System standards (PDCA)
+## 与管理体系标准（PDCA）的范围对齐
 
-AIMO adds an **AI-specific taxonomy and evidence artifacts** that help operationalize management-system controls (Plan–Do–Check–Act) and make outputs auditable. It can be used **alongside** ISO/IEC 42001 and other management-system standards; it does not replace their texts. Coverage Map and profiles provide informative mappings only — adopters must verify against the authoritative framework.
+AIMO 增加**AI 专用分类法与证据制品**，以帮助实施管理体系控制（Plan–Do–Check–Act）并使产出可审计。可与 ISO/IEC 42001 及其他管理体系标准**同时使用**；不替代其正文。Coverage Map 与配置文件仅提供参考性映射 — 采用者须对照权威框架自行核实。
 
-**Adopter responsibilities**
+**采用者责任**
 
-- Verify scope and applicability against the relevant management-system or regulatory text.
-- Maintain evidence and run the validator as part of audit preparation; certification decisions remain with accredited certification bodies.
-- See [Responsibility Boundary](../../governance/responsibility-boundary/) for what AIMO does and does not provide.
+- 根据相关管理体系或法规正文核实范围与适用性。
+- 维护证据并在审计准备中运行验证器；认证决定由认可认证机构做出。
+- AIMO 提供与不提供的内容见 [Responsibility Boundary](../../governance/responsibility-boundary/)。

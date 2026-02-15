@@ -1,47 +1,47 @@
 ---
-description: ISO/IEC 42001 certification readiness toolkit. Fastest path to audit-ready evidence aligned to ISO 42001 using AIMO artifacts. Supports readiness only; does not confer certification.
+description: Kit de preparación para certificación ISO/IEC 42001. Ruta más corta hacia evidencia lista para auditoría alineada con ISO 42001 usando artefactos AIMO. Solo apoya la preparación; no confiere certificación.
 ---
 <!-- aimo:translation_status=translated -->
 
-# ISO/IEC 42001 Certification Readiness Toolkit
+# Kit de preparación para certificación ISO/IEC 42001
 
-This page is a **practical, adoption-oriented** guide to producing **audit-ready evidence** aligned to ISO/IEC 42001 using AIMO artifacts. It **supports readiness**; it does **not** confer certification. Certification decisions remain with **accredited certification bodies**.
+Esta página es una guía **práctica y orientada a la adopción** para producir **evidencia lista para auditoría** alineada con ISO/IEC 42001 usando artefactos AIMO. **Apoya la preparación**; **no** confiere certificación. Las decisiones de certificación corresponden a **organismos de certificación acreditados**.
 
-## Goal
+## Objetivo
 
-Produce a structured, validator-checked Evidence Bundle that supports ISO/IEC 42001–type controls (context, leadership, planning, support, operation, performance evaluation, improvement) so that auditors can efficiently locate and verify evidence.
+Producir un Evidence Bundle estructurado y comprobado por el validador que apoye controles tipo ISO/IEC 42001 (contexto, liderazgo, planificación, soporte, operación, evaluación del desempeño, mejora), de modo que los auditores puedan localizar y verificar la evidencia con eficacia.
 
-## 5-step workflow
+## Flujo de trabajo en 5 pasos
 
-| Step | Action |
+| Paso | Acción |
 | --- | --- |
-| **1. Establish scope and AI inventory** | Define scope (scope_ref); classify AI systems using the [taxonomy](../../standard/current/03-taxonomy/) and [dictionary](../../standard/current/05-dictionary/). |
-| **2. Set management-system artifacts** | Create or reference policies, roles, and PDCA-aligned artifacts. Use [AIMO-MS / AIMO-Controls](../../conformance/) as a structure; reference [Evidence Pack Template](../../standard/current/06-ev-template/) (EP-01..EP-07). |
-| **3. Produce Evidence Bundle + minimum evidence** | Build manifest, object_index, payload_index, hash_chain, signing per [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/). Include request, review, exception, renewal, change_log per [Minimum Evidence Requirements](minimum-evidence.md). |
-| **4. Run validator + checksums + change control** | Run `python validator/src/validate.py <bundle_path> --validate-profiles`. Record validator version and output. Generate SHA-256 checksums; maintain change log entries that reference impacted objects. |
-| **5. Prepare audit pack** | Package the bundle (zip or equivalent); provide checksums. Optionally attach [audit report output](../../standard/current/07-validator/) (audit-json / audit-html). Use versioned URLs (e.g. `/0.1.2/`) when citing the standard. For Audit-Ready level, add [Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index) and [External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) section. |
+| **1. Establecer alcance e inventario de IA** | Definir alcance (scope_ref); clasificar sistemas de IA con la [taxonomía](../../standard/current/03-taxonomy/) y el [diccionario](../../standard/current/05-dictionary/). |
+| **2. Definir artefactos del sistema de gestión** | Crear o referenciar políticas, roles y artefactos alineados con PDCA. Usar [AIMO-MS / AIMO-Controls](../../conformance/) como estructura; referenciar [Plantilla Evidence Pack](../../standard/current/06-ev-template/) (EP-01..EP-07). |
+| **3. Producir Evidence Bundle y evidencia mínima** | Construir manifest, object_index, payload_index, hash_chain, signing según [estructura del Paquete de Evidencia](../../standard/current/09-evidence-bundle-structure/). Incluir request, review, exception, renewal, change_log según [Requisitos mínimos de evidencia](minimum-evidence.md). |
+| **4. Ejecutar validador + sumas de comprobación + control de cambios** | Ejecutar `python validator/src/validate.py <bundle_path> --validate-profiles`. Registrar versión del validador y salida. Generar sumas SHA-256; mantener entradas del registro de cambios que referencien los objetos afectados. |
+| **5. Preparar paquete de auditoría** | Empaquetar el paquete (zip o similar); proporcionar sumas de comprobación. Opcionalmente adjuntar [salida del informe de auditoría](../../standard/current/07-validator/) (audit-json / audit-html). Usar URLs versionadas (ej. `/0.1.2/`) al citar el estándar. Para nivel Audit-Ready, añadir [Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index) y [External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is). |
 
-## Checklist: ISO 42001 clause family → AIMO artifacts → evidence outputs
+## Lista de comprobación: familia de cláusulas ISO 42001 → artefactos AIMO → salidas de evidencia
 
-| ISO 42001 clause family | AIMO artifacts | Evidence outputs |
+| Familia de cláusulas ISO 42001 | Artefactos AIMO | Salidas de evidencia |
 | --- | --- | --- |
-| Context (4.1) | Summary, Dictionary, scope_ref | manifest scope_ref; Summary; Dictionary |
-| Leadership / Policy (5.x) | Summary, review, dictionary | Review records; policy references |
-| Planning (6.x) | request, review, exception, EV, Dictionary | Request/approval; risk/objectives in EV or Dictionary |
-| Support (7.x) | Summary, review, EV, change_log | Documentation; competence/awareness evidence |
-| Operation (8.x) | EV, request, review, exception | Operational controls; applicability |
-| Performance evaluation (9.x) | EV, change_log, review, renewal | Monitoring; internal audit; management review |
-| Improvement (10.x) | exception, renewal, change_log | Corrective action; continual improvement |
+| Contexto (4.1) | Summary, Dictionary, scope_ref | scope_ref del manifiesto; Summary; Dictionary |
+| Liderazgo / Política (5.x) | Summary, review, dictionary | Registros de revisión; referencias a política |
+| Planificación (6.x) | request, review, exception, EV, Dictionary | Solicitud/aprobación; riesgo/objetivos en EV o Dictionary |
+| Soporte (7.x) | Summary, review, EV, change_log | Documentación; evidencia de competencia/concienciación |
+| Operación (8.x) | EV, request, review, exception | Controles operativos; aplicabilidad |
+| Evaluación del desempeño (9.x) | EV, change_log, review, renewal | Seguimiento; auditoría interna; revisión por la dirección |
+| Mejora (10.x) | exception, renewal, change_log | Acción correctiva; mejora continua |
 
-See [Coverage Map — ISO/IEC 42001](../../coverage-map/iso-42001/) and [ISO/IEC 42006](https://www.iso.org/standard/42006) for audit-body expectations.
+Véase [Coverage Map — ISO/IEC 42001](../../coverage-map/iso-42001/) y [ISO/IEC 42006](https://www.iso.org/standard/42006) para expectativas de organismos de auditoría.
 
-## Safe language
+## Lenguaje seguro
 
-- **Use:** "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies."
-- **Do not use:** "ISO 42001 certified by AIMO" or "AIMO certifies compliance."
+- **Usar:** "Utilizamos artefactos AIMO para apoyar la preparación para ISO/IEC 42001; las decisiones de certificación corresponden a organismos de certificación acreditados."
+- **No usar:** "ISO 42001 certificado por AIMO" o "AIMO certifica la conformidad."
 
-## Related
+## Relacionado
 
-- [Conformance](../../conformance/) — Levels (Foundation, Operational, Audit-Ready) and claim language
-- [Trust Package](../../governance/trust-package/) — Auditor-ready materials
-- [Responsibility Boundary](../../governance/responsibility-boundary/) — What AIMO does and does not provide
+- [Conformidad](../../conformance/) — Niveles (Foundation, Operational, Audit-Ready) y lenguaje de declaración
+- [Trust Package](../../governance/trust-package/) — Materiales listos para auditor
+- [Responsibility Boundary](../../governance/responsibility-boundary/) — Qué proporciona y no proporciona AIMO

@@ -1,47 +1,47 @@
 ---
-description: ISO/IEC 42001 certification readiness toolkit. Fastest path to audit-ready evidence aligned to ISO 42001 using AIMO artifacts. Supports readiness only; does not confer certification.
+description: ISO/IEC 42001 认证就绪工具包。使用 AIMO 制品与 ISO 42001 对齐的审计就绪证据的最短路径。仅支持就绪；不授予认证。
 ---
 <!-- aimo:translation_status=translated -->
 
-# ISO/IEC 42001 Certification Readiness Toolkit
+# ISO/IEC 42001 认证就绪工具包
 
-This page is a **practical, adoption-oriented** guide to producing **audit-ready evidence** aligned to ISO/IEC 42001 using AIMO artifacts. It **supports readiness**; it does **not** confer certification. Certification decisions remain with **accredited certification bodies**.
+本页为使用 AIMO 制品产出与 **ISO/IEC 42001** 对齐的**审计就绪证据**的**实务与采用导向**指南。旨在**支持就绪**，**不**授予认证。认证决定由**认可认证机构**作出。
 
-## Goal
+## 目标
 
-Produce a structured, validator-checked Evidence Bundle that supports ISO/IEC 42001–type controls (context, leadership, planning, support, operation, performance evaluation, improvement) so that auditors can efficiently locate and verify evidence.
+产出经验证器检查的、支持 ISO/IEC 42001 型控制（语境、领导、策划、支持、运行、绩效评价、改进）的 Evidence Bundle，使审计方能高效定位并验证证据。
 
-## 5-step workflow
+## 五步工作流
 
-| Step | Action |
+| 步骤 | 行动 |
 | --- | --- |
-| **1. Establish scope and AI inventory** | Define scope (scope_ref); classify AI systems using the [taxonomy](../../standard/current/03-taxonomy/) and [dictionary](../../standard/current/05-dictionary/). |
-| **2. Set management-system artifacts** | Create or reference policies, roles, and PDCA-aligned artifacts. Use [AIMO-MS / AIMO-Controls](../../conformance/) as a structure; reference [Evidence Pack Template](../../standard/current/06-ev-template/) (EP-01..EP-07). |
-| **3. Produce Evidence Bundle + minimum evidence** | Build manifest, object_index, payload_index, hash_chain, signing per [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/). Include request, review, exception, renewal, change_log per [Minimum Evidence Requirements](minimum-evidence.md). |
-| **4. Run validator + checksums + change control** | Run `python validator/src/validate.py <bundle_path> --validate-profiles`. Record validator version and output. Generate SHA-256 checksums; maintain change log entries that reference impacted objects. |
-| **5. Prepare audit pack** | Package the bundle (zip or equivalent); provide checksums. Optionally attach [audit report output](../../standard/current/07-validator/) (audit-json / audit-html). Use versioned URLs (e.g. `/0.1.2/`) when citing the standard. For Audit-Ready level, add [Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index) and [External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) section. |
+| **1. 确定范围与 AI 清单** | 用 scope_ref 定义范围；使用 [分类法](../../standard/current/03-taxonomy/) 与 [字典](../../standard/current/05-dictionary/) 对 AI 系统分类。 |
+| **2. 建立管理体系制品** | 创建或引用政策、角色及与 PDCA 对齐的制品。以 [AIMO-MS / AIMO-Controls](../../conformance/) 为结构；参考 [Evidence Pack 模板](../../standard/current/06-ev-template/)（EP-01..EP-07）。 |
+| **3. 产出 Evidence Bundle 与最低证据** | 按 [Evidence Bundle 结构](../../standard/current/09-evidence-bundle-structure/) 构建 manifest、object_index、payload_index、hash_chain、signing。按 [最低证据要求](minimum-evidence.md) 包含 request、review、exception、renewal、change_log。 |
+| **4. 运行验证器 + 校验和 + 变更控制** | 运行 `python validator/src/validate.py <bundle_path> --validate-profiles`。记录验证器版本与输出。生成 SHA-256 校验和；维护引用受影响对象的 change log。 |
+| **5. 准备审计包** | 将包打包（zip 等）；提供校验和。可选附上 [审计报告输出](../../standard/current/07-validator/)（audit-json / audit-html）。引用标准时使用带版本 URL（如 `/0.1.2/`）。Audit-Ready 级别增加 [Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index) 与 [External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is)。 |
 
-## Checklist: ISO 42001 clause family → AIMO artifacts → evidence outputs
+## 清单：ISO 42001 条款族 → AIMO 制品 → 证据输出
 
-| ISO 42001 clause family | AIMO artifacts | Evidence outputs |
+| ISO 42001 条款族 | AIMO 制品 | 证据输出 |
 | --- | --- | --- |
-| Context (4.1) | Summary, Dictionary, scope_ref | manifest scope_ref; Summary; Dictionary |
-| Leadership / Policy (5.x) | Summary, review, dictionary | Review records; policy references |
-| Planning (6.x) | request, review, exception, EV, Dictionary | Request/approval; risk/objectives in EV or Dictionary |
-| Support (7.x) | Summary, review, EV, change_log | Documentation; competence/awareness evidence |
-| Operation (8.x) | EV, request, review, exception | Operational controls; applicability |
-| Performance evaluation (9.x) | EV, change_log, review, renewal | Monitoring; internal audit; management review |
-| Improvement (10.x) | exception, renewal, change_log | Corrective action; continual improvement |
+| 语境 (4.1) | Summary、Dictionary、scope_ref | manifest scope_ref；Summary；Dictionary |
+| 领导/方针 (5.x) | Summary、review、dictionary | 审查记录；方针引用 |
+| 策划 (6.x) | request、review、exception、EV、Dictionary | 申请/批准；EV 或 Dictionary 中的风险/目标 |
+| 支持 (7.x) | Summary、review、EV、change_log | 文档；能力/意识证据 |
+| 运行 (8.x) | EV、request、review、exception | 运行控制；适用性 |
+| 绩效评价 (9.x) | EV、change_log、review、renewal | 监测；内审；管理评审 |
+| 改进 (10.x) | exception、renewal、change_log | 纠正措施；持续改进 |
 
-See [Coverage Map — ISO/IEC 42001](../../coverage-map/iso-42001/) and [ISO/IEC 42006](https://www.iso.org/standard/42006) for audit-body expectations.
+参见 [Coverage Map — ISO/IEC 42001](../../coverage-map/iso-42001/) 与 [ISO/IEC 42006](https://www.iso.org/standard/42006) 了解审计机构预期。
 
-## Safe language
+## 稳妥表述
 
-- **Use:** "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies."
-- **Do not use:** "ISO 42001 certified by AIMO" or "AIMO certifies compliance."
+- **宜用**：“我们使用 AIMO 制品支持 ISO/IEC 42001 就绪；认证决定由认可认证机构作出。”
+- **勿用**：“经 AIMO 认证符合 ISO 42001”或“AIMO 认证合规”。
 
-## Related
+## 相关
 
-- [Conformance](../../conformance/) — Levels (Foundation, Operational, Audit-Ready) and claim language
-- [Trust Package](../../governance/trust-package/) — Auditor-ready materials
-- [Responsibility Boundary](../../governance/responsibility-boundary/) — What AIMO does and does not provide
+- [符合性](../../conformance/) — 级别（Foundation、Operational、Audit-Ready）与声明用语
+- [Trust Package](../../governance/trust-package/) — 面向审计方的材料
+- [Responsibility Boundary](../../governance/responsibility-boundary/) — AIMO 提供与不提供的内容
