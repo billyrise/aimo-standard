@@ -66,5 +66,5 @@ description: AIMO 標準安全政策 - 漏洞報告、揭露程序，以及 AI �
 
 ## 相關頁面
 
-- [信任套件](../trust-package/) — 稽核員就緒材料
-- [治理](../) — 專案治理
+- [信任套件](trust-package.md) — 稽核員就緒材料
+- [治理](index.md) — 專案治理

@@ -66,5 +66,5 @@ Consulte [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECU
 
 ## Páginas Relacionadas
 
-- [Paquete de Confianza](../trust-package/) — Materiales listos para auditores
-- [Gobernanza](../) — Gobernanza del proyecto
+- [Paquete de Confianza](trust-package.md) — Materiales listos para auditores
+- [Gobernanza](index.md) — Gobernanza del proyecto

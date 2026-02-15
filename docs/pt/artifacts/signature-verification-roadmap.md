@@ -36,5 +36,5 @@ This roadmap is subject to change; the normative specification for each version 
 
 ## References
 
-- [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/) — normative root and manifest
-- [v0.2 roadmap](../../standard/current/10-roadmap-v0.2/) — broader roadmap (object model, Evidence-as-Code, profiles)
+- [Evidence Bundle structure](../standard/current/09-evidence-bundle-structure.md) — normative root and manifest
+- [v0.2 roadmap](../standard/current/10-roadmap-v0.2.md) — broader roadmap (object model, Evidence-as-Code, profiles)

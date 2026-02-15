@@ -66,5 +66,5 @@ description: AIMO 标准安全政策 - AI治理实施的漏洞报告、披露程
 
 ## 相关页面
 
-- [信任包](../trust-package/) — 审计师就绪材料
-- [治理](../) — 项目治理
+- [信任包](trust-package.md) — 审计师就绪材料
+- [治理](index.md) — 项目治理

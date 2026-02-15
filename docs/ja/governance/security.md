@@ -66,5 +66,5 @@ description: AIMO Standardセキュリティポリシー - 脆弱性報告、開
 
 ## 関連ページ
 
-- [Trust Package](../trust-package/) — 監査対応資料
-- [ガバナンス](../) — プロジェクトガバナンス
+- [Trust Package](trust-package.md) — 監査対応資料
+- [ガバナンス](index.md) — プロジェクトガバナンス
