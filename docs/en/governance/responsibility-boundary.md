@@ -20,6 +20,8 @@ This page defines what the AIMO Standard provides and does not provide, the assu
 | --- | --- |
 | **Legal advice** | AIMO does not interpret laws or regulations. Consult qualified legal counsel for regulatory compliance. |
 | **Compliance certification** | Using AIMO does not certify compliance with any regulation or framework (ISO 42001, EU AI Act, NIST AI RMF, etc.). |
+| **"ISO certified by AIMO"** | AIMO does not issue certifications. Certification is performed by accredited certification bodies. |
+| **"EU AI Act compliant because of AIMO"** | AIMO structures evidence; it does not guarantee or certify regulatory compliance. |
 | **Risk assessment** | AIMO structures evidence but does not perform or validate AI risk assessments. |
 | **Technical controls** | AIMO does not implement access control, encryption, or other security controls; it documents expectations. |
 | **Audit execution** | AIMO provides materials for auditors but does not conduct audits. |
@@ -71,6 +73,13 @@ The following RACI matrix clarifies responsibilities across AIMO Standard, Adopt
 
 !!! warning "Non-certification notice"
     AIMO Standard is informative; it does not certify compliance or provide legal advice. Audit conclusions and conformity assessments are the sole responsibility of qualified auditors and legal professionals.
+
+## Claims policy
+
+| Acceptable | Unacceptable |
+| --- | --- |
+| "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator." | <!-- UNACCEPTABLE_CLAIMS_EXAMPLES --> "EU AI Act compliant", "ISO 42001 certified", "government approved" <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES --> |
+| "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies." | Claiming that AIMO certifies compliance or provides legal advice. |
 
 ## Non-overclaim statement
 

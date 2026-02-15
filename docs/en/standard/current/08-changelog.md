@@ -84,6 +84,15 @@ Each official release includes:
 
 **Summary:** PATCH release (non-breaking). Normalizes EU AI Act references in docs/SSOT (informative mapping only; not legal advice). Improves Annex IV sample bundle completeness (signatures, hashes, payload). Adds optional JNC schema and validator check. Adds validator audit report outputs (audit-json, audit-html). See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
 
+#### Repair-deploy addendum (docs + mappings) — 2026-02-15
+
+- Added ISO/IEC 42006 coverage map page.
+- Expanded Conformance into AIMO Conformity Framework aligned to ISO 42001 (informative); levels Foundation, Operational, Audit-Ready.
+- Added ISO 42001 certification readiness toolkit (artifact).
+- Added EU AI Act timeline (02 Feb / 02 Aug 2025–2027), harmonised standards notes, and 2026 AI Office guidelines (informative).
+- Added new profiles and schema enum additions (ISO_42006, EU_AI_ACT_HIGH_RISK, EU_GPAI_COP, NIST_AI_600_1, UK_ATRS, JP_GOV_GENAI_PROCUREMENT); no version bump.
+- **No version bump:** repair-deploy updates the already released v0.1.2 snapshot.
+
 ### Version 0.1.1 {#version-011}
 
 **Summary:** PATCH release. Optional signature metadata for verification, Coverage Map audit_questions, Normative/Informative and governance clarifications, v0.2 roadmap. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.

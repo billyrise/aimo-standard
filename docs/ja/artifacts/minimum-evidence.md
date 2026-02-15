@@ -1,114 +1,128 @@
 ---
-description: AIMO最小証跡要件。ライフサイクル別（申請、レビュー、承認、変更、更新）のMUSTレベルチェックリストでAIガバナンス証跡準備を支援。
+description: AIMO minimum evidence requirements. MUST-level checklist by lifecycle (request, review, approval, change, renewal) for AI governance evidence readiness.
 ---
 
-# Minimum Evidence Requirements（最小証跡要件）
+# Minimum Evidence Requirements
 
-本ページは、監査人・実装者向けの **Minimum Evidence Requirements** チェックリストです。ライフサイクル別に整理した MUST レベルの最小証跡要件を定義します。説明可能性と証跡準備を支えるものであり、法的助言の提供や適合の保証は行いません。
+This page is the **Minimum Evidence Requirements** checklist for auditors and implementers. It defines the minimum evidence requirements as a MUST-level checklist, grouped by lifecycle. It supports explainability and evidence readiness; it does not provide legal advice or guarantee compliance.
 
-提出物の準備・レビュー時は [Evidence Bundle](../evidence-bundle/) と [Validator](../../standard/current/07-validator/) とあわせて本ページを参照してください。
+Use this page together with [Evidence Bundle](../evidence-bundle/) and the [Validator](../../standard/current/07-validator/) when preparing or reviewing submissions.
 
-## 1) Request（申請）
+## 1) Request
 
-- **MUST フィールド**: 識別子、タイムスタンプ、actor/role、scope（申請内容）、rationale（理由）。
-- **MUST リンク**: request id を review および利用を記録する EV 項目から参照する。
-- **示すこと**: 利用が承認・実施前に申請されスコープが定められていること。
+- **MUST fields**: identifier, timestamp(s), actor/role, scope (what is requested), rationale (why).
+- **MUST linkages**: request id referenced by review and by EV items that record the use.
+- **What it proves**: that use was requested and scoped before approval and use.
 
-## 2) Review / Approval（審査/承認）
+## 2) Review / Approval
 
-- **MUST フィールド**: 識別子、タイムスタンプ、actor/role、decision（承認/却下/条件付き）、scope、rationale、request への参照。
-- **MUST リンク**: review id を EV および後続の exception/renewal から参照する。
-- **示すこと**: 利用（または例外）の前に定義された審査・承認が行われていること。
+- **MUST fields**: identifier, timestamp(s), actor/role, decision (approved/rejected/conditional), scope, rationale, reference to request.
+- **MUST linkages**: review id referenced by EV and by any exception or renewal that follows.
+- **What it proves**: that a defined review and approval occurred before use (or exception).
 
-## 3) Exception（例外）
+## 3) Exception
 
-- **MUST フィールド**: 識別子、タイムスタンプ、scope、expiry（期限）、compensating controls、rationale、review/request への参照。
-- **MUST リンク**: exception → 代替統制；exception → 有効期限；exception → renewal（再評価時期）。
-- **示すこと**: 逸脱が有効期限付きであり、代替統制と renewal に紐づいていること。
+- **MUST fields**: identifier, timestamp(s), scope, expiry (or deadline), compensating controls, rationale, reference to review/request.
+- **MUST linkages**: exception → compensating controls; exception → expiry; exception → renewal (when re-evaluation is due).
+- **What it proves**: that deviations are time-bound, have compensating controls, and are linked to renewal.
 
-## 4) Renewal / Re-evaluation（更新/再評価）
+## 4) Renewal / Re-evaluation
 
-- **MUST フィールド**: 識別子、タイムスタンプ、actor/role、decision（更新/取り消し/条件付き）、先行 exception/request/review/EV への参照。
-- **MUST リンク**: renewal は更新対象の exception または承認を参照；EV 項目は renewal id を参照可能。
-- **示すこと**: 例外・承認が定義に基づき再評価され、更新または取り消しされていること。
+- **MUST fields**: identifier, timestamp(s), actor/role, decision (renewed/revoked/conditional), references to prior exception/request/review/EV.
+- **MUST linkages**: renewal references the exception or approval being renewed; EV items can reference renewal id.
+- **What it proves**: that exceptions and approvals are re-evaluated and renewed or revoked on a defined basis.
 
-## 5) Change Log（変更管理）
+## 5) Change Log
 
-- **MUST フィールド**: 識別子、タイムスタンプ、actor/role、変更内容、references（変更対象の EV/request/review/exception/renewal 等）。
-- **MUST リンク**: change log エントリは変更対象アーティファクトを参照する。
-- **示すこと**: バンドルまたはその内容の変更が記録され追跡可能であること。
+- **MUST fields**: identifier, timestamp, actor/role, change description, references (e.g. to EV, request, review, exception, renewal affected).
+- **MUST linkages**: change log entries reference the artifacts they modify or that trigger the change.
+- **What it proves**: that changes to the bundle or its contents are recorded and traceable.
 
-## 6) Integrity & Access（完全性/アクセス制御）
+## 6) Integrity & Access
 
-証跡の完全性とアクセス制御は監査の依拠に不可欠である。AIMO は特定の技術的統制を規定しないが、採用者はこれらの期待事項がどのように満たされているかを文書化すべきである。
+Evidence integrity and access control are essential for audit reliance. While AIMO does not prescribe specific technical controls, adopters should document how these expectations are met.
 
-### アクセス制御の指針
+### Access control guidance
 
-| 観点 | 指針 |
+| Aspect | Guidance |
 | --- | --- |
-| **ロールベースアクセス** | ロール（証跡作成者、審査者、監査人、管理者等）を定義し、誰が証跡を作成・閲覧・更新・削除できるかを文書化する。 |
-| **最小権限** | 必要最小限のアクセスを付与し、書き込み権限を承認された担当者に制限する。 |
-| **アクセスログ** | 監査証跡のため、アクセスイベント（誰が、いつ、何を）を記録する。 |
-| **職務分離** | 可能な場合、証跡作成と承認のロールを分離する。 |
+| **Role-based access** | Define roles (e.g., evidence creator, reviewer, auditor, admin) and document who can create, read, update, or delete evidence. |
+| **Least privilege** | Grant minimum necessary access; restrict write access to authorized personnel. |
+| **Access logging** | Log access events (who, when, what) for audit trail purposes. |
+| **Separation of duties** | Where practical, separate evidence creation from approval roles. |
 
-### 保持期間の指針
+### Retention guidance
 
-| 観点 | 指針 |
+| Aspect | Guidance |
 | --- | --- |
-| **保持期間** | 規制要件と組織ポリシーに基づき保持期間を定義・文書化する（例：財務監査では5〜7年）。 |
-| **保持スケジュール** | どの証跡を、どのくらいの期間保持し、いつ廃棄可能かを示すスケジュールを維持する。 |
-| **訴訟ホールド** | 訴訟・調査のため通常の保持・削除を停止する訴訟ホールドプロセスを支援する。 |
+| **Retention period** | Define and document retention periods based on regulatory requirements and organizational policy (e.g., 5-7 years for financial audits). |
+| **Retention schedule** | Maintain a schedule showing what evidence is retained, for how long, and when it can be disposed. |
+| **Legal hold** | Support legal hold processes that suspend normal retention/deletion for litigation or investigation. |
 
-### 不変性オプション
+### Immutability options
 
-| オプション | 説明 |
+| Option | Description |
 | --- | --- |
-| **暗号学的ハッシュ** | 証跡ファイルに対し SHA-256（またはより強力な）ハッシュを生成し、検証用にハッシュを別途保管する。 |
-| **WORM ストレージ** | 証跡アーカイブに Write-Once-Read-Many ストレージを使用し、変更を防止する。 |
-| **追記専用ログ** | 変更追跡に追記専用の監査ログを使用する。 |
-| **デジタル署名** | 証跡バンドルに署名し、作成者を証明し改ざんを検出する。 |
+| **Cryptographic hashing** | Generate SHA-256 (or stronger) hashes for evidence files; store hashes separately for verification. |
+| **WORM storage** | Use Write-Once-Read-Many storage for evidence archives to prevent modification. |
+| **Append-only logs** | Use append-only audit logs for change tracking. |
+| **Digital signatures** | Sign evidence bundles to prove authorship and detect tampering. |
 
-### 監査証跡の期待事項
+### Audit trail expectations
 
-| 要素 | 文書化すべき内容 |
+| Element | What to document |
 | --- | --- |
-| **変更ログ** | 誰が、何を、いつ、なぜ変更したかを記録する（Change Log ライフサイクルグループ参照）。 |
-| **アクセスログ** | 誰が、いつ、何のために証跡にアクセスしたかを記録する。 |
-| **システムログ** | 証跡の完全性主張を支える関連システムログ（認証、認可）を保持する。 |
-| **検証記録** | 定期的な完全性検証（ハッシュチェック、監査レビュー）を文書化する。 |
+| **Change log** | Record who changed what, when, and why (see Change Log lifecycle group). |
+| **Access log** | Record who accessed evidence, when, and for what purpose. |
+| **System logs** | Retain relevant system logs (authentication, authorization) that support evidence integrity claims. |
+| **Verification records** | Document periodic integrity verification (hash checks, audit reviews). |
 
-### 示すこと
+### What it proves
 
-- **証跡が保全されている**: 完全性メカニズム（ハッシュ、WORM、署名）により、証跡が改ざんされていないことを示す。
-- **アクセスが制御されている**: アクセスログとロール定義により、誰がアクセス権を持ち、最小権限が適用されていることを示す。
-- **監査の依拠が支えられている**: これらの要素を合わせて、監査人に証跡の信頼性への確信を与える。
+- **Evidence is preserved**: integrity mechanisms (hashing, WORM, signatures) demonstrate that evidence has not been tampered with.
+- **Access is controlled**: access logs and role definitions show who had access and that least privilege was applied.
+- **Audit reliance is supported**: together, these elements give auditors confidence in the reliability of evidence.
 
-### 推奨運用プロファイル
+### Recommended operational profiles
 
-リスク許容度と規制要件に基づきプロファイルを選択する。これらは推奨であり、義務ではない。
+Choose a profile based on your risk tolerance and regulatory requirements. These are recommendations, not mandates.
 
-| 観点 | 軽量（Lightweight） | 標準（Standard） | 厳格（Strict） |
+| Aspect | Lightweight | Standard | Strict |
 | --- | --- | --- | --- |
-| **用途** | 内部パイロット、低リスクAI | 本番システム、中リスク | 規制産業、高リスクAI |
-| **保持期間** | 1〜2年 | 5〜7年 | 7〜10年以上または規制最低限 |
-| **不変性** | SHA-256 ハッシュ | SHA-256 + 追記専用ログ | WORM ストレージ + デジタル署名 |
-| **アクセス制御** | ロールベース（基本） | ロールベース + アクセスログ | 職務分離 + 完全監査証跡 |
-| **監査証跡** | 変更ログのみ | 変更ログ + アクセスログ | 完全システムログ + 定期検証 |
-| **検証頻度** | オンデマンド | 四半期ごと | 月次または継続的 |
-| **バリデータ利用** | 任意 | 提出前に必須 | 必須 + 自動 CI チェック |
+| **Use case** | Internal pilots, low-risk AI | Production systems, moderate risk | Regulated industries, high-risk AI |
+| **Retention period** | 1-2 years | 5-7 years | 7-10+ years or regulatory minimum |
+| **Immutability** | SHA-256 hashes | SHA-256 + append-only logs | WORM storage + digital signatures |
+| **Access control** | Role-based (basic) | Role-based + access logging | Separation of duties + full audit trail |
+| **Audit trail** | Change log only | Change log + access log | Full system logs + periodic verification |
+| **Verification frequency** | On-demand | Quarterly | Monthly or continuous |
+| **Validator usage** | Optional | Required before submission | Required + automated CI checks |
 
-!!! note "保持期間は例示"
-    表中の保持期間は例示である。組織は適用法令、契約、業界要件、内部ポリシーに基づき保持期間を決定すること。
+!!! note "Retention periods are examples"
+    Retention periods shown are illustrative. Organizations must determine retention based on applicable laws, contracts, industry requirements, and internal policies.
 
-!!! tip "選び方"
-    - **軽量**: 実験、内部ツール、正式な監査が想定されない低リスク用途に適する。
-    - **標準**: 監査の可能性はあるが継続的ではない、ほとんどの本番デプロイに推奨。
-    - **厳格**: 規制産業（金融、医療、政府）またはリスク影響の大きいAIシステムに必須。
+!!! tip "How to choose"
+    - **Lightweight**: Suitable for experimentation, internal tools, or low-stakes applications where formal audits are unlikely.
+    - **Standard**: Recommended for most production deployments where audits may occur but are not continuous.
+    - **Strict**: Required for regulated industries (finance, healthcare, government) or AI systems with significant risk impact.
 
 ## Important note
 
-本最小セットは説明可能性と証跡準備を支援する。法的助言の提供および適合の保証は行わない。
+This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.
 
-バンドル構造と TOC は [Evidence Bundle](../evidence-bundle/)、フィールドレベルの整合は [EV Template](../../standard/current/06-ev-template/) およびスキーマを参照。
+See [Evidence Bundle](../evidence-bundle/) for bundle structure and TOC; see [EV Template](../../standard/current/06-ev-template/) and schemas for field-level alignment.
 
-関連：[ログスキーマ](../log-schemas/) — Shadow AI 検知およびエージェント活動証跡のための正規化ログ形式。
+See also: [Log Schemas](../log-schemas/) — normalized log formats for Shadow AI discovery and agent activity evidence.
+
+## Regulatory overlays (informative)
+
+The following **overlays** describe additional evidence often expected in specific regulatory or procurement contexts. They are **informative**; attach official templates/checklists as-is in the [External Forms section](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) of the EV Template and reference them by logical_id in the manifest.
+
+| Overlay | Additional artifacts typically expected | Where to attach | Profile (optional) |
+| --- | --- | --- | --- |
+| **EU High-Risk** | Risk management, technical documentation (Annex IV), logging, human oversight, transparency (Art 50), incident reporting | payload_index; Evidence Bundle + Annex IV profile | `eu_ai_act_annex_iv.json`, `eu_ai_act_high_risk.json` |
+| **EU GPAI CoP** | Model Documentation Form (transparency, copyright, safety & security) | External Forms; logical_id e.g. GPAI_MODEL_DOC_FORM | `eu_gp_ai_cop.json` |
+| **NIST GenAI** | GenAI profile artifacts (model adaptation, evaluation, monitoring) | payload_index; change_log; External Forms / GenAI records | `nist_ai_600_1_genai.json` |
+| **UK ATRS / procurement** | ATRS transparency record; accountability owner; procurement evaluation notes | External Forms; Summary, review | `uk_atrs_procurement.json` |
+| **JP procurement** | Government GenAI procurement checklist; AI Business Guidelines checklist | External Forms; logical_id e.g. JP_PROCUREMENT_CHECKLIST | `jp_gov_genai_procurement.json` |
+
+Profile file names follow the pattern `coverage_map/profiles/<target>_<purpose>.json`; each includes `target_version`. See [Coverage Map — Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/) for UK and Japan; [EU AI Act](../../coverage-map/eu-ai-act/) and [NIST AI RMF](../../coverage-map/nist-ai-rmf/) for EU and NIST.

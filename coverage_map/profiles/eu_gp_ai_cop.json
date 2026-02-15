@@ -1,0 +1,14 @@
+{
+  "profile_id": "PR-EU-GPAI-COP-v0.1",
+  "target": "EU_GPAI_COP",
+  "target_version": "current",
+  "audit_questions": [
+    "Is GPAI Model Documentation Form (or equivalent) attached and referenced?",
+    "Are transparency and copyright disclosures traceable to bundle objects?"
+  ],
+  "mappings": [
+    {"source_object_ref": "payload:GPAI_MODEL_DOC_FORM", "target_field": "GPAI CoP Model Documentation", "required": false},
+    {"source_object_ref": "Summary", "target_field": "Transparency / disclosure", "required": false},
+    {"source_object_ref": "evidence", "target_field": "Safety & security evidence", "required": false}
+  ]
+}

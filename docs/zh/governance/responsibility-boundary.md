@@ -1,87 +1,96 @@
 ---
-description: AIMO 责任边界 - 定义标准提供什么与采用者责任。不过度声明声明和范围限制。
+description: AIMO Responsibility Boundary - Defines what the standard provides vs. adopter responsibilities. Non-overclaim statement and scope limitations.
 ---
 
-# 责任边界
+# Responsibility Boundary
 
-本页定义 AIMO 标准提供和不提供什么、它做出的假设以及采用者的责任。
+This page defines what the AIMO Standard provides and does not provide, the assumptions it makes, and the responsibilities of adopters.
 
-## AIMO 标准提供什么
+## What AIMO Standard provides
 
-- **结构化的证据格式**：AI治理证据的模式、模板和分类法。
-- **可追溯性框架**：基于生命周期的证据链接（请求 → 审查 → 例外 → 续期）。
-- **可解释性支持**：与外部框架的覆盖映射，用于审计讨论。
-- **验证工具**：用于结构一致性检查的参考验证器和规则。
-- **文档**：规范性规范、示例和指南。
+- **A structured evidence format**: schemas, templates, and taxonomy for AI governance evidence.
+- **Traceability framework**: lifecycle-based evidence linking (request → review → exception → renewal).
+- **Explainability support**: coverage mapping to external frameworks for audit discussions.
+- **Validation tooling**: reference validator and rules for structural consistency checks.
+- **Documentation**: normative specification, examples, and guidance.
 
-## AIMO 标准不提供什么
+## What AIMO Standard does NOT provide
 
-| 超出范围 | 解释 |
+| Out-of-scope | Explanation |
 | --- | --- |
-| **法律建议** | AIMO 不解释法律或法规。请咨询合格的法律顾问以获取监管合规。 |
-| **合规认证** | 使用 AIMO 不能证明符合任何法规或框架（ISO 42001、欧盟AI法案、NIST AI RMF 等）。 |
-| **风险评估** | AIMO 构建证据但不执行或验证AI风险评估。 |
-| **技术控制** | AIMO 不实施访问控制、加密或其他安全控制；它记录期望。 |
-| **审计执行** | AIMO 为审计师提供材料但不进行审计。 |
-| **AI模型评估** | AIMO 不评估模型性能、偏见或安全性。 |
+| **Legal advice** | AIMO does not interpret laws or regulations. Consult qualified legal counsel for regulatory compliance. |
+| **Compliance certification** | Using AIMO does not certify compliance with any regulation or framework (ISO 42001, EU AI Act, NIST AI RMF, etc.). |
+| **"ISO certified by AIMO"** | AIMO does not issue certifications. Certification is performed by accredited certification bodies. |
+| **"EU AI Act compliant because of AIMO"** | AIMO structures evidence; it does not guarantee or certify regulatory compliance. |
+| **Risk assessment** | AIMO structures evidence but does not perform or validate AI risk assessments. |
+| **Technical controls** | AIMO does not implement access control, encryption, or other security controls; it documents expectations. |
+| **Audit execution** | AIMO provides materials for auditors but does not conduct audits. |
+| **AI model evaluation** | AIMO does not assess model performance, bias, or safety. |
 
-## 假设
+## Assumptions
 
-AIMO 标准假设：
+The AIMO Standard assumes:
 
-1. **采用者有治理流程**：存在请求、审查、批准和例外工作流程。
-2. **采用者维护证据**：证据由采用者的系统创建、存储和保留。
-3. **采用者根据权威文本验证**：使用覆盖映射时，采用者检查原始框架或法规。
-4. **工具是可选的**：参考验证器是便利工具；采用者可以使用自己的验证。
+1. **Adopters have governance processes**: request, review, approval, and exception workflows exist.
+2. **Adopters maintain evidence**: evidence is created, stored, and retained by the adopter's systems.
+3. **Adopters verify against authoritative texts**: when using Coverage Map, adopters check the original framework or regulation.
+4. **Tooling is optional**: the reference validator is a convenience; adopters may use their own validation.
 
-## 采用者责任
+## Adopter responsibilities
 
-| 责任 | 描述 |
+| Responsibility | Description |
 | --- | --- |
-| **证据创建** | 生成与 EV 模式对齐的准确、及时的证据记录。 |
-| **证据存储和保留** | 使用适当的访问控制和保留期限安全存储证据。 |
-| **完整性和访问控制** | 实施控制（哈希、WORM、审计日志）以保护证据完整性。 |
-| **法律验证** | 根据权威法律文本验证合规声明，并根据需要获取法律建议。 |
-| **持续对齐** | 随着 AIMO 标准版本和外部框架的发展更新证据和映射。 |
-| **审计准备** | 在提交给审计师之前打包证据包并运行验证。 |
+| **Evidence creation** | Generate accurate, timely evidence records aligned with EV schema. |
+| **Evidence storage & retention** | Store evidence securely with appropriate access controls and retention periods. |
+| **Integrity & access control** | Implement controls (hashing, WORM, audit logs) to preserve evidence integrity. |
+| **Legal verification** | Verify compliance claims against authoritative legal texts and obtain legal advice as needed. |
+| **Continuous alignment** | Update evidence and mappings as AIMO Standard versions and external frameworks evolve. |
+| **Audit preparation** | Package evidence bundles and run validation before submission to auditors. |
 
-## RACI 矩阵
+## RACI Matrix
 
-以下 RACI 矩阵澄清了 AIMO 标准、采用者和审计师角色的责任。
+The following RACI matrix clarifies responsibilities across AIMO Standard, Adopter, and Auditor roles.
 
-| 活动 | AIMO 标准 | 采用者 | 审计师 |
+| Activity | AIMO Standard | Adopter | Auditor |
 | --- | :---: | :---: | :---: |
-| **定义证据模式和模板** | R/A | I | I |
-| **创建证据记录** | — | R/A | I |
-| **存储和保留证据** | — | R/A | I |
-| **实施访问控制** | — | R/A | I |
-| **实施完整性控制（哈希、WORM）** | — | R/A | I |
-| **对包运行验证器** | C | R/A | C |
-| **打包提交（zip、校验和）** | C | R/A | I |
-| **验证校验和（sha256）** | — | C | R/A |
-| **验证包结构（验证器）** | — | C | R/A |
-| **解释监管要求** | — | R/A | C |
-| **发布审计结论** | — | — | R/A |
-| **提供法律建议** | — | — | — |
+| **Define evidence schema & templates** | R/A | I | I |
+| **Create evidence records** | — | R/A | I |
+| **Store & retain evidence** | — | R/A | I |
+| **Implement access controls** | — | R/A | I |
+| **Implement integrity controls (hash, WORM)** | — | R/A | I |
+| **Run validator on bundle** | C | R/A | C |
+| **Package submission (zip, checksums)** | C | R/A | I |
+| **Verify checksums (sha256)** | — | C | R/A |
+| **Verify bundle structure (validator)** | — | C | R/A |
+| **Interpret regulatory requirements** | — | R/A | C |
+| **Issue audit conclusion** | — | — | R/A |
+| **Provide legal advice** | — | — | — |
 
-**图例**：R = 负责、A = 问责、C = 咨询、I = 知情、— = 不适用
+**Legend**: R = Responsible, A = Accountable, C = Consulted, I = Informed, — = Not applicable
 
-!!! note "关键要点"
-    AIMO 标准负责**定义格式**。采用者负责**创建、存储和验证证据**。审计师负责**验证提交和发布审计结论**。
+!!! note "Key takeaway"
+    AIMO Standard is responsible for **defining the format**. Adopters are responsible for **creating, storing, and validating evidence**. Auditors are responsible for **verifying submissions and issuing audit conclusions**.
 
-!!! warning "非认证声明"
-    AIMO 标准是参考性的；它不认证合规或提供法律建议。审计结论和符合性评估是合格审计师和法律专业人员的唯一责任。
+!!! warning "Non-certification notice"
+    AIMO Standard is informative; it does not certify compliance or provide legal advice. Audit conclusions and conformity assessments are the sole responsibility of qualified auditors and legal professionals.
 
-## 不过度声明声明
+## Claims policy
 
-!!! warning "重要提示"
-    AIMO 标准支持**可解释性和证据就绪**。它**不**提供法律建议、保证合规或认证符合任何法规或框架。采用者必须根据权威文本验证声明，并在适当时获取专业建议。
+| Acceptable | Unacceptable |
+| --- | --- |
+| "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator." | <!-- UNACCEPTABLE_CLAIMS_EXAMPLES --> "EU AI Act compliant", "ISO 42001 certified", "government approved" <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES --> |
+| "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies." | Claiming that AIMO certifies compliance or provides legal advice. |
 
-此声明适用于所有 AIMO 标准文档，包括信任包、证据包、最低证据要求、覆盖映射和发布。
+## Non-overclaim statement
 
-## 相关页面
+!!! warning "Important"
+    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
 
-- [信任包](../trust-package/) — 审计师就绪材料中心
-- [人工监督协议](../human-oversight-protocol/) — 机器与人工审查边界
-- [最低证据要求](../../artifacts/minimum-evidence/) — MUST 级别生命周期清单
-- [覆盖映射方法论](../../coverage-map/methodology/) — 映射是什么和不是什么
+This statement applies to all AIMO Standard documentation, including Trust Package, Evidence Bundle, Minimum Evidence Requirements, Coverage Map, and Releases.
+
+## Related pages
+
+- [Trust Package](../trust-package/) — auditor-ready materials hub
+- [Human Oversight Protocol](../human-oversight-protocol/) — machine vs. human review boundary
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST-level lifecycle checklist
+- [Coverage Map Methodology](../../coverage-map/methodology/) — what the mapping is and is not

@@ -1,153 +1,180 @@
 ---
-description: Changelog et politique de versionnement du standard AIMO. Documente l'historique des versions, les règles de versionnement sémantique et les conseils de migration entre versions.
+description: AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.
 ---
 
 # Changelog
 
-Cette section documente la politique de versionnement et l'historique des changements pour le standard AIMO.
+This section documents the versioning policy and change history for the AIMO Standard.
 
-## Politique de versionnement
+## Versioning Policy
 
-Le standard AIMO suit le [versionnement sémantique](https://semver.org/) (SemVer) :
+AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
 
-### Format de version : MAJEUR.MINEUR.PATCH
+### Version Format: MAJOR.MINOR.PATCH
 
-| Type de changement | Incrément de version | Exemples |
+| Change Type | Version Bump | Examples |
 | --- | --- | --- |
-| **MAJEUR** | X.0.0 | Changements de schéma cassants, suppression de code, changements de champs requis |
-| **MINEUR** | 0.X.0 | Nouveaux codes, nouveaux champs optionnels, nouvelles dimensions (optionnelles) |
-| **PATCH** | 0.0.X | Corrections de documentation, clarifications de définitions, corrections de bugs du validateur |
+| **MAJOR** | X.0.0 | Breaking schema changes, code removal, required field changes |
+| **MINOR** | 0.X.0 | New codes, new optional fields, new dimensions (optional) |
+| **PATCH** | 0.0.X | Documentation fixes, definition clarifications, validator bug fixes |
 
-### Changements cassants vs compatibles
+### Breaking vs. Compatible Changes
 
-**Changements cassants (MAJEUR) :**
+**Breaking Changes (MAJOR):**
 
-- Suppression de codes (après période de dépréciation)
-- Changements de champs requis dans les schémas
-- Changements structurels qui invalident les documents existants
-- Changements de patterns de format de code
+- Removal of codes (after deprecation period)
+- Changes to required fields in schemas
+- Structural changes that invalidate existing documents
+- Changes to code format patterns
 
-**Changements rétrocompatibles (MINEUR) :**
+**Backward Compatible Changes (MINOR):**
 
-- Ajout de nouveaux codes aux dimensions existantes
-- Ajout de nouveaux champs optionnels aux schémas
-- Ajout de nouvelles dimensions optionnelles
-- Ajout de nouveaux modèles de preuves
+- Adding new codes to existing dimensions
+- Adding new optional fields to schemas
+- Adding new optional dimensions
+- Adding new evidence templates
 
-**Changements non cassants (PATCH) :**
+**Non-breaking Changes (PATCH):**
 
-- Corrections de documentation
-- Clarification de définitions existantes
-- Améliorations de traduction
-- Corrections de bugs du validateur
+- Documentation corrections
+- Clarification of existing definitions
+- Translation improvements
+- Validator bug fixes
 
-## Politique de dépréciation
+## Deprecation Policy
 
-### Processus de dépréciation
+### Deprecation Process
 
-1. **Marquer comme déprécié** : Le code ou la fonctionnalité est marqué(e) avec `status: deprecated` et `deprecated_in: X.Y.Z`
-2. **Période de dépréciation** : Au moins une version MINEURE doit passer avant la suppression
-3. **Fournir un remplacement** : Si applicable, `replaced_by` indique le remplacement
-4. **Supprimer en MAJEUR** : La suppression se produit dans la prochaine version MAJEURE
+1. **Mark as Deprecated**: Code or feature is marked with `status: deprecated` and `deprecated_in: X.Y.Z`
+2. **Deprecation Period**: At least one MINOR version must pass before removal
+3. **Provide Replacement**: If applicable, `replaced_by` indicates the replacement
+4. **Remove in MAJOR**: Removal occurs in the next MAJOR version
 
-### Exemple de cycle de vie
+### Example Lifecycle
 
 ```
-v0.0.1: FS-007 introduit (status: active)
-v0.1.0: FS-007 déprécié (status: deprecated, replaced_by: FS-008)
-v0.2.0: FS-007 toujours disponible avec avertissement de dépréciation
-v1.0.0: FS-007 supprimé (status: removed)
+v0.0.1: FS-007 introduced (status: active)
+v0.1.0: FS-007 deprecated (status: deprecated, replaced_by: FS-008)
+v0.2.0: FS-007 still available with deprecation warning
+v1.0.0: FS-007 removed (status: removed)
 ```
 
-### Utilisation de codes dépréciés
+### Using Deprecated Codes
 
-- Les codes dépréciés restent valides pour la validation
-- Le validateur DEVRAIT émettre un avertissement pour les codes dépréciés
-- Les nouvelles implémentations DEVRAIENT utiliser les codes de remplacement
-- Les documents existants PEUVENT continuer à utiliser les codes dépréciés jusqu'à la migration
+- Deprecated codes remain valid for validation
+- Validator SHOULD emit a warning for deprecated codes
+- New implementations SHOULD use replacement codes
+- Existing documents MAY continue using deprecated codes until migration
 
-## Artefacts de version
+## Release Artifacts
 
-Chaque version officielle inclut :
+Each official release includes:
 
-| Artefact | Description |
+| Artifact | Description |
 | --- | --- |
-| Instantané de site versionné | `https://standard.aimoaas.com/0.0.1/` |
-| Spécification PDF | `trust_package.pdf` |
-| Package d'actifs (ZIP) | Schémas, modèles, dictionnaire |
-| Checksums | Hachages SHA-256 pour l'intégrité |
-| Changelog | Ce document |
+| Versioned site snapshot | `https://standard.aimoaas.com/0.0.1/` |
+| PDF specification | `trust_package.pdf` |
+| Asset package (ZIP) | Schemas, templates, dictionary |
+| Checksums | SHA-256 hashes for integrity |
+| Changelog | This document |
 
-## Historique des changements
+## Change History
 
-### Non publié (corrections namespace et normatif)
+### Version 0.1.2 {#version-012}
 
-**Résumé :** Résolution de la collision des codes EV, clarification EV (index) vs Evidence Pack (payload), durcissement /dev contre la citation erronée en audit. Types de document Evidence Pack : EP-01..EP-07 ; Taxonomy EV reste pour les types d'événement. Relation normatif EV↔Evidence Pack documentée. Bannière et canonical pour /dev.
+**Summary:** PATCH release (non-breaking). Normalizes EU AI Act references in docs/SSOT (informative mapping only; not legal advice). Improves Annex IV sample bundle completeness (signatures, hashes, payload). Adds optional JNC schema and validator check. Adds validator audit report outputs (audit-json, audit-html). See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
+#### Repair-deploy addendum (docs + mappings) — 2026-02-15
+
+- Added ISO/IEC 42006 coverage map page.
+- Expanded Conformance into AIMO Conformity Framework aligned to ISO 42001 (informative); levels Foundation, Operational, Audit-Ready.
+- Added ISO 42001 certification readiness toolkit (artifact).
+- Added EU AI Act timeline (02 Feb / 02 Aug 2025–2027), harmonised standards notes, and 2026 AI Office guidelines (informative).
+- Added new profiles and schema enum additions (ISO_42006, EU_AI_ACT_HIGH_RISK, EU_GPAI_COP, NIST_AI_600_1, UK_ATRS, JP_GOV_GENAI_PROCUREMENT); no version bump.
+- **No version bump:** repair-deploy updates the already released v0.1.2 snapshot.
+
+### Version 0.1.1 {#version-011}
+
+**Summary:** PATCH release. Optional signature metadata for verification, Coverage Map audit_questions, Normative/Informative and governance clarifications, v0.2 roadmap. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
+### Version 0.1.0 {#version-010}
+
+**Summary:** Normative Evidence Bundle structure, ID namespace (EV/LG), Profiles, Validator. Breaking: EV→LG for taxonomy. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
+### Unreleased (namespace and normative fixes)
+
+**Summary:** Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.
+
+#### Changed
+
+- **Evidence Pack document types (EP namespace):** Evidence Pack file types use **EP-01..EP-07** (document type). Taxonomy **LG-001, LG-002, …** are Log/Event types (Request Record, Review/Approval, etc.). **EV-** reserved for Evidence artifact IDs only. See [Evidence Pack Template](../06-ev-template/) and [ID Policy / Namespace](../04b-id-policy-namespace/). Schema: `evidence_files[].file_id` pattern is `^EP-\\d{2}$`; `ev_type` uses **LG-xxx**.
+- **Normative relationship:** [Evidence Bundle](../../../artifacts/evidence-bundle/) now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.
+- **/dev anti-miscitation:** Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.
 
 ### Version 0.0.1 (2026-02-02)
 
-**Résumé :** Version initiale du standard AIMO avec système de codes à 8 dimensions, modèles de pack de preuves et documentation complète de gouvernance.
+**Summary:** Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.
 
-#### Ajouté
+#### Added
 
-**Système de codes (8 dimensions)**
+**Code System (8 Dimensions)**
 
-| Dimension | Codes ajoutés | Description |
+| Dimension | Codes Added | Description |
 | --- | --- | --- |
-| FS | FS-001 à FS-006 | Périmètre fonctionnel |
-| UC | UC-001 à UC-010 | Classe de cas d'usage |
-| DT | DT-001 à DT-008 | Type de données |
-| CH | CH-001 à CH-006 | Canal |
-| IM | IM-001 à IM-005 | Mode d'intégration |
-| RS | RS-001 à RS-005 | Surface de risque |
-| OB | OB-001 à OB-005 | Résultat / Bénéfice |
-| LG | LG-001 à LG-015 | Type de log/registre |
+| FS | FS-001 to FS-006 | Functional Scope |
+| UC | UC-001 to UC-010 | Use Case Class |
+| DT | DT-001 to DT-008 | Data Type |
+| CH | CH-001 to CH-006 | Channel |
+| IM | IM-001 to IM-005 | Integration Mode |
+| RS | RS-001 to RS-005 | Risk Surface |
+| OB | OB-001 to OB-005 | Outcome / Benefit |
+| LG | LG-001 to LG-015 | Log/Event Type |
 
-**Schémas**
+**Schemas**
 
-- `taxonomy_pack.schema.json` : Définition de pack de taxonomie
-- `changelog.schema.json` : Entrées de changelog
-- `evidence_pack_manifest.schema.json` : Manifestes de pack de preuves
-- `shadow-ai-discovery.schema.json` : Preuves de découverte de Shadow AI
-- `agent-activity.schema.json` : Preuves d'activité des agents
+- `taxonomy_pack.schema.json`: Taxonomy pack definition
+- `changelog.schema.json`: Changelog entries
+- `evidence_pack_manifest.schema.json`: Evidence Pack manifests
+- `shadow-ai-discovery.schema.json`: Shadow AI discovery evidence
+- `agent-activity.schema.json`: Agent activity evidence
 
-**Modèles de pack de preuves (MVP)**
+**Evidence Pack Templates (MVP)**
 
-- EV-01 : Vue d'ensemble système
-- EV-02 : Flux de données
-- EV-03 : Inventaire IA
-- EV-04 : Évaluation des risques et impacts
-- EV-05 : Contrôles et approbations
-- EV-06 : Journalisation et surveillance
-- EV-07 : Gestion des incidents et exceptions
+- EP-01 (legacy EV-01): System Overview
+- EP-02 (legacy EV-02): Data Flow
+- EP-03 (legacy EV-03): AI Inventory
+- EP-04 (legacy EV-04): Risk & Impact Assessment
+- EP-05 (legacy EV-05): Controls & Approvals
+- EP-06 (legacy EV-06): Logging & Monitoring
+- EP-07 (legacy EV-07): Incident & Exception Handling
 
 **Documentation**
 
-- Documentation de taxonomie avec définitions à 8 dimensions
-- Spécification du format du système de codes
-- Spécification du format CSV du dictionnaire
-- Politique de versionnement et de changement
-- Exigences MVP du validateur
-- Protocole de surveillance humaine
-- Carte de couverture (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
-- Package de confiance
+- Taxonomy documentation with 8-dimension definitions
+- Code System format specification
+- Dictionary CSV format specification
+- Versioning and change policy
+- Validator MVP requirements
+- Human Oversight Protocol
+- Coverage Map (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+- Trust Package
 
-#### Rétrocompatibilité
+#### Backward Compatibility
 
-C'est la version initiale ; pas de préoccupations de rétrocompatibilité.
+This is the initial release; no backward compatibility concerns.
 
 ---
 
-## Changelog lisible par machine
+## Machine-Readable Changelog
 
-Un changelog lisible par machine est disponible :
+A machine-readable changelog is available:
 
 - `changelog/changelog.json`
 
-Ce fichier suit le schéma `changelog.schema.json` et peut être analysé programmatiquement.
+This file follows the `changelog.schema.json` schema and can be parsed programmatically.
 
-## Références
+## References
 
-- [Taxonomie](../03-taxonomy/) - Définitions des dimensions
-- [Dictionnaire](../05-dictionary/) - Dictionnaire des codes
-- [Politique de versionnement](../../../governance/) - Politique de versionnement (voir VERSIONING.md à la racine du dépôt)
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Dictionary](../05-dictionary/) - Code dictionary
+- [Versioning Policy](../../../governance/) - Versioning policy (see VERSIONING.md in repository root)

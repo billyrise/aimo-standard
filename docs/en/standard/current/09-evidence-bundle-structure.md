@@ -78,6 +78,7 @@ See the JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json`.
 ## References
 
 - [Evidence Bundle (artifact overview)](../../../artifacts/evidence-bundle/) — purpose and TOC
+- [EV Template — External Forms and Audit Handoff Index](../06-ev-template/#external-forms-official-templateschecklists-attached-as-is) — where to attach official templates/checklists and how to reference them in the manifest
 - [Signature verification roadmap](../../../artifacts/signature-verification-roadmap/) — v0.1.1 metadata and v0.2 verification plan
 - [Validator](../../../validator/) — how the validator enforces this structure
 - [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) — MUST-level checklist

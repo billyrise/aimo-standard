@@ -26,6 +26,7 @@ The Trust Package PDF consolidates auditor-ready materials into a single documen
 - **Taxonomy**: 8-dimension classification system for AI governance — [Taxonomy](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/)
 - **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](../../artifacts/evidence-bundle/)
 - **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- **ISO/IEC 42001 Certification Readiness Toolkit**: fastest path to audit-ready evidence aligned to ISO 42001 — [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/). The toolkit supports preparation only; certification decisions are made by accredited certification bodies.
 - **Validator**: rules and reference checks — [Validator](../../validator/)
 - **Examples**: audit-ready sample bundles — [Examples](../../examples/)
 - **Releases**: change history and distribution — [Releases](../../releases/)
@@ -71,7 +72,7 @@ For the full scope definition, assumptions, and adopter responsibilities, see [R
 
 Follow these steps to prepare an audit-ready submission:
 
-1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../../artifacts/evidence-bundle/) and [Minimum Evidence Requirements](../../artifacts/minimum-evidence/).
+1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../../artifacts/evidence-bundle/) and [Minimum Evidence Requirements](../../artifacts/minimum-evidence/). For ISO 42001–oriented readiness, see the [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/).
 2. **Run Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix any errors before proceeding.
 3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
 
@@ -106,8 +107,11 @@ For release assets and verification, see [Releases](../../releases/).
 
 ## Non-overclaim statement
 
-!!! warning "Important"
-    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
+!!! warning "Important: No certification, no assurance, no legal compliance claim"
+    - AIMO Standard defines an **evidence packaging and validation format**. It does not certify compliance with laws or standards.
+    - Audit/assurance opinions remain the responsibility of independent auditors and the adopting organization.
+    - **Appropriate claim:** "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
+    - **Inappropriate claim:** <!-- UNACCEPTABLE_CLAIMS_EXAMPLES --> "EU AI Act compliant", "ISO 42001 certified", "government approved". <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
 See [Responsibility Boundary](../responsibility-boundary/) for details on scope, assumptions, and adopter responsibilities.
 

@@ -1,57 +1,57 @@
 ---
-description: Template e guida all'uso dell'Evidence Pack AIMO. Struttura per documentare l'evidence di governance dell'IA con gestione dell'indice e formattazione pronta per l'audit.
+description: AIMO Evidence Pack templates and usage guide. Structure for documenting AI governance evidence with index management and audit-ready formatting.
 ---
 
-# Template Evidence Pack (EP)
+# Evidence Pack Template (EP)
 
-Questa sezione definisce i template dell'Evidence Pack e il loro utilizzo. Un Evidence Pack è una raccolta di documentazione che dimostra governance e conformità per un sistema IA.
+This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.
 
-## Namespace: tipi di documento Evidence Pack (EP) vs Taxonomy Log/Event Type (LG)
+## Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)
 
-> **Importante**: **EP-01..EP-07** identificano i *tipi di documento* (tipi di file Evidence Pack). **LG-001, LG-002, …** nella [Tassonomia](../03-taxonomy/) identificano i *tipi di log/registro* (Request Record, Review/Approval Record, ecc.). **EV-** riservato per ID artefatti Evidence. Usare EP per la struttura del pack e LG per la classificazione dell'evidence del ciclo di vita.
+> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **LG-001, LG-002, …** in the [Taxonomy](../03-taxonomy/) identify *log/event types* (Request Record, Review/Approval, Exception, etc.). **EV-** is reserved for [Evidence artifact IDs](../04b-id-policy-namespace/) only. Use EP for pack structure and LG for lifecycle log/event classification.
 
-## Principio Chiave: Gestione dell'Indice e delle Differenze
+## Key Principle: Index and Diff Management
 
-Ciò che conta non è solo il contenuto delle singole submission, ma la **gestione dell'indice** e delle **differenze** tra gli elementi di evidence.
+What matters is not the content of individual submissions alone, but the **index** and **diff management** across evidence items.
 
-Un Evidence Pack serve come indice che collega i sistemi IA ai loro artefatti di governance. Il valore sta in:
+An Evidence Pack serves as an index linking AI systems to their governance artifacts. The value lies in:
 
-1. **Tracciabilità**: Collegare decisioni, approvazioni e modifiche nel tempo
-2. **Verificabilità**: Abilitare gli auditor a navigare la struttura dell'evidence
-3. **Manutenibilità**: Tracciare cosa è cambiato, quando e perché
+1. **Traceability**: Linking decisions, approvals, and changes across time
+2. **Auditability**: Enabling auditors to navigate the evidence structure
+3. **Maintainability**: Tracking what changed, when, and why
 
-## Set di Evidence MVP (EP-01 a EP-07)
+## MVP Evidence Set (EP-01 to EP-07)
 
-I seguenti sette **tipi di documento Evidence Pack** (EP) formano il **set minimo vitale** per dimostrare la governance dell'IA. Ciascuno è un template di documento; i codici **LG** della tassonomia (Request Record, Review/Approval, ecc.) sono usati altrove nel bundle e in `codes.LG` per classificare l'evidence di *log/registro*.
+The following seven **Evidence Pack document types** (EP) form the **minimum viable set** for demonstrating AI governance. Each is a document template; taxonomy **LG** codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in `codes.LG` to classify *log/event* evidence.
 
-| ID | Tipo di documento | Scopo |
+| ID | Document Type | Purpose |
 | --- | --- | --- |
-| EP-01 | Panoramica del Sistema | Documentare il sistema IA e il suo scopo |
-| EP-02 | Flusso dei Dati | Mappare il movimento dei dati attraverso il sistema |
-| EP-03 | Inventario | Mantenere il catalogo degli asset IA |
-| EP-04 | Valutazione Rischi & Impatto | Valutare e documentare i rischi |
-| EP-05 | Controlli & Approvazioni | Documentare controlli e record di approvazione |
-| EP-06 | Logging & Monitoraggio | Definire la configurazione di logging e monitoraggio |
-| EP-07 | Incidenti & Eccezioni | Tracciare incidenti ed eccezioni |
+| EP-01 | System Overview | Document the AI system and its purpose |
+| EP-02 | Data Flow | Map data movement through the system |
+| EP-03 | Inventory | Maintain catalog of AI assets |
+| EP-04 | Risk & Impact Assessment | Assess and document risks |
+| EP-05 | Controls & Approvals | Document controls and approval records |
+| EP-06 | Logging & Monitoring | Define logging and monitoring setup |
+| EP-07 | Incident & Exception | Track incidents and exceptions |
 
-## Manifest dell'Evidence Pack
+## Evidence Pack Manifest
 
-Ogni Evidence Pack DEVE includere un file manifest contenente:
+Each Evidence Pack MUST include a manifest file containing:
 
-### Metadati Obbligatori
+### Mandatory Metadata
 
-| Campo | Descrizione | Richiesto |
+| Field | Description | Required |
 | --- | --- | --- |
-| `pack_id` | Identificatore univoco (es. EP-EXAMPLE-001) | Sì |
-| `pack_version` | Versione SemVer del pack | Sì |
-| `taxonomy_version` | Versione della tassonomia AIMO usata | Sì |
-| `created_date` | Data di creazione del pack | Sì |
-| `last_updated` | Data dell'ultimo aggiornamento | Sì |
-| `owner` | Parte responsabile | Sì |
+| `pack_id` | Unique identifier (e.g., EP-EXAMPLE-001) | Yes |
+| `pack_version` | SemVer version of the pack | Yes |
+| `taxonomy_version` | Version of AIMO taxonomy used | Yes |
+| `created_date` | Pack creation date | Yes |
+| `last_updated` | Last update date | Yes |
+| `owner` | Responsible party | Yes |
 
-### Codici AIMO (8 Dimensioni)
+### AIMO Codes (8 Dimensions)
 
-Ogni Evidence Pack DEVE includere codici da tutte le 8 dimensioni. La dimensione **LG** elenca i tipi di log/registro *tassonomia* (es. Request Record, Review/Approval) applicabili a questo pack—non i codici di tipo di documento. Il tipo di documento è dato da `evidence_files[].file_id` (EP-01..EP-07).
+Each Evidence Pack MUST include codes from all 8 dimensions. The **LG** dimension lists *taxonomy* Log/Event Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07). See [ID Policy / Namespace](../04b-id-policy-namespace/).
 
 ```json
 {
@@ -68,9 +68,9 @@ Ogni Evidence Pack DEVE includere codici da tutte le 8 dimensioni. La dimensione
 }
 ```
 
-### Lista dei File di Evidence
+### Evidence Files List
 
-Ogni voce identifica un documento nel pack tramite **file_id** (EP-01..EP-07). Opzionalmente **ev_codes** può elencare i codici LG di tassonomia (LG-xxx) supportati dal documento.
+Each entry identifies a document in the pack by **file_id** (EP-01..EP-07). Optional **ev_codes** may list taxonomy LG codes (LG-xxx) that the document supports.
 
 ```json
 {
@@ -85,26 +85,26 @@ Ogni voce identifica un documento nel pack tramite **file_id** (EP-01..EP-07). O
 }
 ```
 
-## Struttura del Template
+## Template Structure
 
-Ogni template di evidence include:
+Each evidence template includes:
 
-1. **Blocco di Metadati Obbligatori** - pack_id, versione, taxonomy_version, date, owner
-2. **Tabella Codici AIMO** - Tutte le 8 dimensioni con codici applicabili
-3. **Sezioni di Contenuto** - Sezioni di documentazione specifiche per dominio
-4. **Riferimenti** - Link a evidence correlata
-5. **Cronologia delle Revisioni** - Tracciamento delle modifiche
+1. **Mandatory Metadata Block** - pack_id, version, taxonomy_version, dates, owner
+2. **AIMO Codes Table** - All 8 dimensions with applicable codes
+3. **Content Sections** - Domain-specific documentation sections
+4. **References** - Links to related evidence
+5. **Revision History** - Change tracking
 
-### Esempio di Header del Template
+### Template Header Example
 
 ```markdown
-# EP-01: Panoramica del Sistema
+# EP-01: System Overview
 
 ---
 
-## Metadati Obbligatori
+## Mandatory Metadata
 
-| Campo | Valore |
+| Field | Value |
 | --- | --- |
 | **pack_id** | `EP-EXAMPLE-001` |
 | **pack_version** | `0.1.0` |
@@ -115,9 +115,9 @@ Ogni template di evidence include:
 
 ---
 
-## Codici AIMO (8 Dimensioni)
+## AIMO Codes (8 Dimensions)
 
-| Dimensione | Codice/i | Etichetta |
+| Dimension | Code(s) | Label |
 | --- | --- | --- |
 | **FS** | `FS-001` | End-user Productivity |
 | **UC** | `UC-001` | General Q&A |
@@ -129,11 +129,37 @@ Ogni template di evidence include:
 | **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 ```
 
-## Download
+## External Forms (official templates/checklists attached as-is)
 
-### Template
+Attach **official external templates and checklists** (EU, NIST, UK, Japan, etc.) as separate files. Do not alter their content; attach as-is, hash them, and reference them in the bundle.
 
-I template dell'Evidence Pack sono disponibili nel repository. Usare **file_id** EP-01..EP-07 nel manifest; i nomi file possono essere EP-01_... o legacy EV-01_... per compatibilità.
+| Slot | Suggested logical_id / attachment | Where to attach |
+| --- | --- | --- |
+| **EU GPAI CoP** | Model Documentation Form | Add to `payload_index` with e.g. `logical_id`: `GPAI_MODEL_DOC_FORM`; store file in `payloads/`; record `sha256` in manifest. |
+| **NIST GenAI** | GenAI profile artifacts (e.g. adaptation records, evaluation) | Add to payload_index; reference in coverage map. Profile: `coverage_map/profiles/nist_ai_600_1_genai.json`. |
+| **UK ATRS / procurement** | ATRS record, procurement evaluation notes | Add to payload_index; reference in [Procurement & Disclosure Overlays](../../coverage-map/procurement-and-disclosure/). |
+| **Japan** | JP government GenAI procurement checklist, AI Business Guidelines checklist | Add to payload_index with e.g. `logical_id`: `JP_PROCUREMENT_CHECKLIST`; reference in Procurement & Disclosure Overlays. |
+
+**Guidance:** Store each external form as a file (PDF, DOC, CSV, etc.), compute SHA-256, and list it in the bundle `manifest.json` `payload_index` with a stable `logical_id`. Link to AIMO taxonomy codes or bundle objects in your coverage map or handoff index so auditors can trace between external forms and AIMO evidence.
+
+## Audit Handoff Index
+
+For **Audit-Ready** level, provide a **one-page index** that tells the auditor where to find each key artifact:
+
+| Artifact | Where to find it | Hash (sha256) | Producer | Date |
+| --- | --- | --- | --- | --- |
+| Manifest | `manifest.json` (bundle root) | (in hash_chain or separate) | — | created_at |
+| Root EV / Summary | e.g. `payloads/root.json` | payload_index entry | — | — |
+| Request/Review/Exception | (list key records) | (object or payload ref) | (role/org) | (timestamp) |
+| External forms | (list logical_ids and paths) | payload_index entry | — | — |
+
+Fill in one row per key artifact. This supports audit handoff without implying certification or assurance.
+
+## Downloads
+
+### Templates
+
+Evidence Pack templates are available in the repository. Use **file_id** EP-01..EP-07 in the manifest; filenames may be EP-01_... or legacy EV-01_... for backward compatibility.
 
 - `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
 - `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
@@ -143,28 +169,28 @@ I template dell'Evidence Pack sono disponibili nel repository. Usare **file_id**
 - `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
 - `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
 
-### Schemi ed Esempi
+### Schemas and Examples
 
 - Schema: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
-- Esempio: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
+- Example: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-Vedere [Release](../../../releases/) per pacchetti scaricabili.
+See [Releases](../../../releases/) for downloadable packages.
 
-## Modello di Distribuzione
+## Distribution Model
 
-> **Nota**: I target di distribuzione primari sono **società di audit e system integrator** (distributori di template), non singole aziende.
+> **Note**: The primary distribution targets are **audit firms and system integrators** (template distributors), not individual enterprises.
 
-I template sono progettati per essere:
+The templates are designed to be:
 
-1. Adottati da auditor e consulenti come artefatti standard
-2. Distribuiti alle aziende con attribuzione della fonte preservata
-3. Versionati insieme allo Standard AIMO
+1. Adopted by auditors and consultants as standard artifacts
+2. Distributed to enterprises with source attribution preserved
+3. Versioned alongside the AIMO Standard
 
-Le aziende ricevono i template tramite i loro auditor, consulenti o team di governance interni che mantengono il collegamento alla versione dello standard.
+Enterprises receive templates through their auditors, consultants, or internal governance teams who maintain the linkage to the standard version.
 
-## Riferimenti
+## References
 
-- [Tassonomia](../03-taxonomy/) - Definizioni delle dimensioni
-- [Codici](../04-codes/) - Formato dei codici
-- [Validator](../07-validator/) - Regole di validazione
-- [Evidence Bundle](../../../artifacts/evidence-bundle/) - Struttura del bundle
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Codes](../04-codes/) - Code format
+- [Validator](../07-validator/) - Validation rules
+- [Evidence Bundle](../../../artifacts/evidence-bundle/) - Bundle structure

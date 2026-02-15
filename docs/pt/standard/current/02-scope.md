@@ -1,11 +1,21 @@
 ---
-description: Escopo do AIMO Standard. Define o que o padrão cobre incluindo classificação de IA, requisitos de evidências e limites para governança empresarial.
+description: Scope of AIMO Standard. Defines what the standard covers including AI classification, evidence requirements, and boundaries for enterprise governance.
 ---
 
-# Escopo
+# Scope
 
-Este padrão especifica artefatos e regras de validação para permitir análise e relatórios consistentes.
+This standard specifies artifacts and validation rules to enable consistent analysis and reporting.
 
-Fora do escopo:
-- lógica de inferência proprietária
-- implementações de pontuação/ponderação específicas de fornecedor
+Out of scope:
+- proprietary inference logic
+- vendor-specific scoring/weighting implementations
+
+## Scope alignment with Management System standards (PDCA)
+
+AIMO adds an **AI-specific taxonomy and evidence artifacts** that help operationalize management-system controls (Plan–Do–Check–Act) and make outputs auditable. It can be used **alongside** ISO/IEC 42001 and other management-system standards; it does not replace their texts. Coverage Map and profiles provide informative mappings only — adopters must verify against the authoritative framework.
+
+**Adopter responsibilities**
+
+- Verify scope and applicability against the relevant management-system or regulatory text.
+- Maintain evidence and run the validator as part of audit preparation; certification decisions remain with accredited certification bodies.
+- See [Responsibility Boundary](../../governance/responsibility-boundary/) for what AIMO does and does not provide.

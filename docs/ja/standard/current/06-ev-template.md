@@ -1,57 +1,57 @@
 ---
-description: AIMO Evidence Packテンプレートと使用ガイド。索引管理と監査対応フォーマットでAIガバナンス証跡を文書化するための構造。
+description: AIMO Evidence Pack templates and usage guide. Structure for documenting AI governance evidence with index management and audit-ready formatting.
 ---
 
-# Evidence Pack テンプレート（EP）
+# Evidence Pack Template (EP)
 
-このセクションでは、Evidence Packテンプレートとその使用方法を定義します。Evidence Packは、AIシステムのガバナンスとコンプライアンスを示すドキュメントのコレクションです。
+This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.
 
-## 名前空間：Evidence Pack ドキュメント種別（EP）と Taxonomy Log/Event Type（LG）
+## Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)
 
-> **重要**: **EP-01..EP-07** は*ドキュメント種別*（Evidence Pack ファイル種別）を表します。**LG-001, LG-002, …** は [タクソノミー](../03-taxonomy/) における*ログ/記録種別*（申請記録、審査/承認記録、例外記録など）を表します。**EV-** は [IDポリシー / 名前空間](../04b-id-policy-namespace/) のとおり Evidence *成果物*ID 専用です。EP はパック構造、LG はライフサイクル証跡の分類に使用します。
+> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **LG-001, LG-002, …** in the [Taxonomy](../03-taxonomy/) identify *log/event types* (Request Record, Review/Approval, Exception, etc.). **EV-** is reserved for [Evidence artifact IDs](../04b-id-policy-namespace/) only. Use EP for pack structure and LG for lifecycle log/event classification.
 
-## 重要原則：索引と差分管理
+## Key Principle: Index and Diff Management
 
-重要なのは個々の提出物の中身だけでなく、証跡項目全体の**索引**と**差分管理**です。
+What matters is not the content of individual submissions alone, but the **index** and **diff management** across evidence items.
 
-Evidence Packは、AIシステムをそのガバナンスアーティファクトにリンクする索引として機能します。価値は以下にあります：
+An Evidence Pack serves as an index linking AI systems to their governance artifacts. The value lies in:
 
-1. **トレーサビリティ**: 時間を通じた決定、承認、変更のリンク
-2. **監査可能性**: 監査人が証跡構造をナビゲートできること
-3. **保守性**: 何が、いつ、なぜ変更されたかの追跡
+1. **Traceability**: Linking decisions, approvals, and changes across time
+2. **Auditability**: Enabling auditors to navigate the evidence structure
+3. **Maintainability**: Tracking what changed, when, and why
 
-## MVP 証跡セット（EP-01〜EP-07）
+## MVP Evidence Set (EP-01 to EP-07)
 
-以下の7つの **Evidence Pack ドキュメント種別**（EP）が、AIガバナンスを示すための**最小限の必要セット**を構成します。各項目はドキュメントテンプレートです。Taxonomy の **LG** コード（申請記録、審査/承認記録など）は、バンドル内の他箇所および `codes.LG` で*ログ/記録*証跡の分類に使用します。
+The following seven **Evidence Pack document types** (EP) form the **minimum viable set** for demonstrating AI governance. Each is a document template; taxonomy **LG** codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in `codes.LG` to classify *log/event* evidence.
 
-| ID | ドキュメント種別 | 目的 |
+| ID | Document Type | Purpose |
 | --- | --- | --- |
-| EP-01 | システム概要 | AIシステムとその目的の文書化 |
-| EP-02 | データフロー | システムを通じたデータの流れのマッピング |
-| EP-03 | 資産台帳 | AI資産のカタログ維持 |
-| EP-04 | リスク影響評価 | リスクの評価と文書化 |
-| EP-05 | 統制・承認 | 統制と承認記録の文書化 |
-| EP-06 | ログ・監視 | ログと監視の設定定義 |
-| EP-07 | インシデント・例外 | インシデントと例外の追跡 |
+| EP-01 | System Overview | Document the AI system and its purpose |
+| EP-02 | Data Flow | Map data movement through the system |
+| EP-03 | Inventory | Maintain catalog of AI assets |
+| EP-04 | Risk & Impact Assessment | Assess and document risks |
+| EP-05 | Controls & Approvals | Document controls and approval records |
+| EP-06 | Logging & Monitoring | Define logging and monitoring setup |
+| EP-07 | Incident & Exception | Track incidents and exceptions |
 
-## Evidence Packマニフェスト
+## Evidence Pack Manifest
 
-各Evidence Packには以下を含むマニフェストファイルが必須です：
+Each Evidence Pack MUST include a manifest file containing:
 
-### 必須メタデータ
+### Mandatory Metadata
 
-| フィールド | 説明 | 必須 |
+| Field | Description | Required |
 | --- | --- | --- |
-| `pack_id` | 一意識別子（例：EP-EXAMPLE-001） | はい |
-| `pack_version` | パックのSemVerバージョン | はい |
-| `taxonomy_version` | 使用するAIMOタクソノミーのバージョン | はい |
-| `created_date` | パック作成日 | はい |
-| `last_updated` | 最終更新日 | はい |
-| `owner` | 責任者 | はい |
+| `pack_id` | Unique identifier (e.g., EP-EXAMPLE-001) | Yes |
+| `pack_version` | SemVer version of the pack | Yes |
+| `taxonomy_version` | Version of AIMO taxonomy used | Yes |
+| `created_date` | Pack creation date | Yes |
+| `last_updated` | Last update date | Yes |
+| `owner` | Responsible party | Yes |
 
-### AIMOコード（8次元）
+### AIMO Codes (8 Dimensions)
 
-各Evidence Packには8次元すべてからのコードが必須です。**LG** 次元は、このパックに該当する*タクソノミー*のログ/記録種別（例：申請記録、審査/承認記録）を列挙します。ドキュメント種別コードではありません。ドキュメント種別は `evidence_files[].file_id`（EP-01..EP-07）で表します。[IDポリシー / 名前空間](../04b-id-policy-namespace/) 参照。
+Each Evidence Pack MUST include codes from all 8 dimensions. The **LG** dimension lists *taxonomy* Log/Event Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07). See [ID Policy / Namespace](../04b-id-policy-namespace/).
 
 ```json
 {
@@ -68,9 +68,9 @@ Evidence Packは、AIシステムをそのガバナンスアーティファク�
 }
 ```
 
-### 証跡ファイルリスト
+### Evidence Files List
 
-各エントリは **file_id**（EP-01..EP-07）でパック内のドキュメントを識別します。任意で **ev_codes** に、そのドキュメントが対応するタクソノミー LG コード（LG-xxx）を列挙できます。
+Each entry identifies a document in the pack by **file_id** (EP-01..EP-07). Optional **ev_codes** may list taxonomy LG codes (LG-xxx) that the document supports.
 
 ```json
 {
@@ -85,26 +85,26 @@ Evidence Packは、AIシステムをそのガバナンスアーティファク�
 }
 ```
 
-## テンプレート構造
+## Template Structure
 
-各証跡テンプレートには以下が含まれます：
+Each evidence template includes:
 
-1. **必須メタデータブロック** - pack_id、バージョン、taxonomy_version、日付、owner
-2. **AIMOコードテーブル** - 該当するコードを含む8次元すべて
-3. **コンテンツセクション** - ドメイン固有のドキュメントセクション
-4. **参照** - 関連証跡へのリンク
-5. **改訂履歴** - 変更追跡
+1. **Mandatory Metadata Block** - pack_id, version, taxonomy_version, dates, owner
+2. **AIMO Codes Table** - All 8 dimensions with applicable codes
+3. **Content Sections** - Domain-specific documentation sections
+4. **References** - Links to related evidence
+5. **Revision History** - Change tracking
 
-### テンプレートヘッダー例
+### Template Header Example
 
 ```markdown
-# EP-01: システム概要
+# EP-01: System Overview
 
 ---
 
-## 必須メタデータ
+## Mandatory Metadata
 
-| フィールド | 値 |
+| Field | Value |
 | --- | --- |
 | **pack_id** | `EP-EXAMPLE-001` |
 | **pack_version** | `0.1.0` |
@@ -115,25 +115,51 @@ Evidence Packは、AIシステムをそのガバナンスアーティファク�
 
 ---
 
-## AIMOコード（8次元）
+## AIMO Codes (8 Dimensions)
 
-| 次元 | コード | ラベル |
+| Dimension | Code(s) | Label |
 | --- | --- | --- |
-| **FS** | `FS-001` | 社内生産性 |
-| **UC** | `UC-001` | 一般QA |
-| **DT** | `DT-002` | 社内情報 |
+| **FS** | `FS-001` | End-user Productivity |
+| **UC** | `UC-001` | General Q&A |
+| **DT** | `DT-002` | Internal |
 | **CH** | `CH-001` | Web UI |
-| **IM** | `IM-001` | 単体利用 |
-| **RS** | `RS-001` | 情報漏えい |
-| **OB** | `OB-001` | 効率化 |
-| **LG** | `LG-001`, `LG-002` | 申請記録、審査/承認記録 |
+| **IM** | `IM-001` | Standalone |
+| **RS** | `RS-001` | Data Leakage |
+| **OB** | `OB-001` | Efficiency |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 ```
 
-## ダウンロード
+## External Forms (official templates/checklists attached as-is)
 
-### テンプレート
+Attach **official external templates and checklists** (EU, NIST, UK, Japan, etc.) as separate files. Do not alter their content; attach as-is, hash them, and reference them in the bundle.
 
-Evidence Packテンプレートはリポジトリ内で利用可能です。マニフェストでは **file_id** に EP-01..EP-07 を使用してください。ファイル名は EP-01_... または後方互換の EV-01_... が利用できます。
+| Slot | Suggested logical_id / attachment | Where to attach |
+| --- | --- | --- |
+| **EU GPAI CoP** | Model Documentation Form | Add to `payload_index` with e.g. `logical_id`: `GPAI_MODEL_DOC_FORM`; store file in `payloads/`; record `sha256` in manifest. |
+| **NIST GenAI** | GenAI profile artifacts (e.g. adaptation records, evaluation) | Add to payload_index; reference in coverage map. Profile: `coverage_map/profiles/nist_ai_600_1_genai.json`. |
+| **UK ATRS / procurement** | ATRS record, procurement evaluation notes | Add to payload_index; reference in [Procurement & Disclosure Overlays](../../coverage-map/procurement-and-disclosure/). |
+| **Japan** | JP government GenAI procurement checklist, AI Business Guidelines checklist | Add to payload_index with e.g. `logical_id`: `JP_PROCUREMENT_CHECKLIST`; reference in Procurement & Disclosure Overlays. |
+
+**Guidance:** Store each external form as a file (PDF, DOC, CSV, etc.), compute SHA-256, and list it in the bundle `manifest.json` `payload_index` with a stable `logical_id`. Link to AIMO taxonomy codes or bundle objects in your coverage map or handoff index so auditors can trace between external forms and AIMO evidence.
+
+## Audit Handoff Index
+
+For **Audit-Ready** level, provide a **one-page index** that tells the auditor where to find each key artifact:
+
+| Artifact | Where to find it | Hash (sha256) | Producer | Date |
+| --- | --- | --- | --- | --- |
+| Manifest | `manifest.json` (bundle root) | (in hash_chain or separate) | — | created_at |
+| Root EV / Summary | e.g. `payloads/root.json` | payload_index entry | — | — |
+| Request/Review/Exception | (list key records) | (object or payload ref) | (role/org) | (timestamp) |
+| External forms | (list logical_ids and paths) | payload_index entry | — | — |
+
+Fill in one row per key artifact. This supports audit handoff without implying certification or assurance.
+
+## Downloads
+
+### Templates
+
+Evidence Pack templates are available in the repository. Use **file_id** EP-01..EP-07 in the manifest; filenames may be EP-01_... or legacy EV-01_... for backward compatibility.
 
 - `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
 - `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
@@ -143,28 +169,28 @@ Evidence Packテンプレートはリポジトリ内で利用可能です。マ�
 - `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
 - `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
 
-### スキーマと例
+### Schemas and Examples
 
-- スキーマ: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
-- 例: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
+- Schema: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
+- Example: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-ダウンロード可能なパッケージは[リリース](../../../releases/)を参照してください。
+See [Releases](../../../releases/) for downloadable packages.
 
-## 配布モデル
+## Distribution Model
 
-> **注**: 主要な配布対象は個々の企業ではなく、**監査法人とシステムインテグレーター**（テンプレート流通者）です。
+> **Note**: The primary distribution targets are **audit firms and system integrators** (template distributors), not individual enterprises.
 
-テンプレートは以下のように設計されています：
+The templates are designed to be:
 
-1. 監査人とコンサルタントが標準アーティファクトとして採用
-2. 出典の帰属を保持して企業に配布
-3. AIMO Standardと共にバージョン管理
+1. Adopted by auditors and consultants as standard artifacts
+2. Distributed to enterprises with source attribution preserved
+3. Versioned alongside the AIMO Standard
 
-企業は、標準バージョンへのリンクを維持する監査人、コンサルタント、または社内ガバナンスチームを通じてテンプレートを受け取ります。
+Enterprises receive templates through their auditors, consultants, or internal governance teams who maintain the linkage to the standard version.
 
-## 参照
+## References
 
-- [タクソノミー](../03-taxonomy/) - 次元定義
-- [コード](../04-codes/) - コードフォーマット
-- [バリデータ](../07-validator/) - バリデーションルール
-- [エビデンスバンドル](../../../artifacts/evidence-bundle/) - バンドル構造
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Codes](../04-codes/) - Code format
+- [Validator](../07-validator/) - Validation rules
+- [Evidence Bundle](../../../artifacts/evidence-bundle/) - Bundle structure

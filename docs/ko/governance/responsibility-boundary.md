@@ -1,87 +1,96 @@
 ---
-description: AIMO 책임 경계 - 표준이 제공하는 것 vs. 채택자 책임 정의. 과대 주장 금지 선언 및 범위 제한.
+description: AIMO Responsibility Boundary - Defines what the standard provides vs. adopter responsibilities. Non-overclaim statement and scope limitations.
 ---
 
-# 책임 경계
+# Responsibility Boundary
 
-이 페이지는 AIMO 표준이 제공하는 것과 제공하지 않는 것, 가정 및 채택자의 책임을 정의합니다.
+This page defines what the AIMO Standard provides and does not provide, the assumptions it makes, and the responsibilities of adopters.
 
-## AIMO 표준이 제공하는 것
+## What AIMO Standard provides
 
-- **구조화된 증거 형식**: AI 거버넌스 증거를 위한 스키마, 템플릿 및 분류체계.
-- **추적성 프레임워크**: 생명주기 기반 증거 연결 (요청 → 검토 → 예외 → 갱신).
-- **설명 가능성 지원**: 감사 논의를 위한 외부 프레임워크에 대한 커버리지 매핑.
-- **검증 도구**: 구조적 일관성 검사를 위한 참조 검증기 및 규칙.
-- **문서**: 규범적 사양, 예제 및 지침.
+- **A structured evidence format**: schemas, templates, and taxonomy for AI governance evidence.
+- **Traceability framework**: lifecycle-based evidence linking (request → review → exception → renewal).
+- **Explainability support**: coverage mapping to external frameworks for audit discussions.
+- **Validation tooling**: reference validator and rules for structural consistency checks.
+- **Documentation**: normative specification, examples, and guidance.
 
-## AIMO 표준이 제공하지 않는 것
+## What AIMO Standard does NOT provide
 
-| 범위 외 | 설명 |
+| Out-of-scope | Explanation |
 | --- | --- |
-| **법률 자문** | AIMO는 법률이나 규정을 해석하지 않습니다. 규제 컴플라이언스는 자격을 갖춘 법률 고문과 상담하세요. |
-| **컴플라이언스 인증** | AIMO 사용은 규정 또는 프레임워크(ISO 42001, EU AI Act, NIST AI RMF 등)에 대한 컴플라이언스를 인증하지 않습니다. |
-| **리스크 평가** | AIMO는 증거를 구조화하지만 AI 리스크 평가를 수행하거나 검증하지 않습니다. |
-| **기술적 통제** | AIMO는 접근 통제, 암호화 또는 기타 보안 통제를 구현하지 않습니다; 기대를 문서화합니다. |
-| **감사 실행** | AIMO는 감사자에게 자료를 제공하지만 감사를 수행하지 않습니다. |
-| **AI 모델 평가** | AIMO는 모델 성능, 편향 또는 안전을 평가하지 않습니다. |
+| **Legal advice** | AIMO does not interpret laws or regulations. Consult qualified legal counsel for regulatory compliance. |
+| **Compliance certification** | Using AIMO does not certify compliance with any regulation or framework (ISO 42001, EU AI Act, NIST AI RMF, etc.). |
+| **"ISO certified by AIMO"** | AIMO does not issue certifications. Certification is performed by accredited certification bodies. |
+| **"EU AI Act compliant because of AIMO"** | AIMO structures evidence; it does not guarantee or certify regulatory compliance. |
+| **Risk assessment** | AIMO structures evidence but does not perform or validate AI risk assessments. |
+| **Technical controls** | AIMO does not implement access control, encryption, or other security controls; it documents expectations. |
+| **Audit execution** | AIMO provides materials for auditors but does not conduct audits. |
+| **AI model evaluation** | AIMO does not assess model performance, bias, or safety. |
 
-## 가정
+## Assumptions
 
-AIMO 표준은 다음을 가정합니다:
+The AIMO Standard assumes:
 
-1. **채택자가 거버넌스 프로세스를 보유**: 요청, 검토, 승인 및 예외 워크플로우가 존재합니다.
-2. **채택자가 증거를 유지**: 증거는 채택자의 시스템에서 생성, 저장 및 보존됩니다.
-3. **채택자가 권위 있는 텍스트와 대조 확인**: 커버리지 맵 사용 시 채택자는 원래 프레임워크 또는 규정을 확인합니다.
-4. **도구는 선택적**: 참조 검증기는 편의이며; 채택자는 자체 검증을 사용할 수 있습니다.
+1. **Adopters have governance processes**: request, review, approval, and exception workflows exist.
+2. **Adopters maintain evidence**: evidence is created, stored, and retained by the adopter's systems.
+3. **Adopters verify against authoritative texts**: when using Coverage Map, adopters check the original framework or regulation.
+4. **Tooling is optional**: the reference validator is a convenience; adopters may use their own validation.
 
-## 채택자 책임
+## Adopter responsibilities
 
-| 책임 | 설명 |
+| Responsibility | Description |
 | --- | --- |
-| **증거 생성** | EV 스키마에 맞춘 정확하고 적시의 증거 레코드 생성. |
-| **증거 저장 및 보존** | 적절한 접근 통제 및 보존 기간으로 증거를 안전하게 저장. |
-| **무결성 및 접근 통제** | 증거 무결성을 보존하기 위한 통제(해싱, WORM, 감사 로그) 구현. |
-| **법적 검증** | 권위 있는 법률 문서와 대조하여 컴플라이언스 주장 확인 및 필요시 법률 자문 획득. |
-| **지속적 정합** | AIMO 표준 버전 및 외부 프레임워크가 발전함에 따라 증거 및 매핑 업데이트. |
-| **감사 준비** | 감사자에게 제출하기 전에 증거 번들을 패키징하고 검증 실행. |
+| **Evidence creation** | Generate accurate, timely evidence records aligned with EV schema. |
+| **Evidence storage & retention** | Store evidence securely with appropriate access controls and retention periods. |
+| **Integrity & access control** | Implement controls (hashing, WORM, audit logs) to preserve evidence integrity. |
+| **Legal verification** | Verify compliance claims against authoritative legal texts and obtain legal advice as needed. |
+| **Continuous alignment** | Update evidence and mappings as AIMO Standard versions and external frameworks evolve. |
+| **Audit preparation** | Package evidence bundles and run validation before submission to auditors. |
 
-## RACI 매트릭스
+## RACI Matrix
 
-다음 RACI 매트릭스는 AIMO 표준, 채택자 및 감사자 역할 간의 책임을 명확히 합니다.
+The following RACI matrix clarifies responsibilities across AIMO Standard, Adopter, and Auditor roles.
 
-| 활동 | AIMO 표준 | 채택자 | 감사자 |
+| Activity | AIMO Standard | Adopter | Auditor |
 | --- | :---: | :---: | :---: |
-| **증거 스키마 및 템플릿 정의** | R/A | I | I |
-| **증거 레코드 생성** | — | R/A | I |
-| **증거 저장 및 보존** | — | R/A | I |
-| **접근 통제 구현** | — | R/A | I |
-| **무결성 통제 구현 (해시, WORM)** | — | R/A | I |
-| **번들에 검증기 실행** | C | R/A | C |
-| **제출 패키지 (zip, 체크섬)** | C | R/A | I |
-| **체크섬 확인 (sha256)** | — | C | R/A |
-| **번들 구조 확인 (검증기)** | — | C | R/A |
-| **규제 요구사항 해석** | — | R/A | C |
-| **감사 결론 발행** | — | — | R/A |
-| **법률 자문 제공** | — | — | — |
+| **Define evidence schema & templates** | R/A | I | I |
+| **Create evidence records** | — | R/A | I |
+| **Store & retain evidence** | — | R/A | I |
+| **Implement access controls** | — | R/A | I |
+| **Implement integrity controls (hash, WORM)** | — | R/A | I |
+| **Run validator on bundle** | C | R/A | C |
+| **Package submission (zip, checksums)** | C | R/A | I |
+| **Verify checksums (sha256)** | — | C | R/A |
+| **Verify bundle structure (validator)** | — | C | R/A |
+| **Interpret regulatory requirements** | — | R/A | C |
+| **Issue audit conclusion** | — | — | R/A |
+| **Provide legal advice** | — | — | — |
 
-**범례**: R = 책임, A = 승인, C = 협의, I = 통보, — = 해당 없음
+**Legend**: R = Responsible, A = Accountable, C = Consulted, I = Informed, — = Not applicable
 
-!!! note "핵심 요점"
-    AIMO 표준은 **형식 정의**를 책임집니다. 채택자는 **증거 생성, 저장 및 검증**을 책임집니다. 감사자는 **제출 확인 및 감사 결론 발행**을 책임집니다.
+!!! note "Key takeaway"
+    AIMO Standard is responsible for **defining the format**. Adopters are responsible for **creating, storing, and validating evidence**. Auditors are responsible for **verifying submissions and issuing audit conclusions**.
 
-!!! warning "비인증 공지"
-    AIMO 표준은 참고용이며; 컴플라이언스를 인증하거나 법률 자문을 제공하지 않습니다. 감사 결론 및 적합성 평가는 자격을 갖춘 감사자 및 법률 전문가의 단독 책임입니다.
+!!! warning "Non-certification notice"
+    AIMO Standard is informative; it does not certify compliance or provide legal advice. Audit conclusions and conformity assessments are the sole responsibility of qualified auditors and legal professionals.
 
-## 과대 주장 금지 선언
+## Claims policy
 
-!!! warning "중요"
-    AIMO 표준은 **설명 가능성 및 증거 준비**를 지원합니다. 법률 자문을 제공하거나, 컴플라이언스를 보장하거나, 어떤 규정 또는 프레임워크에 대한 적합성을 인증하지 **않습니다**. 채택자는 권위 있는 텍스트와 대조하여 주장을 확인하고 적절한 전문 자문을 받아야 합니다.
+| Acceptable | Unacceptable |
+| --- | --- |
+| "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator." | <!-- UNACCEPTABLE_CLAIMS_EXAMPLES --> "EU AI Act compliant", "ISO 42001 certified", "government approved" <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES --> |
+| "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies." | Claiming that AIMO certifies compliance or provides legal advice. |
 
-이 선언은 신뢰 패키지, 증거 번들, 최소 증거 요구사항, 커버리지 맵 및 릴리스를 포함한 모든 AIMO 표준 문서에 적용됩니다.
+## Non-overclaim statement
 
-## 관련 페이지
+!!! warning "Important"
+    The AIMO Standard supports **explainability and evidence readiness**. It does **not** provide legal advice, guarantee compliance, or certify conformity to any regulation or framework. Adopters must verify claims against authoritative texts and obtain professional advice as appropriate.
 
-- [신뢰 패키지](../trust-package/) — 감사자 준비 자료 허브
-- [인간 감독 프로토콜](../human-oversight-protocol/) — 기계 vs. 인간 검토 경계
-- [최소 증거 요구사항](../../artifacts/minimum-evidence/) — MUST 수준 생명주기 체크리스트
-- [커버리지 맵 방법론](../../coverage-map/methodology/) — 매핑이 무엇이고 무엇이 아닌지
+This statement applies to all AIMO Standard documentation, including Trust Package, Evidence Bundle, Minimum Evidence Requirements, Coverage Map, and Releases.
+
+## Related pages
+
+- [Trust Package](../trust-package/) — auditor-ready materials hub
+- [Human Oversight Protocol](../human-oversight-protocol/) — machine vs. human review boundary
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST-level lifecycle checklist
+- [Coverage Map Methodology](../../coverage-map/methodology/) — what the mapping is and is not

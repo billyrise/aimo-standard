@@ -4,7 +4,7 @@
 
 meta:
   version: "0.1.2"
-  last_updated: "2026-02-13"
+  last_updated: "2026-02-15"
   methodology: "Informative mapping only. Readers must verify against authoritative framework texts. AIMO supports explainability and evidence readiness; it does not guarantee conformity to any external standard or regulation. Audit questions (audit_questions) are for explanatory use only and do not constitute assurance or compliance guarantees."
 
 frameworks:
@@ -24,6 +24,10 @@ frameworks:
     name: "ISO/IEC 27001/27002 (ISMS)"
     type: standard
     notes: "Change management, access control, logging, evidence integrity; verify against published standards."
+  - id: iso42006
+    name: "ISO/IEC 42006 (AIMS audit/certification bodies)"
+    type: standard
+    notes: "Requirements for bodies auditing/certifying AI management systems against ISO/IEC 42001; builds on ISO/IEC 17021-1. Verify against published standard."
 
 mappings:
   # --- ISO/IEC 42001 (15–25) ---

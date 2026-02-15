@@ -1,14 +1,25 @@
 ---
-description: AIMO 표준 예제 - AI 거버넌스 감사를 위해 증거 산출물을 조합하는 방법을 보여주는 엔드투엔드 및 최소 샘플 번들.
+description: AIMO Standard examples - End-to-end and minimal sample bundles showing how to assemble evidence artifacts for AI governance audits.
 ---
 
-# 예제
+# Examples
 
-이 섹션은 산출물이 어떻게 조합되는지 보여주는 엔드투엔드 및 최소 예제를 안내합니다.
+This section points to end-to-end and minimal examples that show how artifacts are assembled.
 
-- **최소 번들**: 저장소의 `examples/minimal/` (예: `sample_ev.json`, `sample_dictionary.json`).
-- **증거 번들 (최소)**: `examples/evidence_bundle_minimal/` — 선택적 request, review, change_log가 있는 root.json; [증거 번들](../artifacts/evidence-bundle/) 및 [최소 증거](../artifacts/minimum-evidence/) 참조.
-- **스키마 정합**: `schemas/jsonschema/` 및 [표준](../standard/current/)에 대해 검증.
-- **감사 준비 패키징**: [신뢰 패키지](../governance/trust-package/) 참조.
+- **Minimal bundle**: `examples/minimal/` in the repository (e.g., `sample_ev.json`, `sample_dictionary.json`).
+- **Evidence Bundle (minimal)**: `examples/evidence_bundle_v01_minimal/` — normative minimal Bundle (manifest, object_index, payload_index, hash_chain, signing); see [Evidence Bundle](../artifacts/evidence-bundle/) and [Minimum Evidence](../artifacts/minimum-evidence/).
+- **Evidence Bundle (EU AI Act Annex IV sample)**: `examples/evidence_bundle_v01_annex_iv_sample/` — official sample aligned with EU AI Act Annex IV technical documentation for high-risk AI; same structure as minimal, with root payload and an Annex IV technical documentation payload (`payloads/ANNEXIV_technical_documentation.md`). The bundle includes `signatures/` and `hashes/` and satisfies normative Evidence Bundle v0.1 path and coverage requirements. See [EU AI Act mapping](../coverage-map/eu-ai-act/) and profile `coverage_map/profiles/eu_ai_act_annex_iv.json`.
+- **Schema alignment**: validate against `schemas/jsonschema/` and [Standard](../standard/current/).
+- **Audit-ready packaging**: see the [Trust Package](../governance/trust-package/).
 
-상세 시나리오 범위는 이후 변경 단위에서 추가됩니다.
+### GPAI CoP evidence bundle outline
+
+For **EU GPAI Code of Practice** alignment, attach the **Model Documentation Form** (or equivalent) as an external form:
+
+1. Add the form file (e.g. PDF or DOC) under `payloads/` and assign a stable `logical_id` (e.g. `GPAI_MODEL_DOC_FORM`) in the bundle `manifest.json` `payload_index`.
+2. Record the file path, `sha256`, `mime`, and `size` in the payload_index so the bundle remains integrity-verifiable.
+3. Reference the form in your coverage map or handoff index so auditors can trace between the GPAI form and AIMO taxonomy/bundle objects.
+
+Profile: `coverage_map/profiles/eu_gp_ai_cop.json`. See [EV Template — External Forms](../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) and [Procurement & Disclosure Overlays](../coverage-map/procurement-and-disclosure/) for UK/Japan overlays.
+
+Detailed scenario coverage is added in later change units.

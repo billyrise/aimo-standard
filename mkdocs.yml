@@ -111,14 +111,17 @@ nav:
           - coverage-map/index.md
           - Methodology: coverage-map/methodology.md
           - ISO/IEC 42001: coverage-map/iso-42001.md
+          - ISO/IEC 42006: coverage-map/iso-42006.md
           - NIST AI RMF: coverage-map/nist-ai-rmf.md
           - EU AI Act: coverage-map/eu-ai-act.md
+          - Procurement & Disclosure (UK, Japan): coverage-map/procurement-and-disclosure.md
           - ISMS: coverage-map/isms.md
   - Artifacts:
       - artifacts/index.md
       - Evidence Bundle: artifacts/evidence-bundle.md
       - Evidence Bundle Coverage Map (template): artifacts/evidence-bundle-coverage-map.md
       - Minimum Evidence Requirements: artifacts/minimum-evidence.md
+      - ISO/IEC 42001 Certification Readiness Toolkit: artifacts/iso-42001-certification-readiness-toolkit.md
       - Signature verification roadmap: artifacts/signature-verification-roadmap.md
       - Justified Non-Compliance (JNC): artifacts/justified-non-compliance.md
       - Log Schemas:

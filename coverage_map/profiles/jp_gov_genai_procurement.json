@@ -1,0 +1,14 @@
+{
+  "profile_id": "PR-JP-GOV-GENAI-PROCUREMENT-v0.1",
+  "target": "JP_GOV_GENAI_PROCUREMENT",
+  "target_version": "current",
+  "audit_questions": [
+    "Is JP government GenAI procurement checklist attached or referenced?",
+    "Are AI Business Guidelines checklist items mappable to AIMO taxonomy?"
+  ],
+  "mappings": [
+    {"source_object_ref": "payload:JP_PROCUREMENT_CHECKLIST", "target_field": "JP procurement checklist", "required": false},
+    {"source_object_ref": "Summary", "target_field": "JP AI Business Guidelines", "required": false},
+    {"source_object_ref": "dictionary", "target_field": "Reference mapping only", "required": false}
+  ]
+}

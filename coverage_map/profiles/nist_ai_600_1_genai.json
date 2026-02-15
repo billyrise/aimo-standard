@@ -1,0 +1,14 @@
+{
+  "profile_id": "PR-NIST-AI-600-1-v0.1",
+  "target": "NIST_AI_600_1",
+  "target_version": "1.0",
+  "audit_questions": [
+    "Are GenAI-specific adaptation and evaluation records present?",
+    "Is monitoring and change control traceable to bundle objects?"
+  ],
+  "mappings": [
+    {"source_object_ref": "evidence", "target_field": "GenAI profile – model adaptation", "required": false},
+    {"source_object_ref": "change_log", "target_field": "GenAI profile – change control", "required": false},
+    {"source_object_ref": "Summary", "target_field": "GenAI profile – evaluation/monitoring", "required": false}
+  ]
+}

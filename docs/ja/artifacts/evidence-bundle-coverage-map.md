@@ -1,106 +1,121 @@
 ---
-description: Evidence Bundle Coverage Map テンプレ（v0.1）。監査向け一枚まとめ — スコープ、エビデンス種別、コントロール対応、除外・前提、整合性証明の要約。
+description: Evidence Bundle Coverage Map template (v0.1). Informative one-page summary for auditors — scope, evidence types, controls mapping, exclusions, integrity proof.
 ---
 
-# Evidence Bundle Coverage Map（テンプレ）
+# Evidence Bundle Coverage Map (Template)
 
-!!! info "Informative — 推奨実務テンプレ"
-    本ページは、Evidence Bundle の**推奨実務テンプレ**としての「Coverage Map」一枚の雛形を定義する。標準の必須項目ではなく、**informative** とする。監査人への引き継ぎ用に「このバンドルで何をカバーし、何をカバーしないか」を記載するために利用できる。参照（例：フレームワークへのリンク）は安定させる；採用は実装者判断とする。
-
----
-
-## 1. スコープ（Scope）
-
-| 項目 | 説明 |
-|------|------|
-| **スコープ参照** | マニフェストの `scope_ref`（例: `SC-001`）。本バンドルが対象とするスコープ。 |
-| **Bundle ID** | `bundle_id`（UUID）— 本バンドルの一意識別子。 |
-| **Bundle バージョン** | `bundle_version`（SemVer）— バンドルのバージョン。 |
-| **対象期間 / スナップショット** | 任意：本バンドルが対象とする期間または日付（例: 2026-Q1、as-of 2026-02-03）。 |
+!!! info "Informative — recommended practice"
+    This page defines a **recommended practice template** for a one-page Evidence Bundle Coverage Map. It is **not** a normative requirement of the standard. Use it to document what a bundle covers and does not cover for auditor handoff. References (e.g. to frameworks) are stable; adoption is at the implementer's discretion.
 
 ---
 
-## 2. エビデンス種別（EV / objects と payloads）
+## 1. Scope
 
-| 区分 | 内容 | v0.1 minimal の例 |
-|------|------|-------------------|
-| **object_index** | 列挙オブジェクト（メタデータ・索引）。各要素: `id`, `type`, `path`, `sha256`。 | 例: `objects/index.json`（index 型）。 |
-| **payload_index** | ペイロード（ルート EV JSON、Evidence Pack 等）。各要素: `logical_id`, `path`, `sha256`, `mime`, `size`。 | 例: `payloads/root.json`（ルート AIMO EV JSON）。 |
-| **EV 種別** | エビデンスレコード（ルートまたはペイロード内）— request, review, exception, renewal, change log。 | [Evidence Pack Template](../../standard/current/06-ev-template/) および [Minimum Evidence Requirements](../minimum-evidence/) に準拠。 |
-
-*object_index / payload_index は拡張可能。path はバンドルルート内に留め、[Evidence Bundle ルート構造（v0.1）](../../standard/current/09-evidence-bundle-structure/) を満たすこと。*
-
----
-
-## 3. コントロール対応（参照のみ）
-
-外部フレームワークとの対応は**参照用**であり、標準は特定規制への適合を義務付けない。
-
-| フレームワーク | 本バンドルでの利用 | 参照 |
-|----------------|--------------------|------|
-| **ISO/IEC 42001** | 任意：本バンドルがカバーする AI MS テーマを記載。 | [Coverage Map → ISO 42001](../../coverage-map/iso-42001/) |
-| **EU AI Act** | 任意：ドキュメント・記録保持の対応レベル。 | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/) |
-| **NIST AI RMF** | 任意：Govern, Map, Measure, Manage の対応。 | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/) |
-| **ISMS (27001/27002)** | 任意：変更管理、アクセス、ログ、整合性。 | [Coverage Map → ISMS](../../coverage-map/isms/) |
-
-*「本バンドルでの利用」は提出ごとに記入。標準は特定のコントロール網羅を要求しない。*
+| Item | Description |
+|------|--------------|
+| **Scope reference** | `scope_ref` from the bundle manifest (e.g. `SC-001`). Links this bundle to the declared scope. |
+| **Bundle ID** | `bundle_id` (UUID) — unique identifier for this bundle. |
+| **Bundle version** | `bundle_version` (SemVer) — version of the bundle. |
+| **Period / snapshot** | Optional: time period or snapshot date this bundle represents (e.g. 2026-Q1, as-of 2026-02-03). |
 
 ---
 
-## 4. 除外・前提（Exclusions / Assumptions）
+## 2. Evidence types (EV / objects vs payloads)
 
-| 区分 | 本バンドルで**カバーしない**もの（例 — 提出ごとに調整） |
-|------|--------------------------------------------------------|
-| **除外** | 例：スコープ外のシステム・ユースケース；エビデンス対象外の第三者コンポーネント；本バンドル対象期間外。 |
-| **前提** | 例：Dictionary/ taxonomy バージョン；使用した Validator/スキーマバージョン；Custody・保持は実装側で定義。 |
-| **制限** | 例：v0.1 では署名の暗号検証は範囲外；規制の法的解釈は行わない。 |
+| Category | Contents | v0.1 minimal example |
+|----------|----------|------------------------|
+| **object_index** | Enumerated objects (metadata, indexes). Each entry: `id`, `type`, `path`, `sha256`. | e.g. `objects/index.json` (index type). |
+| **payload_index** | Payload files (root EV JSON, Evidence Pack files). Each entry: `logical_id`, `path`, `sha256`, `mime`, `size`. | e.g. `payloads/root.json` (root AIMO EV JSON). |
+| **EV types** | Evidence records (in root or linked payloads) — request, review, exception, renewal, change log. | Aligned with [Evidence Pack Template](../../standard/current/06-ev-template/) and [Minimum Evidence Requirements](../minimum-evidence/). |
 
-*プレースホルダを提出ごとの除外・前提に置き換える。*
-
----
-
-## 5. 整合性証明の要約（Integrity proof summary）（v0.1）
-
-| 要素 | 提供内容（v0.1 規範） |
-|------|------------------------|
-| **manifest.json** | 存在しスキーマ有効。`object_index`, `payload_index`, `hash_chain`, `signing` を含む。 |
-| **sha256** | `object_index` / `payload_index` の全ファイルに 64 文字小 hex の sha256 を宣言；バリデータが内容一致を検証。 |
-| **索引の存在** | 列挙された全 path がバンドルルート配下に存在；path traversal（`../`・先頭 `/`）なし。 |
-| **署名の存在** | `signatures/` に少なくとも 1 つの署名ファイル；マニフェストの `signing.signatures[]` で `path` と `targets` を参照（v0.1 では targets に `manifest.json` を含む MUST）。暗号検証は v0.1 範囲外。 |
-| **Hash chain** | マニフェストの `hash_chain`：`algorithm`, `head`（64 文字 hex）, `path`（`hashes/` 配下のファイル）, `covers`（v0.1 で `manifest.json` と `objects/index.json` を含む MUST）。`hash_chain.path` のファイルが存在。 |
-
-*上記は v0.1 バンドルに対して [Validator](../../validator/) が検証する整合性保証の要約。Custody（保管・アクセス制御・保持）は実装定義。*
+*Implementers may extend object_index and payload_index; paths MUST remain within the bundle root and satisfy the [Evidence Bundle root structure (v0.1)](../../standard/current/09-evidence-bundle-structure/).*
 
 ---
 
-## Coverage Map（YAML）と Profile（JSON）の関係
+## 3. Controls mapping (reference only)
 
-| 成果物 | 位置づけ | 目的 |
-|--------|----------|------|
-| **Coverage Map YAML**（`coverage_map/coverage_map.yaml` 等） | **Informative** | AIMO 証跡/成果物と外部フレームワーク（ISO 42001、NIST AI RMF、EU AI Act 等）の高レベルな対応テーマの説明。規範的な検証要件は課さない。 |
-| **Profile JSON**（`coverage_map/profiles/*.json`） | **Normative** | `schemas/jsonschema/aimo-profile.schema.json` で検証される変換仕様。機械可読なマッピングを定義。[Validator](../../validator/) の `--validate-profiles` で公式 Profile JSON のスキーマ適合を検証する（profile_id の PR-* パターン、target 列挙、target_version、mappings）。 |
+Mapping to external frameworks is **for reference only**; the standard does not mandate compliance with any specific regulation.
 
-### v0.1 公式 profiles（凍結セット）
+| Framework | Use in this bundle | Reference |
+|-----------|--------------------|-----------|
+| **ISO/IEC 42001** | Optional: document which AI MS themes this bundle supports. | [Coverage Map → ISO 42001](../../coverage-map/iso-42001/) |
+| **EU AI Act** | Optional: high-level documentation/record-keeping alignment. | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/) |
+| **NIST AI RMF** | Optional: Govern, Map, Measure, Manage mapping. | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/) |
+| **EU GPAI CoP** | Optional: Model Documentation Form; attach in External Forms, reference by logical_id. | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/); profile `eu_gp_ai_cop.json` |
+| **NIST AI RMF / GenAI** | Optional: GenAI profile (AI 600-1) artifacts. | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/); profile `nist_ai_600_1_genai.json` |
+| **UK ATRS** | Optional: ATRS record, procurement evaluation. | [Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/); profile `uk_atrs_procurement.json` |
+| **JP Gov GenAI procurement** | Optional: JP procurement checklist, AI Business Guidelines. | [Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/); profile `jp_gov_genai_procurement.json` |
+| **ISMS (27001/27002)** | Optional: change management, access, logging, integrity. | [Coverage Map → ISMS](../../coverage-map/isms/) |
 
-v0.1 リリースに含まれる**規範的** Profile JSON は **3 本**。いずれもバリデータで検証される。
+*Fill in “Use in this bundle” per submission; the standard does not require any specific control coverage.*
 
-| ファイル | profile_id | target | target_version |
-|----------|------------|--------|-----------------|
+### External Forms and manifest reference
+
+**External Forms** (official templates/checklists attached as-is) should be listed in the bundle **payload_index** with a stable `logical_id`, `path`, `sha256`, `mime`, and `size`. Auditors can then trace from the manifest to the file and verify the hash. See [EV Template — External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) and [EV Template — Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index).
+
+---
+
+## 4. Exclusions / assumptions
+
+| Area | What this bundle does **not** cover (example rows — adjust per submission) |
+|------|-------------------------------------------------------------------------------|
+| **Exclusions** | e.g. Systems or use cases out of scope; third-party components not evidenced; time period outside this bundle. |
+| **Assumptions** | e.g. Dictionary/taxonomy version; validator/schema version used; custody and retention are implementation-defined. |
+| **Limitations** | e.g. Signature verification is out of scope in v0.1; no legal interpretation of regulations. |
+
+*Replace placeholder text with submission-specific exclusions and assumptions.*
+
+---
+
+## 5. Integrity proof summary (v0.1)
+
+| Element | What is provided (v0.1 normative) |
+|---------|----------------------------------|
+| **manifest.json** | Present and schema-valid; includes `object_index`, `payload_index`, `hash_chain`, `signing`. |
+| **sha256** | Every file in `object_index` and `payload_index` has a declared 64-char lowercase hex sha256; validator checks content match. |
+| **Index existence** | All listed paths exist under the bundle root; no path traversal (`../` or leading `/`). |
+| **Signature existence** | At least one signature file in `signatures/`; manifest references it via `signing.signatures[]` with `path` and `targets` (v0.1 MUST include `manifest.json` in targets). Cryptographic verification is out of scope for v0.1. |
+| **Hash chain** | `hash_chain` in manifest: `algorithm`, `head` (64-char hex), `path` (file under `hashes/`), `covers` (v0.1 MUST include `manifest.json` and `objects/index.json`). File at `hash_chain.path` exists. |
+
+*This table summarizes the integrity guarantees that the [Validator](../../validator/) checks for v0.1 bundles. Custody (storage, access control, retention) is implementation-defined.*
+
+---
+
+## Coverage Map (YAML) vs Profiles (JSON)
+
+| Artifact | Status | Purpose |
+|----------|--------|---------|
+| **Coverage Map YAML** (`coverage_map/coverage_map.yaml` or similar) | **Informative** | High-level mapping themes between AIMO evidence/artifacts and external frameworks (ISO 42001, NIST AI RMF, EU AI Act, etc.) for explainability. It does not impose normative validation requirements. |
+| **Profile JSONs** (`coverage_map/profiles/*.json`) | **Normative** | Conversion specifications validated against `schemas/jsonschema/aimo-profile.schema.json`. They define machine-readable mappings (e.g. which AIMO objects map to which framework clauses). The [Validator](../../validator/) runs `--validate-profiles` to ensure all official profile JSONs conform to the schema (profile_id PR-* pattern, target enum, target_version, mappings). |
+
+### Official profiles (validator-validated)
+
+Profile JSONs live in `coverage_map/profiles/` and are validated by the validator (`--validate-profiles`). Naming: file name `<target>_<purpose>.json`; each includes `target_version`.
+
+| File | profile_id | target | target_version |
+|------|------------|--------|----------------|
 | `iso42001.json` | PR-ISO42001-v0.1 | ISO_42001 | 1.0 |
+| `iso_42001_readiness.json` | PR-ISO42001-READINESS-v0.1 | ISO_42001 | 2023 |
 | `nist_ai_rmf.json` | PR-NIST-AI-RMF-v0.1 | NIST_AI_RMF | 1.0 |
+| `nist_ai_600_1_genai.json` | PR-NIST-AI-600-1-v0.1 | NIST_AI_600_1 | 1.0 |
 | `eu_ai_act_annex_iv.json` | PR-EU-AI-ACT-ANNEX-IV-v0.1 | EU_AI_ACT_ANNEX_IV | Annex IV |
+| `eu_ai_act_high_risk.json` | PR-EU-AI-ACT-HIGH-RISK-v0.1 | EU_AI_ACT_HIGH_RISK | 2024/1689 |
+| `eu_gp_ai_cop.json` | PR-EU-GPAI-COP-v0.1 | EU_GPAI_COP | current |
+| `uk_atrs_procurement.json` | PR-UK-ATRS-v0.1 | UK_ATRS | current |
+| `jp_gov_genai_procurement.json` | PR-JP-GOV-GENAI-PROCUREMENT-v0.1 | JP_GOV_GENAI_PROCUREMENT | current |
 
-### Profile 更新方針
+### Profile update policy
 
-- **ISO 42001 / NIST AI RMF**：対象フレームワークの新バージョンは、将来の標準バージョンで新規 Profile ファイルまたは新 `target_version` として追加可能。v0.1 の Profile は v0.1 リリースとして凍結。
-- **EU AI Act Annex IV**：Annex IV および関連条文は規制側で更新される場合がある。条文・文言変更に追随するため、**PATCH**（例 0.1.x）で Profile のマッピングを更新することがある（profile_id は継続）。実装者は Profile の `target_version` およびリリースノートで参照される版に合わせること。
+- **EU AI Act refs (0.1.2)**: Article references for the EU AI Act in the coverage map and docs were aligned to Regulation (EU) 2024/1689 for consistent evidence readiness; informative only, not legal advice.
+- **ISO 42001 / NIST AI RMF**: New versions of the target framework may be added as new profile files or new `target_version` values in a future standard version; v0.1 profiles remain frozen for the v0.1 release.
+- **EU AI Act Annex IV**: Annex IV and related articles may be updated by regulators; profile mappings may be updated via **PATCH** (e.g. 0.1.x) to follow wording or clause changes while keeping the same profile_id for continuity. Implementers should align with the version referenced in the profile’s `target_version` and release notes.
 
 ---
 
-## 関連
+## See also
 
-- [Evidence Bundle（概要）](../evidence-bundle/)
-- [Evidence Bundle ルート構造（v0.1）](../../standard/current/09-evidence-bundle-structure/)
+- [Evidence Bundle (artifact overview)](../evidence-bundle/)
+- [Evidence Bundle root structure (v0.1)](../../standard/current/09-evidence-bundle-structure/)
 - [Minimum Evidence Requirements](../minimum-evidence/)
-- [Coverage Map（フレームワーク対応）](../../coverage-map/)
+- [Coverage Map (framework mappings)](../../coverage-map/)
 - [Validator](../../validator/)

@@ -1,112 +1,128 @@
 ---
-description: AIMO 最低證據要求。按生命週期（請求、審查、核准、變更、續期）的必要層級檢查清單，用於 AI 治理證據就緒。
+description: AIMO minimum evidence requirements. MUST-level checklist by lifecycle (request, review, approval, change, renewal) for AI governance evidence readiness.
 ---
 
-# 最低證據要求
+# Minimum Evidence Requirements
 
-本頁定義了按生命週期分組的必要層級檢查清單作為最低證據要求。它支援可解釋性和證據就緒；不提供法律建議或保證合規性。
+This page is the **Minimum Evidence Requirements** checklist for auditors and implementers. It defines the minimum evidence requirements as a MUST-level checklist, grouped by lifecycle. It supports explainability and evidence readiness; it does not provide legal advice or guarantee compliance.
 
-## 1) 請求
+Use this page together with [Evidence Bundle](../evidence-bundle/) and the [Validator](../../standard/current/07-validator/) when preparing or reviewing submissions.
 
-- **必要欄位**：identifier、timestamp(s)、actor/role、scope（請求內容）、rationale（原因）。
-- **必要連結**：request id 被 review 和記錄使用的 EV 項目參照。
-- **證明內容**：在核准和使用之前已請求並定義範圍。
+## 1) Request
 
-## 2) 審查 / 核准
+- **MUST fields**: identifier, timestamp(s), actor/role, scope (what is requested), rationale (why).
+- **MUST linkages**: request id referenced by review and by EV items that record the use.
+- **What it proves**: that use was requested and scoped before approval and use.
 
-- **必要欄位**：identifier、timestamp(s)、actor/role、decision（approved/rejected/conditional）、scope、rationale、reference to request。
-- **必要連結**：review id 被 EV 和任何後續的 exception 或 renewal 參照。
-- **證明內容**：在使用（或例外）之前進行了定義的審查和核准。
+## 2) Review / Approval
 
-## 3) 例外
+- **MUST fields**: identifier, timestamp(s), actor/role, decision (approved/rejected/conditional), scope, rationale, reference to request.
+- **MUST linkages**: review id referenced by EV and by any exception or renewal that follows.
+- **What it proves**: that a defined review and approval occurred before use (or exception).
 
-- **必要欄位**：identifier、timestamp(s)、scope、expiry（或 deadline）、compensating controls、rationale、reference to review/request。
-- **必要連結**：exception → compensating controls；exception → expiry；exception → renewal（當需要重新評估時）。
-- **證明內容**：偏差有時限、有補償控制，並連結到續期。
+## 3) Exception
 
-## 4) 續期 / 重新評估
+- **MUST fields**: identifier, timestamp(s), scope, expiry (or deadline), compensating controls, rationale, reference to review/request.
+- **MUST linkages**: exception → compensating controls; exception → expiry; exception → renewal (when re-evaluation is due).
+- **What it proves**: that deviations are time-bound, have compensating controls, and are linked to renewal.
 
-- **必要欄位**：identifier、timestamp(s)、actor/role、decision（renewed/revoked/conditional）、references to prior exception/request/review/EV。
-- **必要連結**：renewal 參照正在續期的 exception 或 approval；EV 項目可參照 renewal id。
-- **證明內容**：例外和核准在定義的基礎上進行重新評估並續期或撤銷。
+## 4) Renewal / Re-evaluation
 
-## 5) 變更日誌
+- **MUST fields**: identifier, timestamp(s), actor/role, decision (renewed/revoked/conditional), references to prior exception/request/review/EV.
+- **MUST linkages**: renewal references the exception or approval being renewed; EV items can reference renewal id.
+- **What it proves**: that exceptions and approvals are re-evaluated and renewed or revoked on a defined basis.
 
-- **必要欄位**：identifier、timestamp、actor/role、change description、references（例如到受影響的 EV、request、review、exception、renewal）。
-- **必要連結**：change log 條目參照它們修改或觸發變更的人工產物。
-- **證明內容**：套件或其內容的變更已記錄且可追溯。
+## 5) Change Log
 
-## 6) 完整性與存取
+- **MUST fields**: identifier, timestamp, actor/role, change description, references (e.g. to EV, request, review, exception, renewal affected).
+- **MUST linkages**: change log entries reference the artifacts they modify or that trigger the change.
+- **What it proves**: that changes to the bundle or its contents are recorded and traceable.
 
-證據完整性和存取控制對稽核依賴至關重要。雖然 AIMO 不規定特定的技術控制，但採用者應記錄如何滿足這些期望。
+## 6) Integrity & Access
 
-### 存取控制指引
+Evidence integrity and access control are essential for audit reliance. While AIMO does not prescribe specific technical controls, adopters should document how these expectations are met.
 
-| 面向 | 指引 |
+### Access control guidance
+
+| Aspect | Guidance |
 | --- | --- |
-| **角色型存取** | 定義角色（例如證據建立者、審查者、稽核員、管理員）並記錄誰可以建立、讀取、更新或刪除證據。 |
-| **最小權限** | 授予最小必要存取權限；限制授權人員的寫入存取權限。 |
-| **存取日誌** | 記錄存取事件（誰、何時、什麼）以用於稽核軌跡目的。 |
-| **職責分離** | 在可行的情況下，將證據建立與核准角色分開。 |
+| **Role-based access** | Define roles (e.g., evidence creator, reviewer, auditor, admin) and document who can create, read, update, or delete evidence. |
+| **Least privilege** | Grant minimum necessary access; restrict write access to authorized personnel. |
+| **Access logging** | Log access events (who, when, what) for audit trail purposes. |
+| **Separation of duties** | Where practical, separate evidence creation from approval roles. |
 
-### 保留指引
+### Retention guidance
 
-| 面向 | 指引 |
+| Aspect | Guidance |
 | --- | --- |
-| **保留期限** | 根據法規要求和組織政策定義並記錄保留期限（例如財務稽核 5-7 年）。 |
-| **保留時程** | 維護時程表，顯示保留什麼證據、保留多長時間以及何時可以處置。 |
-| **法律保留** | 支援法律保留程序，為訴訟或調查暫停正常的保留/刪除。 |
+| **Retention period** | Define and document retention periods based on regulatory requirements and organizational policy (e.g., 5-7 years for financial audits). |
+| **Retention schedule** | Maintain a schedule showing what evidence is retained, for how long, and when it can be disposed. |
+| **Legal hold** | Support legal hold processes that suspend normal retention/deletion for litigation or investigation. |
 
-### 不可變性選項
+### Immutability options
 
-| 選項 | 說明 |
+| Option | Description |
 | --- | --- |
-| **密碼學雜湊** | 為證據檔案產生 SHA-256（或更強）雜湊；將雜湊單獨儲存以供驗證。 |
-| **WORM 儲存** | 對證據存檔使用一次寫入多次讀取儲存以防止修改。 |
-| **僅附加日誌** | 使用僅附加稽核日誌進行變更追蹤。 |
-| **數位簽章** | 簽署證據包以證明作者身份並偵測竄改。 |
+| **Cryptographic hashing** | Generate SHA-256 (or stronger) hashes for evidence files; store hashes separately for verification. |
+| **WORM storage** | Use Write-Once-Read-Many storage for evidence archives to prevent modification. |
+| **Append-only logs** | Use append-only audit logs for change tracking. |
+| **Digital signatures** | Sign evidence bundles to prove authorship and detect tampering. |
 
-### 稽核軌跡期望
+### Audit trail expectations
 
-| 元素 | 需記錄的內容 |
+| Element | What to document |
 | --- | --- |
-| **變更日誌** | 記錄誰變更了什麼、何時以及為什麼（請參閱變更日誌生命週期群組）。 |
-| **存取日誌** | 記錄誰存取了證據、何時以及為了什麼目的。 |
-| **系統日誌** | 保留支援證據完整性聲明的相關系統日誌（驗證、授權）。 |
-| **驗證記錄** | 記錄定期的完整性驗證（雜湊檢查、稽核審查）。 |
+| **Change log** | Record who changed what, when, and why (see Change Log lifecycle group). |
+| **Access log** | Record who accessed evidence, when, and for what purpose. |
+| **System logs** | Retain relevant system logs (authentication, authorization) that support evidence integrity claims. |
+| **Verification records** | Document periodic integrity verification (hash checks, audit reviews). |
 
-### 證明內容
+### What it proves
 
-- **證據已保存**：完整性機制（雜湊、WORM、簽章）證明證據未被竄改。
-- **存取受控制**：存取日誌和角色定義顯示誰有存取權限以及最小權限已套用。
-- **支援稽核依賴**：這些元素結合起來讓稽核員對證據的可靠性有信心。
+- **Evidence is preserved**: integrity mechanisms (hashing, WORM, signatures) demonstrate that evidence has not been tampered with.
+- **Access is controlled**: access logs and role definitions show who had access and that least privilege was applied.
+- **Audit reliance is supported**: together, these elements give auditors confidence in the reliability of evidence.
 
-### 建議的營運設定檔
+### Recommended operational profiles
 
-根據您的風險容忍度和法規要求選擇設定檔。這些是建議，而非強制。
+Choose a profile based on your risk tolerance and regulatory requirements. These are recommendations, not mandates.
 
-| 面向 | 輕量級 | 標準 | 嚴格 |
+| Aspect | Lightweight | Standard | Strict |
 | --- | --- | --- | --- |
-| **使用案例** | 內部試點、低風險 AI | 生產系統、中度風險 | 受監管行業、高風險 AI |
-| **保留期限** | 1-2 年 | 5-7 年 | 7-10 年以上或法規最低要求 |
-| **不可變性** | SHA-256 雜湊 | SHA-256 + 僅附加日誌 | WORM 儲存 + 數位簽章 |
-| **存取控制** | 角色型（基本） | 角色型 + 存取日誌 | 職責分離 + 完整稽核軌跡 |
-| **稽核軌跡** | 僅變更日誌 | 變更日誌 + 存取日誌 | 完整系統日誌 + 定期驗證 |
-| **驗證頻率** | 按需 | 每季 | 每月或持續 |
-| **驗證器使用** | 選用 | 提交前必要 | 必要 + 自動化 CI 檢查 |
+| **Use case** | Internal pilots, low-risk AI | Production systems, moderate risk | Regulated industries, high-risk AI |
+| **Retention period** | 1-2 years | 5-7 years | 7-10+ years or regulatory minimum |
+| **Immutability** | SHA-256 hashes | SHA-256 + append-only logs | WORM storage + digital signatures |
+| **Access control** | Role-based (basic) | Role-based + access logging | Separation of duties + full audit trail |
+| **Audit trail** | Change log only | Change log + access log | Full system logs + periodic verification |
+| **Verification frequency** | On-demand | Quarterly | Monthly or continuous |
+| **Validator usage** | Optional | Required before submission | Required + automated CI checks |
 
-!!! note "保留期限為範例"
-    顯示的保留期限僅供說明。組織必須根據適用的法律、合約、行業要求和內部政策確定保留期限。
+!!! note "Retention periods are examples"
+    Retention periods shown are illustrative. Organizations must determine retention based on applicable laws, contracts, industry requirements, and internal policies.
 
-!!! tip "如何選擇"
-    - **輕量級**：適用於實驗、內部工具或不太可能進行正式稽核的低風險應用。
-    - **標準**：建議用於可能發生稽核但非持續性的大多數生產部署。
-    - **嚴格**：受監管行業（金融、醫療、政府）或具有重大風險影響的 AI 系統所必需。
+!!! tip "How to choose"
+    - **Lightweight**: Suitable for experimentation, internal tools, or low-stakes applications where formal audits are unlikely.
+    - **Standard**: Recommended for most production deployments where audits may occur but are not continuous.
+    - **Strict**: Required for regulated industries (finance, healthcare, government) or AI systems with significant risk impact.
 
-## 重要說明
+## Important note
 
-此最低要求集支援可解釋性和證據就緒；它本身不提供法律建議或保證合規性。
+This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.
 
-請參閱[證據包](../evidence-bundle/)了解套件結構和目錄；請參閱 [EV 範本](../../standard/current/06-ev-template/)和結構描述了解欄位層級對齊。
+See [Evidence Bundle](../evidence-bundle/) for bundle structure and TOC; see [EV Template](../../standard/current/06-ev-template/) and schemas for field-level alignment.
 
-另請參閱：[日誌結構描述](../log-schemas/) — Shadow AI 發現和代理活動證據的標準化日誌格式。
+See also: [Log Schemas](../log-schemas/) — normalized log formats for Shadow AI discovery and agent activity evidence.
+
+## Regulatory overlays (informative)
+
+The following **overlays** describe additional evidence often expected in specific regulatory or procurement contexts. They are **informative**; attach official templates/checklists as-is in the [External Forms section](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) of the EV Template and reference them by logical_id in the manifest.
+
+| Overlay | Additional artifacts typically expected | Where to attach | Profile (optional) |
+| --- | --- | --- | --- |
+| **EU High-Risk** | Risk management, technical documentation (Annex IV), logging, human oversight, transparency (Art 50), incident reporting | payload_index; Evidence Bundle + Annex IV profile | `eu_ai_act_annex_iv.json`, `eu_ai_act_high_risk.json` |
+| **EU GPAI CoP** | Model Documentation Form (transparency, copyright, safety & security) | External Forms; logical_id e.g. GPAI_MODEL_DOC_FORM | `eu_gp_ai_cop.json` |
+| **NIST GenAI** | GenAI profile artifacts (model adaptation, evaluation, monitoring) | payload_index; change_log; External Forms / GenAI records | `nist_ai_600_1_genai.json` |
+| **UK ATRS / procurement** | ATRS transparency record; accountability owner; procurement evaluation notes | External Forms; Summary, review | `uk_atrs_procurement.json` |
+| **JP procurement** | Government GenAI procurement checklist; AI Business Guidelines checklist | External Forms; logical_id e.g. JP_PROCUREMENT_CHECKLIST | `jp_gov_genai_procurement.json` |
+
+Profile file names follow the pattern `coverage_map/profiles/<target>_<purpose>.json`; each includes `target_version`. See [Coverage Map — Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/) for UK and Japan; [EU AI Act](../../coverage-map/eu-ai-act/) and [NIST AI RMF](../../coverage-map/nist-ai-rmf/) for EU and NIST.

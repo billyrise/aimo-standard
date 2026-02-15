@@ -1,0 +1,18 @@
+{
+  "profile_id": "PR-ISO42001-READINESS-v0.1",
+  "target": "ISO_42001",
+  "target_version": "2023",
+  "audit_questions": [
+    "Does the bundle support evidence for context and scope (4.1)?",
+    "Where are policy and objectives reflected (5.2)?",
+    "Is documented information present and traceable (7.4)?"
+  ],
+  "mappings": [
+    {"source_object_ref": "Summary", "target_field": "4.1 Context of the organization", "required": true},
+    {"source_object_ref": "dictionary", "target_field": "5.2 Policy", "required": true},
+    {"source_object_ref": "evidence", "target_field": "7.4 Documentation", "required": true},
+    {"source_object_ref": "request", "target_field": "8.1 Operational planning", "required": false},
+    {"source_object_ref": "review", "target_field": "9.3 Management review", "required": false},
+    {"source_object_ref": "change_log", "target_field": "10.2 Continual improvement", "required": false}
+  ]
+}

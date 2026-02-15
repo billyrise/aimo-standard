@@ -1,79 +1,80 @@
 ---
-description: AIMO 信任套件 - 稽核員就緒材料包。稽核員、法務和 IT 安全評估 AI 治理採用就緒性所需的最低文件。
+description: AIMO Trust Package - Auditor-ready materials bundle. Minimum documentation for auditors, legal, and IT security to assess AI governance adoption readiness.
 ---
 
-# 信任套件（保證套件）
+# Trust Package (Assurance Package)
 
-本頁彙整稽核員、法務和 IT 安全評估採用就緒性所需的最低材料。
-它僅是一個中心；詳細的證據目錄和覆蓋範圍表在各自的章節中維護。
+This page bundles the minimum materials auditors, legal, and IT security need to assess adoption readiness.
+It is a hub only; detailed Evidence TOC and Coverage tables are maintained in their respective sections.
 
-## 下載
+## Download
 
-**[下載信任套件 PDF（最新發布）](https://github.com/billyrise/aimo-standard/releases/latest)**
+**[Download Trust Package PDF (Latest Release)](https://github.com/billyrise/aimo-standard/releases/latest)**
 
-信任套件 PDF 將稽核員就緒材料整合成單一文件。每個 GitHub Release 包含：
+The Trust Package PDF consolidates auditor-ready materials into a single document. Each GitHub Release includes:
 
-- `trust_package.pdf` — 英文信任套件
-- `trust_package.ja.pdf` — 日文信任套件
-- `aimo-standard-artifacts.zip` — 結構描述、範本、範例、驗證器規則
-- `SHA256SUMS.txt` — 驗證用的校驗和
+- `trust_package.pdf` — English Trust Package
+- `trust_package.ja.pdf` — Japanese Trust Package
+- `aimo-standard-artifacts.zip` — Schemas, templates, examples, validator rules
+- `SHA256SUMS.txt` — Checksums for verification
 
-## 您獲得的內容
+## What you get
 
-- **符合性**：如何聲明合規以及各等級的意義 — [符合性](../../conformance/)
-- **覆蓋範圍對應**：與外部標準的對應 — [覆蓋範圍對應索引](../../coverage-map/)、[覆蓋範圍對應方法論](../../coverage-map/methodology/)
-- **標準**：規範性要求和定義 — [標準（當前）](../../standard/current/)
-- **分類法**：AI 治理的 8 維度分類系統 — [分類法](../../standard/current/03-taxonomy/)、[代碼](../../standard/current/04-codes/)、[字典](../../standard/current/05-dictionary/)
-- **證據包**：結構、目錄、可追溯性 — [證據包](../../artifacts/evidence-bundle/)
-- **最低證據要求**：按生命週期的必要層級檢查清單 — [最低證據要求](../../artifacts/minimum-evidence/)
-- **驗證器**：規則和參考檢查 — [驗證器](../../validator/)
-- **範例**：稽核就緒的樣本套件 — [範例](../../examples/)
-- **發布**：變更歷史和發布 — [發布](../../releases/)
-- **治理**：政策、安全、授權 — [治理](../../governance/)
+- **Conformance**: how to claim compliance and what levels mean — [Conformance](../../conformance/)
+- **Coverage Map**: mapping to external standards — [Coverage Map index](../../coverage-map/), [Coverage Map methodology](../../coverage-map/methodology/)
+- **Standard**: normative requirements and definitions — [Standard (Current)](../../standard/current/)
+- **Taxonomy**: 8-dimension classification system for AI governance — [Taxonomy](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/)
+- **Evidence Bundle**: structure, TOC, traceability — [Evidence Bundle](../../artifacts/evidence-bundle/)
+- **Minimum Evidence Requirements**: MUST-level checklist by lifecycle — [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- **ISO/IEC 42001 Certification Readiness Toolkit**: fastest path to audit-ready evidence aligned to ISO 42001 — [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/). The toolkit supports preparation only; certification decisions are made by accredited certification bodies.
+- **Validator**: rules and reference checks — [Validator](../../validator/)
+- **Examples**: audit-ready sample bundles — [Examples](../../examples/)
+- **Releases**: change history and distribution — [Releases](../../releases/)
+- **Governance**: policies, security, licensing — [Governance](../../governance/)
 
-## 稽核就緒的最低要求集
+## Minimum set for audit-readiness
 
-| 項目 | 在哪裡找到 | 結果 / 證明什麼 |
+| Item | Where to find it | Outcome / what it proves |
 | --- | --- | --- |
-| 符合性等級 | [符合性](../../conformance/) | 如何聲明合規以及所需證據的範圍 |
-| 覆蓋範圍對應 | [覆蓋範圍對應索引](../../coverage-map/)、[覆蓋範圍對應方法論](../../coverage-map/methodology/) | 對外部法規和標準的可解釋性 |
-| 分類法與字典 | [分類法](../../standard/current/03-taxonomy/)、[代碼](../../standard/current/04-codes/)、[字典](../../standard/current/05-dictionary/) | AI 系統的分類系統（8 維度、91 個代碼） |
-| 證據人工產物 | [證據包](../../artifacts/evidence-bundle/)、[最低證據](../../artifacts/minimum-evidence/)、[EV 範本](../../standard/current/06-ev-template/) | 支援可追溯性必須存在的資料 |
-| 驗證器檢查 | [驗證器](../../validator/) | 如何驗證內部一致性和完整性 |
-| 範例套件 | [範例](../../examples/) | 稽核就緒套件在實務中的樣子 |
-| 變更控制 | [發布](../../releases/)、[治理](../../governance/) | 更新如何管理和溝通 |
-| 安全 / 授權 / 商標 | [治理](../../governance/) | 採用決策的法律和安全態勢 |
+| Conformance levels | [Conformance](../../conformance/) | How to claim compliance and the scope of evidence required |
+| Coverage mapping | [Coverage Map index](../../coverage-map/), [Coverage Map methodology](../../coverage-map/methodology/) | Explainability against external regulations and standards |
+| Taxonomy & Dictionary | [Taxonomy](../../standard/current/03-taxonomy/), [Codes](../../standard/current/04-codes/), [Dictionary](../../standard/current/05-dictionary/) | Classification system for AI systems (8 dimensions, 91 codes) |
+| Evidence artifacts | [Evidence Bundle](../../artifacts/evidence-bundle/), [Minimum Evidence](../../artifacts/minimum-evidence/), [EV Template](../../standard/current/06-ev-template/) | What data must exist to support traceability |
+| Validator checks | [Validator](../../validator/) | How to verify internal consistency and completeness |
+| Example bundle | [Examples](../../examples/) | What an audit-ready package looks like in practice |
+| Change control | [Releases](../../releases/), [Governance](../../governance/) | How updates are managed and communicated |
+| Security / License / Trademarks | [Governance](../../governance/) | Legal and security posture for adoption decisions |
 
-## 如何引用
+## How to cite
 
-使用儲存庫 README 獲取引用指引和背景；治理連結到權威政策。
-請參閱 [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) 和[治理](../../governance/)。
+Use the repository README for citation guidance and context; governance links to the authoritative policies.
+See [README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) and [Governance](../../governance/).
 
-## 人工產物 zip 內容
+## Artifacts zip contents
 
-`aimo-standard-artifacts.zip` 包含：
+The `aimo-standard-artifacts.zip` includes:
 
-- **分類法（SSOT）**：`source_pack/03_taxonomy/` — 字典 CSV（91 個代碼）、YAML、代碼系統
-- **JSON 結構描述**：`schemas/jsonschema/` — 機器可讀驗證結構描述
-- **範本**：`templates/ev/` — 證據記錄範本（JSON + Markdown）
-- **範例**：`examples/` — 快速採用的最小樣本套件
-- **覆蓋範圍對應**：`coverage_map/coverage_map.yaml` — 與外部標準的對應
-- **驗證器規則**：`validator/rules/` — 驗證規則定義
-- **治理文件**：`VERSIONING.md`、`GOVERNANCE.md`、`SECURITY.md`、`LICENSE.txt` 等。
+- **Taxonomy (SSOT)**: `source_pack/03_taxonomy/` — Dictionary CSV (91 codes), YAML, code system
+- **JSON Schemas**: `schemas/jsonschema/` — Machine-readable validation schemas
+- **Templates**: `templates/ev/` — Evidence record templates (JSON + Markdown)
+- **Examples**: `examples/` — Minimal sample bundles for quick adoption
+- **Coverage Map**: `coverage_map/coverage_map.yaml` — Mapping to external standards
+- **Validator Rules**: `validator/rules/` — Validation rule definitions
+- **Governance docs**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt`, etc.
 
-## 責任邊界
+## Responsibility boundary
 
-AIMO 標準提供結構化證據格式和可解釋性框架。它**不**提供法律建議、合規認證、風險評估或稽核執行。
+The AIMO Standard provides a structured evidence format and explainability framework. It does **not** provide legal advice, compliance certification, risk assessment, or audit execution.
 
-如需完整的範圍定義、假設和採用者責任，請參閱[責任邊界](../responsibility-boundary/)。
+For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](../responsibility-boundary/).
 
-## 如何準備提交套件
+## How to prepare a submission package
 
-按照以下步驟準備稽核就緒的提交：
+Follow these steps to prepare an audit-ready submission:
 
-1. **產生證據包**：根據[證據包](../../artifacts/evidence-bundle/)和[最低證據要求](../../artifacts/minimum-evidence/)建立 EV 記錄、字典、摘要和變更日誌。
-2. **執行驗證器**：執行 `python validator/src/validate.py bundle/root.json` 檢查結構一致性。在繼續之前修復任何錯誤。
-3. **建立校驗和**：為所有提交檔案產生 SHA-256 校驗和：
+1. **Generate Evidence Bundle**: Create EV records, Dictionary, Summary, and Change Log per [Evidence Bundle](../../artifacts/evidence-bundle/) and [Minimum Evidence Requirements](../../artifacts/minimum-evidence/). For ISO 42001–oriented readiness, see the [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/).
+2. **Run Validator**: Execute `python validator/src/validate.py bundle/root.json` to check structural consistency. Fix any errors before proceeding.
+3. **Create Checksums**: Generate SHA-256 checksums for all submission files:
 
     === "Linux"
 
@@ -95,142 +96,145 @@ AIMO 標準提供結構化證據格式和可解釋性框架。它**不**提供�
             "$hash  $($_.Name)"
         } | Out-File SHA256SUMS.txt -Encoding UTF8
         ```
-4. **打包人工產物**：建立證據包的 zip 壓縮檔：
+4. **Package Artifacts**: Create a zip archive of your evidence bundle:
    ```bash
    zip -r evidence_bundle.zip bundle_directory/
    ```
-5. **參照發布版本**：記錄您的套件對齊的 AIMO 標準版本（例如 `v1.0.0`）。
-6. **交付**：將 zip、校驗和和版本參照提供給您的稽核員或合規功能。
+5. **Reference Release Version**: Note which AIMO Standard version (e.g., `v1.0.0`) your bundle aligns with.
+6. **Deliver**: Provide the zip, checksums, and version reference to your auditor or compliance function.
 
-如需發布資產和驗證，請參閱[發布](../../releases/)。
+For release assets and verification, see [Releases](../../releases/).
 
-## 不過度聲明聲明
+## Non-overclaim statement
 
-!!! warning "重要"
-    AIMO 標準支援**可解釋性和證據就緒**。它**不**提供法律建議、保證合規性或認證符合任何法規或框架。採用者必須對照權威文本驗證聲明並視情況取得專業建議。
+!!! warning "Important: No certification, no assurance, no legal compliance claim"
+    - AIMO Standard defines an **evidence packaging and validation format**. It does not certify compliance with laws or standards.
+    - Audit/assurance opinions remain the responsibility of independent auditors and the adopting organization.
+    - **Appropriate claim:** "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
+    - **Inappropriate claim:** <!-- UNACCEPTABLE_CLAIMS_EXAMPLES --> "EU AI Act compliant", "ISO 42001 certified", "government approved". <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
-請參閱[責任邊界](../responsibility-boundary/)了解範圍、假設和採用者責任的詳細資訊。
+See [Responsibility Boundary](../responsibility-boundary/) for details on scope, assumptions, and adopter responsibilities.
 
-## 稽核員：驗證程序
+## For auditors: Verification procedure
 
-收到證據提交時，稽核員應使用以下步驟驗證完整性和結構：
+When receiving an evidence submission, auditors should verify integrity and structure using the following steps:
 
-!!! success "建置來源可用"
-    所有發布資產包含密碼學簽名的建置證明。請參閱[驗證程序](../../standard/versions/#4-verify-build-provenance-attestation)了解證明驗證步驟。
+!!! success "Build Provenance Available"
+    All release assets include cryptographically signed build attestations. See [Verification Procedure](../../standard/versions/#4-verify-build-provenance-attestation) for attestation verification steps.
 
-### 步驟 1：驗證校驗和（SHA-256）
+### Step 1: Verify checksums (SHA-256)
 
 === "Linux"
 
     ```bash
-    # 下載或接收提交附帶的 SHA256SUMS.txt
-    # 驗證所有檔案符合其記錄的校驗和
+    # Download or receive SHA256SUMS.txt with the submission
+    # Verify all files match their recorded checksums
     sha256sum -c SHA256SUMS.txt
 
-    # 或手動驗證個別檔案：
+    # Or verify individual files manually:
     sha256sum evidence_bundle.zip
-    # 將輸出與 SHA256SUMS.txt 中的值比較
+    # Compare output against the value in SHA256SUMS.txt
     ```
 
 === "macOS"
 
     ```bash
-    # 驗證所有檔案符合其記錄的校驗和
+    # Verify all files match their recorded checksums
     shasum -a 256 -c SHA256SUMS.txt
 
-    # 或手動驗證個別檔案：
+    # Or verify individual files manually:
     shasum -a 256 evidence_bundle.zip
-    # 將輸出與 SHA256SUMS.txt 中的值比較
+    # Compare output against the value in SHA256SUMS.txt
     ```
 
 === "Windows (PowerShell)"
 
     ```powershell
-    # 驗證個別檔案
+    # Verify individual files
     Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
 
-    # 將 Hash 輸出與 SHA256SUMS.txt 比較
+    # Compare the Hash output with SHA256SUMS.txt
     Get-Content .\SHA256SUMS.txt
     ```
 
-如果任何校驗和失敗，應拒絕或重新請求提交。
+If any checksum fails, the submission should be rejected or re-requested.
 
-### 步驟 2：驗證套件結構（驗證器）
+### Step 2: Verify bundle structure (Validator)
 
-**先決條件**（一次性設定）：
+**Prerequisites** (one-time setup):
 
 ```bash
-# 複製官方 AIMO 標準發布
+# Clone the official AIMO Standard release
 git clone https://github.com/billyrise/aimo-standard.git
 cd aimo-standard
 
-# 重要：使用提交中聲明的確切版本
-# 將 VERSION 替換為提交者聲明的版本（例如 v0.0.1）
-VERSION=v0.0.1  # ← 符合提交中的版本
+# IMPORTANT: Use the exact version stated in the submission
+# Replace VERSION with the submitter's declared version (e.g., v0.0.1)
+VERSION=v0.0.1  # ← Match the version in the submission
 git checkout "$VERSION"
 
-# 設定 Python 環境
+# Set up Python environment
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-!!! warning "版本符合"
-    始終使用提交中聲明的確切 AIMO 標準版本。使用不同版本可能會因版本之間的結構描述或規則變更而導致驗證不符。
+!!! warning "Version Matching"
+    Always use the exact AIMO Standard version stated in the submission. Using a different version may cause validation mismatches due to schema or rule changes between versions.
 
-**執行驗證**：
+**Run validation**:
 
 ```bash
-# 解壓提交的套件
+# Extract the submitted bundle
 unzip evidence_bundle.zip -d bundle/
 
-# 對套件的 root.json 執行驗證器
+# Run validator against the bundle's root.json
 python validator/src/validate.py bundle/root.json
 
-# 預期輸出：「validation OK」或錯誤清單
+# Expected output: "validation OK" or list of errors
 ```
 
-**範例**（使用內建樣本）：
+**Example** (using built-in sample):
 
 ```bash
 python validator/src/validate.py examples/evidence_bundle_minimal/root.json
 ```
 
-驗證器檢查：
+The validator checks:
 
-- 必要檔案存在（EV 記錄、字典）
-- JSON 檔案符合結構描述
-- 交叉參照（request_id、review_id 等）有效
-- 時間戳記存在且格式正確
+- Required files exist (EV records, Dictionary)
+- JSON files conform to schema
+- Cross-references (request_id, review_id, etc.) are valid
+- Timestamps are present and properly formatted
 
-### 步驟 3：驗證版本對齊
+### Step 3: Verify version alignment
 
-檢查提交是否參照官方 AIMO 標準發布：
+Check that the submission references an official AIMO Standard release:
 
-1. 確認聲明的版本（例如 `v0.0.1`）存在於 [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
-2. 將提交的結構描述與發布人工產物比較
-3. 記錄與官方發布的任何偏差
+1. Confirm the stated version (e.g., `v0.0.1`) exists at [GitHub Releases](https://github.com/billyrise/aimo-standard/releases)
+2. Compare submitted schemas against the release artifacts
+3. Note any deviations from the official release
 
-### 要檢查的內容
+### What to look for
 
-| 檢查 | 通過標準 | 失敗動作 |
+| Check | Pass Criteria | Fail Action |
 | --- | --- | --- |
-| 校驗和符合 | 所有 `sha256sum -c` 檢查通過 | 拒絕或重新請求 |
-| 驗證器通過 | `validate.py` 無錯誤 | 接受前請求修復 |
-| 版本存在 | 發布標籤存在於 GitHub | 澄清版本對齊 |
-| 必要欄位存在 | EV 記錄有 id、timestamp、source、summary | 請求完成 |
-| 可追溯性完整 | 交叉參照正確解析 | 請求連結修復 |
+| Checksums match | All `sha256sum -c` checks pass | Reject or re-request |
+| Validator passes | No errors from `validate.py` | Request fixes before acceptance |
+| Version exists | Release tag exists on GitHub | Clarify version alignment |
+| Required fields present | EV records have id, timestamp, source, summary | Request completion |
+| Traceability intact | Cross-references resolve correctly | Request linkage fixes |
 
-!!! info "稽核員獨立性"
-    稽核員應直接從官方 AIMO 標準發布取得驗證器和結構描述，而非從提交方取得，以確保驗證獨立性。
+!!! info "Auditor independence"
+    Auditors should obtain the validator and schemas directly from the official AIMO Standard release, not from the submitting party, to ensure verification independence.
 
-## 稽核旅程
+## Audit journey
 
-從本頁面開始，建議的稽核旅程是：
+From this page, the recommended audit journey is:
 
-1. **分類系統**：[分類法](../../standard/current/03-taxonomy/) + [字典](../../standard/current/05-dictionary/) — 了解 8 維度代碼系統
-2. **證據結構**：[證據包](../../artifacts/evidence-bundle/) — 了解套件目錄和可追溯性
-3. **必要證據**：[最低證據要求](../../artifacts/minimum-evidence/) — 按生命週期的必要層級檢查清單
-4. **框架對齊**：[覆蓋範圍對應](../../coverage-map/) + [方法論](../../coverage-map/methodology/) — 查看 AIMO 如何對應到外部框架
-5. **驗證**：[驗證器](../../validator/) — 執行結構一致性檢查
-6. **下載**：[發布](../../releases/) — 取得發布資產並驗證校驗和
+1. **Classification system**: [Taxonomy](../../standard/current/03-taxonomy/) + [Dictionary](../../standard/current/05-dictionary/) — understand the 8-dimension code system
+2. **Evidence structure**: [Evidence Bundle](../../artifacts/evidence-bundle/) — understand bundle TOC and traceability
+3. **Required evidence**: [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST-level checklist by lifecycle
+4. **Framework alignment**: [Coverage Map](../../coverage-map/) + [Methodology](../../coverage-map/methodology/) — see how AIMO maps to external frameworks
+5. **Validation**: [Validator](../../validator/) — run structural consistency checks
+6. **Download**: [Releases](../../releases/) — get release assets and verify checksums

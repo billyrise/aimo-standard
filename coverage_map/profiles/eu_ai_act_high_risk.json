@@ -1,0 +1,18 @@
+{
+  "profile_id": "PR-EU-AI-ACT-HIGH-RISK-v0.1",
+  "target": "EU_AI_ACT_HIGH_RISK",
+  "target_version": "2024/1689",
+  "audit_questions": [
+    "Is risk management evidence present (Art 9)?",
+    "Is technical documentation traceable (Art 11, Annex IV)?",
+    "Are logging and human oversight documented?"
+  ],
+  "mappings": [
+    {"source_object_ref": "request", "target_field": "Art 9 Risk management system", "required": false},
+    {"source_object_ref": "evidence", "target_field": "Art 11 Technical documentation", "required": false},
+    {"source_object_ref": "change_log", "target_field": "Art 12 Record-keeping", "required": false},
+    {"source_object_ref": "review", "target_field": "Art 14 Human oversight", "required": false},
+    {"source_object_ref": "Summary", "target_field": "Art 50 Transparency", "required": false},
+    {"source_object_ref": "payload:ANNEXIV_TECHDOC", "target_field": "Annex IV technical documentation", "required": false}
+  ]
+}

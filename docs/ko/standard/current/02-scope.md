@@ -1,11 +1,21 @@
 ---
-description: AIMO 표준 범위. AI 분류, 증거 요구사항 및 기업 거버넌스 경계를 포함하여 표준이 다루는 내용을 정의합니다.
+description: Scope of AIMO Standard. Defines what the standard covers including AI classification, evidence requirements, and boundaries for enterprise governance.
 ---
 
-# 범위
+# Scope
 
-이 표준은 일관된 분석 및 보고를 가능하게 하는 산출물과 검증 규칙을 지정합니다.
+This standard specifies artifacts and validation rules to enable consistent analysis and reporting.
 
-범위 외:
-- 독점 추론 로직
-- 벤더별 스코어링/가중치 구현
+Out of scope:
+- proprietary inference logic
+- vendor-specific scoring/weighting implementations
+
+## Scope alignment with Management System standards (PDCA)
+
+AIMO adds an **AI-specific taxonomy and evidence artifacts** that help operationalize management-system controls (Plan–Do–Check–Act) and make outputs auditable. It can be used **alongside** ISO/IEC 42001 and other management-system standards; it does not replace their texts. Coverage Map and profiles provide informative mappings only — adopters must verify against the authoritative framework.
+
+**Adopter responsibilities**
+
+- Verify scope and applicability against the relevant management-system or regulatory text.
+- Maintain evidence and run the validator as part of audit preparation; certification decisions remain with accredited certification bodies.
+- See [Responsibility Boundary](../../governance/responsibility-boundary/) for what AIMO does and does not provide.

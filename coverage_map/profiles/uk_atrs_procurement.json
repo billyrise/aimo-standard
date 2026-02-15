@@ -1,0 +1,15 @@
+{
+  "profile_id": "PR-UK-ATRS-v0.1",
+  "target": "UK_ATRS",
+  "target_version": "current",
+  "audit_questions": [
+    "Is transparency record (ATRS) attached or referenced?",
+    "Are accountability owner and risk considerations documented?"
+  ],
+  "mappings": [
+    {"source_object_ref": "Summary", "target_field": "UK ATRS transparency record", "required": false},
+    {"source_object_ref": "review", "target_field": "Accountability owner", "required": false},
+    {"source_object_ref": "evidence", "target_field": "Model/system description", "required": false},
+    {"source_object_ref": "dictionary", "target_field": "Risk considerations", "required": false}
+  ]
+}

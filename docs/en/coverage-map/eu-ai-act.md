@@ -35,16 +35,37 @@ This page maps selected EU AI Act themes (documentation, record-keeping, risk ma
 
 ## Effective dates / applicability (high-level)
 
-The following is a **high-level, non-exhaustive** summary of key application dates under Regulation (EU) 2024/1689. It is **not legal advice** and does not guarantee accuracy. Always confirm with the **official legal text** and competent authorities.
+The following aligns with **EU official timeline** (AI Act Service Desk / Commission). It is **not legal advice** and does not guarantee accuracy. Always confirm with the **official legal text** and competent authorities.
 
-| Phase | Date (approximate) | What applies (high-level) |
-|-------|--------------------|----------------------------|
+| Phase | Date | What applies (high-level) |
+|-------|------|----------------------------|
 | Entry into force | August 2024 | Regulation in force; most substantive obligations not yet applicable. |
-| First application | February 2025 | Prohibited practices (unacceptable risk); certain AI literacy–related provisions. |
-| GPAI codes of practice | May 2025 | Codes of practice for general-purpose AI models to be ready. |
-| Notified bodies, GPAI, governance | August 2025 | Rules on notified bodies, GPAI, governance, confidentiality, penalties. |
-| High-risk systems | 2026–2027 | Full applicability for high-risk AI systems; compliance and enforcement. |
+| General provisions & prohibitions | 02 Feb 2025 | Prohibited practices (unacceptable risk); certain AI literacy–related provisions. |
+| GPAI rules + governance | 02 Aug 2025 | Rules on notified bodies, GPAI, governance, confidentiality, penalties; codes of practice. |
+| Majority rules + Annex III high-risk + Art 50 transparency | 02 Aug 2026 | Full applicability for high-risk AI systems (Annex III), Article 50 transparency obligations. |
+| High-risk embedded in regulated products | 02 Aug 2027 | High-risk AI systems embedded in products subject to EU product legislation. |
 
-**Official reference:** [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex). For a timeline overview, see also the [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (external; not an official EU source).
+## Harmonised standards and presumption of conformity (Article 40)
 
-This page is for explanatory use only. **You must verify applicability and dates against the official regulation and any implementing or amending acts.**
+When **harmonised standards** are published in the EU Official Journal under the AI Act, compliance with them can provide **presumption of conformity** with the corresponding requirements. The exact list and dates depend on standardisation work and OJ publication. AIMO mappings are informative and do not confer presumption of conformity. For current status, see the European Commission and AI Office sources in **References** below.
+
+## 2026 AI Office guidelines (implementation detail)
+
+The European Commission has indicated that the **AI Office** will prepare **practical guidelines** during 2026, including on:
+
+- High-risk classification
+- Article 50 (transparency) implementation
+- Incident reporting
+- QMS-related elements
+
+These guidelines are **update triggers** for AIMO profiles and coverage mappings: as they are published, adopters should align evidence and mappings with the latest official guidance. AIMO does not interpret or guarantee compliance with these guidelines.
+
+!!! warning "Not legal advice"
+    This page is for explanatory use only. You must verify applicability and dates against the official regulation and any implementing or amending acts. AIMO does not provide legal advice or guarantee compliance.
+
+## References
+
+- [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Artificial Intelligence Act
+- [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / Commission-aligned; informative)
+- European Commission / AI Office — clear guidelines and timeline (check Commission news and AI Act Service Desk for current URLs)
+- [EPRS — EU AI Act implementation](https://www.europarl.europa.eu/thinktank/) — Parliament briefing (informative)

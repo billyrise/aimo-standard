@@ -1,153 +1,180 @@
 ---
-description: AIMO 标准变更日志和版本控制政策。记录版本历史、语义版本控制规则和发布之间的迁移指南。
+description: AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.
 ---
 
-# 变更日志
+# Changelog
 
-本节记录 AIMO 标准的版本控制政策和变更历史。
+This section documents the versioning policy and change history for the AIMO Standard.
 
-## 版本控制政策
+## Versioning Policy
 
-AIMO 标准遵循 [语义版本控制](https://semver.org/)（SemVer）：
+AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
 
-### 版本格式：MAJOR.MINOR.PATCH
+### Version Format: MAJOR.MINOR.PATCH
 
-| 变更类型 | 版本升级 | 示例 |
+| Change Type | Version Bump | Examples |
 | --- | --- | --- |
-| **MAJOR** | X.0.0 | 破坏性模式更改、代码删除、必需字段更改 |
-| **MINOR** | 0.X.0 | 新代码、新可选字段、新维度（可选） |
-| **PATCH** | 0.0.X | 文档修复、定义澄清、验证器错误修复 |
+| **MAJOR** | X.0.0 | Breaking schema changes, code removal, required field changes |
+| **MINOR** | 0.X.0 | New codes, new optional fields, new dimensions (optional) |
+| **PATCH** | 0.0.X | Documentation fixes, definition clarifications, validator bug fixes |
 
-### 破坏性与兼容性变更
+### Breaking vs. Compatible Changes
 
-**破坏性变更（MAJOR）：**
+**Breaking Changes (MAJOR):**
 
-- 代码删除（弃用期后）
-- 模式中必需字段的更改
-- 使现有文档无效的结构更改
-- 代码格式模式的更改
+- Removal of codes (after deprecation period)
+- Changes to required fields in schemas
+- Structural changes that invalidate existing documents
+- Changes to code format patterns
 
-**向后兼容变更（MINOR）：**
+**Backward Compatible Changes (MINOR):**
 
-- 向现有维度添加新代码
-- 向模式添加新的可选字段
-- 添加新的可选维度
-- 添加新的证据模板
+- Adding new codes to existing dimensions
+- Adding new optional fields to schemas
+- Adding new optional dimensions
+- Adding new evidence templates
 
-**非破坏性变更（PATCH）：**
+**Non-breaking Changes (PATCH):**
 
-- 文档更正
-- 现有定义的澄清
-- 翻译改进
-- 验证器错误修复
+- Documentation corrections
+- Clarification of existing definitions
+- Translation improvements
+- Validator bug fixes
 
-## 弃用政策
+## Deprecation Policy
 
-### 弃用流程
+### Deprecation Process
 
-1. **标记为弃用**：代码或功能标记为 `status: deprecated` 和 `deprecated_in: X.Y.Z`
-2. **弃用期**：在删除前必须至少经过一个 MINOR 版本
-3. **提供替代**：如适用，`replaced_by` 指示替代
-4. **在 MAJOR 中删除**：删除在下一个 MAJOR 版本中发生
+1. **Mark as Deprecated**: Code or feature is marked with `status: deprecated` and `deprecated_in: X.Y.Z`
+2. **Deprecation Period**: At least one MINOR version must pass before removal
+3. **Provide Replacement**: If applicable, `replaced_by` indicates the replacement
+4. **Remove in MAJOR**: Removal occurs in the next MAJOR version
 
-### 示例生命周期
+### Example Lifecycle
 
 ```
-v0.0.1: FS-007 引入 (status: active)
-v0.1.0: FS-007 弃用 (status: deprecated, replaced_by: FS-008)
-v0.2.0: FS-007 仍然可用，带弃用警告
-v1.0.0: FS-007 删除 (status: removed)
+v0.0.1: FS-007 introduced (status: active)
+v0.1.0: FS-007 deprecated (status: deprecated, replaced_by: FS-008)
+v0.2.0: FS-007 still available with deprecation warning
+v1.0.0: FS-007 removed (status: removed)
 ```
 
-### 使用弃用的代码
+### Using Deprecated Codes
 
-- 弃用的代码对于验证仍然有效
-- 验证器应为弃用的代码发出警告
-- 新实现应使用替代代码
-- 现有文档可以继续使用弃用的代码直到迁移
+- Deprecated codes remain valid for validation
+- Validator SHOULD emit a warning for deprecated codes
+- New implementations SHOULD use replacement codes
+- Existing documents MAY continue using deprecated codes until migration
 
-## 发布工件
+## Release Artifacts
 
-每个官方发布包括：
+Each official release includes:
 
-| 工件 | 描述 |
+| Artifact | Description |
 | --- | --- |
-| 版本化站点快照 | `https://standard.aimoaas.com/0.0.1/` |
-| PDF 规范 | `trust_package.pdf` |
-| 资产包（ZIP） | 模式、模板、字典 |
-| 校验和 | SHA-256 哈希用于完整性 |
-| 变更日志 | 此文档 |
+| Versioned site snapshot | `https://standard.aimoaas.com/0.0.1/` |
+| PDF specification | `trust_package.pdf` |
+| Asset package (ZIP) | Schemas, templates, dictionary |
+| Checksums | SHA-256 hashes for integrity |
+| Changelog | This document |
 
-## 变更历史
+## Change History
 
-### 未发布（命名空间与规范修正）
+### Version 0.1.2 {#version-012}
 
-**摘要：** 解决 EV 代码冲突，明确 EV（索引）与 Evidence Pack（payload）关系，加强 /dev 防审计误引用。Evidence Pack 文档类型：EP-01..EP-07；Taxonomy EV 保留为事件类型。EV↔Evidence Pack 规范关系已文档化。/dev 增加横幅与 canonical。
+**Summary:** PATCH release (non-breaking). Normalizes EU AI Act references in docs/SSOT (informative mapping only; not legal advice). Improves Annex IV sample bundle completeness (signatures, hashes, payload). Adds optional JNC schema and validator check. Adds validator audit report outputs (audit-json, audit-html). See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
 
-### 版本 0.0.1（2026-02-02）
+#### Repair-deploy addendum (docs + mappings) — 2026-02-15
 
-**摘要：** AIMO 标准的初始发布，包含8维代码系统、证据包模板和全面的治理文档。
+- Added ISO/IEC 42006 coverage map page.
+- Expanded Conformance into AIMO Conformity Framework aligned to ISO 42001 (informative); levels Foundation, Operational, Audit-Ready.
+- Added ISO 42001 certification readiness toolkit (artifact).
+- Added EU AI Act timeline (02 Feb / 02 Aug 2025–2027), harmonised standards notes, and 2026 AI Office guidelines (informative).
+- Added new profiles and schema enum additions (ISO_42006, EU_AI_ACT_HIGH_RISK, EU_GPAI_COP, NIST_AI_600_1, UK_ATRS, JP_GOV_GENAI_PROCUREMENT); no version bump.
+- **No version bump:** repair-deploy updates the already released v0.1.2 snapshot.
 
-#### 添加
+### Version 0.1.1 {#version-011}
 
-**代码系统（8个维度）**
+**Summary:** PATCH release. Optional signature metadata for verification, Coverage Map audit_questions, Normative/Informative and governance clarifications, v0.2 roadmap. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
 
-| 维度 | 添加的代码 | 描述 |
+### Version 0.1.0 {#version-010}
+
+**Summary:** Normative Evidence Bundle structure, ID namespace (EV/LG), Profiles, Validator. Breaking: EV→LG for taxonomy. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
+### Unreleased (namespace and normative fixes)
+
+**Summary:** Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.
+
+#### Changed
+
+- **Evidence Pack document types (EP namespace):** Evidence Pack file types use **EP-01..EP-07** (document type). Taxonomy **LG-001, LG-002, …** are Log/Event types (Request Record, Review/Approval, etc.). **EV-** reserved for Evidence artifact IDs only. See [Evidence Pack Template](../06-ev-template/) and [ID Policy / Namespace](../04b-id-policy-namespace/). Schema: `evidence_files[].file_id` pattern is `^EP-\\d{2}$`; `ev_type` uses **LG-xxx**.
+- **Normative relationship:** [Evidence Bundle](../../../artifacts/evidence-bundle/) now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.
+- **/dev anti-miscitation:** Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.
+
+### Version 0.0.1 (2026-02-02)
+
+**Summary:** Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.
+
+#### Added
+
+**Code System (8 Dimensions)**
+
+| Dimension | Codes Added | Description |
 | --- | --- | --- |
-| FS | FS-001 到 FS-006 | 功能范围 |
-| UC | UC-001 到 UC-010 | 用例类别 |
-| DT | DT-001 到 DT-008 | 数据类型 |
-| CH | CH-001 到 CH-006 | 渠道 |
-| IM | IM-001 到 IM-005 | 集成模式 |
-| RS | RS-001 到 RS-005 | 风险面 |
-| OB | OB-001 到 OB-005 | 结果/收益 |
-| LG | LG-001 到 LG-015 | 日志/记录类型 |
+| FS | FS-001 to FS-006 | Functional Scope |
+| UC | UC-001 to UC-010 | Use Case Class |
+| DT | DT-001 to DT-008 | Data Type |
+| CH | CH-001 to CH-006 | Channel |
+| IM | IM-001 to IM-005 | Integration Mode |
+| RS | RS-001 to RS-005 | Risk Surface |
+| OB | OB-001 to OB-005 | Outcome / Benefit |
+| LG | LG-001 to LG-015 | Log/Event Type |
 
-**模式**
+**Schemas**
 
-- `taxonomy_pack.schema.json`：分类法包定义
-- `changelog.schema.json`：变更日志条目
-- `evidence_pack_manifest.schema.json`：证据包清单
-- `shadow-ai-discovery.schema.json`：影子AI发现证据
-- `agent-activity.schema.json`：代理活动证据
+- `taxonomy_pack.schema.json`: Taxonomy pack definition
+- `changelog.schema.json`: Changelog entries
+- `evidence_pack_manifest.schema.json`: Evidence Pack manifests
+- `shadow-ai-discovery.schema.json`: Shadow AI discovery evidence
+- `agent-activity.schema.json`: Agent activity evidence
 
-**证据包模板（MVP）**
+**Evidence Pack Templates (MVP)**
 
-- EV-01：系统概述
-- EV-02：数据流
-- EV-03：AI清单
-- EV-04：风险与影响评估
-- EV-05：控制与批准
-- EV-06：日志与监控
-- EV-07：事件与例外处理
+- EP-01 (legacy EV-01): System Overview
+- EP-02 (legacy EV-02): Data Flow
+- EP-03 (legacy EV-03): AI Inventory
+- EP-04 (legacy EV-04): Risk & Impact Assessment
+- EP-05 (legacy EV-05): Controls & Approvals
+- EP-06 (legacy EV-06): Logging & Monitoring
+- EP-07 (legacy EV-07): Incident & Exception Handling
 
-**文档**
+**Documentation**
 
-- 带有8维定义的分类法文档
-- 代码系统格式规范
-- 字典 CSV 格式规范
-- 版本控制和变更政策
-- 验证器 MVP 要求
-- 人工监督协议
-- 覆盖映射（ISO 42001、NIST AI RMF、欧盟AI法案、ISMS）
-- 信任包
+- Taxonomy documentation with 8-dimension definitions
+- Code System format specification
+- Dictionary CSV format specification
+- Versioning and change policy
+- Validator MVP requirements
+- Human Oversight Protocol
+- Coverage Map (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+- Trust Package
 
-#### 向后兼容性
+#### Backward Compatibility
 
-这是初始发布；没有向后兼容性问题。
+This is the initial release; no backward compatibility concerns.
 
 ---
 
-## 机器可读变更日志
+## Machine-Readable Changelog
 
-机器可读的变更日志可在以下位置获取：
+A machine-readable changelog is available:
 
 - `changelog/changelog.json`
 
-此文件遵循 `changelog.schema.json` 模式，可以以编程方式解析。
+This file follows the `changelog.schema.json` schema and can be parsed programmatically.
 
-## 参考
+## References
 
-- [分类法](../03-taxonomy/) - 维度定义
-- [字典](../05-dictionary/) - 代码字典
-- [版本控制政策](../../../governance/) - 版本控制政策（参见仓库根目录中的 VERSIONING.md）
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Dictionary](../05-dictionary/) - Code dictionary
+- [Versioning Policy](../../../governance/) - Versioning policy (see VERSIONING.md in repository root)

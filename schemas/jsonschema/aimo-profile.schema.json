@@ -18,7 +18,7 @@
     },
     "target": {
       "type": "string",
-      "enum": ["ISO_42001", "NIST_AI_RMF", "EU_AI_ACT_ANNEX_IV"],
+      "enum": ["ISO_42001", "NIST_AI_RMF", "EU_AI_ACT_ANNEX_IV", "ISO_42006", "EU_AI_ACT_HIGH_RISK", "EU_GPAI_COP", "NIST_AI_600_1", "UK_ATRS", "JP_GOV_GENAI_PROCUREMENT"],
       "description": "Target framework or regulation for mapping."
     },
     "target_version": {

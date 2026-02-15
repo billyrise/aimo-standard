@@ -1,171 +1,180 @@
 ---
-description: AIMO Standard変更履歴とバージョニングポリシー。バージョン履歴、セマンティックバージョニングルール、リリース間の移行ガイダンスを文書化。
+description: AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.
 ---
 
-# 変更履歴
+# Changelog
 
-このセクションでは、AIMO Standardのバージョニングポリシーと変更履歴を文書化します。
+This section documents the versioning policy and change history for the AIMO Standard.
 
-## バージョニングポリシー
+## Versioning Policy
 
-AIMO Standardは[セマンティックバージョニング](https://semver.org/lang/ja/)（SemVer）に従います：
+AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
 
-### バージョンフォーマット：MAJOR.MINOR.PATCH
+### Version Format: MAJOR.MINOR.PATCH
 
-| 変更タイプ | バージョンバンプ | 例 |
+| Change Type | Version Bump | Examples |
 | --- | --- | --- |
-| **MAJOR** | X.0.0 | 破壊的スキーマ変更、コード削除、必須フィールド変更 |
-| **MINOR** | 0.X.0 | 新規コード、新規任意フィールド、新規次元（任意） |
-| **PATCH** | 0.0.X | ドキュメント修正、定義の明確化、バリデータバグ修正 |
+| **MAJOR** | X.0.0 | Breaking schema changes, code removal, required field changes |
+| **MINOR** | 0.X.0 | New codes, new optional fields, new dimensions (optional) |
+| **PATCH** | 0.0.X | Documentation fixes, definition clarifications, validator bug fixes |
 
-### 破壊的変更 vs 互換性のある変更
+### Breaking vs. Compatible Changes
 
-**破壊的変更（MAJOR）：**
+**Breaking Changes (MAJOR):**
 
-- コードの削除（非推奨期間後）
-- スキーマの必須フィールドの変更
-- 既存ドキュメントを無効にする構造変更
-- コードフォーマットパターンの変更
+- Removal of codes (after deprecation period)
+- Changes to required fields in schemas
+- Structural changes that invalidate existing documents
+- Changes to code format patterns
 
-**後方互換性のある変更（MINOR）：**
+**Backward Compatible Changes (MINOR):**
 
-- 既存次元への新規コード追加
-- スキーマへの新規任意フィールド追加
-- 新規任意次元の追加
-- 新規証跡テンプレートの追加
+- Adding new codes to existing dimensions
+- Adding new optional fields to schemas
+- Adding new optional dimensions
+- Adding new evidence templates
 
-**非破壊的変更（PATCH）：**
+**Non-breaking Changes (PATCH):**
 
-- ドキュメントの修正
-- 既存定義の明確化
-- 翻訳の改善
-- バリデータのバグ修正
+- Documentation corrections
+- Clarification of existing definitions
+- Translation improvements
+- Validator bug fixes
 
-## 非推奨化ポリシー
+## Deprecation Policy
 
-### 非推奨化プロセス
+### Deprecation Process
 
-1. **非推奨としてマーク**：コードまたは機能に`status: deprecated`と`deprecated_in: X.Y.Z`をマーク
-2. **非推奨期間**：削除前に少なくとも1つのMINORバージョンが経過する必要がある
-3. **代替を提供**：該当する場合、`replaced_by`が代替を示す
-4. **MAJORで削除**：削除は次のMAJORバージョンで行われる
+1. **Mark as Deprecated**: Code or feature is marked with `status: deprecated` and `deprecated_in: X.Y.Z`
+2. **Deprecation Period**: At least one MINOR version must pass before removal
+3. **Provide Replacement**: If applicable, `replaced_by` indicates the replacement
+4. **Remove in MAJOR**: Removal occurs in the next MAJOR version
 
-### ライフサイクル例
+### Example Lifecycle
 
 ```
-v0.0.1: FS-007 導入 (status: active)
-v0.1.0: FS-007 非推奨化 (status: deprecated, replaced_by: FS-008)
-v0.2.0: FS-007 はまだ使用可能（非推奨警告付き）
-v1.0.0: FS-007 削除 (status: removed)
+v0.0.1: FS-007 introduced (status: active)
+v0.1.0: FS-007 deprecated (status: deprecated, replaced_by: FS-008)
+v0.2.0: FS-007 still available with deprecation warning
+v1.0.0: FS-007 removed (status: removed)
 ```
 
-### 非推奨コードの使用
+### Using Deprecated Codes
 
-- 非推奨コードはバリデーションで有効なまま
-- バリデータは非推奨コードに対して警告を出すべき
-- 新しい実装は代替コードを使用すべき
-- 既存ドキュメントはマイグレーションまで非推奨コードを使用し続けてよい
+- Deprecated codes remain valid for validation
+- Validator SHOULD emit a warning for deprecated codes
+- New implementations SHOULD use replacement codes
+- Existing documents MAY continue using deprecated codes until migration
 
-## リリースアーティファクト
+## Release Artifacts
 
-各公式リリースには以下が含まれます：
+Each official release includes:
 
-| アーティファクト | 説明 |
+| Artifact | Description |
 | --- | --- |
-| バージョン付きサイトスナップショット | `https://standard.aimoaas.com/0.0.1/` |
-| PDF仕様書 | `trust_package.pdf` |
-| アセットパッケージ（ZIP） | スキーマ、テンプレート、辞書 |
-| チェックサム | 完全性のためのSHA-256ハッシュ |
-| 変更履歴 | このドキュメント |
+| Versioned site snapshot | `https://standard.aimoaas.com/0.0.1/` |
+| PDF specification | `trust_package.pdf` |
+| Asset package (ZIP) | Schemas, templates, dictionary |
+| Checksums | SHA-256 hashes for integrity |
+| Changelog | This document |
 
-## 変更履歴
+## Change History
 
-### バージョン 0.1.2 {#version-012}
+### Version 0.1.2 {#version-012}
 
-**概要：** PATCH リリース（非破壊）。ドキュメント/SSOT における EU AI Act 参照の正規化（情報提供マッピングのみ。法律助言ではない）。Annex IV サンプルバンドルの完全性を改善（署名・ハッシュ・ペイロード）。オプションの JNC スキーマとバリデータチェックを追加。バリデータの監査レポート出力（audit-json、audit-html）を追加。詳細はリポジトリ [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) を参照。
+**Summary:** PATCH release (non-breaking). Normalizes EU AI Act references in docs/SSOT (informative mapping only; not legal advice). Improves Annex IV sample bundle completeness (signatures, hashes, payload). Adds optional JNC schema and validator check. Adds validator audit report outputs (audit-json, audit-html). See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
 
-### バージョン 0.1.1 {#version-011}
+#### Repair-deploy addendum (docs + mappings) — 2026-02-15
 
-**概要：** PATCH リリース。検証用のオプション署名メタデータ、Coverage Map の audit_questions、Normative/Informative およびガバナンスの明確化、v0.2 ロードマップ。詳細はリポジトリ [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) を参照。
+- Added ISO/IEC 42006 coverage map page.
+- Expanded Conformance into AIMO Conformity Framework aligned to ISO 42001 (informative); levels Foundation, Operational, Audit-Ready.
+- Added ISO 42001 certification readiness toolkit (artifact).
+- Added EU AI Act timeline (02 Feb / 02 Aug 2025–2027), harmonised standards notes, and 2026 AI Office guidelines (informative).
+- Added new profiles and schema enum additions (ISO_42006, EU_AI_ACT_HIGH_RISK, EU_GPAI_COP, NIST_AI_600_1, UK_ATRS, JP_GOV_GENAI_PROCUREMENT); no version bump.
+- **No version bump:** repair-deploy updates the already released v0.1.2 snapshot.
 
-### バージョン 0.1.0 {#version-010}
+### Version 0.1.1 {#version-011}
 
-**概要：** 規範的 Evidence Bundle 構造、ID 名前空間（EV/LG）、プロファイル、バリデータ。破壊的変更：タクソノミーで EV→LG。詳細はリポジトリ [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) を参照。
+**Summary:** PATCH release. Optional signature metadata for verification, Coverage Map audit_questions, Normative/Informative and governance clarifications, v0.2 roadmap. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
 
-### 未リリース（名前空間と規範の修正）
+### Version 0.1.0 {#version-010}
 
-**概要：** EV コード衝突の解消、EV（索引）と Evidence Pack（ペイロード）の明確化、/dev の監査誤引用防止の強化。
+**Summary:** Normative Evidence Bundle structure, ID namespace (EV/LG), Profiles, Validator. Breaking: EV→LG for taxonomy. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
 
-#### 変更
+### Unreleased (namespace and normative fixes)
 
-- **Evidence Pack ドキュメント種別（EP 名前空間）：** Evidence Pack のファイル種別は **EP-01..EP-07**（ドキュメント種別）を使用。Taxonomy の **LG-001, LG-002, …** はログ/記録種別（申請記録、審査/承認記録など）。**EV-** は Evidence 成果物ID 専用。[Evidence Pack テンプレート](../06-ev-template/) および [IDポリシー / 名前空間](../04b-id-policy-namespace/) を参照。スキーマ：`evidence_files[].file_id` のパターンは `^EP-\\d{2}$`。`ev_type` は **LG-xxx** を使用。
-- **規範的関係：** [Evidence Bundle](../../../artifacts/evidence-bundle/) に以下を規範として明記。EV レコード（JSON）は索引／台帳。Evidence Pack ファイルはペイロード。EV レコードは evidence_file_ids（例：EP-01）および／またはハッシュでペイロードを参照することを SHOULD。最小提出セット = EV JSON + Dictionary + Summary + Change Log + Evidence Pack。
-- **/dev 誤引用防止：** 開発プレビューページに赤帯バナーを表示。「Development Preview — Not for audit citation. Use /latest/ or a versioned URL.」/dev/ ページの canonical は /latest/ を指す。noindex は従来どおり。
+**Summary:** Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.
 
-### バージョン 0.0.1（2026-02-02）
+#### Changed
 
-**概要：** 8次元コード体系、Evidence Packテンプレート、包括的なガバナンスドキュメントを含むAIMO Standardの初回リリース。
+- **Evidence Pack document types (EP namespace):** Evidence Pack file types use **EP-01..EP-07** (document type). Taxonomy **LG-001, LG-002, …** are Log/Event types (Request Record, Review/Approval, etc.). **EV-** reserved for Evidence artifact IDs only. See [Evidence Pack Template](../06-ev-template/) and [ID Policy / Namespace](../04b-id-policy-namespace/). Schema: `evidence_files[].file_id` pattern is `^EP-\\d{2}$`; `ev_type` uses **LG-xxx**.
+- **Normative relationship:** [Evidence Bundle](../../../artifacts/evidence-bundle/) now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.
+- **/dev anti-miscitation:** Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.
 
-#### 追加
+### Version 0.0.1 (2026-02-02)
 
-**コード体系（8次元）**
+**Summary:** Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.
 
-| 次元 | 追加コード | 説明 |
+#### Added
+
+**Code System (8 Dimensions)**
+
+| Dimension | Codes Added | Description |
 | --- | --- | --- |
-| FS | FS-001〜FS-006 | 機能スコープ |
-| UC | UC-001〜UC-010 | ユースケース分類 |
-| DT | DT-001〜DT-008 | データ種別 |
-| CH | CH-001〜CH-006 | チャネル |
-| IM | IM-001〜IM-005 | 統合形態 |
-| RS | RS-001〜RS-005 | リスク面 |
-| OB | OB-001〜OB-005 | 成果 |
-| LG | LG-001〜LG-015 | ログ/記録種別 |
+| FS | FS-001 to FS-006 | Functional Scope |
+| UC | UC-001 to UC-010 | Use Case Class |
+| DT | DT-001 to DT-008 | Data Type |
+| CH | CH-001 to CH-006 | Channel |
+| IM | IM-001 to IM-005 | Integration Mode |
+| RS | RS-001 to RS-005 | Risk Surface |
+| OB | OB-001 to OB-005 | Outcome / Benefit |
+| LG | LG-001 to LG-015 | Log/Event Type |
 
-**スキーマ**
+**Schemas**
 
-- `taxonomy_pack.schema.json`: タクソノミーパック定義
-- `changelog.schema.json`: 変更履歴エントリ
-- `evidence_pack_manifest.schema.json`: Evidence Packマニフェスト
-- `shadow-ai-discovery.schema.json`: Shadow AI検知証跡
-- `agent-activity.schema.json`: エージェント活動証跡
+- `taxonomy_pack.schema.json`: Taxonomy pack definition
+- `changelog.schema.json`: Changelog entries
+- `evidence_pack_manifest.schema.json`: Evidence Pack manifests
+- `shadow-ai-discovery.schema.json`: Shadow AI discovery evidence
+- `agent-activity.schema.json`: Agent activity evidence
 
-**Evidence Packテンプレート（MVP）**
+**Evidence Pack Templates (MVP)**
 
-- EV-01: システム概要
-- EV-02: データフロー
-- EV-03: AI資産台帳
-- EV-04: リスク影響評価
-- EV-05: 統制・承認
-- EV-06: ログ・監視
-- EV-07: インシデント・例外対応
+- EP-01 (legacy EV-01): System Overview
+- EP-02 (legacy EV-02): Data Flow
+- EP-03 (legacy EV-03): AI Inventory
+- EP-04 (legacy EV-04): Risk & Impact Assessment
+- EP-05 (legacy EV-05): Controls & Approvals
+- EP-06 (legacy EV-06): Logging & Monitoring
+- EP-07 (legacy EV-07): Incident & Exception Handling
 
-**ドキュメント**
+**Documentation**
 
-- 8次元定義を含むタクソノミードキュメント
-- コード体系フォーマット仕様
-- 辞書CSVフォーマット仕様
-- バージョニングと変更ポリシー
-- バリデータMVP要件
+- Taxonomy documentation with 8-dimension definitions
+- Code System format specification
+- Dictionary CSV format specification
+- Versioning and change policy
+- Validator MVP requirements
 - Human Oversight Protocol
-- Coverage Map（ISO 42001、NIST AI RMF、EU AI Act、ISMS）
+- Coverage Map (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
 - Trust Package
 
-#### 後方互換性
+#### Backward Compatibility
 
-これは初回リリースです。後方互換性の懸念はありません。
+This is the initial release; no backward compatibility concerns.
 
 ---
 
-## 機械可読な変更履歴
+## Machine-Readable Changelog
 
-機械可読な変更履歴が利用可能です：
+A machine-readable changelog is available:
 
 - `changelog/changelog.json`
 
-このファイルは`changelog.schema.json`スキーマに従い、プログラムで解析できます。
+This file follows the `changelog.schema.json` schema and can be parsed programmatically.
 
-## 参照
+## References
 
-- [タクソノミー](../03-taxonomy/) - 次元定義
-- [辞書](../05-dictionary/) - コード辞書
-- [バージョニングポリシー](../../../governance/) - バージョニングポリシー（リポジトリルートの VERSIONING.md を参照）
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Dictionary](../05-dictionary/) - Code dictionary
+- [Versioning Policy](../../../governance/) - Versioning policy (see VERSIONING.md in repository root)

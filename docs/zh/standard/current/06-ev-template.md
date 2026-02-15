@@ -1,57 +1,57 @@
 ---
-description: AIMO 证据包模板和使用指南。用于记录AI治理证据的结构，包括索引管理和审计就绪格式。
+description: AIMO Evidence Pack templates and usage guide. Structure for documenting AI governance evidence with index management and audit-ready formatting.
 ---
 
-# Evidence Pack 模板（EP）
+# Evidence Pack Template (EP)
 
-本节定义证据包模板及其使用。证据包是一组文档的集合，用于展示AI系统的治理和合规。
+This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.
 
-## 命名空间：Evidence Pack 文档类型（EP）与 Taxonomy Log/Event Type（LG）
+## Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)
 
-> **重要**：**EP-01..EP-07** 表示*文档类型*（证据包文件类型）。**LG-001、LG-002、…** 在[分类法](../03-taxonomy/)中表示*日志/记录类型*（请求记录、审查/批准记录等）。**EV-** 专用于 Evidence 成果物 ID。请勿混用：EP 用于包结构，LG 用于生命周期证据分类。
+> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **LG-001, LG-002, …** in the [Taxonomy](../03-taxonomy/) identify *log/event types* (Request Record, Review/Approval, Exception, etc.). **EV-** is reserved for [Evidence artifact IDs](../04b-id-policy-namespace/) only. Use EP for pack structure and LG for lifecycle log/event classification.
 
-## 关键原则：索引和差异管理
+## Key Principle: Index and Diff Management
 
-重要的不仅是单个提交的内容，而是证据项之间的**索引**和**差异管理**。
+What matters is not the content of individual submissions alone, but the **index** and **diff management** across evidence items.
 
-证据包作为将AI系统链接到其治理工件的索引。其价值在于：
+An Evidence Pack serves as an index linking AI systems to their governance artifacts. The value lies in:
 
-1. **可追溯性**：跨时间链接决策、批准和变更
-2. **可审计性**：使审计师能够导航证据结构
-3. **可维护性**：跟踪什么变了、何时变的、为什么变
+1. **Traceability**: Linking decisions, approvals, and changes across time
+2. **Auditability**: Enabling auditors to navigate the evidence structure
+3. **Maintainability**: Tracking what changed, when, and why
 
-## MVP 证据集（EP-01 到 EP-07）
+## MVP Evidence Set (EP-01 to EP-07)
 
-以下七种 **Evidence Pack 文档类型**（EP）构成展示AI治理的**最小可行集**。每种为文档模板；分类法 **LG** 代码（请求记录、审查/批准等）在包内及 `codes.LG` 中用于对*日志/记录*证据进行分类。
+The following seven **Evidence Pack document types** (EP) form the **minimum viable set** for demonstrating AI governance. Each is a document template; taxonomy **LG** codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in `codes.LG` to classify *log/event* evidence.
 
-| ID | 文档类型 | 目的 |
+| ID | Document Type | Purpose |
 | --- | --- | --- |
-| EP-01 | 系统概述 | 记录AI系统及其目的 |
-| EP-02 | 数据流 | 映射系统中的数据移动 |
-| EP-03 | 清单 | 维护AI资产目录 |
-| EP-04 | 风险与影响评估 | 评估和记录风险 |
-| EP-05 | 控制与批准 | 记录控制和批准记录 |
-| EP-06 | 日志与监控 | 定义日志和监控设置 |
-| EP-07 | 事件与例外 | 跟踪事件和例外 |
+| EP-01 | System Overview | Document the AI system and its purpose |
+| EP-02 | Data Flow | Map data movement through the system |
+| EP-03 | Inventory | Maintain catalog of AI assets |
+| EP-04 | Risk & Impact Assessment | Assess and document risks |
+| EP-05 | Controls & Approvals | Document controls and approval records |
+| EP-06 | Logging & Monitoring | Define logging and monitoring setup |
+| EP-07 | Incident & Exception | Track incidents and exceptions |
 
-## 证据包清单
+## Evidence Pack Manifest
 
-每个证据包必须包含一个清单文件，包含：
+Each Evidence Pack MUST include a manifest file containing:
 
-### 必需元数据
+### Mandatory Metadata
 
-| 字段 | 描述 | 必需 |
+| Field | Description | Required |
 | --- | --- | --- |
-| `pack_id` | 唯一标识符（例如 EP-EXAMPLE-001） | 是 |
-| `pack_version` | 包的 SemVer 版本 | 是 |
-| `taxonomy_version` | 使用的 AIMO 分类法版本 | 是 |
-| `created_date` | 包创建日期 | 是 |
-| `last_updated` | 最后更新日期 | 是 |
-| `owner` | 负责方 | 是 |
+| `pack_id` | Unique identifier (e.g., EP-EXAMPLE-001) | Yes |
+| `pack_version` | SemVer version of the pack | Yes |
+| `taxonomy_version` | Version of AIMO taxonomy used | Yes |
+| `created_date` | Pack creation date | Yes |
+| `last_updated` | Last update date | Yes |
+| `owner` | Responsible party | Yes |
 
-### AIMO 代码（8个维度）
+### AIMO Codes (8 Dimensions)
 
-每个证据包必须包含所有8个维度的代码。**LG** 维度列出适用于本包的*分类法*日志/记录类型（如请求记录、审查/批准），而非文档类型代码。文档类型由 `evidence_files[].file_id`（EP-01..EP-07）给出。
+Each Evidence Pack MUST include codes from all 8 dimensions. The **LG** dimension lists *taxonomy* Log/Event Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07). See [ID Policy / Namespace](../04b-id-policy-namespace/).
 
 ```json
 {
@@ -68,9 +68,9 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 }
 ```
 
-### 证据文件列表
+### Evidence Files List
 
-每条记录通过 **file_id**（EP-01..EP-07）标识包内文档。可选 **ev_codes** 可列出该文档支持的分类法 LG 代码（LG-xxx）。
+Each entry identifies a document in the pack by **file_id** (EP-01..EP-07). Optional **ev_codes** may list taxonomy LG codes (LG-xxx) that the document supports.
 
 ```json
 {
@@ -85,26 +85,26 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 }
 ```
 
-## 模板结构
+## Template Structure
 
-每个证据模板包括：
+Each evidence template includes:
 
-1. **必需元数据块** - pack_id、版本、taxonomy_version、日期、owner
-2. **AIMO 代码表** - 所有8个维度及适用代码
-3. **内容部分** - 领域特定的文档部分
-4. **参考** - 相关证据的链接
-5. **修订历史** - 变更跟踪
+1. **Mandatory Metadata Block** - pack_id, version, taxonomy_version, dates, owner
+2. **AIMO Codes Table** - All 8 dimensions with applicable codes
+3. **Content Sections** - Domain-specific documentation sections
+4. **References** - Links to related evidence
+5. **Revision History** - Change tracking
 
-### 模板头部示例
+### Template Header Example
 
 ```markdown
-# EP-01: 系统概述
+# EP-01: System Overview
 
 ---
 
-## 必需元数据
+## Mandatory Metadata
 
-| 字段 | 值 |
+| Field | Value |
 | --- | --- |
 | **pack_id** | `EP-EXAMPLE-001` |
 | **pack_version** | `0.1.0` |
@@ -115,25 +115,51 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 
 ---
 
-## AIMO 代码（8个维度）
+## AIMO Codes (8 Dimensions)
 
-| 维度 | 代码 | 标签 |
+| Dimension | Code(s) | Label |
 | --- | --- | --- |
-| **FS** | `FS-001` | 最终用户生产力 |
-| **UC** | `UC-001` | 通用问答 |
-| **DT** | `DT-002` | 内部 |
+| **FS** | `FS-001` | End-user Productivity |
+| **UC** | `UC-001` | General Q&A |
+| **DT** | `DT-002` | Internal |
 | **CH** | `CH-001` | Web UI |
-| **IM** | `IM-001` | 独立 |
-| **RS** | `RS-001` | 数据泄露 |
-| **OB** | `OB-001` | 效率 |
-| **LG** | `LG-001`, `LG-002` | 请求记录、审查/批准记录 |
+| **IM** | `IM-001` | Standalone |
+| **RS** | `RS-001` | Data Leakage |
+| **OB** | `OB-001` | Efficiency |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 ```
 
-## 下载
+## External Forms (official templates/checklists attached as-is)
 
-### 模板
+Attach **official external templates and checklists** (EU, NIST, UK, Japan, etc.) as separate files. Do not alter their content; attach as-is, hash them, and reference them in the bundle.
 
-证据包模板在仓库中提供。清单中请使用 **file_id** EP-01..EP-07；文件名可为 EP-01_... 或兼容的 EV-01_...。
+| Slot | Suggested logical_id / attachment | Where to attach |
+| --- | --- | --- |
+| **EU GPAI CoP** | Model Documentation Form | Add to `payload_index` with e.g. `logical_id`: `GPAI_MODEL_DOC_FORM`; store file in `payloads/`; record `sha256` in manifest. |
+| **NIST GenAI** | GenAI profile artifacts (e.g. adaptation records, evaluation) | Add to payload_index; reference in coverage map. Profile: `coverage_map/profiles/nist_ai_600_1_genai.json`. |
+| **UK ATRS / procurement** | ATRS record, procurement evaluation notes | Add to payload_index; reference in [Procurement & Disclosure Overlays](../../coverage-map/procurement-and-disclosure/). |
+| **Japan** | JP government GenAI procurement checklist, AI Business Guidelines checklist | Add to payload_index with e.g. `logical_id`: `JP_PROCUREMENT_CHECKLIST`; reference in Procurement & Disclosure Overlays. |
+
+**Guidance:** Store each external form as a file (PDF, DOC, CSV, etc.), compute SHA-256, and list it in the bundle `manifest.json` `payload_index` with a stable `logical_id`. Link to AIMO taxonomy codes or bundle objects in your coverage map or handoff index so auditors can trace between external forms and AIMO evidence.
+
+## Audit Handoff Index
+
+For **Audit-Ready** level, provide a **one-page index** that tells the auditor where to find each key artifact:
+
+| Artifact | Where to find it | Hash (sha256) | Producer | Date |
+| --- | --- | --- | --- | --- |
+| Manifest | `manifest.json` (bundle root) | (in hash_chain or separate) | — | created_at |
+| Root EV / Summary | e.g. `payloads/root.json` | payload_index entry | — | — |
+| Request/Review/Exception | (list key records) | (object or payload ref) | (role/org) | (timestamp) |
+| External forms | (list logical_ids and paths) | payload_index entry | — | — |
+
+Fill in one row per key artifact. This supports audit handoff without implying certification or assurance.
+
+## Downloads
+
+### Templates
+
+Evidence Pack templates are available in the repository. Use **file_id** EP-01..EP-07 in the manifest; filenames may be EP-01_... or legacy EV-01_... for backward compatibility.
 
 - `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
 - `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
@@ -143,28 +169,28 @@ description: AIMO 证据包模板和使用指南。用于记录AI治理证据的
 - `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
 - `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
 
-### 模式和示例
+### Schemas and Examples
 
-- 模式：`source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
-- 示例：`source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
+- Schema: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
+- Example: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
 
-请参阅 [发布](../../../releases/) 获取可下载的包。
+See [Releases](../../../releases/) for downloadable packages.
 
-## 分发模式
+## Distribution Model
 
-> **注意**：主要分发目标是**审计公司和系统集成商**（模板分发者），而非个别企业。
+> **Note**: The primary distribution targets are **audit firms and system integrators** (template distributors), not individual enterprises.
 
-模板设计为：
+The templates are designed to be:
 
-1. 被审计师和顾问作为标准工件采用
-2. 分发给企业，保留来源归属
-3. 与 AIMO 标准一起版本化
+1. Adopted by auditors and consultants as standard artifacts
+2. Distributed to enterprises with source attribution preserved
+3. Versioned alongside the AIMO Standard
 
-企业通过其审计师、顾问或内部治理团队接收模板，这些团队维护与标准版本的链接。
+Enterprises receive templates through their auditors, consultants, or internal governance teams who maintain the linkage to the standard version.
 
-## 参考
+## References
 
-- [分类法](../03-taxonomy/) - 维度定义
-- [代码](../04-codes/) - 代码格式
-- [验证器](../07-validator/) - 验证规则
-- [证据包](../../../artifacts/evidence-bundle/) - 包结构
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Codes](../04-codes/) - Code format
+- [Validator](../07-validator/) - Validation rules
+- [Evidence Bundle](../../../artifacts/evidence-bundle/) - Bundle structure
