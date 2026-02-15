@@ -1,6 +1,7 @@
 ---
 description: 代理活动日志格式 - 用于企业中代理式AI权限行使、工具执行和递归操作监控的厂商中立模式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 代理活动日志格式
 

@@ -1,6 +1,7 @@
 ---
 description: Spécification actuelle du standard AIMO. Inclut vue d'ensemble, périmètre, taxonomie, codes, dictionnaire, modèles de preuves et règles du validateur pour la gouvernance IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Actuel (Dernier)
 

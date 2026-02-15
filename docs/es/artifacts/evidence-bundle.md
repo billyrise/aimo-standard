@@ -1,6 +1,7 @@
 ---
 description: Estructura del Paquete de Evidencia AIMO. Formato de paquete de auditoría con índice, trazabilidad y artefactos para cumplimiento de gobernanza de IA y entrega a auditores.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Paquete de Evidencia
 

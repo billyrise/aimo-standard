@@ -1,6 +1,7 @@
 ---
 description: Metodología del Mapa de Cobertura - Cómo AIMO mapea a marcos externos. Uso en auditorías, relación con Paquete de Evidencia y enfoque de trazabilidad.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Metodología
 

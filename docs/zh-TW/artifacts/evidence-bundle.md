@@ -1,6 +1,7 @@
 ---
 description: AIMO 證據包結構。包含目錄、可追溯性和人工產物的稽核套件格式，用於 AI 治理合規性和稽核員交付。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 證據包
 

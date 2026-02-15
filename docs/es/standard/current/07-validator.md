@@ -1,6 +1,7 @@
 ---
 description: Validador AIMO - Asegura que los Paquetes de Evidencia conformen a los esquemas del AIMO Standard. Reglas de validación, manejo de errores e implementación de referencia para verificaciones de cumplimiento.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Validador
 

@@ -1,6 +1,7 @@
 ---
 description: Protocole de surveillance humaine AIMO - Limite entre validation automatisée et revue humaine. Responsabilités du jugement machine vs humain dans la gouvernance IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Protocole de surveillance humaine
 

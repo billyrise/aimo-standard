@@ -1,6 +1,7 @@
 ---
 description: Formato de Registro de Actividad de Agente - Esquema neutral a proveedores para ejercicio de privilegios de IA agéntica, ejecución de herramientas y monitoreo de operaciones recursivas en empresas.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Formato de Registro de Actividad de Agente
 

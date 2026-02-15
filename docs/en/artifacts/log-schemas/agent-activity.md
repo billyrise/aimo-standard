@@ -1,6 +1,7 @@
 ---
 description: Agent Activity Log Format - Vendor-neutral schema for agentic AI privilege exercise, tool execution, and recursive operation monitoring in enterprises.
 ---
+<!-- aimo:translation_status=source -->
 
 # Agent Activity Log Format
 

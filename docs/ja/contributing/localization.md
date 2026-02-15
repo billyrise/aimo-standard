@@ -1,6 +1,7 @@
 ---
 description: AIMOローカライゼーションガイド - 多言語ドキュメントのi18n構造、メンテナンスワークフロー、SSOT原則。
 ---
+<!-- aimo:translation_status=translated -->
 
 # ローカライゼーションガイド
 
@@ -153,6 +154,22 @@ translator: human|machine|hybrid
 translation_status: current|outdated|needs_review
 ---
 ```
+
+### 翻訳状態マーカー（隠し要素）
+
+全 doc ページのソースには、**隠し HTML コメント**（フロントマター直後）が含まれ、英語正本か翻訳済み／未翻訳かをスクリプトで判別できます。サイトの表示には出ません。
+
+| 値 | 意味 |
+| --- | --- |
+| `<!-- aimo:translation_status=source -->` | 英語正本ページ（`docs/en/`）。 |
+| `<!-- aimo:translation_status=translated -->` | 当該ロケールは英語ソースの翻訳済み。 |
+| `<!-- aimo:translation_status=untranslated -->` | 当該ロケールのファイルはあるが内容は英語のコピーで、翻訳待ち。 |
+
+**使い方**
+
+- 未翻訳ページ一覧: `grep -r "aimo:translation_status=untranslated" docs/`
+- 新言語・新ページ追加時は `python tooling/i18n/add_translation_markers.py` でマーカーを挿入・修正。`--strict` で本文先頭 400 文字を英語と比較して未翻訳を検出。
+- 翻訳完了後はマーカーを `translated` にすること（またはスクリプトを再実行して更新）。
 
 ### 同期ツールの使用方法
 

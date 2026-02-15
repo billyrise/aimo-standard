@@ -1,6 +1,7 @@
 ---
 description: AIMO Log Schemas - Vendor-neutral log formats for AI evidence. Includes Shadow AI discovery and agent activity monitoring schemas.
 ---
+<!-- aimo:translation_status=source -->
 
 # Log Schemas
 

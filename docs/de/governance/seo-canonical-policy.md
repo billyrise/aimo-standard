@@ -1,6 +1,7 @@
 ---
 description: AIMO SEO und Canonical-URL-Richtlinie - URL-Kanonisierungsstrategie für Suchmaschinen, Prüfer und externe Verweise.
 ---
+<!-- aimo:translation_status=translated -->
 
 # SEO & Canonical Policy
 

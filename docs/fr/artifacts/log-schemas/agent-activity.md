@@ -1,6 +1,7 @@
 ---
 description: Format de journal d'activité des agents - Schéma neutre vis-à-vis des fournisseurs pour l'exercice des privilèges d'IA agentique, l'exécution d'outils et la surveillance des opérations récursives en entreprise.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Format de journal d'activité des agents
 

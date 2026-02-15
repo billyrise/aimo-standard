@@ -1,6 +1,7 @@
 ---
 description: Politica di sicurezza dello Standard AIMO - Segnalazione vulnerabilità, procedure di disclosure e considerazioni sulla sicurezza per le implementazioni di governance dell'IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Sicurezza
 

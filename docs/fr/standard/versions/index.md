@@ -1,6 +1,7 @@
 ---
 description: Historique des versions du standard AIMO. Versions officielles figées avec PDF prêts pour les auditeurs, artefacts lisibles par machine, checksums et attestations de provenance de build.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Versions
 

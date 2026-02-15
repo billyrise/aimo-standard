@@ -1,6 +1,7 @@
 ---
 description: Guida alle citazioni dello Standard AIMO - Come citare in articoli accademici, report di audit e proposte. Formati CITATION.cff e BibTeX.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Come Citare
 

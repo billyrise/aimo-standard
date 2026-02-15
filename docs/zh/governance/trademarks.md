@@ -1,6 +1,7 @@
 ---
 description: AIMO 商标指南 - AIMO 标识的使用规则、符合性徽章要求和品牌指南。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 商标
 

@@ -1,6 +1,7 @@
 ---
 description: Política de segurança do AIMO Standard - Relatório de vulnerabilidades, procedimentos de divulgação e considerações de segurança para implementações de governança de IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Segurança
 

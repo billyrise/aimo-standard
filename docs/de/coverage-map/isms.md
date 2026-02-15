@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard zu ISMS (ISO 27001/27002)-Zuordnung. Nachverfolgbarkeit zwischen AIMO-Taxonomie und Informationssicherheits-Managementsystem-Kontrollen.
 ---
+<!-- aimo:translation_status=translated -->
 
 # ISMS-Ansicht (ISO/IEC 27001/27002)-Zuordnung
 

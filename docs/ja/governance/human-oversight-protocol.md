@@ -1,6 +1,7 @@
 ---
 description: AIMO人による監督プロトコル - 自動検証と人による審査の境界。AIガバナンスにおける機械と人の判断責任。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 人による監督プロトコル
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO 分類法 - 具有 91 個代碼的 8 維度分類系統，用於分類 AI 系統。涵蓋功能範圍、使用案例、資料類型、通道、整合、風險、成果和證據。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 分類法
 

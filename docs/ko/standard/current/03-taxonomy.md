@@ -1,6 +1,7 @@
 ---
 description: AIMO 분류체계 - AI 시스템 분류를 위한 8개 차원과 91개 코드의 분류 시스템. 기능 범위, 사용 사례, 데이터 유형, 채널, 통합, 리스크, 결과 및 증거를 다룹니다.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 분류체계
 

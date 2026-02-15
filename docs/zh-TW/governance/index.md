@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準治理中心 - 專案治理、安全政策、授權、引用指引和貢獻規則。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 治理
 

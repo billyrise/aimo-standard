@@ -1,6 +1,7 @@
 ---
 description: Hub du validateur AIMO - Démarrage rapide de l'outillage de validation. Installer, exécuter et interpréter les résultats en 30 secondes. Validation de pack de preuves et vérifications de conformité.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Validateur
 

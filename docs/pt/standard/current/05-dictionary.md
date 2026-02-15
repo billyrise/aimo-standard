@@ -1,6 +1,7 @@
 ---
 description: Dicionário AIMO - Lista autoritativa de 91 códigos de taxonomia em 8 dimensões. Definições completas, rótulos e informações de ciclo de vida para classificação de IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Dicionário
 

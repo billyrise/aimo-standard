@@ -1,6 +1,7 @@
 ---
 description: 當前 AIMO 標準規格。包含概述、範圍、分類法、代碼、字典、證據範本，以及 AI 治理的驗證器規則。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 當前（最新）
 

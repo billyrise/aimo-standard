@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard Zitierhinweise - Wie in akademischen Arbeiten, Auditberichten und Angeboten zitiert wird. CITATION.cff und BibTeX-Formate.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Zitierung
 

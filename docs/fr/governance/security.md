@@ -1,6 +1,7 @@
 ---
 description: Politique de sécurité du standard AIMO - Signalement de vulnérabilités, procédures de divulgation et considérations de sécurité pour les implémentations de gouvernance IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Sécurité
 

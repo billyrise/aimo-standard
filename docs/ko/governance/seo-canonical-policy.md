@@ -1,6 +1,7 @@
 ---
 description: AIMO SEO 및 정식 URL 정책 - 검색 엔진, 감사자 및 외부 참조를 위한 URL 정식화 전략.
 ---
+<!-- aimo:translation_status=translated -->
 
 # SEO 및 정식 URL 정책
 

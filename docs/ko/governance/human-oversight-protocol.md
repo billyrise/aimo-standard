@@ -1,6 +1,7 @@
 ---
 description: AIMO 인간 감독 프로토콜 - 자동화된 검증과 인간 검토 간의 경계. AI 거버넌스에서의 기계 vs. 인간 판단 책임.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 인간 감독 프로토콜
 

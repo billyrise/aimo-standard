@@ -1,6 +1,7 @@
 ---
 description: Schema Log di Scoperta Shadow AI - Formato vendor-neutral per documentare il rilevamento, l'inventario e la remediation dell'uso non approvato dell'IA nelle aziende.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Schema Log di Scoperta Shadow AI
 

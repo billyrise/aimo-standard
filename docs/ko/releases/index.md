@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 릴리스 - 버전화된 PDF, 산출물 및 체크섬 다운로드. 변경로그, 마이그레이션 가이드 및 빌드 출처 증명.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 릴리스
 

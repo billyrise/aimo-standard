@@ -1,6 +1,7 @@
 ---
 description: AIMO 검증기 허브 - 검증 도구 빠른 시작. 30초 안에 설치, 실행 및 결과 해석. 증거 팩 검증 및 컴플라이언스 검사.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 검증기
 

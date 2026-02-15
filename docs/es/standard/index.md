@@ -1,6 +1,7 @@
 ---
 description: Centro de especificación de AIMO Standard. Acceda a la versión actual, historial de versiones, niveles de conformidad y mapas de cobertura para marcos de gobernanza de IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Estándar
 

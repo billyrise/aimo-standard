@@ -1,6 +1,7 @@
 ---
 description: AIMO Code System format and naming conventions. Defines code structure (XX-NNN), lifecycle states, versioning, and deprecation policies for taxonomy codes.
 ---
+<!-- aimo:translation_status=source -->
 
 # Codes
 

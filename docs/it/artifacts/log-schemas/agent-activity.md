@@ -1,6 +1,7 @@
 ---
 description: Formato Log Attività Agent - Schema vendor-neutral per l'esercizio dei privilegi dell'IA agente, esecuzione di strumenti e monitoraggio delle operazioni ricorsive nelle aziende.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Formato Log Attività Agent
 

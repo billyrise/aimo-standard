@@ -1,6 +1,7 @@
 ---
 description: AIMO 커버리지 맵 - 감사 준비를 위한 AIMO 표준과 주요 규정(ISO 42001, NIST AI RMF, EU AI Act, ISMS) 간의 추적성.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 커버리지 맵
 
@@ -31,6 +32,8 @@ description: AIMO 커버리지 맵 - 감사 준비를 위한 AIMO 표준과 주�
 
 - **[방법론](methodology/)**: 매핑이 무엇이고 무엇이 아닌지; 사용 방법; 업데이트 정책; [증거 번들](../artifacts/evidence-bundle/) 및 [최소 증거 요구사항](../artifacts/minimum-evidence/)과의 관계.
 - **ISO/IEC 42001**: [ISO/IEC 42001 매핑](iso-42001/) — AI 관리 시스템 주제.
+- **ISO/IEC 42006**: [ISO/IEC 42006 매핑](iso-42006/) — AIMS 감사·인증 기관에 대한 요건(ISO/IEC 42001 기준).
 - **NIST AI RMF**: [NIST AI RMF 매핑](nist-ai-rmf/) — Govern, Map, Measure, Manage.
 - **EU AI Act**: [EU AI Act 매핑](eu-ai-act/) — 고수준 문서화 및 기록 보존 (법률 해석 아님).
+- **조달·공개(영국·일본)**: [조달·공개 매핑](procurement-and-disclosure/) — 공공 조달 및 공개(영국·일본); 참조용 매핑만 제공.
 - **ISMS 뷰**: [ISMS 매핑](isms/) — ISO/IEC 27001/27002 주제 (변경 관리, 접근 통제, 로깅, 증거 무결성).

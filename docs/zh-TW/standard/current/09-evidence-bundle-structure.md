@@ -1,84 +1,85 @@
 ---
-description: Normative root structure and manifest for Evidence Bundle (v0.1). Integrity MUST; Custody is implementation-defined.
+description: 證據包之規範根結構與 manifest（v0.1）。完整性為 MUST；保管為實作定義。
 ---
+<!-- aimo:translation_status=translated -->
 
-# Evidence Bundle root structure (v0.1)
+# 證據包根結構（v0.1）
 
-This page defines the **normative** root layout and manifest for an Evidence Bundle. Validators MUST reject bundles that do not satisfy these requirements before any schema validation.
+本頁定義證據包之**規範**根配置與 manifest。驗證器必須在進行任何結構描述驗證前，拒絕不符合這些要求的組合。
 
-## v0.1 normative MUST (summary)
+## v0.1 規範 MUST（摘要）
 
-- **manifest.json** at bundle root is required.
-- **object_index** and **payload_index**: each entry MUST include **sha256** (64 lowercase hex); paths MUST be relative and MUST NOT contain `../` or escape the bundle root.
-- **signing.signatures** MUST be a non-empty array (empty array is invalid).
-- Each signature entry MUST have: **path** under `signatures/` (path traversal forbidden), **targets** (array, at least one path), and at least one signature in the bundle MUST list **manifest.json** in **targets** (manifest signing is mandatory).
-- **hash_chain**: v0.1 MUST include **algorithm**, **head**, **path** (under `hashes/`), and **covers** with at least **manifest.json** and **objects/index.json**.
+- 組合根目錄下**必須**有 **manifest.json**。
+- **object_index** 與 **payload_index**：每筆條目必須包含 **sha256**（64 位小寫十六進位）；路徑必須為相對路徑，且不得包含 `../` 或脫離組合根目錄。
+- **signing.signatures** 必須為非空陣列（空陣列無效）。
+- 每筆簽章條目必須具備：位於 `signatures/` 下之 **path**（禁止路徑遍歷）、**targets**（陣列，至少一路徑），且組合內至少一組簽章必須在 **targets** 中列出 **manifest.json**（manifest 簽章為強制）。
+- **hash_chain**：v0.1 必須包含 **algorithm**、**head**、**path**（位於 `hashes/` 下）以及 **covers**（至少含 **manifest.json** 與 **objects/index.json**）。
 
-Validators MUST enforce these before accepting a bundle. The JSON Schema and the reference validator implement the same rules.
+驗證器必須在接受組合前強制上述規則。JSON Schema 與參考驗證器實作相同規則。
 
-## Root required structure (MUST)
+## 根必要結構（MUST）
 
-At the bundle root, the following MUST be present:
+組合根目錄下必須存在下列項目：
 
-| Item | Type | Purpose |
-|------|------|---------|
-| **manifest.json** | File | Bundle manifest (see below). Canonical descriptor for the bundle. |
-| **objects/** | Directory | Enumerated objects (e.g. metadata, indexes). Listed in `manifest.json` `object_index`. |
-| **payloads/** | Directory | Payload files (e.g. root EV JSON, Evidence Pack files). Listed in `manifest.json` `payload_index`. |
-| **signatures/** | Directory | Digital signatures. v0.1 MUST contain at least one signature file that references the manifest (existence and target reference; cryptographic verification is a future extension). |
-| **hashes/** | Directory | Hash chain or integrity records (as needed by `manifest.json` `hash_chain`). |
+| 項目 | 類型 | 用途 |
+| --- | --- | --- |
+| **manifest.json** | 檔案 | 組合 manifest（見下）。組合的標準描述子。 |
+| **objects/** | 目錄 | 列舉物件（如詮釋資料、索引）。列於 `manifest.json` 之 `object_index`。 |
+| **payloads/** | 目錄 | Payload 檔案（如根 EV JSON、Evidence Pack 檔案）。列於 `manifest.json` 之 `payload_index`。 |
+| **signatures/** | 目錄 | 數位簽章。v0.1 必須至少包含一組參照 manifest 的簽章檔案（存在與目標參照；密碼學驗證為未來擴充）。 |
+| **hashes/** | 目錄 | 雜湊鏈或完整性紀錄（依 `manifest.json` 之 `hash_chain` 所需）。 |
 
-Implementers MUST NOT submit a bundle that omits any of these. The Validator MUST fail with a clear message when the root structure is incomplete.
+實作者不得提交缺少任一项的組合。根結構不完整時，驗證器必須以明確訊息失敗。
 
-## Integrity (normative) vs Custody (implementation)
+## 完整性（規範）與保管（實作）
 
-- **Integrity** is **normative** in v0.1: the standard mandates that the bundle carries integrity metadata (manifest, sha256 for indexed files, signature presence for the manifest). Validators MUST check that:
-  - Required directories and files exist.
-  - `manifest.json` is present and valid (schema and pre-schema checks).
-  - Every file listed in `object_index` and `payload_index` exists at the given path and its content matches the declared `sha256`.
-  - `signatures/` contains at least one signature that targets the manifest (v0.1: existence and reference only; v0.1.1: verification metadata RECOMMENDED; v0.2 planned: cryptographic verification in scope).
-- **Custody** (storage, access control, retention, WORM) is **implementation-defined**. The standard does not prescribe how custodians store or protect the bundle; it only requires that the package, when submitted, satisfies the Integrity requirements above.
+- **完整性**在 v0.1 為**規範**：標準要求組合具備完整性詮釋資料（manifest、索引檔案之 sha256、manifest 之簽章存在）。驗證器必須檢查：
+  - 必要目錄與檔案存在。
+  - `manifest.json` 存在且有效（結構描述與前結構描述檢查）。
+  - `object_index` 與 `payload_index` 所列每個檔案在給定路徑存在，且內容與宣告之 `sha256` 一致。
+  - `signatures/` 至少包含一組以 manifest 為目標的簽章（v0.1：僅存在與參照；v0.1.1：建議驗證詮釋資料；v0.2 規劃：密碼學驗證納入範圍）。
+- **保管**（儲存、存取控制、保留、WORM）為**實作定義**。標準不規定保管人如何儲存或保護組合；僅要求提交時之套件滿足上述完整性要求。
 
-## manifest.json (MUST fields)
+## manifest.json（MUST 欄位）
 
-The manifest MUST include at least:
+manifest 至少須包含：
 
-| Field | Type | Description |
-|-------|------|-------------|
-| **bundle_id** | string (UUID) | Unique identifier for this bundle. |
-| **bundle_version** | string (SemVer) | Version of the bundle. |
-| **created_at** | string (date-time) | Creation timestamp. |
-| **scope_ref** | string | Scope reference (e.g. `SC-001`). Pattern `SC-*`. |
-| **object_index** | array | List of objects: `id`, `type`, `path`, `sha256`. Paths MUST be relative, MUST NOT contain `../` or start with `/`, and MUST remain within the Evidence Bundle root (validators MUST reject paths that escape the bundle root). |
-| **payload_index** | array | List of payloads: `logical_id`, `path`, `sha256`, `mime`, `size`. Same path rules as object_index (relative, no `../`, no leading `/`, within bundle root). |
-| **hash_chain** | object | **Normative (v0.1):** MUST include `algorithm` (sha256 \| merkle), `head` (64 lowercase hex), `path` (relative path under `hashes/`; no `../`, no leading `/`), and `covers` (array, at least one element). v0.1 MUST include `manifest.json` and `objects/index.json` in `covers`. |
-| **signing** | object | **Normative (v0.1):** MUST include `signatures` (array, at least one entry). Each entry MUST have: `signature_id` (e.g. SIG-... or UUID), `path` (relative under `signatures/`; no `../`, no leading `/`), `targets` (array, at least one path; v0.1 MUST include `manifest.json` in at least one signature's targets), `algorithm` (one of ed25519, rsa-pss, ecdsa, unspecified). `created_at` (date-time) is MAY. **Note:** Cryptographic verification of signatures is out of scope for v0.1; reference (which file and what it targets) is required. |
+| 欄位 | 類型 | 說明 |
+| --- | --- | --- |
+| **bundle_id** | string (UUID) | 本組合之唯一識別碼。 |
+| **bundle_version** | string (SemVer) | 組合版本。 |
+| **created_at** | string (date-time) | 建立時間戳。 |
+| **scope_ref** | string | 範圍參照（如 `SC-001`）。模式 `SC-*`。 |
+| **object_index** | array | 物件清單：`id`、`type`、`path`、`sha256`。路徑必須為相對、不得含 `../` 或以 `/` 開頭，且須位於證據包根目錄內（驗證器必須拒絕脫離組合根之路徑）。 |
+| **payload_index** | array | Payload 清單：`logical_id`、`path`、`sha256`、`mime`、`size`。路徑規則與 object_index 相同（相對、無 `../`、無前導 `/`、位於組合根內）。 |
+| **hash_chain** | object | **規範 (v0.1)：** 必須包含 `algorithm`（sha256 \| merkle）、`head`（64 位小寫十六進位）、`path`（`hashes/` 下之相對路徑；無 `../`、無前導 `/`）及 `covers`（陣列，至少一元素）。v0.1 之 `covers` 必須包含 `manifest.json` 與 `objects/index.json`。 |
+| **signing** | object | **規範 (v0.1)：** 必須包含 `signatures`（陣列，至少一筆）。每筆須具：`signature_id`（如 SIG-... 或 UUID）、`path`（`signatures/` 下相對路徑；無 `../`、無前導 `/`）、`targets`（陣列，至少一路徑；v0.1 至少一組簽章之 targets 須含 `manifest.json`）、`algorithm`（ed25519、rsa-pss、ecdsa、unspecified 之一）。`created_at`（date-time）為 MAY。**註：** v0.1 不涵蓋簽章之密碼學驗證；僅要求參照（哪個檔案、目標為何）。 |
 
-**v0.1.1 optional signature metadata (RECOMMENDED for third-party re-performance):**
+**v0.1.1 選用簽章詮釋資料（建議供第三方重新執行）：**
 
-| Field | Type | Description |
-|-------|------|-------------|
-| **signer_identity** | string | Identity of the signer (e.g. PGP fingerprint, did:key). |
-| **signed_at** | string (date-time) | When the signature was applied (ISO 8601). |
-| **verification_command** | string | Example CLI command for an auditor to re-perform verification. |
-| **canonicalization** | string | How the signed payload was canonicalized: `rfc8785_json`, `cbor`, or `unspecified`. |
+| 欄位 | 類型 | 說明 |
+| --- | --- | --- |
+| **signer_identity** | string | 簽署者身分（如 PGP 指紋、did:key）。 |
+| **signed_at** | string (date-time) | 簽章施加時間（ISO 8601）。 |
+| **verification_command** | string | 供審計員重新執行驗證的範例 CLI 指令。 |
+| **canonicalization** | string | 簽署 payload 之標準化方式：`rfc8785_json`、`cbor` 或 `unspecified`。 |
 
-Integrity and verification: **v0.1** — reference and existence only. **v0.1.1** — metadata for verification is RECOMMENDED. **v0.2** (planned) — cryptographic verification in scope.
+完整性與驗證：**v0.1** — 僅參照與存在。**v0.1.1** — 建議驗證用詮釋資料。**v0.2**（規劃）— 密碼學驗證納入範圍。
 
-- **sha256** values MUST be 64 lowercase hexadecimal characters.
-- **path** MUST be a relative path; MUST NOT contain `../` or start with `/`; paths MUST stay within the Evidence Bundle root.
-- The manifest MAY include an explicit self-reference (e.g. in `object_index` or a dedicated field) so that the manifest’s own integrity is covered; validators MUST accept a bundle where the manifest is either listed in an index or explicitly referenced by a signature.
+- **sha256** 值必須為 64 位小寫十六進位字元。
+- **path** 必須為相對路徑；不得包含 `../` 或以 `/` 開頭；路徑須位於證據包根目錄內。
+- manifest 可包含明確自參照（如於 `object_index` 或專用欄位），使 manifest 自身完整性被涵蓋；驗證器必須接受 manifest 列於某索引或由某簽章明確參照的組合。
 
-See the JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json`.
+JSON Schema 見：`schemas/jsonschema/evidence_bundle_manifest.schema.json`。
 
-## Future extensions (informative)
+## 未來擴充（參考）
 
-- **Control/Requirement linkage**: A future version may add a standard way to link Evidence Bundle elements to Control or Requirement identifiers (e.g. for export to NIST OSCAL or similar audit automation formats). This is not required in v0.1 or v0.1.1.
+- **Control/Requirement 連結**：未來版本可能新增將證據包元素連結至 Control 或 Requirement 識別碼的標準方式（例如匯出至 NIST OSCAL 或類似審計自動化格式）。v0.1 與 v0.1.1 不要求。
 
-## References
+## 參考資料
 
-- [Evidence Bundle (artifact overview)](../../../artifacts/evidence-bundle/) — purpose and TOC
-- [EV Template — External Forms and Audit Handoff Index](../06-ev-template/#external-forms-official-templateschecklists-attached-as-is) — where to attach official templates/checklists and how to reference them in the manifest
-- [Signature verification roadmap](../../../artifacts/signature-verification-roadmap/) — v0.1.1 metadata and v0.2 verification plan
-- [Validator](../../../validator/) — how the validator enforces this structure
-- [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) — MUST-level checklist
+- [證據包（人工產物總覽）](../../../artifacts/evidence-bundle/) — 目的與目次
+- [EV 範本 — 外部表單與審計交接索引](../06-ev-template/#external-forms-official-templateschecklists-attached-as-is) — 附上正式範本／檢查表及於 manifest 參照之方式
+- [簽章驗證路線圖](../../../artifacts/signature-verification-roadmap/) — v0.1.1 詮釋資料與 v0.2 驗證計畫
+- [驗證器](../../../validator/) — 驗證器如何強制此結構
+- [最低證據要求](../../../artifacts/minimum-evidence/) — MUST 級檢查表

@@ -1,6 +1,7 @@
 ---
 description: AIMO trademark guidelines - Usage rules for AIMO marks, conformance badge requirements, and branding guidelines.
 ---
+<!-- aimo:translation_status=source -->
 
 # Trademarks
 

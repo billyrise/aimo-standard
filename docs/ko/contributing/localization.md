@@ -1,6 +1,7 @@
 ---
 description: AIMO 현지화 가이드 - 다국어 문서를 위한 i18n 구조, 유지보수 워크플로우 및 SSOT 원칙.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 현지화 가이드
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard引用ガイド - 学術論文、監査報告書、提案書での引用方法。CITATION.cffとBibTeX形式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 引用方法
 

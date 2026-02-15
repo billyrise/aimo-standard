@@ -1,84 +1,85 @@
 ---
-description: Normative root structure and manifest for Evidence Bundle (v0.1). Integrity MUST; Custody is implementation-defined.
+description: Normative Root-Struktur und Manifest für Evidence Bundle (v0.1). Integrity MUST; Custody implementierungsdefiniert.
 ---
+<!-- aimo:translation_status=translated -->
 
-# Evidence Bundle root structure (v0.1)
+# Evidence Bundle Root-Struktur (v0.1)
 
-This page defines the **normative** root layout and manifest for an Evidence Bundle. Validators MUST reject bundles that do not satisfy these requirements before any schema validation.
+Diese Seite definiert das **normative** Root-Layout und Manifest eines Evidence Bundle. Validatoren MÜSSEN Bündel, die diese Anforderungen nicht erfüllen, vor jeder Schema-Validierung ablehnen.
 
-## v0.1 normative MUST (summary)
+## v0.1 normative MUST (Zusammenfassung)
 
-- **manifest.json** at bundle root is required.
-- **object_index** and **payload_index**: each entry MUST include **sha256** (64 lowercase hex); paths MUST be relative and MUST NOT contain `../` or escape the bundle root.
-- **signing.signatures** MUST be a non-empty array (empty array is invalid).
-- Each signature entry MUST have: **path** under `signatures/` (path traversal forbidden), **targets** (array, at least one path), and at least one signature in the bundle MUST list **manifest.json** in **targets** (manifest signing is mandatory).
-- **hash_chain**: v0.1 MUST include **algorithm**, **head**, **path** (under `hashes/`), and **covers** with at least **manifest.json** and **objects/index.json**.
+- **manifest.json** am Bündel-Root ist erforderlich.
+- **object_index** und **payload_index**: Jeder Eintrag MUSS **sha256** (64 Kleinbuchstaben-Hex) enthalten; Pfade MÜSSEN relativ sein und DÜRFEN weder `../` enthalten noch den Bündel-Root verlassen.
+- **signing.signatures** MUSS ein nichtleeres Array sein (leeres Array ist ungültig).
+- Jeder Signatur-Eintrag MUSS haben: **path** unter `signatures/` (Pfad-Traversierung verboten), **targets** (Array, mindestens ein Pfad), und mindestens eine Signatur im Bündel MUSS **manifest.json** in **targets** aufführen (Manifest-Signierung ist Pflicht).
+- **hash_chain**: v0.1 MUSS **algorithm**, **head**, **path** (unter `hashes/`) und **covers** mit mindestens **manifest.json** und **objects/index.json** enthalten.
 
-Validators MUST enforce these before accepting a bundle. The JSON Schema and the reference validator implement the same rules.
+Validatoren MÜSSEN dies durchsetzen, bevor ein Bündel akzeptiert wird. JSON Schema und Referenz-Validator implementieren dieselben Regeln.
 
-## Root required structure (MUST)
+## Root-erforderliche Struktur (MUST)
 
-At the bundle root, the following MUST be present:
+Am Bündel-Root MÜSSEN folgende Elemente vorhanden sein:
 
-| Item | Type | Purpose |
-|------|------|---------|
-| **manifest.json** | File | Bundle manifest (see below). Canonical descriptor for the bundle. |
-| **objects/** | Directory | Enumerated objects (e.g. metadata, indexes). Listed in `manifest.json` `object_index`. |
-| **payloads/** | Directory | Payload files (e.g. root EV JSON, Evidence Pack files). Listed in `manifest.json` `payload_index`. |
-| **signatures/** | Directory | Digital signatures. v0.1 MUST contain at least one signature file that references the manifest (existence and target reference; cryptographic verification is a future extension). |
-| **hashes/** | Directory | Hash chain or integrity records (as needed by `manifest.json` `hash_chain`). |
+| Element | Typ | Zweck |
+| --- | --- | --- |
+| **manifest.json** | Datei | Bündel-Manifest (siehe unten). Kanonischer Deskriptor für das Bündel. |
+| **objects/** | Verzeichnis | Aufgezählte Objekte (z. B. Metadaten, Indizes). In `manifest.json` object_index aufgeführt. |
+| **payloads/** | Verzeichnis | Payload-Dateien (z. B. Root-EV-JSON, Evidence-Pack-Dateien). In `manifest.json` payload_index aufgeführt. |
+| **signatures/** | Verzeichnis | Digitale Signaturen. v0.1 MUSS mindestens eine das Manifest referenzierende Signaturdatei enthalten (Existenz und Zielreferenz; kryptografische Verifizierung ist zukünftige Erweiterung). |
+| **hashes/** | Verzeichnis | Hash-Kette oder Integritätsaufzeichnungen (wie von `manifest.json` hash_chain gefordert). |
 
-Implementers MUST NOT submit a bundle that omits any of these. The Validator MUST fail with a clear message when the root structure is incomplete.
+Implementierer DÜRFEN kein Bündel einreichen, dem eines davon fehlt. Der Validator MUSS mit klarer Meldung fehlschlagen, wenn die Root-Struktur unvollständig ist.
 
-## Integrity (normative) vs Custody (implementation)
+## Integrity (normativ) vs. Custody (Implementierung)
 
-- **Integrity** is **normative** in v0.1: the standard mandates that the bundle carries integrity metadata (manifest, sha256 for indexed files, signature presence for the manifest). Validators MUST check that:
-  - Required directories and files exist.
-  - `manifest.json` is present and valid (schema and pre-schema checks).
-  - Every file listed in `object_index` and `payload_index` exists at the given path and its content matches the declared `sha256`.
-  - `signatures/` contains at least one signature that targets the manifest (v0.1: existence and reference only; v0.1.1: verification metadata RECOMMENDED; v0.2 planned: cryptographic verification in scope).
-- **Custody** (storage, access control, retention, WORM) is **implementation-defined**. The standard does not prescribe how custodians store or protect the bundle; it only requires that the package, when submitted, satisfies the Integrity requirements above.
+- **Integrity** ist in v0.1 **normativ**: Die Norm verlangt, dass das Bündel Integritätsmetadaten trägt (Manifest, sha256 für indizierte Dateien, Signaturvorhandensein für das Manifest). Validatoren MÜSSEN prüfen, dass:
+  - Erforderliche Verzeichnisse und Dateien existieren.
+  - `manifest.json` vorhanden und gültig ist (Schema- und Vorschema-Checks).
+  - Jede in object_index und payload_index aufgeführte Datei am angegebenen Pfad existiert und ihr Inhalt mit dem deklarierten `sha256` übereinstimmt.
+  - `signatures/` mindestens eine das Manifest zum Ziel habende Signatur enthält (v0.1: nur Existenz und Referenz; v0.1.1: Verifizierungsmetadaten RECOMMENDED; v0.2 geplant: kryptografische Verifizierung im Umfang).
+- **Custody** (Speicherung, Zugriffskontrolle, Aufbewahrung, WORM) ist **implementierungsdefiniert**. Die Norm schreibt nicht vor, wie Verwahrer das Bündel speichern oder schützen; sie verlangt nur, dass das Paket bei Einreichung die obigen Integrity-Anforderungen erfüllt.
 
-## manifest.json (MUST fields)
+## manifest.json (MUST-Felder)
 
-The manifest MUST include at least:
+Das Manifest MUSS mindestens enthalten:
 
-| Field | Type | Description |
-|-------|------|-------------|
-| **bundle_id** | string (UUID) | Unique identifier for this bundle. |
-| **bundle_version** | string (SemVer) | Version of the bundle. |
-| **created_at** | string (date-time) | Creation timestamp. |
-| **scope_ref** | string | Scope reference (e.g. `SC-001`). Pattern `SC-*`. |
-| **object_index** | array | List of objects: `id`, `type`, `path`, `sha256`. Paths MUST be relative, MUST NOT contain `../` or start with `/`, and MUST remain within the Evidence Bundle root (validators MUST reject paths that escape the bundle root). |
-| **payload_index** | array | List of payloads: `logical_id`, `path`, `sha256`, `mime`, `size`. Same path rules as object_index (relative, no `../`, no leading `/`, within bundle root). |
-| **hash_chain** | object | **Normative (v0.1):** MUST include `algorithm` (sha256 \| merkle), `head` (64 lowercase hex), `path` (relative path under `hashes/`; no `../`, no leading `/`), and `covers` (array, at least one element). v0.1 MUST include `manifest.json` and `objects/index.json` in `covers`. |
-| **signing** | object | **Normative (v0.1):** MUST include `signatures` (array, at least one entry). Each entry MUST have: `signature_id` (e.g. SIG-... or UUID), `path` (relative under `signatures/`; no `../`, no leading `/`), `targets` (array, at least one path; v0.1 MUST include `manifest.json` in at least one signature's targets), `algorithm` (one of ed25519, rsa-pss, ecdsa, unspecified). `created_at` (date-time) is MAY. **Note:** Cryptographic verification of signatures is out of scope for v0.1; reference (which file and what it targets) is required. |
+| Feld | Typ | Beschreibung |
+| --- | --- | --- |
+| **bundle_id** | string (UUID) | Eindeutiger Bezeichner für dieses Bündel. |
+| **bundle_version** | string (SemVer) | Version des Bündels. |
+| **created_at** | string (date-time) | Erstellungszeitstempel. |
+| **scope_ref** | string | Umfangsreferenz (z. B. `SC-001`). Muster `SC-*`. |
+| **object_index** | array | Liste der Objekte: `id`, `type`, `path`, `sha256`. Pfade MÜSSEN relativ sein, DÜRFEN weder `../` enthalten noch mit `/` beginnen und MÜSSEN innerhalb des Evidence-Bundle-Roots bleiben (Validatoren MÜSSEN den Root verlassende Pfade ablehnen). |
+| **payload_index** | array | Liste der Payloads: `logical_id`, `path`, `sha256`, `mime`, `size`. Gleiche Pfadregeln wie object_index (relativ, kein `../`, kein führendes `/`, innerhalb Bündel-Root). |
+| **hash_chain** | object | **Normativ (v0.1):** MUSS `algorithm` (sha256 \| merkle), `head` (64 Kleinbuchstaben-Hex), `path` (relativer Pfad unter `hashes/`; kein `../`, kein führendes `/`) und `covers` (Array, mindestens ein Element) enthalten. v0.1 MUSS `manifest.json` und `objects/index.json` in `covers` enthalten. |
+| **signing** | object | **Normativ (v0.1):** MUSS `signatures` (Array, mindestens ein Eintrag) enthalten. Jeder Eintrag MUSS haben: `signature_id` (z. B. SIG-... oder UUID), `path` (relativ unter `signatures/`; kein `../`, kein führendes `/`), `targets` (Array, mindestens ein Pfad; v0.1 MUSS in mindestens einer Signatur targets `manifest.json` enthalten), `algorithm` (eines von ed25519, rsa-pss, ecdsa, unspecified). `created_at` (date-time) ist MAY. **Hinweis:** Kryptografische Verifizierung von Signaturen liegt in v0.1 außerhalb des Umfangs; Referenz (welche Datei und was sie zum Ziel hat) ist erforderlich. |
 
-**v0.1.1 optional signature metadata (RECOMMENDED for third-party re-performance):**
+**v0.1.1 optionale Signaturmetadaten (RECOMMENDED für Dritt-Wiederausführung):**
 
-| Field | Type | Description |
-|-------|------|-------------|
-| **signer_identity** | string | Identity of the signer (e.g. PGP fingerprint, did:key). |
-| **signed_at** | string (date-time) | When the signature was applied (ISO 8601). |
-| **verification_command** | string | Example CLI command for an auditor to re-perform verification. |
-| **canonicalization** | string | How the signed payload was canonicalized: `rfc8785_json`, `cbor`, or `unspecified`. |
+| Feld | Typ | Beschreibung |
+| --- | --- | --- |
+| **signer_identity** | string | Identität des Signaturgebers (z. B. PGP-Fingerabdruck, did:key). |
+| **signed_at** | string (date-time) | Zeitpunkt der Signaturanwendung (ISO 8601). |
+| **verification_command** | string | Beispiel-CLI-Befehl für einen Prüfer zur erneuten Verifizierung. |
+| **canonicalization** | string | Wie die signierte Payload kanonisiert wurde: `rfc8785_json`, `cbor` oder `unspecified`. |
 
-Integrity and verification: **v0.1** — reference and existence only. **v0.1.1** — metadata for verification is RECOMMENDED. **v0.2** (planned) — cryptographic verification in scope.
+Integrity und Verifizierung: **v0.1** — nur Referenz und Existenz. **v0.1.1** — Metadaten zur Verifizierung RECOMMENDED. **v0.2** (geplant) — kryptografische Verifizierung im Umfang.
 
-- **sha256** values MUST be 64 lowercase hexadecimal characters.
-- **path** MUST be a relative path; MUST NOT contain `../` or start with `/`; paths MUST stay within the Evidence Bundle root.
-- The manifest MAY include an explicit self-reference (e.g. in `object_index` or a dedicated field) so that the manifest’s own integrity is covered; validators MUST accept a bundle where the manifest is either listed in an index or explicitly referenced by a signature.
+- **sha256**-Werte MÜSSEN 64 Kleinbuchstaben-Hexadezimalzeichen sein.
+- **path** MUSS ein relativer Pfad sein; DARF weder `../` enthalten noch mit `/` beginnen; Pfade MÜSSEN innerhalb des Evidence-Bundle-Roots bleiben.
+- Das Manifest KANN eine explizite Selbstreferenz (z. B. in object_index oder einem eigenen Feld) enthalten, sodass die eigene Integrität des Manifests abgedeckt ist; Validatoren MÜSSEN ein Bündel akzeptieren, in dem das Manifest entweder in einem Index aufgeführt oder von einer Signatur explizit referenziert ist.
 
-See the JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json`.
+Siehe JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json`.
 
-## Future extensions (informative)
+## Zukünftige Erweiterungen (informativ)
 
-- **Control/Requirement linkage**: A future version may add a standard way to link Evidence Bundle elements to Control or Requirement identifiers (e.g. for export to NIST OSCAL or similar audit automation formats). This is not required in v0.1 or v0.1.1.
+- **Control/Requirement-Verknüpfung**: Eine zukünftige Version könnte einen Standardweg hinzufügen, Evidence-Bundle-Elemente mit Control- oder Requirement-Kennungen zu verknüpfen (z. B. für Export nach NIST OSCAL oder ähnliche Audit-Automatisierungsformate). In v0.1 oder v0.1.1 nicht erforderlich.
 
-## References
+## Referenzen
 
-- [Evidence Bundle (artifact overview)](../../../artifacts/evidence-bundle/) — purpose and TOC
-- [EV Template — External Forms and Audit Handoff Index](../06-ev-template/#external-forms-official-templateschecklists-attached-as-is) — where to attach official templates/checklists and how to reference them in the manifest
-- [Signature verification roadmap](../../../artifacts/signature-verification-roadmap/) — v0.1.1 metadata and v0.2 verification plan
-- [Validator](../../../validator/) — how the validator enforces this structure
-- [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) — MUST-level checklist
+- [Evidence Bundle (Artefaktübersicht)](../../../artifacts/evidence-bundle/) — Zweck und Inhaltsverzeichnis
+- [EV-Vorlage — External Forms und Audit-Handoff-Index](../06-ev-template/#external-forms-official-templateschecklists-attached-as-is) — wo offizielle Vorlagen/Checklisten angefügt und im Manifest referenziert werden
+- [Signaturverifizierungs-Roadmap](../../../artifacts/signature-verification-roadmap/) — v0.1.1-Metadaten und v0.2-Verifizierungsplan
+- [Validator](../../../validator/) — wie der Validator diese Struktur durchsetzt
+- [Mindestanforderungen an Evidence](../../../artifacts/minimum-evidence/) — MUST-Checkliste

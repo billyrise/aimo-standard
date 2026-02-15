@@ -1,6 +1,7 @@
 ---
 description: AIMO Standardバージョン履歴。監査対応PDF、機械可読アーティファクト、チェックサム、ビルド来歴証明書付き公式凍結リリース。
 ---
+<!-- aimo:translation_status=translated -->
 
 # バージョン一覧
 

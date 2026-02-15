@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard Artefakte-Hub. Maschinenlesbare Schemas, Evidence Bundle-Templates, Log-Schemas für Shadow AI-Erkennung und Agentenaktivitätsüberwachung.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Artefakte
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO Lokalisierungsleitfaden - i18n-Struktur, Wartungsworkflow und SSOT-Prinzipien für mehrsprachige Dokumentation.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Lokalisierungsleitfaden
 

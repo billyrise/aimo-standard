@@ -1,6 +1,7 @@
 ---
 description: Structure du lot de preuves AIMO. Format de package d'audit avec table des matières, traçabilité et artefacts pour la conformité en gouvernance IA et la livraison aux auditeurs.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Lot de preuves
 

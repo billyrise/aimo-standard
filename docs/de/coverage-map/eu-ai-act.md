@@ -1,71 +1,72 @@
 ---
-description: AIMO Standard to EU AI Act mapping. Traceability between AIMO taxonomy codes and EU AI Act risk categories and requirements.
+description: AIMO Standard zu EU-KI-Verordnung-Zuordnung. Nachverfolgbarkeit zwischen AIMO-Taxonomiecodes und EU-KI-Verordnung-Risikokategorien und -anforderungen.
 ---
+<!-- aimo:translation_status=translated -->
 
-# EU AI Act mapping
+# EU-KI-Verordnung-Zuordnung
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> Nachverfolgbarkeit: Taxonomie → Mindestanforderungen an Evidence → Validator → Human Oversight Protocol.
 
-- [Taxonomy](../../standard/current/03-taxonomy/)
-- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- [Taxonomie](../../standard/current/03-taxonomy/)
+- [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/)
 - [Log Schemas](../../artifacts/log-schemas/)
 - [Validator](../../validator/)
 - [Human Oversight Protocol](../../governance/human-oversight-protocol/)
 
-This page maps selected EU AI Act themes (documentation, record-keeping, risk management, human oversight, transparency) to AIMO evidence and artifacts. It is high-level only and does **not** constitute legal advice or guarantee conformity. Verify against the official legal text.
+Diese Seite ordnet ausgewählte Themen der EU-KI-Verordnung (Dokumentation, Aufzeichnung, Risikomanagement, menschliche Aufsicht, Transparenz) AIMO-Evidenz und -Artefakten zu. Sie ist nur auf hoher Ebene; sie **stellt keine Rechtsberatung dar** und garantiert keine Konformität. Gegen den offiziellen Rechtstext prüfen.
 
-**Reference:** Regulation (EU) 2024/1689 (Artificial Intelligence Act). All article numbers below refer to that regulation.
+**Referenz:** Verordnung (EU) 2024/1689 (KI-Verordnung). Alle nachfolgenden Artikelnummern beziehen sich auf diese Verordnung.
 
-## Mapping table
+## Zuordnungstabelle
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| Rahmenreferenz / Thema | AIMO-Evidenz / wo in AIMO | Evidence Bundle / Mindestanforderungen | Artefakte & Validierung | Hinweise |
 | --- | --- | --- | --- | --- |
-| Art 4 – AI literacy | [Scope](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | Cross-cutting; evidence of organisational capability/training (high-level). Not legal advice. Verify against official text. |
-| Art 9 – Risk management system | [Scope](../../standard/current/02-scope/) | request, review, exception, renewal | templates/ev/ | High-risk AI systems (Title III). Not legal advice. Verify against official text. |
-| Art 10 – Data and data governance | [Dictionary](../../standard/current/05-dictionary/) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | Not legal advice. Verify against official text. |
-| Art 11 – Technical documentation (high-risk) | [EV Template](../../standard/current/06-ev-template/), [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; **Annex IV**: see [Examples > EU Annex IV sample](../../examples/) (`examples/evidence_bundle_v01_annex_iv_sample/`); profile: `coverage_map/profiles/eu_ai_act_annex_iv.json`. Sample bundle is normative-compliant (signatures/, hashes/, payload with Annex IV–oriented technical documentation). See Examples for details (further sample content in a future release). | High-level only; not legal advice. Verify against official text. |
-| Art 12 – Record-keeping | [Evidence Bundle](../../artifacts/evidence-bundle/), [Minimum Evidence](../../artifacts/minimum-evidence/) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | Not legal advice. Verify against official text. |
-| Art 13 – Transparency and provision of information to deployers/users | [Scope](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | High-risk context. Not legal advice. Verify against official text. |
-| Art 14 – Human oversight | [Minimum Evidence](../../artifacts/minimum-evidence/) | review, exception | templates/ev/ev_template.md | Not legal advice. Verify against official text. |
-| Art 15 – Accuracy, robustness, cybersecurity | [Minimum Evidence](../../artifacts/minimum-evidence/) | EV (evidence codes / risk codes, high-level) | templates/ev/ | High-level mapping only. Not legal advice. Verify against official text. |
-| Art 17 – Quality management system | [Scope](../../standard/current/02-scope/) | Summary, review (organisation process) | templates/ev/ | Distinct from Art 9 (risk management system). Not legal advice. Verify against official text. |
-| Transparency obligations (use-case dependent) | [Scope](../../standard/current/02-scope/), [Minimum Evidence](../../artifacts/minimum-evidence/) | Summary, EV; review | templates/ev/ | Applicable provisions depend on use case (e.g. limited-risk, deployer duties). Not legal advice. Verify against official text. |
-| GPAI models obligations | [EV Template](../../standard/current/06-ev-template/), [Evidence Bundle](../../artifacts/evidence-bundle/) | EV Template, Evidence Bundle (evidence-structuring framework) | schemas/jsonschema/; schema_validate_ev | AIMO provides a framework for organising evidence; actual obligations are defined by the regulation. Not legal advice. Verify against official text. |
-| Recitals – Accountability | [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | Not legal advice. Verify against official text. |
+| Art. 4 – KI-Kompetenz | [Umfang](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | Querschnitt; Evidenz organisatorischer Fähigkeit/Schulung (Überblick). Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Art. 9 – Risikomanagementsystem | [Umfang](../../standard/current/02-scope/) | request, review, exception, renewal | templates/ev/ | Hochrisiko-KI-Systeme (Titel III). Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Art. 10 – Daten und Datengovernance | [Wörterbuch](../../standard/current/05-dictionary/) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Art. 11 – Technische Dokumentation (Hochrisiko) | [EV-Vorlage](../../standard/current/06-ev-template/), [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; **Anhang IV**: [Beispiele > EU-Anhang-IV-Beispiel](../../examples/) (`examples/evidence_bundle_v01_annex_iv_sample/`); Profil: `coverage_map/profiles/eu_ai_act_annex_iv.json`. Beispielbündel normenkonform (signatures/, hashes/, Payload mit anhang-IV-orientierter technischer Dokumentation). Siehe Beispiele (weitere Beispielinhalte in künftiger Version). | Nur Überblick; keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Art. 12 – Aufzeichnung | [Evidence Bundle](../../artifacts/evidence-bundle/), [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Art. 13 – Transparenz und Informationsbereitstellung an Betreiber/Nutzer | [Umfang](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | Hochrisiko-Kontext. Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Art. 14 – Menschliche Aufsicht | [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) | review, exception | templates/ev/ev_template.md | Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Art. 15 – Genauigkeit, Robustheit, Cybersicherheit | [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) | EV (Evidenzcodes / Risikocodes, Überblick) | templates/ev/ | Nur Überblick-Zuordnung. Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Art. 17 – Qualitätsmanagementsystem | [Umfang](../../standard/current/02-scope/) | Summary, review (Organisationsprozess) | templates/ev/ | Unterscheidet sich von Art. 9 (Risikomanagementsystem). Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Transparenzpflichten (anwendungsabhängig) | [Umfang](../../standard/current/02-scope/), [Mindestanforderungen an Evidence](../../artifacts/minimum-evidence/) | Summary, EV; review | templates/ev/ | Anwendbare Bestimmungen hängen vom Anwendungsfall ab (z. B. begrenztes Risiko, Betreiberpflichten). Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| GPAI-Modellpflichten | [EV-Vorlage](../../standard/current/06-ev-template/), [Evidence Bundle](../../artifacts/evidence-bundle/) | EV-Vorlage, Evidence Bundle (Evidenzstrukturierungsrahmen) | schemas/jsonschema/; schema_validate_ev | AIMO stellt einen Rahmen zur Evidenzorganisation bereit; die tatsächlichen Pflichten sind in der Verordnung definiert. Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
+| Erwägungsgründe – Rechenschaftspflicht | [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | Keine Rechtsberatung. Gegen offiziellen Text prüfen. |
 
-## Effective dates / applicability (high-level)
+## Geltungsbeginn / Anwendbarkeit (Überblick)
 
-The following aligns with **EU official timeline** (AI Act Service Desk / Commission). It is **not legal advice** and does not guarantee accuracy. Always confirm with the **official legal text** and competent authorities.
+Das Folgende orientiert sich am **offiziellen EU-Zeitplan** (KI-Verordnung-Service-Desk / Kommission). Es ist **keine Rechtsberatung** und garantiert keine Richtigkeit. Immer mit dem **offiziellen Rechtstext** und den zuständigen Behörden bestätigen.
 
-| Phase | Date | What applies (high-level) |
-|-------|------|----------------------------|
-| Entry into force | August 2024 | Regulation in force; most substantive obligations not yet applicable. |
-| General provisions & prohibitions | 02 Feb 2025 | Prohibited practices (unacceptable risk); certain AI literacy–related provisions. |
-| GPAI rules + governance | 02 Aug 2025 | Rules on notified bodies, GPAI, governance, confidentiality, penalties; codes of practice. |
-| Majority rules + Annex III high-risk + Art 50 transparency | 02 Aug 2026 | Full applicability for high-risk AI systems (Annex III), Article 50 transparency obligations. |
-| High-risk embedded in regulated products | 02 Aug 2027 | High-risk AI systems embedded in products subject to EU product legislation. |
+| Phase | Datum | Was gilt (Überblick) |
+| --- | --- | --- |
+| Inkrafttreten | August 2024 | Verordnung in Kraft; die meisten materiellen Pflichten noch nicht anwendbar. |
+| Allgemeine Bestimmungen & Verbote | 02.02.2025 | Verbotene Praktiken (inakzeptables Risiko); bestimmte KI-Kompetenz-bezogene Bestimmungen. |
+| GPAI-Regeln & Governance | 02.08.2025 | Regeln zu benannten Stellen, GPAI, Governance, Vertraulichkeit, Sanktionen; Verhaltenskodizes. |
+| Mehrheitsregeln + Anhang III Hochrisiko + Art. 50 Transparenz | 02.08.2026 | Vollständige Anwendung für Hochrisiko-KI-Systeme (Anhang III), Art. 50 Transparenzpflichten. |
+| Hochrisiko in regulierten Produkten | 02.08.2027 | Hochrisiko-KI-Systeme eingebettet in unter EU-Produktrecht fallende Produkte. |
 
-## Harmonised standards and presumption of conformity (Article 40)
+## Harmonisierte Normen und Konformitätsvermutung (Art. 40)
 
-When **harmonised standards** are published in the EU Official Journal under the AI Act, compliance with them can provide **presumption of conformity** with the corresponding requirements. The exact list and dates depend on standardisation work and OJ publication. AIMO mappings are informative and do not confer presumption of conformity. For current status, see the European Commission and AI Office sources in **References** below.
+Wenn **harmonisierte Normen** im EU-Amtsblatt unter der KI-Verordnung veröffentlicht werden, kann deren Einhaltung eine **Konformitätsvermutung** für die entsprechenden Anforderungen begründen. Die genaue Liste und die Daten hängen von der Normungsarbeit und der Veröffentlichung im Amtsblatt ab. AIMO-Zuordnungen sind informativ und begründen keine Konformitätsvermutung. Für den aktuellen Stand siehe die Quellen der Kommission und des KI-Büros unter **Referenzen** unten.
 
-## 2026 AI Office guidelines (implementation detail)
+## 2026-Leitlinien des KI-Büros (Umsetzungsdetail)
 
-The European Commission has indicated that the **AI Office** will prepare **practical guidelines** during 2026, including on:
+Die Europäische Kommission hat angekündigt, dass das **KI-Büro** 2026 **praktische Leitlinien** erarbeiten wird, u. a. zu:
 
-- High-risk classification
-- Article 50 (transparency) implementation
-- Incident reporting
-- QMS-related elements
+- Hochrisiko-Klassifizierung
+- Art. 50 (Transparenz) Umsetzung
+- Meldung von Vorfällen
+- QMS-bezogene Elemente
 
-These guidelines are **update triggers** for AIMO profiles and coverage mappings: as they are published, adopters should align evidence and mappings with the latest official guidance. AIMO does not interpret or guarantee compliance with these guidelines.
+Diese Leitlinien sind **Aktualisierungsauslöser** für AIMO-Profile und Coverage-Zuordnungen: Nach ihrer Veröffentlichung sollten Adoptierende Evidenz und Zuordnungen an die neueste offizielle Leitlinie anpassen. AIMO interpretiert oder garantiert keine Konformität mit diesen Leitlinien.
 
-!!! warning "Not legal advice"
-    This page is for explanatory use only. You must verify applicability and dates against the official regulation and any implementing or amending acts. AIMO does not provide legal advice or guarantee compliance.
+!!! warning "Keine Rechtsberatung"
+    Diese Seite dient nur der Erläuterung. Sie müssen Anwendbarkeit und Daten anhand der offiziellen Verordnung sowie ggf. Durchführungs- oder Änderungsrechtsakten prüfen. AIMO erteilt keine Rechtsberatung und garantiert keine Konformität.
 
-## References
+## Referenzen
 
-- [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Artificial Intelligence Act
-- [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / Commission-aligned; informative)
-- European Commission / AI Office — clear guidelines and timeline (check Commission news and AI Act Service Desk for current URLs)
-- [EPRS — EU AI Act implementation](https://www.europarl.europa.eu/thinktank/) — Parliament briefing (informative)
+- [Verordnung (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — KI-Verordnung
+- [EU-KI-Verordnung-Umsetzungszeitplan](https://artificialintelligenceact.eu/implementation-timeline) (KI-Verordnung-Service-Desk / kommissionsorientiert; informativ)
+- Europäische Kommission / KI-Büro — Leitlinien und Zeitplan (aktuelle URLs in Kommissionsnachrichten und KI-Verordnung-Service-Desk prüfen)
+- [EPRS — EU-KI-Verordnung-Umsetzung](https://www.europarl.europa.eu/thinktank/) — Parlaments-Briefing (informativ)

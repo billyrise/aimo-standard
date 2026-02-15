@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准发布 - 下载版本化的PDF、工件和校验和。变更日志、迁移指南和构建来源证明。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 发布
 

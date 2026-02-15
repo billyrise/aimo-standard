@@ -1,6 +1,7 @@
 ---
 description: Carte de couverture AIMO - Traçabilité entre le standard AIMO et les principales réglementations (ISO 42001, NIST AI RMF, EU AI Act, ISMS) pour la préparation aux audits.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Carte de couverture
 
@@ -31,6 +32,8 @@ Cette section met en correspondance les preuves et artefacts du standard AIMO av
 
 - **[Méthodologie](methodology/)** : ce qu'est et n'est pas la correspondance ; comment l'utiliser ; politique de mise à jour ; relation avec le [Lot de preuves](../artifacts/evidence-bundle/) et les [Exigences minimales de preuves](../artifacts/minimum-evidence/).
 - **ISO/IEC 42001** : [Correspondance ISO/IEC 42001](iso-42001/) — thèmes du système de management de l'IA.
+- **ISO/IEC 42006** : [Correspondance ISO/IEC 42006](iso-42006/) — exigences pour les organismes qui auditent et certifient les AIMS (selon ISO/IEC 42001).
 - **NIST AI RMF** : [Correspondance NIST AI RMF](nist-ai-rmf/) — Govern, Map, Measure, Manage.
 - **EU AI Act** : [Correspondance EU AI Act](eu-ai-act/) — documentation et tenue de registres de haut niveau (pas d'interprétation juridique).
+- **Marchés publics et divulgation (R.-U., Japon)** : [Correspondance Marchés publics et divulgation](procurement-and-disclosure/) — marchés publics et divulgation (R.-U., Japon) ; correspondance de référence uniquement.
 - **Vue ISMS** : [Correspondance ISMS](isms/) — thèmes ISO/IEC 27001/27002 (gestion des changements, contrôle d'accès, journalisation, intégrité des preuves).

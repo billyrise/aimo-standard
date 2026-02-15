@@ -1,6 +1,7 @@
 ---
 description: Hub del Validator AIMO - Quickstart del tooling di validazione. Installare, eseguire e interpretare i risultati in 30 secondi. Validazione dell'evidence pack e controlli di conformità.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Validator
 

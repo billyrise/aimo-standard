@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.
 ---
+<!-- aimo:translation_status=source -->
 
 # Changelog
 

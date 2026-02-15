@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard license - Apache 2.0 licensing terms for specification, documentation, and machine-readable artifacts.
 ---
+<!-- aimo:translation_status=source -->
 
 # License
 

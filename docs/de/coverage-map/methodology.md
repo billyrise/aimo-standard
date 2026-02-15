@@ -1,6 +1,7 @@
 ---
 description: Coverage Map Methodologie - Wie AIMO externen Frameworks zugeordnet wird. Verwendung in Audits, Beziehung zum Evidence Bundle und Nachverfolgbarkeitsansatz.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Methodologie
 

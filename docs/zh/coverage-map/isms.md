@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准与 ISMS（ISO 27001/27002）的映射。AIMO 分类法与信息安全管理系统控制之间的可追溯性。
 ---
+<!-- aimo:translation_status=translated -->
 
 # ISMS 视图（ISO/IEC 27001/27002）映射
 

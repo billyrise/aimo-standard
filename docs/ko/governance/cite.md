@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 인용 가이드 - 학술 논문, 감사 보고서 및 제안서에서 인용하는 방법. CITATION.cff 및 BibTeX 형식.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 인용 방법
 

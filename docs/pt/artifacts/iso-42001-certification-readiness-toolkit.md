@@ -1,6 +1,7 @@
 ---
 description: ISO/IEC 42001 certification readiness toolkit. Fastest path to audit-ready evidence aligned to ISO 42001 using AIMO artifacts. Supports readiness only; does not confer certification.
 ---
+<!-- aimo:translation_status=translated -->
 
 # ISO/IEC 42001 Certification Readiness Toolkit
 

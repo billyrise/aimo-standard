@@ -1,6 +1,7 @@
 ---
 description: AIMO 日志模式 - 用于AI证据的厂商中立日志格式。包括影子AI发现和代理活动监控模式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 日志模式
 

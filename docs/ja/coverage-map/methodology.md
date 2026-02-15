@@ -1,6 +1,7 @@
 ---
 description: Coverage Map方法論 - AIMOが外部フレームワークにマッピングする方法。監査での使用法、Evidence Bundleとの関係、対応関係アプローチ。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Methodology
 

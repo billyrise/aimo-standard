@@ -1,6 +1,7 @@
 ---
 description: Centre des artefacts du standard AIMO. Schémas lisibles par machine, modèles de lot de preuves, schémas de journaux pour la découverte de Shadow AI et la surveillance d'activité des agents.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Artefacts
 

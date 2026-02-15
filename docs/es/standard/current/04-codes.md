@@ -1,6 +1,7 @@
 ---
 description: Formato y convenciones de nomenclatura del Sistema de Códigos AIMO. Define estructura de códigos (XX-NNN), estados de ciclo de vida, versionado y políticas de deprecación para códigos de taxonomía.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Códigos
 

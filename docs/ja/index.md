@@ -1,6 +1,7 @@
 ---
 description: AIMO（AI Management Office）Standard - AIガバナンスと監査のためのオープン標準。8次元91コードのタクソノミーでAI利用を分類し、証跡要件とバリデーターで企業コンプライアンスを支援。
 ---
+<!-- aimo:translation_status=translated -->
 
 # AIMO Standard
 

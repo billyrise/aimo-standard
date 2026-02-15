@@ -1,6 +1,7 @@
 ---
 description: AIMO 验证器中心 - 验证工具快速入门。30秒内安装、运行和解释结果。证据包验证和合规检查。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 验证器
 

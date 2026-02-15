@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard Sicherheitsrichtlinie - Schwachstellenmeldung, Offenlegungsverfahren und Sicherheitsüberlegungen für KI-Governance-Implementierungen.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Sicherheit
 

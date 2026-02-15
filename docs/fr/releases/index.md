@@ -1,6 +1,7 @@
 ---
 description: Versions du standard AIMO - Téléchargez les PDF versionnés, artefacts et checksums. Changelog, guides de migration et attestations de provenance de build.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Versions
 

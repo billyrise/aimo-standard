@@ -1,6 +1,7 @@
 ---
 description: Cronologia delle versioni dello Standard AIMO. Release ufficiali congelate con PDF pronti per l'auditor, artefatti leggibili da macchina, checksum e attestazioni di build provenance.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Versioni
 

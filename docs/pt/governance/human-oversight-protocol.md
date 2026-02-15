@@ -1,6 +1,7 @@
 ---
 description: Protocolo de Supervisão Humana AIMO - Limite entre validação automatizada e revisão humana. Responsabilidades de julgamento máquina vs. humano na governança de IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Protocolo de Supervisão Humana
 

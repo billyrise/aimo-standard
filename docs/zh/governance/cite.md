@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准引用指南 - 如何在学术论文、审计报告和提案中引用。CITATION.cff 和 BibTeX 格式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 如何引用
 

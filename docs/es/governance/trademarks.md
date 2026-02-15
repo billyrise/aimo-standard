@@ -1,6 +1,7 @@
 ---
 description: Guías de marcas comerciales AIMO - Reglas de uso para marcas AIMO, requisitos de distintivo de conformidad y guías de branding.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Marcas Comerciales
 

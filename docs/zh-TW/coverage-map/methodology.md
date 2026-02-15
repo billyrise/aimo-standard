@@ -1,6 +1,7 @@
 ---
 description: 覆蓋範圍對應方法論 - AIMO 如何對應到外部框架。稽核中的使用、與證據包的關係，以及可追溯性方法。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 方法論
 

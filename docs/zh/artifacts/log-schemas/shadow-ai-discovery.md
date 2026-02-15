@@ -1,6 +1,7 @@
 ---
 description: 影子AI发现日志模式 - 用于记录企业中未经批准的AI使用的检测、清点和整改的厂商中立格式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 影子AI发现日志模式
 

@@ -1,6 +1,7 @@
 ---
 description: Mapa de Cobertura AIMO - Rastreabilidade entre AIMO Standard e principais regulamentações (ISO 42001, NIST AI RMF, EU AI Act, ISMS) para prontidão de auditoria.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Mapa de Cobertura
 
@@ -31,6 +32,8 @@ Esta seção mapeia evidências e artefatos do AIMO Standard para frameworks e r
 
 - **[Metodologia](methodology/)**: o que o mapeamento é e não é; como usá-lo; política de atualização; relação com [Pacote de Evidências](../artifacts/evidence-bundle/) e [Requisitos Mínimos de Evidências](../artifacts/minimum-evidence/).
 - **ISO/IEC 42001**: [Mapeamento ISO/IEC 42001](iso-42001/) — temas de sistema de gestão de IA.
+- **ISO/IEC 42006**: [Mapeamento ISO/IEC 42006](iso-42006/) — requisitos para organismos que auditam e certificam AIMS (conforme ISO/IEC 42001).
 - **NIST AI RMF**: [Mapeamento NIST AI RMF](nist-ai-rmf/) — Govern, Map, Measure, Manage.
 - **EU AI Act**: [Mapeamento EU AI Act](eu-ai-act/) — documentação e manutenção de registros de alto nível (não interpretação jurídica).
+- **Contratação pública e divulgação (Reino Unido, Japão)**: [Mapeamento Contratação e divulgação](procurement-and-disclosure/) — contratação pública e divulgação (Reino Unido, Japão); apenas mapeamento de referência.
 - **Visão ISMS**: [Mapeamento ISMS](isms/) — temas ISO/IEC 27001/27002 (gestão de mudanças, controle de acesso, logging, integridade de evidências).

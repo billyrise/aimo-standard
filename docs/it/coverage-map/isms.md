@@ -1,6 +1,7 @@
 ---
 description: Mappatura dello Standard AIMO verso ISMS (ISO 27001/27002). Tracciabilità tra la tassonomia AIMO e i controlli del sistema di gestione della sicurezza delle informazioni.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Vista ISMS (ISO/IEC 27001/27002) mappatura
 

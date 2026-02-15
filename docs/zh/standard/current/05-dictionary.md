@@ -1,6 +1,7 @@
 ---
 description: AIMO 字典 - 8个维度下91个分类法代码的权威列表。用于AI分类的完整定义、标签和生命周期信息。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 字典
 

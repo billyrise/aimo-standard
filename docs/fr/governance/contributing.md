@@ -1,6 +1,7 @@
 ---
 description: Guide de contribution au standard AIMO - Comment contribuer au code, à la documentation et aux traductions. Directives pour les issues et PR.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Contribuer
 

@@ -1,6 +1,7 @@
 ---
 description: Shadow AI 發現日誌結構描述 - 用於記錄企業中未經核准 AI 使用的偵測、清查和補救的廠商中立格式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Shadow AI 發現日誌結構描述
 

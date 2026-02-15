@@ -1,6 +1,7 @@
 ---
 description: Struttura dell'Evidence Bundle AIMO. Formato pacchetto di audit con indice, tracciabilità e artefatti per la conformità alla governance dell'IA e la consegna agli auditor.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Evidence Bundle
 

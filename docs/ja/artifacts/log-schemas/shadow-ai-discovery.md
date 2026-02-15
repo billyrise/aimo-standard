@@ -1,6 +1,7 @@
 ---
 description: Shadow AI検知ログスキーマ - 企業内の未承認AI利用の検知、棚卸し、是正を文書化するベンダー非依存形式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Shadow AI 検知ログスキーマ
 

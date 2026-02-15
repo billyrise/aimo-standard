@@ -1,6 +1,7 @@
 ---
 description: 代理活動日誌格式 - 用於企業中代理式 AI 權限執行、工具執行和遞迴操作監控的廠商中立結構描述。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 代理活動日誌格式
 

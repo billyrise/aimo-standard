@@ -1,28 +1,29 @@
 ---
-description: Procurement and disclosure overlays (UK, Japan). UK ATRS, UK procurement guidance, Japan government GenAI procurement and AI Business Guidelines. Reference mapping only.
+description: Sobreposições de contratação e divulgação (Reino Unido, Japão). ATRS UK, orientação de contratação UK, contratação GenAI do governo japonês e diretrizes empresariais de IA. Apenas mapeamento de referência.
 ---
+<!-- aimo:translation_status=translated -->
 
-# Procurement & Disclosure Overlays (UK, Japan)
+# Sobreposições de contratação e divulgação (Reino Unido, Japão)
 
-This page describes **reference mappings** between AIMO evidence and selected **UK** and **Japan** procurement and disclosure frameworks. It is **reference mapping only**; AIMO does not replace official checklists or government guidance.
+Esta página descreve **mapeamentos de referência** entre evidências AIMO e quadros de contratação e divulgação selecionados do **Reino Unido** e do **Japão**. É **apenas mapeamento de referência**; a AIMO não substitui listas de verificação oficiais nem orientação governamental.
 
-## UK: ATRS and AI procurement
+## Reino Unido: ATRS e contratação de IA
 
-| Topic | AIMO evidence / mapping | Notes |
+| Tema | Evidências AIMO / mapeamento | Notas |
 | --- | --- | --- |
-| **UK ATRS** (AI Transparency Record) | Summary, review (accountability owner), evidence (model/system description), dictionary (risk considerations). Profile: `coverage_map/profiles/uk_atrs_procurement.json`. | Attach or reference ATRS-style transparency record in External Forms; link to bundle objects by logical_id. |
-| **UK procurement guidance** | Request, review, exception; Evidence Bundle for supplier evaluation. | Use AIMO bundle to structure evidence for procurement evaluation; official UK guidance remains authoritative. |
+| **ATRS UK** (registo de transparência de IA) | Summary, review (responsável pela responsabilização), evidence (descrição do modelo/sistema), dictionary (considerações de risco). Perfil: `coverage_map/profiles/uk_atrs_procurement.json`. | Anexar ou referenciar registo de transparência tipo ATRS em Formulários externos; ligar a objetos do pacote por logical_id. |
+| **Orientação de contratação UK** | Request, review, exception; Pacote de Evidências para avaliação de fornecedores. | Utilizar o pacote AIMO para estruturar evidências para avaliação de contratação; a orientação oficial UK permanece autorizada. |
 
-## Japan: Government GenAI procurement and AI Business Guidelines
+## Japão: Contratação GenAI do governo e diretrizes empresariais de IA
 
-| Topic | AIMO evidence / mapping | Notes |
+| Tema | Evidências AIMO / mapeamento | Notas |
 | --- | --- | --- |
-| **JP government GenAI procurement checklist** | Attach checklist as External Form (e.g. payload: JP_PROCUREMENT_CHECKLIST); reference in manifest. Profile: `coverage_map/profiles/jp_gov_genai_procurement.json`. | Reference mapping only; AIMO does not replace official checklists. |
-| **AI Business Guidelines** | Summary, dictionary; map checklist items to AIMO taxonomy codes where useful for traceability. | Use for explainability; verify against official Japanese guidance. |
+| **Lista de verificação de contratação GenAI do governo JP** | Anexar lista como Formulário externo (ex.: payload: JP_PROCUREMENT_CHECKLIST); referenciar no manifest. Perfil: `coverage_map/profiles/jp_gov_genai_procurement.json`. | Apenas mapeamento de referência; a AIMO não substitui listas oficiais. |
+| **Diretrizes empresariais de IA** | Summary, dictionary; mapear itens da lista para códigos de taxonomia AIMO quando útil para rastreabilidade. | Utilizar para explicabilidade; verificar contra orientação oficial japonesa. |
 
-## How to use
+## Como utilizar
 
-- **External Forms**: Attach UK or Japan official templates/checklists **as-is** (PDF, DOC, etc.), hash them, and list them in the Evidence Bundle [payload_index](../../standard/current/09-evidence-bundle-structure/) or in the [EV Template External Forms section](../../standard/current/06-ev-template/). Reference them by logical_id in the manifest and in coverage mappings.
-- **Profiles**: The profiles listed above define optional machine-readable mappings; they do not impose legal or contractual obligations.
+- **Formulários externos**: Anexar modelos/listas oficiais do Reino Unido ou do Japão **tal como estão** (PDF, DOC, etc.), fazer hash e listar no [payload_index](../../standard/current/09-evidence-bundle-structure/) do Pacote de Evidências ou na [secção Formulários externos do modelo EV](../../standard/current/06-ev-template/). Referenciar por logical_id no manifest e nos mapeamentos de cobertura.
+- **Perfis**: Os perfis acima definem mapeamentos opcionais legíveis por máquina; não impõem obrigações legais ou contratuais.
 
-See [Conformance](../../conformance/) for levels and [Minimum Evidence — Regulatory overlays](../../artifacts/minimum-evidence/) for overlay summary.
+Consulte [Conformidade](../../conformance/) para níveis e [Requisitos Mínimos de Evidências — Sobreposições regulamentares](../../artifacts/minimum-evidence/) para resumo das sobreposições.

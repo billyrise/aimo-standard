@@ -1,6 +1,7 @@
 ---
 description: Esquemas de Registro AIMO - Formatos de registro neutrales a proveedores para evidencia de IA. Incluye esquemas de descubrimiento de Shadow AI y monitoreo de actividad de agentes.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Esquemas de Registro
 

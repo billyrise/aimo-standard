@@ -1,6 +1,7 @@
 ---
 description: AIMO 证据包结构。包含目录、可追溯性和工件的审计包格式，用于AI治理合规和审计交付。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 证据包
 

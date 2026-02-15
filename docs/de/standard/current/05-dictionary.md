@@ -1,6 +1,7 @@
 ---
 description: AIMO Dictionary - Maßgebliche Liste von 91 Taxonomie-Codes über 8 Dimensionen. Vollständige Definitionen, Labels und Lifecycle-Informationen für KI-Klassifizierung.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Dictionary
 

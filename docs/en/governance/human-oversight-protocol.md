@@ -1,6 +1,7 @@
 ---
 description: AIMO Human Oversight Protocol - Boundary between automated validation and human review. Machine vs. human judgment responsibilities in AI governance.
 ---
+<!-- aimo:translation_status=source -->
 
 # Human Oversight Protocol
 

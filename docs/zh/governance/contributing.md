@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准贡献指南 - 如何贡献代码、文档和翻译。问题和PR指南。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 贡献
 

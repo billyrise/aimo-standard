@@ -1,6 +1,7 @@
 ---
 description: AIMO v0.1 IDポリシーと名前空間の分離 - EVはEvidence（成果物）専用、LGはログ/記録種別（タクソノミー）。ID衝突を防止。
 ---
+<!-- aimo:translation_status=translated -->
 
 # IDポリシー / 名前空間（v0.1）
 

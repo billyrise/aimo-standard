@@ -1,6 +1,7 @@
 ---
 description: Méthodologie de la carte de couverture - Comment AIMO correspond aux cadres externes. Utilisation dans les audits, relation avec le lot de preuves et approche de traçabilité.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Méthodologie
 

@@ -1,6 +1,7 @@
 ---
 description: Shadow AI Discovery Log Schema - Vendor-neutral format for documenting detection, inventory, and remediation of unapproved AI usage in enterprises.
 ---
+<!-- aimo:translation_status=source -->
 
 # Shadow AI Discovery Log Schema
 

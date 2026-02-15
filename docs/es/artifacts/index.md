@@ -1,6 +1,7 @@
 ---
 description: Centro de artefactos de AIMO Standard. Esquemas legibles por máquina, plantillas de paquetes de evidencia, esquemas de registro para descubrimiento de Shadow AI y monitoreo de actividad de agentes.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Artefactos
 

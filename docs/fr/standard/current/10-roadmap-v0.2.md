@@ -1,26 +1,27 @@
 ---
-description: Informative roadmap for v0.2. Audit object SSOT, Evidence-as-Code, output profiles, Test library, lifecycle, JNC.
+description: Feuille de route informative pour v0.2. SSOT des objets d'audit, Evidence-as-Code, profils de sortie, bibliothèque de tests, cycle de vie, JNC.
 ---
+<!-- aimo:translation_status=translated -->
 
-# v0.2 roadmap (informative)
+# Feuille de route v0.2 (informatif)
 
-This page summarizes planned directions for a **future major version** (v0.2). It is **informative** only; the normative specification for any release is the standard and schemas for that version. Target timeline: 2026 Q4–2027.
+Cette page résume les orientations prévues pour une **future version majeure** (v0.2). Elle est **informatif uniquement** ; la spécification normative de toute version est la norme et les schémas de cette version. Calendrier cible : 2026 T4–2027.
 
-## Planned themes
+## Thèmes prévus
 
-| Theme | Summary |
-|-------|---------|
-| **Audit object model (SSOT)** | Requirement, Control, Claim, Evidence, Test, Finding, Remediation, Approval, Scope, VersionChange as normative objects with fixed IDs and reference integrity. |
-| **External framework bridge** | Output profiles for EU Annex IV, GPAI Form, ISO 42001, NIST AI RMF; machine-readable mapping and optional one-click export. |
-| **Evidence-as-Code** | Normative integrity: signature verification, provenance (e.g. SLSA-style), reproducibility and change tracking. |
-| **Test procedure library** | Standard test templates per control; alignment with ISAE 3000, SOC 2, ISO 19011. |
-| **Operational lifecycle** | Event-driven process (Intake → Review → Exception → Renewal → Change → Decommission) with required logs and evidence. |
-| **Industry / jurisdiction profiles** | Optional profiles by sector and jurisdiction. |
-| **Justified non-compliance (JNC)** | Optional mechanism to record and justify intentional non-compliance (informative). |
-| **OSCAL linkage** | Standard way to link Evidence Bundle to Control/Requirement for export to NIST OSCAL or similar. |
+| Thème | Résumé |
+| --- | --- |
+| **Modèle d'objets d'audit (SSOT)** | Requirement, Control, Claim, Evidence, Test, Finding, Remediation, Approval, Scope, VersionChange comme objets normatifs avec IDs fixes et intégrité référentielle. |
+| **Pont vers cadres externes** | Profils de sortie pour Annexe IV UE, formulaire GPAI, ISO 42001, NIST AI RMF ; correspondance lisible par machine et export en un clic optionnel. |
+| **Evidence-as-Code** | Intégrité normative : vérification des signatures, provenance (p. ex. style SLSA), reproductibilité et suivi des changements. |
+| **Bibliothèque de procédures de test** | Modèles de test standard par contrôle ; alignement avec ISAE 3000, SOC 2, ISO 19011. |
+| **Cycle de vie opérationnel** | Processus piloté par les événements (Intake → Review → Exception → Renewal → Change → Decommission) avec journaux et preuves requis. |
+| **Profils secteur / juridiction** | Profils optionnels par secteur et juridiction. |
+| **Non-conformité justifiée (JNC)** | Mécanisme optionnel pour enregistrer et justifier la non-conformité intentionnelle (informatif). |
+| **Liaison OSCAL** | Méthode standard pour lier le Paquet de preuves à Control/Requirement pour l'export vers NIST OSCAL ou similaire. |
 
-## References
+## Références
 
-- [v0.1 object model scope](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md) — v0.1 MUST vs reserved
-- [Signature verification roadmap](../../artifacts/signature-verification-roadmap.md) — signing and verification evolution
-- [Releases](../../releases/index.md) — release assets and changelog
+- [Périmètre du modèle d'objets v0.1](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md) — MUST v0.1 vs. réservé
+- [Feuille de route de vérification des signatures](../../../artifacts/signature-verification-roadmap/) — évolution de la signature et de la vérification
+- [Releases](../../../releases/) — ressources de version et changelog

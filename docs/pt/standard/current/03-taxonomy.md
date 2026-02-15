@@ -1,6 +1,7 @@
 ---
 description: Taxonomia AIMO - Sistema de classificação de 8 dimensões com 91 códigos para categorizar sistemas de IA. Cobre escopo funcional, casos de uso, tipos de dados, canais, integração, riscos, resultados e evidências.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Taxonomia
 

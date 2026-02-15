@@ -1,6 +1,7 @@
 ---
 description: Schemas de Log AIMO - Formatos de log neutros de fornecedor para evidências de IA. Inclui schemas de descoberta de Shadow AI e monitoramento de atividade de agentes.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Schemas de Log
 

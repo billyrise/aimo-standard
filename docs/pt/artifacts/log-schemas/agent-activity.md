@@ -1,6 +1,7 @@
 ---
 description: Formato de Log de Atividade de Agente - Schema neutro de fornecedor para exercício de privilégios de IA agêntica, execução de ferramentas e monitoramento de operações recursivas em empresas.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Formato de Log de Atividade de Agente
 

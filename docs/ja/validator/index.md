@@ -1,6 +1,7 @@
 ---
 description: AIMOバリデータハブ - 検証ツールクイックスタート。30秒でインストール、実行、結果解釈。Evidence Pack検証とコンプライアンスチェック。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Validator
 

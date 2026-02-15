@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准与 NIST AI RMF 的映射。AIMO 分类法代码与 NIST AI风险管理框架功能之间的可追溯性。
 ---
+<!-- aimo:translation_status=translated -->
 
 # NIST AI RMF 映射
 

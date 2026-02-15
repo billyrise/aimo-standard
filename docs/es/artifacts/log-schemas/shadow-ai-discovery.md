@@ -1,6 +1,7 @@
 ---
 description: Esquema de Registro de Descubrimiento de Shadow AI - Formato neutral a proveedores para documentar detección, inventario y remediación de uso no aprobado de IA en empresas.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Esquema de Registro de Descubrimiento de Shadow AI
 

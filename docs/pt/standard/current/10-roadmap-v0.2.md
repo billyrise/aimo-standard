@@ -1,26 +1,27 @@
 ---
-description: Informative roadmap for v0.2. Audit object SSOT, Evidence-as-Code, output profiles, Test library, lifecycle, JNC.
+description: Roadmap informativa para v0.2. SSOT de objetos de auditoria, Evidence-as-Code, perfis de saída, biblioteca de testes, ciclo de vida, JNC.
 ---
+<!-- aimo:translation_status=translated -->
 
-# v0.2 roadmap (informative)
+# Roadmap v0.2 (informativa)
 
-This page summarizes planned directions for a **future major version** (v0.2). It is **informative** only; the normative specification for any release is the standard and schemas for that version. Target timeline: 2026 Q4–2027.
+Esta página resume as direções planeadas para uma **futura versão principal** (v0.2). É **apenas informativa**; a especificação normativa de cada versão é a norma e os esquemas dessa versão. Cronograma alvo: 2026 Q4–2027.
 
-## Planned themes
+## Temas planeados
 
-| Theme | Summary |
-|-------|---------|
-| **Audit object model (SSOT)** | Requirement, Control, Claim, Evidence, Test, Finding, Remediation, Approval, Scope, VersionChange as normative objects with fixed IDs and reference integrity. |
-| **External framework bridge** | Output profiles for EU Annex IV, GPAI Form, ISO 42001, NIST AI RMF; machine-readable mapping and optional one-click export. |
-| **Evidence-as-Code** | Normative integrity: signature verification, provenance (e.g. SLSA-style), reproducibility and change tracking. |
-| **Test procedure library** | Standard test templates per control; alignment with ISAE 3000, SOC 2, ISO 19011. |
-| **Operational lifecycle** | Event-driven process (Intake → Review → Exception → Renewal → Change → Decommission) with required logs and evidence. |
-| **Industry / jurisdiction profiles** | Optional profiles by sector and jurisdiction. |
-| **Justified non-compliance (JNC)** | Optional mechanism to record and justify intentional non-compliance (informative). |
-| **OSCAL linkage** | Standard way to link Evidence Bundle to Control/Requirement for export to NIST OSCAL or similar. |
+| Tema | Resumo |
+| --- | --- |
+| **Modelo de objetos de auditoria (SSOT)** | Requirement, Control, Claim, Evidence, Test, Finding, Remediation, Approval, Scope, VersionChange como objetos normativos com IDs fixos e integridade referencial. |
+| **Ponte para quadros externos** | Perfis de saída para Anexo IV UE, formulário GPAI, ISO 42001, NIST AI RMF; mapeamento legível por máquina e exportação opcional em um clique. |
+| **Evidence-as-Code** | Integridade normativa: verificação de assinaturas, proveniência (ex.: estilo SLSA), reprodutibilidade e rastreio de alterações. |
+| **Biblioteca de procedimentos de teste** | Modelos de teste padrão por controlo; alinhamento com ISAE 3000, SOC 2, ISO 19011. |
+| **Ciclo de vida operacional** | Processo orientado a eventos (Intake → Review → Exception → Renewal → Change → Decommission) com registos e evidências necessários. |
+| **Perfis por setor / jurisdição** | Perfis opcionais por setor e jurisdição. |
+| **Não conformidade justificada (JNC)** | Mecanismo opcional para registar e justificar não conformidade intencional (informativo). |
+| **Ligação OSCAL** | Forma padrão de ligar o Pacote de Evidências a Control/Requirement para exportar para NIST OSCAL ou similar. |
 
-## References
+## Referências
 
-- [v0.1 object model scope](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md) — v0.1 MUST vs reserved
-- [Signature verification roadmap](../../artifacts/signature-verification-roadmap.md) — signing and verification evolution
-- [Releases](../../releases/index.md) — release assets and changelog
+- [Âmbito do modelo de objetos v0.1](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md) — MUST v0.1 vs. reservado
+- [Roadmap de verificação de assinaturas](../../../artifacts/signature-verification-roadmap/) — evolução da assinatura e verificação
+- [Releases](../../../releases/) — recursos de versão e registo de alterações

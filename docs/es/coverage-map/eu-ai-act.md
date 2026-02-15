@@ -1,71 +1,72 @@
 ---
-description: AIMO Standard to EU AI Act mapping. Traceability between AIMO taxonomy codes and EU AI Act risk categories and requirements.
+description: Mapeo de AIMO Standard a la Ley de IA de la UE. Trazabilidad entre códigos de taxonomía AIMO y categorías de riesgo y requisitos de la Ley de IA de la UE.
 ---
+<!-- aimo:translation_status=translated -->
 
-# EU AI Act mapping
+# Mapeo Ley de IA de la UE
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> Atajos de trazabilidad: Taxonomía → Requisitos Mínimos de Evidencia → Validador → Protocolo de Supervisión Humana.
 
-- [Taxonomy](../../standard/current/03-taxonomy/)
-- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
-- [Log Schemas](../../artifacts/log-schemas/)
-- [Validator](../../validator/)
-- [Human Oversight Protocol](../../governance/human-oversight-protocol/)
+- [Taxonomía](../../standard/current/03-taxonomy/)
+- [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/)
+- [Esquemas de Registro](../../artifacts/log-schemas/)
+- [Validador](../../validator/)
+- [Protocolo de Supervisión Humana](../../governance/human-oversight-protocol/)
 
-This page maps selected EU AI Act themes (documentation, record-keeping, risk management, human oversight, transparency) to AIMO evidence and artifacts. It is high-level only and does **not** constitute legal advice or guarantee conformity. Verify against the official legal text.
+Esta página mapea temas seleccionados de la Ley de IA de la UE (documentación, registro, gestión de riesgos, supervisión humana, transparencia) a evidencia y artefactos AIMO. Es solo de alto nivel y **no** constituye asesoramiento jurídico ni garantiza conformidad. Verifique contra el texto legal oficial.
 
-**Reference:** Regulation (EU) 2024/1689 (Artificial Intelligence Act). All article numbers below refer to that regulation.
+**Referencia:** Reglamento (UE) 2024/1689 (Ley de Inteligencia Artificial). Todos los números de artículo siguientes se refieren a ese reglamento.
 
-## Mapping table
+## Tabla de mapeo
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| Referencia del marco / tema | Evidencia AIMO / dónde en AIMO | Paquete de Evidencia / Evidencia Mínima | Artefactos y validación | Notas |
 | --- | --- | --- | --- | --- |
-| Art 4 – AI literacy | [Scope](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | Cross-cutting; evidence of organisational capability/training (high-level). Not legal advice. Verify against official text. |
-| Art 9 – Risk management system | [Scope](../../standard/current/02-scope/) | request, review, exception, renewal | templates/ev/ | High-risk AI systems (Title III). Not legal advice. Verify against official text. |
-| Art 10 – Data and data governance | [Dictionary](../../standard/current/05-dictionary/) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | Not legal advice. Verify against official text. |
-| Art 11 – Technical documentation (high-risk) | [EV Template](../../standard/current/06-ev-template/), [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; **Annex IV**: see [Examples > EU Annex IV sample](../../examples/) (`examples/evidence_bundle_v01_annex_iv_sample/`); profile: `coverage_map/profiles/eu_ai_act_annex_iv.json`. Sample bundle is normative-compliant (signatures/, hashes/, payload with Annex IV–oriented technical documentation). See Examples for details (further sample content in a future release). | High-level only; not legal advice. Verify against official text. |
-| Art 12 – Record-keeping | [Evidence Bundle](../../artifacts/evidence-bundle/), [Minimum Evidence](../../artifacts/minimum-evidence/) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | Not legal advice. Verify against official text. |
-| Art 13 – Transparency and provision of information to deployers/users | [Scope](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | High-risk context. Not legal advice. Verify against official text. |
-| Art 14 – Human oversight | [Minimum Evidence](../../artifacts/minimum-evidence/) | review, exception | templates/ev/ev_template.md | Not legal advice. Verify against official text. |
-| Art 15 – Accuracy, robustness, cybersecurity | [Minimum Evidence](../../artifacts/minimum-evidence/) | EV (evidence codes / risk codes, high-level) | templates/ev/ | High-level mapping only. Not legal advice. Verify against official text. |
-| Art 17 – Quality management system | [Scope](../../standard/current/02-scope/) | Summary, review (organisation process) | templates/ev/ | Distinct from Art 9 (risk management system). Not legal advice. Verify against official text. |
-| Transparency obligations (use-case dependent) | [Scope](../../standard/current/02-scope/), [Minimum Evidence](../../artifacts/minimum-evidence/) | Summary, EV; review | templates/ev/ | Applicable provisions depend on use case (e.g. limited-risk, deployer duties). Not legal advice. Verify against official text. |
-| GPAI models obligations | [EV Template](../../standard/current/06-ev-template/), [Evidence Bundle](../../artifacts/evidence-bundle/) | EV Template, Evidence Bundle (evidence-structuring framework) | schemas/jsonschema/; schema_validate_ev | AIMO provides a framework for organising evidence; actual obligations are defined by the regulation. Not legal advice. Verify against official text. |
-| Recitals – Accountability | [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | Not legal advice. Verify against official text. |
+| Art. 4 – Alfabetización en IA | [Alcance](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | Transversal; evidencia de capacidad/formación organizativa (alto nivel). No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Art. 9 – Sistema de gestión de riesgos | [Alcance](../../standard/current/02-scope/) | request, review, exception, renewal | templates/ev/ | Sistemas de IA de alto riesgo (Título III). No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Art. 10 – Datos y gobernanza de datos | [Diccionario](../../standard/current/05-dictionary/) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Art. 11 – Documentación técnica (alto riesgo) | [Plantilla EV](../../standard/current/06-ev-template/), [Paquete de Evidencia](../../artifacts/evidence-bundle/) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; **Anexo IV**: [Ejemplos > Muestra Anexo IV UE](../../examples/) (`examples/evidence_bundle_v01_annex_iv_sample/`); perfil: `coverage_map/profiles/eu_ai_act_annex_iv.json`. Paquete de ejemplo conforme (signatures/, hashes/, payload con documentación técnica orientada al Anexo IV). Véase Ejemplos (más contenido en futura versión). | Solo alto nivel; no es asesoramiento jurídico. Verifique contra texto oficial. |
+| Art. 12 – Registro | [Paquete de Evidencia](../../artifacts/evidence-bundle/), [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Art. 13 – Transparencia e información a desplegadores/usuarios | [Alcance](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | Contexto de alto riesgo. No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Art. 14 – Supervisión humana | [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/) | review, exception | templates/ev/ev_template.md | No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Art. 15 – Precisión, robustez, ciberseguridad | [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/) | EV (códigos de evidencia/riesgo, alto nivel) | templates/ev/ | Solo mapeo de alto nivel. No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Art. 17 – Sistema de gestión de la calidad | [Alcance](../../standard/current/02-scope/) | Summary, review (proceso organizativo) | templates/ev/ | Distinto del Art. 9 (sistema de gestión de riesgos). No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Obligaciones de transparencia (según caso de uso) | [Alcance](../../standard/current/02-scope/), [Requisitos Mínimos de Evidencia](../../artifacts/minimum-evidence/) | Summary, EV; review | templates/ev/ | Las disposiciones aplicables dependen del caso de uso (p. ej. riesgo limitado, obligaciones del desplegador). No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Obligaciones de modelos GPAI | [Plantilla EV](../../standard/current/06-ev-template/), [Paquete de Evidencia](../../artifacts/evidence-bundle/) | Plantilla EV, Paquete de Evidencia (marco de estructuración de evidencia) | schemas/jsonschema/; schema_validate_ev | AIMO proporciona un marco para organizar la evidencia; las obligaciones reales las define el reglamento. No es asesoramiento jurídico. Verifique contra texto oficial. |
+| Considerandos – Responsabilidad | [Paquete de Evidencia](../../artifacts/evidence-bundle/) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | No es asesoramiento jurídico. Verifique contra texto oficial. |
 
-## Effective dates / applicability (high-level)
+## Fechas de aplicación / aplicabilidad (alto nivel)
 
-The following aligns with **EU official timeline** (AI Act Service Desk / Commission). It is **not legal advice** and does not guarantee accuracy. Always confirm with the **official legal text** and competent authorities.
+Lo siguiente se alinea con el **calendario oficial de la UE** (Servicio de la Ley de IA / Comisión). **No es asesoramiento jurídico** y no garantiza exactitud. Confirme siempre con el **texto legal oficial** y las autoridades competentes.
 
-| Phase | Date | What applies (high-level) |
-|-------|------|----------------------------|
-| Entry into force | August 2024 | Regulation in force; most substantive obligations not yet applicable. |
-| General provisions & prohibitions | 02 Feb 2025 | Prohibited practices (unacceptable risk); certain AI literacy–related provisions. |
-| GPAI rules + governance | 02 Aug 2025 | Rules on notified bodies, GPAI, governance, confidentiality, penalties; codes of practice. |
-| Majority rules + Annex III high-risk + Art 50 transparency | 02 Aug 2026 | Full applicability for high-risk AI systems (Annex III), Article 50 transparency obligations. |
-| High-risk embedded in regulated products | 02 Aug 2027 | High-risk AI systems embedded in products subject to EU product legislation. |
+| Fase | Fecha | Qué se aplica (alto nivel) |
+| --- | --- | --- |
+| Entrada en vigor | Agosto 2024 | Reglamento en vigor; la mayoría de obligaciones sustantivas aún no aplicables. |
+| Disposiciones generales y prohibiciones | 02 feb 2025 | Prácticas prohibidas (riesgo inaceptable); ciertas disposiciones sobre alfabetización en IA. |
+| Normas GPAI y gobernanza | 02 ago 2025 | Normas sobre organismos notificados, GPAI, gobernanza, confidencialidad, sanciones; códigos de conducta. |
+| Normas principales + Anexo III alto riesgo + Art. 50 transparencia | 02 ago 2026 | Aplicabilidad plena para sistemas de IA de alto riesgo (Anexo III), obligaciones de transparencia del Art. 50. |
+| Alto riesgo embebido en productos regulados | 02 ago 2027 | Sistemas de IA de alto riesgo embebidos en productos sujetos a la legislación de productos de la UE. |
 
-## Harmonised standards and presumption of conformity (Article 40)
+## Normas armonizadas y presunción de conformidad (Art. 40)
 
-When **harmonised standards** are published in the EU Official Journal under the AI Act, compliance with them can provide **presumption of conformity** with the corresponding requirements. The exact list and dates depend on standardisation work and OJ publication. AIMO mappings are informative and do not confer presumption of conformity. For current status, see the European Commission and AI Office sources in **References** below.
+Cuando se publiquen **normas armonizadas** en el Diario Oficial de la UE con arreglo a la Ley de IA, su cumplimiento puede dar **presunción de conformidad** con los requisitos correspondientes. La lista y fechas exactas dependen del trabajo de normalización y la publicación en el DO. Los mapeos AIMO son informativos y no confieren presunción de conformidad. Para el estado actual, véanse las fuentes de la Comisión y la Oficina de IA en **Referencias** más abajo.
 
-## 2026 AI Office guidelines (implementation detail)
+## Directrices 2026 de la Oficina de IA (detalle de aplicación)
 
-The European Commission has indicated that the **AI Office** will prepare **practical guidelines** during 2026, including on:
+La Comisión Europea ha indicado que la **Oficina de IA** preparará **directrices prácticas** durante 2026, entre otras sobre:
 
-- High-risk classification
-- Article 50 (transparency) implementation
-- Incident reporting
-- QMS-related elements
+- Clasificación de alto riesgo
+- Aplicación del Art. 50 (transparencia)
+- Notificación de incidentes
+- Elementos relacionados con el SGQ
 
-These guidelines are **update triggers** for AIMO profiles and coverage mappings: as they are published, adopters should align evidence and mappings with the latest official guidance. AIMO does not interpret or guarantee compliance with these guidelines.
+Estas directrices son **desencadenantes de actualización** para perfiles y mapeos de cobertura AIMO: una vez publicadas, los adoptantes deben alinear la evidencia y los mapeos con la última orientación oficial. AIMO no interpreta ni garantiza conformidad con estas directrices.
 
-!!! warning "Not legal advice"
-    This page is for explanatory use only. You must verify applicability and dates against the official regulation and any implementing or amending acts. AIMO does not provide legal advice or guarantee compliance.
+!!! warning "No es asesoramiento jurídico"
+    Esta página es solo para uso explicativo. Debe verificar la aplicabilidad y las fechas contra el reglamento oficial y cualquier acto de ejecución o modificación. AIMO no proporciona asesoramiento jurídico ni garantiza conformidad.
 
-## References
+## Referencias
 
-- [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Artificial Intelligence Act
-- [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / Commission-aligned; informative)
-- European Commission / AI Office — clear guidelines and timeline (check Commission news and AI Act Service Desk for current URLs)
-- [EPRS — EU AI Act implementation](https://www.europarl.europa.eu/thinktank/) — Parliament briefing (informative)
+- [Reglamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Ley de Inteligencia Artificial
+- [Calendario de aplicación de la Ley de IA de la UE](https://artificialintelligenceact.eu/implementation-timeline) (Servicio de la Ley de IA / alineado con la Comisión; informativo)
+- Comisión Europea / Oficina de IA — directrices y calendario (consulte noticias de la Comisión y Servicio de la Ley de IA para URLs actuales)
+- [EPRS — Aplicación de la Ley de IA de la UE](https://www.europarl.europa.eu/thinktank/) — resumen del Parlamento (informativo)

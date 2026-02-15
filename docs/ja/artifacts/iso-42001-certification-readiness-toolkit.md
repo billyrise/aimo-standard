@@ -1,6 +1,7 @@
 ---
 description: ISO/IEC 42001 認証準備ツールキット。AIMO アーティファクトで ISO 42001 に整合した監査可能エビデンスへの最短パス。準備支援のみ；認証を付与しない。
 ---
+<!-- aimo:translation_status=translated -->
 
 # ISO/IEC 42001 Certification Readiness Toolkit
 

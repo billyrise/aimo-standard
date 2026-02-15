@@ -1,6 +1,7 @@
 ---
 description: AIMO SEO 和規範 URL 政策 - 搜尋引擎、稽核員和外部參照的 URL 規範化策略。
 ---
+<!-- aimo:translation_status=translated -->
 
 # SEO 與規範政策
 

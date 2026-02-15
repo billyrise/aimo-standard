@@ -1,6 +1,7 @@
 ---
 description: Format et conventions de nommage du système de codes AIMO. Définit la structure des codes (XX-NNN), les états du cycle de vie, le versionnement et les politiques de dépréciation pour les codes de taxonomie.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Codes
 

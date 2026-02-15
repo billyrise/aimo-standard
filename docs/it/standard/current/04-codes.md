@@ -1,6 +1,7 @@
 ---
 description: Formato e convenzioni di denominazione del Code System AIMO. Definisce la struttura dei codici (XX-NNN), stati del ciclo di vita, versionamento e politiche di deprecazione per i codici della tassonomia.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Codici
 

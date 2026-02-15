@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准治理中心 - 项目治理、安全政策、许可、引用指南和贡献规则。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 治理
 

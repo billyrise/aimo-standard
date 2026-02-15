@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard conformance levels. How organizations claim compliance, evidence requirements, and what each conformance level means for AI governance.
 ---
+<!-- aimo:translation_status=source -->
 
 # Conformance
 

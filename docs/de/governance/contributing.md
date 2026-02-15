@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard Beitragsleitfaden - Wie man Code, Dokumentation und Übersetzungen beiträgt. Issue- und PR-Richtlinien.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Beitragen
 

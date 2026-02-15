@@ -1,6 +1,7 @@
 ---
 description: AIMO Dictionary - Authoritative list of 91 taxonomy codes across 8 dimensions. Complete definitions, labels, and lifecycle information for AI classification.
 ---
+<!-- aimo:translation_status=source -->
 
 # Dictionary
 

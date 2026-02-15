@@ -1,6 +1,7 @@
 ---
 description: AIMO Standardセキュリティポリシー - 脆弱性報告、開示手順、AIガバナンス実装のセキュリティ考慮事項。
 ---
+<!-- aimo:translation_status=translated -->
 
 # セキュリティ
 

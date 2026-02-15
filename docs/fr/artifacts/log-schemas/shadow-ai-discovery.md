@@ -1,6 +1,7 @@
 ---
 description: Schéma de journal de découverte de Shadow AI - Format neutre vis-à-vis des fournisseurs pour documenter la détection, l'inventaire et la remédiation de l'utilisation non approuvée de l'IA en entreprise.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Schéma de journal de découverte de Shadow AI
 

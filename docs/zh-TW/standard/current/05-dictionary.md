@@ -1,6 +1,7 @@
 ---
 description: AIMO 字典 - 8 個維度中 91 個分類代碼的權威清單。AI 分類的完整定義、標籤和生命週期資訊。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 字典
 

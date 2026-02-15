@@ -1,6 +1,7 @@
 ---
 description: AIMO localization guide - i18n structure, maintenance workflow, and SSOT principles for multilingual documentation.
 ---
+<!-- aimo:translation_status=source -->
 
 # Localization Guide
 
@@ -153,6 +154,22 @@ translator: human|machine|hybrid
 translation_status: current|outdated|needs_review
 ---
 ```
+
+### Translation status marker (hidden)
+
+Every doc page includes a **hidden HTML comment** in the source (immediately after the frontmatter) so that scripts and tools can detect whether the page is the English source or a translated/untranslated variant. It is not visible on the rendered site.
+
+| Value | Meaning |
+| --- | --- |
+| `<!-- aimo:translation_status=source -->` | English canonical page (`docs/en/`). |
+| `<!-- aimo:translation_status=translated -->` | This locale’s content is a translation of the English source. |
+| `<!-- aimo:translation_status=untranslated -->` | This locale’s file exists but content is still the English copy; translation pending. |
+
+**How to use**
+
+- To list untranslated pages: `grep -r "aimo:translation_status=untranslated" docs/`
+- When adding a new language or page, run `python tooling/i18n/add_translation_markers.py` to insert or fix markers. Use `--strict` to detect untranslated by comparing the first 400 characters of the body with the English file.
+- After translating a page, set the marker to `translated` (or re-run the script so it can update the marker).
 
 ### Using the Sync Tool
 

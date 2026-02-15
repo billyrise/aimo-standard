@@ -1,6 +1,7 @@
 ---
 description: Validateur AIMO - Assure que les packs de preuves sont conformes aux schémas du standard AIMO. Règles de validation, gestion des erreurs et implémentation de référence pour les vérifications de conformité.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Validateur
 

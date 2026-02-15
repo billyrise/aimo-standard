@@ -1,6 +1,7 @@
 ---
 description: AIMO 검증기 - 증거 팩이 AIMO 표준 스키마에 부합하는지 확인합니다. 컴플라이언스 검사를 위한 검증 규칙, 오류 처리 및 참조 구현.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 검증기
 

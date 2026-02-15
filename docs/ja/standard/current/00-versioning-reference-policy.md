@@ -1,6 +1,7 @@
 ---
 description: ドキュメント URL のバージョニング・参照方針。不変の /X.Y.Z/、安定版の /latest/、引用不可の /dev/ を定義。監査・引用の運用規約。
 ---
+<!-- aimo:translation_status=translated -->
 
 # バージョニング・参照方針（Versioning & Reference Policy）
 

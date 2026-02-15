@@ -1,6 +1,7 @@
 ---
 description: Especificación actual de AIMO Standard. Incluye descripción general, alcance, taxonomía, códigos, diccionario, plantillas de evidencia y reglas del validador para gobernanza de IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Actual (Última)
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO 验证器 - 确保证据包符合 AIMO 标准模式。合规检查的验证规则、错误处理和参考实现。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 验证器
 

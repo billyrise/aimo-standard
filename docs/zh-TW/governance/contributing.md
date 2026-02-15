@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準貢獻指南 - 如何貢獻程式碼、文件和翻譯。Issue 和 PR 指引。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 貢獻
 

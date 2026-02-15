@@ -1,6 +1,7 @@
 ---
 description: AIMO (AI Management Office) Standard - Open standard for AI governance and audit. Taxonomy with 8 dimensions and 91 codes for classifying AI use, evidence requirements, and validator for enterprise compliance.
 ---
+<!-- aimo:translation_status=source -->
 
 # AIMO Standard
 

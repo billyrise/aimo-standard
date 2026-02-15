@@ -1,6 +1,7 @@
 ---
 description: AIMO Evidence Bundle structure. Audit package format with TOC, traceability, and artifacts for AI governance compliance and auditor delivery.
 ---
+<!-- aimo:translation_status=source -->
 
 # Evidence Bundle
 

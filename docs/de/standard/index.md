@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard Spezifikations-Hub. Zugriff auf aktuelle Version, Versionshistorie, Konformitätsstufen und Coverage Maps für KI-Governance-Frameworks.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Standard
 

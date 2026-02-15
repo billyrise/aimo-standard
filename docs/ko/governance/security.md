@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 보안 정책 - 취약점 보고, 공개 절차 및 AI 거버넌스 구현을 위한 보안 고려사항.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 보안
 

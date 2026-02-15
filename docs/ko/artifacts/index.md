@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 산출물 허브. 기계 판독 가능 스키마, 증거 번들 템플릿, Shadow AI 검색 및 에이전트 활동 모니터링을 위한 로그 스키마.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 산출물
 

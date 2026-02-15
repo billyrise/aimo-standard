@@ -1,6 +1,7 @@
 ---
 description: AIMO 人工监督协议 - 自动化验证与人工审查之间的边界。AI治理中机器与人工判断的责任。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 人工监督协议
 

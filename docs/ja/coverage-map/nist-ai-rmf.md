@@ -1,6 +1,7 @@
 ---
 description: AIMO StandardからNIST AI RMFへのマッピング。AIMOタクソノミーコードとNIST AIリスクマネジメントフレームワーク機能間の対応関係。
 ---
+<!-- aimo:translation_status=translated -->
 
 # NIST AI RMF mapping
 

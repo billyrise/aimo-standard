@@ -1,26 +1,27 @@
 ---
-description: Informative roadmap for v0.2. Audit object SSOT, Evidence-as-Code, output profiles, Test library, lifecycle, JNC.
+description: Hoja de ruta informativa para v0.2. SSOT de objetos de auditoría, Evidence-as-Code, perfiles de salida, biblioteca de pruebas, ciclo de vida, JNC.
 ---
+<!-- aimo:translation_status=translated -->
 
-# v0.2 roadmap (informative)
+# Hoja de ruta v0.2 (informativa)
 
-This page summarizes planned directions for a **future major version** (v0.2). It is **informative** only; the normative specification for any release is the standard and schemas for that version. Target timeline: 2026 Q4–2027.
+Esta página resume las direcciones previstas para una **futura versión principal** (v0.2). Es **solo informativa**; la especificación normativa de cada versión es el estándar y los esquemas de esa versión. Cronograma objetivo: 2026 Q4–2027.
 
-## Planned themes
+## Temas previstos
 
-| Theme | Summary |
-|-------|---------|
-| **Audit object model (SSOT)** | Requirement, Control, Claim, Evidence, Test, Finding, Remediation, Approval, Scope, VersionChange as normative objects with fixed IDs and reference integrity. |
-| **External framework bridge** | Output profiles for EU Annex IV, GPAI Form, ISO 42001, NIST AI RMF; machine-readable mapping and optional one-click export. |
-| **Evidence-as-Code** | Normative integrity: signature verification, provenance (e.g. SLSA-style), reproducibility and change tracking. |
-| **Test procedure library** | Standard test templates per control; alignment with ISAE 3000, SOC 2, ISO 19011. |
-| **Operational lifecycle** | Event-driven process (Intake → Review → Exception → Renewal → Change → Decommission) with required logs and evidence. |
-| **Industry / jurisdiction profiles** | Optional profiles by sector and jurisdiction. |
-| **Justified non-compliance (JNC)** | Optional mechanism to record and justify intentional non-compliance (informative). |
-| **OSCAL linkage** | Standard way to link Evidence Bundle to Control/Requirement for export to NIST OSCAL or similar. |
+| Tema | Resumen |
+| --- | --- |
+| **Modelo de objetos de auditoría (SSOT)** | Requirement, Control, Claim, Evidence, Test, Finding, Remediation, Approval, Scope, VersionChange como objetos normativos con IDs fijos e integridad referencial. |
+| **Puente con marcos externos** | Perfiles de salida para Anexo IV UE, formulario GPAI, ISO 42001, NIST AI RMF; mapeo legible por máquina y exportación opcional en un clic. |
+| **Evidence-as-Code** | Integridad normativa: verificación de firmas, procedencia (p. ej. estilo SLSA), reproducibilidad y seguimiento de cambios. |
+| **Biblioteca de procedimientos de prueba** | Plantillas de prueba estándar por control; alineación con ISAE 3000, SOC 2, ISO 19011. |
+| **Ciclo de vida operativo** | Proceso impulsado por eventos (Intake → Review → Exception → Renewal → Change → Decommission) con registros y evidencia requeridos. |
+| **Perfiles por sector / jurisdicción** | Perfiles opcionales por sector y jurisdicción. |
+| **No conformidad justificada (JNC)** | Mecanismo opcional para registrar y justificar la no conformidad intencional (informativo). |
+| **Vinculación OSCAL** | Forma estándar de vincular el Paquete de Evidencia a Control/Requirement para exportar a NIST OSCAL o similar. |
 
-## References
+## Referencias
 
-- [v0.1 object model scope](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md) — v0.1 MUST vs reserved
-- [Signature verification roadmap](../../artifacts/signature-verification-roadmap.md) — signing and verification evolution
-- [Releases](../../releases/index.md) — release assets and changelog
+- [Alcance del modelo de objetos v0.1](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md) — MUST de v0.1 vs. reservado
+- [Hoja de ruta de verificación de firmas](../../../artifacts/signature-verification-roadmap/) — evolución de firma y verificación
+- [Releases](../../../releases/) — recursos de versión y registro de cambios

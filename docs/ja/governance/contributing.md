@@ -1,6 +1,7 @@
 ---
 description: AIMO Standardコントリビュートガイド - コード、ドキュメント、翻訳の貢献方法。Issue・PRガイドライン。
 ---
+<!-- aimo:translation_status=translated -->
 
 # コントリビュート
 

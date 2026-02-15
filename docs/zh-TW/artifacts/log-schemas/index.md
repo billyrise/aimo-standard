@@ -1,6 +1,7 @@
 ---
 description: AIMO 日誌結構描述 - AI 證據的廠商中立日誌格式。包含 Shadow AI 發現和代理活動監控結構描述。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 日誌結構描述
 

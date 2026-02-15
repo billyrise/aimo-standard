@@ -1,6 +1,7 @@
 ---
 description: AIMO辞書 - 8次元91コードのタクソノミーコード正式リスト。AI分類のための完全な定義、ラベル、ライフサイクル情報。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 辞書
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準授權 - 規格、文件和機器可讀人工產物的 Apache 2.0 授權條款。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 授權
 

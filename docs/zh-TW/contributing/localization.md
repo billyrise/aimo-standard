@@ -1,6 +1,7 @@
 ---
 description: AIMO 在地化指南 - 多語言文件的 i18n 結構、維護工作流程和 SSOT 原則。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 在地化指南
 

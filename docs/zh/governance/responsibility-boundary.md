@@ -1,6 +1,7 @@
 ---
 description: AIMO Responsibility Boundary - Defines what the standard provides vs. adopter responsibilities. Non-overclaim statement and scope limitations.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Responsibility Boundary
 

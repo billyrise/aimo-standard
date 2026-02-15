@@ -1,6 +1,7 @@
 ---
 description: Mapeamento AIMO Standard para NIST AI RMF. Rastreabilidade entre códigos de taxonomia AIMO e funções do NIST AI Risk Management Framework.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Mapeamento NIST AI RMF
 

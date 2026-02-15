@@ -1,6 +1,7 @@
 ---
 description: AIMO Code-System Format und Namenskonventionen. Definiert Code-Struktur (XX-NNN), Lifecycle-Zustände, Versionierung und Deprecation-Richtlinien für Taxonomie-Codes.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Codes
 

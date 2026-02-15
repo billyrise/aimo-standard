@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard to EU AI Act mapping. Traceability between AIMO taxonomy codes and EU AI Act risk categories and requirements.
 ---
+<!-- aimo:translation_status=source -->
 
 # EU AI Act mapping
 

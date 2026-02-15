@@ -1,6 +1,7 @@
 ---
 description: AIMO Coverage Map - AIMO Standardと主要規制（ISO 42001、NIST AI RMF、EU AI Act、ISMS）間の対応関係で監査準備を支援。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Coverage Map
 
@@ -31,6 +32,8 @@ description: AIMO Coverage Map - AIMO Standardと主要規制（ISO 42001、NIST
 
 - **[Methodology](methodology/)**: マッピングの位置づけと利用方法、更新ポリシー、[Evidence Bundle](../artifacts/evidence-bundle/)・[Minimum Evidence Requirements](../artifacts/minimum-evidence/) との関係。
 - **ISO/IEC 42001**: [ISO/IEC 42001 対応表](iso-42001/) — AIマネジメントシステムの観点。
+- **ISO/IEC 42006**: [ISO/IEC 42006 対応表](iso-42006/) — AIMS の監査・認証を行う機関の要件（ISO/IEC 42001 準拠）。
 - **NIST AI RMF**: [NIST AI RMF 対応表](nist-ai-rmf/) — Govern, Map, Measure, Manage。
 - **EU AI Act**: [EU AI Act 対応表](eu-ai-act/) — 文書化・記録管理の概要（法解釈ではない）。
+- **調達・開示（英国・日本）**: [調達・開示対応表](procurement-and-disclosure/) — 公共調達と開示（英国・日本）；参照用マッピングのみ。
 - **ISMS 観点**: [ISMS 対応表](isms/) — ISO/IEC 27001/27002 の観点（変更管理、アクセス制御、ログ、証跡の完全性）。

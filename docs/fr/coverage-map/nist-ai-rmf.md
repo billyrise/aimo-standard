@@ -1,6 +1,7 @@
 ---
 description: Correspondance du standard AIMO avec NIST AI RMF. Traçabilité entre les codes de taxonomie AIMO et les fonctions du cadre de gestion des risques IA du NIST.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Correspondance NIST AI RMF
 

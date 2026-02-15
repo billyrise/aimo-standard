@@ -1,6 +1,7 @@
 ---
 description: Shadow AI 검색 로그 스키마 - 기업에서 승인되지 않은 AI 사용의 탐지, 인벤토리 및 해결을 문서화하기 위한 벤더 중립 형식.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Shadow AI 검색 로그 스키마
 

@@ -1,6 +1,7 @@
 ---
 description: Centre de gouvernance du standard AIMO - Gouvernance du projet, politiques de sécurité, licences, directives de citation et règles de contribution.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Gouvernance
 

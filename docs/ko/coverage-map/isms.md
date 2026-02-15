@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준과 ISMS (ISO 27001/27002) 매핑. AIMO 분류체계와 정보보안 관리 시스템 통제 간의 추적성.
 ---
+<!-- aimo:translation_status=translated -->
 
 # ISMS 뷰 (ISO/IEC 27001/27002) 매핑
 

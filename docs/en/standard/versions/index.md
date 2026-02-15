@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard version history. Official frozen releases with auditor-ready PDFs, machine-readable artifacts, checksums, and build provenance attestations.
 ---
+<!-- aimo:translation_status=source -->
 
 # Versions
 

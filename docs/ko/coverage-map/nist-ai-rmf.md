@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준과 NIST AI RMF 매핑. AIMO 분류체계 코드와 NIST AI 리스크 관리 프레임워크 기능 간의 추적성.
 ---
+<!-- aimo:translation_status=translated -->
 
 # NIST AI RMF 매핑
 

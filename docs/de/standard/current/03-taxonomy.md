@@ -1,6 +1,7 @@
 ---
 description: AIMO Taxonomie - 8-Dimensionen-Klassifizierungssystem mit 91 Codes zur Kategorisierung von KI-Systemen. Umfasst funktionalen Scope, Anwendungsfälle, Datentypen, Kanäle, Integration, Risiken, Ergebnisse und Evidence.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Taxonomie
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO 本地化指南 - 多语言文档的国际化结构、维护工作流程和单一事实来源原则。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 本地化指南
 

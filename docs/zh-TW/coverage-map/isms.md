@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準與 ISMS（ISO 27001/27002）對應。AIMO 分類法與資訊安全管理系統控制措施之間的可追溯性。
 ---
+<!-- aimo:translation_status=translated -->
 
 # ISMS 視角（ISO/IEC 27001/27002）對應
 

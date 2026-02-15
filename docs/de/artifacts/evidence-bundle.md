@@ -1,6 +1,7 @@
 ---
 description: AIMO Evidence Bundle-Struktur. Auditpaketformat mit Inhaltsverzeichnis, Nachverfolgbarkeit und Artefakten für KI-Governance-Compliance und Prüferbereitstellung.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Evidence Bundle
 

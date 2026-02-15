@@ -1,6 +1,7 @@
 ---
 description: Hub della specifica dello Standard AIMO. Accesso alla versione corrente, cronologia delle versioni, livelli di conformità e mappe di copertura per i framework di governance dell'IA.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Standard
 

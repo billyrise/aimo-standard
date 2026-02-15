@@ -1,6 +1,7 @@
 ---
 description: Versioning and reference policy for documentation URLs. Defines immutable /X.Y.Z/, stable /latest/, and non-citable /dev/. Operational rules for audit and citation.
 ---
+<!-- aimo:translation_status=source -->
 
 # Versioning & Reference Policy
 

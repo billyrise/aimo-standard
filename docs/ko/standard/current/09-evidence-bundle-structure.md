@@ -1,6 +1,7 @@
 ---
 description: Normative root structure and manifest for Evidence Bundle (v0.1). Integrity MUST; Custody is implementation-defined.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Evidence Bundle root structure (v0.1)
 

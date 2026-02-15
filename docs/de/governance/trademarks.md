@@ -1,6 +1,7 @@
 ---
 description: AIMO Markenrichtlinien - Nutzungsregeln für AIMO-Marken, Konformitäts-Badge-Anforderungen und Branding-Richtlinien.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Marken
 

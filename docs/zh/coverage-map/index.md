@@ -1,6 +1,7 @@
 ---
 description: AIMO 覆盖映射 - AIMO 标准与主要法规（ISO 42001、NIST AI RMF、欧盟AI法案、ISMS）之间的可追溯性，用于审计就绪。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 覆盖映射
 
@@ -31,6 +32,8 @@ description: AIMO 覆盖映射 - AIMO 标准与主要法规（ISO 42001、NIST A
 
 - **[方法论](methodology/)**：映射是什么和不是什么；如何使用它；更新策略；与 [证据包](../artifacts/evidence-bundle/) 和 [最低证据要求](../artifacts/minimum-evidence/) 的关系。
 - **ISO/IEC 42001**：[ISO/IEC 42001 映射](iso-42001/) — AI管理系统主题。
+- **ISO/IEC 42006**：[ISO/IEC 42006 映射](iso-42006/) — 对审计与认证 AIMS 的机构的要求（依据 ISO/IEC 42001）。
 - **NIST AI RMF**：[NIST AI RMF 映射](nist-ai-rmf/) — 治理、映射、度量、管理。
 - **欧盟AI法案**：[欧盟AI法案映射](eu-ai-act/) — 高级别文档和记录保存（非法律解释）。
+- **采购与披露（英国、日本）**：[采购与披露映射](procurement-and-disclosure/) — 公共部门采购与披露（英国、日本）；仅供参照的映射。
 - **ISMS 视图**：[ISMS 映射](isms/) — ISO/IEC 27001/27002 主题（变更管理、访问控制、日志、证据完整性）。

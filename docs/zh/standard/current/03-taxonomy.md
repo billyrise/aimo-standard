@@ -1,6 +1,7 @@
 ---
 description: AIMO 分类法 - 具有91个代码的8维分类系统，用于对AI系统进行分类。涵盖功能范围、用例、数据类型、渠道、集成、风险、结果和证据。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 分类法
 

@@ -1,6 +1,7 @@
 ---
 description: Politica SEO e URL canonici AIMO - Strategia di canonicalizzazione URL per motori di ricerca, auditor e riferimenti esterni.
 ---
+<!-- aimo:translation_status=translated -->
 
 # SEO & Politica Canonica
 

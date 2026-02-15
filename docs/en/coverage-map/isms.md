@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard to ISMS (ISO 27001/27002) mapping. Traceability between AIMO taxonomy and information security management system controls.
 ---
+<!-- aimo:translation_status=source -->
 
 # ISMS view (ISO/IEC 27001/27002) mapping
 

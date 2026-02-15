@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准规范中心。访问当前版本、版本历史、符合性级别和AI治理框架的覆盖映射。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 标准
 

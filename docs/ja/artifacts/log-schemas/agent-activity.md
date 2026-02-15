@@ -1,6 +1,7 @@
 ---
 description: エージェント活動ログ形式 - 企業内のエージェントAI権限行使、ツール実行、再帰的操作監視のためのベンダー非依存スキーマ。
 ---
+<!-- aimo:translation_status=translated -->
 
 # エージェント活動ログ形式
 

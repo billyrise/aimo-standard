@@ -1,6 +1,7 @@
 ---
 description: Evidence Bundle Coverage Map template (v0.1). Informative one-page summary for auditors — scope, evidence types, controls mapping, exclusions, integrity proof.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Evidence Bundle Coverage Map (Template)
 

@@ -1,6 +1,7 @@
 ---
 description: Agent Activity Log-Format - Herstellerneutrales Schema für die Überwachung von agentenbasierter KI-Berechtigungsausübung, Tool-Ausführung und rekursiven Operationen in Unternehmen.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Agent Activity Log-Format
 

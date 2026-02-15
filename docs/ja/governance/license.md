@@ -1,6 +1,7 @@
 ---
 description: AIMO Standardライセンス - 仕様、ドキュメント、機械可読アーティファクトのApache 2.0ライセンス条件。
 ---
+<!-- aimo:translation_status=translated -->
 
 # ライセンス
 

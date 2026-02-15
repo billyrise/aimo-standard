@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 기여 가이드 - 코드, 문서 및 번역 기여 방법. 이슈 및 PR 지침.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 기여하기
 

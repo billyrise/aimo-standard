@@ -1,6 +1,7 @@
 ---
 description: Estrutura do Pacote de Evidências AIMO. Formato de pacote de auditoria com sumário, rastreabilidade e artefatos para conformidade de governança de IA e entrega a auditores.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Pacote de Evidências
 

@@ -1,6 +1,7 @@
 ---
 description: AIMOログスキーマ - AI証跡用ベンダー非依存ログ形式。Shadow AI検知とエージェント活動監視スキーマを含む。
 ---
+<!-- aimo:translation_status=translated -->
 
 # ログスキーマ
 

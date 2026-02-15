@@ -1,6 +1,7 @@
 ---
 description: 커버리지 맵 방법론 - AIMO가 외부 프레임워크에 매핑하는 방법. 감사에서의 사용, 증거 번들과의 관계 및 추적성 접근방식.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 방법론
 

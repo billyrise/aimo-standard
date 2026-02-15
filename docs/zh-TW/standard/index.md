@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準規格中心。存取當前版本、版本歷史、符合性等級，以及 AI 治理框架的覆蓋範圍對應。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 標準
 

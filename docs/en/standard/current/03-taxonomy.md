@@ -1,6 +1,7 @@
 ---
 description: AIMO Taxonomy - 8-dimension classification system with 91 codes for categorizing AI systems. Covers functional scope, use cases, data types, channels, integration, risks, outcomes, and evidence.
 ---
+<!-- aimo:translation_status=source -->
 
 # Taxonomy
 

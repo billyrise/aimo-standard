@@ -1,6 +1,7 @@
 ---
 description: AIMO 로그 스키마 - AI 증거를 위한 벤더 중립 로그 형식. Shadow AI 검색 및 에이전트 활동 모니터링 스키마 포함.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 로그 스키마
 

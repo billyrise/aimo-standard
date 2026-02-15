@@ -1,6 +1,7 @@
 ---
 description: AIMO 상표 지침 - AIMO 마크 사용 규칙, 적합성 배지 요구사항 및 브랜딩 지침.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 상표
 

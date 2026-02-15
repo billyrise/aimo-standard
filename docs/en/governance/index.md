@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard governance hub - Project governance, security policies, licensing, citation guidelines, and contribution rules.
 ---
+<!-- aimo:translation_status=source -->
 
 # Governance
 

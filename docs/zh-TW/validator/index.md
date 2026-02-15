@@ -1,6 +1,7 @@
 ---
 description: AIMO 驗證器中心 - 驗證工具快速入門。在 30 秒內安裝、執行和解讀結果。證據包驗證和合規性檢查。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 驗證器
 

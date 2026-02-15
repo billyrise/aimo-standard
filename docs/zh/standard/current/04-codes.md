@@ -1,6 +1,7 @@
 ---
 description: AIMO 代码系统格式和命名约定。定义代码结构（XX-NNN）、生命周期状态、版本控制和分类法代码的弃用政策。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 代码
 

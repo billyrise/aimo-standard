@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 라이선스 - 사양, 문서 및 기계 판독 가능 산출물에 대한 Apache 2.0 라이선스 조건.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 라이선스
 

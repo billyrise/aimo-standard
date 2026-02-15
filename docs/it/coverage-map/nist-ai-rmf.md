@@ -1,6 +1,7 @@
 ---
 description: Mappatura dello Standard AIMO verso NIST AI RMF. Tracciabilità tra i codici della tassonomia AIMO e le funzioni del NIST AI Risk Management Framework.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Mappatura NIST AI RMF
 

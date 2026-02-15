@@ -1,6 +1,7 @@
 ---
 description: AIMOタクソノミー - 8次元91コードのAI分類体系。機能範囲、ユースケース、データ種別、チャネル、統合、リスク、成果、証跡をカバー。
 ---
+<!-- aimo:translation_status=translated -->
 
 # タクソノミー
 

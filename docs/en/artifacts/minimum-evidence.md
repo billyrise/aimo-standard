@@ -1,6 +1,7 @@
 ---
 description: AIMO minimum evidence requirements. MUST-level checklist by lifecycle (request, review, approval, change, renewal) for AI governance evidence readiness.
 ---
+<!-- aimo:translation_status=source -->
 
 # Minimum Evidence Requirements
 

@@ -1,112 +1,113 @@
 ---
-description: AIMO Standard conformance levels. How organizations claim compliance, evidence requirements, and what each conformance level means for AI governance.
+description: AIMO Standard 符合性级别。组织如何声明符合、证据要求，以及各符合性级别对 AI 治理的意义。
 ---
+<!-- aimo:translation_status=translated -->
 
-# Conformance
+# 符合性
 
-!!! warning "Important: No certification, no assurance, no legal compliance claim"
-    AIMO Standard defines an **evidence packaging and validation format**. It does not certify compliance with laws or standards.
-    Audit and assurance opinions remain the responsibility of independent auditors and the adopting organization.
-    **Appropriate claim:** "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
+!!! warning "重要：非认证、非鉴证、非法律符合声明"
+    AIMO Standard 定义的是**证据包装与验证格式**。不认证对法律或标准的符合。
+    审计与鉴证意见由独立审计员及采用组织自行负责。
+    **适当声明：**「证据包系依 AIMO Standard v0.1.2 产制，并经 AIMO 验证器进行结构验证。」
     <!-- UNACCEPTABLE_CLAIMS_EXAMPLES -->
-    **Inappropriate claim:** "EU AI Act compliant", "ISO 42001 certified", "government approved".
+    **不当声明：**「符合欧盟 AI 法」、「ISO 42001 认证」、「政府核可」。
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
-These tiers are **internal evidence maturity levels** for packaging and traceability. They are **not** a certification, **not** an assurance opinion, and **not** legal or regulatory compliance.
+上述层级为包装与可追溯性之**内部证据成熟度**。**不是**认证、**不是**鉴证意见，也**不是**法律或法规符合。
 
-!!! note "Tier name alias"
-    The top tier was previously referred to as "Gold" in informal discussions; the **official tier name is Audit-Ready**.
+!!! note "层级名称别名"
+    最高层级过去在非正式讨论中曾称「Gold」；**正式层级名称为 Audit-Ready**。
 
-## AIMO Conformity Framework (AIMO-MS / AIMO-Controls / AIMO-Audit)
+## AIMO 符合性框架（AIMO-MS / AIMO-Controls / AIMO-Audit）
 
-| Component | Description | Evidence expectations |
+| 组件 | 说明 | 证据期望 |
 | --- | --- | --- |
-| **AIMO-MS** | Management-system–oriented structure: policies, roles, PDCA-aligned artifacts that can support ISO/IEC 42001–type controls. | Request, review, exception, renewal, change log; Summary and Dictionary. |
-| **AIMO-Controls** | Lifecycle and integrity controls: request→review→exception→renewal, hashing, signing (per [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/)). | Object_index, payload_index, hash_chain, signing; lifecycle records. |
-| **AIMO-Audit** | Readiness for audit handoff: validator pass, checksums, optional attestation and audit handoff index. | Validator output, bundle_id, producer identity, optional signature metadata and handoff index. |
+| **AIMO-MS** | 管理系统导向结构：可支持 ISO/IEC 42001 型控制的方针、角色、PDCA 对齐工件。 | Request、review、exception、renewal、change log；Summary 与 Dictionary。 |
+| **AIMO-Controls** | 生命周期与完整性控制：request→review→exception→renewal、哈希、签名（依 [证据包结构](../../standard/current/09-evidence-bundle-structure/)）。 | Object_index、payload_index、hash_chain、signing；生命周期记录。 |
+| **AIMO-Audit** | 审计交接准备：验证器通过、校验和、可选声明与审计交接索引。 | 验证器输出、bundle_id、产制者身份、可选签名元数据与交接索引。 |
 
-Evidence expectations are described in [Minimum Evidence Requirements](../artifacts/minimum-evidence/) and [Evidence Bundle](../artifacts/evidence-bundle/).
+证据期望详见 [最低证据要求](../artifacts/minimum-evidence/) 与 [证据包](../artifacts/evidence-bundle/)。
 
-## Conformity Levels (AIMO-only)
+## 符合性级别（仅 AIMO）
 
-### Level 1 — Foundation
+### 级别 1 — Foundation
 
-**Purpose:** Traceable baseline. Minimum set to make the bundle identifiable, integrity-verifiable, and validator-checked.
+**目的：** 可追溯基线。使组合可识别、可验证完整性并经验证器检查的最小集合。
 
-| Item | Requirement |
+| 项目 | 要求 |
 | --- | --- |
-| **Required artifacts** | [Evidence Bundle](../artifacts/evidence-bundle/) structure (manifest.json, objects/, payload_index per spec); [Validator](../validator/) pass; link to [Minimum Evidence](../artifacts/minimum-evidence/). |
-| **Typical audit questions** | What is in scope? Who produced the bundle? Can hashes be verified? |
-| **Typical gaps** | Missing manifest metadata (bundle_id, created_at, producer); validator not run or not attached. |
+| **必要工件** | [证据包](../artifacts/evidence-bundle/) 结构（manifest.json、objects/、依规格的 payload_index）；[验证器](../validator/) 通过；链接至 [最低证据](../artifacts/minimum-evidence/)。 |
+| **典型审计提问** | 范围为何？谁产制组合？哈希可否验证？ |
+| **典型差距** | 缺少 manifest 元数据（bundle_id、created_at、producer）；未执行或未附验证器。 |
 
-### Level 2 — Operational
+### 级别 2 — Operational
 
-**Purpose:** Operational control evidence. Builds on Foundation with lifecycle trail and monitoring.
+**目的：** 运营控制证据。在 Foundation 上建立生命周期轨迹与监控。
 
-| Item | Requirement |
+| 项目 | 要求 |
 | --- | --- |
-| **Required artifacts** | All Foundation MUST items; lifecycle control trail (request/approval, review, exception or “no exceptions”, renewal schedule); at least one monitoring artifact (incident log or periodic check or human oversight sampling); change log with integrity linkage; proof vs assurance boundary statement. |
-| **Typical audit questions** | Who approved use? How are exceptions tracked? When was the last review? |
-| **Typical gaps** | Review/approval not linked to request; no monitoring artifact; change log not referencing impacted objects. |
+| **必要工件** | 全部 Foundation MUST 项目；生命周期控制轨迹（request/批准、review、exception 或「无例外」、renewal 排程）；至少一项监控工件（事件日志或定期检查或人工监督抽样）；具完整性链接的 change log；证明与鉴证边界声明。 |
+| **典型审计提问** | 谁批准使用？例外如何跟踪？最近一次审查时间？ |
+| **典型差距** | 审查/批准未链接至 request；无监控工件；change log 未参照受影响对象。 |
 
-### Level 3 — Audit-Ready
+### 级别 3 — Audit-Ready
 
-**Purpose:** Audit handoff quality. Full attestation, reproducibility, and external-form slotting.
+**目的：** 审计交接质量。完整声明、可重现性与外部表单槽位。
 
-| Item | Requirement |
+| 项目 | 要求 |
 | --- | --- |
-| **Required artifacts** | All Operational MUST items; at least one digital signature covering manifest (signer identity + algorithm); TSA or “no TSA” statement; reproducibility packet (exact validator command, expected outputs, environment metadata); External Forms section with official templates/checklists attached as-is and cross-referenced; bounded completeness statement; one-page audit handoff index (artifact → hash → producer → date). |
-| **Typical audit questions** | How can an auditor re-run validation? Where are external checklists and how do they map to the bundle? |
-| **Typical gaps** | Signature present but signer/algorithm not documented; no handoff index; external forms not hashed or not referenced in manifest. |
+| **必要工件** | 全部 Operational MUST 项目；至少一组覆盖 manifest 的数字签名（签署者身份 + 算法）；TSA 或「无 TSA」声明；可重现包（确切验证器命令、预期输出、环境元数据）；外部表单章节附上正式模板/检查表并交叉参照；有界完整性声明；单页审计交接索引（工件 → 哈希 → 产制者 → 日期）。 |
+| **典型审计提问** | 审计员如何重新执行验证？外部检查表在哪里、如何映射至组合？ |
+| **典型差距** | 有签名但未记载签署者/算法；无交接索引；外部表单未哈希或未在 manifest 参照。 |
 
-## Minimum Evidence by Level (summary)
+## 各级别最低证据（摘要）
 
-| Level | MUST (summary) |
+| 级别 | MUST（摘要） |
 | --- | --- |
-| **Foundation** | Bundle structure (manifest, object_index, payload_index); sha256 for referenced objects; bundle_id, created_at, producer; validator run + version; evidence dictionary baseline (system name, owner, purpose, data categories, lifecycle stage); access & retention statement (who, duration, storage type, tamper-evidence). SHOULD: minimal change log entry. |
-| **Operational** | All Foundation MUST; lifecycle trail (request/approval, review, exception or “none”, renewal + last renewal); ≥1 monitoring artifact; change log entries reference impacted objects; explicit proof vs assurance boundary statement. |
-| **Audit-Ready** | All Operational MUST; ≥1 signature over manifest (signer identity + algorithm); TSA or “no TSA”; reproducibility packet; External Forms listed and cross-referenced; bounded completeness statement; audit handoff index. |
+| **Foundation** | 组合结构（manifest、object_index、payload_index）；所参照对象的 sha256；bundle_id、created_at、producer；验证器执行 + 版本；证据字典基线（系统名称、拥有者、目的、数据类别、生命周期阶段）；访问与保留声明（对象、期间、存储类型、防篡改）。SHOULD：最少一笔 change log 条目。 |
+| **Operational** | 全部 Foundation MUST；生命周期轨迹（request/批准、review、exception 或「无」、renewal + 最近 renewal）；≥1 监控工件；change log 条目参照受影响对象；明确证明与鉴证边界声明。 |
+| **Audit-Ready** | 全部 Operational MUST；≥1 组针对 manifest 的签名（签署者身份 + 算法）；TSA 或「无 TSA」；可重现包；外部表单列示并交叉参照；有界完整性声明；审计交接索引。 |
 
-Signature **presence** (at least one signature targeting the manifest) is required by the normative [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/) for all bundles. **Audit-Ready** adds stricter **cryptographic attestation** (signer identity, algorithm, TSA statement, re-validation instructions) so a third party can re-perform checks.
+所有组合依规范 [证据包结构](../../standard/current/09-evidence-bundle-structure/) 均**必须**具备签名**存在**（至少一组以 manifest 为目标）。**Audit-Ready** 另要求更严格的**密码学声明**（签署者身份、算法、TSA 声明、再验证说明），使第三方能重新执行检查。
 
-## ISO/IEC 42001 Mapping (informative)
+## ISO/IEC 42001 映射（参考）
 
-The following table shows how AIMO artifacts **support evidence for** typical ISO/IEC 42001 clause families. This is informative only; it does not imply certification or compliance.
+下表说明 AIMO 工件**如何支持**典型 ISO/IEC 42001 条款族之证据。仅供参考；不表示认证或符合。
 
-| ISO/IEC 42001 clause family | AIMO artifacts that support evidence |
+| ISO/IEC 42001 条款族 | 支持证据的 AIMO 工件 |
 | --- | --- |
-| Context of the organization | Summary, Dictionary, scope_ref |
-| Leadership / Policy | Summary, review, dictionary |
-| Planning (risks, objectives) | request, review, exception, EV, Dictionary |
-| Support (resources, competence, documentation) | Summary, review, EV, change_log |
-| Operation | EV, request, review, exception; operational controls |
-| Performance evaluation (monitoring, internal audit, management review) | EV, change_log, review, renewal |
-| Improvement | exception, renewal, change_log |
+| 组织情境 | Summary、Dictionary、scope_ref |
+| 领导/政策 | Summary、review、dictionary |
+| 规划（风险、目标） | request、review、exception、EV、Dictionary |
+| 支持（资源、能力、文档） | Summary、review、EV、change_log |
+| 运营 | EV、request、review、exception；运营控制 |
+| 绩效评价（监控、内部审核、管理评审） | EV、change_log、review、renewal |
+| 改进 | exception、renewal、change_log |
 
-See [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) and [ISO 42001 Certification Readiness Toolkit](../artifacts/iso-42001-certification-readiness-toolkit/) for more detail.
+详见 [覆盖图 — ISO/IEC 42001](../coverage-map/iso-42001/) 与 [ISO 42001 认证准备工具包](../artifacts/iso-42001-certification-readiness-toolkit/)。
 
-## Claim language templates (anti-overclaim)
+## 声明用语模板（反过度声明）
 
-Use only claims that accurately describe what was done. Certification and legal compliance remain the responsibility of adopters and accredited bodies.
+仅使用如实描述所做事项之声明。认证与法律符合由采用者与认可机构负责。
 
-**Acceptable (examples)**
+**可接受（示例）**
 
-- "We are AIMO Conformant (Level 2) against AIMO Standard v0.1.2; this does not imply ISO certification or legal compliance."
-- "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies."
-- "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
+- 「本组织为 AIMO Standard v0.1.2 之 AIMO 符合（级别 2）；不表示 ISO 认证或法律符合。」
+- 「我们使用 AIMO 工件支持 ISO/IEC 42001 准备；认证决定由认可认证机构作出。」
+- 「证据包系依 AIMO Standard v0.1.2 产制，并经 AIMO 验证器进行结构验证。」
 
 <!-- UNACCEPTABLE_CLAIMS_EXAMPLES -->
-**Unacceptable (examples)**
+**不可接受（示例）**
 
-- "EU AI Act compliant" (AIMO does not certify regulatory compliance.)
-- "ISO 42001 certified" (Certification is issued by accredited certification bodies, not AIMO.)
-- "Government approved" (AIMO is not a government approval scheme.)
+- 「符合欧盟 AI 法」（AIMO 不认证法规符合。）
+- 「ISO 42001 认证」（认证由认可认证机构核发，非 AIMO。）
+- 「政府核可」（AIMO 非政府核可机制。）
 <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
-## Related pages
+## 相关页面
 
-- [Trust Package](../governance/trust-package/) — Consolidated entry point for auditors
-- [Responsibility Boundary](../governance/responsibility-boundary/) — What AIMO does and does not provide
-- [Standard (Current)](../standard/current/) — Normative requirements
-- [Artifacts](../artifacts/) — Evidence structure and Minimum Evidence
-- [Validator](../validator/) — Structural validation
+- [Trust Package](../governance/trust-package/) — 审计员用整合入口
+- [Responsibility Boundary](../governance/responsibility-boundary/) — AIMO 提供与不提供之内容
+- [Standard (Current)](../standard/current/) — 规范要求
+- [Artifacts](../artifacts/) — 证据结构与最低证据
+- [Validator](../validator/) — 结构验证

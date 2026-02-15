@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準版本歷史。包含稽核員就緒 PDF、機器可讀人工產物、校驗和和建置來源證明的官方凍結發布。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 版本
 

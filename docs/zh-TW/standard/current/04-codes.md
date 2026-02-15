@@ -1,6 +1,7 @@
 ---
 description: AIMO 代碼系統格式和命名慣例。定義代碼結構（XX-NNN）、生命週期狀態、版本控制，以及分類代碼的棄用政策。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 代碼
 

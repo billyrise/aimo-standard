@@ -1,6 +1,7 @@
 ---
 description: AIMO 驗證器 - 確保證據包符合 AIMO 標準結構描述。驗證規則、錯誤處理，以及合規性檢查的參考實作。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 驗證器
 

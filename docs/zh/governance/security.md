@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准安全政策 - AI治理实施的漏洞报告、披露程序和安全考虑。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 安全
 

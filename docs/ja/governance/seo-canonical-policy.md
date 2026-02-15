@@ -1,6 +1,7 @@
 ---
 description: AIMO SEOとcanonical URLポリシー - 検索エンジン、監査人、外部参照のためのURL正規化戦略。
 ---
+<!-- aimo:translation_status=translated -->
 
 # SEO & Canonical ポリシー
 

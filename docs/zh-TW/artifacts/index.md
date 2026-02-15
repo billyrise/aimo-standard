@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準人工產物中心。機器可讀的結構描述、證據包範本、Shadow AI 發現和代理活動監控的日誌結構描述。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 人工產物
 

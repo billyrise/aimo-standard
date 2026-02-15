@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard to NIST AI RMF mapping. Traceability between AIMO taxonomy codes and NIST AI Risk Management Framework functions.
 ---
+<!-- aimo:translation_status=source -->
 
 # NIST AI RMF mapping
 

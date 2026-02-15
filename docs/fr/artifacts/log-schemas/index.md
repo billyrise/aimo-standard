@@ -1,6 +1,7 @@
 ---
 description: Schémas de journaux AIMO - Formats de journaux neutres vis-à-vis des fournisseurs pour les preuves d'IA. Inclut les schémas de découverte de Shadow AI et de surveillance d'activité des agents.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Schémas de journaux
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard - Offener Standard für KI-Governance und Audit. Taxonomie mit 8 Dimensionen und 91 Codes zur Klassifizierung von KI-Nutzung, Evidence-Anforderungen und Validator für Unternehmens-Compliance.
 ---
+<!-- aimo:translation_status=translated -->
 
 # AIMO Standard
 

@@ -1,6 +1,7 @@
 ---
 description: Guia de localização AIMO - estrutura i18n, fluxo de manutenção e princípios SSOT para documentação multilíngue.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Guia de Localização
 

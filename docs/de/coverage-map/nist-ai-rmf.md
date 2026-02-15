@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard zu NIST AI RMF-Zuordnung. Nachverfolgbarkeit zwischen AIMO-Taxonomiecodes und NIST AI Risk Management Framework-Funktionen.
 ---
+<!-- aimo:translation_status=translated -->
 
 # NIST AI RMF-Zuordnung
 

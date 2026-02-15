@@ -1,6 +1,7 @@
 ---
 description: Justified Non-Compliance (JNC) — optional payload in v0.1.2. Not legal advice; does not constitute assurance.
 ---
+<!-- aimo:translation_status=source -->
 
 # Justified Non-Compliance (JNC) — optional (v0.1.2)
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准许可证 - 规范、文档和机器可读工件的 Apache 2.0 许可条款。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 许可证
 

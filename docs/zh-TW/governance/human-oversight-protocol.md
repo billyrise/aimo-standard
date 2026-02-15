@@ -1,6 +1,7 @@
 ---
 description: AIMO 人工監督協議 - 自動化驗證和人工審查之間的邊界。AI 治理中機器與人工判斷的責任。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 人工監督協議
 

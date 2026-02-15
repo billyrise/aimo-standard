@@ -1,6 +1,7 @@
 ---
 description: AIMO Evidence Pack templates and usage guide. Structure for documenting AI governance evidence with index management and audit-ready formatting.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Evidence Pack Template (EP)
 

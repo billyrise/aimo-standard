@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准版本历史。带有审计师就绪 PDF、机器可读工件、校验和和构建来源证明的官方冻结版本。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 版本
 

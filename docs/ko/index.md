@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 - AI 거버넌스 및 감사를 위한 오픈 표준. AI 사용 분류를 위한 8개 차원과 91개 코드를 갖춘 분류체계, 증거 요구사항, 기업 컴플라이언스를 위한 검증기.
 ---
+<!-- aimo:translation_status=translated -->
 
 # AIMO 표준
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO Evidence Bundle構造。TOC、追跡可能性、AIガバナンスコンプライアンスと監査人への提出用アーティファクトを含む監査パッケージ形式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Evidence Bundle（証跡バンドル）
 

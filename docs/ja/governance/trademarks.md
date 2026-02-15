@@ -1,6 +1,7 @@
 ---
 description: AIMO商標ガイドライン - AIMO商標の使用ルール、適合バッジ要件、ブランディングガイドライン。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 商標
 

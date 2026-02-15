@@ -1,6 +1,7 @@
 ---
 description: Current AIMO Standard specification. Includes overview, scope, taxonomy, codes, dictionary, evidence templates, and validator rules for AI governance.
 ---
+<!-- aimo:translation_status=source -->
 
 # Current (Latest)
 

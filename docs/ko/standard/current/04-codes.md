@@ -1,6 +1,7 @@
 ---
 description: AIMO 코드 시스템 형식 및 명명 규칙. 코드 구조(XX-NNN), 생명주기 상태, 버전 관리 및 분류체계 코드에 대한 폐기 정책을 정의합니다.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 코드
 

@@ -1,112 +1,113 @@
 ---
-description: AIMO Standard conformance levels. How organizations claim compliance, evidence requirements, and what each conformance level means for AI governance.
+description: AIMO Standard の適合性レベル。組織の適合主張の仕方、エビデンス要件、各レベルが AI ガバナンスで意味する内容。
 ---
+<!-- aimo:translation_status=translated -->
 
-# Conformance
+# 適合性
 
-!!! warning "Important: No certification, no assurance, no legal compliance claim"
-    AIMO Standard defines an **evidence packaging and validation format**. It does not certify compliance with laws or standards.
-    Audit and assurance opinions remain the responsibility of independent auditors and the adopting organization.
-    **Appropriate claim:** "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
+!!! warning "重要: 認証ではなく、保証ではなく、法・規制適合の主張ではない"
+    AIMO Standard は**エビデンスのパッケージ化・検証フォーマット**を定義します。法令や規格への適合を認証するものではありません。
+    監査・保証の意見は、独立した監査人および採用組織の責任です。
+    **適切な主張例:** 「Evidence Bundle は AIMO Standard v0.1.2 に従って作成され、AIMO Validator により構造検証されました。」
     <!-- UNACCEPTABLE_CLAIMS_EXAMPLES -->
-    **Inappropriate claim:** "EU AI Act compliant", "ISO 42001 certified", "government approved".
+    **不適切な主張例:** 「EU AI 法適合」「ISO 42001 認証」「政府承認」。
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
-These tiers are **internal evidence maturity levels** for packaging and traceability. They are **not** a certification, **not** an assurance opinion, and **not** legal or regulatory compliance.
+これらのティアは、パッケージ化とトレーサビリティのための**内部エビデンス成熟度レベル**です。認証でも、保証意見でも、法・規制適合でも**ありません**。
 
-!!! note "Tier name alias"
-    The top tier was previously referred to as "Gold" in informal discussions; the **official tier name is Audit-Ready**.
+!!! note "ティア名の別名"
+    最上位ティアは非公式な議論で以前「Gold」と呼ばれたことがあります；**公式ティア名は Audit-Ready** です。
 
-## AIMO Conformity Framework (AIMO-MS / AIMO-Controls / AIMO-Audit)
+## AIMO 適合性フレームワーク（AIMO-MS / AIMO-Controls / AIMO-Audit）
 
-| Component | Description | Evidence expectations |
+| コンポーネント | 説明 | エビデンス期待 |
 | --- | --- | --- |
-| **AIMO-MS** | Management-system–oriented structure: policies, roles, PDCA-aligned artifacts that can support ISO/IEC 42001–type controls. | Request, review, exception, renewal, change log; Summary and Dictionary. |
-| **AIMO-Controls** | Lifecycle and integrity controls: request→review→exception→renewal, hashing, signing (per [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/)). | Object_index, payload_index, hash_chain, signing; lifecycle records. |
-| **AIMO-Audit** | Readiness for audit handoff: validator pass, checksums, optional attestation and audit handoff index. | Validator output, bundle_id, producer identity, optional signature metadata and handoff index. |
+| **AIMO-MS** | マネジメントシステム志向の構造：ISO/IEC 42001 型コントロールを支えうる方針・役割・PDCA に沿ったアーティファクト。 | Request、review、exception、renewal、change log；Summary と Dictionary。 |
+| **AIMO-Controls** | ライフサイクル・整合性コントロール：request→review→exception→renewal、ハッシュ、署名（[Evidence Bundle 構造](../../standard/current/09-evidence-bundle-structure/)に準拠）。 | Object_index、payload_index、hash_chain、signing；ライフサイクル記録。 |
+| **AIMO-Audit** | 監査引き継ぎの準備：Validator 合格、チェックサム、オプションの attestation と監査引き継ぎインデックス。 | Validator 出力、bundle_id、producer identity、オプションの署名メタデータと引き継ぎインデックス。 |
 
-Evidence expectations are described in [Minimum Evidence Requirements](../artifacts/minimum-evidence/) and [Evidence Bundle](../artifacts/evidence-bundle/).
+エビデンス期待の詳細は [最低証拠要件](../artifacts/minimum-evidence/) と [Evidence Bundle](../artifacts/evidence-bundle/) を参照。
 
-## Conformity Levels (AIMO-only)
+## 適合性レベル（AIMO のみ）
 
-### Level 1 — Foundation
+### レベル 1 — Foundation
 
-**Purpose:** Traceable baseline. Minimum set to make the bundle identifiable, integrity-verifiable, and validator-checked.
+**目的:** トレーサブルなベースライン。バンドルを識別可能・整合性検証可能・Validator チェック済みとする最小セット。
 
-| Item | Requirement |
+| 項目 | 要件 |
 | --- | --- |
-| **Required artifacts** | [Evidence Bundle](../artifacts/evidence-bundle/) structure (manifest.json, objects/, payload_index per spec); [Validator](../validator/) pass; link to [Minimum Evidence](../artifacts/minimum-evidence/). |
-| **Typical audit questions** | What is in scope? Who produced the bundle? Can hashes be verified? |
-| **Typical gaps** | Missing manifest metadata (bundle_id, created_at, producer); validator not run or not attached. |
+| **必須アーティファクト** | [Evidence Bundle](../artifacts/evidence-bundle/) 構造（manifest.json、objects/、仕様通りの payload_index）；[Validator](../validator/) 合格；[最低証拠](../artifacts/minimum-evidence/)へのリンク。 |
+| **典型的な監査質問** | スコープは何か？バンドルは誰が作成したか？ハッシュは検証できるか？ |
+| **典型的なギャップ** | manifest メタデータ（bundle_id、created_at、producer）欠落；Validator 未実行または未添付。 |
 
-### Level 2 — Operational
+### レベル 2 — Operational
 
-**Purpose:** Operational control evidence. Builds on Foundation with lifecycle trail and monitoring.
+**目的:** 運用コントロールのエビデンス。Foundation にライフサイクル証跡とモニタリングを積み上げる。
 
-| Item | Requirement |
+| 項目 | 要件 |
 | --- | --- |
-| **Required artifacts** | All Foundation MUST items; lifecycle control trail (request/approval, review, exception or “no exceptions”, renewal schedule); at least one monitoring artifact (incident log or periodic check or human oversight sampling); change log with integrity linkage; proof vs assurance boundary statement. |
-| **Typical audit questions** | Who approved use? How are exceptions tracked? When was the last review? |
-| **Typical gaps** | Review/approval not linked to request; no monitoring artifact; change log not referencing impacted objects. |
+| **必須アーティファクト** | Foundation の全 MUST 項目；ライフサイクルコントロール証跡（request/承認、review、exception または「例外なし」、renewal スケジュール）；少なくとも 1 件のモニタリングアーティファクト（インシデントログまたは定期チェックまたは人間監督サンプリング）；整合性リンク付き change log；証明と保証の境界の明示。 |
+| **典型的な監査質問** | 利用承認者は誰か？例外はどう追跡しているか？最終 review はいつか？ |
+| **典型的なギャップ** | review/承認が request にリンクされていない；モニタリングアーティファクトなし；change log が影響オブジェクトを参照していない。 |
 
-### Level 3 — Audit-Ready
+### レベル 3 — Audit-Ready
 
-**Purpose:** Audit handoff quality. Full attestation, reproducibility, and external-form slotting.
+**目的:** 監査引き継ぎの品質。完全な attestation、再現性、外部フォームのスロット。
 
-| Item | Requirement |
+| 項目 | 要件 |
 | --- | --- |
-| **Required artifacts** | All Operational MUST items; at least one digital signature covering manifest (signer identity + algorithm); TSA or “no TSA” statement; reproducibility packet (exact validator command, expected outputs, environment metadata); External Forms section with official templates/checklists attached as-is and cross-referenced; bounded completeness statement; one-page audit handoff index (artifact → hash → producer → date). |
-| **Typical audit questions** | How can an auditor re-run validation? Where are external checklists and how do they map to the bundle? |
-| **Typical gaps** | Signature present but signer/algorithm not documented; no handoff index; external forms not hashed or not referenced in manifest. |
+| **必須アーティファクト** | Operational の全 MUST 項目；manifest をカバーする少なくとも 1 つのデジタル署名（署名者 identity + アルゴリズム）；TSA または「TSA なし」の表明；再現パケット（正確な Validator コマンド、期待出力、環境メタデータ）；公式テンプレート/チェックリストをそのまま添付・相互参照した External Forms 節；有界完全性表明；1 ページの監査引き継ぎインデックス（アーティファクト → ハッシュ → producer → 日付）。 |
+| **典型的な監査質問** | 監査人が検証を再実行する方法は？外部チェックリストはどこにあり、バンドルにどうマッピングするか？ |
+| **典型的なギャップ** | 署名はあるが署名者/アルゴリズムが文書化されていない；引き継ぎインデックスなし；外部フォームがハッシュされていないか manifest で参照されていない。 |
 
-## Minimum Evidence by Level (summary)
+## レベル別最低証拠（概要）
 
-| Level | MUST (summary) |
+| レベル | MUST（概要） |
 | --- | --- |
-| **Foundation** | Bundle structure (manifest, object_index, payload_index); sha256 for referenced objects; bundle_id, created_at, producer; validator run + version; evidence dictionary baseline (system name, owner, purpose, data categories, lifecycle stage); access & retention statement (who, duration, storage type, tamper-evidence). SHOULD: minimal change log entry. |
-| **Operational** | All Foundation MUST; lifecycle trail (request/approval, review, exception or “none”, renewal + last renewal); ≥1 monitoring artifact; change log entries reference impacted objects; explicit proof vs assurance boundary statement. |
-| **Audit-Ready** | All Operational MUST; ≥1 signature over manifest (signer identity + algorithm); TSA or “no TSA”; reproducibility packet; External Forms listed and cross-referenced; bounded completeness statement; audit handoff index. |
+| **Foundation** | バンドル構造（manifest、object_index、payload_index）；参照オブジェクトの sha256；bundle_id、created_at、producer；Validator 実行 + バージョン；エビデンス辞書ベースライン（システム名、オーナー、目的、データカテゴリ、ライフサイクル段階）；アクセス・保持の表明（誰が、期間、保存種別、改ざん検知）。SHOULD: 最小限の change log エントリ。 |
+| **Operational** | Foundation の全 MUST；ライフサイクル証跡（request/承認、review、exception または「なし」、renewal + 最終 renewal）；≥1 のモニタリングアーティファクト；change log エントリが影響オブジェクトを参照；証明と保証の境界の明示。 |
+| **Audit-Ready** | Operational の全 MUST；manifest に対する ≥1 の署名（署名者 identity + アルゴリズム）；TSA または「TSA なし」；再現パケット；External Forms の列挙と相互参照；有界完全性表明；監査引き継ぎインデックス。 |
 
-Signature **presence** (at least one signature targeting the manifest) is required by the normative [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/) for all bundles. **Audit-Ready** adds stricter **cryptographic attestation** (signer identity, algorithm, TSA statement, re-validation instructions) so a third party can re-perform checks.
+署名の**存在**（manifest をターゲットとする少なくとも 1 つの署名）は、規範的 [Evidence Bundle 構造](../../standard/current/09-evidence-bundle-structure/)により全バンドルで必須です。**Audit-Ready** は、第三者による再検証を可能にするため、より厳格な**暗号 attestation**（署名者 identity、アルゴリズム、TSA 表明、再検証手順）を追加します。
 
-## ISO/IEC 42001 Mapping (informative)
+## ISO/IEC 42001 マッピング（参考）
 
-The following table shows how AIMO artifacts **support evidence for** typical ISO/IEC 42001 clause families. This is informative only; it does not imply certification or compliance.
+以下の表は、AIMO アーティファクトが典型的な ISO/IEC 42001 条項族のエビデンスを**どう支えるか**を示します。参考であり、認証や適合を意味しません。
 
-| ISO/IEC 42001 clause family | AIMO artifacts that support evidence |
+| ISO/IEC 42001 条項族 | エビデンスを支える AIMO アーティファクト |
 | --- | --- |
-| Context of the organization | Summary, Dictionary, scope_ref |
-| Leadership / Policy | Summary, review, dictionary |
-| Planning (risks, objectives) | request, review, exception, EV, Dictionary |
-| Support (resources, competence, documentation) | Summary, review, EV, change_log |
-| Operation | EV, request, review, exception; operational controls |
-| Performance evaluation (monitoring, internal audit, management review) | EV, change_log, review, renewal |
-| Improvement | exception, renewal, change_log |
+| 組織の状況 | Summary、Dictionary、scope_ref |
+| リーダーシップ / 方針 | Summary、review、dictionary |
+| 計画（リスク、目標） | request、review、exception、EV、Dictionary |
+| 支援（リソース、能力、文書） | Summary、review、EV、change_log |
+| 運用 | EV、request、review、exception；運用コントロール |
+| パフォーマンス評価（モニタリング、内部監査、マネジメントレビュー） | EV、change_log、review、renewal |
+| 改善 | exception、renewal、change_log |
 
-See [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) and [ISO 42001 Certification Readiness Toolkit](../artifacts/iso-42001-certification-readiness-toolkit/) for more detail.
+詳細は [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) と [ISO 42001 認証準備ツールキット](../artifacts/iso-42001-certification-readiness-toolkit/) を参照。
 
-## Claim language templates (anti-overclaim)
+## 主張文言テンプレート（過大主張防止）
 
-Use only claims that accurately describe what was done. Certification and legal compliance remain the responsibility of adopters and accredited bodies.
+実際に行ったことを正確に表す主張のみを使用してください。認証と法適合は採用者と認定機関の責任です。
 
-**Acceptable (examples)**
+**受容可能（例）**
 
-- "We are AIMO Conformant (Level 2) against AIMO Standard v0.1.2; this does not imply ISO certification or legal compliance."
-- "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies."
-- "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
+- 「当社は AIMO Standard v0.1.2 に対する AIMO 適合（レベル 2）です；ISO 認証や法適合を意味しません。」
+- 「AIMO アーティファクトで ISO/IEC 42001 準備を支援しています；認証判断は認定認証機関にあります。」
+- 「Evidence Bundle は AIMO Standard v0.1.2 に従って作成され、AIMO Validator により構造検証されました。」
 
 <!-- UNACCEPTABLE_CLAIMS_EXAMPLES -->
-**Unacceptable (examples)**
+**受容不可（例）**
 
-- "EU AI Act compliant" (AIMO does not certify regulatory compliance.)
-- "ISO 42001 certified" (Certification is issued by accredited certification bodies, not AIMO.)
-- "Government approved" (AIMO is not a government approval scheme.)
+- 「EU AI 法適合」（AIMO は規制適合を認証しません。）
+- 「ISO 42001 認証」（認証は認定認証機関が発行し、AIMO ではありません。）
+- 「政府承認」（AIMO は政府承認制度ではありません。）
 <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
-## Related pages
+## 関連ページ
 
-- [Trust Package](../governance/trust-package/) — Consolidated entry point for auditors
-- [Responsibility Boundary](../governance/responsibility-boundary/) — What AIMO does and does not provide
-- [Standard (Current)](../standard/current/) — Normative requirements
-- [Artifacts](../artifacts/) — Evidence structure and Minimum Evidence
-- [Validator](../validator/) — Structural validation
+- [Trust Package](../governance/trust-package/) — 監査人向け統合エントリ
+- [Responsibility Boundary](../governance/responsibility-boundary/) — AIMO が提供するもの・しないもの
+- [Standard (Current)](../standard/current/) — 規範要件
+- [Artifacts](../artifacts/) — エビデンス構造と最低証拠
+- [Validator](../validator/) — 構造検証

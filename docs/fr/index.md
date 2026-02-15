@@ -1,6 +1,7 @@
 ---
 description: Standard AIMO - Standard ouvert pour la gouvernance et l'audit de l'IA. Taxonomie avec 8 dimensions et 91 codes pour classifier l'utilisation de l'IA, exigences de preuves et validateur pour la conformité entreprise.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Standard AIMO
 

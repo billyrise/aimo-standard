@@ -1,6 +1,7 @@
 ---
 description: AIMO Validator-Hub - Validierungstools-Schnellstart. Installation, Ausführung und Ergebnisinterpretation in 30 Sekunden. Evidence Pack-Validierung und Compliance-Prüfungen.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Validator
 

@@ -1,6 +1,7 @@
 ---
 description: Informative concept for Justified Non-Compliance (JNC). Not part of v0.1 or v0.1.1 normative specification.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Justified Non-Compliance (JNC) — future extension
 

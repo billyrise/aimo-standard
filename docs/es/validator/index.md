@@ -1,6 +1,7 @@
 ---
 description: Centro del Validador AIMO - Inicio rápido de herramientas de validación. Instale, ejecute e interprete resultados en 30 segundos. Validación de paquetes de evidencia y verificaciones de cumplimiento.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Validador
 

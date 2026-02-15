@@ -1,28 +1,29 @@
 ---
-description: 調達・開示オーバーレイ（英国、日本）。UK ATRS、英国調達ガイド、日本政府 GenAI 調達・AI ビジネスガイドライン。参照マッピングのみ。
+description: 調達・開示オーバーレイ（英国・日本）。英国 ATRS、英国調達ガイダンス、日本政府 GenAI 調達・AI ビジネスガイドライン。参照マッピングのみ。
 ---
+<!-- aimo:translation_status=translated -->
 
-# Procurement & Disclosure Overlays (UK, Japan)
+# 調達・開示オーバーレイ（英国・日本）
 
-本ページは AIMO エビデンスと **英国**・**日本** の調達・開示フレームワークとの**参照マッピング**を記述します。**参照マッピングのみ**であり、AIMO は公式チェックリストや政府ガイドに取って代わるものではありません。
+本ページは、AIMO のエビデンスと、**英国**および**日本**の調達・開示フレームワークの一部との**参照マッピング**を説明します。**参照マッピングのみ**であり、AIMO は公式チェックリストや政府ガイダンスに代わるものではありません。
 
-## UK: ATRS and AI procurement
+## 英国: ATRS と AI 調達
 
-| Topic | AIMO evidence / mapping | Notes |
+| トピック | AIMO エビデンス / マッピング | 備考 |
 | --- | --- | --- |
-| **UK ATRS** (AI Transparency Record) | Summary, review (accountability owner), evidence (model/system description), dictionary (risk considerations). Profile: `coverage_map/profiles/uk_atrs_procurement.json`. | External Forms で ATRS 型透明性記録を添付または参照；logical_id でバンドルオブジェクトにリンク。 |
-| **UK procurement guidance** | Request, review, exception; Evidence Bundle for supplier evaluation. | 調達評価用エビデンスの構造化に AIMO バンドルを使用；公式英国ガイドが権威。 |
+| **英国 ATRS**（AI 透明性記録） | Summary、review（説明責任担当）、evidence（モデル/システム説明）、dictionary（リスク考慮）。プロファイル: `coverage_map/profiles/uk_atrs_procurement.json`。 | External Forms に ATRS 型透明性記録を添付または参照；logical_id でバンドルオブジェクトにリンク。 |
+| **英国調達ガイダンス** | Request、review、exception；Evidence Bundle を供給者評価に利用。 | AIMO バンドルで調達評価用エビデンスを構造化；公式英国ガイダンスが権威。 |
 
-## Japan: Government GenAI procurement and AI Business Guidelines
+## 日本: 政府 GenAI 調達・AI ビジネスガイドライン
 
-| Topic | AIMO evidence / mapping | Notes |
+| トピック | AIMO エビデンス / マッピング | 備考 |
 | --- | --- | --- |
-| **JP government GenAI procurement checklist** | External Form としてチェックリストを添付（例: payload: JP_PROCUREMENT_CHECKLIST）；manifest で参照。Profile: `coverage_map/profiles/jp_gov_genai_procurement.json`. | 参照マッピングのみ；AIMO は公式チェックリストに取って代わらない。 |
-| **AI Business Guidelines** | Summary, dictionary；チェックリスト項目を AIMO タクソノミーコードにマッピング。 | 説明可能性用；公式日本ガイドで確認。 |
+| **日本政府 GenAI 調達チェックリスト** | チェックリストを External Form として添付（例: payload: JP_PROCUREMENT_CHECKLIST）；manifest で参照。プロファイル: `coverage_map/profiles/jp_gov_genai_procurement.json`。 | 参照マッピングのみ；AIMO は公式チェックリストに代わりません。 |
+| **AI ビジネスガイドライン** | Summary、dictionary；トレーサビリティに有用な場合、チェックリスト項目を AIMO タクソノミーコードにマッピング。 | 説明可能性に利用；公式日本ガイダンスで確認。 |
 
-## How to use
+## 利用方法
 
-- **External Forms**: 英国・日本の公式テンプレート/チェックリストを**そのまま**（PDF, DOC 等）添付し、ハッシュを記録し、Evidence Bundle の [payload_index](../../standard/current/09-evidence-bundle-structure/) または [EV Template External Forms section](../../standard/current/06-ev-template/) に列挙。manifest とカバレッジマッピングで logical_id により参照。
-- **Profiles**: 上記プロファイルは任意の機械可読マッピングを定義し、法的・契約上の義務を課さない。
+- **External Forms**: 英国または日本の公式テンプレート/チェックリストを**そのまま**添付（PDF、DOC 等）、ハッシュし、Evidence Bundle の [payload_index](../../standard/current/09-evidence-bundle-structure/) または [EV テンプレート External Forms 節](../../standard/current/06-ev-template/)に記載。manifest とカバレッジマッピングで logical_id により参照。
+- **プロファイル**: 上記プロファイルはオプションの機械可読マッピングを定義し、法的・契約上の義務を課しません。
 
-[Conformance](../../conformance/) のレベルと [Minimum Evidence — Regulatory overlays](../../artifacts/minimum-evidence/) のオーバーレイ概要を参照。
+レベルは [適合性](../../conformance/)、オーバーレイ概要は [最低証拠 — 規制オーバーレイ](../../artifacts/minimum-evidence/) を参照。

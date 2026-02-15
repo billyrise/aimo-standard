@@ -1,6 +1,7 @@
 ---
 description: AIMO v0.1 ID Policy and namespace separation - EV for Evidence (artifacts) only, LG for Log/Event Type (taxonomy). Prevents ID collisions.
 ---
+<!-- aimo:translation_status=source -->
 
 # ID Policy / Namespace (v0.1)
 

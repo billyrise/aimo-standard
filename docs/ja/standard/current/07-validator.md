@@ -1,6 +1,7 @@
 ---
 description: AIMOバリデータ - Evidence PackがAIMO Standardスキーマに準拠していることを確認。検証ルール、エラー処理、コンプライアンスチェック用リファレンス実装。
 ---
+<!-- aimo:translation_status=translated -->
 
 # バリデータ
 

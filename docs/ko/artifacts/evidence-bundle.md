@@ -1,6 +1,7 @@
 ---
 description: AIMO 증거 번들 구조. AI 거버넌스 컴플라이언스 및 감사자 제출을 위한 목차, 추적성, 산출물을 포함한 감사 패키지 형식.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 증거 번들
 

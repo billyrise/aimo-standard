@@ -1,6 +1,7 @@
 ---
 description: Correspondance du standard AIMO avec ISMS (ISO 27001/27002). Traçabilité entre la taxonomie AIMO et les contrôles du système de management de la sécurité de l'information.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Vue ISMS (ISO/IEC 27001/27002) - Correspondance
 

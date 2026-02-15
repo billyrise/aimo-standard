@@ -1,6 +1,7 @@
 ---
 description: Scope of AIMO Standard. Defines what the standard covers including AI classification, evidence requirements, and boundaries for enterprise governance.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Scope
 

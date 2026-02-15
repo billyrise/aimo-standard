@@ -1,6 +1,7 @@
 ---
 description: 覆盖映射方法论 - AIMO 如何映射到外部框架。在审计中的使用、与证据包的关系以及可追溯性方法。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 方法论
 

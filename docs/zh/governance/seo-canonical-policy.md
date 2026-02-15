@@ -1,6 +1,7 @@
 ---
 description: AIMO SEO 和规范URL政策 - 面向搜索引擎、审计师和外部引用的URL规范化策略。
 ---
+<!-- aimo:translation_status=translated -->
 
 # SEO 与规范策略
 

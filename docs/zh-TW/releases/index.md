@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準發布 - 下載版本化 PDF、人工產物和校驗和。變更日誌、遷移指南和建置來源證明。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 發布
 

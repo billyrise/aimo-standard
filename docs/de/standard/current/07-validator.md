@@ -1,6 +1,7 @@
 ---
 description: AIMO Validator - Stellt sicher, dass Evidence Packs den AIMO Standard-Schemas entsprechen. Validierungsregeln, Fehlerbehandlung und Referenzimplementierung für Compliance-Prüfungen.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Validator
 

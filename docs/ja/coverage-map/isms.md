@@ -1,6 +1,7 @@
 ---
 description: AIMO StandardからISMS（ISO 27001/27002）へのマッピング。AIMOタクソノミーと情報セキュリティ管理システム統制間の対応関係。
 ---
+<!-- aimo:translation_status=translated -->
 
 # ISMS view (ISO/IEC 27001/27002) mapping
 

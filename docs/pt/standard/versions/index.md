@@ -1,6 +1,7 @@
 ---
 description: Histórico de versões do AIMO Standard. Releases oficiais congelados com PDFs prontos para auditoria, artefatos legíveis por máquina, checksums e atestações de proveniência de build.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Versões
 

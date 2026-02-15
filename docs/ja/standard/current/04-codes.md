@@ -1,6 +1,7 @@
 ---
 description: AIMOコード体系のフォーマットと命名規則。コード構造（XX-NNN）、ライフサイクル状態、バージョニング、タクソノミーコードの非推奨化ポリシーを定義。
 ---
+<!-- aimo:translation_status=translated -->
 
 # コード
 

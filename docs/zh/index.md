@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准 - AI治理和审计的开放标准。具有8个维度和91个代码的分类法，用于分类AI使用、证据要求和企业合规验证器。
 ---
+<!-- aimo:translation_status=translated -->
 
 # AIMO 标准
 

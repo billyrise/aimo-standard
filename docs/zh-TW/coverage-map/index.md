@@ -1,6 +1,7 @@
 ---
 description: AIMO 覆蓋範圍對應 - AIMO 標準與主要法規（ISO 42001、NIST AI RMF、歐盟 AI 法案、ISMS）之間的可追溯性，用於稽核就緒。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 覆蓋範圍對應
 
@@ -31,6 +32,8 @@ description: AIMO 覆蓋範圍對應 - AIMO 標準與主要法規（ISO 42001、
 
 - **[方法論](methodology/)**：對應是什麼和不是什麼；如何使用它；更新政策；與[證據包](../artifacts/evidence-bundle/)和[最低證據要求](../artifacts/minimum-evidence/)的關係。
 - **ISO/IEC 42001**：[ISO/IEC 42001 對應](iso-42001/) — AI 管理系統主題。
+- **ISO/IEC 42006**：[ISO/IEC 42006 對應](iso-42006/) — 對審計與認證 AIMS 的機構之要求（依 ISO/IEC 42001）。
 - **NIST AI RMF**：[NIST AI RMF 對應](nist-ai-rmf/) — Govern、Map、Measure、Manage。
 - **歐盟 AI 法案**：[歐盟 AI 法案對應](eu-ai-act/) — 高階文件和記錄保存（非法律解釋）。
+- **採購與揭露（英國、日本）**：[採購與揭露對應](procurement-and-disclosure/) — 公共部門採購與揭露（英國、日本）；僅供參照的對應。
 - **ISMS 視角**：[ISMS 對應](isms/) — ISO/IEC 27001/27002 主題（變更管理、存取控制、日誌、證據完整性）。

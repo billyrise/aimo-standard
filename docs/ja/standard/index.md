@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard仕様ハブ。現行版、バージョン履歴、適合レベル、AIガバナンスフレームワークへのカバレッジマップにアクセス。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Standard
 

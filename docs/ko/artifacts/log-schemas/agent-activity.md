@@ -1,6 +1,7 @@
 ---
 description: 에이전트 활동 로그 형식 - 기업의 에이전틱 AI 권한 행사, 도구 실행 및 재귀 작업 모니터링을 위한 벤더 중립 스키마.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 에이전트 활동 로그 형식
 

@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 사양 허브. 현재 버전, 버전 이력, 적합성 수준 및 AI 거버넌스 프레임워크에 대한 커버리지 맵에 접근합니다.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 표준
 

@@ -1,6 +1,7 @@
 ---
 description: Evidence Bundle 署名検証のロードマップ。v0.1 は参照のみ、v0.1.1 はメタデータ、v0.2 は暗号学的検証とプロビナンス。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 署名検証と Evidence-as-Code ロードマップ
 

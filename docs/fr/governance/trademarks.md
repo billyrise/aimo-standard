@@ -1,6 +1,7 @@
 ---
 description: Directives de marques AIMO - Règles d'utilisation des marques AIMO, exigences de badge de conformité et directives de branding.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Marques
 

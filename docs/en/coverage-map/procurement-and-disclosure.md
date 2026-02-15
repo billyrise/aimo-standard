@@ -1,6 +1,7 @@
 ---
 description: Procurement and disclosure overlays (UK, Japan). UK ATRS, UK procurement guidance, Japan government GenAI procurement and AI Business Guidelines. Reference mapping only.
 ---
+<!-- aimo:translation_status=source -->
 
 # Procurement & Disclosure Overlays (UK, Japan)
 

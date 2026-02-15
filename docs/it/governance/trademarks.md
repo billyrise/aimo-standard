@@ -1,6 +1,7 @@
 ---
 description: Linee guida sui marchi AIMO - Regole d'uso per i marchi AIMO, requisiti per il badge di conformità e linee guida sul branding.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Marchi
 

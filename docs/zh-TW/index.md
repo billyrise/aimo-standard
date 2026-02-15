@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準 - AI 治理和稽核的開放標準。具有 8 個維度和 91 個代碼的分類法，用於分類 AI 使用、證據要求，以及企業合規性的驗證器。
 ---
+<!-- aimo:translation_status=translated -->
 
 # AIMO 標準
 

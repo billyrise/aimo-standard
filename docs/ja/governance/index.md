@@ -1,6 +1,7 @@
 ---
 description: AIMO Standardガバナンスハブ - プロジェクトガバナンス、セキュリティポリシー、ライセンス、引用ガイドライン、コントリビュートルール。
 ---
+<!-- aimo:translation_status=translated -->
 
 # ガバナンス
 

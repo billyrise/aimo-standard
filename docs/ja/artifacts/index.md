@@ -1,6 +1,7 @@
 ---
 description: AIMO Standardアーティファクトハブ。機械可読スキーマ、証跡バンドルテンプレート、Shadow AI検知とエージェント活動監視のログスキーマ。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Artifacts
 

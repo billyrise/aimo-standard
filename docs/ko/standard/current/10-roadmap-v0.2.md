@@ -1,6 +1,7 @@
 ---
 description: Informative roadmap for v0.2. Audit object SSOT, Evidence-as-Code, output profiles, Test library, lifecycle, JNC.
 ---
+<!-- aimo:translation_status=translated -->
 
 # v0.2 roadmap (informative)
 

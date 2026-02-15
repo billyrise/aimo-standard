@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard Versionshistorie. Offizielle eingefrorene Releases mit prüfungsbereiten PDFs, maschinenlesbaren Artefakten, Prüfsummen und Build-Provenienz-Attestierungen.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Versionen
 

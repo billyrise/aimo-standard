@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 거버넌스 허브 - 프로젝트 거버넌스, 보안 정책, 라이선스, 인용 지침 및 기여 규칙.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 거버넌스
 

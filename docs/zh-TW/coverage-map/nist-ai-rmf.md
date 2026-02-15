@@ -1,6 +1,7 @@
 ---
 description: AIMO 標準與 NIST AI RMF 對應。AIMO 分類代碼與 NIST AI 風險管理框架功能之間的可追溯性。
 ---
+<!-- aimo:translation_status=translated -->
 
 # NIST AI RMF 對應
 

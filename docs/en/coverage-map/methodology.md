@@ -1,6 +1,7 @@
 ---
 description: Coverage Map methodology - How AIMO maps to external frameworks. Usage in audits, relationship to Evidence Bundle, and traceability approach.
 ---
+<!-- aimo:translation_status=source -->
 
 # Methodology
 

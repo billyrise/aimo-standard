@@ -1,6 +1,7 @@
 ---
 description: AIMO Trust Package - Auditor-ready materials bundle. Minimum documentation for auditors, legal, and IT security to assess AI governance adoption readiness.
 ---
+<!-- aimo:translation_status=source -->
 
 # Trust Package (Assurance Package)
 

@@ -1,6 +1,7 @@
 ---
 description: 当前 AIMO 标准规范。包括概述、范围、分类法、代码、字典、证据模板和AI治理的验证器规则。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 当前（最新）
 

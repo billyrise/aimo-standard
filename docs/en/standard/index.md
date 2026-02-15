@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard specification hub. Access current version, version history, conformance levels, and coverage maps for AI governance frameworks.
 ---
+<!-- aimo:translation_status=source -->
 
 # Standard
 

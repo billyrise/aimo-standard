@@ -1,6 +1,7 @@
 ---
 description: Roadmap for Evidence Bundle signature verification. v0.1 reference only; v0.1.1 metadata; v0.2 cryptographic verification and provenance.
 ---
+<!-- aimo:translation_status=source -->
 
 # Signature verification and Evidence-as-Code roadmap
 

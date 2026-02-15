@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard examples - End-to-end and minimal sample bundles showing how to assemble evidence artifacts for AI governance audits.
 ---
+<!-- aimo:translation_status=source -->
 
 # Examples
 

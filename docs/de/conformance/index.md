@@ -1,112 +1,113 @@
 ---
-description: AIMO Standard conformance levels. How organizations claim compliance, evidence requirements, and what each conformance level means for AI governance.
+description: AIMO Standard Konformitätsstufen. Wie Organisationen Konformität geltend machen, Evidenzanforderungen und was jede Stufe für KI-Governance bedeutet.
 ---
+<!-- aimo:translation_status=translated -->
 
-# Conformance
+# Konformität
 
-!!! warning "Important: No certification, no assurance, no legal compliance claim"
-    AIMO Standard defines an **evidence packaging and validation format**. It does not certify compliance with laws or standards.
-    Audit and assurance opinions remain the responsibility of independent auditors and the adopting organization.
-    **Appropriate claim:** "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
+!!! warning "Wichtig: Keine Zertifizierung, keine Prüfung, kein Rechts-/Regelkonformitätsanspruch"
+    AIMO Standard definiert ein **Evidenzverpackungs- und Validierungsformat**. Er zertifiziert keine Konformität mit Gesetzen oder Normen.
+    Audit- und Prüfungsmeinungen bleiben Verantwortung der unabhängigen Prüfer und der adoptierenden Organisation.
+    **Angemessener Anspruch:** „Ein Evidence Bundle wurde gemäß AIMO Standard v0.1.2 erstellt und vom AIMO Validator strukturell validiert.“
     <!-- UNACCEPTABLE_CLAIMS_EXAMPLES -->
-    **Inappropriate claim:** "EU AI Act compliant", "ISO 42001 certified", "government approved".
+    **Unangemessener Anspruch:** „EU-KI-Verordnung konform“, „ISO 42001 zertifiziert“, „behördlich genehmigt“.
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
-These tiers are **internal evidence maturity levels** for packaging and traceability. They are **not** a certification, **not** an assurance opinion, and **not** legal or regulatory compliance.
+Diese Stufen sind **interne Evidenzreifegrade** für Verpackung und Nachverfolgbarkeit. Sie sind **keine** Zertifizierung, **keine** Prüfungsmeinung und **keine** rechtliche oder regulatorische Konformität.
 
-!!! note "Tier name alias"
-    The top tier was previously referred to as "Gold" in informal discussions; the **official tier name is Audit-Ready**.
+!!! note "Stufenname-Alias"
+    Die oberste Stufe wurde in informellen Diskussionen früher „Gold“ genannt; der **offizielle Stufenname ist Audit-Ready**.
 
-## AIMO Conformity Framework (AIMO-MS / AIMO-Controls / AIMO-Audit)
+## AIMO-Konformitätsrahmen (AIMO-MS / AIMO-Controls / AIMO-Audit)
 
-| Component | Description | Evidence expectations |
+| Komponente | Beschreibung | Evidenzerwartungen |
 | --- | --- | --- |
-| **AIMO-MS** | Management-system–oriented structure: policies, roles, PDCA-aligned artifacts that can support ISO/IEC 42001–type controls. | Request, review, exception, renewal, change log; Summary and Dictionary. |
-| **AIMO-Controls** | Lifecycle and integrity controls: request→review→exception→renewal, hashing, signing (per [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/)). | Object_index, payload_index, hash_chain, signing; lifecycle records. |
-| **AIMO-Audit** | Readiness for audit handoff: validator pass, checksums, optional attestation and audit handoff index. | Validator output, bundle_id, producer identity, optional signature metadata and handoff index. |
+| **AIMO-MS** | Managementsystem-orientierte Struktur: Richtlinien, Rollen, PDCA-orientierte Artefakte, die ISO/IEC-42001-artige Kontrollen unterstützen können. | Request, review, exception, renewal, change log; Summary und Dictionary. |
+| **AIMO-Controls** | Lebenszyklus- und Integritätskontrollen: request→review→exception→renewal, Hashing, Signierung (gemäß [Evidence Bundle-Struktur](../../standard/current/09-evidence-bundle-structure/)). | Object_index, payload_index, hash_chain, signing; Lebenszyklusaufzeichnungen. |
+| **AIMO-Audit** | Bereitschaft zur Audit-Übergabe: Validator-Bestanden, Prüfsummen, optionale Attestation und Audit-Handoff-Index. | Validator-Ausgabe, bundle_id, Producer-Identität, optionale Signatur-Metadaten und Handoff-Index. |
 
-Evidence expectations are described in [Minimum Evidence Requirements](../artifacts/minimum-evidence/) and [Evidence Bundle](../artifacts/evidence-bundle/).
+Evidenzerwartungen werden in [Mindestanforderungen an Evidence](../artifacts/minimum-evidence/) und [Evidence Bundle](../artifacts/evidence-bundle/) beschrieben.
 
-## Conformity Levels (AIMO-only)
+## Konformitätsstufen (nur AIMO)
 
-### Level 1 — Foundation
+### Stufe 1 — Foundation
 
-**Purpose:** Traceable baseline. Minimum set to make the bundle identifiable, integrity-verifiable, and validator-checked.
+**Zweck:** Nachverfolgbare Basis. Mindestmenge, damit das Bündel identifizierbar, integritätsprüfbar und validatorgeprüft ist.
 
-| Item | Requirement |
+| Punkt | Anforderung |
 | --- | --- |
-| **Required artifacts** | [Evidence Bundle](../artifacts/evidence-bundle/) structure (manifest.json, objects/, payload_index per spec); [Validator](../validator/) pass; link to [Minimum Evidence](../artifacts/minimum-evidence/). |
-| **Typical audit questions** | What is in scope? Who produced the bundle? Can hashes be verified? |
-| **Typical gaps** | Missing manifest metadata (bundle_id, created_at, producer); validator not run or not attached. |
+| **Erforderliche Artefakte** | [Evidence Bundle](../artifacts/evidence-bundle/)-Struktur (manifest.json, objects/, payload_index pro Spez.); [Validator](../validator/)-Bestanden; Verknüpfung zu [Mindestanforderungen an Evidence](../artifacts/minimum-evidence/). |
+| **Typische Audit-Fragen** | Was ist im Umfang? Wer hat das Bündel erstellt? Können Hashes verifiziert werden? |
+| **Typische Lücken** | Fehlende Manifest-Metadaten (bundle_id, created_at, producer); Validator nicht ausgeführt oder nicht beigefügt. |
 
-### Level 2 — Operational
+### Stufe 2 — Operational
 
-**Purpose:** Operational control evidence. Builds on Foundation with lifecycle trail and monitoring.
+**Zweck:** Evidenz operativer Kontrolle. Baut auf Foundation mit Lebenszyklusnachweis und Überwachung auf.
 
-| Item | Requirement |
+| Punkt | Anforderung |
 | --- | --- |
-| **Required artifacts** | All Foundation MUST items; lifecycle control trail (request/approval, review, exception or “no exceptions”, renewal schedule); at least one monitoring artifact (incident log or periodic check or human oversight sampling); change log with integrity linkage; proof vs assurance boundary statement. |
-| **Typical audit questions** | Who approved use? How are exceptions tracked? When was the last review? |
-| **Typical gaps** | Review/approval not linked to request; no monitoring artifact; change log not referencing impacted objects. |
+| **Erforderliche Artefakte** | Alle Foundation-MUST-Punkte; Lebenszyklus-Kontrollnachweis (request/Genehmigung, review, exception oder „keine Ausnahmen“, renewal-Plan); mindestens ein Überwachungsartefakt (Vorfallprotokoll oder periodische Prüfung oder Human-Oversight-Stichprobe); change log mit Integritätsverknüpfung; Nachweis-vs.-Prüfungsgrenzen-Erklärung. |
+| **Typische Audit-Fragen** | Wer hat die Nutzung genehmigt? Wie werden Ausnahmen verfolgt? Wann war die letzte Überprüfung? |
+| **Typische Lücken** | Review/Genehmigung nicht mit request verknüpft; kein Überwachungsartefakt; change log referenziert betroffene Objekte nicht. |
 
-### Level 3 — Audit-Ready
+### Stufe 3 — Audit-Ready
 
-**Purpose:** Audit handoff quality. Full attestation, reproducibility, and external-form slotting.
+**Zweck:** Qualität der Audit-Übergabe. Vollständige Attestation, Reproduzierbarkeit und External-Forms-Slot.
 
-| Item | Requirement |
+| Punkt | Anforderung |
 | --- | --- |
-| **Required artifacts** | All Operational MUST items; at least one digital signature covering manifest (signer identity + algorithm); TSA or “no TSA” statement; reproducibility packet (exact validator command, expected outputs, environment metadata); External Forms section with official templates/checklists attached as-is and cross-referenced; bounded completeness statement; one-page audit handoff index (artifact → hash → producer → date). |
-| **Typical audit questions** | How can an auditor re-run validation? Where are external checklists and how do they map to the bundle? |
-| **Typical gaps** | Signature present but signer/algorithm not documented; no handoff index; external forms not hashed or not referenced in manifest. |
+| **Erforderliche Artefakte** | Alle Operational-MUST-Punkte; mindestens eine digitale Signatur über das Manifest (Signaturgeber-Identität + Algorithmus); TSA- oder „kein TSA“-Erklärung; Reproduzierbarkeitspaket (exakter Validator-Befehl, erwartete Ausgaben, Umgebungsmetadaten); External-Forms-Abschnitt mit offiziellen Vorlagen/Checklisten unverändert angefügt und querverwiesen; begrenzte Vollständigkeitserklärung; einseitiger Audit-Handoff-Index (Artefakt → Hash → Producer → Datum). |
+| **Typische Audit-Fragen** | Wie kann ein Prüfer die Validierung erneut ausführen? Wo sind externe Checklisten und wie werden sie dem Bündel zugeordnet? |
+| **Typische Lücken** | Signatur vorhanden, aber Signaturgeber/Algorithmus nicht dokumentiert; kein Handoff-Index; External Forms nicht gehasht oder im Manifest nicht referenziert. |
 
-## Minimum Evidence by Level (summary)
+## Mindestevidenz nach Stufe (Zusammenfassung)
 
-| Level | MUST (summary) |
+| Stufe | MUST (Zusammenfassung) |
 | --- | --- |
-| **Foundation** | Bundle structure (manifest, object_index, payload_index); sha256 for referenced objects; bundle_id, created_at, producer; validator run + version; evidence dictionary baseline (system name, owner, purpose, data categories, lifecycle stage); access & retention statement (who, duration, storage type, tamper-evidence). SHOULD: minimal change log entry. |
-| **Operational** | All Foundation MUST; lifecycle trail (request/approval, review, exception or “none”, renewal + last renewal); ≥1 monitoring artifact; change log entries reference impacted objects; explicit proof vs assurance boundary statement. |
-| **Audit-Ready** | All Operational MUST; ≥1 signature over manifest (signer identity + algorithm); TSA or “no TSA”; reproducibility packet; External Forms listed and cross-referenced; bounded completeness statement; audit handoff index. |
+| **Foundation** | Bündelstruktur (manifest, object_index, payload_index); sha256 für referenzierte Objekte; bundle_id, created_at, producer; Validator-Lauf + Version; Evidenzwörterbuch-Basis (Systemname, Owner, Zweck, Datenkategorien, Lebenszyklusphase); Zugriffs- und Aufbewahrungserklärung (wer, Dauer, Speicherart, Manipulationsnachweis). SHOULD: minimaler change-log-Eintrag. |
+| **Operational** | Alle Foundation-MUST; Lebenszyklusnachweis (request/Genehmigung, review, exception oder „keine“, renewal + letzte renewal); ≥1 Überwachungsartefakt; change-log-Einträge referenzieren betroffene Objekte; ausdrückliche Nachweis-vs.-Prüfungsgrenzen-Erklärung. |
+| **Audit-Ready** | Alle Operational-MUST; ≥1 Signatur über Manifest (Signaturgeber-Identität + Algorithmus); TSA oder „kein TSA“; Reproduzierbarkeitspaket; External Forms aufgeführt und querverwiesen; begrenzte Vollständigkeitserklärung; Audit-Handoff-Index. |
 
-Signature **presence** (at least one signature targeting the manifest) is required by the normative [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/) for all bundles. **Audit-Ready** adds stricter **cryptographic attestation** (signer identity, algorithm, TSA statement, re-validation instructions) so a third party can re-perform checks.
+**Vorhandensein** mindestens einer Signatur (die das Manifest zum Ziel hat) ist durch die normative [Evidence Bundle-Struktur](../../standard/current/09-evidence-bundle-structure/) für alle Bündel gefordert. **Audit-Ready** fügt strengere **kryptografische Attestation** hinzu (Signaturgeber-Identität, Algorithmus, TSA-Erklärung, Revalidierungsanleitung), damit Dritte die Prüfungen erneut durchführen können.
 
-## ISO/IEC 42001 Mapping (informative)
+## ISO/IEC 42001-Zuordnung (informativ)
 
-The following table shows how AIMO artifacts **support evidence for** typical ISO/IEC 42001 clause families. This is informative only; it does not imply certification or compliance.
+Die folgende Tabelle zeigt, wie AIMO-Artefakte **Evidenz für** typische ISO/IEC-42001-Klauselfamilien unterstützen. Sie ist nur informativ; sie impliziert keine Zertifizierung oder Konformität.
 
-| ISO/IEC 42001 clause family | AIMO artifacts that support evidence |
+| ISO/IEC 42001-Klauselfamilie | AIMO-Artefakte, die Evidenz unterstützen |
 | --- | --- |
-| Context of the organization | Summary, Dictionary, scope_ref |
-| Leadership / Policy | Summary, review, dictionary |
-| Planning (risks, objectives) | request, review, exception, EV, Dictionary |
-| Support (resources, competence, documentation) | Summary, review, EV, change_log |
-| Operation | EV, request, review, exception; operational controls |
-| Performance evaluation (monitoring, internal audit, management review) | EV, change_log, review, renewal |
-| Improvement | exception, renewal, change_log |
+| Kontext der Organisation | Summary, Dictionary, scope_ref |
+| Führung / Politik | Summary, review, dictionary |
+| Planung (Risiken, Ziele) | request, review, exception, EV, Dictionary |
+| Unterstützung (Ressourcen, Kompetenz, Dokumentation) | Summary, review, EV, change_log |
+| Betrieb | EV, request, review, exception; operative Kontrollen |
+| Leistungsbewertung (Überwachung, internes Audit, Managementreview) | EV, change_log, review, renewal |
+| Verbesserung | exception, renewal, change_log |
 
-See [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) and [ISO 42001 Certification Readiness Toolkit](../artifacts/iso-42001-certification-readiness-toolkit/) for more detail.
+Siehe [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) und [ISO-42001-Zertifizierungsvorbereitungs-Toolkit](../artifacts/iso-42001-certification-readiness-toolkit/) für Details.
 
-## Claim language templates (anti-overclaim)
+## Anspruchsformulierungen (Anti-Überbeanspruchung)
 
-Use only claims that accurately describe what was done. Certification and legal compliance remain the responsibility of adopters and accredited bodies.
+Nur Ansprüche verwenden, die das tatsächlich Durchgeführte zutreffend beschreiben. Zertifizierung und rechtliche Konformität bleiben Verantwortung der Adoptierenden und akkreditierten Stellen.
 
-**Acceptable (examples)**
+**Akzeptabel (Beispiele)**
 
-- "We are AIMO Conformant (Level 2) against AIMO Standard v0.1.2; this does not imply ISO certification or legal compliance."
-- "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies."
-- "An Evidence Bundle was produced according to AIMO Standard v0.1.2 and structurally validated by the AIMO Validator."
+- „Wir sind AIMO-konform (Stufe 2) gegen AIMO Standard v0.1.2; dies impliziert keine ISO-Zertifizierung oder rechtliche Konformität.“
+- „Wir nutzen AIMO-Artefakte zur ISO/IEC-42001-Vorbereitung; Zertifizierungsentscheidungen liegen bei akkreditierten Zertifizierungsstellen.“
+- „Ein Evidence Bundle wurde gemäß AIMO Standard v0.1.2 erstellt und vom AIMO Validator strukturell validiert.“
 
 <!-- UNACCEPTABLE_CLAIMS_EXAMPLES -->
-**Unacceptable (examples)**
+**Unakzeptabel (Beispiele)**
 
-- "EU AI Act compliant" (AIMO does not certify regulatory compliance.)
-- "ISO 42001 certified" (Certification is issued by accredited certification bodies, not AIMO.)
-- "Government approved" (AIMO is not a government approval scheme.)
+- „EU-KI-Verordnung konform“ (AIMO zertifiziert keine regulatorische Konformität.)
+- „ISO 42001 zertifiziert“ (Zertifizierung wird von akkreditierten Stellen ausgestellt, nicht von AIMO.)
+- „Behördlich genehmigt“ (AIMO ist kein behördliches Genehmigungssystem.)
 <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
-## Related pages
+## Verwandte Seiten
 
-- [Trust Package](../governance/trust-package/) — Consolidated entry point for auditors
-- [Responsibility Boundary](../governance/responsibility-boundary/) — What AIMO does and does not provide
-- [Standard (Current)](../standard/current/) — Normative requirements
-- [Artifacts](../artifacts/) — Evidence structure and Minimum Evidence
-- [Validator](../validator/) — Structural validation
+- [Trust Package](../governance/trust-package/) — Konsolidierter Einstieg für Prüfer
+- [Responsibility Boundary](../governance/responsibility-boundary/) — Was AIMO bietet und nicht bietet
+- [Standard (Current)](../standard/current/) — Normative Anforderungen
+- [Artifacts](../artifacts/) — Evidenzstruktur und Mindestanforderungen
+- [Validator](../validator/) — Strukturvalidierung

@@ -1,28 +1,29 @@
 ---
-description: Procurement and disclosure overlays (UK, Japan). UK ATRS, UK procurement guidance, Japan government GenAI procurement and AI Business Guidelines. Reference mapping only.
+description: 조달·공개 오버레이(영국, 일본). 영국 ATRS, 영국 조달 가이드, 일본 정부 GenAI 조달 및 AI 비즈니스 가이드라인. 참조 매핑만.
 ---
+<!-- aimo:translation_status=translated -->
 
-# Procurement & Disclosure Overlays (UK, Japan)
+# 조달 및 공개 오버레이(영국, 일본)
 
-This page describes **reference mappings** between AIMO evidence and selected **UK** and **Japan** procurement and disclosure frameworks. It is **reference mapping only**; AIMO does not replace official checklists or government guidance.
+이 페이지는 AIMO 증거와 선정된 **영국** 및 **일본** 조달·공개 프레임워크 간의 **참조 매핑**을 설명합니다. **참조 매핑만**이며, AIMO는 공식 체크리스트나 정부 가이드를 대체하지 않습니다.
 
-## UK: ATRS and AI procurement
+## 영국: ATRS 및 AI 조달
 
-| Topic | AIMO evidence / mapping | Notes |
+| 주제 | AIMO 증거 / 매핑 | 비고 |
 | --- | --- | --- |
-| **UK ATRS** (AI Transparency Record) | Summary, review (accountability owner), evidence (model/system description), dictionary (risk considerations). Profile: `coverage_map/profiles/uk_atrs_procurement.json`. | Attach or reference ATRS-style transparency record in External Forms; link to bundle objects by logical_id. |
-| **UK procurement guidance** | Request, review, exception; Evidence Bundle for supplier evaluation. | Use AIMO bundle to structure evidence for procurement evaluation; official UK guidance remains authoritative. |
+| **영국 ATRS**(AI 투명성 기록) | Summary, review(책임 소유자), evidence(모델/시스템 설명), dictionary(위험 고려). 프로필: `coverage_map/profiles/uk_atrs_procurement.json`. | 외부 양식에 ATRS형 투명성 기록 첨부 또는 참조; logical_id로 번들 객체에 연결. |
+| **영국 조달 가이드** | Request, review, exception; Evidence Bundle로 공급자 평가에 활용. | AIMO 번들로 조달 평가용 증거 구조화; 공식 영국 가이드가 권위. |
 
-## Japan: Government GenAI procurement and AI Business Guidelines
+## 일본: 정부 GenAI 조달 및 AI 비즈니스 가이드라인
 
-| Topic | AIMO evidence / mapping | Notes |
+| 주제 | AIMO 증거 / 매핑 | 비고 |
 | --- | --- | --- |
-| **JP government GenAI procurement checklist** | Attach checklist as External Form (e.g. payload: JP_PROCUREMENT_CHECKLIST); reference in manifest. Profile: `coverage_map/profiles/jp_gov_genai_procurement.json`. | Reference mapping only; AIMO does not replace official checklists. |
-| **AI Business Guidelines** | Summary, dictionary; map checklist items to AIMO taxonomy codes where useful for traceability. | Use for explainability; verify against official Japanese guidance. |
+| **일본 정부 GenAI 조달 체크리스트** | 체크리스트를 외부 양식으로 첨부(예: payload: JP_PROCUREMENT_CHECKLIST); manifest에서 참조. 프로필: `coverage_map/profiles/jp_gov_genai_procurement.json`. | 참조 매핑만; AIMO는 공식 체크리스트를 대체하지 않음. |
+| **AI 비즈니스 가이드라인** | Summary, dictionary; 추적성에 유용할 때 체크리스트 항목을 AIMO 분류체계 코드에 매핑. | 설명 가능성에 활용; 일본 공식 가이드로 확인. |
 
-## How to use
+## 사용 방법
 
-- **External Forms**: Attach UK or Japan official templates/checklists **as-is** (PDF, DOC, etc.), hash them, and list them in the Evidence Bundle [payload_index](../../standard/current/09-evidence-bundle-structure/) or in the [EV Template External Forms section](../../standard/current/06-ev-template/). Reference them by logical_id in the manifest and in coverage mappings.
-- **Profiles**: The profiles listed above define optional machine-readable mappings; they do not impose legal or contractual obligations.
+- **외부 양식**: 영국 또는 일본 공식 템플릿/체크리스트를 **그대로** 첨부(PDF, DOC 등), 해시하고 Evidence Bundle [payload_index](../../standard/current/09-evidence-bundle-structure/) 또는 [EV 템플릿 외부 양식 절](../../standard/current/06-ev-template/)에 나열. manifest 및 커버리지 매핑에서 logical_id로 참조.
+- **프로필**: 위 프로필은 선택적 기계 가독 매핑을 정의하며, 법적·계약적 의무를 부과하지 않습니다.
 
-See [Conformance](../../conformance/) for levels and [Minimum Evidence — Regulatory overlays](../../artifacts/minimum-evidence/) for overlay summary.
+수준은 [적합성](../../conformance/), 오버레이 요약은 [최소 증거 — 규제 오버레이](../../artifacts/minimum-evidence/)를 참조하세요.

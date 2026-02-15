@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard artifacts hub. Machine-readable schemas, evidence bundle templates, log schemas for Shadow AI discovery and agent activity monitoring.
 ---
+<!-- aimo:translation_status=source -->
 
 # Artifacts
 

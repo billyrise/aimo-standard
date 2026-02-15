@@ -1,6 +1,7 @@
 ---
 description: AIMO Standardリリース - バージョン別PDF、アーティファクト、チェックサムのダウンロード。変更履歴、移行ガイド、ビルド来歴証明書。
 ---
+<!-- aimo:translation_status=translated -->
 
 # リリース（Releases）
 

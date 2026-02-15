@@ -1,6 +1,7 @@
 ---
 description: AIMO Standard security policy - Vulnerability reporting, disclosure procedures, and security considerations for AI governance implementations.
 ---
+<!-- aimo:translation_status=source -->
 
 # Security
 

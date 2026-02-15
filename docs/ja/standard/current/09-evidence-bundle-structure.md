@@ -1,84 +1,85 @@
 ---
-description: Normative root structure and manifest for Evidence Bundle (v0.1). Integrity MUST; Custody is implementation-defined.
+description: Evidence Bundle（v0.1）の規範的ルート構造とマニフェスト。Integrity は MUST；Custody は実装定義。
 ---
+<!-- aimo:translation_status=translated -->
 
-# Evidence Bundle root structure (v0.1)
+# Evidence Bundle ルート構造（v0.1）
 
-This page defines the **normative** root layout and manifest for an Evidence Bundle. Validators MUST reject bundles that do not satisfy these requirements before any schema validation.
+本ページは、Evidence Bundle の**規範的**ルートレイアウトとマニフェストを定義します。Validator は、これらの要件を満たさないバンドルをスキーマ検証の前に拒否しなければなりません。
 
-## v0.1 normative MUST (summary)
+## v0.1 規範 MUST（概要）
 
-- **manifest.json** at bundle root is required.
-- **object_index** and **payload_index**: each entry MUST include **sha256** (64 lowercase hex); paths MUST be relative and MUST NOT contain `../` or escape the bundle root.
-- **signing.signatures** MUST be a non-empty array (empty array is invalid).
-- Each signature entry MUST have: **path** under `signatures/` (path traversal forbidden), **targets** (array, at least one path), and at least one signature in the bundle MUST list **manifest.json** in **targets** (manifest signing is mandatory).
-- **hash_chain**: v0.1 MUST include **algorithm**, **head**, **path** (under `hashes/`), and **covers** with at least **manifest.json** and **objects/index.json**.
+- バンドルルートに **manifest.json** が必須。
+- **object_index** と **payload_index**: 各エントリは **sha256**（64 文字小 hex）を含むこと；パスは相対で、`../` を含まずバンドルルートから脱しないこと。
+- **signing.signatures** は空でない配列（空配列は無効）。
+- 各署名エントリは: `signatures/` 下の **path**（パス横断禁止）、**targets**（配列、少なくとも 1 パス）、かつバンドル内の少なくとも 1 つの署名が **targets** に **manifest.json** を含むこと（manifest への署名は必須）。
+- **hash_chain**: v0.1 では **algorithm**、**head**、**path**（`hashes/` 下）、**covers**（少なくとも **manifest.json** と **objects/index.json**）を含むこと。
 
-Validators MUST enforce these before accepting a bundle. The JSON Schema and the reference validator implement the same rules.
+Validator はバンドル受理前にこれらを強制します。JSON Schema と参照 Validator は同じルールを実装します。
 
-## Root required structure (MUST)
+## ルート必須構造（MUST）
 
-At the bundle root, the following MUST be present:
+バンドルルートに以下が存在すること:
 
-| Item | Type | Purpose |
-|------|------|---------|
-| **manifest.json** | File | Bundle manifest (see below). Canonical descriptor for the bundle. |
-| **objects/** | Directory | Enumerated objects (e.g. metadata, indexes). Listed in `manifest.json` `object_index`. |
-| **payloads/** | Directory | Payload files (e.g. root EV JSON, Evidence Pack files). Listed in `manifest.json` `payload_index`. |
-| **signatures/** | Directory | Digital signatures. v0.1 MUST contain at least one signature file that references the manifest (existence and target reference; cryptographic verification is a future extension). |
-| **hashes/** | Directory | Hash chain or integrity records (as needed by `manifest.json` `hash_chain`). |
+| 項目 | 型 | 目的 |
+| --- | --- | --- |
+| **manifest.json** | ファイル | バンドルマニフェスト（下記）。バンドルの正規記述子。 |
+| **objects/** | ディレクトリ | 列挙オブジェクト（メタデータ、インデックス等）。`manifest.json` の `object_index` に列挙。 |
+| **payloads/** | ディレクトリ | Payload ファイル（ルート EV JSON、Evidence Pack ファイル等）。`manifest.json` の `payload_index` に列挙。 |
+| **signatures/** | ディレクトリ | デジタル署名。v0.1 では manifest を参照する少なくとも 1 つの署名ファイルが必須（存在とターゲット参照；暗号検証は将来拡張）。 |
+| **hashes/** | ディレクトリ | ハッシュチェーンまたは整合性記録（`manifest.json` の `hash_chain` に従う）。 |
 
-Implementers MUST NOT submit a bundle that omits any of these. The Validator MUST fail with a clear message when the root structure is incomplete.
+実装者はこれらを欠くバンドルを提出してはなりません。ルート構造が不完全な場合、Validator は明確なメッセージで失敗しなければなりません。
 
-## Integrity (normative) vs Custody (implementation)
+## Integrity（規範）と Custody（実装）
 
-- **Integrity** is **normative** in v0.1: the standard mandates that the bundle carries integrity metadata (manifest, sha256 for indexed files, signature presence for the manifest). Validators MUST check that:
-  - Required directories and files exist.
-  - `manifest.json` is present and valid (schema and pre-schema checks).
-  - Every file listed in `object_index` and `payload_index` exists at the given path and its content matches the declared `sha256`.
-  - `signatures/` contains at least one signature that targets the manifest (v0.1: existence and reference only; v0.1.1: verification metadata RECOMMENDED; v0.2 planned: cryptographic verification in scope).
-- **Custody** (storage, access control, retention, WORM) is **implementation-defined**. The standard does not prescribe how custodians store or protect the bundle; it only requires that the package, when submitted, satisfies the Integrity requirements above.
+- **Integrity** は v0.1 で**規範**です：標準は、バンドルが整合性メタデータ（manifest、索引ファイルの sha256、manifest への署名の存在）を持つことを要求します。Validator は以下を確認しなければなりません：
+  - 必須ディレクトリ・ファイルが存在する。
+  - `manifest.json` が存在し有効（スキーマおよび前スキーマチェック）。
+  - `object_index` と `payload_index` に列挙された全ファイルが指定パスに存在し、内容が宣言された `sha256` と一致する。
+  - `signatures/` に manifest をターゲットとする少なくとも 1 つの署名が含まれる（v0.1: 存在と参照のみ；v0.1.1: 検証メタデータを RECOMMENDED；v0.2 予定: 暗号検証をスコープに含める）。
+- **Custody**（保管、アクセス制御、保持、WORM）は**実装定義**です。標準は保管者がバンドルをどう保管・保護するかは規定せず、提出時点のパッケージが上記 Integrity 要件を満たすことのみを要求します。
 
-## manifest.json (MUST fields)
+## manifest.json（MUST フィールド）
 
-The manifest MUST include at least:
+マニフェストは少なくとも以下を含むこと:
 
-| Field | Type | Description |
-|-------|------|-------------|
-| **bundle_id** | string (UUID) | Unique identifier for this bundle. |
-| **bundle_version** | string (SemVer) | Version of the bundle. |
-| **created_at** | string (date-time) | Creation timestamp. |
-| **scope_ref** | string | Scope reference (e.g. `SC-001`). Pattern `SC-*`. |
-| **object_index** | array | List of objects: `id`, `type`, `path`, `sha256`. Paths MUST be relative, MUST NOT contain `../` or start with `/`, and MUST remain within the Evidence Bundle root (validators MUST reject paths that escape the bundle root). |
-| **payload_index** | array | List of payloads: `logical_id`, `path`, `sha256`, `mime`, `size`. Same path rules as object_index (relative, no `../`, no leading `/`, within bundle root). |
-| **hash_chain** | object | **Normative (v0.1):** MUST include `algorithm` (sha256 \| merkle), `head` (64 lowercase hex), `path` (relative path under `hashes/`; no `../`, no leading `/`), and `covers` (array, at least one element). v0.1 MUST include `manifest.json` and `objects/index.json` in `covers`. |
-| **signing** | object | **Normative (v0.1):** MUST include `signatures` (array, at least one entry). Each entry MUST have: `signature_id` (e.g. SIG-... or UUID), `path` (relative under `signatures/`; no `../`, no leading `/`), `targets` (array, at least one path; v0.1 MUST include `manifest.json` in at least one signature's targets), `algorithm` (one of ed25519, rsa-pss, ecdsa, unspecified). `created_at` (date-time) is MAY. **Note:** Cryptographic verification of signatures is out of scope for v0.1; reference (which file and what it targets) is required. |
+| フィールド | 型 | 説明 |
+| --- | --- | --- |
+| **bundle_id** | string (UUID) | 当該バンドルの一意識別子。 |
+| **bundle_version** | string (SemVer) | バンドルのバージョン。 |
+| **created_at** | string (date-time) | 作成タイムスタンプ。 |
+| **scope_ref** | string | スコープ参照（例: `SC-001`）。パターン `SC-*`。 |
+| **object_index** | array | オブジェクト一覧: `id`、`type`、`path`、`sha256`。パスは相対、`../` を含まず `/` で始まらず、Evidence Bundle ルート内に留まること（Validator はルート外へのパスを拒否する）。 |
+| **payload_index** | array | Payload 一覧: `logical_id`、`path`、`sha256`、`mime`、`size`。object_index と同じパスルール（相対、`../` なし、先頭 `/` なし、バンドルルート内）。 |
+| **hash_chain** | object | **規範 (v0.1):** `algorithm`（sha256 \| merkle）、`head`（64 文字小 hex）、`path`（`hashes/` 下の相対パス；`../` なし、先頭 `/` なし）、`covers`（配列、少なくとも 1 要素）を含むこと。v0.1 では `covers` に `manifest.json` と `objects/index.json` を含むこと。 |
+| **signing** | object | **規範 (v0.1):** `signatures`（配列、少なくとも 1 エントリ）を含むこと。各エントリは: `signature_id`（例 SIG-... または UUID）、`path`（`signatures/` 下の相対；`../` なし、先頭 `/` なし）、`targets`（配列、少なくとも 1 パス；v0.1 では少なくとも 1 つの署名の targets に `manifest.json` を含む）、`algorithm`（ed25519、rsa-pss、ecdsa、unspecified のいずれか）。`created_at`（date-time）は MAY。**注:** v0.1 では署名の暗号検証はスコープ外；参照（どのファイルを何にターゲットするか）が必須。 |
 
-**v0.1.1 optional signature metadata (RECOMMENDED for third-party re-performance):**
+**v0.1.1 オプション署名メタデータ（第三者による再実行には RECOMMENDED）:**
 
-| Field | Type | Description |
-|-------|------|-------------|
-| **signer_identity** | string | Identity of the signer (e.g. PGP fingerprint, did:key). |
-| **signed_at** | string (date-time) | When the signature was applied (ISO 8601). |
-| **verification_command** | string | Example CLI command for an auditor to re-perform verification. |
-| **canonicalization** | string | How the signed payload was canonicalized: `rfc8785_json`, `cbor`, or `unspecified`. |
+| フィールド | 型 | 説明 |
+| --- | --- | --- |
+| **signer_identity** | string | 署名者の identity（例: PGP フィンガープリント、did:key）。 |
+| **signed_at** | string (date-time) | 署名が付与された時刻（ISO 8601）。 |
+| **verification_command** | string | 監査人が検証を再実行するための例示 CLI コマンド。 |
+| **canonicalization** | string | 署名対象 payload の正規化方法: `rfc8785_json`、`cbor`、`unspecified`。 |
 
-Integrity and verification: **v0.1** — reference and existence only. **v0.1.1** — metadata for verification is RECOMMENDED. **v0.2** (planned) — cryptographic verification in scope.
+Integrity と検証: **v0.1** — 参照と存在のみ。**v0.1.1** — 検証用メタデータを RECOMMENDED。**v0.2**（予定）— 暗号検証をスコープに含める。
 
-- **sha256** values MUST be 64 lowercase hexadecimal characters.
-- **path** MUST be a relative path; MUST NOT contain `../` or start with `/`; paths MUST stay within the Evidence Bundle root.
-- The manifest MAY include an explicit self-reference (e.g. in `object_index` or a dedicated field) so that the manifest’s own integrity is covered; validators MUST accept a bundle where the manifest is either listed in an index or explicitly referenced by a signature.
+- **sha256** 値は 64 文字の小文字十六進位でなければなりません。
+- **path** は相対パスとし、`../` を含まず `/` で始まらず、Evidence Bundle ルート内に留まること。
+- マニフェストは、自身の整合性がカバーされるよう、明示的な自己参照（例: `object_index` または専用フィールド）を含んでよい；Validator は、マニフェストが何らかのインデックスに列挙されているか、署名で明示的に参照されているバンドルを受け入れなければなりません。
 
-See the JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json`.
+JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json` を参照。
 
-## Future extensions (informative)
+## 将来拡張（参考）
 
-- **Control/Requirement linkage**: A future version may add a standard way to link Evidence Bundle elements to Control or Requirement identifiers (e.g. for export to NIST OSCAL or similar audit automation formats). This is not required in v0.1 or v0.1.1.
+- **Control/Requirement リンク**: 将来バージョンで、Evidence Bundle 要素を Control または Requirement 識別子にリンクする標準的な方法（例: NIST OSCAL 等へのエクスポート）を追加する可能性があります。v0.1 および v0.1.1 では不要です。
 
-## References
+## 参考文献
 
-- [Evidence Bundle (artifact overview)](../../../artifacts/evidence-bundle/) — purpose and TOC
-- [EV Template — External Forms and Audit Handoff Index](../06-ev-template/#external-forms-official-templateschecklists-attached-as-is) — where to attach official templates/checklists and how to reference them in the manifest
-- [Signature verification roadmap](../../../artifacts/signature-verification-roadmap/) — v0.1.1 metadata and v0.2 verification plan
-- [Validator](../../../validator/) — how the validator enforces this structure
-- [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) — MUST-level checklist
+- [Evidence Bundle（アーティファクト概要）](../../../artifacts/evidence-bundle/) — 目的と目次
+- [EV テンプレート — External Forms と監査引き継ぎインデックス](../06-ev-template/#external-forms-official-templateschecklists-attached-as-is) — 公式テンプレート/チェックリストの添付とマニフェストでの参照方法
+- [署名検証ロードマップ](../../../artifacts/signature-verification-roadmap/) — v0.1.1 メタデータと v0.2 検証計画
+- [Validator](../../../validator/) — 当該構造の強制方法
+- [最低証拠要件](../../../artifacts/minimum-evidence/) — MUST レベルチェックリスト

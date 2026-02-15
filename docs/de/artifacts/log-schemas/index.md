@@ -1,6 +1,7 @@
 ---
 description: AIMO Log Schemas - Herstellerneutrale Log-Formate für KI-Evidence. Beinhaltet Shadow AI-Erkennung und Agentenaktivitätsüberwachungs-Schemas.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Log Schemas
 

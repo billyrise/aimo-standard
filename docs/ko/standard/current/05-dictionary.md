@@ -1,6 +1,7 @@
 ---
 description: AIMO 딕셔너리 - 8개 차원에 걸친 91개 분류체계 코드의 권위 있는 목록. AI 분류를 위한 완전한 정의, 레이블 및 생명주기 정보.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 딕셔너리
 

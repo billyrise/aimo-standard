@@ -1,71 +1,72 @@
 ---
-description: AIMO Standard to EU AI Act mapping. Traceability between AIMO taxonomy codes and EU AI Act risk categories and requirements.
+description: AIMO Standard와 EU AI 법 매핑. AIMO 분류체계 코드와 EU AI 법 위험 범주·요구사항 간 추적성.
 ---
+<!-- aimo:translation_status=translated -->
 
-# EU AI Act mapping
+# EU AI 법 매핑
 
-> Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
+> 추적성 바로가기: 분류체계 → 최소 증거 → 검증기 → 인간 감독 프로토콜.
 
-- [Taxonomy](../../standard/current/03-taxonomy/)
-- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
-- [Log Schemas](../../artifacts/log-schemas/)
-- [Validator](../../validator/)
-- [Human Oversight Protocol](../../governance/human-oversight-protocol/)
+- [분류체계](../../standard/current/03-taxonomy/)
+- [최소 증거 요구사항](../../artifacts/minimum-evidence/)
+- [로그 스키마](../../artifacts/log-schemas/)
+- [검증기](../../validator/)
+- [인간 감독 프로토콜](../../governance/human-oversight-protocol/)
 
-This page maps selected EU AI Act themes (documentation, record-keeping, risk management, human oversight, transparency) to AIMO evidence and artifacts. It is high-level only and does **not** constitute legal advice or guarantee conformity. Verify against the official legal text.
+이 페이지는 선정된 EU AI 법 주제(문서화, 기록 유지, 위험 관리, 인간 감독, 투명성)를 AIMO 증거 및 산출물에 매핑합니다. 개요 수준이며 **법적 조언**이나 적합성 보장을 구성하지 않습니다. 공식 법문으로 확인하세요.
 
-**Reference:** Regulation (EU) 2024/1689 (Artificial Intelligence Act). All article numbers below refer to that regulation.
+**참조:** 규칙 (EU) 2024/1689(인공지능법). 아래 조 번호는 해당 규칙을 가리킵니다.
 
-## Mapping table
+## 매핑 테이블
 
-| Framework reference / topic | AIMO evidence / where in AIMO | Evidence Bundle / Minimum Evidence | Artifacts & validation | Notes |
+| 프레임워크 참조 / 주제 | AIMO 증거 / AIMO 내 위치 | 증거 번들 / 최소 증거 | 산출물 및 검증 | 비고 |
 | --- | --- | --- | --- | --- |
-| Art 4 – AI literacy | [Scope](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | Cross-cutting; evidence of organisational capability/training (high-level). Not legal advice. Verify against official text. |
-| Art 9 – Risk management system | [Scope](../../standard/current/02-scope/) | request, review, exception, renewal | templates/ev/ | High-risk AI systems (Title III). Not legal advice. Verify against official text. |
-| Art 10 – Data and data governance | [Dictionary](../../standard/current/05-dictionary/) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | Not legal advice. Verify against official text. |
-| Art 11 – Technical documentation (high-risk) | [EV Template](../../standard/current/06-ev-template/), [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; **Annex IV**: see [Examples > EU Annex IV sample](../../examples/) (`examples/evidence_bundle_v01_annex_iv_sample/`); profile: `coverage_map/profiles/eu_ai_act_annex_iv.json`. Sample bundle is normative-compliant (signatures/, hashes/, payload with Annex IV–oriented technical documentation). See Examples for details (further sample content in a future release). | High-level only; not legal advice. Verify against official text. |
-| Art 12 – Record-keeping | [Evidence Bundle](../../artifacts/evidence-bundle/), [Minimum Evidence](../../artifacts/minimum-evidence/) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | Not legal advice. Verify against official text. |
-| Art 13 – Transparency and provision of information to deployers/users | [Scope](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | High-risk context. Not legal advice. Verify against official text. |
-| Art 14 – Human oversight | [Minimum Evidence](../../artifacts/minimum-evidence/) | review, exception | templates/ev/ev_template.md | Not legal advice. Verify against official text. |
-| Art 15 – Accuracy, robustness, cybersecurity | [Minimum Evidence](../../artifacts/minimum-evidence/) | EV (evidence codes / risk codes, high-level) | templates/ev/ | High-level mapping only. Not legal advice. Verify against official text. |
-| Art 17 – Quality management system | [Scope](../../standard/current/02-scope/) | Summary, review (organisation process) | templates/ev/ | Distinct from Art 9 (risk management system). Not legal advice. Verify against official text. |
-| Transparency obligations (use-case dependent) | [Scope](../../standard/current/02-scope/), [Minimum Evidence](../../artifacts/minimum-evidence/) | Summary, EV; review | templates/ev/ | Applicable provisions depend on use case (e.g. limited-risk, deployer duties). Not legal advice. Verify against official text. |
-| GPAI models obligations | [EV Template](../../standard/current/06-ev-template/), [Evidence Bundle](../../artifacts/evidence-bundle/) | EV Template, Evidence Bundle (evidence-structuring framework) | schemas/jsonschema/; schema_validate_ev | AIMO provides a framework for organising evidence; actual obligations are defined by the regulation. Not legal advice. Verify against official text. |
-| Recitals – Accountability | [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | Not legal advice. Verify against official text. |
+| 제4조 – AI 리터러시 | [범위](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | 횡단; 조직 역량/교육 증거(개요). 법적 조언 아님. 공식 텍스트로 확인. |
+| 제9조 – 위험 관리 시스템 | [범위](../../standard/current/02-scope/) | request, review, exception, renewal | templates/ev/ | 고위험 AI 시스템(제3편). 법적 조언 아님. 공식 텍스트로 확인. |
+| 제10조 – 데이터 및 데이터 거버넌스 | [사전](../../standard/current/05-dictionary/) | Dictionary, EV | schemas/jsonschema/; schema_validate_dictionary | 법적 조언 아님. 공식 텍스트로 확인. |
+| 제11조 – 기술 문서(고위험) | [EV 템플릿](../../standard/current/06-ev-template/), [증거 번들](../../artifacts/evidence-bundle/) | EV, Dictionary, Summary; request, review | schemas/jsonschema/, templates/ev/; **부록 IV**: [예시 > EU 부록 IV 샘플](../../examples/) (`examples/evidence_bundle_v01_annex_iv_sample/`); 프로필: `coverage_map/profiles/eu_ai_act_annex_iv.json`. 샘플 번들은 규범 준수(signatures/, hashes/, 부록 IV 중심 기술 문서 payload). 예시 참조(추가 샘플은 향후 릴리스). | 개요만; 법적 조언 아님. 공식 텍스트로 확인. |
+| 제12조 – 기록 유지 | [증거 번들](../../artifacts/evidence-bundle/), [최소 증거](../../artifacts/minimum-evidence/) | EV, change_log, request, review | examples/evidence_bundle_minimal/; schema_validate_ev | 법적 조언 아님. 공식 텍스트로 확인. |
+| 제13조 – 배포자/사용자에 대한 투명성 및 정보 제공 | [범위](../../standard/current/02-scope/) | Summary, EV; review | templates/ev/ | 고위험 맥락. 법적 조언 아님. 공식 텍스트로 확인. |
+| 제14조 – 인간 감독 | [최소 증거](../../artifacts/minimum-evidence/) | review, exception | templates/ev/ev_template.md | 법적 조언 아님. 공식 텍스트로 확인. |
+| 제15조 – 정확성, 견고성, 사이버보안 | [최소 증거](../../artifacts/minimum-evidence/) | EV(증거 코드/위험 코드, 개요) | templates/ev/ | 개요 매핑만. 법적 조언 아님. 공식 텍스트로 확인. |
+| 제17조 – 품질 관리 시스템 | [범위](../../standard/current/02-scope/) | Summary, review(조직 프로세스) | templates/ev/ | 제9조(위험 관리 시스템)와 구별. 법적 조언 아님. 공식 텍스트로 확인. |
+| 투명성 의무(사용 사례 의존) | [범위](../../standard/current/02-scope/), [최소 증거](../../artifacts/minimum-evidence/) | Summary, EV; review | templates/ev/ | 적용 규정은 사용 사례(제한적 위험, 배포자 의무 등)에 따름. 법적 조언 아님. 공식 텍스트로 확인. |
+| GPAI 모델 의무 | [EV 템플릿](../../standard/current/06-ev-template/), [증거 번들](../../artifacts/evidence-bundle/) | EV 템플릿, 증거 번들(증거 구조화 프레임) | schemas/jsonschema/; schema_validate_ev | AIMO는 증거 정리 프레임을 제공하며; 실제 의무는 규칙으로 정의. 법적 조언 아님. 공식 텍스트로 확인. |
+| 전문 – 책임 | [증거 번들](../../artifacts/evidence-bundle/) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | 법적 조언 아님. 공식 텍스트로 확인. |
 
-## Effective dates / applicability (high-level)
+## 시행일 / 적용(개요)
 
-The following aligns with **EU official timeline** (AI Act Service Desk / Commission). It is **not legal advice** and does not guarantee accuracy. Always confirm with the **official legal text** and competent authorities.
+아래는 **EU 공식 일정**(AI 법 서비스 데스크/위원회)에 맞춘 개요입니다. **법적 조언이 아니며** 정확성을 보장하지 않습니다. **공식 법문**과 관할 기관으로 반드시 확인하세요.
 
-| Phase | Date | What applies (high-level) |
-|-------|------|----------------------------|
-| Entry into force | August 2024 | Regulation in force; most substantive obligations not yet applicable. |
-| General provisions & prohibitions | 02 Feb 2025 | Prohibited practices (unacceptable risk); certain AI literacy–related provisions. |
-| GPAI rules + governance | 02 Aug 2025 | Rules on notified bodies, GPAI, governance, confidentiality, penalties; codes of practice. |
-| Majority rules + Annex III high-risk + Art 50 transparency | 02 Aug 2026 | Full applicability for high-risk AI systems (Annex III), Article 50 transparency obligations. |
-| High-risk embedded in regulated products | 02 Aug 2027 | High-risk AI systems embedded in products subject to EU product legislation. |
+| 단계 | 날짜 | 적용 내용(개요) |
+| --- | --- | --- |
+| 발효 | 2024년 8월 | 규칙 발효; 대부분의 실질적 의무는 아직 미적용. |
+| 일반 규정 및 금지 | 2025년 2월 2일 | 금지 관행(허용 불가 위험); AI 리터러시 관련 규정 일부. |
+| GPAI 규칙 및 거버넌스 | 2025년 8월 2일 | 지정 기관, GPAI, 거버넌스, 비밀 유지, 제재; 실무 규범. |
+| 주요 규칙 및 부록 III 고위험 및 제50조 투명성 | 2026년 8월 2일 | 고위험 AI 시스템(부록 III) 완전 적용, 제50조 투명성 의무. |
+| 규제 제품에 내장된 고위험 | 2027년 8월 2일 | EU 제품 법률 대상 제품에 내장된 고위험 AI 시스템. |
 
-## Harmonised standards and presumption of conformity (Article 40)
+## 조화 표준 및 적합성 추정(제40조)
 
-When **harmonised standards** are published in the EU Official Journal under the AI Act, compliance with them can provide **presumption of conformity** with the corresponding requirements. The exact list and dates depend on standardisation work and OJ publication. AIMO mappings are informative and do not confer presumption of conformity. For current status, see the European Commission and AI Office sources in **References** below.
+AI 법에 따라 EU 공보에 **조화 표준**이 공포되면, 이에 대한 준수는 해당 요구사항에 대한 **적합성 추정**을 제공할 수 있습니다. 정확한 목록과 날짜는 표준화 작업과 공보 공고에 따릅니다. AIMO 매핑은 참고용이며 적합성 추정을 부여하지 않습니다. 현황은 아래 **참고 문헌**의 위원회 및 AI 사무국을 참조하세요.
 
-## 2026 AI Office guidelines (implementation detail)
+## 2026년 AI 사무국 가이드라인(이행 세부사항)
 
-The European Commission has indicated that the **AI Office** will prepare **practical guidelines** during 2026, including on:
+유럽 위원회는 **AI 사무국**이 2026년에 **실무 가이드라인**을 마련할 것이라고 밝혔으며, 다음을 포함합니다:
 
-- High-risk classification
-- Article 50 (transparency) implementation
-- Incident reporting
-- QMS-related elements
+- 고위험 분류
+- 제50조(투명성) 이행
+- 사고 보고
+- QMS 관련 요소
 
-These guidelines are **update triggers** for AIMO profiles and coverage mappings: as they are published, adopters should align evidence and mappings with the latest official guidance. AIMO does not interpret or guarantee compliance with these guidelines.
+이 가이드라인은 AIMO 프로필 및 커버리지 매핑의 **업데이트 트리거**입니다: 공포 후 채택자는 증거와 매핑을 최신 공식 가이드에 맞춰야 합니다. AIMO는 해당 가이드라인의 해석이나 준수를 보장하지 않습니다.
 
-!!! warning "Not legal advice"
-    This page is for explanatory use only. You must verify applicability and dates against the official regulation and any implementing or amending acts. AIMO does not provide legal advice or guarantee compliance.
+!!! warning "법적 조언 아님"
+    이 페이지는 설명 목적으로만 제공됩니다. 적용 범위와 날짜는 공식 규칙 및 시행·개정 법률로 확인하세요. AIMO는 법적 조언이나 준수 보장을 제공하지 않습니다.
 
-## References
+## 참고 문헌
 
-- [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Artificial Intelligence Act
-- [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / Commission-aligned; informative)
-- European Commission / AI Office — clear guidelines and timeline (check Commission news and AI Act Service Desk for current URLs)
-- [EPRS — EU AI Act implementation](https://www.europarl.europa.eu/thinktank/) — Parliament briefing (informative)
+- [규칙 (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689)(EUR-Lex) — 인공지능법
+- [EU AI 법 이행 일정](https://artificialintelligenceact.eu/implementation-timeline)(AI 법 서비스 데스크/위원회 정렬; 참고)
+- 유럽 위원회 / AI 사무국 — 가이드라인 및 일정(위원회 뉴스 및 AI 법 서비스 데스크에서 최신 URL 확인)
+- [EPRS — EU AI 법 이행](https://www.europarl.europa.eu/thinktank/) — 의회 브리핑(참고)

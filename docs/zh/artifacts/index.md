@@ -1,6 +1,7 @@
 ---
 description: AIMO 标准工件中心。机器可读的模式、证据包模板、用于影子AI发现和代理活动监控的日志模式。
 ---
+<!-- aimo:translation_status=translated -->
 
 # 工件
 

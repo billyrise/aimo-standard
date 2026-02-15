@@ -1,6 +1,7 @@
 ---
 description: Justified Non-Compliance（JNC）の将来拡張の概念説明。v0.1 / v0.1.1 の規範には含まない。
 ---
+<!-- aimo:translation_status=translated -->
 
 # Justified Non-Compliance（JNC）— 将来拡張
 

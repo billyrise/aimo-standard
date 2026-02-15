@@ -1,6 +1,7 @@
 ---
 description: Releases do AIMO Standard - Baixe PDFs versionados, artefatos e checksums. Changelog, guias de migração e atestações de proveniência de build.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Releases
 

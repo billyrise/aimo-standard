@@ -1,6 +1,7 @@
 ---
 description: AIMO 표준 버전 이력. 감사자 준비 PDF, 기계 판독 가능 산출물, 체크섬 및 빌드 출처 증명이 포함된 공식 고정 릴리스.
 ---
+<!-- aimo:translation_status=translated -->
 
 # 버전
 

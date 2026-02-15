@@ -1,6 +1,7 @@
 ---
 description: Diretrizes de marca registrada AIMO - Regras de uso para marcas AIMO, requisitos de badge de conformidade e diretrizes de branding.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Marcas Registradas
 

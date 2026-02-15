@@ -1,6 +1,7 @@
 ---
 description: Overview of AIMO Standard. Defines shared taxonomy, code system, dictionary, evidence templates, and validator checks for AI governance audits.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Overview
 

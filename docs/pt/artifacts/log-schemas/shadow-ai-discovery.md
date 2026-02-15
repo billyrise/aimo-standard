@@ -1,6 +1,7 @@
 ---
 description: Schema de Log de Descoberta de Shadow AI - Formato neutro de fornecedor para documentar detecção, inventário e remediação de uso não aprovado de IA em empresas.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Schema de Log de Descoberta de Shadow AI
 

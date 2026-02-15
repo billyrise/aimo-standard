@@ -1,6 +1,7 @@
 ---
 description: Shadow AI Discovery Log Schema - Herstellerneutrales Format zur Dokumentation von Erkennung, Inventarisierung und Behebung nicht genehmigter KI-Nutzung in Unternehmen.
 ---
+<!-- aimo:translation_status=translated -->
 
 # Shadow AI Discovery Log Schema
 
