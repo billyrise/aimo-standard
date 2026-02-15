@@ -1368,6 +1368,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1469,6 +1473,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../coverage-map/iso-42006/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42006
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../coverage-map/nist-ai-rmf/" class="md-nav__link">
         
   
@@ -1498,6 +1525,29 @@
   
   <span class="md-ellipsis">
     EU AI Act
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/procurement-and-disclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Procurement & Disclosure (UK, Japan)
     
   </span>
   
@@ -1557,6 +1607,8 @@
       
         
           
+        
+      
         
       
         
@@ -1692,6 +1744,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../artifacts/iso-42001-certification-readiness-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42001 Certification Readiness Toolkit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../artifacts/signature-verification-roadmap/" class="md-nav__link">
         
   
@@ -1761,7 +1836,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1778,14 +1853,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2641,10 +2716,14 @@
 <h2 id="aiai">AI/代理式特定风险示例（为什么需要AI特定标准）</h2>
 <p>传统安全控制（例如ISMS）通常无法以<strong>审计可解释</strong>的方式捕获LLM/代理特定的故障模式和自主代理偏差（例如意外工具执行、递归循环）。
 AIMO 分类法提供了一种共享语言来分类这些AI特定风险，并将它们与证据要求和整改工作流程联系起来。</p>
-<p>（用于区分的参考示例。以下代码是说明性占位符；官方代码系统遵循标准定义。）
-- AG-01 失控循环/递归
-- AG-02 未授权工具使用（混淆代理式滥用）
-- AG-03 权限边界漂移</p>
+<p>!!! warning "仅供参考 — 非规范代码"
+    以下代码为<strong>说明性占位符</strong>，<strong>不属于</strong>规范性 AIMO 代码体系。请勿在提交或运营中使用；请使用 <a href="../04-codes/">Codes</a> 和 <a href="../05-dictionary/">Dictionary</a> 中的规范性定义。</p>
+<ul>
+<li><strong>AG-01</strong> 失控循环/递归</li>
+<li><strong>AG-02</strong> 未授权工具使用（混淆代理式滥用）</li>
+<li><strong>AG-03</strong> 权限边界漂移</li>
+</ul>
+<p>请勿在提交中使用 AG-*；请使用 Codes/Dictionary 中定义的规范性维度和代码。</p>
 <h2 id="_4">维度概述</h2>
 <p>AIMO 使用8个维度对AI用例进行分类。每个维度都有唯一的2字母前缀。</p>
 <table>

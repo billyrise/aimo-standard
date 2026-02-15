@@ -1113,6 +1113,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1211,6 +1215,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../coverage-map/iso-42006/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42006
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../coverage-map/nist-ai-rmf/" class="md-nav__link">
         
   
@@ -1240,6 +1267,29 @@
   
   <span class="md-ellipsis">
     EU AI Act
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coverage-map/procurement-and-disclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Procurement & Disclosure (UK, Japan)
     
   </span>
   
@@ -1299,6 +1349,8 @@
       
         
           
+        
+      
         
       
         
@@ -1434,6 +1486,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../artifacts/iso-42001-certification-readiness-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42001 Certification Readiness Toolkit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../artifacts/signature-verification-roadmap/" class="md-nav__link">
         
   
@@ -1503,7 +1578,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1520,14 +1595,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2629,13 +2704,13 @@ site_url: https://standard.aimoaas.com/
 <tbody>
 <tr>
 <td>Inglés (predeterminado)</td>
-<td><code>https://standard.aimoaas.com/{path}</code></td>
-<td><code>https://standard.aimoaas.com/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/{path}</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/</code></td>
 </tr>
 <tr>
 <td>Japonés</td>
-<td><code>https://standard.aimoaas.com/ja/{path}</code></td>
-<td><code>https://standard.aimoaas.com/ja/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/ja/{path}</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/ja/governance/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2712,8 +2787,9 @@ site_url: https://standard.aimoaas.com/
 <p><strong>Cómo funciona alias_type: redirect:</strong></p>
 <p>En lugar de copiar archivos, <code>/latest/</code> contiene páginas de redirección apuntando al release actual:</p>
 <pre><code class="language-html">&lt;!-- /latest/index.html --&gt;
-&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../0.0.1/&quot;&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/0.0.1/&quot;&gt;
+&lt;!-- Latest alias (redirect stub); canonical points to versioned snapshot --&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=../{X.Y.Z}/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/&quot;&gt;
 </code></pre>
 <p>Esto asegura:</p>
 <ol>
@@ -2736,7 +2812,7 @@ site_url: https://standard.aimoaas.com/
 <tbody>
 <tr>
 <td>Especificación estable actual</td>
-<td><code>https://standard.aimoaas.com/latest/standard/current/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/standard/current/</code></td>
 </tr>
 <tr>
 <td>Versión específica (para auditoría)</td>
@@ -2744,11 +2820,11 @@ site_url: https://standard.aimoaas.com/
 </tr>
 <tr>
 <td>Gobernanza y políticas</td>
-<td><code>https://standard.aimoaas.com/latest/governance/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/</code></td>
 </tr>
 <tr>
 <td>Paquete de Confianza</td>
-<td><code>https://standard.aimoaas.com/latest/governance/trust-package/</code></td>
+<td><code>https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2768,12 +2844,12 @@ site_url: https://standard.aimoaas.com/
 <h3 id="ejemplo-de-html-generado">Ejemplo de HTML Generado</h3>
 <p>Cada página HTML generada incluye tags canónicos y hreflang en el <code>&lt;head&gt;</code>:</p>
 <pre><code class="language-html">&lt;!-- Canonical (siempre apunta a Producción) --&gt;
-&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 
 &lt;!-- Alternativas de idioma --&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/latest/ja/governance/&quot;&gt;
-&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/latest/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;en&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;ja&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/ja/governance/&quot;&gt;
+&lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://standard.aimoaas.com/{X.Y.Z}/governance/&quot;&gt;
 </code></pre>
 <h3 id="robotstxt">robots.txt</h3>
 <pre><code>User-agent: *

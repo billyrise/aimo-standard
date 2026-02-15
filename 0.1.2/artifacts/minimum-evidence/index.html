@@ -18,7 +18,7 @@
         <link rel="prev" href="../evidence-bundle-coverage-map/">
       
       
-        <link rel="next" href="../signature-verification-roadmap/">
+        <link rel="next" href="../iso-42001-certification-readiness-toolkit/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1108,6 +1108,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1206,6 +1210,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../coverage-map/iso-42006/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42006
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../coverage-map/nist-ai-rmf/" class="md-nav__link">
         
   
@@ -1235,6 +1262,29 @@
   
   <span class="md-ellipsis">
     EU AI Act
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coverage-map/procurement-and-disclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Procurement & Disclosure (UK, Japan)
     
   </span>
   
@@ -1296,6 +1346,8 @@
       
         
           
+        
+      
         
       
         
@@ -1583,10 +1635,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#regulatory-overlays-informative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulatory overlays (informative)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso-42001-certification-readiness-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42001 Certification Readiness Toolkit
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1671,7 +1755,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1688,14 +1772,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2408,6 +2492,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#regulatory-overlays-informative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulatory overlays (informative)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2659,6 +2752,51 @@
 <p>This minimum set supports explainability and evidence readiness; it does not itself provide legal advice or guarantee compliance.</p>
 <p>See <a href="../evidence-bundle/">Evidence Bundle</a> for bundle structure and TOC; see <a href="../../standard/current/06-ev-template/">EV Template</a> and schemas for field-level alignment.</p>
 <p>See also: <a href="../log-schemas/">Log Schemas</a> — normalized log formats for Shadow AI discovery and agent activity evidence.</p>
+<h2 id="regulatory-overlays-informative">Regulatory overlays (informative)</h2>
+<p>The following <strong>overlays</strong> describe additional evidence often expected in specific regulatory or procurement contexts. They are <strong>informative</strong>; attach official templates/checklists as-is in the <a href="../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is">External Forms section</a> of the EV Template and reference them by logical_id in the manifest.</p>
+<table>
+<thead>
+<tr>
+<th>Overlay</th>
+<th>Additional artifacts typically expected</th>
+<th>Where to attach</th>
+<th>Profile (optional)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EU High-Risk</strong></td>
+<td>Risk management, technical documentation (Annex IV), logging, human oversight, transparency (Art 50), incident reporting</td>
+<td>payload_index; Evidence Bundle + Annex IV profile</td>
+<td><code>eu_ai_act_annex_iv.json</code>, <code>eu_ai_act_high_risk.json</code></td>
+</tr>
+<tr>
+<td><strong>EU GPAI CoP</strong></td>
+<td>Model Documentation Form (transparency, copyright, safety &amp; security)</td>
+<td>External Forms; logical_id e.g. GPAI_MODEL_DOC_FORM</td>
+<td><code>eu_gp_ai_cop.json</code></td>
+</tr>
+<tr>
+<td><strong>NIST GenAI</strong></td>
+<td>GenAI profile artifacts (model adaptation, evaluation, monitoring)</td>
+<td>payload_index; change_log; External Forms / GenAI records</td>
+<td><code>nist_ai_600_1_genai.json</code></td>
+</tr>
+<tr>
+<td><strong>UK ATRS / procurement</strong></td>
+<td>ATRS transparency record; accountability owner; procurement evaluation notes</td>
+<td>External Forms; Summary, review</td>
+<td><code>uk_atrs_procurement.json</code></td>
+</tr>
+<tr>
+<td><strong>JP procurement</strong></td>
+<td>Government GenAI procurement checklist; AI Business Guidelines checklist</td>
+<td>External Forms; logical_id e.g. JP_PROCUREMENT_CHECKLIST</td>
+<td><code>jp_gov_genai_procurement.json</code></td>
+</tr>
+</tbody>
+</table>
+<p>Profile file names follow the pattern <code>coverage_map/profiles/&lt;target&gt;_&lt;purpose&gt;.json</code>; each includes <code>target_version</code>. See <a href="../../coverage-map/procurement-and-disclosure/">Coverage Map — Procurement &amp; Disclosure</a> for UK and Japan; <a href="../../coverage-map/eu-ai-act/">EU AI Act</a> and <a href="../../coverage-map/nist-ai-rmf/">NIST AI RMF</a> for EU and NIST.</p>
 
 
 
