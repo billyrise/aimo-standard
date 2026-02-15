@@ -3090,15 +3090,15 @@ translation_status: current|outdated|needs_review
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;!-- aimo:translation_status=source --&gt;</code></td>
+<td>``</td>
 <td>英語正本ページ（<code>docs/en/</code>）。</td>
 </tr>
 <tr>
-<td><code>&lt;!-- aimo:translation_status=translated --&gt;</code></td>
+<td>``</td>
 <td>当該ロケールは英語ソースの翻訳済み。</td>
 </tr>
 <tr>
-<td><code>&lt;!-- aimo:translation_status=untranslated --&gt;</code></td>
+<td>``</td>
 <td>当該ロケールのファイルはあるが内容は英語のコピーで、翻訳待ち。</td>
 </tr>
 </tbody>
@@ -3154,6 +3154,12 @@ python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
 <li><code>mkdocs build --strict</code> を実行してビルドを確認</li>
 <li>すべての変更をまとめてコミット</li>
 </ol>
+<p>!!! tip "前リリースの翻訳を流用して工数を抑える"
+    新リリース（例: v0.1.2）の<strong>翻訳漏れ</strong>を直すときは、<strong>必ず前リリース（例: v0.1.1）の内容を確認</strong>してください：
+    1. 前リリースの翻訳ファイルを取得：<code>git show v0.1.1:docs/ja/governance/trust-package.md</code>
+    2. 英語ソースが<strong>同じか軽微な変更のみ</strong>（リンクパスや1セクション追加など）なら、<strong>前リリースの翻訳をコピー</strong>し、<strong>差分だけ</strong>適用（リンクパスの更新、新段落、frontmatter）。
+    3. 英語の内容が大きく変わった場合のみ、ゼロから翻訳し直してください。
+    これにより翻訳工数を最小限にし、既存の表現を活かせます。</p>
 <p>!!! note "翻訳の優先度"
     すべての翻訳をすぐに更新する必要はありません。Tier 1（重要）ページを優先してください：</p>
 <pre><code>- `index.md`

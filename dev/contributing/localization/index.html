@@ -3149,6 +3149,12 @@ python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
 <li>Run <code>mkdocs build --strict</code> to verify build</li>
 <li>Commit all changes together</li>
 </ol>
+<p>!!! tip "Reuse previous release translations to minimize work"
+    When fixing <strong>translation gaps</strong> for a new release (e.g. v0.1.2), always <strong>check the previous release</strong> (e.g. v0.1.1) first:
+    1. Get the translated file from the previous tag: <code>git show v0.1.1:docs/ja/governance/trust-package.md</code>
+    2. If the English source is <strong>unchanged or only minor</strong> (e.g. link path or one new section), <strong>copy the previous translation</strong> and apply only the <strong>delta</strong> (link path updates, new paragraphs, frontmatter).
+    3. Re-translate from scratch only when the English content has changed substantially.
+    This keeps translation effort minimal and preserves existing wording where it still matches.</p>
 <p>!!! note "Translation Priority"
     Not all translations need to be updated immediately. Tier 1 (critical) pages should be prioritized:</p>
 <pre><code>- `index.md`
