@@ -1084,6 +1084,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#external-forms-official-templateschecklists-attached-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Forms (official templates/checklists attached as-is)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-handoff-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Handoff Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#downloads" class="md-nav__link">
     <span class="md-ellipsis">
       Downloads
@@ -1312,6 +1330,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1413,6 +1435,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../coverage-map/iso-42006/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42006
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../coverage-map/nist-ai-rmf/" class="md-nav__link">
         
   
@@ -1442,6 +1487,29 @@
   
   <span class="md-ellipsis">
     EU AI Act
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/procurement-and-disclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Procurement & Disclosure (UK, Japan)
     
   </span>
   
@@ -1501,6 +1569,8 @@
       
         
           
+        
+      
         
       
         
@@ -1636,6 +1706,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../artifacts/iso-42001-certification-readiness-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42001 Certification Readiness Toolkit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../artifacts/signature-verification-roadmap/" class="md-nav__link">
         
   
@@ -1705,7 +1798,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1722,14 +1815,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2413,6 +2506,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#external-forms-official-templateschecklists-attached-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Forms (official templates/checklists attached as-is)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-handoff-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Handoff Index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#downloads" class="md-nav__link">
     <span class="md-ellipsis">
       Downloads
@@ -2681,6 +2792,84 @@
 | **OB** | `OB-001` | Efficiency |
 | **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
 </code></pre>
+<h2 id="external-forms-official-templateschecklists-attached-as-is">External Forms (official templates/checklists attached as-is)</h2>
+<p>Attach <strong>official external templates and checklists</strong> (EU, NIST, UK, Japan, etc.) as separate files. Do not alter their content; attach as-is, hash them, and reference them in the bundle.</p>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Suggested logical_id / attachment</th>
+<th>Where to attach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EU GPAI CoP</strong></td>
+<td>Model Documentation Form</td>
+<td>Add to <code>payload_index</code> with e.g. <code>logical_id</code>: <code>GPAI_MODEL_DOC_FORM</code>; store file in <code>payloads/</code>; record <code>sha256</code> in manifest.</td>
+</tr>
+<tr>
+<td><strong>NIST GenAI</strong></td>
+<td>GenAI profile artifacts (e.g. adaptation records, evaluation)</td>
+<td>Add to payload_index; reference in coverage map. Profile: <code>coverage_map/profiles/nist_ai_600_1_genai.json</code>.</td>
+</tr>
+<tr>
+<td><strong>UK ATRS / procurement</strong></td>
+<td>ATRS record, procurement evaluation notes</td>
+<td>Add to payload_index; reference in <a href="../../coverage-map/procurement-and-disclosure/">Procurement &amp; Disclosure Overlays</a>.</td>
+</tr>
+<tr>
+<td><strong>Japan</strong></td>
+<td>JP government GenAI procurement checklist, AI Business Guidelines checklist</td>
+<td>Add to payload_index with e.g. <code>logical_id</code>: <code>JP_PROCUREMENT_CHECKLIST</code>; reference in Procurement &amp; Disclosure Overlays.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Guidance:</strong> Store each external form as a file (PDF, DOC, CSV, etc.), compute SHA-256, and list it in the bundle <code>manifest.json</code> <code>payload_index</code> with a stable <code>logical_id</code>. Link to AIMO taxonomy codes or bundle objects in your coverage map or handoff index so auditors can trace between external forms and AIMO evidence.</p>
+<h2 id="audit-handoff-index">Audit Handoff Index</h2>
+<p>For <strong>Audit-Ready</strong> level, provide a <strong>one-page index</strong> that tells the auditor where to find each key artifact:</p>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Where to find it</th>
+<th>Hash (sha256)</th>
+<th>Producer</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manifest</td>
+<td><code>manifest.json</code> (bundle root)</td>
+<td>(in hash_chain or separate)</td>
+<td>—</td>
+<td>created_at</td>
+</tr>
+<tr>
+<td>Root EV / Summary</td>
+<td>e.g. <code>payloads/root.json</code></td>
+<td>payload_index entry</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Request/Review/Exception</td>
+<td>(list key records)</td>
+<td>(object or payload ref)</td>
+<td>(role/org)</td>
+<td>(timestamp)</td>
+</tr>
+<tr>
+<td>External forms</td>
+<td>(list logical_ids and paths)</td>
+<td>payload_index entry</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Fill in one row per key artifact. This supports audit handoff without implying certification or assurance.</p>
 <h2 id="downloads">Downloads</h2>
 <h3 id="templates">Templates</h3>
 <p>Evidence Pack templates are available in the repository. Use <strong>file_id</strong> EP-01..EP-07 in the manifest; filenames may be EP-01_... or legacy EV-01_... for backward compatibility.</p>

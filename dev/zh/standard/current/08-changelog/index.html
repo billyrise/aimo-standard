@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="AIMO 标准变更日志和版本控制政策。记录版本历史、语义版本控制规则和发布之间的迁移指南。">
+        <meta name="description" content="AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.">
       
       
         <meta name="author" content="AIMO Standard Contributors">
@@ -85,7 +85,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIMO Standard">
 <meta property="og:title" content="Changelog">
-<meta property="og:description" content="AIMO 标准变更日志和版本控制政策。记录版本历史、语义版本控制规则和发布之间的迁移指南。">
+<meta property="og:description" content="AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.">
 <meta property="og:url" content="https://standard.aimoaas.com/latest/zh/standard/current/08-changelog/">
 <meta property="og:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 <meta property="og:locale" content="en_US">
@@ -96,12 +96,12 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Changelog">
-<meta name="twitter:description" content="AIMO 标准变更日志和版本控制政策。记录版本历史、语义版本控制规则和发布之间的迁移指南。">
+<meta name="twitter:description" content="AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.">
 <meta name="twitter:image" content="https://standard.aimoaas.com/latestassets/images/og-image.png">
 
 
 
-<meta name="description" content="AIMO 标准变更日志和版本控制政策。记录版本历史、语义版本控制规则和发布之间的迁移指南。">
+<meta name="description" content="AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.">
 
 <meta name="author" content="AIMO Standard Contributors">
 <meta name="keywords" content="AI governance, AI audit, agentic AI, shadow AI, taxonomy, compliance, ISO 42001, NIST AI RMF, EU AI Act, evidence management">
@@ -133,7 +133,7 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Changelog",
-  "description": "AIMO 标准变更日志和版本控制政策。记录版本历史、语义版本控制规则和发布之间的迁移指南。",
+  "description": "AIMO Standard changelog and versioning policy. Documents version history, semantic versioning rules, and migration guidance between releases.",
   "url": "https://standard.aimoaas.com/latest/zh/standard/current/08-changelog/",
   "inLanguage": "en",
   "isPartOf": {
@@ -209,7 +209,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#changelog" class="md-skip">
           跳转至
         </a>
       
@@ -1042,28 +1042,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#versioning-policy" class="md-nav__link">
     <span class="md-ellipsis">
-      版本控制政策
+      Versioning Policy
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="版本控制政策">
+    <nav class="md-nav" aria-label="Versioning Policy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#majorminorpatch" class="md-nav__link">
+  <a href="#version-format-majorminorpatch" class="md-nav__link">
     <span class="md-ellipsis">
-      版本格式：MAJOR.MINOR.PATCH
+      Version Format: MAJOR.MINOR.PATCH
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#breaking-vs-compatible-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      破坏性与兼容性变更
+      Breaking vs. Compatible Changes
     </span>
   </a>
   
@@ -1075,37 +1075,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#deprecation-policy" class="md-nav__link">
     <span class="md-ellipsis">
-      弃用政策
+      Deprecation Policy
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="弃用政策">
+    <nav class="md-nav" aria-label="Deprecation Policy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#deprecation-process" class="md-nav__link">
     <span class="md-ellipsis">
-      弃用流程
+      Deprecation Process
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#example-lifecycle" class="md-nav__link">
     <span class="md-ellipsis">
-      示例生命周期
+      Example Lifecycle
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#using-deprecated-codes" class="md-nav__link">
     <span class="md-ellipsis">
-      使用弃用的代码
+      Using Deprecated Codes
     </span>
   </a>
   
@@ -1117,56 +1117,113 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#release-artifacts" class="md-nav__link">
     <span class="md-ellipsis">
-      发布工件
+      Release Artifacts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#change-history" class="md-nav__link">
     <span class="md-ellipsis">
-      变更历史
+      Change History
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="变更历史">
+    <nav class="md-nav" aria-label="Change History">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#version-012-version-012" class="md-nav__link">
     <span class="md-ellipsis">
-      未发布（命名空间与规范修正）
+      Version 0.1.2 {#version-012}
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 0.1.2 {#version-012}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repair-deploy-addendum-docs-mappings-2026-02-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repair-deploy addendum (docs + mappings) — 2026-02-15
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-011-version-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 0.1.1 {#version-011}
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#0012026-02-02" class="md-nav__link">
+  <a href="#version-010-version-010" class="md-nav__link">
     <span class="md-ellipsis">
-      版本 0.0.1（2026-02-02）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="版本 0.0.1（2026-02-02）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      添加
+      Version 0.1.0 {#version-010}
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#unreleased-namespace-and-normative-fixes" class="md-nav__link">
     <span class="md-ellipsis">
-      向后兼容性
+      Unreleased (namespace and normative fixes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unreleased (namespace and normative fixes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-001-2026-02-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 0.0.1 (2026-02-02)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 0.0.1 (2026-02-02)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backward-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backward Compatibility
     </span>
   </a>
   
@@ -1183,18 +1240,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#machine-readable-changelog" class="md-nav__link">
     <span class="md-ellipsis">
-      机器可读变更日志
+      Machine-Readable Changelog
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      参考
+      References
     </span>
   </a>
   
@@ -1332,6 +1389,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1433,6 +1494,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../coverage-map/iso-42006/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42006
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../coverage-map/nist-ai-rmf/" class="md-nav__link">
         
   
@@ -1462,6 +1546,29 @@
   
   <span class="md-ellipsis">
     EU AI Act
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../coverage-map/procurement-and-disclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Procurement & Disclosure (UK, Japan)
     
   </span>
   
@@ -1521,6 +1628,8 @@
       
         
           
+        
+      
         
       
         
@@ -1656,6 +1765,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../artifacts/iso-42001-certification-readiness-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISO/IEC 42001 Certification Readiness Toolkit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../artifacts/signature-verification-roadmap/" class="md-nav__link">
         
   
@@ -1725,7 +1857,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1742,14 +1874,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Log Schemas
           </label>
@@ -2340,28 +2472,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#versioning-policy" class="md-nav__link">
     <span class="md-ellipsis">
-      版本控制政策
+      Versioning Policy
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="版本控制政策">
+    <nav class="md-nav" aria-label="Versioning Policy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#majorminorpatch" class="md-nav__link">
+  <a href="#version-format-majorminorpatch" class="md-nav__link">
     <span class="md-ellipsis">
-      版本格式：MAJOR.MINOR.PATCH
+      Version Format: MAJOR.MINOR.PATCH
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#breaking-vs-compatible-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      破坏性与兼容性变更
+      Breaking vs. Compatible Changes
     </span>
   </a>
   
@@ -2373,37 +2505,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#deprecation-policy" class="md-nav__link">
     <span class="md-ellipsis">
-      弃用政策
+      Deprecation Policy
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="弃用政策">
+    <nav class="md-nav" aria-label="Deprecation Policy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#deprecation-process" class="md-nav__link">
     <span class="md-ellipsis">
-      弃用流程
+      Deprecation Process
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#example-lifecycle" class="md-nav__link">
     <span class="md-ellipsis">
-      示例生命周期
+      Example Lifecycle
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#using-deprecated-codes" class="md-nav__link">
     <span class="md-ellipsis">
-      使用弃用的代码
+      Using Deprecated Codes
     </span>
   </a>
   
@@ -2415,56 +2547,113 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#release-artifacts" class="md-nav__link">
     <span class="md-ellipsis">
-      发布工件
+      Release Artifacts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#change-history" class="md-nav__link">
     <span class="md-ellipsis">
-      变更历史
+      Change History
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="变更历史">
+    <nav class="md-nav" aria-label="Change History">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#version-012-version-012" class="md-nav__link">
     <span class="md-ellipsis">
-      未发布（命名空间与规范修正）
+      Version 0.1.2 {#version-012}
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 0.1.2 {#version-012}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repair-deploy-addendum-docs-mappings-2026-02-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repair-deploy addendum (docs + mappings) — 2026-02-15
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-011-version-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 0.1.1 {#version-011}
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#0012026-02-02" class="md-nav__link">
+  <a href="#version-010-version-010" class="md-nav__link">
     <span class="md-ellipsis">
-      版本 0.0.1（2026-02-02）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="版本 0.0.1（2026-02-02）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      添加
+      Version 0.1.0 {#version-010}
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#unreleased-namespace-and-normative-fixes" class="md-nav__link">
     <span class="md-ellipsis">
-      向后兼容性
+      Unreleased (namespace and normative fixes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unreleased (namespace and normative fixes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-001-2026-02-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 0.0.1 (2026-02-02)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 0.0.1 (2026-02-02)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backward-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backward Compatibility
     </span>
   </a>
   
@@ -2481,18 +2670,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#machine-readable-changelog" class="md-nav__link">
     <span class="md-ellipsis">
-      机器可读变更日志
+      Machine-Readable Changelog
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      参考
+      References
     </span>
   </a>
   
@@ -2542,213 +2731,234 @@
   
 
 
-<h1 id="_1">变更日志</h1>
-<p>本节记录 AIMO 标准的版本控制政策和变更历史。</p>
-<h2 id="_2">版本控制政策</h2>
-<p>AIMO 标准遵循 <a href="https://semver.org/">语义版本控制</a>（SemVer）：</p>
-<h3 id="majorminorpatch">版本格式：MAJOR.MINOR.PATCH</h3>
+<h1 id="changelog">Changelog</h1>
+<p>This section documents the versioning policy and change history for the AIMO Standard.</p>
+<h2 id="versioning-policy">Versioning Policy</h2>
+<p>AIMO Standard follows <a href="https://semver.org/">Semantic Versioning</a> (SemVer):</p>
+<h3 id="version-format-majorminorpatch">Version Format: MAJOR.MINOR.PATCH</h3>
 <table>
 <thead>
 <tr>
-<th>变更类型</th>
-<th>版本升级</th>
-<th>示例</th>
+<th>Change Type</th>
+<th>Version Bump</th>
+<th>Examples</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>MAJOR</strong></td>
 <td>X.0.0</td>
-<td>破坏性模式更改、代码删除、必需字段更改</td>
+<td>Breaking schema changes, code removal, required field changes</td>
 </tr>
 <tr>
 <td><strong>MINOR</strong></td>
 <td>0.X.0</td>
-<td>新代码、新可选字段、新维度（可选）</td>
+<td>New codes, new optional fields, new dimensions (optional)</td>
 </tr>
 <tr>
 <td><strong>PATCH</strong></td>
 <td>0.0.X</td>
-<td>文档修复、定义澄清、验证器错误修复</td>
+<td>Documentation fixes, definition clarifications, validator bug fixes</td>
 </tr>
 </tbody>
 </table>
-<h3 id="_3">破坏性与兼容性变更</h3>
-<p><strong>破坏性变更（MAJOR）：</strong></p>
+<h3 id="breaking-vs-compatible-changes">Breaking vs. Compatible Changes</h3>
+<p><strong>Breaking Changes (MAJOR):</strong></p>
 <ul>
-<li>代码删除（弃用期后）</li>
-<li>模式中必需字段的更改</li>
-<li>使现有文档无效的结构更改</li>
-<li>代码格式模式的更改</li>
+<li>Removal of codes (after deprecation period)</li>
+<li>Changes to required fields in schemas</li>
+<li>Structural changes that invalidate existing documents</li>
+<li>Changes to code format patterns</li>
 </ul>
-<p><strong>向后兼容变更（MINOR）：</strong></p>
+<p><strong>Backward Compatible Changes (MINOR):</strong></p>
 <ul>
-<li>向现有维度添加新代码</li>
-<li>向模式添加新的可选字段</li>
-<li>添加新的可选维度</li>
-<li>添加新的证据模板</li>
+<li>Adding new codes to existing dimensions</li>
+<li>Adding new optional fields to schemas</li>
+<li>Adding new optional dimensions</li>
+<li>Adding new evidence templates</li>
 </ul>
-<p><strong>非破坏性变更（PATCH）：</strong></p>
+<p><strong>Non-breaking Changes (PATCH):</strong></p>
 <ul>
-<li>文档更正</li>
-<li>现有定义的澄清</li>
-<li>翻译改进</li>
-<li>验证器错误修复</li>
+<li>Documentation corrections</li>
+<li>Clarification of existing definitions</li>
+<li>Translation improvements</li>
+<li>Validator bug fixes</li>
 </ul>
-<h2 id="_4">弃用政策</h2>
-<h3 id="_5">弃用流程</h3>
+<h2 id="deprecation-policy">Deprecation Policy</h2>
+<h3 id="deprecation-process">Deprecation Process</h3>
 <ol>
-<li><strong>标记为弃用</strong>：代码或功能标记为 <code>status: deprecated</code> 和 <code>deprecated_in: X.Y.Z</code></li>
-<li><strong>弃用期</strong>：在删除前必须至少经过一个 MINOR 版本</li>
-<li><strong>提供替代</strong>：如适用，<code>replaced_by</code> 指示替代</li>
-<li><strong>在 MAJOR 中删除</strong>：删除在下一个 MAJOR 版本中发生</li>
+<li><strong>Mark as Deprecated</strong>: Code or feature is marked with <code>status: deprecated</code> and <code>deprecated_in: X.Y.Z</code></li>
+<li><strong>Deprecation Period</strong>: At least one MINOR version must pass before removal</li>
+<li><strong>Provide Replacement</strong>: If applicable, <code>replaced_by</code> indicates the replacement</li>
+<li><strong>Remove in MAJOR</strong>: Removal occurs in the next MAJOR version</li>
 </ol>
-<h3 id="_6">示例生命周期</h3>
-<pre><code>v0.0.1: FS-007 引入 (status: active)
-v0.1.0: FS-007 弃用 (status: deprecated, replaced_by: FS-008)
-v0.2.0: FS-007 仍然可用，带弃用警告
-v1.0.0: FS-007 删除 (status: removed)
+<h3 id="example-lifecycle">Example Lifecycle</h3>
+<pre><code>v0.0.1: FS-007 introduced (status: active)
+v0.1.0: FS-007 deprecated (status: deprecated, replaced_by: FS-008)
+v0.2.0: FS-007 still available with deprecation warning
+v1.0.0: FS-007 removed (status: removed)
 </code></pre>
-<h3 id="_7">使用弃用的代码</h3>
+<h3 id="using-deprecated-codes">Using Deprecated Codes</h3>
 <ul>
-<li>弃用的代码对于验证仍然有效</li>
-<li>验证器应为弃用的代码发出警告</li>
-<li>新实现应使用替代代码</li>
-<li>现有文档可以继续使用弃用的代码直到迁移</li>
+<li>Deprecated codes remain valid for validation</li>
+<li>Validator SHOULD emit a warning for deprecated codes</li>
+<li>New implementations SHOULD use replacement codes</li>
+<li>Existing documents MAY continue using deprecated codes until migration</li>
 </ul>
-<h2 id="_8">发布工件</h2>
-<p>每个官方发布包括：</p>
+<h2 id="release-artifacts">Release Artifacts</h2>
+<p>Each official release includes:</p>
 <table>
 <thead>
 <tr>
-<th>工件</th>
-<th>描述</th>
+<th>Artifact</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>版本化站点快照</td>
+<td>Versioned site snapshot</td>
 <td><code>https://standard.aimoaas.com/0.0.1/</code></td>
 </tr>
 <tr>
-<td>PDF 规范</td>
+<td>PDF specification</td>
 <td><code>trust_package.pdf</code></td>
 </tr>
 <tr>
-<td>资产包（ZIP）</td>
-<td>模式、模板、字典</td>
+<td>Asset package (ZIP)</td>
+<td>Schemas, templates, dictionary</td>
 </tr>
 <tr>
-<td>校验和</td>
-<td>SHA-256 哈希用于完整性</td>
+<td>Checksums</td>
+<td>SHA-256 hashes for integrity</td>
 </tr>
 <tr>
-<td>变更日志</td>
-<td>此文档</td>
+<td>Changelog</td>
+<td>This document</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_9">变更历史</h2>
-<h3 id="_10">未发布（命名空间与规范修正）</h3>
-<p><strong>摘要：</strong> 解决 EV 代码冲突，明确 EV（索引）与 Evidence Pack（payload）关系，加强 /dev 防审计误引用。Evidence Pack 文档类型：EP-01..EP-07；Taxonomy EV 保留为事件类型。EV↔Evidence Pack 规范关系已文档化。/dev 增加横幅与 canonical。</p>
-<h3 id="0012026-02-02">版本 0.0.1（2026-02-02）</h3>
-<p><strong>摘要：</strong> AIMO 标准的初始发布，包含8维代码系统、证据包模板和全面的治理文档。</p>
-<h4 id="_11">添加</h4>
-<p><strong>代码系统（8个维度）</strong></p>
+<h2 id="change-history">Change History</h2>
+<h3 id="version-012-version-012">Version 0.1.2 {#version-012}</h3>
+<p><strong>Summary:</strong> PATCH release (non-breaking). Normalizes EU AI Act references in docs/SSOT (informative mapping only; not legal advice). Improves Annex IV sample bundle completeness (signatures, hashes, payload). Adds optional JNC schema and validator check. Adds validator audit report outputs (audit-json, audit-html). See repository <a href="https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md">changelog/CHANGELOG.md</a> for full entry.</p>
+<h4 id="repair-deploy-addendum-docs-mappings-2026-02-15">Repair-deploy addendum (docs + mappings) — 2026-02-15</h4>
+<ul>
+<li>Added ISO/IEC 42006 coverage map page.</li>
+<li>Expanded Conformance into AIMO Conformity Framework aligned to ISO 42001 (informative); levels Foundation, Operational, Audit-Ready.</li>
+<li>Added ISO 42001 certification readiness toolkit (artifact).</li>
+<li>Added EU AI Act timeline (02 Feb / 02 Aug 2025–2027), harmonised standards notes, and 2026 AI Office guidelines (informative).</li>
+<li>Added new profiles and schema enum additions (ISO_42006, EU_AI_ACT_HIGH_RISK, EU_GPAI_COP, NIST_AI_600_1, UK_ATRS, JP_GOV_GENAI_PROCUREMENT); no version bump.</li>
+<li><strong>No version bump:</strong> repair-deploy updates the already released v0.1.2 snapshot.</li>
+</ul>
+<h3 id="version-011-version-011">Version 0.1.1 {#version-011}</h3>
+<p><strong>Summary:</strong> PATCH release. Optional signature metadata for verification, Coverage Map audit_questions, Normative/Informative and governance clarifications, v0.2 roadmap. See repository <a href="https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md">changelog/CHANGELOG.md</a> for full entry.</p>
+<h3 id="version-010-version-010">Version 0.1.0 {#version-010}</h3>
+<p><strong>Summary:</strong> Normative Evidence Bundle structure, ID namespace (EV/LG), Profiles, Validator. Breaking: EV→LG for taxonomy. See repository <a href="https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md">changelog/CHANGELOG.md</a> for full entry.</p>
+<h3 id="unreleased-namespace-and-normative-fixes">Unreleased (namespace and normative fixes)</h3>
+<p><strong>Summary:</strong> Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.</p>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><strong>Evidence Pack document types (EP namespace):</strong> Evidence Pack file types use <strong>EP-01..EP-07</strong> (document type). Taxonomy <strong>LG-001, LG-002, …</strong> are Log/Event types (Request Record, Review/Approval, etc.). <strong>EV-</strong> reserved for Evidence artifact IDs only. See <a href="../06-ev-template/">Evidence Pack Template</a> and <a href="../04b-id-policy-namespace/">ID Policy / Namespace</a>. Schema: <code>evidence_files[].file_id</code> pattern is <code>^EP-\\d{2}$</code>; <code>ev_type</code> uses <strong>LG-xxx</strong>.</li>
+<li><strong>Normative relationship:</strong> <a href="../../../artifacts/evidence-bundle/">Evidence Bundle</a> now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.</li>
+<li><strong>/dev anti-miscitation:</strong> Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.</li>
+</ul>
+<h3 id="version-001-2026-02-02">Version 0.0.1 (2026-02-02)</h3>
+<p><strong>Summary:</strong> Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.</p>
+<h4 id="added">Added</h4>
+<p><strong>Code System (8 Dimensions)</strong></p>
 <table>
 <thead>
 <tr>
-<th>维度</th>
-<th>添加的代码</th>
-<th>描述</th>
+<th>Dimension</th>
+<th>Codes Added</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>FS</td>
-<td>FS-001 到 FS-006</td>
-<td>功能范围</td>
+<td>FS-001 to FS-006</td>
+<td>Functional Scope</td>
 </tr>
 <tr>
 <td>UC</td>
-<td>UC-001 到 UC-010</td>
-<td>用例类别</td>
+<td>UC-001 to UC-010</td>
+<td>Use Case Class</td>
 </tr>
 <tr>
 <td>DT</td>
-<td>DT-001 到 DT-008</td>
-<td>数据类型</td>
+<td>DT-001 to DT-008</td>
+<td>Data Type</td>
 </tr>
 <tr>
 <td>CH</td>
-<td>CH-001 到 CH-006</td>
-<td>渠道</td>
+<td>CH-001 to CH-006</td>
+<td>Channel</td>
 </tr>
 <tr>
 <td>IM</td>
-<td>IM-001 到 IM-005</td>
-<td>集成模式</td>
+<td>IM-001 to IM-005</td>
+<td>Integration Mode</td>
 </tr>
 <tr>
 <td>RS</td>
-<td>RS-001 到 RS-005</td>
-<td>风险面</td>
+<td>RS-001 to RS-005</td>
+<td>Risk Surface</td>
 </tr>
 <tr>
 <td>OB</td>
-<td>OB-001 到 OB-005</td>
-<td>结果/收益</td>
+<td>OB-001 to OB-005</td>
+<td>Outcome / Benefit</td>
 </tr>
 <tr>
 <td>LG</td>
-<td>LG-001 到 LG-015</td>
-<td>日志/记录类型</td>
+<td>LG-001 to LG-015</td>
+<td>Log/Event Type</td>
 </tr>
 </tbody>
 </table>
-<p><strong>模式</strong></p>
+<p><strong>Schemas</strong></p>
 <ul>
-<li><code>taxonomy_pack.schema.json</code>：分类法包定义</li>
-<li><code>changelog.schema.json</code>：变更日志条目</li>
-<li><code>evidence_pack_manifest.schema.json</code>：证据包清单</li>
-<li><code>shadow-ai-discovery.schema.json</code>：影子AI发现证据</li>
-<li><code>agent-activity.schema.json</code>：代理活动证据</li>
+<li><code>taxonomy_pack.schema.json</code>: Taxonomy pack definition</li>
+<li><code>changelog.schema.json</code>: Changelog entries</li>
+<li><code>evidence_pack_manifest.schema.json</code>: Evidence Pack manifests</li>
+<li><code>shadow-ai-discovery.schema.json</code>: Shadow AI discovery evidence</li>
+<li><code>agent-activity.schema.json</code>: Agent activity evidence</li>
 </ul>
-<p><strong>证据包模板（MVP）</strong></p>
+<p><strong>Evidence Pack Templates (MVP)</strong></p>
 <ul>
-<li>EV-01：系统概述</li>
-<li>EV-02：数据流</li>
-<li>EV-03：AI清单</li>
-<li>EV-04：风险与影响评估</li>
-<li>EV-05：控制与批准</li>
-<li>EV-06：日志与监控</li>
-<li>EV-07：事件与例外处理</li>
+<li>EP-01 (legacy EV-01): System Overview</li>
+<li>EP-02 (legacy EV-02): Data Flow</li>
+<li>EP-03 (legacy EV-03): AI Inventory</li>
+<li>EP-04 (legacy EV-04): Risk &amp; Impact Assessment</li>
+<li>EP-05 (legacy EV-05): Controls &amp; Approvals</li>
+<li>EP-06 (legacy EV-06): Logging &amp; Monitoring</li>
+<li>EP-07 (legacy EV-07): Incident &amp; Exception Handling</li>
 </ul>
-<p><strong>文档</strong></p>
+<p><strong>Documentation</strong></p>
 <ul>
-<li>带有8维定义的分类法文档</li>
-<li>代码系统格式规范</li>
-<li>字典 CSV 格式规范</li>
-<li>版本控制和变更政策</li>
-<li>验证器 MVP 要求</li>
-<li>人工监督协议</li>
-<li>覆盖映射（ISO 42001、NIST AI RMF、欧盟AI法案、ISMS）</li>
-<li>信任包</li>
+<li>Taxonomy documentation with 8-dimension definitions</li>
+<li>Code System format specification</li>
+<li>Dictionary CSV format specification</li>
+<li>Versioning and change policy</li>
+<li>Validator MVP requirements</li>
+<li>Human Oversight Protocol</li>
+<li>Coverage Map (ISO 42001, NIST AI RMF, EU AI Act, ISMS)</li>
+<li>Trust Package</li>
 </ul>
-<h4 id="_12">向后兼容性</h4>
-<p>这是初始发布；没有向后兼容性问题。</p>
+<h4 id="backward-compatibility">Backward Compatibility</h4>
+<p>This is the initial release; no backward compatibility concerns.</p>
 <hr />
-<h2 id="_13">机器可读变更日志</h2>
-<p>机器可读的变更日志可在以下位置获取：</p>
+<h2 id="machine-readable-changelog">Machine-Readable Changelog</h2>
+<p>A machine-readable changelog is available:</p>
 <ul>
 <li><code>changelog/changelog.json</code></li>
 </ul>
-<p>此文件遵循 <code>changelog.schema.json</code> 模式，可以以编程方式解析。</p>
-<h2 id="_14">参考</h2>
+<p>This file follows the <code>changelog.schema.json</code> schema and can be parsed programmatically.</p>
+<h2 id="references">References</h2>
 <ul>
-<li><a href="../03-taxonomy/">分类法</a> - 维度定义</li>
-<li><a href="../05-dictionary/">字典</a> - 代码字典</li>
-<li><a href="../../../governance/">版本控制政策</a> - 版本控制政策（参见仓库根目录中的 VERSIONING.md）</li>
+<li><a href="../03-taxonomy/">Taxonomy</a> - Dimension definitions</li>
+<li><a href="../05-dictionary/">Dictionary</a> - Code dictionary</li>
+<li><a href="../../../governance/">Versioning Policy</a> - Versioning policy (see VERSIONING.md in repository root)</li>
 </ul>
 
 
