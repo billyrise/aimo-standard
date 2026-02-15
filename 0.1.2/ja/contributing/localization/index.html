@@ -402,7 +402,7 @@
   
     
   
-  AIMO Standard
+  Index
 
       </a>
     </li>
@@ -600,7 +600,7 @@
   
   
   <span class="md-ellipsis">
-    AIMO Standard
+    Index
     
   </span>
   
@@ -2319,6 +2319,15 @@
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
+      翻訳状態マーカー（隠し要素）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
       同期ツールの使用方法
     </span>
   </a>
@@ -2331,7 +2340,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       更新ワークフロー
     </span>
@@ -2350,7 +2359,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       カバレッジマップの更新
     </span>
@@ -2359,7 +2368,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       ドキュメントの更新
     </span>
@@ -2433,7 +2442,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       ファイル命名規則
     </span>
@@ -2442,7 +2451,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     <span class="md-ellipsis">
       品質チェック
     </span>
@@ -2451,7 +2460,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     <span class="md-ellipsis">
       関連ページ
     </span>
@@ -2625,6 +2634,15 @@
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
+      翻訳状態マーカー（隠し要素）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
       同期ツールの使用方法
     </span>
   </a>
@@ -2637,7 +2655,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       更新ワークフロー
     </span>
@@ -2656,7 +2674,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       カバレッジマップの更新
     </span>
@@ -2665,7 +2683,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       ドキュメントの更新
     </span>
@@ -2739,7 +2757,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       ファイル命名規則
     </span>
@@ -2748,7 +2766,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     <span class="md-ellipsis">
       品質チェック
     </span>
@@ -2757,7 +2775,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     <span class="md-ellipsis">
       関連ページ
     </span>
@@ -2804,6 +2822,8 @@
     </a>
   
 
+
+<!-- aimo:translation_status=translated -->
 
 <h1 id="_1">ローカライゼーションガイド</h1>
 <p>本ページでは、AIMO Standard ドキュメントのローカライゼーション（i18n）構造、メンテナンスワークフロー、SSOT（Single Source of Truth）原則について説明します。</p>
@@ -3052,7 +3072,37 @@ translator: human|machine|hybrid
 translation_status: current|outdated|needs_review
 ---
 </code></pre>
-<h3 id="_9">同期ツールの使用方法</h3>
+<h3 id="_9">翻訳状態マーカー（隠し要素）</h3>
+<p>全 doc ページのソースには、<strong>隠し HTML コメント</strong>（フロントマター直後）が含まれ、英語正本か翻訳済み／未翻訳かをスクリプトで判別できます。サイトの表示には出ません。</p>
+<table>
+<thead>
+<tr>
+<th>値</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;!-- aimo:translation_status=source --&gt;</code></td>
+<td>英語正本ページ（<code>docs/en/</code>）。</td>
+</tr>
+<tr>
+<td><code>&lt;!-- aimo:translation_status=translated --&gt;</code></td>
+<td>当該ロケールは英語ソースの翻訳済み。</td>
+</tr>
+<tr>
+<td><code>&lt;!-- aimo:translation_status=untranslated --&gt;</code></td>
+<td>当該ロケールのファイルはあるが内容は英語のコピーで、翻訳待ち。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>使い方</strong></p>
+<ul>
+<li>未翻訳ページ一覧: <code>grep -r "aimo:translation_status=untranslated" docs/</code></li>
+<li>新言語・新ページ追加時は <code>python tooling/i18n/add_translation_markers.py</code> でマーカーを挿入・修正。<code>--strict</code> で本文先頭 400 文字を英語と比較して未翻訳を検出。</li>
+<li>翻訳完了後はマーカーを <code>translated</code> にすること（またはスクリプトを再実行して更新）。</li>
+</ul>
+<h3 id="_10">同期ツールの使用方法</h3>
 <pre><code class="language-bash"># すべての翻訳の鮮度をチェック
 python tooling/i18n/sync_translations.py --check
 
@@ -3069,7 +3119,7 @@ python tooling/i18n/sync_translations.py --init-lang es
 python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
 </code></pre>
 <p>詳細な技術仕様については、<code>tooling/i18n/TRANSLATION_SYNC_SPEC.md</code> を参照してください。</p>
-<h2 id="_10">更新ワークフロー</h2>
+<h2 id="_11">更新ワークフロー</h2>
 <h3 id="ssot-first">タクソノミーの更新（新しいSSOT-Firstワークフロー）</h3>
 <ol>
 <li><code>data/taxonomy/</code> のSSOTを編集:</li>
@@ -3081,14 +3131,14 @@ python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
 <li>必要に応じてドキュメントページを更新</li>
 <li>すべての変更をまとめてコミット</li>
 </ol>
-<h3 id="_11">カバレッジマップの更新</h3>
+<h3 id="_12">カバレッジマップの更新</h3>
 <ol>
 <li><code>coverage_map/coverage_map.yaml</code>（SSOT）を編集</li>
 <li>対応するフレームワークページの表を更新（<code>docs/en/coverage-map/*.md</code>）</li>
 <li>日本語訳を更新（<code>docs/ja/coverage-map/*.md</code>）</li>
 <li>すべての変更をまとめてコミット</li>
 </ol>
-<h3 id="_12">ドキュメントの更新</h3>
+<h3 id="_13">ドキュメントの更新</h3>
 <ol>
 <li>英語ソース（<code>docs/en/...</code>）を編集</li>
 <li>必要に応じて翻訳を更新（または後で更新としてマーク）</li>
@@ -3131,7 +3181,7 @@ python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
 </code></pre>
 <p>!!! success "完了"
     新言語は <code>/dev/es/</code> で利用可能になります</p>
-<h2 id="_13">ファイル命名規則</h2>
+<h2 id="_14">ファイル命名規則</h2>
 <table>
 <thead>
 <tr>
@@ -3158,7 +3208,7 @@ python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
 </tr>
 </tbody>
 </table>
-<h2 id="_14">品質チェック</h2>
+<h2 id="_15">品質チェック</h2>
 <p>コミット前に以下のチェックを実行：</p>
 <pre><code class="language-bash"># i18n構造、見出し整合性、旧フレーズ検出
 python tooling/checks/lint_i18n.py
@@ -3179,7 +3229,7 @@ python tooling/taxonomy/build_artifacts.py --check
 # ビルド確認
 mkdocs build --strict
 </code></pre>
-<h2 id="_15">関連ページ</h2>
+<h2 id="_16">関連ページ</h2>
 <ul>
 <li><a href="../../releases/">Releases</a> — ダウンロード可能なパッケージ</li>
 <li><a href="../../governance/">Governance</a> — プロジェクトガバナンス</li>

@@ -397,7 +397,7 @@
   
     
   
-  AIMO Standard
+  Home
 
       </a>
     </li>
@@ -595,7 +595,7 @@
   
   
   <span class="md-ellipsis">
-    AIMO Standard
+    Home
     
   </span>
   
@@ -2312,6 +2312,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#translation-status-marker-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation status marker (hidden)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#using-the-sync-tool" class="md-nav__link">
     <span class="md-ellipsis">
       Using the Sync Tool
@@ -2618,6 +2627,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#translation-status-marker-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation status marker (hidden)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#using-the-sync-tool" class="md-nav__link">
     <span class="md-ellipsis">
       Using the Sync Tool
@@ -2799,6 +2817,8 @@
     </a>
   
 
+
+<!-- aimo:translation_status=source -->
 
 <h1 id="localization-guide">Localization Guide</h1>
 <p>This page documents the localization (i18n) structure, maintenance workflow, and SSOT (Single Source of Truth) principles for the AIMO Standard documentation.</p>
@@ -3047,6 +3067,36 @@ translator: human|machine|hybrid
 translation_status: current|outdated|needs_review
 ---
 </code></pre>
+<h3 id="translation-status-marker-hidden">Translation status marker (hidden)</h3>
+<p>Every doc page includes a <strong>hidden HTML comment</strong> in the source (immediately after the frontmatter) so that scripts and tools can detect whether the page is the English source or a translated/untranslated variant. It is not visible on the rendered site.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;!-- aimo:translation_status=source --&gt;</code></td>
+<td>English canonical page (<code>docs/en/</code>).</td>
+</tr>
+<tr>
+<td><code>&lt;!-- aimo:translation_status=translated --&gt;</code></td>
+<td>This locale’s content is a translation of the English source.</td>
+</tr>
+<tr>
+<td><code>&lt;!-- aimo:translation_status=untranslated --&gt;</code></td>
+<td>This locale’s file exists but content is still the English copy; translation pending.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to use</strong></p>
+<ul>
+<li>To list untranslated pages: <code>grep -r "aimo:translation_status=untranslated" docs/</code></li>
+<li>When adding a new language or page, run <code>python tooling/i18n/add_translation_markers.py</code> to insert or fix markers. Use <code>--strict</code> to detect untranslated by comparing the first 400 characters of the body with the English file.</li>
+<li>After translating a page, set the marker to <code>translated</code> (or re-run the script so it can update the marker).</li>
+</ul>
 <h3 id="using-the-sync-tool">Using the Sync Tool</h3>
 <pre><code class="language-bash"># Check all translations for freshness
 python tooling/i18n/sync_translations.py --check
