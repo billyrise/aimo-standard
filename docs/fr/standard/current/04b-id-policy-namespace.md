@@ -5,7 +5,7 @@ description: AIMO v0.1 ID Policy and namespace separation - EV for Evidence (art
 
 # ID Policy / Namespace (v0.1)
 
-Cette page est disponible en **anglais** et **japonais**. Voir [ID Policy / Namespace (EN)](../../../standard/current/04b-id-policy-namespace/).
+Cette page est disponible en **anglais** et **japonais**. Voir [ID Policy / Namespace (EN)](../../../../standard/current/04b-id-policy-namespace/).
 
 | Prefix | Use |
 |--------|-----|
