@@ -17,8 +17,8 @@ This page describes **reference mappings** between AIMO evidence and selected **
 
 **Japan**
 
-- [デジタル庁 — 生成AIの調達・利活用に係るガイドライン](https://www.digital.go.jp/news/3579c42d-b11c-4756-b66e-3d3e35175623) — Digital Agency (Cabinet Secretariat): "行政の進化と革新のための生成AIの調達・利活用に係るガイドライン"
-- [AI事業者ガイドライン](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/index.html) — METI / MIC (AI Business Guidelines; 経済産業省・総務省)
+- [Digital Agency — GenAI procurement and utilisation guideline](https://www.digital.go.jp/news/3579c42d-b11c-4756-b66e-3d3e35175623) — Digital Agency (Cabinet Secretariat): guideline on generative AI procurement and use in government
+- [AI Business Guidelines](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/index.html) — METI / MIC (Ministry of Economy, Trade and Industry / Ministry of Internal Affairs and Communications)
 
 ## Mapping table (UK)
 
@@ -33,9 +33,9 @@ This page describes **reference mappings** between AIMO evidence and selected **
 
 | Government requirement (topic) | AIMO artifact(s) | Where in Evidence Bundle | Validator coverage | Note |
 | --- | --- | --- | --- | --- |
-| GenAI procurement checklist (デジタル庁) | External Form (checklist as-is); Dictionary, Summary | payload_index; External Forms section; manifest reference | N/A (attachment) | Informative mapping; does not guarantee full compliance. Profile: `coverage_map/profiles/jp_gov_genai_procurement.json`. |
+| GenAI procurement checklist (Digital Agency) | External Form (checklist as-is); Dictionary, Summary | payload_index; External Forms section; manifest reference | N/A (attachment) | Informative mapping; does not guarantee full compliance. Profile: `coverage_map/profiles/jp_gov_genai_procurement.json`. |
 | AI Business Guidelines — governance / traceability | Summary, dictionary, request, review, change_log | objects/; manifest; templates/ev/ | schema_validate_dictionary, schema_validate_ev | Map checklist items to AIMO taxonomy where useful for traceability. |
-| Risk / accountability documentation | Dictionary, EV, review, exception | objects/; schemas/jsonschema/ | schema_validate_ev | Verify against official デジタル庁 and METI/MIC guidance. |
+| Risk / accountability documentation | Dictionary, EV, review, exception | objects/; schemas/jsonschema/ | schema_validate_ev | Verify against official Digital Agency and METI/MIC guidance. |
 
 ## UK: ATRS and AI procurement (summary)
 
