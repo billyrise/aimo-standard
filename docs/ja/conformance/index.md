@@ -13,7 +13,28 @@ description: AIMO Standard の適合性レベル。組織の適合主張の仕�
     **不適切な主張例:** 「EU AI 法適合」「ISO 42001 認証」「政府承認」。
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
+AIMO Standard は**保証・監査引き継ぎ・継続的証跡のレイヤー**として位置づけます：構造化証跡のパッケージ化、Validator、トレーサビリティを提供し、採用者と監査人が構造化証跡を扱えるようにします。AIMO は**認証機関ではありません**。認証・適合の判断は認定認証機関、監査人、採用組織が行います。
+
 これらのティアは、パッケージ化とトレーサビリティのための**内部エビデンス成熟度レベル**です。認証でも、保証意見でも、法・規制適合でも**ありません**。
+
+## 互換性の主張（ISO/NIST/EU AI Act）
+
+以下の**参考マッピング**は、AIMO の証跡・アーティファクトと外部フレームワークを対応づけます。説明可能性と監査引き継ぎを支援するものであり、認証や適合保証を**付与しません**。権威あるフレームワーク本文で照合してください。
+
+- [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) — ISO/IEC 42001（AI マネジメントシステム）へのマッピング
+- [Coverage Map — NIST AI RMF](../coverage-map/nist-ai-rmf/) — NIST AI リスクマネジメントフレームワークへのマッピング
+- [Coverage Map — EU AI Act](../coverage-map/eu-ai-act/) — EU AI 法テーマへのマッピング（概要；法務助言ではない）
+
+一次ソースと主張文言は各 Coverage Map ページおよび [Responsibility Boundary](../governance/responsibility-boundary/) に記載しています。
+
+## 主張しないこと（Non-claims）
+
+- AIMO は ISO/IEC 42001、NIST AI RMF、EU AI Act その他いかなるフレームワークへの適合**認証を行いません**。
+- AIMO は規制・法適合を**保証しません**。
+- AIMO は保証意見や法務助言を**提供しません**。
+- AIMO は組織が外部要求を満たすかどうかを**判断しません**。それは採用者、監査人、認証機関の責任です。
+
+AIMO が**提供するもの**：構造化証跡フォーマット、Validator、Coverage Map（参考）、監査引き継ぎを支援する資料。詳細は [Responsibility Boundary](../governance/responsibility-boundary/) を参照。
 
 !!! note "ティア名の別名"
     最上位ティアは非公式な議論で以前「Gold」と呼ばれたことがあります；**公式ティア名は Audit-Ready** です。

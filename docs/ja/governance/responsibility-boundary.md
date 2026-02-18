@@ -7,6 +7,15 @@ description: AIMO Responsibility Boundary — 標準が提供する内容と採�
 
 本ページは、AIMO Standard が提供するものと提供しないもの、前提としていること、および採用者の責任を定義します。
 
+## 証明と保証の境界（Proof vs Assurance）
+
+| 境界 | AIMO が提供するもの | 判断主体 |
+| --- | --- | --- |
+| **証明（証跡）** | Evidence Bundle 構造、Validator、スキーマ、テンプレート、Coverage Map（参考）。AIMO は構造適合をチェックする**証跡パック**と**Validator**を提供します。 | 採用者が証跡を作成；AIMO がフォーマットとルールを定義。 |
+| **保証・適合・認証** | AIMO は認証、保証意見、適合判断を**発行しません**。 | **外部:** 顧客、監査人、または**認定認証機関**が適合・認証を判断します。 |
+
+適合性と主張文言は [Conformance](../../conformance/) および [ISO 42001 認証準備ツールキット](../../artifacts/iso-42001-certification-readiness-toolkit/) で統一しています。AIMO は**証跡準備**と**監査引き継ぎ**を支援し、認証や適合保証は行いません。
+
 ## AIMO Standard が提供するもの
 
 - **構造化された証跡フォーマット**: AI ガバナンス証跡のためのスキーマ、テンプレート、タクソノミー。

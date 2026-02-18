@@ -7,6 +7,15 @@ description: AIMO Responsibility Boundary - Defines what the standard provides v
 
 This page defines what the AIMO Standard provides and does not provide, the assumptions it makes, and the responsibilities of adopters.
 
+## Proof vs assurance boundary
+
+| Boundary | What AIMO provides | Who decides |
+| --- | --- | --- |
+| **Proof (evidence)** | Evidence Bundle structure, validators, schemas, templates, coverage mappings (informative). AIMO produces **evidence packs** and **validators** that check structural conformance. | Adopter produces evidence; AIMO defines format and rules. |
+| **Assurance / compliance / certification** | AIMO does **not** issue certifications, assurance opinions, or compliance decisions. | **External:** customer, auditor, or **accredited certification body** decides compliance and certification. |
+
+Conformance and claim language are unified in [Conformance](../../conformance/) and the [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/). AIMO supports **evidence readiness** and **audit handoff**; it does not certify or guarantee compliance.
+
 ## What AIMO Standard provides
 
 - **A structured evidence format**: schemas, templates, and taxonomy for AI governance evidence.

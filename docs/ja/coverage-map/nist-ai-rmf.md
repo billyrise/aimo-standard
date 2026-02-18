@@ -5,6 +5,9 @@ description: AIMO StandardからNIST AI RMFへのマッピング。AIMOタクソ
 
 # NIST AI RMF mapping
 
+!!! note "一次ソース"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework)（NIST 公式出版物・リソース）。マッピングと適用性はこの一次ソースで照合してください。
+
 > 参照ショートカット：Taxonomy → Minimum Evidence → Validator → 人による監督プロトコル
 
 - [Taxonomy](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: AIMO StandardからNIST AI RMFへのマッピング。AIMOタクソ
 - [Validator](../../validator/)
 - [人による監督プロトコル](../../governance/human-oversight-protocol/)
 
-本ページは、NIST AI Risk Management Framework（Govern, Map, Measure, Manage）の主要テーマを AIMO の証跡・アーティファクトに対応付ける。説明可能性のためのものであり、NIST AI RMF への適合を保証しない。NIST 発行物と照合すること。
+本ページは、NIST AI Risk Management Framework（Govern, Map, Measure, Manage）の主要テーマを AIMO の証跡・アーティファクトに対応付ける。説明可能性のためのものであり、NIST AI RMF への適合を保証しない。[NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) 発行物と照合すること。
 
 
 ## Mapping table
