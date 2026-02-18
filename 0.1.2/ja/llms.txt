@@ -1,0 +1,88 @@
+# AIMO Standard
+
+> AIMO Standard は、AIガバナンス・監査エビデンス・エージェンティックAIリスク管理のためのオープンスタンダードです。
+> 8次元・91コードの体系的タクソノミー、最小エビデンス要件、検証ツール、監査対応アーティファクトスキーマを提供します。
+>
+> ライセンス: Apache-2.0（自由に使用・改変・再配布可能）
+> 引用方法: https://standard.aimoaas.com/latest/ja/governance/cite/
+> バージョン: 0.1.2（2026年2月13日リリース）
+> リポジトリ: https://github.com/billyrise/aimo-standard
+
+## コアスタンダード
+
+- [概要](https://standard.aimoaas.com/latest/ja/standard/current/01-overview/): AIMO Standardとは何か、なぜ必要か、シャドーAI・エージェンティックAIリスクへのアプローチ。
+- [適用範囲](https://standard.aimoaas.com/latest/ja/standard/current/02-scope/): 適用境界、対象組織、スコープ内AIシステムカテゴリ。
+- [タクソノミー](https://standard.aimoaas.com/latest/ja/standard/current/03-taxonomy/): AI利用を分類するための8次元タクソノミー。コア概念フレームワーク。
+- [タクソノミーコード一覧](https://standard.aimoaas.com/latest/ja/standard/current/04-codes/): 全91コードと定義。完全な分類語彙。
+- [IDポリシー・名前空間](https://standard.aimoaas.com/latest/ja/standard/current/04b-id-policy-namespace/): タクソノミーコード識別子の付番ルールとガバナンス。
+- [辞書](https://standard.aimoaas.com/latest/ja/standard/current/05-dictionary/): スタンダード全体で使用する用語の定義集。
+- [エビデンステンプレート](https://standard.aimoaas.com/latest/ja/standard/current/06-ev-template/): AIシステム利用を記録するための標準エビデンスレコード形式。
+- [バリデーター](https://standard.aimoaas.com/latest/ja/standard/current/07-validator/): スキーマ検証ルールとAIMOバリデーターの使い方。
+- [エビデンスバンドル構造](https://standard.aimoaas.com/latest/ja/standard/current/09-evidence-bundle-structure/): エビデンスレコードを監査バンドルにパッケージする方法。
+- [変更履歴](https://standard.aimoaas.com/latest/ja/standard/current/08-changelog/): スタンダード仕様のバージョン履歴。
+- [ロードマップ v0.2](https://standard.aimoaas.com/latest/ja/standard/current/10-roadmap-v0.2/): 次期メジャーバージョンの予定機能と方向性。
+
+## アーティファクト
+
+- [アーティファクト一覧](https://standard.aimoaas.com/latest/ja/artifacts/): ダウンロード可能なアーティファクトとツーリング出力のインデックス。
+- [エビデンスバンドル](https://standard.aimoaas.com/latest/ja/artifacts/evidence-bundle/): 完全な監査エビデンスバンドルを組み立てるためのテンプレートと仕様。
+- [最小エビデンス要件](https://standard.aimoaas.com/latest/ja/artifacts/minimum-evidence/): 監査対応に必要なタクソノミーコード別最小エビデンスフィールド一覧。
+- [エビデンスバンドルカバレッジマップ](https://standard.aimoaas.com/latest/ja/artifacts/evidence-bundle-coverage-map/): エビデンスバンドルの内容を規制フレームワーク要件にマッピング。
+- [正当化非準拠](https://standard.aimoaas.com/latest/ja/artifacts/justified-non-compliance/): 標準要件からの逸脱を文書化・正当化する方法。
+- [ISO 42001認証準備ツールキット](https://standard.aimoaas.com/latest/ja/artifacts/iso-42001-certification-readiness-toolkit/): ISO 42001認証を目指す組織向けの構造化ツールキット。
+- [署名検証ロードマップ](https://standard.aimoaas.com/latest/ja/artifacts/signature-verification-roadmap/): エビデンスバンドルの暗号署名・検証計画。
+- [ログスキーマ — エージェントアクティビティ](https://standard.aimoaas.com/latest/ja/artifacts/log-schemas/agent-activity/): 監査のためのエージェンティックAIシステムアクションのログスキーマ。
+- [ログスキーマ — シャドーAI発見](https://standard.aimoaas.com/latest/ja/artifacts/log-schemas/shadow-ai-discovery/): シャドーAI発見結果の文書化スキーマ。
+
+## カバレッジマップ（規制対応）
+
+- [カバレッジマップ概要](https://standard.aimoaas.com/latest/ja/coverage-map/): AIMOスタンダードのエビデンスが国際AI規制にどう対応するか。
+- [EU AI法](https://standard.aimoaas.com/latest/ja/coverage-map/eu-ai-act/): AIMOエビデンス要件とEU AI法附属書IV義務のマッピング。
+- [ISO 42001](https://standard.aimoaas.com/latest/ja/coverage-map/iso-42001/): ISO 42001:2023 AI管理システム要求事項のカバレッジ。
+- [ISO 42006](https://standard.aimoaas.com/latest/ja/coverage-map/iso-42006/): ISO 42006 AI監査要件のカバレッジ。
+- [NIST AI RMF](https://standard.aimoaas.com/latest/ja/coverage-map/nist-ai-rmf/): NIST AIリスク管理フレームワークとの整合。
+- [ISMS統合](https://standard.aimoaas.com/latest/ja/coverage-map/isms/): ISO 27001 / ISMSの担当者向け統合ガイダンス。
+- [調達・開示](https://standard.aimoaas.com/latest/ja/coverage-map/procurement-and-disclosure/): AI調達の透明性とサプライヤー開示義務のカバレッジ。
+- [カバレッジ評価方法論](https://standard.aimoaas.com/latest/ja/coverage-map/methodology/): カバレッジ評価の実施方法とスコアリング。
+
+## 適合性
+
+- [適合性](https://standard.aimoaas.com/latest/ja/conformance/): 適合レベル、自己評価プロセス、認証パスウェイ。
+
+## バリデーター
+
+- [バリデーター](https://standard.aimoaas.com/latest/ja/validator/): AIMOエビデンスバンドルとタクソノミーコードのコマンドライン・API検証ツール。
+
+## サンプル
+
+- [サンプル一覧](https://standard.aimoaas.com/latest/ja/examples/): サンプルエビデンスバンドル、タクソノミー利用例、監査シナリオ。
+
+## ガバナンス
+
+- [ガバナンス概要](https://standard.aimoaas.com/latest/ja/governance/): AIMOスタンダードの組織ガバナンス構造。
+- [トラストパッケージ](https://standard.aimoaas.com/latest/ja/governance/trust-package/): 依拠者・監査人向けの標準トラストパッケージ。
+- [責任境界](https://standard.aimoaas.com/latest/ja/governance/responsibility-boundary/): AIMOスタンダードコントリビューターの責任範囲。
+- [人間による監視プロトコル](https://standard.aimoaas.com/latest/ja/governance/human-oversight-protocol/): 本スタンダードに基づき文書化されるAIシステムの人間監視要件。
+- [引用方法](https://standard.aimoaas.com/latest/ja/governance/cite/): 研究・監査報告書・規制提出物での引用方法。
+- [ライセンス](https://standard.aimoaas.com/latest/ja/governance/license/): AIMOスタンダードのApache-2.0ライセンス条件。
+- [コントリビューション](https://standard.aimoaas.com/latest/ja/governance/contributing/): スタンダードへの貢献方法。
+
+## リリース
+
+- [リリース一覧](https://standard.aimoaas.com/latest/ja/releases/): リリースノート、ダウンロード可能アーティファクト（PDF・ZIP）、バージョン履歴。
+
+## 全文テキスト
+
+- [llms-full.txt（日本語）](https://standard.aimoaas.com/latest/ja/llms-full.txt): LLM取り込み用の全日本語ドキュメントページ結合テキスト。
+
+## 他言語版
+
+- [English llms.txt](https://standard.aimoaas.com/llms.txt)
+- [Español (Spanish) llms.txt](https://standard.aimoaas.com/latest/es/llms.txt)
+- [Français (French) llms.txt](https://standard.aimoaas.com/latest/fr/llms.txt)
+- [Deutsch (German) llms.txt](https://standard.aimoaas.com/latest/de/llms.txt)
+- [Português (Portuguese) llms.txt](https://standard.aimoaas.com/latest/pt/llms.txt)
+- [Italiano (Italian) llms.txt](https://standard.aimoaas.com/latest/it/llms.txt)
+- [简体中文 (Simplified Chinese) llms.txt](https://standard.aimoaas.com/latest/zh/llms.txt)
+- [繁體中文 (Traditional Chinese) llms.txt](https://standard.aimoaas.com/latest/zh-TW/llms.txt)
+- [한국어 (Korean) llms.txt](https://standard.aimoaas.com/latest/ko/llms.txt)

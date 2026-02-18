@@ -1,0 +1,66 @@
+# AIMO Standard
+
+> AIMO Standard ist ein offener Standard für KI-Governance, Audit-Nachweise und das
+> Risikomanagement agentischer KI. Er bietet eine strukturierte Taxonomie (8 Dimensionen,
+> 91 Codes), Mindestanforderungen an Nachweise, Validierungstools und Artefakt-Schemata
+> für unternehmensweite KI-Compliance.
+>
+> Lizenz: Apache-2.0. Frei nutzbar, anpassbar und weiterzuverbreiten.
+> Zitierung: https://standard.aimoaas.com/latest/de/governance/cite/
+> Version: 0.1.2 (veröffentlicht am 2026-02-13)
+> Repository: https://github.com/billyrise/aimo-standard
+
+## Kernstandard
+
+- [Überblick](https://standard.aimoaas.com/latest/de/standard/current/01-overview/): Was AIMO Standard ist, warum er existiert und wie er Shadow-AI- und agentische KI-Risiken adressiert.
+- [Geltungsbereich](https://standard.aimoaas.com/latest/de/standard/current/02-scope/): Anwendungsgrenzen, Zielorganisationen und betroffene KI-Systemkategorien.
+- [Taxonomie](https://standard.aimoaas.com/latest/de/standard/current/03-taxonomy/): 8-dimensionale Taxonomie zur Klassifizierung von KI-Nutzung. Zentrales konzeptionelles Framework.
+- [Taxonomie-Codes](https://standard.aimoaas.com/latest/de/standard/current/04-codes/): Alle 91 Taxonomie-Codes mit Definitionen. Vollständiges Klassifizierungsvokabular.
+- [ID-Richtlinie und Namespace](https://standard.aimoaas.com/latest/de/standard/current/04b-id-policy-namespace/): Vergabe und Governance von Taxonomie-Code-Identifikatoren.
+- [Wörterbuch](https://standard.aimoaas.com/latest/de/standard/current/05-dictionary/): Definitionen aller im Standard verwendeten Begriffe.
+- [Nachweisvorlage](https://standard.aimoaas.com/latest/de/standard/current/06-ev-template/): Kanonisches Nachweisaufzeichnungsformat zur Dokumentation der Nutzung von KI-Systemen.
+- [Validator](https://standard.aimoaas.com/latest/de/standard/current/07-validator/): Schema-Validierungsregeln und Verwendung des AIMO-Validators.
+- [Struktur des Nachweispakets](https://standard.aimoaas.com/latest/de/standard/current/09-evidence-bundle-structure/): Wie Nachweisaufzeichnungen in ein konformes Audit-Paket zusammengeführt werden.
+- [Änderungsprotokoll](https://standard.aimoaas.com/latest/de/standard/current/08-changelog/): Versionshistorie der Standardspezifikation.
+- [Roadmap v0.2](https://standard.aimoaas.com/latest/de/standard/current/10-roadmap-v0.2/): Geplante Funktionen und Ausrichtung der nächsten Hauptversion.
+
+## Artefakte
+
+- [Artefakte-Übersicht](https://standard.aimoaas.com/latest/de/artifacts/): Index aller herunterladbaren Artefakte und Tool-Ausgaben.
+- [Nachweispaket](https://standard.aimoaas.com/latest/de/artifacts/evidence-bundle/): Vorlage und Spezifikation zur Zusammenstellung eines vollständigen Audit-Nachweispakets.
+- [Mindestanforderungen an Nachweise](https://standard.aimoaas.com/latest/de/artifacts/minimum-evidence/): Mindestmenge an Nachweisfeldern pro Taxonomie-Code für Audit-Bereitschaft.
+- [ISO-42001-Zertifizierungsbereitschafts-Toolkit](https://standard.aimoaas.com/latest/de/artifacts/iso-42001-certification-readiness-toolkit/): Strukturiertes Toolkit für Organisationen, die die ISO-42001-Zertifizierung anstreben.
+
+## Coverage-Map (Regulatorische Ausrichtung)
+
+- [Coverage-Map-Übersicht](https://standard.aimoaas.com/latest/de/coverage-map/): Wie AIMO-Standard-Nachweise auf internationale KI-Regulierungen abgebildet werden.
+- [EU AI Act](https://standard.aimoaas.com/latest/de/coverage-map/eu-ai-act/): Zuordnung von AIMO-Nachweisanforderungen zu den Verpflichtungen aus Anhang IV des EU AI Acts.
+- [ISO 42001](https://standard.aimoaas.com/latest/de/coverage-map/iso-42001/): Abdeckung der KI-Managementsystem-Anforderungen ISO 42001:2023.
+- [NIST AI RMF](https://standard.aimoaas.com/latest/de/coverage-map/nist-ai-rmf/): Ausrichtung am NIST AI Risk Management Framework.
+
+## Governance
+
+- [Governance-Übersicht](https://standard.aimoaas.com/latest/de/governance/): Organisatorische Governance-Struktur von AIMO Standard.
+- [Vertrauenspaket](https://standard.aimoaas.com/latest/de/governance/trust-package/): Das kanonische Vertrauenspaket für vertrauende Parteien und Auditoren.
+- [Zitierhinweise](https://standard.aimoaas.com/latest/de/governance/cite/): Zitieranweisungen für Forschung, Auditberichte und regulatorische Einreichungen.
+- [Lizenz](https://standard.aimoaas.com/latest/de/governance/license/): Apache-2.0-Lizenzbedingungen für AIMO Standard.
+
+## Releases
+
+- [Releases](https://standard.aimoaas.com/latest/de/releases/): Release-Notes, herunterladbare Artefakte (PDF, ZIP) und Versionshistorie.
+
+## Volltext
+
+- [llms-full.txt (Deutsch)](https://standard.aimoaas.com/latest/de/llms-full.txt): Vollständiger Text aller deutschen Dokumentationsseiten für die LLM-Aufnahme.
+
+## Andere Sprachen
+
+- [English llms.txt](https://standard.aimoaas.com/llms.txt)
+- [日本語 (Japanese) llms.txt](https://standard.aimoaas.com/latest/ja/llms.txt)
+- [Español (Spanish) llms.txt](https://standard.aimoaas.com/latest/es/llms.txt)
+- [Français (French) llms.txt](https://standard.aimoaas.com/latest/fr/llms.txt)
+- [Português (Portuguese) llms.txt](https://standard.aimoaas.com/latest/pt/llms.txt)
+- [Italiano (Italian) llms.txt](https://standard.aimoaas.com/latest/it/llms.txt)
+- [简体中文 (Simplified Chinese) llms.txt](https://standard.aimoaas.com/latest/zh/llms.txt)
+- [繁體中文 (Traditional Chinese) llms.txt](https://standard.aimoaas.com/latest/zh-TW/llms.txt)
+- [한국어 (Korean) llms.txt](https://standard.aimoaas.com/latest/ko/llms.txt)
