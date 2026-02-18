@@ -7,6 +7,15 @@ description: AIMO 责任边界 — 定义标准提供内容与采用者责任。
 
 本页定义 AIMO Standard 提供与不提供的内容、所做假设以及采用者的责任。
 
+## 证据与鉴证边界（Proof vs assurance boundary）
+
+| 边界 | AIMO 提供的内容 | 决定方 |
+| --- | --- | --- |
+| **证据** | Evidence Bundle 结构、验证器、schema、模板、覆盖映射（参考）。AIMO 产制**证据包**与**验证器**，用于检查结构符合性。 | 采用方产制证据；AIMO 定义格式与规则。 |
+| **鉴证/符合/认证** | AIMO **不**颁发认证、鉴证意见或符合性决定。 | **外部**：客户、审计方或**认可认证机构**决定符合与认证。 |
+
+符合性与声明用语统一于 [符合性](../../conformance/) 与 [ISO 42001 认证就绪工具包](../../artifacts/iso-42001-certification-readiness-toolkit/)。AIMO 支持**证据准备**与**审计交接**；不进行认证亦不保证符合。
+
 ## AIMO Standard 提供的内容
 
 - **结构化证据格式**：AI 治理证据的 schema、模板与分类法。

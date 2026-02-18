@@ -44,6 +44,6 @@ AIMO Standard es un **acelerador de implementación para la preparación de evid
 ## Referencias
 
 - [ISO/IEC 42006](https://www.iso.org/standard/42006) — Requisitos para organismos que auditan y certifican sistemas de gestión de IA
-- [Calendario de aplicación del EU AI Act](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / alineado con la Comisión; informativo)
+- [Calendario de aplicación del EU AI Act](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) (Servicio de la Ley de IA de la Comisión Europea; fuente primaria)
 - [European Commission — Clear guidelines for AI (4 dic 2025)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — Preparación de directrices de la AI Office (consultar noticias de la Comisión para URL actual)
 - [EPRS — EU AI Act implementation timeline (jun 2025)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — Briefing del Parlamento (informativo)

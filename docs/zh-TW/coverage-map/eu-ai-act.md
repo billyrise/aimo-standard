@@ -48,7 +48,7 @@ description: AIMO Standard 與歐盟 AI 法的對應。AIMO 分類代碼與歐�
 
 ## 調和標準與推定符合（第 40 條）
 
-依 AI 法在歐盟公報公布**調和標準**後，符合該標準可對相關要求產生**推定符合**。確切清單與日期依標準化工作與公報公布而定。AIMO 對應僅供參考，不授予推定符合。現行狀態請見下方**參考資料**之執委會與 AI 辦公室來源。
+依 AI 法在歐盟公報公布**調和標準**後，符合該標準可對相關要求產生**推定符合**。確切清單與日期依標準化工作與公報公布而定。AIMO 對應僅供參考，不授予推定符合。現行狀態請見執委會 [AI 法標準化](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) 頁面及下方**參考資料**。
 
 ## 2026 年 AI 辦公室指引（實務細節）
 
@@ -64,9 +64,18 @@ description: AIMO Standard 與歐盟 AI 法的對應。AIMO 分類代碼與歐�
 !!! warning "非法律意見"
     本頁僅供說明。您必須依正式規則及任何施行或修正法案驗證適用性與日期。AIMO 不提供法律意見亦不保證符合。
 
+!!! note "法律說明／參考對應"
+    本頁為**參考用**。法律解釋應以正式規則（EUR-Lex）及歐洲執委會發布為準。AIMO 不提供法律意見亦不保證符合。
+
 ## 參考資料
 
-- [規則 (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689)（EUR-Lex）— 人工智慧法
-- [歐盟 AI 法實施時程](https://artificialintelligenceact.eu/implementation-timeline)（AI 法服務台／執委會對齊；參考用）
-- 歐洲執委會／AI 辦公室 — 指引與時程（請以執委會新聞與 AI 法服務台查詢最新 URL）
+**主要來源**
+
+- [規則 (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689)（EUR-Lex）— 人工智慧法（法規本文）
+- [歐盟 AI 法實施時程](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) — 歐洲執委會 AI 法服務台（實施時程）
+- [AI 法標準化](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) — 歐洲執委會數位戰略（調和標準、推定符合）
+
+**其他**
+
+- 歐洲執委會／AI 辦公室 — 指引與時程（請見 AI 法服務台及執委會新聞取得最新 URL）
 - [EPRS — 歐盟 AI 法實施](https://www.europarl.europa.eu/thinktank/) — 議會簡報（參考用）

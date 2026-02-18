@@ -44,6 +44,6 @@ AIMO Standard 是**證據就緒與可解釋性的實施加速器**，可用於�
 ## 參考資料
 
 - [ISO/IEC 42006](https://www.iso.org/standard/42006) — 對 AI 管理體系進行審計與認證的機構要求
-- [EU AI Act 實施時程](https://artificialintelligenceact.eu/implementation-timeline)（AI Act Service Desk / 委員會一致；參考）
+- [EU AI Act 實施時程](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act)（歐洲執委會 AI 法服務台；參考）
 - [European Commission — Clear guidelines for AI (2025年12月4日)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — AI Office 指南準備（請查閱委員會新聞取得最新 URL）
 - [EPRS — EU AI Act implementation timeline (2025年6月)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — 議會簡報（參考）

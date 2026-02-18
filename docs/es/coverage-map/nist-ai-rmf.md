@@ -5,6 +5,9 @@ description: Mapeo de AIMO Standard a NIST AI RMF. Trazabilidad entre códigos d
 
 # Mapeo NIST AI RMF
 
+!!! note "Fuente primaria"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) (publicación y recursos oficiales de NIST). Verifique el mapeo y la aplicabilidad contra esta fuente primaria.
+
 > Atajos de trazabilidad: Taxonomía → Requisitos Mínimos de Evidencia → Validador → Protocolo de Supervisión Humana.
 
 - [Taxonomía](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: Mapeo de AIMO Standard a NIST AI RMF. Trazabilidad entre códigos d
 - [Validador](../../validator/)
 - [Protocolo de Supervisión Humana](../../governance/human-oversight-protocol/)
 
-Esta página mapea temas seleccionados del Marco de Gestión de Riesgos de IA de NIST (Gobernar, Mapear, Medir, Gestionar) a evidencia y artefactos AIMO. Es solo para explicabilidad; no garantiza conformidad con NIST AI RMF. Verifique contra la publicación de NIST.
+Esta página mapea temas seleccionados del Marco de Gestión de Riesgos de IA de NIST (Gobernar, Mapear, Medir, Gestionar) a evidencia y artefactos AIMO. Es solo para explicabilidad; no garantiza conformidad con NIST AI RMF. Verifique contra la [publicación NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework).
 
 
 ## Tabla de mapeo

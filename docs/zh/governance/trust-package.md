@@ -7,6 +7,7 @@ description: AIMO Trust Package - Auditor-ready materials bundle. Minimum docume
 
 This page bundles the minimum materials auditors, legal, and IT security need to assess adoption readiness.
 It is a hub only; detailed Evidence TOC and Coverage tables are maintained in their respective sections.
+Declaration and responsibility boundaries (what AIMO does and does not provide, including assurance and audit handoff) are aligned with [Conformance](../../conformance/) and [Responsibility Boundary](../../governance/responsibility-boundary/).
 
 ## Download
 

@@ -13,7 +13,26 @@ description: AIMO Standard 符合性級別。組織如何聲明符合、證據�
     **不當聲明：**「符合歐盟 AI 法」、「ISO 42001 認證」、「政府核可」。
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
+AIMO Standard 定位為**確信／稽核交接／持續證據**層：提供證據包裝、驗證器與可追溯性，供採用方與稽核方使用結構化證據。AIMO **不是**認證機構；認證與符合性決定由認可認證機構、稽核方與採用組織負責。
+
 上述層級為包裝與可追溯性之**內部證據成熟度**。**不是**認證、**不是**確信意見，也**不是**法律或法規符合。
+
+## 相容性聲明（ISO／NIST／歐盟 AI 法）
+
+下列**參考對應**將 AIMO 證據與人工產物連結至外部架構。供可解釋性與稽核交接使用；**不**授予認證亦不保證符合。請對照各架構權威本文驗證。
+
+- [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) — 對應至 ISO/IEC 42001（AI 管理系統）
+- [Coverage Map — NIST AI RMF](../coverage-map/nist-ai-rmf/) — 對應至 NIST AI 風險管理架構
+- [Coverage Map — 歐盟 AI 法](../coverage-map/eu-ai-act/) — 對應至歐盟 AI 法主題（高層；非法律意見）
+
+主要來源與聲明用語見各 Coverage Map 頁面及 [責任邊界](../governance/responsibility-boundary/)。
+
+## 非聲明（AIMO 不聲明之內容）
+
+- AIMO **不**認證對 ISO/IEC 42001、NIST AI RMF、歐盟 AI 法或任何其他架構的符合。
+- AIMO **不**保證法規或法律符合。
+- AIMO **不**提供確信意見或法律建議。
+- AIMO **不**判斷組織是否滿足外部要求；由採用方、稽核方與認證機構負責。
 
 !!! note "層級名稱別名"
     最高層級過去在非正式討論中曾稱「Gold」；**正式層級名稱為 Audit-Ready**。

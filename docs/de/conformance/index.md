@@ -13,7 +13,28 @@ description: AIMO Standard Konformitätsstufen. Wie Organisationen Konformität 
     **Unangemessener Anspruch:** „EU-KI-Verordnung konform“, „ISO 42001 zertifiziert“, „behördlich genehmigt“.
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
+Der AIMO Standard versteht sich als **Assurance- / Audit-Übergabe- / kontinuierliche-Evidenz-Ebene**: Er stellt Evidenzverpackung, Validatoren und Nachverfolgbarkeit bereit, damit Adoptierende und Prüfer mit strukturierter Evidenz arbeiten können. AIMO ist **kein** Zertifizierer; Zertifizierungs- und Konformitätsentscheidungen treffen akkreditierte Zertifizierungsstellen, Prüfer und die adoptierende Organisation.
+
 Diese Stufen sind **interne Evidenzreifegrade** für Verpackung und Nachverfolgbarkeit. Sie sind **keine** Zertifizierung, **keine** Prüfungsmeinung und **keine** rechtliche oder regulatorische Konformität.
+
+## Kompatibilitätsaussagen (ISO/NIST/EU-KI-Verordnung)
+
+Die folgenden **informativen Zuordnungen** verknüpfen AIMO Evidence und Artefakte mit externen Rahmenwerken. Sie unterstützen Erklärbarkeit und Audit-Übergabe; sie **bewirken keine** Zertifizierung oder Konformitätsgarantie. Überprüfen Sie gegen die maßgeblichen Rahmenwerke.
+
+- [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) — Zuordnung zu ISO/IEC 42001 (KI-Managementsystem)
+- [Coverage Map — NIST AI RMF](../coverage-map/nist-ai-rmf/) — Zuordnung zum NIST AI Risk Management Framework
+- [Coverage Map — EU-KI-Verordnung](../coverage-map/eu-ai-act/) — Zuordnung zu Themen der KI-Verordnung (Überblick; keine Rechtsberatung)
+
+Primärquellen und Anspruchssprache sind auf jeder Coverage-Map-Seite und in der [Verantwortungsgrenze](../governance/responsibility-boundary/) dokumentiert.
+
+## Non-claims (was AIMO nicht behauptet)
+
+- AIMO **zertifiziert nicht** die Konformität mit ISO/IEC 42001, NIST AI RMF, EU-KI-Verordnung oder einem anderen Rahmenwerk.
+- AIMO **garantiert nicht** regulatorische oder rechtliche Konformität.
+- AIMO **erteilt keine** Prüfungsmeinungen oder Rechtsberatung.
+- AIMO **entscheidet nicht**, ob eine Organisation externe Anforderungen erfüllt; das obliegt Adoptierenden, Prüfern und Zertifizierungsstellen.
+
+AIMO **bietet**: strukturiertes Evidenzformat, Validator, Coverage-Zuordnungen (informativ) und Materialien für die Audit-Übergabe. Siehe [Verantwortungsgrenze](../governance/responsibility-boundary/) für den vollen Umfang.
 
 !!! note "Stufenname-Alias"
     Die oberste Stufe wurde in informellen Diskussionen früher „Gold“ genannt; der **offizielle Stufenname ist Audit-Ready**.

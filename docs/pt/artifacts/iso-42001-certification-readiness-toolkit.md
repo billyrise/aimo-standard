@@ -40,6 +40,8 @@ Consulte [Coverage Map — ISO/IEC 42001](../../coverage-map/iso-42001/) e [ISO/
 - **Usar:** "Utilizamos artefatos AIMO para apoiar a prontidão para ISO/IEC 42001; as decisões de certificação permanecem com organismos de certificação acreditados."
 - **Não usar:** "ISO 42001 certificado pela AIMO" ou "AIMO certifica conformidade."
 
+Padrão oficial (fonte primária): [ISO/IEC 42001:2023](https://www.iso.org/standard/42001) (ISO). Este kit está alinhado com [Conformidade](../../conformance/) e [Limite de responsabilidade](../../governance/responsibility-boundary/) — a AIMO não certifica nem garante conformidade.
+
 ## Relacionado
 
 - [Conformidade](../../conformance/) — Níveis (Foundation, Operational, Audit-Ready) e linguagem de declaração

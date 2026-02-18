@@ -5,6 +5,9 @@ description: AIMO 표준과 NIST AI RMF 매핑. AIMO 분류체계 코드와 NIST
 
 # NIST AI RMF 매핑
 
+!!! note "1차 출처"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework)(공식 NIST 출판물 및 자료). 매핑 및 적용 가능성은 이 1차 출처와 대조하여 확인하세요.
+
 > 추적성 바로가기: 분류체계 → 최소 증거 → 검증기 → 인간 감독 프로토콜.
 
 - [분류체계](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: AIMO 표준과 NIST AI RMF 매핑. AIMO 분류체계 코드와 NIST
 - [검증기](../../validator/)
 - [인간 감독 프로토콜](../../governance/human-oversight-protocol/)
 
-이 페이지는 선택된 NIST AI 리스크 관리 프레임워크(Govern, Map, Measure, Manage) 주제를 AIMO 증거 및 산출물에 매핑합니다. 이것은 설명 가능성을 위한 것이며; NIST AI RMF 적합성을 보장하지 않습니다. NIST 출판물과 대조하여 확인하세요.
+이 페이지는 선택된 NIST AI 리스크 관리 프레임워크(Govern, Map, Measure, Manage) 주제를 AIMO 증거 및 산출물에 매핑합니다. 이것은 설명 가능성을 위한 것이며; NIST AI RMF 적합성을 보장하지 않습니다. [NIST AI RMF 1.0 출판물](https://www.nist.gov/itl/ai-risk-management-framework)과 대조하여 확인하세요.
 
 
 ## 매핑 테이블

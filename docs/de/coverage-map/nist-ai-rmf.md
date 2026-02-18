@@ -5,6 +5,9 @@ description: AIMO Standard zu NIST AI RMF-Zuordnung. Nachverfolgbarkeit zwischen
 
 # NIST AI RMF-Zuordnung
 
+!!! note "Primärquelle"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) (NIST offizielle Publikation und Ressourcen). Überprüfen Sie Zuordnung und Anwendbarkeit gegen diese Primärquelle.
+
 > Nachverfolgbarkeits-Shortcuts: Taxonomie → Mindestanforderungen an Evidence → Validator → Human Oversight Protocol.
 
 - [Taxonomie](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: AIMO Standard zu NIST AI RMF-Zuordnung. Nachverfolgbarkeit zwischen
 - [Validator](../../validator/)
 - [Human Oversight Protocol](../../governance/human-oversight-protocol/)
 
-Diese Seite ordnet ausgewählte NIST AI Risk Management Framework (Govern, Map, Measure, Manage)-Themen AIMO Evidence und Artefakten zu. Sie dient nur der Erklärbarkeit; sie garantiert keine Konformität mit dem NIST AI RMF. Überprüfen Sie gegen die NIST-Publikation.
+Diese Seite ordnet ausgewählte NIST AI Risk Management Framework (Govern, Map, Measure, Manage)-Themen AIMO Evidence und Artefakten zu. Sie dient nur der Erklärbarkeit; sie garantiert keine Konformität mit dem NIST AI RMF. Überprüfen Sie gegen die [NIST AI RMF 1.0-Publikation](https://www.nist.gov/itl/ai-risk-management-framework).
 
 
 ## Zuordnungstabelle

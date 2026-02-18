@@ -48,7 +48,7 @@ Ce qui suit s'aligne sur le **calendrier officiel de l'UE** (Service de la loi s
 
 ## Normes harmonisées et présomption de conformité (art. 40)
 
-Lorsque des **normes harmonisées** sont publiées au Journal officiel de l'UE au titre de la loi sur l'IA, leur conformité peut conférer une **présomption de conformité** aux exigences correspondantes. La liste et les dates exactes dépendent des travaux de normalisation et de la publication au JO. Les correspondances AIMO sont informatives et ne confèrent pas de présomption de conformité. Pour l'état actuel, voir les sources de la Commission et du Bureau de l'IA dans **Références** ci-dessous.
+Lorsque des **normes harmonisées** sont publiées au Journal officiel de l'UE au titre de la loi sur l'IA, leur conformité peut conférer une **présomption de conformité** aux exigences correspondantes. La liste et les dates exactes dépendent des travaux de normalisation et de la publication au JO. Les correspondances AIMO sont informatives et ne confèrent pas de présomption de conformité. Pour l'état actuel, voir la page [standardisation de la loi sur l'IA](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) de la Commission et **Références** ci-dessous.
 
 ## Lignes directrices 2026 du Bureau de l'IA (détail de mise en œuvre)
 
@@ -64,9 +64,18 @@ Ces lignes directrices sont des **déclencheurs de mise à jour** pour les profi
 !!! warning "Pas un conseil juridique"
     Cette page est à usage explicatif uniquement. Vous devez vérifier l'applicabilité et les dates par rapport au règlement officiel et à tout acte d'exécution ou de modification. AIMO ne fournit pas de conseil juridique ni ne garantit la conformité.
 
+!!! note "Note juridique / Correspondance informative"
+    Cette page est **informative**. L'interprétation juridique doit se fonder sur le règlement officiel (EUR-Lex) et les publications de la Commission européenne. AIMO ne fournit pas de conseil juridique ni ne garantit la conformité.
+
 ## Références
 
-- [Règlement (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Loi sur l'intelligence artificielle
-- [Calendrier de mise en œuvre de la loi sur l'IA de l'UE](https://artificialintelligenceact.eu/implementation-timeline) (Service de la loi sur l'IA / aligné Commission ; informatif)
-- Commission européenne / Bureau de l'IA — lignes directrices et calendrier (vérifier les actualités de la Commission et le Service de la loi sur l'IA pour les URL actuelles)
+**Sources primaires**
+
+- [Règlement (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Loi sur l'intelligence artificielle (texte juridique)
+- [Calendrier de mise en œuvre de la loi sur l'IA de l'UE](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) — Service de la loi sur l'IA de la Commission européenne (calendrier de mise en œuvre)
+- [Standardisation de la loi sur l'IA](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) — Stratégie numérique de la Commission européenne (normes harmonisées, présomption de conformité)
+
+**Autres**
+
+- Commission européenne / Bureau de l'IA — lignes directrices et calendrier (voir Service de la loi sur l'IA et actualités de la Commission pour les URL actuelles)
 - [EPRS — Mise en œuvre de la loi sur l'IA de l'UE](https://www.europarl.europa.eu/thinktank/) — briefing du Parlement (informatif)

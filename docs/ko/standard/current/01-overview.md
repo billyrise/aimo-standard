@@ -44,6 +44,6 @@ AIMO Standard는 **증거 준비 및 설명 가능성을 위한 구현 가속기
 ## 참고 자료
 
 - [ISO/IEC 42006](https://www.iso.org/standard/42006) — AI 관리 시스템 감사 및 인증 기관 요구사항
-- [EU AI Act 시행 일정](https://artificialintelligenceact.eu/implementation-timeline)(AI Act Service Desk / 위원회 정렬; 참고)
+- [EU AI Act 시행 일정](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act)(유럽 위원회 AI 법 서비스 데스크; 참고)
 - [European Commission — Clear guidelines for AI (2025년 12월 4일)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — AI Office 가이드라인 준비(현재 URL은 위원회 뉴스 확인)
 - [EPRS — EU AI Act implementation timeline (2025년 6월)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — 의회 브리핑(참고)

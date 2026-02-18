@@ -7,6 +7,15 @@ description: Périmètre de responsabilité AIMO — Définit ce que la norme fo
 
 Cette page définit ce que le AIMO Standard fournit et ne fournit pas, les hypothèses qu’il fait et les responsabilités des adoptants.
 
+## Preuve vs assurance (Proof vs assurance boundary)
+
+| Limite | Ce qu'AIMO fournit | Qui décide |
+| --- | --- | --- |
+| **Preuve (évidence)** | Structure du Evidence Bundle, validateurs, schémas, modèles, correspondances de couverture (informatifs). AIMO produit des **paquets de preuves** et des **validateurs** qui vérifient la conformité structurelle. | L'adoptant produit les preuves ; AIMO définit le format et les règles. |
+| **Assurance / conformité / certification** | AIMO **ne** délivre **pas** de certifications, d'opinions d'assurance ni de décisions de conformité. | **Externe :** le client, l'auditeur ou l'**organisme de certification accrédité** décide de la conformité et de la certification. |
+
+La conformité et le libellé des déclarations sont unifiés dans [Conformité](../../conformance/) et le [Kit de préparation à la certification ISO 42001](../../artifacts/iso-42001-certification-readiness-toolkit/). AIMO soutient la **préparation des preuves** et la **transmission aux auditeurs** ; il ne certifie ni ne garantit la conformité.
+
 ## Ce que le AIMO Standard fournit
 
 - **Un format de preuve structuré** : schémas, modèles et taxonomie pour les preuves de gouvernance IA.

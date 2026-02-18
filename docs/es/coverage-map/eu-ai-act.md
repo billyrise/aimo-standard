@@ -48,7 +48,7 @@ Lo siguiente se alinea con el **calendario oficial de la UE** (Servicio de la Le
 
 ## Normas armonizadas y presunción de conformidad (Art. 40)
 
-Cuando se publiquen **normas armonizadas** en el Diario Oficial de la UE con arreglo a la Ley de IA, su cumplimiento puede dar **presunción de conformidad** con los requisitos correspondientes. La lista y fechas exactas dependen del trabajo de normalización y la publicación en el DO. Los mapeos AIMO son informativos y no confieren presunción de conformidad. Para el estado actual, véanse las fuentes de la Comisión y la Oficina de IA en **Referencias** más abajo.
+Cuando se publiquen **normas armonizadas** en el Diario Oficial de la UE con arreglo a la Ley de IA, su cumplimiento puede dar **presunción de conformidad** con los requisitos correspondientes. La lista y fechas exactas dependen del trabajo de normalización y la publicación en el DO. Los mapeos AIMO son informativos y no confieren presunción de conformidad. Para el estado actual, véase la [estandarización de la Ley de IA](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) de la Comisión y **Referencias** más abajo.
 
 ## Directrices 2026 de la Oficina de IA (detalle de aplicación)
 
@@ -64,9 +64,18 @@ Estas directrices son **desencadenantes de actualización** para perfiles y mape
 !!! warning "No es asesoramiento jurídico"
     Esta página es solo para uso explicativo. Debe verificar la aplicabilidad y las fechas contra el reglamento oficial y cualquier acto de ejecución o modificación. AIMO no proporciona asesoramiento jurídico ni garantiza conformidad.
 
+!!! note "Nota legal / Mapeo informativo"
+    Esta página es **informativa**. La interpretación jurídica debe basarse en el reglamento oficial (EUR-Lex) y en las publicaciones de la Comisión Europea. AIMO no proporciona asesoramiento jurídico ni garantiza conformidad.
+
 ## Referencias
 
-- [Reglamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Ley de Inteligencia Artificial
-- [Calendario de aplicación de la Ley de IA de la UE](https://artificialintelligenceact.eu/implementation-timeline) (Servicio de la Ley de IA / alineado con la Comisión; informativo)
-- Comisión Europea / Oficina de IA — directrices y calendario (consulte noticias de la Comisión y Servicio de la Ley de IA para URLs actuales)
+**Fuentes primarias**
+
+- [Reglamento (UE) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Ley de Inteligencia Artificial (texto legal)
+- [Calendario de aplicación de la Ley de IA de la UE](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) — Servicio de la Ley de IA de la Comisión Europea (calendario de aplicación)
+- [Estandarización de la Ley de IA](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) — Estrategia Digital de la Comisión Europea (normas armonizadas, presunción de conformidad)
+
+**Otros**
+
+- Comisión Europea / Oficina de IA — directrices y calendario (véase Servicio de la Ley de IA y noticias de la Comisión para URLs actuales)
 - [EPRS — Aplicación de la Ley de IA de la UE](https://www.europarl.europa.eu/thinktank/) — resumen del Parlamento (informativo)

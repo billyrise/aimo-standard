@@ -40,6 +40,8 @@ description: ISO/IEC 42001 認證就緒工具包。使用 AIMO 產物與 ISO 420
 - **宜用**：「我們使用 AIMO 產物支援 ISO/IEC 42001 就緒；認證決定由認可認證機構作出。」
 - **勿用**：「經 AIMO 認證符合 ISO 42001」或「AIMO 認證合規」。
 
+官方標準（主要來源）：[ISO/IEC 42001:2023](https://www.iso.org/standard/42001)（ISO）。本工具包與 [符合性](../../conformance/) 及 [責任邊界](../../governance/responsibility-boundary/) 一致 — AIMO 不進行認證亦不保證符合。
+
 ## 相關
 
 - [符合性](../../conformance/) — 級別（Foundation、Operational、Audit-Ready）與聲明用語

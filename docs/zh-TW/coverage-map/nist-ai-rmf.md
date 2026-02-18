@@ -5,6 +5,9 @@ description: AIMO 標準與 NIST AI RMF 對應。AIMO 分類代碼與 NIST AI �
 
 # NIST AI RMF 對應
 
+!!! note "主要來源"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework)（NIST 官方出版物與資源）。請對照此主要來源驗證對應與適用性。
+
 > 可追溯性捷徑：分類法 → 最低證據 → 驗證器 → 人工監督協議。
 
 - [分類法](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: AIMO 標準與 NIST AI RMF 對應。AIMO 分類代碼與 NIST AI �
 - [驗證器](../../validator/)
 - [人工監督協議](../../governance/human-oversight-protocol/)
 
-本頁將選定的 NIST AI 風險管理框架（Govern、Map、Measure、Manage）主題對應到 AIMO 證據和人工產物。這僅用於可解釋性；它不保證符合 NIST AI RMF。請對照 NIST 出版物驗證。
+本頁將選定的 NIST AI 風險管理框架（Govern、Map、Measure、Manage）主題對應到 AIMO 證據和人工產物。這僅用於可解釋性；它不保證符合 NIST AI RMF。請對照 [NIST AI RMF 1.0 出版物](https://www.nist.gov/itl/ai-risk-management-framework)驗證。
 
 
 ## 對應表

@@ -5,6 +5,9 @@ description: Correspondance du standard AIMO avec NIST AI RMF. Traçabilité ent
 
 # Correspondance NIST AI RMF
 
+!!! note "Source primaire"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) (publication et ressources officielles NIST). Vérifiez la correspondance et l'applicabilité par rapport à cette source primaire.
+
 > Raccourcis de traçabilité : Taxonomie → Exigences minimales de preuves → Validateur → Protocole de surveillance humaine.
 
 - [Taxonomie](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: Correspondance du standard AIMO avec NIST AI RMF. Traçabilité ent
 - [Validateur](../../validator/)
 - [Protocole de surveillance humaine](../../governance/human-oversight-protocol/)
 
-Cette page met en correspondance des thèmes sélectionnés du NIST AI Risk Management Framework (Govern, Map, Measure, Manage) avec les preuves et artefacts AIMO. C'est uniquement pour l'explicabilité ; cela ne garantit pas la conformité au NIST AI RMF. Vérifiez par rapport à la publication NIST.
+Cette page met en correspondance des thèmes sélectionnés du NIST AI Risk Management Framework (Govern, Map, Measure, Manage) avec les preuves et artefacts AIMO. C'est uniquement pour l'explicabilité ; cela ne garantit pas la conformité au NIST AI RMF. Vérifiez par rapport à la [publication NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework).
 
 
 ## Table de correspondance

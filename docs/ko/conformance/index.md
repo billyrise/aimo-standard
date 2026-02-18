@@ -13,7 +13,26 @@ description: AIMO Standard 적합성 수준. 조직의 적합성 주장 방식, 
     **부적절한 주장 예:** "EU AI 법 준수", "ISO 42001 인증", "정부 승인".
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
+AIMO Standard는 **보증/감사 인수인계/지속 증거** 계층으로 위치합니다. 채택자와 감사인이 구조화된 증거로 작업할 수 있도록 증거 패키징, 검증기, 추적성을 제공합니다. AIMO는 **인증 기관이 아닙니다.** 인증·적합성 결정은 인정 인증 기관, 감사인, 채택 기관의 책임입니다.
+
 이 계층은 패키징과 추적성을 위한 **내부 증거 성숙도 수준**입니다. 인증이 아니며, 보증 의견이 아니며, 법·규제 적합성이 **아닙니다**.
+
+## 호환성 주장(ISO/NIST/EU AI 법)
+
+다음 **참고 매핑**은 AIMO 증거 및 산출물을 외부 프레임워크에 연결합니다. 설명 가능성과 감사 인수인계를 지원하며; 인증을 부여하거나 준수를 보장하지 **않습니다**. 각 프레임워크의 권위 본문과 대조하여 확인하세요.
+
+- [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) — ISO/IEC 42001(AI 관리 시스템) 매핑
+- [Coverage Map — NIST AI RMF](../coverage-map/nist-ai-rmf/) — NIST AI Risk Management Framework 매핑
+- [Coverage Map — EU AI 법](../coverage-map/eu-ai-act/) — EU AI 법 주제 매핑(상위 수준; 법적 조언 아님)
+
+1차 출처 및 주장 문구는 각 Coverage Map 페이지와 [책임 경계](../governance/responsibility-boundary/)에 문서화되어 있습니다.
+
+## 비주장 사항(AIMO가 주장하지 않는 것)
+
+- AIMO는 ISO/IEC 42001, NIST AI RMF, EU AI 법 또는 기타 프레임워크에 대한 준수 인증을 **하지 않습니다**.
+- AIMO는 규제·법적 준수를 **보장하지 않습니다**.
+- AIMO는 보증 의견이나 법적 조언을 **제공하지 않습니다**.
+- AIMO는 조직이 외부 요구사항을 충족하는지 **판단하지 않습니다**; 이는 채택자, 감사인, 인증 기관의 책임입니다.
 
 !!! note "계층 이름 별칭"
     최상위 계층은 비공식 논의에서 이전에 "Gold"로 불렸습니다; **공식 계층 이름은 Audit-Ready**입니다.

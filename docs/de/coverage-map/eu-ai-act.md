@@ -48,7 +48,7 @@ Das Folgende orientiert sich am **offiziellen EU-Zeitplan** (KI-Verordnung-Servi
 
 ## Harmonisierte Normen und Konformitätsvermutung (Art. 40)
 
-Wenn **harmonisierte Normen** im EU-Amtsblatt unter der KI-Verordnung veröffentlicht werden, kann deren Einhaltung eine **Konformitätsvermutung** für die entsprechenden Anforderungen begründen. Die genaue Liste und die Daten hängen von der Normungsarbeit und der Veröffentlichung im Amtsblatt ab. AIMO-Zuordnungen sind informativ und begründen keine Konformitätsvermutung. Für den aktuellen Stand siehe die Quellen der Kommission und des KI-Büros unter **Referenzen** unten.
+Wenn **harmonisierte Normen** im EU-Amtsblatt unter der KI-Verordnung veröffentlicht werden, kann deren Einhaltung eine **Konformitätsvermutung** für die entsprechenden Anforderungen begründen. Die genaue Liste und die Daten hängen von der Normungsarbeit und der Veröffentlichung im Amtsblatt ab. AIMO-Zuordnungen sind informativ und begründen keine Konformitätsvermutung. Für den aktuellen Stand siehe die [KI-Verordnung-Standardisierung](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) der Kommission und **Referenzen** unten.
 
 ## 2026-Leitlinien des KI-Büros (Umsetzungsdetail)
 
@@ -64,9 +64,18 @@ Diese Leitlinien sind **Aktualisierungsauslöser** für AIMO-Profile und Coverag
 !!! warning "Keine Rechtsberatung"
     Diese Seite dient nur der Erläuterung. Sie müssen Anwendbarkeit und Daten anhand der offiziellen Verordnung sowie ggf. Durchführungs- oder Änderungsrechtsakten prüfen. AIMO erteilt keine Rechtsberatung und garantiert keine Konformität.
 
+!!! note "Rechtlicher Hinweis / Informative Zuordnung"
+    Diese Seite ist **nur informativ**. Die rechtliche Auslegung sollte auf der offiziellen Verordnung (EUR-Lex) und den Veröffentlichungen der Europäischen Kommission beruhen. AIMO erteilt keine Rechtsberatung und garantiert keine Konformität.
+
 ## Referenzen
 
-- [Verordnung (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — KI-Verordnung
-- [EU-KI-Verordnung-Umsetzungszeitplan](https://artificialintelligenceact.eu/implementation-timeline) (KI-Verordnung-Service-Desk / kommissionsorientiert; informativ)
-- Europäische Kommission / KI-Büro — Leitlinien und Zeitplan (aktuelle URLs in Kommissionsnachrichten und KI-Verordnung-Service-Desk prüfen)
+**Primärquellen**
+
+- [Verordnung (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — KI-Verordnung (Rechtstext)
+- [Zeitplan für die Umsetzung der KI-Verordnung](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) — KI-Verordnung-Service-Desk der Europäischen Kommission (Umsetzungszeitplan)
+- [Standardisierung der KI-Verordnung](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) — Digitale Strategie der Europäischen Kommission (harmonisierte Normen, Konformitätsvermutung)
+
+**Sonstige**
+
+- Europäische Kommission / KI-Büro — Leitlinien und Zeitplan (siehe KI-Verordnung-Service-Desk und Kommissionsnachrichten für aktuelle URLs)
 - [EPRS — EU-KI-Verordnung-Umsetzung](https://www.europarl.europa.eu/thinktank/) — Parlaments-Briefing (informativ)

@@ -5,6 +5,9 @@ description: Mapeamento AIMO Standard para NIST AI RMF. Rastreabilidade entre c�
 
 # Mapeamento NIST AI RMF
 
+!!! note "Fonte primária"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) (publicação e recursos oficiais NIST). Verifique o mapeamento e a aplicabilidade contra esta fonte primária.
+
 > Atalhos de rastreabilidade: Taxonomia → Requisitos Mínimos de Evidências → Validador → Protocolo de Supervisão Humana.
 
 - [Taxonomia](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: Mapeamento AIMO Standard para NIST AI RMF. Rastreabilidade entre c�
 - [Validador](../../validator/)
 - [Protocolo de Supervisão Humana](../../governance/human-oversight-protocol/)
 
-Esta página mapeia temas selecionados do NIST AI Risk Management Framework (Govern, Map, Measure, Manage) para evidências e artefatos AIMO. É apenas para explicabilidade; não garante conformidade com o NIST AI RMF. Verifique contra a publicação do NIST.
+Esta página mapeia temas selecionados do NIST AI Risk Management Framework (Govern, Map, Measure, Manage) para evidências e artefatos AIMO. É apenas para explicabilidade; não garante conformidade com o NIST AI RMF. Verifique contra a [publicação NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework).
 
 
 ## Tabela de mapeamento

@@ -13,7 +13,26 @@ description: Livelli di conformità dello Standard AIMO. Come le organizzazioni 
     **Dichiarazione inappropriata:** "Conforme alla Legge sull'IA dell'UE", "ISO 42001 certificato", "approvato dal governo".
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
+AIMO Standard si posiziona come **livello di assurance / passaggio all'audit / evidence continua**: fornisce impacchettamento delle evidence, validatori e tracciabilità affinché adottanti e auditor lavorino con evidence strutturata. AIMO **non** è un certificatore; le decisioni di certificazione e conformità spettano agli organismi di certificazione accreditati, agli auditor e all'organizzazione adottante.
+
 Questi livelli sono **livelli interni di maturità delle evidence** per impacchettamento e tracciabilità. **Non** sono certificazione, **non** sono opinione di assurance né conformità legale o normativa.
+
+## Dichiarazioni di compatibilità (ISO/NIST/Legge sull'IA dell'UE)
+
+Le **mappature informative** seguenti collegano evidence e artefatti AIMO a framework esterni. Supportano la spiegabilità e il passaggio all'audit; **non** conferiscono certificazione né garantiscono conformità. Verificare rispetto ai testi autorevoli di ciascun framework.
+
+- [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) — mappatura a ISO/IEC 42001 (sistema di gestione dell'IA)
+- [Coverage Map — NIST AI RMF](../coverage-map/nist-ai-rmf/) — mappatura al NIST AI Risk Management Framework
+- [Coverage Map — Legge sull'IA dell'UE](../coverage-map/eu-ai-act/) — mappatura a temi della Legge sull'IA (alto livello; non parere legale)
+
+Le fonti primarie e il linguaggio di dichiarazione sono documentati in ogni pagina della Coverage Map e in [Limite di responsabilità](../governance/responsibility-boundary/).
+
+## Non dichiarazioni (cosa AIMO NON dichiara)
+
+- AIMO **non** certifica conformità a ISO/IEC 42001, NIST AI RMF, Legge sull'IA dell'UE né ad alcun altro framework.
+- AIMO **non** garantisce conformità normativa o legale.
+- AIMO **non** fornisce opinioni di assurance né parere legale.
+- AIMO **non** decide se un'organizzazione soddisfa i requisiti esterni; spetta ad adottanti, auditor e organismi di certificazione.
 
 !!! note "Alias del nome del livello"
     Il livello superiore è stato indicato informalmente come "Gold" in passato; il **nome ufficiale del livello è Audit-Ready**.

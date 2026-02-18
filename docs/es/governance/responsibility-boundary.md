@@ -7,6 +7,15 @@ description: Límite de responsabilidad AIMO — Define lo que ofrece la norma f
 
 Esta página define qué ofrece y qué no ofrece el AIMO Standard, las hipótesis que asume y las responsabilidades de los adoptantes.
 
+## Límite prueba vs. aseguramiento (Proof vs assurance boundary)
+
+| Límite | Lo que ofrece AIMO | Quién decide |
+| --- | --- | --- |
+| **Prueba (evidencia)** | Estructura del Evidence Bundle, validadores, esquemas, plantillas, mapeos de cobertura (informativos). AIMO produce **paquetes de evidencia** y **validadores** que comprueban la conformidad estructural. | El adoptante produce la evidencia; AIMO define el formato y las reglas. |
+| **Aseguramiento / conformidad / certificación** | AIMO **no** emite certificaciones, opiniones de aseguramiento ni decisiones de conformidad. | **Externo:** el cliente, el auditor o el **organismo de certificación acreditado** decide la conformidad y la certificación. |
+
+La conformidad y el lenguaje de declaración se unifican en [Conformidad](../../conformance/) y en el [Kit de preparación para certificación ISO 42001](../../artifacts/iso-42001-certification-readiness-toolkit/). AIMO apoya la **preparación de evidencia** y el **traspaso a auditoría**; no certifica ni garantiza conformidad.
+
 ## Qué ofrece el AIMO Standard
 
 - **Un formato de evidencia estructurado**: esquemas, plantillas y taxonomía para evidencia de gobernanza de IA.

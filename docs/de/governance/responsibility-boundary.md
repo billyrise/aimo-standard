@@ -7,6 +7,15 @@ description: AIMO Verantwortungsgrenze — Definiert, was die Norm bietet vs. Ve
 
 Diese Seite definiert, was der AIMO Standard bietet und nicht bietet, welche Annahmen er trifft und die Verantwortlichkeiten der Anwender.
 
+## Beweis vs. Assurance (Proof vs assurance boundary)
+
+| Grenze | Was AIMO bietet | Wer entscheidet |
+| --- | --- | --- |
+| **Beweis (Evidenz)** | Evidence-Bundle-Struktur, Validatoren, Schemas, Vorlagen, Coverage-Zuordnungen (informativ). AIMO erstellt **Evidenzpakete** und **Validatoren**, die die Strukturkonformität prüfen. | Der Adoptierende erstellt die Evidenz; AIMO definiert Format und Regeln. |
+| **Assurance / Konformität / Zertifizierung** | AIMO **erteilt keine** Zertifizierungen, Prüfungsmeinungen oder Konformitätsentscheidungen. | **Extern:** Kunde, Prüfer oder **akkreditierte Zertifizierungsstelle** entscheiden über Konformität und Zertifizierung. |
+
+Konformität und Anspruchssprache sind in [Konformität](../../conformance/) und dem [ISO-42001-Zertifizierungsbereitschafts-Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/) vereinheitlicht. AIMO unterstützt **Evidenzbereitschaft** und **Audit-Übergabe**; es zertifiziert nicht und garantiert keine Konformität.
+
 ## Was der AIMO Standard bietet
 
 - **Ein strukturiertes Evidenzformat**: Schemas, Vorlagen und Taxonomie für AI-Governance-Evidenz.

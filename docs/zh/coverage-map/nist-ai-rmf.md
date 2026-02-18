@@ -5,6 +5,9 @@ description: AIMO 标准与 NIST AI RMF 的映射。AIMO 分类法代码与 NIST
 
 # NIST AI RMF 映射
 
+!!! note "主要来源"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework)（NIST 官方出版物与资源）。请根据该主要来源验证映射与适用性。
+
 > 可追溯性快捷方式：分类法 → 最低证据 → 验证器 → 人工监督协议。
 
 - [分类法](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: AIMO 标准与 NIST AI RMF 的映射。AIMO 分类法代码与 NIST
 - [验证器](../../validator/)
 - [人工监督协议](../../governance/human-oversight-protocol/)
 
-本页将选定的 NIST AI风险管理框架（治理、映射、度量、管理）主题映射到 AIMO 证据和工件。这仅用于可解释性；不保证符合 NIST AI RMF。请根据 NIST 出版物进行验证。
+本页将选定的 NIST AI风险管理框架（治理、映射、度量、管理）主题映射到 AIMO 证据和工件。这仅用于可解释性；不保证符合 NIST AI RMF。请根据 [NIST AI RMF 1.0 出版物](https://www.nist.gov/itl/ai-risk-management-framework)进行验证。
 
 
 ## 映射表

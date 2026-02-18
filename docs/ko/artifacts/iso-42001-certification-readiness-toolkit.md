@@ -40,6 +40,8 @@ ISO/IEC 42001형 통제(컨텍스트, 경영, 기획, 지원, 운영, 성과 평
 - **사용**: "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies."
 - **미사용**: "ISO 42001 certified by AIMO" 또는 "AIMO certifies compliance."
 
+공식 표준(1차 출처): [ISO/IEC 42001:2023](https://www.iso.org/standard/42001)(ISO). 본 툴킷은 [적합성](../../conformance/) 및 [책임 경계](../../governance/responsibility-boundary/)와 정렬되어 있으며, AIMO는 인증이나 준수 보장을 하지 않습니다.
+
 ## 관련
 
 - [적합성](../../conformance/) — 수준(Foundation, Operational, Audit-Ready) 및 주장 문구
