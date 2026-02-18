@@ -1,0 +1,65 @@
+# AIMO Standard
+
+> AIMO Standard는 AI 거버넌스, 감사 증거, 에이전틱 AI 리스크 관리를 위한 오픈 스탠더드입니다.
+> 구조화된 분류체계(8개 차원, 91개 코드), 최소 증거 요구사항, 검증 도구, 그리고 기업 AI
+> 컴플라이언스를 위한 아티팩트 스키마를 제공합니다.
+>
+> 라이선스: Apache-2.0. 자유롭게 사용, 수정, 재배포 가능.
+> 인용 방법: https://standard.aimoaas.com/latest/ko/governance/cite/
+> 버전: 0.1.2 (2026년 2월 13일 출시)
+> 저장소: https://github.com/billyrise/aimo-standard
+
+## 핵심 스탠더드
+
+- [개요](https://standard.aimoaas.com/latest/ko/standard/current/01-overview/): AIMO Standard가 무엇인지, 왜 존재하는지, 그리고 섀도 AI 및 에이전틱 AI 리스크를 어떻게 다루는지.
+- [적용 범위](https://standard.aimoaas.com/latest/ko/standard/current/02-scope/): 적용 경계, 대상 조직, 범위 내 AI 시스템 카테고리.
+- [분류체계](https://standard.aimoaas.com/latest/ko/standard/current/03-taxonomy/): AI 사용을 분류하기 위한 8차원 분류체계. 핵심 개념 프레임워크.
+- [분류체계 코드](https://standard.aimoaas.com/latest/ko/standard/current/04-codes/): 정의가 포함된 91개 분류체계 코드 전체. 완전한 분류 어휘.
+- [ID 정책 및 네임스페이스](https://standard.aimoaas.com/latest/ko/standard/current/04b-id-policy-namespace/): 분류체계 코드 식별자의 할당 및 거버넌스.
+- [사전](https://standard.aimoaas.com/latest/ko/standard/current/05-dictionary/): 스탠더드 전반에 사용되는 모든 개념의 용어 정의.
+- [증거 템플릿](https://standard.aimoaas.com/latest/ko/standard/current/06-ev-template/): AI 시스템 사용을 문서화하기 위한 표준 증거 기록 형식.
+- [검증기](https://standard.aimoaas.com/latest/ko/standard/current/07-validator/): 스키마 검증 규칙 및 AIMO 검증기 사용 방법.
+- [증거 번들 구조](https://standard.aimoaas.com/latest/ko/standard/current/09-evidence-bundle-structure/): 증거 기록을 준수 감사 번들로 패키징하는 방법.
+- [변경 이력](https://standard.aimoaas.com/latest/ko/standard/current/08-changelog/): 스탠더드 사양의 버전 이력.
+- [로드맵 v0.2](https://standard.aimoaas.com/latest/ko/standard/current/10-roadmap-v0.2/): 다음 주요 버전의 계획된 기능 및 방향.
+
+## 아티팩트
+
+- [아티팩트 개요](https://standard.aimoaas.com/latest/ko/artifacts/): 다운로드 가능한 모든 아티팩트 및 도구 출력물 인덱스.
+- [증거 번들](https://standard.aimoaas.com/latest/ko/artifacts/evidence-bundle/): 완전한 감사 증거 번들 조립을 위한 템플릿 및 사양.
+- [최소 증거 요구사항](https://standard.aimoaas.com/latest/ko/artifacts/minimum-evidence/): 감사 준비를 위해 분류체계 코드별로 필요한 최소 증거 필드 세트.
+- [ISO 42001 인증 준비 툴킷](https://standard.aimoaas.com/latest/ko/artifacts/iso-42001-certification-readiness-toolkit/): ISO 42001 인증을 추구하는 조직을 위한 구조화된 툴킷.
+
+## 커버리지 맵 (규제 정렬)
+
+- [커버리지 맵 개요](https://standard.aimoaas.com/latest/ko/coverage-map/): AIMO Standard 증거가 국제 AI 규정에 어떻게 매핑되는지.
+- [EU AI법](https://standard.aimoaas.com/latest/ko/coverage-map/eu-ai-act/): AIMO 증거 요구사항과 EU AI법 부속서 IV 의무의 매핑.
+- [ISO 42001](https://standard.aimoaas.com/latest/ko/coverage-map/iso-42001/): ISO 42001:2023 AI 관리 시스템 요구사항 커버리지.
+- [NIST AI RMF](https://standard.aimoaas.com/latest/ko/coverage-map/nist-ai-rmf/): NIST AI 리스크 관리 프레임워크와의 정렬.
+
+## 거버넌스
+
+- [거버넌스 개요](https://standard.aimoaas.com/latest/ko/governance/): AIMO Standard의 조직 거버넌스 구조.
+- [트러스트 패키지](https://standard.aimoaas.com/latest/ko/governance/trust-package/): 의존 당사자 및 감사인을 위한 표준 트러스트 패키지.
+- [인용 방법](https://standard.aimoaas.com/latest/ko/governance/cite/): 연구, 감사 보고서 및 규제 제출을 위한 인용 지침.
+- [라이선스](https://standard.aimoaas.com/latest/ko/governance/license/): AIMO Standard의 Apache-2.0 라이선스 조건.
+
+## 릴리스
+
+- [릴리스](https://standard.aimoaas.com/latest/ko/releases/): 릴리스 노트, 다운로드 가능한 아티팩트(PDF, ZIP) 및 버전 이력.
+
+## 전체 텍스트
+
+- [llms-full.txt (한국어)](https://standard.aimoaas.com/latest/ko/llms-full.txt): LLM 수집을 위한 모든 한국어 문서 페이지의 전체 텍스트.
+
+## 다른 언어
+
+- [English llms.txt](https://standard.aimoaas.com/llms.txt)
+- [日本語 (Japanese) llms.txt](https://standard.aimoaas.com/latest/ja/llms.txt)
+- [Español (Spanish) llms.txt](https://standard.aimoaas.com/latest/es/llms.txt)
+- [Français (French) llms.txt](https://standard.aimoaas.com/latest/fr/llms.txt)
+- [Deutsch (German) llms.txt](https://standard.aimoaas.com/latest/de/llms.txt)
+- [Português (Portuguese) llms.txt](https://standard.aimoaas.com/latest/pt/llms.txt)
+- [Italiano (Italian) llms.txt](https://standard.aimoaas.com/latest/it/llms.txt)
+- [简体中文 (Simplified Chinese) llms.txt](https://standard.aimoaas.com/latest/zh/llms.txt)
+- [繁體中文 (Traditional Chinese) llms.txt](https://standard.aimoaas.com/latest/zh-TW/llms.txt)

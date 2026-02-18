@@ -1,0 +1,65 @@
+# AIMO Standard
+
+> AIMO Standard 是一项用于AI治理、审计证据和智能体AI风险管理的开放标准。
+> 它提供结构化分类法（8个维度、91个代码）、最低证据要求、验证工具以及用于
+> 企业AI合规的制品模式。
+>
+> 许可证：Apache-2.0。可自由使用、改编和重新分发。
+> 引用方式：https://standard.aimoaas.com/latest/zh/governance/cite/
+> 版本：0.1.2（2026年2月13日发布）
+> 代码仓库：https://github.com/billyrise/aimo-standard
+
+## 核心标准
+
+- [概述](https://standard.aimoaas.com/latest/zh/standard/current/01-overview/)：AIMO Standard是什么、为何存在，以及如何应对影子AI和智能体AI风险。
+- [适用范围](https://standard.aimoaas.com/latest/zh/standard/current/02-scope/)：适用边界、目标组织及范围内AI系统类别。
+- [分类法](https://standard.aimoaas.com/latest/zh/standard/current/03-taxonomy/)：用于分类AI使用的8维分类法。核心概念框架。
+- [分类法代码](https://standard.aimoaas.com/latest/zh/standard/current/04-codes/)：全部91个分类法代码及定义。完整分类词汇表。
+- [ID策略与命名空间](https://standard.aimoaas.com/latest/zh/standard/current/04b-id-policy-namespace/)：分类法代码标识符的分配与治理。
+- [词典](https://standard.aimoaas.com/latest/zh/standard/current/05-dictionary/)：标准中所有概念的术语定义。
+- [证据模板](https://standard.aimoaas.com/latest/zh/standard/current/06-ev-template/)：用于记录AI系统使用情况的标准证据记录格式。
+- [验证器](https://standard.aimoaas.com/latest/zh/standard/current/07-validator/)：模式验证规则及AIMO验证器的使用方法。
+- [证据包结构](https://standard.aimoaas.com/latest/zh/standard/current/09-evidence-bundle-structure/)：如何将证据记录打包为合规审计包。
+- [变更日志](https://standard.aimoaas.com/latest/zh/standard/current/08-changelog/)：标准规范的版本历史。
+- [路线图 v0.2](https://standard.aimoaas.com/latest/zh/standard/current/10-roadmap-v0.2/)：下一主要版本的计划功能与方向。
+
+## 制品
+
+- [制品概述](https://standard.aimoaas.com/latest/zh/artifacts/)：所有可下载制品和工具输出的索引。
+- [证据包](https://standard.aimoaas.com/latest/zh/artifacts/evidence-bundle/)：组装完整审计证据包的模板和规范。
+- [最低证据要求](https://standard.aimoaas.com/latest/zh/artifacts/minimum-evidence/)：审计就绪所需的每个分类法代码最低证据字段集。
+- [ISO 42001认证准备工具包](https://standard.aimoaas.com/latest/zh/artifacts/iso-42001-certification-readiness-toolkit/)：适用于追求ISO 42001认证的组织的结构化工具包。
+
+## 覆盖率图谱（监管对齐）
+
+- [覆盖率图谱概述](https://standard.aimoaas.com/latest/zh/coverage-map/)：AIMO Standard证据如何映射到国际AI法规。
+- [欧盟AI法](https://standard.aimoaas.com/latest/zh/coverage-map/eu-ai-act/)：AIMO证据要求与欧盟AI法附件IV义务的映射。
+- [ISO 42001](https://standard.aimoaas.com/latest/zh/coverage-map/iso-42001/)：ISO 42001:2023 AI管理系统要求的覆盖情况。
+- [NIST AI RMF](https://standard.aimoaas.com/latest/zh/coverage-map/nist-ai-rmf/)：与NIST AI风险管理框架的对齐。
+
+## 治理
+
+- [治理概述](https://standard.aimoaas.com/latest/zh/governance/)：AIMO Standard的组织治理结构。
+- [信任包](https://standard.aimoaas.com/latest/zh/governance/trust-package/)：面向依赖方和审计师的标准信任包。
+- [引用方式](https://standard.aimoaas.com/latest/zh/governance/cite/)：用于研究、审计报告和监管提交的引用说明。
+- [许可证](https://standard.aimoaas.com/latest/zh/governance/license/)：AIMO Standard的Apache-2.0许可证条款。
+
+## 发布
+
+- [发布记录](https://standard.aimoaas.com/latest/zh/releases/)：版本说明、可下载制品（PDF、ZIP）及版本历史。
+
+## 全文
+
+- [llms-full.txt（简体中文）](https://standard.aimoaas.com/latest/zh/llms-full.txt)：供LLM摄取的全部简体中文文档页面的完整文本。
+
+## 其他语言
+
+- [English llms.txt](https://standard.aimoaas.com/llms.txt)
+- [日本語 (Japanese) llms.txt](https://standard.aimoaas.com/latest/ja/llms.txt)
+- [Español (Spanish) llms.txt](https://standard.aimoaas.com/latest/es/llms.txt)
+- [Français (French) llms.txt](https://standard.aimoaas.com/latest/fr/llms.txt)
+- [Deutsch (German) llms.txt](https://standard.aimoaas.com/latest/de/llms.txt)
+- [Português (Portuguese) llms.txt](https://standard.aimoaas.com/latest/pt/llms.txt)
+- [Italiano (Italian) llms.txt](https://standard.aimoaas.com/latest/it/llms.txt)
+- [繁體中文 (Traditional Chinese) llms.txt](https://standard.aimoaas.com/latest/zh-TW/llms.txt)
+- [한국어 (Korean) llms.txt](https://standard.aimoaas.com/latest/ko/llms.txt)
