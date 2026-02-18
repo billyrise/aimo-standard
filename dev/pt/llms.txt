@@ -1,0 +1,66 @@
+# AIMO Standard
+
+> AIMO Standard é um padrão aberto para governança de IA, evidências de auditoria e gestão
+> de riscos de IA agêntica. Fornece uma taxonomia estruturada (8 dimensões, 91 códigos),
+> requisitos mínimos de evidência, ferramentas de validação e esquemas de artefatos para
+> conformidade de IA empresarial.
+>
+> Licença: Apache-2.0. Livre para usar, adaptar e redistribuir.
+> Como citar: https://standard.aimoaas.com/latest/pt/governance/cite/
+> Versão: 0.1.2 (lançada em 2026-02-13)
+> Repositório: https://github.com/billyrise/aimo-standard
+
+## Padrão Principal
+
+- [Visão geral](https://standard.aimoaas.com/latest/pt/standard/current/01-overview/): O que é AIMO Standard, por que existe e como aborda riscos de IA sombra e IA agêntica.
+- [Escopo](https://standard.aimoaas.com/latest/pt/standard/current/02-scope/): Limites de aplicabilidade, organizações-alvo e categorias de sistemas de IA em escopo.
+- [Taxonomia](https://standard.aimoaas.com/latest/pt/standard/current/03-taxonomy/): Taxonomia de 8 dimensões para classificar o uso de IA. Estrutura conceitual central.
+- [Códigos de taxonomia](https://standard.aimoaas.com/latest/pt/standard/current/04-codes/): Os 91 códigos de taxonomia com definições. Vocabulário de classificação completo.
+- [Política de ID e namespace](https://standard.aimoaas.com/latest/pt/standard/current/04b-id-policy-namespace/): Atribuição e governança de identificadores de códigos de taxonomia.
+- [Dicionário](https://standard.aimoaas.com/latest/pt/standard/current/05-dictionary/): Definições de todos os conceitos usados no padrão.
+- [Modelo de evidência](https://standard.aimoaas.com/latest/pt/standard/current/06-ev-template/): Formato canônico de registro de evidência para documentar o uso de sistemas de IA.
+- [Validador](https://standard.aimoaas.com/latest/pt/standard/current/07-validator/): Regras de validação de esquema e uso do Validador AIMO.
+- [Estrutura do pacote de evidências](https://standard.aimoaas.com/latest/pt/standard/current/09-evidence-bundle-structure/): Como empacotar registros de evidência em um pacote de auditoria conforme.
+- [Registro de alterações](https://standard.aimoaas.com/latest/pt/standard/current/08-changelog/): Histórico de versões da especificação do padrão.
+- [Roteiro v0.2](https://standard.aimoaas.com/latest/pt/standard/current/10-roadmap-v0.2/): Funcionalidades planejadas e direção da próxima versão principal.
+
+## Artefatos
+
+- [Visão geral dos artefatos](https://standard.aimoaas.com/latest/pt/artifacts/): Índice de todos os artefatos para download e saídas de ferramentas.
+- [Pacote de evidências](https://standard.aimoaas.com/latest/pt/artifacts/evidence-bundle/): Modelo e especificação para montar um pacote completo de evidências de auditoria.
+- [Requisitos mínimos de evidência](https://standard.aimoaas.com/latest/pt/artifacts/minimum-evidence/): Conjunto mínimo de campos de evidência exigidos por código de taxonomia para prontidão de auditoria.
+- [Kit de preparação para certificação ISO 42001](https://standard.aimoaas.com/latest/pt/artifacts/iso-42001-certification-readiness-toolkit/): Kit estruturado para organizações que buscam a certificação ISO 42001.
+
+## Mapa de cobertura (Alinhamento regulatório)
+
+- [Visão geral do mapa de cobertura](https://standard.aimoaas.com/latest/pt/coverage-map/): Como as evidências do AIMO Standard se mapeiam para regulamentações internacionais de IA.
+- [Lei de IA da UE](https://standard.aimoaas.com/latest/pt/coverage-map/eu-ai-act/): Mapeamento dos requisitos de evidência AIMO com as obrigações do Anexo IV da Lei de IA da UE.
+- [ISO 42001](https://standard.aimoaas.com/latest/pt/coverage-map/iso-42001/): Cobertura dos requisitos do sistema de gestão de IA ISO 42001:2023.
+- [NIST AI RMF](https://standard.aimoaas.com/latest/pt/coverage-map/nist-ai-rmf/): Alinhamento com o Framework de Gestão de Riscos de IA do NIST.
+
+## Governança
+
+- [Visão geral de governança](https://standard.aimoaas.com/latest/pt/governance/): Estrutura de governança organizacional do AIMO Standard.
+- [Pacote de confiança](https://standard.aimoaas.com/latest/pt/governance/trust-package/): O pacote de confiança canônico para partes dependentes e auditores.
+- [Como citar](https://standard.aimoaas.com/latest/pt/governance/cite/): Instruções de citação para pesquisa, relatórios de auditoria e submissões regulatórias.
+- [Licença](https://standard.aimoaas.com/latest/pt/governance/license/): Termos da licença Apache-2.0 para AIMO Standard.
+
+## Lançamentos
+
+- [Lançamentos](https://standard.aimoaas.com/latest/pt/releases/): Notas de versão, artefatos para download (PDF, ZIP) e histórico de versões.
+
+## Texto completo
+
+- [llms-full.txt (Português)](https://standard.aimoaas.com/latest/pt/llms-full.txt): Texto completo de toda a documentação em português para ingestão por LLM.
+
+## Outros idiomas
+
+- [English llms.txt](https://standard.aimoaas.com/llms.txt)
+- [日本語 (Japanese) llms.txt](https://standard.aimoaas.com/latest/ja/llms.txt)
+- [Español (Spanish) llms.txt](https://standard.aimoaas.com/latest/es/llms.txt)
+- [Français (French) llms.txt](https://standard.aimoaas.com/latest/fr/llms.txt)
+- [Deutsch (German) llms.txt](https://standard.aimoaas.com/latest/de/llms.txt)
+- [Italiano (Italian) llms.txt](https://standard.aimoaas.com/latest/it/llms.txt)
+- [简体中文 (Simplified Chinese) llms.txt](https://standard.aimoaas.com/latest/zh/llms.txt)
+- [繁體中文 (Traditional Chinese) llms.txt](https://standard.aimoaas.com/latest/zh-TW/llms.txt)
+- [한국어 (Korean) llms.txt](https://standard.aimoaas.com/latest/ko/llms.txt)

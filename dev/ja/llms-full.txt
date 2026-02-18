@@ -1,0 +1,4809 @@
+# AIMO Standard — Full Documentation (Japanese / 日本語)
+# Source: https://standard.aimoaas.com/latest/ja/
+# License: Apache-2.0
+# Generated: see tooling/build_llms_txt.py
+# This file contains the complete text of all documentation pages for LLM ingestion.
+
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/ -->
+
+# AIMO Standard
+
+**AIMO** は **AI Management Office**（AI マネジメントオフィス）の略称です。本サイトは AIMO Standard の仕様を公開します。
+
+## なぜ今、Agentic AI監査が必要か
+
+企業のAIリスクは、**「未承認AI（Shadow AI）」の拡大**と、**「自律エージェント（Agentic AI）」の権限暴走**により、従来のISMS/IT統制だけでは追跡・説明が困難になっています。
+AIMO Standardは、AI利用を共通言語（Taxonomy）で分類し、証跡（Evidence）を最小要件で揃え、Validatorで整合性を担保することで、監査説明と是正を加速します。
+※本標準は法的助言や特定規制・規格への準拠保証を提供するものではありません（[Coverage Map](coverage-map/)を参照してください）。
+
+- [Taxonomy](standard/current/03-taxonomy/)（共通言語で分類する）
+- [Minimum Evidence Requirements](artifacts/minimum-evidence/)（最低限の証跡要件）
+- [Validator](validator/)（整合性チェック）
+
+**トップレベルセクション**
+
+1. [Standard](standard/) — 仕様（[Current](standard/current/) | [Versions](standard/versions/)）、[Conformance](conformance/)、[Coverage Map](coverage-map/)
+2. [Artifacts](artifacts/) — タクソノミー、コード体系、辞書、証跡テンプレート、スキーマ
+3. [Validator](validator/) — ルール、参照チェック、実行方法
+4. [Examples](examples/) — エンドツーエンド・最小サンプル
+5. [Releases](releases/) — Changelog、移行、チェックサム、PDF
+6. [Governance](governance/) — バージョニング、セキュリティ、ライセンス、商標、[Contributing](contributing/localization/)
+
+**対象者別クイックリンク**
+
+- **監査向け**: [Trust Package](governance/trust-package/)、[タクソノミー](standard/current/03-taxonomy/)、[辞書](standard/current/05-dictionary/)、[Evidence Bundle](artifacts/evidence-bundle/)、[Minimum Evidence Requirements](artifacts/minimum-evidence/)、[Coverage Map](coverage-map/)、[Validator](validator/)、[Releases](releases/)
+- **セキュリティ向け**: [Trust Package](governance/trust-package/)、[タクソノミー](standard/current/03-taxonomy/)、[Minimum Evidence Requirements](artifacts/minimum-evidence/)、[責任境界](governance/responsibility-boundary/)、[Governance](governance/)、[Validator](validator/)、[Standard > EV Template](standard/current/06-ev-template/)
+- **IT運用向け**: [Trust Package](governance/trust-package/)、[タクソノミー](standard/current/03-taxonomy/)、[Minimum Evidence Requirements](artifacts/minimum-evidence/)、[Releases](releases/)、[Validator](validator/)、[Examples](examples/)、[Conformance](conformance/)
+- **法務/調達向け**: [Trust Package](governance/trust-package/)、[責任境界](governance/responsibility-boundary/)、[Coverage Map Methodology](coverage-map/methodology/)、[Releases](releases/)、[Governance](governance/)（ライセンス、商標）
+
+**監査ジャーニー**（2クリックパス）：
+
+1. [Trust Package](governance/trust-package/) — 監査対応資料のスタート地点
+2. [タクソノミー](standard/current/03-taxonomy/) + [辞書](standard/current/05-dictionary/) — 8次元コード体系を理解
+3. [Evidence Bundle](artifacts/evidence-bundle/) — 構造と TOC
+4. [Minimum Evidence Requirements](artifacts/minimum-evidence/) — MUST レベルチェックリスト
+5. [Coverage Map](coverage-map/) + [Methodology](coverage-map/methodology/) — フレームワーク対応
+6. [Validator](validator/) — 構造チェックを実行
+7. [Releases](releases/) — アセットをダウンロードして検証
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/ -->
+
+# Standard
+
+本セクションは AIMO Standard の仕様と関連リソースを含みます。
+
+## 現行バージョン
+
+[Current](current/) セクションには、最新の作業バージョンが含まれます：
+
+- [Overview](current/01-overview/) — 目的とゴール
+- [Scope](current/02-scope/) — スコープの範囲内・範囲外
+- [Taxonomy](current/03-taxonomy/) — 8次元分類体系
+- [Codes](current/04-codes/) — コード識別子と構造
+- [Dictionary](current/05-dictionary/) — 用語と定義
+- [EV Template](current/06-ev-template/) — 証跡レコードの構造
+- [Validator](current/07-validator/) — バリデーションルール仕様
+- [Changelog](current/08-changelog/) — 規範的・非規範的変更
+
+## 過去バージョン
+
+正式なフリーズ版リリースとバージョン付きスナップショットについては、[Versions](versions/) を参照してください。
+
+## 関連セクション
+
+- **[Conformance](../conformance/)** — 規格への適合方法と適合レベル
+- **[Coverage Map](../coverage-map/)** — 外部フレームワークへのマッピング（ISO 42001、NIST AI RMF、EU AI Act、ISMS）
+
+ダウンロード可能なリリースアセットと PDF については、[Releases](../releases/) を参照してください。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/ -->
+
+# 現在版（Latest）
+
+本ページは AIMO Standard の現在版（作業版）です。
+
+公式の固定版（過去版）は Standard > Versions を参照してください。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/01-overview/ -->
+
+# 概要（Overview）
+
+**AIMO** は **AI Management Office** を表します。AIMO Standard は以下を定義します：
+- 共通タクソノミー
+- コード体系
+- 初期辞書
+- EV テンプレート
+- Validator チェック（仕様＋最小参照実装）
+
+本リポジトリは以下を公開します：
+- 人間可読な仕様（HTML）
+- 機械可読なアーティファクト（スキーマ／テンプレート／例）
+- 公式 PDF リリース
+
+## 位置づけ：ISO/IEC 42001（AIMS）のコンパニオン
+
+AIMO Standard は、**証跡準備と説明可能性のための実装アクセラレータ**であり、ISO/IEC 42001 に整合した AI マネジメントシステム（AIMS）の支援と監査可能な証跡の構造化に利用できます。ISO/IEC 42001 や他のマネジメントシステム規格に**取って代わるものではなく**、タクソノミー、Evidence Bundle 構造、Coverage Map を追加し、それらのコントロールの運用化と証跡化を支援します。
+
+**AIMO が提供するもの**
+
+- AI ガバナンス分類のためのタクソノミーとコード体系
+- Evidence Bundle 構造（manifest、object_index、payload_index、整合性）
+- 追跡可能性のための Validator と Coverage Map
+- 適合レベル（Foundation、Operational、Audit-Ready）— 証跡パッケージングの AIMO 独自成熟度段階
+
+**AIMO が提供しないもの**
+
+- 法的助言
+- ISO 認証または認証の代替
+- 規制適合の保証
+- 監査人判断や認定認証機関の代替
+
+**なぜ今か**
+
+- **ISO/IEC 42006**（2025-07 発行）は、ISO/IEC 42001 に基づく AI マネジメントシステムの監査・認証を行う機関の要件を規定し、監査可能な証跡と追跡可能性への期待を高めています。
+- **EU AI Act** は段階的適用中（2025–2027）。官報に公布された調和標準は適合の推定を提供します。EU AI Office は 2026 年に実務ガイドライン（ハイリスク分類、Art 50 透明性、インシデント、QMS 要素）の準備を進めています。
+- 採用者と認証機関は、AI ガバナンスのシステム層として ISO/IEC 42001 を利用するケースが増えており、AIMO は認証を主張せずにその層を支える証跡の構造化を支援します。
+
+## 参照
+
+- [ISO/IEC 42006](https://www.iso.org/standard/42006) — AI マネジメントシステムの監査・認証を行う機関の要件
+- [EU AI Act 実施タイムライン](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act)（欧州委員会 AI 法サービスデスク；一次）
+- [European Commission — Clear guidelines for AI (2025年12月4日)](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_xxxx) — AI Office ガイドライン準備（最新 URL は委員会ニュースを確認）
+- [EPRS — EU AI Act implementation timeline (2025年6月)](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI) — 議会ブリーフィング（参考）
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/02-scope/ -->
+
+# スコープ（Scope）
+
+本標準は、一貫した分析と報告を可能にするアーティファクトと検証ルールを規定します。
+
+スコープ外：
+- 独自の推論ロジック
+- ベンダー固有のスコアリング／重み付けの実装
+
+## マネジメントシステム標準（PDCA）とのスコープ整合
+
+AIMO は、マネジメントシステムのコントロール（Plan–Do–Check–Act）の運用化と成果物の監査可能性を支援する**AI 固有のタクソノミーと証跡アーティファクト**を追加します。ISO/IEC 42001 や他のマネジメントシステム標準と**併用**でき、それらの本文に取って代わるものではありません。Coverage Map とプロファイルは参考用の対応のみを提供し、採用者は権威あるフレームワークに照らして確認する必要があります。
+
+**採用者の責任**
+
+- 関連するマネジメントシステムまたは規制の本文に照らしてスコープと適用性を確認すること。
+- 証跡を維持し、監査準備の一環として Validator を実行すること。認証の判断は認定認証機関が行います。
+- AIMO が提供するものとしないものについては [Responsibility Boundary](../../governance/responsibility-boundary/) を参照してください。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/03-taxonomy/ -->
+
+# タクソノミー
+
+AIMOタクソノミーは、AIシステム、その利用、および関連するガバナンス要件を分類するための構造化された分類体系を提供します。組織全体で一貫した分類と証跡管理を可能にする**8つの次元**と**91コード**で構成されています。
+
+## 目的
+
+タクソノミーは監査の観点から3つの主要な目的を果たします：
+
+1. **説明可能性（Explainability）**: 組織全体でAIユースケースを説明するための共通の語彙を提供し、監査人やステークホルダーとの明確なコミュニケーションを支援します。
+
+2. **証跡準備（Evidence Readiness）**: 標準化された分類を使用してAIシステムを体系的に文書化し、証跡の収集とレビューをより効率的にします。
+
+3. **比較可能性（Comparability）**: 一貫した用語を使用して、異なる文脈間でAIユースケースを比較することを可能にします。
+
+## 非過大主張（Non-Overclaim）
+
+!!! warning "重要"
+    AIMO Standardは**説明可能性と証跡準備**を支援します。法的助言の提供、コンプライアンスの保証、規制やフレームワークへの適合の認証を行うものでは**ありません**。詳細は[責任境界](../../../governance/responsibility-boundary/)を参照してください。
+
+タクソノミーは分類体系のみです。以下を行うものではありません：
+
+- いかなる法令・規制への準拠を保証すること
+- 専門家による法務、セキュリティ、コンプライアンスの助言を代替すること
+- 外部フレームワーク（ISO、NIST、EU AI Act等）への適合を認証すること
+- リスク評価や統制の推奨を提供すること
+
+## AI/Agentic特有リスクの例（なぜAI専用の基準が必要か）
+
+従来のセキュリティ統制（例：ISMS）だけでは、LLM/エージェント特有の失敗モードや、自律エージェントの権限行使による逸脱（例：意図しないツール実行、再帰的ループ）を、**監査で説明可能な形**に落とし込むのが困難です。
+AIMO Taxonomyは、こうしたAI固有リスクを"共通言語"として分類し、Evidence要件・是正プロセスへ接続することを目的とします。
+
+!!! warning "参照例にすぎません — 規範コードではありません"
+    以下のコードは**説明用の仮例**であり、規範的なAIMOコード体系の一部**ではありません**。提出・運用には使用せず、[Codes](../04-codes/)と[Dictionary](../05-dictionary/)の規範的定義に従ってください。
+
+- **AG-01** Runaway Loop / Recursion（自律反復による逸脱）
+- **AG-02** Unauthorized Tool Use（意図しないツール実行・confused deputy化）
+- **AG-03** Privilege Boundary Drift（権限境界の曖昧化・拡大）
+
+AG-* を提出に使用しないでください。[Codes](../04-codes/)と[Dictionary](../05-dictionary/)の規範的次元・コードを使用してください。
+
+## 次元の概要
+
+AIMOはAIユースケースを分類するために8つの次元を使用します。各次元には固有の2文字のプレフィックスがあります。
+
+| ID | 名称（EN） | 名称（JA） | コード数 | 説明 |
+| --- | --- | --- | --- | --- |
+| **FS** | Functional Scope | 機能スコープ | 6 | どのビジネス機能が支援されるか |
+| **UC** | Use Case Class | ユースケース分類 | 30 | どのタイプのタスクが実行されるか |
+| **DT** | Data Type | データ種別 | 10 | どのデータ分類が関与するか |
+| **CH** | Channel | チャネル | 8 | ユーザーがどのようにAIにアクセスするか |
+| **IM** | Integration Mode | 統合形態 | 7 | AIがエンタープライズシステムにどう接続するか |
+| **RS** | Risk Surface | リスク面 | 8 | どのリスクが関連するか |
+| **OB** | Outcome / Benefit | 成果 | 7 | どのベネフィットが期待されるか |
+| **LG** | Log/Event Type | ログ/記録種別 | 15 | どのログ/記録が必要か |
+
+**合計: 8次元にわたる91コード**
+
+[IDポリシー / 名前空間](../04b-id-policy-namespace/)を参照：**EV-** は Evidence *成果物*ID 専用。タクソノミーのログ/記録次元は **LG-**（例：LG-001 … LG-015）を使用。
+
+### 使用ルール
+
+| 次元 | 選択 | 監査上の意味 |
+| --- | --- | --- |
+| FS, IM | 正確に1つ | 責任割当のための主要分類 |
+| UC, DT, CH, RS, LG | 1つ以上 | リスクカバレッジのための完全列挙が必要 |
+| OB | 0個以上 | 任意；期待されるビジネス価値を文書化 |
+
+## 次元の定義
+
+### FS: Functional Scope / 機能スコープ
+
+AIが支援するビジネス機能による分類。**正確に1つを選択。**
+
+| コード | ラベル（EN） | ラベル（JA） | 定義 |
+| --- | --- | --- | --- |
+| FS-001 | End-user Productivity | 社内生産性 | 社内業務の生産性向上を目的とした利用。 |
+| FS-002 | Customer-facing Features | 顧客向け機能 | 顧客に提供する製品・サービス機能に組み込まれたAI。 |
+| FS-003 | Developer Tooling | 開発支援 | ソフトウェア開発・エンジニアリング作業を支援するAI利用。 |
+| FS-004 | IT Operations | IT運用 | IT運用・システム管理（監視、インシデント対応等）でのAI利用。 |
+| FS-005 | Security Operations | セキュリティ運用 | セキュリティ監視・対応（SOC、検知、トリアージ等）でのAI利用。 |
+| FS-006 | Governance & Compliance | ガバナンス/コンプライアンス | ガバナンス/コンプライアンス業務（規程、監査証跡等）を支援するAI利用。 |
+
+### UC: Use Case Class / ユースケース分類
+
+タスクまたは対話の種類によるAI利用の分類。**1つ以上を選択。** 完全なリストには30コードが含まれます；以下は代表的な例です。
+
+| コード | ラベル（EN） | ラベル（JA） | 定義 |
+| --- | --- | --- | --- |
+| UC-001 | General Q&A | 一般QA | 一般的な質問応答・対話利用。 |
+| UC-002 | Summarization | 要約 | 文書・会議・メッセージの要約。 |
+| UC-003 | Translation | 翻訳 | 言語間翻訳。 |
+| UC-004 | Content Drafting | 文章作成 | メール・文書・レポートの下書き生成。 |
+| UC-005 | Code Generation | コード生成 | コードやスクリプトの生成。 |
+| UC-006 | Code Review | コードレビュー | コードの問題点・改善点レビュー。 |
+| UC-009 | Search/RAG | 検索/RAG | RAGによる検索・質問応答。 |
+| UC-010 | Agentic Automation | エージェント自動化 | 自律/半自律エージェントによるアクション実行。 |
+
+30個のUCコードの完全なリストは[辞書](../05-dictionary/)を参照してください。
+
+### DT: Data Type / データ種別
+
+関与するデータの機密性と分類。**1つ以上を選択。**
+
+| コード | ラベル（EN） | ラベル（JA） | 定義 |
+| --- | --- | --- | --- |
+| DT-001 | Public | 公開情報 | 公開されており、公に利用されることを意図したデータ。 |
+| DT-002 | Internal | 社内情報 | 非公開の社内業務データ。 |
+| DT-003 | Confidential | 機密情報 | アクセス制限が必要な高機密データ。 |
+| DT-004 | Personal Data | 個人情報 | 各国のプライバシー法令等で定義される個人データ。 |
+| DT-005 | Sensitive Personal Data | 要配慮個人情報 | 要配慮個人情報（特別カテゴリ）に該当するデータ。 |
+| DT-006 | Credentials | 認証情報 | 認証情報（パスワード、APIキー等）。 |
+| DT-007 | Source Code | ソースコード | ソースコードおよび関連アーティファクト。 |
+| DT-008 | Customer Data | 顧客データ | 顧客から提供された、または顧客に関連するデータ。 |
+| DT-009 | Operational Logs | 運用ログ | 監視・障害対応等に用いる運用/システムログ。 |
+| DT-010 | Security Telemetry | セキュリティテレメトリ | アラート・検知等のセキュリティテレメトリ。 |
+
+### CH: Channel / チャネル
+
+ユーザーがAIにアクセス・対話する方法。**1つ以上を選択。**
+
+| コード | ラベル（EN） | ラベル（JA） | 定義 |
+| --- | --- | --- | --- |
+| CH-001 | Web UI | Web UI | WebブラウザUI経由の利用。 |
+| CH-002 | API | API | API連携による利用。 |
+| CH-003 | IDE Plugin | IDEプラグイン | IDE/エディタプラグイン経由の利用。 |
+| CH-004 | ChatOps | チャット連携 | Slack/Teams等のチャット連携経由の利用。 |
+| CH-005 | Desktop App | デスクトップアプリ | ネイティブデスクトップアプリ経由の利用。 |
+| CH-006 | Mobile App | モバイルアプリ | ネイティブモバイルアプリ経由の利用。 |
+| CH-007 | Email | メール | メール経由またはメール起点の自動化で利用。 |
+| CH-008 | Command Line | CLI | CLI経由の利用。 |
+
+### IM: Integration Mode / 統合形態
+
+AIがエンタープライズシステムに統合される形態。**正確に1つを選択。**
+
+| コード | ラベル（EN） | ラベル（JA） | 定義 |
+| --- | --- | --- | --- |
+| IM-001 | Standalone | 単体利用 | 企業システム統合なしの単体利用。 |
+| IM-002 | SaaS Integrated | SaaS連携 | SaaSアプリがAI機能を統合して提供。 |
+| IM-003 | Enterprise App Embedded | 社内アプリ組込み | 社内業務アプリにAIを組み込む。 |
+| IM-004 | RPA/Workflow | ワークフロー/RPA | ワークフロー自動化/RPA内でAIを呼び出す。 |
+| IM-005 | On-prem / Private | オンプレ/プライベート | オンプレまたは専用環境でホストするAI。 |
+| IM-006 | Managed Service | マネージド | 企業統制を伴うマネージドサービスとして利用。 |
+| IM-007 | Shadow / Unmanaged | シャドー/未管理 | 承認された統制外での利用。 |
+
+### RS: Risk Surface / リスク面
+
+AI利用に関連するリスクの種類。**1つ以上を選択。**
+
+| コード | ラベル（EN） | ラベル（JA） | 定義 |
+| --- | --- | --- | --- |
+| RS-001 | Data Leakage | 情報漏えい | 意図しないデータ開示のリスク。 |
+| RS-002 | Security Abuse | 悪用/攻撃 | 悪用（攻撃支援等）に利用されるリスク。 |
+| RS-003 | Compliance Breach | 法令/規程違反 | 法令・規程・契約の違反リスク。 |
+| RS-004 | IP Infringement | 知財侵害 | 著作権・特許・営業秘密等の侵害リスク。 |
+| RS-005 | Model Misuse | モデル誤用 | モデルの不適切利用・過信によるリスク。 |
+| RS-006 | Bias/Fairness | 偏り/公平性 | 不公平・偏りのある結果を生むリスク。 |
+| RS-007 | Safety | 安全性 | 有害コンテンツや危険な推奨のリスク。 |
+| RS-008 | Third-party Risk | 第三者リスク | ベンダー/下請け/モデル提供者に起因するリスク。 |
+
+### OB: Outcome / Benefit / 成果
+
+AI利用から期待される成果・ベネフィット。**任意；0個以上を選択。**
+
+| コード | ラベル（EN） | ラベル（JA） | 定義 |
+| --- | --- | --- | --- |
+| OB-001 | Efficiency | 効率化 | 時間・コスト効率の改善。 |
+| OB-002 | Quality | 品質向上 | 成果物の品質・精度向上。 |
+| OB-003 | Revenue | 売上貢献 | 売上成長への寄与。 |
+| OB-004 | Risk Reduction | リスク低減 | 運用・セキュリティ・コンプライアンスリスクの低減。 |
+| OB-005 | Innovation | 新規性/革新 | 新たな能力・イノベーションを実現。 |
+| OB-006 | Customer Satisfaction | 顧客満足 | 顧客満足の向上。 |
+| OB-007 | Employee Experience | 従業員体験 | 従業員体験の向上。 |
+
+### LG: Log/Event Type / ログ/記録種別
+
+必要な/収集するログ/記録の種類。**1つ以上を選択。**（[IDポリシー / 名前空間](../04b-id-policy-namespace/)参照：**EV-** は Evidence *成果物*ID 専用。）
+
+| コード | ラベル（EN） | ラベル（JA） | 定義 |
+| --- | --- | --- | --- |
+| LG-001 | Request Record | 申請記録 | AI利用/サービスの申請と内容説明の証跡。 |
+| LG-002 | Review/Approval Record | 審査/承認記録 | 審査・承認が実施されたことの証跡。 |
+| LG-003 | Exception Record | 例外記録 | 例外が付与され、管理された証跡。 |
+| LG-004 | Renewal/Re-evaluation Record | 更新/再評価記録 | 更新または再評価が行われた証跡。 |
+| LG-005 | Change Log Entry | 変更管理記録 | 変更内容と承認の証跡。 |
+| LG-006 | Integrity Proof | 完全性証明 | 完全性（ハッシュ、署名、WORM等）の証跡。 |
+| LG-007 | Access Log | アクセスログ | アクセス制御とアクセス履歴の証跡。 |
+| LG-008 | Model/Service Inventory | AI資産台帳 | 利用するモデル/サービスの台帳記録。 |
+| LG-009 | Risk Assessment | リスク評価 | 利用/サービスのリスク評価文書。 |
+| LG-010 | Control Mapping | 統制マッピング | 外部フレームワークへの統制マッピング証跡。 |
+| LG-011 | Training/Guidance | 教育/ガイダンス | 利用者に提供した教育/ガイダンスの証跡。 |
+| LG-012 | Monitoring Evidence | 監視証跡 | 監視・継続的監督の証跡。 |
+| LG-013 | Incident Record | インシデント記録 | AI利用に関連するインシデント対応の証跡。 |
+| LG-014 | Third-party Assessment | 第三者評価 | ベンダー/第三者評価の証跡。 |
+| LG-015 | Attestation/Sign-off | 宣誓/サインオフ | 正式な宣誓/サインオフの証跡。 |
+
+## 使用方法
+
+### 証跡との関係
+
+各証跡ドキュメントは、文書化されるAIシステムまたはユースケースを分類するために複数の次元からコードを参照します。8次元分類により以下が可能になります：
+
+- 組織全体での**一貫した分類**
+- 次元値による**リスクベースのフィルタリング**
+- カバレッジマップを通じた**フレームワークマッピング**
+
+### 辞書の参照
+
+スコープノートや例を含む完全なコード定義については、[辞書](../05-dictionary/)を参照してください。
+
+### 分類例
+
+```
+FS: FS-001（社内生産性）
+UC: UC-001（一般QA）, UC-002（要約）
+DT: DT-002（社内情報）, DT-004（個人情報）
+CH: CH-001（Web UI）
+IM: IM-002（SaaS連携）
+RS: RS-001（情報漏えい）, RS-003（法令/規程違反）
+OB: OB-001（効率化）
+LG: LG-001（申請記録）, LG-002（審査/承認記録）
+```
+
+## SSOT参照
+
+!!! info "正式なソース"
+    正式な定義は `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` です。このページは説明用です。更新ワークフローについては[ローカライゼーションガイド](../../../contributing/localization/)を参照してください。
+
+## 関連ページ
+
+- [コード](../04-codes/) - コードフォーマット、命名規則、ライフサイクル
+- [辞書](../05-dictionary/) - 完全なコード一覧と列定義
+- [証跡テンプレート](../06-ev-template/) - 証跡でのコードの使用方法
+- [責任境界](../../../governance/responsibility-boundary/) - 非過大主張声明
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/04-codes/ -->
+
+# コード
+
+このページでは、AIMOコード体系のフォーマット、命名規則、ライフサイクル管理を定義します。
+
+## コードフォーマット
+
+すべてのAIMOコードは以下のフォーマットに従います：**`<PREFIX>-<TOKEN>`**
+
+| コンポーネント | 説明 | フォーマット | 例 |
+| --- | --- | --- | --- |
+| `<PREFIX>` | 次元識別子 | 大文字2文字 | FS, UC, DT |
+| `-` | セパレータ | ハイフン | - |
+| `<TOKEN>` | 次元内の一意トークン | 3桁の数字（ゼロ埋め） | 001, 002, 003 |
+
+### 例
+
+- `FS-001` - 機能スコープ：社内生産性
+- `UC-005` - ユースケース分類：コード生成
+- `DT-004` - データ種別：個人情報
+- `CH-003` - チャネル：IDEプラグイン
+- `IM-002` - 統合形態：SaaS連携
+- `RS-001` - リスク面：情報漏えい
+- `OB-001` - 成果：効率化
+- `LG-001` - ログ/記録種別：申請記録
+
+## ネームスペース
+
+AIMOタクソノミーは8つの次元ネームスペースを使用します：
+
+| ID | 名称（EN） | 名称（JA） | プレフィックス | コード数 |
+| --- | --- | --- | --- | --- |
+| **FS** | Functional Scope | 機能スコープ | `FS-` | 6 |
+| **UC** | Use Case Class | ユースケース分類 | `UC-` | 30 |
+| **DT** | Data Type | データ種別 | `DT-` | 10 |
+| **CH** | Channel | チャネル | `CH-` | 8 |
+| **IM** | Integration Mode | 統合形態 | `IM-` | 7 |
+| **RS** | Risk Surface | リスク面 | `RS-` | 8 |
+| **OB** | Outcome / Benefit | 成果 | `OB-` | 7 |
+| **LG** | Log/Event Type | ログ/記録種別 | `LG-` | 15 |
+
+**合計：8次元にわたる91コード**
+
+### ネームスペースルール
+
+1. **プレフィックスは固定**：2文字の次元プレフィックス（FS、UCなど）は永続的で、変更されることはありません。
+2. **ゼロ埋め**：トークンは常に3桁で、ゼロ埋めされます（例：`1`ではなく`001`）。
+3. **連番割当**：新しいコードは次元内の次に利用可能な番号が割り当てられます。
+4. **再利用禁止**：削除されたコードは異なる意味に再割当されません。
+
+## 安定性ルール
+
+コードの安定性は監査トレーサビリティにとって重要な原則です。
+
+### ID不変性
+
+- **コードIDは不変** — 一度割り当てられたコードIDは意味が変わることはありません
+- `UC-001`のようなコードは、そのライフサイクル全体を通じて常に「一般QA」を意味します
+- 意味を変更する必要がある場合は、代わりに新しいコードを作成します
+
+### 再利用禁止ポリシー
+
+- 非推奨または削除されたコードは、異なる意味に**再割当されません**
+- これにより、過去の証跡が有効でトレース可能なままであることが保証されます
+- 例：`UC-010`が非推奨になった場合、新しいユースケースは`UC-031`を取得します（`UC-010`ではなく）
+
+### 削除前の非推奨化
+
+- コードは削除前に少なくとも1つのMINORバージョンで`deprecated`とマークされる必要があります
+- 削除はMAJORバージョンの増分でのみ行われます
+- 詳細は[ライフサイクル](#lifecycle)セクションを参照
+
+## 使用方法
+
+### 必須次元
+
+各AIシステムまたはユースケースについて、各必須次元から少なくとも1つのコードを指定する必要があります：
+
+| 次元 | 選択 | 備考 |
+| --- | --- | --- |
+| FS | 正確に1つ | 主要なビジネス機能 |
+| UC | 1つ以上 | 実行されるタスクタイプ |
+| DT | 1つ以上 | データ分類 |
+| CH | 1つ以上 | アクセスチャネル |
+| IM | 正確に1つ | 統合形態 |
+| RS | 1つ以上 | リスクカテゴリ |
+| LG | 1つ以上 | ログ/記録タイプ |
+
+### 任意次元
+
+| 次元 | 選択 | 備考 |
+| --- | --- | --- |
+| OB | 0個以上 | 期待されるベネフィット（任意） |
+
+### コード構成
+
+AIシステムを文書化する際、複数の次元からのコードを組み合わせます。**構成優先度**はコードを列挙する際の順序を決定します：
+
+1. FS（機能スコープ）
+2. UC（ユースケース分類）
+3. DT（データ種別）
+4. CH（チャネル）
+5. IM（統合形態）
+6. RS（リスク面）
+7. OB（成果）
+8. LG（ログ/記録種別）
+
+**構成例：**
+
+```
+FS: FS-001
+UC: UC-001, UC-002
+DT: DT-002, DT-004
+CH: CH-001
+IM: IM-002
+RS: RS-001, RS-003
+OB: OB-001
+LG: LG-001, LG-002
+```
+
+## ライフサイクル {#lifecycle}
+
+### ステータス値
+
+| ステータス | 説明 | バリデータの動作 |
+| --- | --- | --- |
+| `active` | 現在有効で使用中 | 受け入れ |
+| `deprecated` | まだ有効だが削除予定 | 警告付きで受け入れ |
+| `removed` | 無効；使用禁止 | 拒否 |
+
+### ライフサイクルメタデータフィールド
+
+辞書はこれらのフィールドでライフサイクルを追跡します：
+
+| フィールド | 必須 | 説明 | 例 |
+| --- | --- | --- | --- |
+| `status` | はい | 現在のステータス | `active` |
+| `introduced_in` | はい | コードが追加されたバージョン | `0.1.0` |
+| `deprecated_in` | いいえ | 非推奨化されたバージョン | `1.2.0` |
+| `removed_in` | いいえ | 削除されたバージョン | `2.0.0` |
+| `replaced_by` | いいえ | 代替コード | `UC-015` |
+| `backward_compatible` | はい | 変更が既存の使用を破壊するかどうか | `true` |
+
+### 非推奨化ルール
+
+1. コードは削除前に少なくとも1つのMINORバージョンで`deprecated`とマークされる必要があります
+2. 非推奨コードには`deprecated_in`バージョンと、該当する場合は`replaced_by`が含まれます
+3. 削除はMAJORバージョンの増分でのみ行われます
+4. 非推奨コードは非推奨期間中も後方互換性のために有効のままです
+
+**タイムラインの例：**
+
+| バージョン | ステータス | アクション |
+| --- | --- | --- |
+| 0.1.0 | `active` | コード`UC-010`が導入 |
+| 1.2.0 | `deprecated` | 非推奨とマーク、`replaced_by: UC-031` |
+| 2.0.0 | `removed` | バリデータで受け入れられなくなる |
+
+### バージョニング
+
+コードの変更は[セマンティックバージョニング](../08-changelog/)に従います：
+
+- **MAJOR**：コード削除または破壊的変更
+- **MINOR**：新規コード追加、コード非推奨化
+- **PATCH**：定義の明確化のみ（構造的変更なし）
+
+### 後方互換性
+
+`backward_compatible`フィールドは、変更が既存の使用を破壊するかどうかを示します：
+
+| 値 | 意味 |
+| --- | --- |
+| `true` | このコードを使用する既存の証跡は有効なまま |
+| `false` | 既存の証跡は更新が必要な場合がある（MAJORバージョン変更） |
+
+## バリデーション
+
+バリデータは以下をチェックします：
+
+1. すべての必須次元に少なくとも1つのコードがある
+2. 単一選択次元には正確に1つのコードがある
+3. すべてのコードが現在のタクソノミー辞書に存在する
+4. コードフォーマットが`<PREFIX>-<TOKEN>`パターンに一致する（例：`UC-001`）
+5. 非推奨コードは警告付きでフラグされる
+
+実装の詳細は[バリデータ](../07-validator/)を参照してください。
+
+## SSOT参照
+
+!!! info "正式なソース"
+    正式な定義は `source_pack/03_taxonomy/taxonomy_dictionary_v0.1.csv` です。このページは説明用です。更新ワークフローについては[ローカライゼーションガイド](../../../contributing/localization/)を参照してください。
+
+## 関連ページ
+
+- [タクソノミー](../03-taxonomy/) - 完全な次元定義
+- [辞書](../05-dictionary/) - 完全なコード一覧と列定義
+- [バリデータ](../07-validator/) - バリデーションルール
+- [変更履歴](../08-changelog/) - バージョン履歴
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/04b-id-policy-namespace/ -->
+
+# IDポリシー / 名前空間（v0.1）
+
+本ページは、タクソノミーコードと証跡成果物IDの衝突を防ぐための AIMO Standard v0.1 **規範** IDポリシーを定義します。
+
+## 名前空間の分離
+
+| プレフィックス | 用途 | スコープ | 例 |
+|----------------|------|----------|-----|
+| **EV-** | **Evidence（成果物）ID専用** | 証跡*オブジェクト*（レコード、ドキュメント、バンドル項目）の一意識別子 | `EV-20260115-001`, `EV-20260131-002` |
+| **LG-** | **ログ/記録種別（タクソノミー）** | ログ/イベント/記録の*分類*用タクソノミー次元（申請記録、アクセスログ等） | `LG-001`, `LG-002`, … `LG-015` |
+
+- **EV** は **Evidence 成果物ID** 専用（例：`evidence[].id`, `references[]`）。`evidence[].codes` のタクソノミー次元やタクソノミーコードとして EV を使用してはなりません。
+- **LG** は **ログ/記録種別** タクソノミー次元です。`evidence[].codes.LG`、Evidence Pack マニフェストの `codes.LG`、辞書エントリなど、ログ/記録の分類には **LG-xxx** コード（例：`LG-001`, `LG-007`）のみを使用してください。
+
+## 背景
+
+従来、タクソノミーでは「証跡種別」（申請記録、アクセスログ等）に **EV-001** … **EV-015** を使用していました。これが **EV-** を **Evidence 成果物ID**（例：`evidence[].id`）に使う用途と衝突していました。曖昧さを解消するため：
+
+- **タクソノミー（ログ/記録の分類）** → **LG-**（ログ/記録種別）：`LG-001` … `LG-015`。
+- **Evidence（成果物ID）** → **EV-** 専用：例として `EV-YYYYMMDD-NNN` 等の安定したID。
+
+バリデータは以下を **拒否** する必要があります：
+
+- `evidence[].codes` で **EV** をタクソノミー次元として使用すること（例：`"EV": ["EV-001"]`）。代わりに **LG** と `LG-xxx` を使用すること。
+- いずれのタクソノミー/codes フィールドでも **EV-001** … **EV-999** 形式のタクソノミーコードを使用すること。ログ/記録次元では **LG-xxx** のみ許容します。
+
+## v0.1 プレフィックス一覧
+
+| プレフィックス | v0.1 状態 | 用途 |
+|----------------|-----------|------|
+| **EV-** | 使用中 | Evidence 成果物 ID 専用（例：`evidence[].id`） |
+| **LG-** | 使用中 | ログ/記録種別タクソノミー次元（`evidence[].codes.LG`） |
+| **SC-** | 使用中 | スコープ（例：スコープ識別子） |
+| **RQ-**、**CT-**、**CL-**、**TP-**、**FD-**、**RM-**、**AP-**、**CH-**、**PR-** | 予約 | Requirement、Control、Claim、Test Plan、Finding、Remediation、Approval、Change、Profile — 将来用；v0.1 では未規範 |
+
+## 参照
+
+- [タクソノミー](../03-taxonomy/) — 次元 **LG: ログ/記録種別**
+- [Evidence Pack テンプレート](../06-ev-template/) — `codes.LG` および `ev_codes` / `ev_type` は **LG-xxx** を使用
+- [バリデータ](../07-validator/) — 名前空間・衝突チェック
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/05-dictionary/ -->
+
+# 辞書
+
+AIMO辞書は、タクソノミー内のすべての有効なコードの正式なリストです。各コードのラベル、説明、ライフサイクル情報を含む完全な定義を提供します。
+
+## 辞書とは
+
+辞書は、すべてのAIMOタクソノミーコードの完全な機械可読セットを提供します。以下を含みます：
+
+- 8次元にわたる91コードすべて
+- ラベルと定義（言語パックによる翻訳付き）
+- ライフサイクルメタデータ（ステータス、導入バージョン、非推奨、削除）
+- コード使用のためのスコープノートと例
+
+辞書は以下を可能にします：
+
+1. **証跡テンプレート**：コードはEVテンプレートでAIシステムを分類するために使用されます
+2. **バリデータ**：バリデータはすべてのコードが辞書に存在することをチェックします
+3. **カバレッジマップ**：コードにより外部フレームワークや規制へのマッピングが可能になります
+
+!!! info "Single Source of Truth (SSOT)"
+    辞書のSSOTは以下です：
+
+    - **構造**: `data/taxonomy/canonical.yaml`（コード、ステータス、ライフサイクル）
+    - **翻訳**: `data/taxonomy/i18n/*.yaml`（言語ごとのラベル、定義）
+
+    CSVファイルは配布用に**生成されるアーティファクト**です。ダウンロードは[リリース](../../../releases/)を参照してください。
+
+## 列スキーマ
+
+正規辞書は**18列**を使用します（言語非依存構造）：
+
+### 識別列（5）
+
+| # | 列 | 必須 | 説明 | 例 |
+| --- | --- | --- | --- | --- |
+| 1 | `standard_id` | はい | 標準識別子 | `AIMO-STD` |
+| 2 | `standard_version` | はい | SemVer形式 | `0.1.0` |
+| 3 | `dimension_id` | はい | 2文字の次元ID | `FS`, `UC`, `DT` |
+| 4 | `dimension_name` | はい | 次元名 | `機能スコープ` |
+| 5 | `code` | はい | 完全なコード | `UC-001` |
+
+### ラベルと定義列（4）
+
+| # | 列 | 必須 | 説明 | 例 |
+| --- | --- | --- | --- | --- |
+| 6 | `label` | はい | コードラベル（最大50文字） | `一般QA` |
+| 7 | `definition` | はい | コード定義（1〜2文） | `一般的な質問応答・対話利用。` |
+| 8 | `scope_notes` | いいえ | 使用範囲の補足 | `Low to medium risk...` |
+| 9 | `examples` | いいえ | パイプ区切りの例 | `chatbot\|recommendation` |
+
+!!! note "翻訳"
+    正規データモデルでは翻訳を言語パック（`data/taxonomy/i18n/*.yaml`）に分離しています。各言語パックは`dimension_name`、`label`、`definition`のローカライズ版を提供します。詳細は[ローカリゼーションガイド](../../../contributing/localization/)を参照してください。
+
+### ライフサイクル列（6）
+
+| # | 列 | 必須 | 説明 | 例 |
+| --- | --- | --- | --- | --- |
+| 10 | `status` | はい | `active`, `deprecated`, `removed` | `active` |
+| 11 | `introduced_in` | はい | 追加されたバージョン | `0.1.0` |
+| 12 | `deprecated_in` | いいえ | 非推奨化されたバージョン | `1.2.0` |
+| 13 | `removed_in` | いいえ | 削除されたバージョン | `2.0.0` |
+| 14 | `replaced_by` | いいえ | 代替コード | `UC-015` |
+| 15 | `backward_compatible` | はい | `true`または`false` | `true` |
+
+### ガバナンス列（3）
+
+| # | 列 | 必須 | 説明 | 例 |
+| --- | --- | --- | --- | --- |
+| 16 | `references` | いいえ | 外部参照 | ISO/IEC 42001 |
+| 17 | `owner` | いいえ | 責任者 | `AIMO WG` |
+| 18 | `last_reviewed_date` | いいえ | 最終レビュー（YYYY-MM-DD） | `2026-01-19` |
+
+## 初期エントリ
+
+現在の辞書バージョンは**v0.1.0**で、以下を含みます：
+
+| 次元 | 名称 | 有効コード | 非推奨 | 合計 |
+| --- | --- | --- | --- | --- |
+| FS | 機能スコープ | 6 | 0 | 6 |
+| UC | ユースケース分類 | 30 | 0 | 30 |
+| DT | データ種別 | 10 | 0 | 10 |
+| CH | チャネル | 8 | 0 | 8 |
+| IM | 統合形態 | 7 | 0 | 7 |
+| RS | リスク面 | 8 | 0 | 8 |
+| OB | 成果 | 7 | 0 | 7 |
+| LG | ログ/記録種別 | 15 | 0 | 15 |
+| **合計** | | **91** | **0** | **91** |
+
+!!! note "完全なコード一覧"
+    91コードの完全なリストは生成されたCSVアーティファクトで利用可能です。このドキュメントページは列定義と使用ガイダンスを提供します。詳細なコード定義：
+
+    - **ダウンロード**: 言語別CSVファイルは[リリース](../../../releases/)を参照
+    - **言語別CSV**: `artifacts/taxonomy/current/{lang}/taxonomy_dictionary.csv`
+    - **レガシー英日混在CSV**: `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv`（凍結、後方互換性のためのみ維持）
+
+## 更新ポリシー
+
+### 新規コードの追加
+
+1. 次元内の次に利用可能な番号を割り当てる（例：`UC-030`の後は`UC-031`）
+2. `status`を`active`に設定
+3. `introduced_in`を現在のバージョンに設定
+4. `backward_compatible`を`true`に設定
+5. ラベルと定義を提供（翻訳は言語パックに追加）
+
+### 既存コードの変更
+
+| 変更タイプ | 許可 | バージョン影響 |
+| --- | --- | --- |
+| 定義の明確化 | はい | PATCH |
+| スコープノートの更新 | はい | PATCH |
+| ラベル変更（意味は維持） | はい | MINOR |
+| 意味の変更 | いいえ | 代わりに新規コードを作成 |
+
+### コードの非推奨化
+
+1. `status`を`deprecated`に設定
+2. `deprecated_in`を現在のバージョンに設定
+3. `replaced_by`を新しいコードに設定（該当する場合）
+4. コードは後方互換性のために機能し続ける
+5. 理由をscope_notesに文書化
+
+### コードの削除
+
+1. まず少なくとも1つのMINORバージョンで非推奨化
+2. `status`を`removed`に設定
+3. `removed_in`を現在のMAJORバージョンに設定
+4. コードは新しい証跡には無効
+
+### 互換性ポリシー
+
+| アクション | バージョン影響 | 後方互換性 |
+| --- | --- | --- |
+| 新規コード追加 | MINOR | あり |
+| コード非推奨化 | MINOR | あり |
+| 定義の明確化 | PATCH | あり |
+| コード削除 | MAJOR | なし |
+| コードの意味変更 | 許可されない | - |
+
+## 使用方法
+
+### 証跡テンプレートでの使用
+
+各証跡テンプレートには8次元コードテーブルが含まれます：
+
+```markdown
+## AIMOコード（8次元）
+
+| 次元 | コード | ラベル |
+| --- | --- | --- |
+| **FS** | `FS-001` | 社内生産性 |
+| **UC** | `UC-001`, `UC-002` | 一般QA、要約 |
+| **DT** | `DT-002`, `DT-004` | 社内情報、個人情報 |
+| **CH** | `CH-001` | Web UI |
+| **IM** | `IM-002` | SaaS連携 |
+| **RS** | `RS-001`, `RS-003` | 情報漏えい、法令/規程違反 |
+| **OB** | `OB-001` | 効率化 |
+| **LG** | `LG-001`, `LG-002` | 申請記録、審査/承認記録 |
+```
+
+### バリデータでの使用
+
+バリデータは以下をチェックします：
+
+1. 証跡で参照されるすべてのコードが辞書に存在する
+2. コードフォーマットが期待されるパターンに一致する（`PREFIX-###`）
+3. 非推奨コードは警告を発する
+4. 削除されたコードは拒否される
+
+### 拡張ガイドライン
+
+組織はカスタムコードで辞書を拡張できます：
+
+**拡張プレフィックス：**
+
+```
+X-<ORG>-<DIM>-<TOKEN>
+```
+
+例：ACME社のカスタムユースケースコードとして`X-ACME-UC-901`。
+
+**拡張ルール：**
+
+1. カスタムコードは標準コードと競合してはならない
+2. カスタムコードはローカル拡張辞書に文書化されるべき
+3. 外部関係者とエビデンスを交換する際は、標準コードのみを使用
+
+## ダウンロード
+
+辞書と関連ファイルを含むダウンロード可能なパッケージは[リリース](../../../releases/)を参照してください。
+
+## 関連ページ
+
+- [タクソノミー](../03-taxonomy/) - 次元定義とコードテーブル
+- [コード](../04-codes/) - コードフォーマット、命名、ライフサイクル
+- [証跡テンプレート](../06-ev-template/) - テンプレートでのコードの使用方法
+- [バリデータ](../07-validator/) - コードバリデーションルール
+- [変更履歴](../08-changelog/) - バージョン履歴
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/06-ev-template/ -->
+
+# Evidence Pack Template (EP)
+
+This section defines the Evidence Pack templates and their usage. An Evidence Pack is a collection of documentation that demonstrates governance and compliance for an AI system.
+
+## Namespace: Evidence Pack document types (EP) vs Taxonomy Log/Event Type (LG)
+
+> **Important**: **EP-01..EP-07** identify *document types* (Evidence Pack file types). **LG-001, LG-002, …** in the [Taxonomy](../03-taxonomy/) identify *log/event types* (Request Record, Review/Approval, Exception, etc.). **EV-** is reserved for [Evidence artifact IDs](../04b-id-policy-namespace/) only. Use EP for pack structure and LG for lifecycle log/event classification.
+
+## Key Principle: Index and Diff Management
+
+What matters is not the content of individual submissions alone, but the **index** and **diff management** across evidence items.
+
+An Evidence Pack serves as an index linking AI systems to their governance artifacts. The value lies in:
+
+1. **Traceability**: Linking decisions, approvals, and changes across time
+2. **Auditability**: Enabling auditors to navigate the evidence structure
+3. **Maintainability**: Tracking what changed, when, and why
+
+## MVP Evidence Set (EP-01 to EP-07)
+
+The following seven **Evidence Pack document types** (EP) form the **minimum viable set** for demonstrating AI governance. Each is a document template; taxonomy **LG** codes (Request Record, Review/Approval, etc.) are used elsewhere in the bundle and in `codes.LG` to classify *log/event* evidence.
+
+| ID | Document Type | Purpose |
+| --- | --- | --- |
+| EP-01 | System Overview | Document the AI system and its purpose |
+| EP-02 | Data Flow | Map data movement through the system |
+| EP-03 | Inventory | Maintain catalog of AI assets |
+| EP-04 | Risk & Impact Assessment | Assess and document risks |
+| EP-05 | Controls & Approvals | Document controls and approval records |
+| EP-06 | Logging & Monitoring | Define logging and monitoring setup |
+| EP-07 | Incident & Exception | Track incidents and exceptions |
+
+## Evidence Pack Manifest
+
+Each Evidence Pack MUST include a manifest file containing:
+
+### Mandatory Metadata
+
+| Field | Description | Required |
+| --- | --- | --- |
+| `pack_id` | Unique identifier (e.g., EP-EXAMPLE-001) | Yes |
+| `pack_version` | SemVer version of the pack | Yes |
+| `taxonomy_version` | Version of AIMO taxonomy used | Yes |
+| `created_date` | Pack creation date | Yes |
+| `last_updated` | Last update date | Yes |
+| `owner` | Responsible party | Yes |
+
+### AIMO Codes (8 Dimensions)
+
+Each Evidence Pack MUST include codes from all 8 dimensions. The **LG** dimension lists *taxonomy* Log/Event Types (e.g. Request Record, Review/Approval) applicable to this pack—not document type codes. Document type is given by `evidence_files[].file_id` (EP-01..EP-07). See [ID Policy / Namespace](../04b-id-policy-namespace/).
+
+```json
+{
+  "codes": {
+    "FS": ["FS-001"],
+    "UC": ["UC-001", "UC-002"],
+    "DT": ["DT-002"],
+    "CH": ["CH-001"],
+    "IM": ["IM-001"],
+    "RS": ["RS-001", "RS-003"],
+    "OB": ["OB-001"],
+    "LG": ["LG-001", "LG-002", "LG-008", "LG-009"]
+  }
+}
+```
+
+### Evidence Files List
+
+Each entry identifies a document in the pack by **file_id** (EP-01..EP-07). Optional **ev_codes** may list taxonomy LG codes (LG-xxx) that the document supports.
+
+```json
+{
+  "evidence_files": [
+    {
+      "file_id": "EP-01",
+      "filename": "EP-01_system_overview.md",
+      "title": "System Overview",
+      "required": true
+    }
+  ]
+}
+```
+
+## Template Structure
+
+Each evidence template includes:
+
+1. **Mandatory Metadata Block** - pack_id, version, taxonomy_version, dates, owner
+2. **AIMO Codes Table** - All 8 dimensions with applicable codes
+3. **Content Sections** - Domain-specific documentation sections
+4. **References** - Links to related evidence
+5. **Revision History** - Change tracking
+
+### Template Header Example
+
+```markdown
+# EP-01: System Overview
+
+---
+
+## Mandatory Metadata
+
+| Field | Value |
+| --- | --- |
+| **pack_id** | `EP-EXAMPLE-001` |
+| **pack_version** | `0.1.0` |
+| **taxonomy_version** | `0.1.0` |
+| **created_date** | `2026-01-31` |
+| **last_updated** | `2026-01-31` |
+| **owner** | `AI Governance Team` |
+
+---
+
+## AIMO Codes (8 Dimensions)
+
+| Dimension | Code(s) | Label |
+| --- | --- | --- |
+| **FS** | `FS-001` | End-user Productivity |
+| **UC** | `UC-001` | General Q&A |
+| **DT** | `DT-002` | Internal |
+| **CH** | `CH-001` | Web UI |
+| **IM** | `IM-001` | Standalone |
+| **RS** | `RS-001` | Data Leakage |
+| **OB** | `OB-001` | Efficiency |
+| **LG** | `LG-001`, `LG-002` | Request Record, Review/Approval Record |
+```
+
+## External Forms (official templates/checklists attached as-is)
+
+Attach **official external templates and checklists** (EU, NIST, UK, Japan, etc.) as separate files. Do not alter their content; attach as-is, hash them, and reference them in the bundle.
+
+| Slot | Suggested logical_id / attachment | Where to attach |
+| --- | --- | --- |
+| **EU GPAI CoP** | Model Documentation Form | Add to `payload_index` with e.g. `logical_id`: `GPAI_MODEL_DOC_FORM`; store file in `payloads/`; record `sha256` in manifest. |
+| **NIST GenAI** | GenAI profile artifacts (e.g. adaptation records, evaluation) | Add to payload_index; reference in coverage map. Profile: `coverage_map/profiles/nist_ai_600_1_genai.json`. |
+| **UK ATRS / procurement** | ATRS record, procurement evaluation notes | Add to payload_index; reference in [Procurement & Disclosure Overlays](../../coverage-map/procurement-and-disclosure/). |
+| **Japan** | JP government GenAI procurement checklist, AI Business Guidelines checklist | Add to payload_index with e.g. `logical_id`: `JP_PROCUREMENT_CHECKLIST`; reference in Procurement & Disclosure Overlays. |
+
+**Guidance:** Store each external form as a file (PDF, DOC, CSV, etc.), compute SHA-256, and list it in the bundle `manifest.json` `payload_index` with a stable `logical_id`. Link to AIMO taxonomy codes or bundle objects in your coverage map or handoff index so auditors can trace between external forms and AIMO evidence.
+
+## Audit Handoff Index
+
+For **Audit-Ready** level, provide a **one-page index** that tells the auditor where to find each key artifact:
+
+| Artifact | Where to find it | Hash (sha256) | Producer | Date |
+| --- | --- | --- | --- | --- |
+| Manifest | `manifest.json` (bundle root) | (in hash_chain or separate) | — | created_at |
+| Root EV / Summary | e.g. `payloads/root.json` | payload_index entry | — | — |
+| Request/Review/Exception | (list key records) | (object or payload ref) | (role/org) | (timestamp) |
+| External forms | (list logical_ids and paths) | payload_index entry | — | — |
+
+Fill in one row per key artifact. This supports audit handoff without implying certification or assurance.
+
+## Downloads
+
+### Templates
+
+Evidence Pack templates are available in the repository. Use **file_id** EP-01..EP-07 in the manifest; filenames may be EP-01_... or legacy EV-01_... for backward compatibility.
+
+- `source_pack/04_evidence_pack/templates/EV-01_system_overview.md` → file_id **EP-01**
+- `source_pack/04_evidence_pack/templates/EV-02_data_flow.md` → file_id **EP-02**
+- `source_pack/04_evidence_pack/templates/EV-03_inventory.md` → file_id **EP-03**
+- `source_pack/04_evidence_pack/templates/EV-04_risk_impact.md` → file_id **EP-04**
+- `source_pack/04_evidence_pack/templates/EV-05_controls_approvals.md` → file_id **EP-05**
+- `source_pack/04_evidence_pack/templates/EV-06_logging_monitoring.md` → file_id **EP-06**
+- `source_pack/04_evidence_pack/templates/EV-07_incident_exception.md` → file_id **EP-07**
+
+### Schemas and Examples
+
+- Schema: `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json`
+- Example: `source_pack/04_evidence_pack/examples/evidence_pack_manifest.example.json`
+
+See [Releases](../../../releases/) for downloadable packages.
+
+## Distribution Model
+
+> **Note**: The primary distribution targets are **audit firms and system integrators** (template distributors), not individual enterprises.
+
+The templates are designed to be:
+
+1. Adopted by auditors and consultants as standard artifacts
+2. Distributed to enterprises with source attribution preserved
+3. Versioned alongside the AIMO Standard
+
+Enterprises receive templates through their auditors, consultants, or internal governance teams who maintain the linkage to the standard version.
+
+## References
+
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Codes](../04-codes/) - Code format
+- [Validator](../07-validator/) - Validation rules
+- [Evidence Bundle](../../../artifacts/evidence-bundle/) - Bundle structure
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/07-validator/ -->
+
+# バリデータ
+
+AIMOバリデータは、Evidence Packおよび関連アーティファクトがAIMO Standardスキーマと要件に準拠していることを確認します。
+
+関連：[人による監督プロトコル](../../../governance/human-oversight-protocol/) — 機械チェックと人の判断の責任境界。
+
+## バリデータが検証する対象（必須ファイルセット）
+
+バリデータは **Evidence Bundle** の構造と関連アーティファクトを検証します。最小限の提出には以下が必要です。
+
+| アーティファクト | 目的 | 正規の場所（リリースごと） |
+|------------------|------|----------------------------|
+| **Evidence Pack マニフェスト** | ルートマニフェスト（`root.json` 等） | スキーマ: [evidence_pack_manifest.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/evidence_pack_manifest.schema.json)；リリース ZIP: `schemas/jsonschema/` |
+| **Dictionary** | マニフェストで使用する taxonomy コード | [Evidence Bundle](../../../artifacts/evidence-bundle/) 構造；[Dictionary](../05-dictionary/) 仕様 |
+| **Minimum Evidence Requirements** | 監査人・実装者向けチェックリスト | [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) |
+
+バリデータは法的・規制上の適合を保証しません。構造がスキーマとコード体系に準拠しているかを検証します。含める証跡のチェックリストは [Minimum Evidence Requirements](../../../artifacts/minimum-evidence/) を参照してください。
+
+**特定バージョンの正規 URL**：準拠するバージョン（例：`v0.0.3`）の [GitHub Release](https://github.com/billyrise/aimo-standard/releases) からスキーマとバリデータを取得してください。リリース ZIP（`aimo-standard-artifacts.zip`）には `schemas/jsonschema/`、テンプレート、バリデータルールが含まれます。
+
+## 実運用でのValidator
+
+30秒クイックスタート（インストール、実行、出力の解釈）は [Validator ハブ](../../../validator/) を参照。
+
+## バリデータMVP要件
+
+最小限のバリデータは以下のチェックを実行する必要があります：
+
+### 1. 必須フィールドバリデーション
+
+すべての必須フィールドが存在することを確認：
+
+| アーティファクト | 必須フィールド |
+| --- | --- |
+| Evidence Packマニフェスト | pack_id, pack_version, taxonomy_version, created_date, last_updated, codes, evidence_files |
+| Codesオブジェクト | FS, UC, DT, CH, IM, RS, EV（OBは任意） |
+| Evidence Fileエントリ | file_id（EP-01..EP-07）, filename, title（ev_type / ev_codes は任意） |
+
+### 2. 次元コードバリデーション
+
+各必須次元に少なくとも1つのコードがあることを確認：
+
+| 次元 | 要件 |
+| --- | --- |
+| FS（機能スコープ） | 正確に1つのコード |
+| UC（ユースケース分類） | 少なくとも1つのコード |
+| DT（データ種別） | 少なくとも1つのコード |
+| CH（チャネル） | 少なくとも1つのコード |
+| IM（統合形態） | 正確に1つのコード |
+| RS（リスク面） | 少なくとも1つのコード |
+| OB（成果） | 任意（0個以上） |
+| LG（ログ/記録種別） | 少なくとも1つのコード |
+
+### 3. 辞書存在チェック
+
+すべてのコードがタクソノミー辞書に存在することを検証：
+
+- 指定された`taxonomy_version`のタクソノミー辞書をロード
+- マニフェスト内の各コードが辞書に存在することを確認
+- 無効なコードを次元と値と共に報告
+
+### 4. コードフォーマットバリデーション
+
+すべてのコードが期待されるフォーマットに一致することを確認：
+
+```regex
+^(FS|UC|DT|CH|IM|RS|OB|LG)-\d{3}$
+```
+
+### 5. スキーマバリデーション
+
+JSON Schemaに対してバリデーション：
+
+| スキーマ | 目的 |
+| --- | --- |
+| `evidence_pack_manifest.schema.json` | Evidence Packマニフェスト |
+| `taxonomy_pack.schema.json` | タクソノミーパック定義 |
+| `changelog.schema.json` | 変更履歴エントリ |
+
+## バリデーションルール
+
+### ルール：必須次元
+
+```yaml
+rule_id: required_dimensions
+description: すべての必須次元に少なくとも1つのコードが必要
+severity: error
+check: |
+  - FS: 正確に1つ
+  - UC: 少なくとも1つ
+  - DT: 少なくとも1つ
+  - CH: 少なくとも1つ
+  - IM: 正確に1つ
+  - RS: 少なくとも1つ
+  - LG: 少なくとも1つ
+```
+
+### ルール：有効なコード
+
+```yaml
+rule_id: valid_codes
+description: すべてのコードがタクソノミー辞書に存在する必要がある
+severity: error
+check: |
+  manifest.codes内の各コードについて：
+    - 指定されたtaxonomy_versionの辞書にコードが存在する
+    - コードステータスが'active'（'deprecated'の場合は警告）
+```
+
+### ルール：コードフォーマット
+
+```yaml
+rule_id: code_format
+description: すべてのコードが標準フォーマットに一致する必要がある
+severity: error
+pattern: "^(FS|UC|DT|CH|IM|RS|OB|LG)-\\d{3}$"
+```
+
+### ルール：バージョンフォーマット
+
+```yaml
+rule_id: version_format
+description: バージョンは有効なSemVerである必要がある
+severity: error
+pattern: "^\\d+\\.\\d+\\.\\d+$"
+fields:
+  - pack_version
+  - taxonomy_version
+```
+
+## エラー出力フォーマット
+
+バリデーションエラーは以下のフォーマットで報告されます：
+
+```
+<path>: <severity>: <message>
+```
+
+**例：**
+
+```
+codes.FS: error: 必須次元'FS'にコードがありません
+codes.UC[0]: error: コード'UC-999'は辞書v0.1.0に存在しません
+pack_version: error: 無効なバージョンフォーマット'v1.0'（SemVer形式が必要）
+codes.RS[1]: warning: コード'RS-002'はv0.2.0で非推奨です
+```
+
+## バリデータがチェックしないこと
+
+バリデータは構造的な適合性に焦点を当て、コンテンツ品質はチェックしません：
+
+| 側面 | 理由 |
+| --- | --- |
+| コンテンツの正確性 | バリデータは構造をチェックし、意味はチェックしない |
+| 証跡の完全性 | テンプレートはガイドであり、強制フォーマットではない |
+| 相互参照の解決 | ファイル存在は検証されない |
+| タイムスタンプの有効性 | ISO-8601は厳密にバリデーションされない |
+| IDの一意性 | 現在は強制されていない |
+| 完全性ハッシュ | 採用者の責任 |
+
+## リファレンス実装
+
+Pythonでのリファレンス実装が提供されています：
+
+```
+validator/src/validate.py
+```
+
+### 使用方法
+
+```bash
+python validator/src/validate.py <manifest.json>
+```
+
+### 出力例
+
+```
+Validating: evidence_pack_manifest.json
+Taxonomy version: 0.1.0
+
+Checking required dimensions...
+  FS: OK (1 code)
+  UC: OK (3 codes)
+  DT: OK (1 code)
+  CH: OK (1 code)
+  IM: OK (1 code)
+  RS: OK (3 codes)
+  OB: OK (2 codes)
+  LG: OK (7 codes)
+
+Checking code validity...
+  All codes valid.
+
+Validation: PASSED
+```
+
+## バージョニングポリシー
+
+バリデータルールはSemVerに従います：
+
+- **MAJOR**: 破壊的なルール変更（既存の有効なパックを失敗させる新しい必須チェック）
+- **MINOR**: 新しい任意チェック、警告、または情報メッセージ
+- **PATCH**: バリデーション結果を変更しないバグ修正
+
+## スキーマ参照
+
+| スキーマ | 場所 |
+| --- | --- |
+| Evidence Packマニフェスト | `source_pack/04_evidence_pack/schemas/evidence_pack_manifest.schema.json` |
+| タクソノミーパック | `source_pack/03_taxonomy/schemas/taxonomy_pack.schema.json` |
+| 変更履歴 | `source_pack/03_taxonomy/schemas/changelog.schema.json` |
+
+## 参照
+
+- [タクソノミー](../03-taxonomy/) - 次元定義
+- [コード](../04-codes/) - コードフォーマット
+- [辞書](../05-dictionary/) - コード辞書
+- [バリデータルール](../../../validator/) - 完全なルールドキュメント
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/08-changelog/ -->
+
+# Changelog
+
+This section documents the versioning policy and change history for the AIMO Standard.
+
+## Versioning Policy
+
+AIMO Standard follows [Semantic Versioning](https://semver.org/) (SemVer):
+
+### Version Format: MAJOR.MINOR.PATCH
+
+| Change Type | Version Bump | Examples |
+| --- | --- | --- |
+| **MAJOR** | X.0.0 | Breaking schema changes, code removal, required field changes |
+| **MINOR** | 0.X.0 | New codes, new optional fields, new dimensions (optional) |
+| **PATCH** | 0.0.X | Documentation fixes, definition clarifications, validator bug fixes |
+
+### Breaking vs. Compatible Changes
+
+**Breaking Changes (MAJOR):**
+
+- Removal of codes (after deprecation period)
+- Changes to required fields in schemas
+- Structural changes that invalidate existing documents
+- Changes to code format patterns
+
+**Backward Compatible Changes (MINOR):**
+
+- Adding new codes to existing dimensions
+- Adding new optional fields to schemas
+- Adding new optional dimensions
+- Adding new evidence templates
+
+**Non-breaking Changes (PATCH):**
+
+- Documentation corrections
+- Clarification of existing definitions
+- Translation improvements
+- Validator bug fixes
+
+## Deprecation Policy
+
+### Deprecation Process
+
+1. **Mark as Deprecated**: Code or feature is marked with `status: deprecated` and `deprecated_in: X.Y.Z`
+2. **Deprecation Period**: At least one MINOR version must pass before removal
+3. **Provide Replacement**: If applicable, `replaced_by` indicates the replacement
+4. **Remove in MAJOR**: Removal occurs in the next MAJOR version
+
+### Example Lifecycle
+
+```
+v0.0.1: FS-007 introduced (status: active)
+v0.1.0: FS-007 deprecated (status: deprecated, replaced_by: FS-008)
+v0.2.0: FS-007 still available with deprecation warning
+v1.0.0: FS-007 removed (status: removed)
+```
+
+### Using Deprecated Codes
+
+- Deprecated codes remain valid for validation
+- Validator SHOULD emit a warning for deprecated codes
+- New implementations SHOULD use replacement codes
+- Existing documents MAY continue using deprecated codes until migration
+
+## Release Artifacts
+
+Each official release includes:
+
+| Artifact | Description |
+| --- | --- |
+| Versioned site snapshot | `https://standard.aimoaas.com/0.0.1/` |
+| PDF specification | `trust_package.pdf` |
+| Asset package (ZIP) | Schemas, templates, dictionary |
+| Checksums | SHA-256 hashes for integrity |
+| Changelog | This document |
+
+## Change History
+
+### Version 0.1.2 {#version-012}
+
+**Summary:** PATCH release (non-breaking). Normalizes EU AI Act references in docs/SSOT (informative mapping only; not legal advice). Improves Annex IV sample bundle completeness (signatures, hashes, payload). Adds optional JNC schema and validator check. Adds validator audit report outputs (audit-json, audit-html). See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
+#### Repair-deploy addendum (docs + mappings) — 2026-02-15
+
+- Added ISO/IEC 42006 coverage map page.
+- Expanded Conformance into AIMO Conformity Framework aligned to ISO 42001 (informative); levels Foundation, Operational, Audit-Ready.
+- Added ISO 42001 certification readiness toolkit (artifact).
+- Added EU AI Act timeline (02 Feb / 02 Aug 2025–2027), harmonised standards notes, and 2026 AI Office guidelines (informative).
+- Added new profiles and schema enum additions (ISO_42006, EU_AI_ACT_HIGH_RISK, EU_GPAI_COP, NIST_AI_600_1, UK_ATRS, JP_GOV_GENAI_PROCUREMENT); no version bump.
+- **No version bump:** repair-deploy updates the already released v0.1.2 snapshot.
+
+### Version 0.1.1 {#version-011}
+
+**Summary:** PATCH release. Optional signature metadata for verification, Coverage Map audit_questions, Normative/Informative and governance clarifications, v0.2 roadmap. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
+### Version 0.1.0 {#version-010}
+
+**Summary:** Normative Evidence Bundle structure, ID namespace (EV/LG), Profiles, Validator. Breaking: EV→LG for taxonomy. See repository [changelog/CHANGELOG.md](https://github.com/billyrise/aimo-standard/blob/main/changelog/CHANGELOG.md) for full entry.
+
+### Unreleased (namespace and normative fixes)
+
+**Summary:** Resolves EV code collision, clarifies EV (index) vs Evidence Pack (payload), and hardens /dev against audit miscitation.
+
+#### Changed
+
+- **Evidence Pack document types (EP namespace):** Evidence Pack file types use **EP-01..EP-07** (document type). Taxonomy **LG-001, LG-002, …** are Log/Event types (Request Record, Review/Approval, etc.). **EV-** reserved for Evidence artifact IDs only. See [Evidence Pack Template](../06-ev-template/) and [ID Policy / Namespace](../04b-id-policy-namespace/). Schema: `evidence_files[].file_id` pattern is `^EP-\\d{2}$`; `ev_type` uses **LG-xxx**.
+- **Normative relationship:** [Evidence Bundle](../../../artifacts/evidence-bundle/) now states normatively: EV records (JSON) are the index/ledger; Evidence Pack files are the payload; EV records SHOULD reference payload by evidence_file_ids (e.g. EP-01) and/or hashes; minimum submission set = EV JSON + Dictionary + Summary + Change Log + Evidence Pack.
+- **/dev anti-miscitation:** Development preview pages show a red banner: "Development Preview — Not for audit citation. Use /latest/ or a versioned URL." Canonical for /dev/ pages points to /latest/; noindex remains in place.
+
+### Version 0.0.1 (2026-02-02)
+
+**Summary:** Initial release of AIMO Standard with 8-dimension code system, Evidence Pack templates, and comprehensive governance documentation.
+
+#### Added
+
+**Code System (8 Dimensions)**
+
+| Dimension | Codes Added | Description |
+| --- | --- | --- |
+| FS | FS-001 to FS-006 | Functional Scope |
+| UC | UC-001 to UC-010 | Use Case Class |
+| DT | DT-001 to DT-008 | Data Type |
+| CH | CH-001 to CH-006 | Channel |
+| IM | IM-001 to IM-005 | Integration Mode |
+| RS | RS-001 to RS-005 | Risk Surface |
+| OB | OB-001 to OB-005 | Outcome / Benefit |
+| LG | LG-001 to LG-015 | Log/Event Type |
+
+**Schemas**
+
+- `taxonomy_pack.schema.json`: Taxonomy pack definition
+- `changelog.schema.json`: Changelog entries
+- `evidence_pack_manifest.schema.json`: Evidence Pack manifests
+- `shadow-ai-discovery.schema.json`: Shadow AI discovery evidence
+- `agent-activity.schema.json`: Agent activity evidence
+
+**Evidence Pack Templates (MVP)**
+
+- EP-01 (legacy EV-01): System Overview
+- EP-02 (legacy EV-02): Data Flow
+- EP-03 (legacy EV-03): AI Inventory
+- EP-04 (legacy EV-04): Risk & Impact Assessment
+- EP-05 (legacy EV-05): Controls & Approvals
+- EP-06 (legacy EV-06): Logging & Monitoring
+- EP-07 (legacy EV-07): Incident & Exception Handling
+
+**Documentation**
+
+- Taxonomy documentation with 8-dimension definitions
+- Code System format specification
+- Dictionary CSV format specification
+- Versioning and change policy
+- Validator MVP requirements
+- Human Oversight Protocol
+- Coverage Map (ISO 42001, NIST AI RMF, EU AI Act, ISMS)
+- Trust Package
+
+#### Backward Compatibility
+
+This is the initial release; no backward compatibility concerns.
+
+---
+
+## Machine-Readable Changelog
+
+A machine-readable changelog is available:
+
+- `changelog/changelog.json`
+
+This file follows the `changelog.schema.json` schema and can be parsed programmatically.
+
+## References
+
+- [Taxonomy](../03-taxonomy/) - Dimension definitions
+- [Dictionary](../05-dictionary/) - Code dictionary
+- [Versioning Policy](../../../governance/) - Versioning policy (see VERSIONING.md in repository root)
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/09-evidence-bundle-structure/ -->
+
+# Evidence Bundle ルート構造（v0.1）
+
+本ページは、Evidence Bundle の**規範的**ルートレイアウトとマニフェストを定義します。Validator は、これらの要件を満たさないバンドルをスキーマ検証の前に拒否しなければなりません。
+
+## v0.1 規範 MUST（概要）
+
+- バンドルルートに **manifest.json** が必須。
+- **object_index** と **payload_index**: 各エントリは **sha256**（64 文字小 hex）を含むこと；パスは相対で、`../` を含まずバンドルルートから脱しないこと。
+- **signing.signatures** は空でない配列（空配列は無効）。
+- 各署名エントリは: `signatures/` 下の **path**（パス横断禁止）、**targets**（配列、少なくとも 1 パス）、かつバンドル内の少なくとも 1 つの署名が **targets** に **manifest.json** を含むこと（manifest への署名は必須）。
+- **hash_chain**: v0.1 では **algorithm**、**head**、**path**（`hashes/` 下）、**covers**（少なくとも **manifest.json** と **objects/index.json**）を含むこと。
+
+Validator はバンドル受理前にこれらを強制します。JSON Schema と参照 Validator は同じルールを実装します。
+
+## ルート必須構造（MUST）
+
+バンドルルートに以下が存在すること:
+
+| 項目 | 型 | 目的 |
+| --- | --- | --- |
+| **manifest.json** | ファイル | バンドルマニフェスト（下記）。バンドルの正規記述子。 |
+| **objects/** | ディレクトリ | 列挙オブジェクト（メタデータ、インデックス等）。`manifest.json` の `object_index` に列挙。 |
+| **payloads/** | ディレクトリ | Payload ファイル（ルート EV JSON、Evidence Pack ファイル等）。`manifest.json` の `payload_index` に列挙。 |
+| **signatures/** | ディレクトリ | デジタル署名。v0.1 では manifest を参照する少なくとも 1 つの署名ファイルが必須（存在とターゲット参照；暗号検証は将来拡張）。 |
+| **hashes/** | ディレクトリ | ハッシュチェーンまたは整合性記録（`manifest.json` の `hash_chain` に従う）。 |
+
+実装者はこれらを欠くバンドルを提出してはなりません。ルート構造が不完全な場合、Validator は明確なメッセージで失敗しなければなりません。
+
+## Integrity（規範）と Custody（実装）
+
+- **Integrity** は v0.1 で**規範**です：標準は、バンドルが整合性メタデータ（manifest、索引ファイルの sha256、manifest への署名の存在）を持つことを要求します。Validator は以下を確認しなければなりません：
+  - 必須ディレクトリ・ファイルが存在する。
+  - `manifest.json` が存在し有効（スキーマおよび前スキーマチェック）。
+  - `object_index` と `payload_index` に列挙された全ファイルが指定パスに存在し、内容が宣言された `sha256` と一致する。
+  - `signatures/` に manifest をターゲットとする少なくとも 1 つの署名が含まれる（v0.1: 存在と参照のみ；v0.1.1: 検証メタデータを RECOMMENDED；v0.2 予定: 暗号検証をスコープに含める）。
+- **Custody**（保管、アクセス制御、保持、WORM）は**実装定義**です。標準は保管者がバンドルをどう保管・保護するかは規定せず、提出時点のパッケージが上記 Integrity 要件を満たすことのみを要求します。
+
+## manifest.json（MUST フィールド）
+
+マニフェストは少なくとも以下を含むこと:
+
+| フィールド | 型 | 説明 |
+| --- | --- | --- |
+| **bundle_id** | string (UUID) | 当該バンドルの一意識別子。 |
+| **bundle_version** | string (SemVer) | バンドルのバージョン。 |
+| **created_at** | string (date-time) | 作成タイムスタンプ。 |
+| **scope_ref** | string | スコープ参照（例: `SC-001`）。パターン `SC-*`。 |
+| **object_index** | array | オブジェクト一覧: `id`、`type`、`path`、`sha256`。パスは相対、`../` を含まず `/` で始まらず、Evidence Bundle ルート内に留まること（Validator はルート外へのパスを拒否する）。 |
+| **payload_index** | array | Payload 一覧: `logical_id`、`path`、`sha256`、`mime`、`size`。object_index と同じパスルール（相対、`../` なし、先頭 `/` なし、バンドルルート内）。 |
+| **hash_chain** | object | **規範 (v0.1):** `algorithm`（sha256 \| merkle）、`head`（64 文字小 hex）、`path`（`hashes/` 下の相対パス；`../` なし、先頭 `/` なし）、`covers`（配列、少なくとも 1 要素）を含むこと。v0.1 では `covers` に `manifest.json` と `objects/index.json` を含むこと。 |
+| **signing** | object | **規範 (v0.1):** `signatures`（配列、少なくとも 1 エントリ）を含むこと。各エントリは: `signature_id`（例 SIG-... または UUID）、`path`（`signatures/` 下の相対；`../` なし、先頭 `/` なし）、`targets`（配列、少なくとも 1 パス；v0.1 では少なくとも 1 つの署名の targets に `manifest.json` を含む）、`algorithm`（ed25519、rsa-pss、ecdsa、unspecified のいずれか）。`created_at`（date-time）は MAY。**注:** v0.1 では署名の暗号検証はスコープ外；参照（どのファイルを何にターゲットするか）が必須。 |
+
+**v0.1.1 オプション署名メタデータ（第三者による再実行には RECOMMENDED）:**
+
+| フィールド | 型 | 説明 |
+| --- | --- | --- |
+| **signer_identity** | string | 署名者の identity（例: PGP フィンガープリント、did:key）。 |
+| **signed_at** | string (date-time) | 署名が付与された時刻（ISO 8601）。 |
+| **verification_command** | string | 監査人が検証を再実行するための例示 CLI コマンド。 |
+| **canonicalization** | string | 署名対象 payload の正規化方法: `rfc8785_json`、`cbor`、`unspecified`。 |
+
+Integrity と検証: **v0.1** — 参照と存在のみ。**v0.1.1** — 検証用メタデータを RECOMMENDED。**v0.2**（予定）— 暗号検証をスコープに含める。
+
+- **sha256** 値は 64 文字の小文字十六進位でなければなりません。
+- **path** は相対パスとし、`../` を含まず `/` で始まらず、Evidence Bundle ルート内に留まること。
+- マニフェストは、自身の整合性がカバーされるよう、明示的な自己参照（例: `object_index` または専用フィールド）を含んでよい；Validator は、マニフェストが何らかのインデックスに列挙されているか、署名で明示的に参照されているバンドルを受け入れなければなりません。
+
+JSON Schema: `schemas/jsonschema/evidence_bundle_manifest.schema.json` を参照。
+
+## 将来拡張（参考）
+
+- **Control/Requirement リンク**: 将来バージョンで、Evidence Bundle 要素を Control または Requirement 識別子にリンクする標準的な方法（例: NIST OSCAL 等へのエクスポート）を追加する可能性があります。v0.1 および v0.1.1 では不要です。
+
+## 参考文献
+
+- [Evidence Bundle（アーティファクト概要）](../../../artifacts/evidence-bundle/) — 目的と目次
+- [EV テンプレート — External Forms と監査引き継ぎインデックス](../06-ev-template/#external-forms-official-templateschecklists-attached-as-is) — 公式テンプレート/チェックリストの添付とマニフェストでの参照方法
+- [署名検証ロードマップ](../../../artifacts/signature-verification-roadmap/) — v0.1.1 メタデータと v0.2 検証計画
+- [Validator](../../../validator/) — 当該構造の強制方法
+- [最低証拠要件](../../../artifacts/minimum-evidence/) — MUST レベルチェックリスト
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/10-roadmap-v0.2/ -->
+
+# v0.2 ロードマップ（参考）
+
+本ページは、**将来のメジャーバージョン**（v0.2）の計画方向をまとめます。**参考**であり、各リリースの規範は当該バージョンの標準とスキーマです。目標時期: 2026 Q4–2027。
+
+## 計画テーマ
+
+| テーマ | 概要 |
+| --- | --- |
+| **監査オブジェクトモデル（SSOT）** | Requirement、Control、Claim、Evidence、Test、Finding、Remediation、Approval、Scope、VersionChange を固定 ID と参照整合性を持つ規範オブジェクトとして定義。 |
+| **外部フレームワークブリッジ** | EU 附属書 IV、GPAI フォーム、ISO 42001、NIST AI RMF 向け出力プロファイル；機械可読マッピングとオプションのワンクリックエクスポート。 |
+| **Evidence-as-Code** | 規範的整合性：署名検証、プロベナンス（SLSA 型等）、再現性と変更追跡。 |
+| **テスト手順ライブラリ** | コントロール別標準テストテンプレート；ISAE 3000、SOC 2、ISO 19011 との整合。 |
+| **運用ライフサイクル** | イベント駆動プロセス（Intake → Review → Exception → Renewal → Change → Decommission）と必須ログ・エビデンス。 |
+| **業界・法域プロファイル** | セクター・法域別のオプションプロファイル。 |
+| **正当化された不適合（JNC）** | 意図的な不適合を記録・正当化するオプション機構（参考）。 |
+| **OSCAL 連携** | Evidence Bundle を Control/Requirement にリンクし NIST OSCAL 等へエクスポートする標準的な方法。 |
+
+## 参考文献
+
+- [v0.1 オブジェクトモデルスコープ](https://github.com/billyrise/aimo-standard/blob/main/source_pack/07_release/v0.1_object_model_scope.md) — v0.1 MUST と予約
+- [署名検証ロードマップ](../../../artifacts/signature-verification-roadmap/) — 署名・検証の進化
+- [Releases](../../../releases/) — リリース資産と changelog
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/evidence-bundle-coverage-map/ -->
+
+# Evidence Bundle Coverage Map（テンプレート）
+
+!!! info "参考 — 推奨プラクティス"
+    本ページは、一枚の Evidence Bundle Coverage Map の**推奨プラクティステンプレート**を定義する。規格の**規範要件ではない**。バンドルがカバーする範囲としない範囲を監査引き継ぎ用に文書化する際に利用する。フレームワーク等への参照は安定しているが、採用は実装者の判断に委ねる。
+
+---
+
+## 1. スコープ
+
+| 項目 | 説明 |
+|------|--------------|
+| **スコープ参照** | バンドルマニフェストの `scope_ref`（例: `SC-001`）。本バンドルを宣言スコープに紐づける。 |
+| **Bundle ID** | `bundle_id`（UUID）— 本バンドルの一意識別子。 |
+| **Bundle バージョン** | `bundle_version`（SemVer）— バンドルのバージョン。 |
+| **期間 / スナップショット** | 任意：本バンドルが表す期間またはスナップショット日（例: 2026-Q1、as-of 2026-02-03）。 |
+
+---
+
+## 2. 証跡タイプ（EV / objects と payloads）
+
+| カテゴリ | 内容 | v0.1 最小例 |
+|----------|----------|------------------------|
+| **object_index** | 列挙オブジェクト（メタデータ、索引）。各エントリ: `id`, `type`, `path`, `sha256`。 | 例: `objects/index.json`（index 型）。 |
+| **payload_index** | ペイロードファイル（ルート EV JSON、Evidence Pack ファイル）。各エントリ: `logical_id`, `path`, `sha256`, `mime`, `size`。 | 例: `payloads/root.json`（ルート AIMO EV JSON）。 |
+| **EV タイプ** | 証跡レコード（ルートまたはリンク先ペイロード内）— request, review, exception, renewal, change log。 | [Evidence Pack テンプレート](../../standard/current/06-ev-template/) および [Minimum Evidence Requirements](../minimum-evidence/) に整合。 |
+
+*実装者は object_index と payload_index を拡張してよい。パスはバンドルルート内に留め、[Evidence Bundle ルート構造（v0.1）](../../standard/current/09-evidence-bundle-structure/) を満たすこと。*
+
+---
+
+## 3. コントロール対応（参照のみ）
+
+外部フレームワークへの対応は**参照のみ**。規格は特定の規制への準拠を要求しない。
+
+| フレームワーク | 本バンドルでの利用 | 参照 |
+|-----------|--------------------|-----------|
+| **ISO/IEC 42001** | 任意：本バンドルが対応する AI MS の観点を文書化。 | [Coverage Map → ISO 42001](../../coverage-map/iso-42001/) |
+| **EU AI Act** | 任意：文書化・記録管理の高レベル対応。 | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/) |
+| **NIST AI RMF** | 任意：Govern, Map, Measure, Manage の対応。 | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/) |
+| **EU GPAI CoP** | 任意：Model Documentation Form。External Forms に添付し logical_id で参照。 | [Coverage Map → EU AI Act](../../coverage-map/eu-ai-act/)；プロファイル `eu_gp_ai_cop.json` |
+| **NIST AI RMF / GenAI** | 任意：GenAI プロファイル（AI 600-1）のアーティファクト。 | [Coverage Map → NIST AI RMF](../../coverage-map/nist-ai-rmf/)；プロファイル `nist_ai_600_1_genai.json` |
+| **UK ATRS** | 任意：ATRS 記録、調達評価。 | [Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/)；プロファイル `uk_atrs_procurement.json` |
+| **JP Gov GenAI 調達** | 任意：JP 調達チェックリスト、AI Business Guidelines。 | [Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/)；プロファイル `jp_gov_genai_procurement.json` |
+| **ISMS (27001/27002)** | 任意：変更管理、アクセス、ログ、整合性。 | [Coverage Map → ISMS](../../coverage-map/isms/) |
+
+*「本バンドルでの利用」は提出ごとに記入。規格は特定のコントロールカバレッジを要求しない。*
+
+### External Forms とマニフェスト参照
+
+**External Forms**（公式テンプレート・チェックリストをそのまま添付）は、バンドルの **payload_index** に安定した `logical_id`, `path`, `sha256`, `mime`, `size` で列挙すること。監査人はマニフェストからファイルを辿りハッシュを検証できる。[EV Template — External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) および [EV Template — Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index) を参照。
+
+---
+
+## 4. 除外 / 前提
+
+| 領域 | 本バンドルが**カバーしない**内容（例 — 提出ごとに調整） |
+|------|-------------------------------------------------------------------------------|
+| **除外** | 例：スコープ外のシステム・ユースケース、証跡のない第三者コンポーネント、本バンドルの期間外。 |
+| **前提** | 例：Dictionary/タクソノミーバージョン、使用した validator/スキーマ版、保管・保持は実装定義。 |
+| **制限** | 例：v0.1 では署名検証はスコープ外；規制の法解釈は行わない。 |
+
+*プレースホルダを提出固有の除外・前提に置き換えること。*
+
+---
+
+## 5. 整合性証明のまとめ（v0.1）
+
+| 要素 | 提供内容（v0.1 規範） |
+|---------|----------------------------------|
+| **manifest.json** | 存在しスキーマ妥当。`object_index`, `payload_index`, `hash_chain`, `signing` を含む。 |
+| **sha256** | `object_index` と `payload_index` の全ファイルに 64 文字小 hex の sha256 を宣言。Validator が内容一致を検査。 |
+| **索引の存在** | 列挙パスはバンドルルート配下に存在。パストラバーサル（`../` や先頭 `/`）なし。 |
+| **署名の存在** | `signatures/` に少なくとも 1 つの署名ファイル。マニフェストは `signing.signatures[]` で `path` と `targets` を参照（v0.1 では targets に `manifest.json` を MUST で含む）。暗号検証は v0.1 ではスコープ外。 |
+| **Hash chain** | マニフェストの `hash_chain`: `algorithm`, `head`（64 文字 hex）, `path`（`hashes/` 配下ファイル）, `covers`（v0.1 では `manifest.json` と `objects/index.json` を MUST で含む）。`hash_chain.path` のファイルが存在する。 |
+
+*本表は [Validator](../../validator/) が v0.1 バンドルに対して検査する整合性保証の要約。Custody（保管・アクセス制御・保持）は実装定義。*
+
+---
+
+## Coverage Map（YAML）とプロファイル（JSON）
+
+| アーティファクト | ステータス | 目的 |
+|----------|--------|---------|
+| **Coverage Map YAML**（`coverage_map/coverage_map.yaml` 等） | **参考** | AIMO 証跡・アーティファクトと外部フレームワーク（ISO 42001、NIST AI RMF、EU AI Act 等）の高レベル対応テーマ。規範的な検証要件は課さない。 |
+| **Profile JSON**（`coverage_map/profiles/*.json`） | **規範** | `schemas/jsonschema/aimo-profile.schema.json` で検証する変換仕様。機械可読な対応（どの AIMO オブジェクトがどの規格条項に対応するか）を定義。[Validator](../../validator/) は `--validate-profiles` で公式プロファイル JSON がスキーマ（profile_id PR-* パターン、target 列挙、target_version、mappings）に準拠することを確認する。 |
+
+### 公式プロファイル（Validator 検証済み）
+
+プロファイル JSON は `coverage_map/profiles/` にあり、Validator（`--validate-profiles`）で検証される。命名: ファイル名 `<target>_<purpose>.json`。各ファイルに `target_version` を含む。
+
+| ファイル | profile_id | target | target_version |
+|------|------------|--------|----------------|
+| `iso42001.json` | PR-ISO42001-v0.1 | ISO_42001 | 1.0 |
+| `iso_42001_readiness.json` | PR-ISO42001-READINESS-v0.1 | ISO_42001 | 2023 |
+| `nist_ai_rmf.json` | PR-NIST-AI-RMF-v0.1 | NIST_AI_RMF | 1.0 |
+| `nist_ai_600_1_genai.json` | PR-NIST-AI-600-1-v0.1 | NIST_AI_600_1 | 1.0 |
+| `eu_ai_act_annex_iv.json` | PR-EU-AI-ACT-ANNEX-IV-v0.1 | EU_AI_ACT_ANNEX_IV | Annex IV |
+| `eu_ai_act_high_risk.json` | PR-EU-AI-ACT-HIGH-RISK-v0.1 | EU_AI_ACT_HIGH_RISK | 2024/1689 |
+| `eu_gp_ai_cop.json` | PR-EU-GPAI-COP-v0.1 | EU_GPAI_COP | current |
+| `uk_atrs_procurement.json` | PR-UK-ATRS-v0.1 | UK_ATRS | current |
+| `jp_gov_genai_procurement.json` | PR-JP-GOV-GENAI-PROCUREMENT-v0.1 | JP_GOV_GENAI_PROCUREMENT | current |
+
+### プロファイル更新ポリシー
+
+- **EU AI Act 参照（0.1.2）**: 証跡準備の一貫性のため、Coverage Map およびドキュメント内の EU AI Act の条文参照を規則 (EU) 2024/1689 に合わせた。参考であり法解釈ではない。
+- **ISO 42001 / NIST AI RMF**: 対象フレームワークの新バージョンは、将来の規格バージョンで新プロファイルファイルまたは新 `target_version` として追加可能。v0.1 プロファイルは v0.1 リリースで固定。
+- **EU AI Act Annex IV**: Annex IV および関連条文は規制当局により更新され得る。プロファイルの対応は **PATCH**（例: 0.1.x）で文言・条項変更に追随し、同一 profile_id で継続可能。実装者はプロファイルの `target_version` およびリリースノートで参照される版に合わせること。
+
+---
+
+## 関連
+
+- [Evidence Bundle（アーティファクト概要）](../evidence-bundle/)
+- [Evidence Bundle ルート構造（v0.1）](../../standard/current/09-evidence-bundle-structure/)
+- [Minimum Evidence Requirements](../minimum-evidence/)
+- [Coverage Map（フレームワーク対応）](../../coverage-map/)
+- [Validator](../../validator/)
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/evidence-bundle/ -->
+
+# Evidence Bundle（証跡バンドル）
+
+**Evidence Bundle** は監査用パッケージであり、AIガバナンスの説明可能性と追跡可能性を支える構造化されたアーティファクトの集合である。製品機能ではなく、監査・コンプライアンス向けの成果物形式である。
+
+## ルート必須構成（規範）
+
+バンドルの**ルート構成**は [Evidence Bundle ルート構造（v0.1）](../../standard/current/09-evidence-bundle-structure/) で規範的に定義する。バンドルルートには以下が MUST で存在すること：**manifest.json**、**objects/**、**payloads/**、**signatures/**、**hashes/**。**Integrity**（マニフェスト、sha256、署名の存在）は規範であり [Validator](../../validator/) が検証する。**Custody**（保管・アクセス制御）は実装側で定義する。
+
+## バンドル構造と命名
+
+- **バンドルルート命名**: `{org}_{system}_{period}_{version}` など一貫した形式を用いる（例: `acme_ai-usage_2026-Q1_v1`）。
+- **必須ファイル**: [Evidence Pack テンプレート（EP）](../../standard/current/06-ev-template/) に整合した証跡（EV）セット、[Dictionary](../../standard/current/05-dictionary/)、バンドル概要の **Summary**、およびバンドル・内容の変更を記録する **Change Log**（またはその参照）を少なくとも含める。
+- **任意添付**: ログ、審査記録、例外承認、更新記録など。命名を統一し、EV/辞書から参照可能にすること。
+
+## 目次（TOC）
+
+| セクション | アーティファクト | 必須 | 目的 | 最小フィールド | 検証 |
+| --- | --- | --- | --- | --- | --- |
+| Evidence | EV レコード（JSON/配列） | はい | 実施内容の記録；request/review/exception/renewal へのリンク | id, timestamp, source, summary；任意でライフサイクル参照 | [Validator](../../validator/)、aimo-ev.schema.json |
+| Dictionary | dictionary.json | はい | コード・次元のキー/ラベル/説明 | entries（key, label, description） | aimo-dictionary.schema.json |
+| Summary | summary（文書またはフィールド） | はい | 監査向け1ページ概要 | スコープ、期間、主要判断、例外 | — |
+| Change log | change_log または参照 | はい | バンドル/内容変更の監査証跡 | id, timestamp, actor, 変更内容, references | — |
+| Request | 申請記録 | 該当時 | 利用の申請 | id, timestamp, actor/role, scope, rationale | — |
+| Review/Approval | 審査/承認記録 | 該当時 | 審査・承認結果 | id, timestamp, actor/role, decision, references | — |
+| Exception | 例外記録 | 該当時 | 代替統制・有効期限付き例外 | id, timestamp, scope, expiry, compensating controls, renewal ref | — |
+| Renewal | 更新記録 | 該当時 | 再評価・更新 | id, timestamp, actor/role, decision, 先行 exception/EV への参照 | — |
+
+## 規範的関係：EV レコード（索引）と Evidence Pack（ペイロード）
+
+二重構築と監査上の曖昧さを避けるため、以下を**規範**とします。
+
+1. **EV レコード（JSON）**は**索引／台帳**であり、機械検証可能なトレーサビリティを提供します。実施内容（申請・審査・例外・更新・変更）を記録し、安定IDと相互参照を MUST で持ちます。
+2. **Evidence Pack ファイル**（EP-01..EP-07 のドキュメントとマニフェスト）は**ペイロード**であり、索引が参照する人間／ツール可読な証跡です。
+3. **リンク**: EV レコードは `evidence_file_ids`（例：EP-01, EP-02）および／または暗号学的ハッシュでペイロードを参照することを SHOULD とします。[Validator](../../validator/) は、これらの参照が存在する場合（例：参照された file_id が Evidence Pack マニフェストに存在し、任意のハッシュが一致すること）に参照整合性をチェックします。
+4. **監査提出の最小セット**: **EV JSON**（root/records）+ **Dictionary** + **Summary** + **Change Log** + **Evidence Pack**（マニフェスト＋ファイル、例：zip）。これら全体が適合の対象となります。
+
+実装者は単一の情報源を維持します。EV 索引がパックを参照し、パックは Taxonomy EV コード（申請記録、審査/承認記録など）の意味を再定義しません。[Evidence Pack テンプレート](../../standard/current/06-ev-template/) で EP-01..EP-07 のドキュメント種別を参照してください。
+
+## 追跡可能性（Traceability）
+
+- **安定ID**: 各レコード（EV、request、review、exception、renewal、change log エントリ）は安定した一意の識別子を MUST で持つ。
+- **相互参照**: Request → Review → Exception（あれば）→ Renewal をリンクし、EV 項目は参照フィールド（例: request_id, review_id, exception_id, renewal_id）でこれらにリンクする。
+- **リンク**: 監査人が AI 利用（または例外）から申請・承認・例外（代替統制・有効期限）・更新までの鎖を追えるようにする。
+
+## 監査での利用
+
+監査では、Evidence Bundle を用いて、AI 利用が申請・審査・承認されていること、例外が有効期限と代替統制・更新と紐づいていること、変更が記録されていることを確認する。TOC と追跡可能性のルールにより、必要なアーティファクトの所在と、request / review / exception / renewal / EV 間の ID と参照の追跡が可能となる。Summary で概要を把握し、Change Log で変更管理と説明責任を支える。
+
+MUST レベルのフィールドとライフサイクル区分は [Minimum Evidence Requirements](../minimum-evidence/) を参照。
+
+## 運用ガイダンス
+
+!!! info "Integrity（規範）と Custody（実装側）"
+    - **Integrity** は v0.1 で規範とする。バンドルには manifest.json、object_index/payload_index の sha256、signatures/ にマニフェスト参照署名が必須。[Validator](../../validator/) がこれらを満たさないバンドルを拒否する。
+    - **Custody**（アクセス制御・保持・WORM）は実装側で定義する。採用者はアクセスロール、保持ポリシー、監査証跡を文書化すること。詳細は [Minimum Evidence Requirements > Integrity & Access](../minimum-evidence/#6-integrity-access) を参照。
+
+## 監査ジャーニー
+
+本ページから、典型的な監査ジャーニーは以下のように続く：
+
+1. **次へ**: [Minimum Evidence Requirements](../minimum-evidence/) — ライフサイクル別 MUST チェックリスト
+2. **一枚まとめ**: [Evidence Bundle Coverage Map（テンプレ）](../evidence-bundle-coverage-map/) — スコープ・エビデンス種別・コントロール対応・除外・整合性（informative）
+3. **続いて**: [Coverage Map](../../coverage-map/) — 外部フレームワークへのマッピング
+4. **検証**: [Validator](../../validator/) — 構造チェックを実行
+5. **ダウンロード**: [Releases](../../releases/) — リリースアセットを取得し、チェックサムを検証
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/ -->
+
+# Artifacts
+
+本セクションは、AIMO Standard を実装する機械可読・人間可読アーティファクトのハブです。
+
+- **Evidence Bundle**: 構造、TOC、追跡可能性 — [Evidence Bundle](evidence-bundle/)。
+- **Evidence Bundle Coverage Map（テンプレ）**: 監査向け一枚まとめ（スコープ、エビデンス種別、コントロール対応、除外、整合性）— [Evidence Bundle Coverage Map](evidence-bundle-coverage-map/)（informative）。
+- **Minimum Evidence Requirements**: ライフサイクル別 MUST チェックリスト — [Minimum Evidence Requirements](minimum-evidence/)。
+- **タクソノミー／コード／辞書**: [Taxonomy](../../standard/current/03-taxonomy/)、[Codes](../../standard/current/04-codes/)、[Dictionary](../../standard/current/05-dictionary/)。
+- **証跡テンプレート**: [EV Template](../../standard/current/06-ev-template/) および関連スキーマ。
+- **スキーマ**: リポジトリの `schemas/jsonschema/`。
+- **例**: 最小サンプルは [Examples](../../examples/) を参照。
+
+監査対応のパッケージ化は [Trust Package](../../governance/trust-package/) を参照。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/iso-42001-certification-readiness-toolkit/ -->
+
+# ISO/IEC 42001 Certification Readiness Toolkit
+
+本ページは、AIMO アーティファクトを用いて **ISO/IEC 42001** に整合した**監査可能エビデンス**を整えるための**実務的・採用志向**ガイドです。**準備を支援**するものであり、認証を**付与しません**。認証決定は**認定認証機関**が行います。
+
+## Goal
+
+ISO/IEC 42001 型コントロール（コンテキスト、リーダーシップ、計画、支援、運用、パフォーマンス評価、改善）を支える、バリデータチェック済みの Evidence Bundle を整え、監査人が効率的にエビデンスを特定・検証できるようにする。
+
+## 5-step workflow
+
+| Step | Action |
+| --- | --- |
+| **1. Establish scope and AI inventory** | scope_ref でスコープを定義；[taxonomy](../../standard/current/03-taxonomy/) と [dictionary](../../standard/current/05-dictionary/) で AI システムを分類。 |
+| **2. Set management-system artifacts** | 方針・役割・PDCA に沿ったアーティファクトを作成または参照。[AIMO-MS / AIMO-Controls](../../conformance/) を構造に；[Evidence Pack Template](../../standard/current/06-ev-template/) (EP-01..EP-07) を参照。 |
+| **3. Produce Evidence Bundle + minimum evidence** | [Evidence Bundle structure](../../standard/current/09-evidence-bundle-structure/) に従い manifest, object_index, payload_index, hash_chain, signing を構築。[Minimum Evidence Requirements](minimum-evidence.md) に従い request, review, exception, renewal, change_log を含める。 |
+| **4. Run validator + checksums + change control** | `python validator/src/validate.py <bundle_path> --validate-profiles` を実行。バリデータ版と出力を記録。SHA-256 チェックサムを生成；影響オブジェクトを参照する change log を維持。 |
+| **5. Prepare audit pack** | バンドルをパッケージ（zip 等）；チェックサムを提供。[audit report output](../../standard/current/07-validator/) (audit-json / audit-html) を任意で添付。標準引用時はバージョン付き URL（例 `/0.1.2/`）を使用。Audit-Ready レベルでは [Audit Handoff Index](../../standard/current/06-ev-template/#audit-handoff-index) と [External Forms](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) を追加。 |
+
+## Checklist: ISO 42001 clause family → AIMO artifacts → evidence outputs
+
+（EN 版と同じ表を参照: [Coverage Map — ISO/IEC 42001](../../coverage-map/iso-42001/) および [ISO/IEC 42006](https://www.iso.org/standard/42006)）
+
+## Safe language
+
+- **Use:** "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies."
+- **Do not use:** "ISO 42001 certified by AIMO" or "AIMO certifies compliance."
+
+一次ソース（公式規格）: [ISO/IEC 42001:2023](https://www.iso.org/standard/42001)（ISO）。本ツールキットは [Conformance](../../conformance/) および [Responsibility Boundary](../../governance/responsibility-boundary/) と整合しており、AIMO は認証も適合保証も行いません。
+
+## Related
+
+- [Conformance](../../conformance/) — Levels (Foundation, Operational, Audit-Ready) and claim language
+- [Trust Package](../../governance/trust-package/) — Auditor-ready materials
+- [Responsibility Boundary](../../governance/responsibility-boundary/) — What AIMO does and does not provide
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/justified-non-compliance/ -->
+
+# Justified Non-Compliance（JNC）— 将来拡張
+
+本ページは**情報提供**である。AIMO Standard v0.1 および v0.1.1 では、特定要求への「意図的な不適合」を証明・宣言する機構は**定義・要求していない**。以下は、例外を文書化・正当化する必要がある採用者向けの将来拡張の可能性を述べる。
+
+## 目的
+
+実務上、組織が特定の統制や証跡項目を実装しない判断をすることがある（例「Phase 1 ではモデル監視ダッシュボードは含めない」）。監査人から「なぜ実装していないか、リスクは何か」と問われることがある。現状、その説明は標準の外で行う。将来の **Justified Non-Compliance（JNC）** 機構では、そのような判断を Evidence Bundle 内または付随して構造化・監査可能に記録できるようにすることを想定する。
+
+## 想定スキーマ（ドラフト、非規範）
+
+将来バージョンでは、`evidence/justified-non-compliance.json` のようなオプションファイルを想定し得る：
+
+- 対象要求、理由、リスク評価、承認者、レビュー周期、解消条件などのフィールド。
+- ISO 42001 6.1（リスクと機会への取り組み）、NIST AI RMF GOVERN-1.6（例外管理）との整合を想定。
+
+## ステータス
+
+- **v0.1 / v0.1.1**: JNC スキーマ・要求はなし。採用者はバンドル外で例外を文書化可能。
+- **v0.2（予定）**: JNC をオプションの情報提供機構として導入する可能性あり。[v0.2 ロードマップ](../../standard/current/10-roadmap-v0.2/) を参照。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/log-schemas/agent-activity/ -->
+
+# エージェント活動ログ形式
+
+## 目的
+
+本スキーマは、**エージェントAIの権限行使、ツール実行、再帰的操作**を文書化するログのベンダー非依存形式を定義する。これにより組織は以下が可能になる：
+
+- 自律エージェントのアクションの監査可能な記録の維持
+- コンプライアンスおよびインシデント調査のための「誰が、何を、どの権限で行ったか」の追跡
+- 監査コンテキストにおけるエージェントAI運用の説明可能性の支援
+
+## イベントモデル
+
+本スキーマはエージェント運用ライフサイクルを捕捉する4つのイベントタイプをサポートする：
+
+| イベントタイプ | 説明 |
+| --- | --- |
+| `agent_run` | エージェント実行セッションの開始または完了 |
+| `tool_call` | エージェントによるツールまたは外部アクションの呼び出し |
+| `tool_result` | ツール呼び出しから返された結果 |
+| `escalation` | エージェントによる人的介入または権限昇格の要求 |
+
+## 必須フィールド（MUST）
+
+| フィールド | 型 | 説明 | 例 |
+| --- | --- | --- | --- |
+| `event_time` | string (ISO8601) | イベントのタイムスタンプ | `2026-01-15T09:30:00Z` |
+| `agent_id` | string | エージェントの識別子 | `agent-coding-assistant-v2` |
+| `agent_version` | string | エージェントのバージョン | `2.1.0` |
+| `run_id` | string | この実行/セッションの一意識別子 | `run-20260115-abc123` |
+| `event_type` | string | イベントの種類 | `agent_run`, `tool_call`, `tool_result`, `escalation` |
+| `actor_id` | string | 起動したユーザーまたはサービス | `user@example.com` |
+| `tool_name` | string | 呼び出されたツールの名前 | `file_write`, `api_call`, `shell_exec` |
+| `tool_action` | string | ツールが実行したアクション | `create`, `read`, `update`, `delete`, `execute` |
+| `tool_target` | string | アクションの対象 | `/path/to/file`, `https://api.example.com` |
+| `auth_context` | string | 権限/ロールの要約 | `role:developer, scope:project-x` |
+| `input_ref` | string | 入力へのハッシュまたはURI（内容そのものではない） | `sha256:def456...` |
+| `output_ref` | string | 出力へのハッシュまたはURI（内容そのものではない） | `sha256:ghi789...` |
+| `decision` | string | 適用されたポリシー決定 | `allow`, `block`, `needs_review`, `unknown` |
+| `evidence_ref` | string | 関連証跡への参照 | `urn:evidence:...` |
+
+## オプションフィールド（SHOULD/MAY）
+
+| フィールド | 型 | 説明 |
+| --- | --- | --- |
+| `recursion_depth` | number | ネストされたエージェント呼び出しの現在の再帰深度 |
+| `retry_count` | number | このアクションのリトライ回数 |
+| `policy_id` | string | 決定をトリガーしたポリシー |
+| `prompt_template_id` | string | プロンプトテンプレート識別子 |
+| `model` | string | このアクションで使用されたモデル |
+| `latency_ms` | number | レイテンシ（ミリ秒） |
+| `cost_estimate` | number | このアクションの推定コスト |
+| `error_code` | string | アクションが失敗した場合のエラーコード |
+
+## 安全性に関する注意
+
+!!! warning "エージェントリスクの前提"
+    エージェントAI活動をログ記録する際、以下のリスクを前提とすること：
+
+    - **プロンプトインジェクション**: 悪意のある入力がエージェントの動作を操作しようとする可能性
+    - **過剰権限**: エージェントが特定タスクに対して意図より広い権限を持つ可能性
+    - **再帰ループ**: エージェントが意図しない再帰的実行パターンに入る可能性
+    - **Confused deputy**: エージェントが権限のない当事者の代わりに行動するよう騙される可能性
+
+    本スキーマはインシデント後の分析と監査説明を支援するため「誰が、何を、どの権限で行ったか」を捕捉するよう設計されている。これらのリスクを防止するものではなく、組織は適切なガードレールを実装する必要がある。
+
+!!! warning "データ取り扱い"
+    - `input_ref` や `output_ref` にシークレット、認証情報、機微なコンテンツを**埋め込まない**こと。
+    - 別途保管されたコンテンツへのハッシュ参照またはセキュアなURIを使用する。
+    - 適切なアクセス制御と保持ポリシーを適用する。
+
+## JSON Schema
+
+ダウンロード: [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json)
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "event_time", "agent_id", "agent_version", "run_id", "event_type",
+    "actor_id", "tool_name", "tool_action", "tool_target", "auth_context",
+    "input_ref", "output_ref", "decision", "evidence_ref"
+  ],
+  "properties": {
+    "event_time": { "type": "string", "format": "date-time" },
+    "agent_id": { "type": "string", "minLength": 1 },
+    "agent_version": { "type": "string", "minLength": 1 },
+    "run_id": { "type": "string", "minLength": 1 },
+    "event_type": { "type": "string", "enum": ["agent_run", "tool_call", "tool_result", "escalation"] },
+    "actor_id": { "type": "string", "minLength": 1 },
+    "tool_name": { "type": "string", "minLength": 1 },
+    "tool_action": { "type": "string", "minLength": 1 },
+    "tool_target": { "type": "string", "minLength": 1 },
+    "auth_context": { "type": "string", "minLength": 1 },
+    "input_ref": { "type": "string", "minLength": 1 },
+    "output_ref": { "type": "string", "minLength": 1 },
+    "decision": { "type": "string", "enum": ["allow", "block", "needs_review", "unknown"] },
+    "evidence_ref": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}
+```
+
+## 関連ページ
+
+- [ログスキーマ索引](../)
+- [Shadow AI 検知ログ](../shadow-ai-discovery/)
+- [Minimum Evidence Requirements](../../minimum-evidence/)
+- [タクソノミー: UC-010 エージェント自動化](../../../standard/current/03-taxonomy/)
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/log-schemas/ -->
+
+# ログスキーマ
+
+## これは何か
+
+本セクションは、Evidence Bundle に含めることができる証跡のための**正規化ログ形式**を定義する。これらのスキーマは、AI利用監視およびエージェント運用に関連するログのベンダー非依存の構造を提供する。
+
+## いつ使うか
+
+- **Shadow AI の可視化**: 未承認AI利用の検知、棚卸し、是正の文書化。
+- **エージェント運用の監査**: 自律エージェントの権限行使、ツール実行、再帰的操作の説明。
+- **インシデントの再現性**: インシデント調査と根本原因分析のための構造化された証跡の提供。
+
+## これではないこと
+
+!!! warning "重要"
+    これらのスキーマは**証跡提出のためのログ形式**を定義する。以下は**行わない**：
+
+    - システムからのログ自動収集
+    - ログ集約または監視ツールの提供
+    - いかなる規制・規格への準拠保証
+    - ベンダー固有のログ実装の代替
+
+    組織は独自のログ収集パイプラインを実装し、証跡提出のためにこれらのスキーマにログを正規化する必要がある。
+
+## スキーマ
+
+| スキーマ | 目的 | ダウンロード |
+| --- | --- | --- |
+| [Shadow AI 検知ログ](shadow-ai-discovery/) | 未承認AI利用の検知と棚卸し | [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json) |
+| [エージェント活動ログ](agent-activity/) | エージェントAIの権限行使とツール実行 | [agent-activity.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/agent-activity.schema.json) |
+
+## 関連ページ
+
+- [Minimum Evidence Requirements](../minimum-evidence/) — MUST レベル証跡チェックリスト
+- [Evidence Bundle](../evidence-bundle/) — バンドル構造と TOC
+- [タクソノミー](../../standard/current/03-taxonomy/) — 分類コード（UC-010 エージェント自動化、IM-007 シャドー/未管理を含む）
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/log-schemas/shadow-ai-discovery/ -->
+
+# Shadow AI 検知ログスキーマ
+
+## 目的
+
+本スキーマは、**未承認AI利用（Shadow AI）**の検知、棚卸し、是正を文書化するログのベンダー非依存形式を定義する。これにより組織は以下が可能になる：
+
+- Shadow AI 検知イベントの監査可能な記録の維持
+- 様々なソース（CASB、プロキシ、IdP、EDR、SaaS監査ログ）からのログを一貫した形式に正規化
+- コンプライアンスおよび監査目的の証跡提出の支援
+
+## 正規化の原則
+
+| 原則 | 説明 |
+| --- | --- |
+| **ベンダー非依存** | 特定ベンダーのログ形式に依存しない；Netskope、Zscaler、Microsoft Defender等に適用可能 |
+| **最小限の必須フィールド** | 必須は本質的なフィールドのみ；組織はオプションフィールドを省略可能 |
+| **拡張可能** | `additionalProperties: true` によりベンダー固有または組織固有の拡張が可能 |
+| **プライバシー配慮** | フィールドは機微なコンテンツを埋め込むのではなく参照するよう設計 |
+
+## 必須フィールド（MUST）
+
+| フィールド | 型 | 説明 | 例 |
+| --- | --- | --- | --- |
+| `event_time` | string (ISO8601) | イベントのタイムスタンプ | `2026-01-15T09:30:00Z` |
+| `actor_id` | string | ユーザーまたはサービスの識別子 | `user@example.com` |
+| `actor_type` | string | アクターの種類 | `user` または `service` |
+| `source_system` | string | イベントを検知したシステム | `proxy`, `casb`, `idp`, `edr`, `saas_audit` |
+| `ai_service` | string | アクセスされたAI製品またはドメイン | `chat.openai.com`, `claude.ai` |
+| `action` | string | 実行されたアクション | `chat`, `upload`, `download`, `tool_execute`, `api_call` |
+| `data_classification` | string | データ分類レベル | `public`, `internal`, `confidential`, `restricted` |
+| `decision` | string | 適用されたポリシー決定 | `allow`, `block`, `needs_review`, `unknown` |
+| `evidence_ref` | string | 関連証跡への参照 | `sha256:abc123...` または `urn:evidence:...` |
+| `record_id` | string | このレコードの一意識別子 | `evt-20260115-001` |
+
+## オプションフィールド（SHOULD/MAY）
+
+| フィールド | 型 | 説明 |
+| --- | --- | --- |
+| `session_id` | string | セッション識別子 |
+| `device_id` | string | デバイス識別子 |
+| `ip` | string | IPアドレス |
+| `user_agent` | string | ユーザーエージェント文字列 |
+| `department` | string | 組織の部門 |
+| `project_id` | string | プロジェクト識別子 |
+| `prompt_category` | string | プロンプト/クエリのカテゴリ |
+| `model_family` | string | AIモデルファミリー（例：GPT-4、Claude） |
+| `destination` | string | 宛先URLまたはエンドポイント |
+| `policy_id` | string | 決定をトリガーしたポリシー |
+| `remediation_ticket` | string | 是正チケットの参照 |
+
+## プライバシー/セキュリティ上の注意
+
+!!! warning "データ取り扱い"
+    - PII、認証情報、プロンプト内容をログフィールドに**直接埋め込まない**こと。
+    - 別途保管された機微なコンテンツを参照するために `evidence_ref` を使用する。
+    - ログ保管に適切なアクセス制御を適用する。
+    - [Minimum Evidence Requirements](../../minimum-evidence/) に沿ったデータ保持ポリシーを検討する。
+
+## JSON Schema
+
+ダウンロード: [shadow-ai-discovery.schema.json](https://github.com/billyrise/aimo-standard/blob/main/schemas/jsonschema/shadow-ai-discovery.schema.json)
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "event_time", "actor_id", "actor_type", "source_system",
+    "ai_service", "action", "data_classification", "decision",
+    "evidence_ref", "record_id"
+  ],
+  "properties": {
+    "event_time": { "type": "string", "format": "date-time" },
+    "actor_id": { "type": "string", "minLength": 1 },
+    "actor_type": { "type": "string", "enum": ["user", "service"] },
+    "source_system": { "type": "string", "minLength": 1 },
+    "ai_service": { "type": "string", "minLength": 1 },
+    "action": { "type": "string", "minLength": 1 },
+    "data_classification": { "type": "string", "minLength": 1 },
+    "decision": { "type": "string", "enum": ["allow", "block", "needs_review", "unknown"] },
+    "evidence_ref": { "type": "string", "minLength": 1 },
+    "record_id": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}
+```
+
+## 関連ページ
+
+- [ログスキーマ索引](../)
+- [エージェント活動ログ](../agent-activity/)
+- [Minimum Evidence Requirements](../../minimum-evidence/)
+- [タクソノミー: IM-007 シャドー/未管理](../../../standard/current/03-taxonomy/)
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/minimum-evidence/ -->
+
+# 最低証跡要件（Minimum Evidence Requirements）
+
+本ページは、監査人・実装者向けの**最低証跡要件**チェックリストです。ライフサイクル別にグループ化した MUST レベルの最低証跡要件を定義します。説明可能性と証跡準備を支援するものであり、法的助言や準拠の保証は行いません。
+
+提出物の準備・レビュー時は、[Evidence Bundle](../evidence-bundle/) および [Validator](../../standard/current/07-validator/) とあわせて本ページを参照してください。
+
+## 1) 申請（Request）
+
+- **MUST フィールド**: 識別子、タイムスタンプ、担当者/役割、スコープ（申請内容）、理由（rationale）。
+- **MUST リンク**: 審査および利用を記録する EV 項目から申請 ID を参照可能であること。
+- **証明する内容**: 利用が承認・実施の前に申請され、スコープが定められていたこと。
+
+## 2) 審査 / 承認（Review / Approval）
+
+- **MUST フィールド**: 識別子、タイムスタンプ、担当者/役割、判断（承認/却下/条件付き）、スコープ、理由、申請への参照。
+- **MUST リンク**: EV および後続の例外・更新から審査 ID を参照可能であること。
+- **証明する内容**: 利用（または例外）の前に定義された審査・承認が行われたこと。
+
+## 3) 例外（Exception）
+
+- **MUST フィールド**: 識別子、タイムスタンプ、スコープ、有効期限（または期限）、代替統制、理由、審査/申請への参照。
+- **MUST リンク**: 例外 → 代替統制；例外 → 有効期限；例外 → 更新（再評価期日）。
+- **証明する内容**: 逸脱が有効期限付きであり、代替統制を持ち、更新に紐づいていること。
+
+## 4) 更新 / 再評価（Renewal / Re-evaluation）
+
+- **MUST フィールド**: 識別子、タイムスタンプ、担当者/役割、判断（更新/取り消し/条件付き）、先行する例外/申請/審査/EV への参照。
+- **MUST リンク**: 更新は対象となる例外または承認を参照；EV 項目は更新 ID を参照可能。
+- **証明する内容**: 例外・承認が定義された基準で再評価され、更新または取り消しされていること。
+
+## 5) 変更ログ（Change Log）
+
+- **MUST フィールド**: 識別子、タイムスタンプ、担当者/役割、変更内容、参照（対象となる EV・申請・審査・例外・更新など）。
+- **MUST リンク**: 変更ログエントリは、変更対象または変更の契機となるアーティファクトを参照する。
+- **証明する内容**: バンドルまたはその内容の変更が記録され、追跡可能であること。
+
+## 6) 整合性とアクセス（Integrity & Access）
+
+証跡の整合性とアクセス制御は監査の信頼性に不可欠です。AIMO は特定の技術的統制を規定しませんが、採用者はこれらの期待をどのように満たしているかを文書化してください。
+
+### アクセス制御ガイダンス
+
+| 観点 | ガイダンス |
+| --- | --- |
+| **ロールベースアクセス** | 役割（証跡作成者、レビュアー、監査人、管理者など）を定義し、誰が証跡の作成・閲覧・更新・削除を行うかを文書化する。 |
+| **最小権限** | 必要最小限のアクセスを付与し、書き込みは権限ある担当者に制限する。 |
+| **アクセスログ** | 監査証跡のため、アクセスイベント（誰が、いつ、何を）を記録する。 |
+| **職務分離** | 可能な範囲で、証跡の作成と承認の役割を分離する。 |
+
+### 保持ガイダンス
+
+| 観点 | ガイダンス |
+| --- | --- |
+| **保持期間** | 規制要件と組織方針（例：財務監査では 5〜7 年）に基づき保持期間を定義・文書化する。 |
+| **保持スケジュール** | どの証跡をどの期間保持し、いつ廃棄するかを示すスケジュールを維持する。 |
+| **訴訟ホールド** | 訴訟・調査のため通常の保持・削除を停止するプロセスをサポートする。 |
+
+### 改ざん防止の選択肢
+
+| 選択肢 | 説明 |
+| --- | --- |
+| **暗号学的ハッシュ** | 証跡ファイルの SHA-256（以上）ハッシュを生成し、検証用にハッシュを別途保管する。 |
+| **WORM ストレージ** | 証跡アーカイブの改ざん防止のため、追記専用（Write-Once-Read-Many）ストレージを用いる。 |
+| **追記専用ログ** | 変更追跡のため追記専用の監査ログを用いる。 |
+| **デジタル署名** | 証跡バンドルに署名し、作成者を証明し改ざんを検知する。 |
+
+### 監査証跡の期待
+
+| 要素 | 文書化する内容 |
+| --- | --- |
+| **変更ログ** | 誰が何をいつなぜ変更したかを記録する（Change Log ライフサイクル群を参照）。 |
+| **アクセスログ** | 誰がいつ何の目的で証跡にアクセスしたかを記録する。 |
+| **システムログ** | 証跡の整合性主張を支える関連システムログ（認証・認可）を保持する。 |
+| **検証記録** | 定期的な整合性検証（ハッシュ照合、監査レビュー）を文書化する。 |
+
+### 証明する内容
+
+- **証跡は保全されている**: ハッシュ・WORM・署名などの整合性機構により、証跡が改ざんされていないことを示す。
+- **アクセスは制御されている**: アクセスログと役割定義により、誰がアクセスしたかおよび最小権限が適用されたことを示す。
+- **監査の信頼性を支える**: これらを総合し、監査人が証跡の信頼性を確認できるようにする。
+
+### 推奨運用プロファイル
+
+リスク許容度と規制要件に応じてプロファイルを選択してください。推奨であり、必須ではありません。
+
+| 観点 | ライト | スタンダード | ストリクト |
+| --- | --- | --- | --- |
+| **用途** | 社内パイロット、低リスク AI | 本番システム、中程度のリスク | 規制業種、高リスク AI |
+| **保持期間** | 1〜2 年 | 5〜7 年 | 7〜10 年以上または規制の最小値 |
+| **改ざん防止** | SHA-256 ハッシュ | SHA-256 + 追記専用ログ | WORM ストレージ + デジタル署名 |
+| **アクセス制御** | ロールベース（基本） | ロールベース + アクセスログ | 職務分離 + 完全な監査証跡 |
+| **監査証跡** | 変更ログのみ | 変更ログ + アクセスログ | システムログ全体 + 定期検証 |
+| **検証頻度** | 必要時 | 四半期 | 月次または継続 |
+| **Validator 利用** | 任意 | 提出前に必須 | 必須 + CI 自動チェック |
+
+!!! note "保持期間は例示"
+    記載の保持期間は例示です。組織は適用される法令、契約、業界要件、内部方針に基づき保持を決定してください。
+
+!!! tip "選び方"
+    - **ライト**: 実験・社内ツール・フォーマルな監査が想定されない低リスク用途に適する。
+    - **スタンダード**: 監査が行われる可能性はあるが継続的でない本番導入に推奨。
+    - **ストリクト**: 規制業種（金融・医療・政府）またはリスク影響の大きい AI システムで必要。
+
+## 重要な注意
+
+本最小セットは説明可能性と証跡準備を支援するものであり、それ自体は法的助言や準拠の保証を提供しません。
+
+バンドル構造と TOC は [Evidence Bundle](../evidence-bundle/)、フィールドレベル整合は [EV Template](../../standard/current/06-ev-template/) およびスキーマを参照。Shadow AI 検知・エージェント活動証跡の正規化ログ形式は [Log Schemas](../log-schemas/) を参照。
+
+## 規制オーバーレイ（参考）
+
+以下の**オーバーレイ**は、特定の規制・調達文脈で求められることが多い追加証跡を説明する**参考**です。EV Template の [External Forms セクション](../../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is)に公式テンプレート・チェックリストをそのまま添付し、マニフェストで logical_id により参照してください。
+
+| オーバーレイ | 通常期待される追加アーティファクト | 添付先 | プロファイル（任意） |
+| --- | --- | --- | --- |
+| **EU ハイリスク** | リスク管理、技術文書（Annex IV）、ログ、人的監督、透明性（Art 50）、インシデント報告 | payload_index；Evidence Bundle + Annex IV プロファイル | `eu_ai_act_annex_iv.json`、`eu_ai_act_high_risk.json` |
+| **EU GPAI CoP** | Model Documentation Form（透明性、著作権、安全・セキュリティ） | External Forms；logical_id 例: GPAI_MODEL_DOC_FORM | `eu_gp_ai_cop.json` |
+| **NIST GenAI** | GenAI プロファイルのアーティファクト（モデル適応、評価、監視） | payload_index；change_log；External Forms / GenAI 記録 | `nist_ai_600_1_genai.json` |
+| **UK ATRS / 調達** | ATRS 透明性記録、説明責任者、調達評価メモ | External Forms；Summary、review | `uk_atrs_procurement.json` |
+| **JP 調達** | 政府 GenAI 調達チェックリスト、AI ビジネスガイドライン チェックリスト | External Forms；logical_id 例: JP_PROCUREMENT_CHECKLIST | `jp_gov_genai_procurement.json` |
+
+プロファイルファイル名は `coverage_map/profiles/<target>_<purpose>.json` の形式で、各ファイルに `target_version` を含みます。英国・日本は [Coverage Map — Procurement & Disclosure](../../coverage-map/procurement-and-disclosure/)、EU・NIST は [EU AI Act](../../coverage-map/eu-ai-act/) および [NIST AI RMF](../../coverage-map/nist-ai-rmf/) を参照。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/artifacts/signature-verification-roadmap/ -->
+
+# 署名検証と Evidence-as-Code ロードマップ
+
+本ページは**情報提供**である。監査人が再検証を実施できるようにし、将来バージョンで整合性を暗号学的に保証するための Evidence Bundle 署名・検証の進化を述べる。
+
+## 現状（v0.1）
+
+- **規範**: バンドルにはマニフェストを**参照**する署名エントリが少なくとも1つ MUST。バリデータは存在と参照のみをチェックする。
+- **範囲外**: 署名バイトの暗号学的検証、署名対象の正規形、署名者識別、検証手順。
+
+## v0.1.1 — 検証メタデータ（RECOMMENDED）
+
+v0.1.1 では、監査人が将来再検証できるように、`manifest.json` の各署名エントリに**オプション**フィールドを追加する：
+
+| フィールド | 目的 |
+|------------|------|
+| `signer_identity` | 誰が署名したか（例 PGP フィンガープリント、did:key）。 |
+| `signed_at` | 署名適用日時（ISO 8601）。 |
+| `verification_command` | 監査人向けの例示 CLI（例 `aimo verify --pubkey ...`）。 |
+| `canonicalization` | 署名対象の生成方法（例 `rfc8785_json`、`cbor`）。 |
+
+実装者は v0.2 ツールが利用できるよう、これらの記載を **RECOMMENDED** とする。v0.1.1 のバリデータはこれらのフィールドを読み取り報告するが、暗号学的検証は行わない。
+
+## v0.2（予定）— 暗号学的検証とプロビナンス
+
+将来の標準バージョン（目標 2026 Q4–2027）で予定：
+
+1. **検証をスコープに**: バリデータがアルゴリズム・署名者（例 公開鍵）に対して署名バイトを検証する。検証失敗は報告する。
+2. **プロビナンス**: SLSA 風プロビナンス（ビルダー、ビルド種別、素材）や in-toto レイアウトとの整合により、バンドルの生成経路を証明する。
+3. **正規形**: 署名対象の正規化ルール（例 RFC 8785 JSON）を規範化し、再現可能な検証を実現する。
+
+本ロードマップは変更の可能性がある。各バージョンの規範は当該バージョンの標準とスキーマに記載される。
+
+## 参照
+
+- [Evidence Bundle 構造](../standard/current/09-evidence-bundle-structure.md)
+- [v0.2 ロードマップ](../standard/current/10-roadmap-v0.2.md)
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/coverage-map/eu-ai-act/ -->
+
+# EU AI 法マッピング
+
+> トレーサビリティ: タクソノミー → 最低証拠 → Validator → 人間監督プロトコル。
+
+- [タクソノミー](../../standard/current/03-taxonomy/)
+- [最低証拠要件](../../artifacts/minimum-evidence/)
+- [ログスキーマ](../../artifacts/log-schemas/)
+- [Validator](../../validator/)
+- [人間監督プロトコル](../../governance/human-oversight-protocol/)
+
+本ページは、選定した EU AI 法のテーマ（文書化、記録保存、リスク管理、人間監督、透明性）を AIMO のエビデンス・アーティファクトにマッピングします。概要レベルであり、**法務助言**や適合保証を構成しません。正式な法文で確認してください。
+
+**参照:** 規則 (EU) 2024/1689（人工知能法）。以下、条番号は同規則を指します。
+
+## マッピング表
+
+| フレームワーク参照 / トピック | AIMO エビデンス / AIMO 内の位置 | Evidence Bundle / 最低証拠 | アーティファクト・検証 | 備考 |
+| --- | --- | --- | --- | --- |
+| 第4条 – AI リテラシー | [スコープ](../../standard/current/02-scope/) | Summary、EV；review | templates/ev/ | 横断的；組織能力・研修のエビデンス（概要）。法務助言ではない。公式テキストで確認。 |
+| 第9条 – リスクマネジメントシステム | [スコープ](../../standard/current/02-scope/) | request、review、exception、renewal | templates/ev/ | 高リスク AI システム（第3編）。法務助言ではない。公式テキストで確認。 |
+| 第10条 – データ・データガバナンス | [辞書](../../standard/current/05-dictionary/) | Dictionary、EV | schemas/jsonschema/；schema_validate_dictionary | 法務助言ではない。公式テキストで確認。 |
+| 第11条 – 技術文書（高リスク） | [EV テンプレート](../../standard/current/06-ev-template/)、[Evidence Bundle](../../artifacts/evidence-bundle/) | EV、Dictionary、Summary；request、review | schemas/jsonschema/、templates/ev/；**附属書 IV**: [例 > EU 附属書 IV サンプル](../../examples/)（`examples/evidence_bundle_v01_annex_iv_sample/`）；プロファイル: `coverage_map/profiles/eu_ai_act_annex_iv.json`。サンプルバンドルは規範準拠（signatures/、hashes/、附属書 IV 向け技術文書の payload）。例を参照（追加サンプルは将来リリース）。 | 概要のみ；法務助言ではない。公式テキストで確認。 |
+| 第12条 – 記録保存 | [Evidence Bundle](../../artifacts/evidence-bundle/)、[最低証拠](../../artifacts/minimum-evidence/) | EV、change_log、request、review | examples/evidence_bundle_minimal/；schema_validate_ev | 法務助言ではない。公式テキストで確認。 |
+| 第13条 – デプロイヤー・利用者への透明性・情報提供 | [スコープ](../../standard/current/02-scope/) | Summary、EV；review | templates/ev/ | 高リスク文脈。法務助言ではない。公式テキストで確認。 |
+| 第14条 – 人間監督 | [最低証拠](../../artifacts/minimum-evidence/) | review、exception | templates/ev/ev_template.md | 法務助言ではない。公式テキストで確認。 |
+| 第15条 – 正確性・ロバスト性・サイバーセキュリティ | [最低証拠](../../artifacts/minimum-evidence/) | EV（証拠コード/リスクコード、概要） | templates/ev/ | 概要マッピングのみ。法務助言ではない。公式テキストで確認。 |
+| 第17条 – 品質マネジメントシステム | [スコープ](../../standard/current/02-scope/) | Summary、review（組織プロセス） | templates/ev/ | 第9条（リスクマネジメントシステム）とは別。法務助言ではない。公式テキストで確認。 |
+| 透明性義務（ユースケース依存） | [スコープ](../../standard/current/02-scope/)、[最低証拠](../../artifacts/minimum-evidence/) | Summary、EV；review | templates/ev/ | 適用規定はユースケース（限定リスク、デプロイヤー義務等）による。法務助言ではない。公式テキストで確認。 |
+| GPAI モデル義務 | [EV テンプレート](../../standard/current/06-ev-template/)、[Evidence Bundle](../../artifacts/evidence-bundle/) | EV テンプレート、Evidence Bundle（エビデンス構造化フレーム） | schemas/jsonschema/；schema_validate_ev | AIMO はエビデンス整理の枠組みを提供；実際の義務は規則で定義。法務助言ではない。公式テキストで確認。 |
+| 前文 – 説明責任 | [Evidence Bundle](../../artifacts/evidence-bundle/) | EV、request、review、change_log | examples/evidence_bundle_minimal/；schema_validate_ev | 法務助言ではない。公式テキストで確認。 |
+
+## 施行日・適用（概要）
+
+以下は **EU 公式タイムライン**（AI 法サービスデスク/委員会）に沿った概要です。**法務助言ではなく**、正確性を保証しません。**正式な法文**と所管当局で必ず確認してください。
+
+| 段階 | 日付 | 適用内容（概要） |
+| --- | --- | --- |
+| 発効 | 2024年8月 | 規則発効；実体義務の多くは未適用。 |
+| 一般規定・禁止 | 2025年2月2日 | 禁止行為（容認不能リスク）；AI リテラシー関連規定の一部。 |
+| GPAI 規則・ガバナンス | 2025年8月2日 | 指定機関、GPAI、ガバナンス、秘密保持、罰則；行動規範。 |
+| 主要規則・附属書 III 高リスク・第50条透明性 | 2026年8月2日 | 高リスク AI システム（附属書 III）の完全適用、第50条透明性義務。 |
+| 規制製品に組み込まれた高リスク | 2027年8月2日 | EU 製品法の対象となる製品に組み込まれた高リスク AI システム。 |
+
+## 調和標準と適合推定（第40条）
+
+AI 法に基づき EU 官報で**調和標準**が公布されると、それへの適合は対応する要求への**適合推定**となり得ます。一覧・日付は標準化作業と官報公布に依存します。AIMO のマッピングは参考であり、適合推定を与えません。現状は欧州委員会の [AI 法標準化](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) ページおよび**参考文献**を参照してください。
+
+## 2026年 AI オフィスガイドライン（実施詳細）
+
+欧州委員会は **AI オフィス**が 2026 年に**実務ガイドライン**を策定する旨示しており、以下を含みます：
+
+- 高リスク分類
+- 第50条（透明性）の実施
+- インシデント報告
+- QMS 関連要素
+
+これらガイドラインは AIMO のプロファイル・カバレッジマッピングの**更新トリガー**です：公布後、採用者はエビデンスとマッピングを最新の公式ガイダンスに合わせてください。AIMO はこれらガイドラインの解釈や適合を保証しません。
+
+!!! warning "法務助言ではない"
+    本ページは説明目的のみです。適用範囲・日付は正式な規則および施行・改正法で確認してください。AIMO は法務助言も適合保証も提供しません。
+
+!!! note "法的注記 / 参考マッピング"
+    本ページは**参考**であり、法的解釈は正式な規則（EUR-Lex）および欧州委員会公表物に基づいてください。AIMO は法務助言も適合保証も提供しません。
+
+## 参考文献
+
+**一次ソース**
+
+- [規則 (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689)（EUR-Lex）— 人工知能法（法文）
+- [EU AI 法の実施タイムライン](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) — 欧州委員会 AI 法サービスデスク（実施タイムライン）
+- [AI 法の標準化](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) — 欧州委員会デジタル戦略（調和標準・適合推定）
+
+**その他**
+
+- 欧州委員会 / AI オフィス — ガイドライン・タイムライン（AI 法サービスデスク・委員会ニュースで最新 URL を確認）
+- [EPRS — EU AI 法実施](https://www.europarl.europa.eu/thinktank/) — 議会ブリーフィング（参考）
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/coverage-map/ -->
+
+# Coverage Map
+
+## 重要：本Coverage Mapの位置づけ（準拠保証ではありません）
+
+本Coverage Mapは、AIMO Standardの要素と主要規制・規格要求との**対応関係（traceability）**を示し、監査説明と証跡準備（evidence readiness）を効率化するための資料です。
+**特定規制・規格への準拠（compliance）を自動的に保証するものではありません。**
+適用義務は、役割（提供者/利用者等）、用途、リスク分類、移行期間、および各当局・認証スキームの解釈により変動します。
+
+## 本マップの使い方（traceabilityの流れ）
+
+1. 外部要求（ISO/NIST/EU AI Act/ISMS等）から出発し、対応するAIMO Standard要素を辿ります。
+2. 対応するAIMO要素から、必要な提出物（Artifacts）と最低限の証跡要件（Minimum Evidence）を特定します。
+3. Validatorで欠落・整合性を検査し、人の判断が必要な箇所は監督プロトコルに従ってレビューします（[人による監督プロトコル](../governance/human-oversight-protocol/)参照）。
+
+**主要リソース:**
+
+- [Taxonomy](../standard/current/03-taxonomy/) — 分類コード
+- [Minimum Evidence Requirements](../artifacts/minimum-evidence/) — MUST レベルチェックリスト
+- [Evidence Bundle](../artifacts/evidence-bundle/) — バンドル構造と TOC
+- [ログスキーマ](../artifacts/log-schemas/) — Shadow AI / エージェント活動証跡
+- [Validator](../validator/) — 構造整合性チェック
+- [人による監督プロトコル](../governance/human-oversight-protocol/) — 機械と人の判断の責任境界
+
+---
+
+本セクションは、監査での説明可能性のため、AIMO Standard の証跡・アーティファクトと外部フレームワーク・規制の対応を示す。適合の保証や法的助言は**行わない**。
+
+- **[Methodology](methodology/)**: マッピングの位置づけと利用方法、更新ポリシー、[Evidence Bundle](../artifacts/evidence-bundle/)・[Minimum Evidence Requirements](../artifacts/minimum-evidence/) との関係。
+- **ISO/IEC 42001**: [ISO/IEC 42001 対応表](iso-42001/) — AIマネジメントシステムの観点。
+- **ISO/IEC 42006**: [ISO/IEC 42006 対応表](iso-42006/) — AIMS の監査・認証を行う機関の要件（ISO/IEC 42001 準拠）。
+- **NIST AI RMF**: [NIST AI RMF 対応表](nist-ai-rmf/) — Govern, Map, Measure, Manage。
+- **EU AI Act**: [EU AI Act 対応表](eu-ai-act/) — 文書化・記録管理の概要（法解釈ではない）。
+- **調達・開示（英国・日本）**: [調達・開示対応表](procurement-and-disclosure/) — 公共調達と開示（英国・日本）；参照用マッピングのみ。
+- **ISMS 観点**: [ISMS 対応表](isms/) — ISO/IEC 27001/27002 の観点（変更管理、アクセス制御、ログ、証跡の完全性）。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/coverage-map/isms/ -->
+
+# ISMS view (ISO/IEC 27001/27002) mapping
+
+> 参照ショートカット：Taxonomy → Minimum Evidence → Validator → 人による監督プロトコル
+
+- [Taxonomy](../../standard/current/03-taxonomy/)
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- [ログスキーマ](../../artifacts/log-schemas/)
+- [Validator](../../validator/)
+- [人による監督プロトコル](../../governance/human-oversight-protocol/)
+
+本ページは、ISO/IEC 27001/27002 の主要テーマ（変更管理、アクセス制御、ログ、証跡の完全性）を AIMO の証跡・アーティファクトに対応付ける。説明可能性のためのものであり、ISO/IEC 27001 または 27002 への適合を保証しない。発行された規格と照合すること。
+
+## Mapping table
+
+| フレームワーク参照 / トピック | AIMO 証跡 / 記載箇所 | Evidence Bundle / Minimum Evidence | アーティファクト・検証 | Notes |
+| --- | --- | --- | --- | --- |
+| A.5.24 – Information security in project management | [Scope](../../standard/current/02-scope/) | request, review | templates/ev/ | 情報提供。正式文書と照合すること。 |
+| A.5.29 – Information security during disruption | [Minimum Evidence](../../artifacts/minimum-evidence/) | exception, renewal | templates/ev/ev_template.md | 情報提供。正式文書と照合すること。 |
+| A.5.30 – ICT readiness for business continuity | [Overview](../../standard/current/01-overview/) | Summary; integrity | — | 情報提供。正式文書と照合すること。 |
+| A.8.1 – Inventory of assets | [Dictionary](../../standard/current/05-dictionary/) | Dictionary, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | 情報提供。正式文書と照合すること。 |
+| A.8.2 – Information classification | [Taxonomy](../../standard/current/03-taxonomy/) | Dictionary; review | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | 情報提供。正式文書と照合すること。 |
+| A.8.3 – Access control | [Minimum Evidence](../../artifacts/minimum-evidence/) | —; integrity | — | 情報提供。正式文書と照合すること。 |
+| A.8.15 – Logging | [EV Template](../../standard/current/06-ev-template/) | EV, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | 情報提供。正式文書と照合すること。 |
+| A.8.16 – Monitoring activities | [Minimum Evidence](../../artifacts/minimum-evidence/) | EV, change_log; change_log, integrity | templates/ev/ | 情報提供。正式文書と照合すること。 |
+| A.8.32 – Change management | [Evidence Bundle](../../artifacts/evidence-bundle/) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | 情報提供。正式文書と照合すること。 |
+| A.8.33 – Test information | [Validator](../../standard/current/07-validator/) | EV | validator/rules/, validator/src/; schema_validate_ev | 情報提供。正式文書と照合すること。 |
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/coverage-map/iso-42001/ -->
+
+# ISO/IEC 42001 対応表
+
+!!! note "一次ソース"
+    **ISO/IEC 42001:2023** — [ISO/IEC 42001:2023 — AI マネジメントシステム](https://www.iso.org/standard/42001)（ISO 公式）。マッピングと適用性は公布規格でご確認ください。
+
+> トレーサビリティのショートカット: Taxonomy → Minimum Evidence → Validator → 人による監督プロトコル。
+
+- [Taxonomy](../../standard/current/03-taxonomy/)
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- [ログスキーマ](../../artifacts/log-schemas/)
+- [Validator](../../validator/)
+- [人による監督プロトコル](../../governance/human-oversight-protocol/)
+
+本ページは、ISO/IEC 42001（AIマネジメントシステム）の主要テーマと、AIMO の証跡・アーティファクトとの対応を示します。説明可能性のための参考であり、ISO/IEC 42001 への適合を保証するものではありません。[公布規格](https://www.iso.org/standard/42001)でご確認ください。
+
+## 市場での採用・認証の動向
+
+ISO/IEC 42001 認証は、AIガバナンスの**マネジメントシステム層**として利用されています。**AIMO は認証を行いません。** 認証は認定認証機関が行います。AIMO は**証跡準備**と監査引き継ぎを支援します：認証そのものではなく、認証準備と監査引き継ぎに役立つ証跡構造と Validator を提供します。
+
+## ISO/IEC 42001 から監査の実務（ISO/IEC 42006）まで
+
+**ISO/IEC 42006**（2025）は、ISO/IEC 42001 に基づいて AIMS を監査・認証する機関の要求事項を規定しています。**証跡の厳密性**（文書化されたコントロール、トレーサビリティ、一貫性）への期待が高まっています。AIMO の Evidence Bundle、Validator、および[適合レベル](../../conformance/)（Foundation、Operational、Audit-Ready）は、採用者が監査で利用可能な構造化・検証可能な証跡を整えることを支援します。詳細は [ISO/IEC 42006](iso-42006.md) を参照してください。
+
+## 対応表（参考）
+
+| フレームワーク参照・トピック | AIMO 証跡・AIMO内の参照先 | Evidence Bundle / Minimum Evidence | アーティファクト・検証 | 備考 |
+| --- | --- | --- | --- | --- |
+| 4.1 組織のコンテキスト – コンテキストと適用範囲の理解 | [Scope](../../standard/current/02-scope/)、[Overview](../../standard/current/01-overview/) | Summary、Dictionary、EV；request、review | schemas/jsonschema/aimo-standard.schema.json、templates/ev/；schema_validate_ev | 参考；公式本文で確認すること。 |
+| 4.2 利害関係者 – ステークホルダー要求 | [Scope](../../standard/current/02-scope/) | Summary、request、review | templates/ev/ev_template.md | 参考；公式本文で確認すること。 |
+| 5.1 リーダーシップとコミットメント | [Overview](../../standard/current/01-overview/) | Summary、review | templates/ev/ | 参考；公式本文で確認すること。 |
+| 5.2 方針 – AI方針と目的 | [Scope](../../standard/current/02-scope/)、[Taxonomy](../../standard/current/03-taxonomy/) | Dictionary、EV、Summary；request、review | schemas/jsonschema/、templates/ev/；schema_validate_ev | 参考；公式本文で確認すること。 |
+| 6.1 リスクと機会への対応 | [Scope](../../standard/current/02-scope/) | request、review、exception | templates/ev/ev_template.md | 参考；公式本文で確認すること。 |
+| 6.2 AIシステムの目的と計画 | [Scope](../../standard/current/02-scope/)、[Dictionary](../../standard/current/05-dictionary/) | EV、Dictionary、Summary；request、review | schemas/jsonschema/aimo-dictionary.schema.json；schema_validate_dictionary | 参考；公式本文で確認すること。 |
+| 7.1 リソース | [Overview](../../standard/current/01-overview/) | Summary；review | — | 参考；公式本文で確認すること。 |
+| 7.2 力量 | [Scope](../../standard/current/02-scope/) | review、EV；review | templates/ev/ | 参考；公式本文で確認すること。 |
+| 7.3 認識 | [Scope](../../standard/current/02-scope/) | Summary、EV；review | — | 参考；公式本文で確認すること。 |
+| 7.4 文書化 | [EV Template](../../standard/current/06-ev-template/)、[Evidence Bundle](../../artifacts/evidence-bundle/) | EV、Dictionary、Summary、change_log；request、review、change_log | schemas/jsonschema/、templates/ev/、examples/；schema_validate_ev | 参考；公式本文で確認すること。 |
+| 8.1 運用計画及び管理 | [EV Template](../../standard/current/06-ev-template/) | EV、request、review、exception | templates/ev/、examples/evidence_bundle_minimal/；schema_validate_ev | 参考；公式本文で確認すること。 |
+| 8.2 適用性の決定 | [Scope](../../standard/current/02-scope/) | Dictionary、Summary；request、review | schemas/jsonschema/aimo-dictionary.schema.json | 参考；公式本文で確認すること。 |
+| 9.1 監視及び測定 | [EV Template](../../standard/current/06-ev-template/) | EV、change_log；change_log、integrity | schemas/jsonschema/aimo-ev.schema.json；schema_validate_ev | 参考；公式本文で確認すること。 |
+| 9.2 内部監査 | [Evidence Bundle](../../artifacts/evidence-bundle/)、[Minimum Evidence](../../artifacts/minimum-evidence/) | EV、request、review、Summary、change_log | examples/evidence_bundle_minimal/；schema_validate_ev | 参考；公式本文で確認すること。 |
+| 9.3 マネジメントレビュー | [Overview](../../standard/current/01-overview/) | Summary、review、renewal；review、renewal | templates/ev/ev_template.md | 参考；公式本文で確認すること。 |
+| 10.1 改善 – 不適合と是正処置 | [Minimum Evidence](../../artifacts/minimum-evidence/) | exception、renewal、change_log | templates/ev/ | 参考；公式本文で確認すること。 |
+| 10.2 継続的改善 | [Changelog](../../standard/current/08-changelog/) | change_log、renewal | schemas/jsonschema/aimo-standard.schema.json | 参考；公式本文で確認すること。 |
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/coverage-map/iso-42006/ -->
+
+# ISO/IEC 42006 マッピング
+
+> トレーサビリティ: [タクソノミー](../../standard/current/03-taxonomy/) → [最低証拠](../../artifacts/minimum-evidence/) → [Validator](../../validator/) → [適合性](../../conformance/)。
+
+本ページは **ISO/IEC 42006** および AIMO Standard が AIMS 監査に備える採用者をどう支援するかを説明します。参考情報であり、認証または法務助言を構成するものではありません。
+
+## ISO/IEC 42006 とは
+
+**ISO/IEC 42006** は **ISO/IEC 42001** に基づく AI マネジメントシステム（AIMS）の**監査および認証**を行う機関の要件を規定します。ISO/IEC 17021-1（適合評価 — マネジメントシステムの監査・認証を行う機関の要件）を土台とし、**2025年**（例: 2025-07）に発行され、AIMS 監査を行う認証機関の能力・プロセス期待を明確にしています。
+
+## AIMO 採用者にとっての重要性
+
+ISO/IEC 42006 を適用する認証機関は、マネジメントシステムコントロールの**監査可能なエビデンス**（文書化された方針、役割、運用コントロール、モニタリング、改善）を期待します。AIMO はそのエビデンスを一貫したバンドル（マニフェスト、ハッシュ、ライフサイクル記録）にまとめ、構造一貫性のためのバリデータを提供します。監査人の判断や認証決定に**取って代わるものではありません**。
+
+## AIMO の支援
+
+| AIMO コンポーネント | 監査準備への支援 |
+| --- | --- |
+| **Evidence Bundle + Validator** | 監査可能な構造: manifest、object_index、payload_index、hash_chain、signing。Validator が存在と整合性をチェック；出力をバンドルに添付可能。 |
+| **適合性レベル** | Foundation / Operational / Audit-Ready はエビデンス成熟度（トレーサビリティ、ライフサイクル証跡、 attestation、handoff index）を示す。認証レベルではない。 |
+| **Coverage Map + プロファイル** | 説明可能性と要求トレーサビリティ: AIMO アーティファクトから ISO 42001 条項群等へのマッピング。 |
+
+レベル定義は [適合性](../../conformance/)、基盤規格マッピングは [ISO/IEC 42001](iso-42001.md) を参照。
+
+## 参考文献
+
+- [ISO/IEC 42006](https://www.iso.org/standard/42006) — AI マネジメントシステムの監査・認証を行う機関の要件（ISO）
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/coverage-map/methodology/ -->
+
+# Methodology
+
+> 注：本Methodologyは対応関係（traceability）と証跡準備を支援します。特定規制・規格への準拠を保証するものではありません。
+
+本ページでは、Coverage Map の位置づけ、監査での利用方法、Evidence Bundle および Minimum Evidence Requirements との関係を説明する。
+
+## What the mapping is
+
+- 外部フレームワーク・規制の参照（トピック別）から、AIMO の証跡、Evidence Bundle TOC 項目、Minimum Evidence のライフサイクルグループ、アーティファクト、バリデータチェックへの**情報提供**用マッピング。
+- **説明可能性**のための支援：どの AIMO 証跡・アーティファクトが、ある外部要求への対応の説明に役立つかを示す（適合の主張はしない）。
+
+## What the mapping is not
+
+- いかなるフレームワーク・規制への**適合を保証するものではない**。
+- **法的助言**ではなく、権威ある条文との照合に代わるものではない。
+- **網羅的**ではなく、監査対応と説明可能性のための実務的なサブセットである。
+
+## Audit questions（v0.1.1）
+
+v0.1.1 から、マッピングに **audit_questions**（監査で想定される質問例）を付与できる。これらは**説明用**であり、保証・適合保証・網羅的監査プログラムを構成するものではない。読者は権威ある条文と照合し、専門家の判断を適用すること。
+
+## How to use it in audit
+
+**要求 → 証跡 → アーティファクト → 検証** の流れで利用する。
+
+1. **要求**: 外部フレームワークの参照とトピックを特定する（例: ISO 42001 の文書化、EU AI Act の記録保持）。
+2. **証跡**: その要求の説明可能性を支える AIMO Evidence Bundle 項目と Minimum Evidence ライフサイクルグループ（request, review, exception, renewal, change_log, integrity）を確認する。
+3. **アーティファクト**: その証跡を実装または例示するアーティファクト（スキーマ、テンプレート、例）を特定する。
+4. **検証**: 参照されたバリデータ・スキーマチェックで構造の整合性を確認する。
+
+読者は各フレームワーク・規制の権威ある条文と照合すること。
+
+## Relationship to Evidence Bundle and Minimum Evidence Requirements
+
+- **[Evidence Bundle](../../artifacts/evidence-bundle/)**: バンドル構造、TOC、追跡可能性を定義する。Coverage Map の行は Evidence Bundle のセクション（EV, Dictionary, Summary, change_log, request, review, exception, renewal）を参照する。
+- **[Minimum Evidence Requirements](../../artifacts/minimum-evidence/)**: MUST レベルのライフサイクルグループ（request, review, exception, renewal, change_log, integrity）を定義する。Coverage Map の行は `minimum_evidence_refs` でこれらのグループを参照する。
+
+ある外部要求について、どの Evidence Bundle 項目と Minimum Evidence グループが説明可能性を支えるかは、Coverage Map で確認する。
+
+## 非過剰主張ステートメント
+
+!!! warning "重要"
+    AIMO Standard は**説明可能性と証跡準備**を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も**行わない**。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。
+
+スコープ、前提条件、採用者責任は [責任境界](../../governance/responsibility-boundary/) を参照。
+
+## 監査ジャーニー
+
+本ページから以下へ続く：
+
+1. **フレームワーク対応表**: [ISO 42001](../iso-42001/)、[NIST AI RMF](../nist-ai-rmf/)、[EU AI Act](../eu-ai-act/)、[ISMS](../isms/)
+2. **検証**: [Validator](../../validator/) — 構造チェックを実行
+3. **ダウンロード**: [Releases](../../releases/) — リリースアセットを取得
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/coverage-map/nist-ai-rmf/ -->
+
+# NIST AI RMF mapping
+
+!!! note "一次ソース"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework)（NIST 公式出版物・リソース）。マッピングと適用性はこの一次ソースで照合してください。
+
+> 参照ショートカット：Taxonomy → Minimum Evidence → Validator → 人による監督プロトコル
+
+- [Taxonomy](../../standard/current/03-taxonomy/)
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- [ログスキーマ](../../artifacts/log-schemas/)
+- [Validator](../../validator/)
+- [人による監督プロトコル](../../governance/human-oversight-protocol/)
+
+本ページは、NIST AI Risk Management Framework（Govern, Map, Measure, Manage）の主要テーマを AIMO の証跡・アーティファクトに対応付ける。説明可能性のためのものであり、NIST AI RMF への適合を保証しない。[NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) 発行物と照合すること。
+
+## Mapping table
+
+| フレームワーク参照 / トピック | AIMO 証跡 / 記載箇所 | Evidence Bundle / Minimum Evidence | アーティファクト・検証 | Notes |
+| --- | --- | --- | --- | --- |
+| Govern 1.1 – Policies | [Scope](../../standard/current/02-scope/)、[Taxonomy](../../standard/current/03-taxonomy/) | Dictionary, Summary, review; review | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | 情報提供。NIST 発行物と照合すること。 |
+| Govern 1.2 – Roles and responsibilities | [Minimum Evidence](../../artifacts/minimum-evidence/) | request, review | templates/ev/ev_template.md | 情報提供。NIST 発行物と照合すること。 |
+| Govern 2.1 – Accountability | [Evidence Bundle](../../artifacts/evidence-bundle/) | EV, request, review, change_log | examples/evidence_bundle_minimal/; schema_validate_ev | 情報提供。NIST 発行物と照合すること。 |
+| Govern 3.1 – Risk management | [Scope](../../standard/current/02-scope/) | request, review, exception | templates/ev/ | 情報提供。NIST 発行物と照合すること。 |
+| Govern 4.1 – Culture | [Overview](../../standard/current/01-overview/) | Summary, review; review | — | 情報提供。NIST 発行物と照合すること。 |
+| Map 1.1 – Context mapping | [Scope](../../standard/current/02-scope/)、[Dictionary](../../standard/current/05-dictionary/) | Dictionary, Summary; request | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | 情報提供。NIST 発行物と照合すること。 |
+| Map 2.1 – Data and documentation | [EV Template](../../standard/current/06-ev-template/) | EV, Dictionary, change_log; change_log | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | 情報提供。NIST 発行物と照合すること。 |
+| Map 3.1 – Data governance | [Dictionary](../../standard/current/05-dictionary/) | Dictionary, EV | schemas/jsonschema/aimo-dictionary.schema.json; schema_validate_dictionary | 情報提供。NIST 発行物と照合すること。 |
+| Measure 1.1 – Performance and impact | [EV Template](../../standard/current/06-ev-template/) | EV | schemas/jsonschema/aimo-ev.schema.json; schema_validate_ev | 情報提供。NIST 発行物と照合すること。 |
+| Measure 2.1 – Monitoring | [Minimum Evidence](../../artifacts/minimum-evidence/) | EV, change_log; change_log, integrity | templates/ev/ | 情報提供。NIST 発行物と照合すること。 |
+| Measure 3.1 – Testing and validation | [Validator](../../standard/current/07-validator/) | EV | validator/rules/, validator/src/; schema_validate_ev | 情報提供。NIST 発行物と照合すること。 |
+| Manage 1.1 – Allocation of resources | [Overview](../../standard/current/01-overview/) | Summary, review; review | — | 情報提供。NIST 発行物と照合すること。 |
+| Manage 2.1 – Incidents and responses | [Minimum Evidence](../../artifacts/minimum-evidence/) | exception, renewal, change_log | templates/ev/ev_template.md | 情報提供。NIST 発行物と照合すること。 |
+| Manage 3.1 – Change management | [Evidence Bundle](../../artifacts/evidence-bundle/) | change_log; change_log | schemas/jsonschema/aimo-standard.schema.json | 情報提供。NIST 発行物と照合すること。 |
+| Manage 4.1 – Review and update | [Minimum Evidence](../../artifacts/minimum-evidence/) | renewal, review; review, renewal | templates/ev/ | 情報提供。NIST 発行物と照合すること。 |
+| Manage 5.1 – Communication | [Evidence Bundle](../../artifacts/evidence-bundle/) | Summary, change_log; change_log | templates/ev/ | 情報提供。NIST 発行物と照合すること。 |
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/coverage-map/procurement-and-disclosure/ -->
+
+# 調達・開示オーバーレイ（英国・日本）
+
+本ページは、AIMO のエビデンスと**英国**・**日本**の調達・開示フレームワークの一部との**参照マッピング**を説明します。目的は**既に AIMO で整える証跡の再利用による負担軽減**です。**参考マッピングであり**、政府要求の完全充足を保証するものではありません。以下の一次ソースで確認してください。
+
+## 一次ソース
+
+**英国**
+
+- [Algorithmic Transparency Recording Standard (ATRS) Hub](https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub) — GOV.UK（テンプレート、ガイダンス、公開記録）
+- [ATRS テンプレート](https://www.gov.uk/government/publications/algorithmic-transparency-template) — 公共セクター向け公式テンプレート
+- [ATRS 利用組織向けガイダンス](https://www.gov.uk/government/publications/guidance-for-organisations-using-the-algorithmic-transparency-standard/algorithmic-transparency-recording-standard-guidance-for-public-sector-bodies) — GOV.UK
+
+**日本**
+
+- [デジタル庁 — 生成AIの調達・利活用に係るガイドライン](https://www.digital.go.jp/news/3579c42d-b11c-4756-b66e-3d3e35175623) — デジタル庁：「行政の進化と革新のための生成AIの調達・利活用に係るガイドライン」
+- [AI事業者ガイドライン](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/index.html) — 経済産業省・総務省
+
+## マッピング表（英国）
+
+| 政府要求（トピック） | AIMO 成果物 | Evidence Bundle 内の格納場所 | Validator カバレッジ | 注記 |
+| --- | --- | --- | --- | --- |
+| ATRS — 説明責任・オーナー | Summary、review | manifest；objects/（EV、Summary）；payload_index | schema_validate_ev | 参考マッピング；完全適合を保証しない。 |
+| ATRS — システム/モデル説明 | Dictionary、EV | objects/；schemas/jsonschema/aimo-dictionary.schema.json | schema_validate_dictionary | 公式 ATRS 記録を External Forms に添付；logical_id でリンク。 |
+| ATRS — リスク考慮 | Dictionary、request、review、exception | objects/；templates/ev/ | schema_validate_ev | プロファイル: `coverage_map/profiles/uk_atrs_procurement.json`。 |
+| 調達 — 供給者エビデンス | request、review、exception；Evidence Bundle | manifest、object_index、payload_index；examples/evidence_bundle_minimal/ | schema_validate_ev | バンドルでエビデンスを構造化；英国ガイダンスが権威。 |
+
+## マッピング表（日本）
+
+| 政府要求（トピック） | AIMO 成果物 | Evidence Bundle 内の格納場所 | Validator カバレッジ | 注記 |
+| --- | --- | --- | --- | --- |
+| GenAI 調達チェックリスト（デジタル庁） | External Form（チェックリストをそのまま）；Dictionary、Summary | payload_index；External Forms 節；manifest 参照 | N/A（添付） | 参考マッピング；完全適合を保証しない。プロファイル: `coverage_map/profiles/jp_gov_genai_procurement.json`。 |
+| AI 事業者ガイドライン — ガバナンス・トレーサビリティ | Summary、dictionary、request、review、change_log | objects/；manifest；templates/ev/ | schema_validate_dictionary、schema_validate_ev | トレーサビリティに有用な項目を AIMO タクソノミーにマッピング。 |
+| リスク・説明責任の文書化 | Dictionary、EV、review、exception | objects/；schemas/jsonschema/ | schema_validate_ev | デジタル庁・経産省/総務省の公式ガイダンスで確認。 |
+
+## 英国: ATRS と AI 調達（概要）
+
+| トピック | AIMO エビデンス / マッピング | 備考 |
+| --- | --- | --- |
+| **英国 ATRS**（AI 透明性記録） | Summary、review（説明責任担当）、evidence（モデル/システム説明）、dictionary（リスク考慮）。プロファイル: `coverage_map/profiles/uk_atrs_procurement.json`。 | External Forms に ATRS 型透明性記録を添付または参照；logical_id でバンドルオブジェクトにリンク。 |
+| **英国調達ガイダンス** | Request、review、exception；Evidence Bundle を供給者評価に利用。 | AIMO バンドルで調達評価用エビデンスを構造化；公式英国ガイダンスが権威。 |
+
+## 日本: 政府 GenAI 調達・AI ビジネスガイドライン（概要）
+
+| トピック | AIMO エビデンス / マッピング | 備考 |
+| --- | --- | --- |
+| **日本政府 GenAI 調達チェックリスト** | チェックリストを External Form として添付（例: payload: JP_PROCUREMENT_CHECKLIST）；manifest で参照。プロファイル: `coverage_map/profiles/jp_gov_genai_procurement.json`。 | 参照マッピングのみ；AIMO は公式チェックリストに代わりません。 |
+| **AI ビジネスガイドライン** | Summary、dictionary；トレーサビリティに有用な場合、チェックリスト項目を AIMO タクソノミーコードにマッピング。 | 説明可能性に利用；公式日本ガイダンスで確認。 |
+
+## 利用方法
+
+- **External Forms**: 英国または日本の公式テンプレート/チェックリストを**そのまま**添付（PDF、DOC 等）、ハッシュし、Evidence Bundle の [payload_index](../../standard/current/09-evidence-bundle-structure/) または [EV テンプレート External Forms 節](../../standard/current/06-ev-template/)に記載。manifest とカバレッジマッピングで logical_id により参照。
+- **プロファイル**: 上記プロファイルはオプションの機械可読マッピングを定義し、法的・契約上の義務を課しません。
+
+レベルは [適合性](../../conformance/)、オーバーレイ概要は [最低証拠 — 規制オーバーレイ](../../artifacts/minimum-evidence/) を参照。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/conformance/ -->
+
+# 適合性
+
+!!! warning "重要: 認証ではなく、保証ではなく、法・規制適合の主張ではない"
+    AIMO Standard は**エビデンスのパッケージ化・検証フォーマット**を定義します。法令や規格への適合を認証するものではありません。
+    監査・保証の意見は、独立した監査人および採用組織の責任です。
+    **適切な主張例:** 「Evidence Bundle は AIMO Standard v0.1.2 に従って作成され、AIMO Validator により構造検証されました。」
+    
+    **不適切な主張例:** 「EU AI 法適合」「ISO 42001 認証」「政府承認」。
+    
+
+AIMO Standard は**保証・監査引き継ぎ・継続的証跡のレイヤー**として位置づけます：構造化証跡のパッケージ化、Validator、トレーサビリティを提供し、採用者と監査人が構造化証跡を扱えるようにします。AIMO は**認証機関ではありません**。認証・適合の判断は認定認証機関、監査人、採用組織が行います。
+
+これらのティアは、パッケージ化とトレーサビリティのための**内部エビデンス成熟度レベル**です。認証でも、保証意見でも、法・規制適合でも**ありません**。
+
+## 互換性の主張（ISO/NIST/EU AI Act）
+
+以下の**参考マッピング**は、AIMO の証跡・アーティファクトと外部フレームワークを対応づけます。説明可能性と監査引き継ぎを支援するものであり、認証や適合保証を**付与しません**。権威あるフレームワーク本文で照合してください。
+
+- [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) — ISO/IEC 42001（AI マネジメントシステム）へのマッピング
+- [Coverage Map — NIST AI RMF](../coverage-map/nist-ai-rmf/) — NIST AI リスクマネジメントフレームワークへのマッピング
+- [Coverage Map — EU AI Act](../coverage-map/eu-ai-act/) — EU AI 法テーマへのマッピング（概要；法務助言ではない）
+
+一次ソースと主張文言は各 Coverage Map ページおよび [Responsibility Boundary](../governance/responsibility-boundary/) に記載しています。
+
+## 主張しないこと（Non-claims）
+
+- AIMO は ISO/IEC 42001、NIST AI RMF、EU AI Act その他いかなるフレームワークへの適合**認証を行いません**。
+- AIMO は規制・法適合を**保証しません**。
+- AIMO は保証意見や法務助言を**提供しません**。
+- AIMO は組織が外部要求を満たすかどうかを**判断しません**。それは採用者、監査人、認証機関の責任です。
+
+AIMO が**提供するもの**：構造化証跡フォーマット、Validator、Coverage Map（参考）、監査引き継ぎを支援する資料。詳細は [Responsibility Boundary](../governance/responsibility-boundary/) を参照。
+
+!!! note "ティア名の別名"
+    最上位ティアは非公式な議論で以前「Gold」と呼ばれたことがあります；**公式ティア名は Audit-Ready** です。
+
+## AIMO 適合性フレームワーク（AIMO-MS / AIMO-Controls / AIMO-Audit）
+
+| コンポーネント | 説明 | エビデンス期待 |
+| --- | --- | --- |
+| **AIMO-MS** | マネジメントシステム志向の構造：ISO/IEC 42001 型コントロールを支えうる方針・役割・PDCA に沿ったアーティファクト。 | Request、review、exception、renewal、change log；Summary と Dictionary。 |
+| **AIMO-Controls** | ライフサイクル・整合性コントロール：request→review→exception→renewal、ハッシュ、署名（[Evidence Bundle 構造](../../standard/current/09-evidence-bundle-structure/)に準拠）。 | Object_index、payload_index、hash_chain、signing；ライフサイクル記録。 |
+| **AIMO-Audit** | 監査引き継ぎの準備：Validator 合格、チェックサム、オプションの attestation と監査引き継ぎインデックス。 | Validator 出力、bundle_id、producer identity、オプションの署名メタデータと引き継ぎインデックス。 |
+
+エビデンス期待の詳細は [最低証拠要件](../artifacts/minimum-evidence/) と [Evidence Bundle](../artifacts/evidence-bundle/) を参照。
+
+## 適合性レベル（AIMO のみ）
+
+### レベル 1 — Foundation
+
+**目的:** トレーサブルなベースライン。バンドルを識別可能・整合性検証可能・Validator チェック済みとする最小セット。
+
+| 項目 | 要件 |
+| --- | --- |
+| **必須アーティファクト** | [Evidence Bundle](../artifacts/evidence-bundle/) 構造（manifest.json、objects/、仕様通りの payload_index）；[Validator](../validator/) 合格；[最低証拠](../artifacts/minimum-evidence/)へのリンク。 |
+| **典型的な監査質問** | スコープは何か？バンドルは誰が作成したか？ハッシュは検証できるか？ |
+| **典型的なギャップ** | manifest メタデータ（bundle_id、created_at、producer）欠落；Validator 未実行または未添付。 |
+
+### レベル 2 — Operational
+
+**目的:** 運用コントロールのエビデンス。Foundation にライフサイクル証跡とモニタリングを積み上げる。
+
+| 項目 | 要件 |
+| --- | --- |
+| **必須アーティファクト** | Foundation の全 MUST 項目；ライフサイクルコントロール証跡（request/承認、review、exception または「例外なし」、renewal スケジュール）；少なくとも 1 件のモニタリングアーティファクト（インシデントログまたは定期チェックまたは人間監督サンプリング）；整合性リンク付き change log；証明と保証の境界の明示。 |
+| **典型的な監査質問** | 利用承認者は誰か？例外はどう追跡しているか？最終 review はいつか？ |
+| **典型的なギャップ** | review/承認が request にリンクされていない；モニタリングアーティファクトなし；change log が影響オブジェクトを参照していない。 |
+
+### レベル 3 — Audit-Ready
+
+**目的:** 監査引き継ぎの品質。完全な attestation、再現性、外部フォームのスロット。
+
+| 項目 | 要件 |
+| --- | --- |
+| **必須アーティファクト** | Operational の全 MUST 項目；manifest をカバーする少なくとも 1 つのデジタル署名（署名者 identity + アルゴリズム）；TSA または「TSA なし」の表明；再現パケット（正確な Validator コマンド、期待出力、環境メタデータ）；公式テンプレート/チェックリストをそのまま添付・相互参照した External Forms 節；有界完全性表明；1 ページの監査引き継ぎインデックス（アーティファクト → ハッシュ → producer → 日付）。 |
+| **典型的な監査質問** | 監査人が検証を再実行する方法は？外部チェックリストはどこにあり、バンドルにどうマッピングするか？ |
+| **典型的なギャップ** | 署名はあるが署名者/アルゴリズムが文書化されていない；引き継ぎインデックスなし；外部フォームがハッシュされていないか manifest で参照されていない。 |
+
+## レベル別最低証拠（概要）
+
+| レベル | MUST（概要） |
+| --- | --- |
+| **Foundation** | バンドル構造（manifest、object_index、payload_index）；参照オブジェクトの sha256；bundle_id、created_at、producer；Validator 実行 + バージョン；エビデンス辞書ベースライン（システム名、オーナー、目的、データカテゴリ、ライフサイクル段階）；アクセス・保持の表明（誰が、期間、保存種別、改ざん検知）。SHOULD: 最小限の change log エントリ。 |
+| **Operational** | Foundation の全 MUST；ライフサイクル証跡（request/承認、review、exception または「なし」、renewal + 最終 renewal）；≥1 のモニタリングアーティファクト；change log エントリが影響オブジェクトを参照；証明と保証の境界の明示。 |
+| **Audit-Ready** | Operational の全 MUST；manifest に対する ≥1 の署名（署名者 identity + アルゴリズム）；TSA または「TSA なし」；再現パケット；External Forms の列挙と相互参照；有界完全性表明；監査引き継ぎインデックス。 |
+
+署名の**存在**（manifest をターゲットとする少なくとも 1 つの署名）は、規範的 [Evidence Bundle 構造](../../standard/current/09-evidence-bundle-structure/)により全バンドルで必須です。**Audit-Ready** は、第三者による再検証を可能にするため、より厳格な**暗号 attestation**（署名者 identity、アルゴリズム、TSA 表明、再検証手順）を追加します。
+
+## ISO/IEC 42001 マッピング（参考）
+
+以下の表は、AIMO アーティファクトが典型的な ISO/IEC 42001 条項族のエビデンスを**どう支えるか**を示します。参考であり、認証や適合を意味しません。
+
+| ISO/IEC 42001 条項族 | エビデンスを支える AIMO アーティファクト |
+| --- | --- |
+| 組織の状況 | Summary、Dictionary、scope_ref |
+| リーダーシップ / 方針 | Summary、review、dictionary |
+| 計画（リスク、目標） | request、review、exception、EV、Dictionary |
+| 支援（リソース、能力、文書） | Summary、review、EV、change_log |
+| 運用 | EV、request、review、exception；運用コントロール |
+| パフォーマンス評価（モニタリング、内部監査、マネジメントレビュー） | EV、change_log、review、renewal |
+| 改善 | exception、renewal、change_log |
+
+詳細は [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) と [ISO 42001 認証準備ツールキット](../artifacts/iso-42001-certification-readiness-toolkit/) を参照。
+
+## 主張文言テンプレート（過大主張防止）
+
+実際に行ったことを正確に表す主張のみを使用してください。認証と法適合は採用者と認定機関の責任です。
+
+**受容可能（例）**
+
+- 「当社は AIMO Standard v0.1.2 に対する AIMO 適合（レベル 2）です；ISO 認証や法適合を意味しません。」
+- 「AIMO アーティファクトで ISO/IEC 42001 準備を支援しています；認証判断は認定認証機関にあります。」
+- 「Evidence Bundle は AIMO Standard v0.1.2 に従って作成され、AIMO Validator により構造検証されました。」
+
+**受容不可（例）**
+
+- 「EU AI 法適合」（AIMO は規制適合を認証しません。）
+- 「ISO 42001 認証」（認証は認定認証機関が発行し、AIMO ではありません。）
+- 「政府承認」（AIMO は政府承認制度ではありません。）
+
+## 関連ページ
+
+- [Trust Package](../governance/trust-package/) — 監査人向け統合エントリ
+- [Responsibility Boundary](../governance/responsibility-boundary/) — AIMO が提供するもの・しないもの
+- [Standard (Current)](../standard/current/) — 規範要件
+- [Artifacts](../artifacts/) — エビデンス構造と最低証拠
+- [Validator](../validator/) — 構造検証
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/validator/ -->
+
+# Validator
+
+本ページは検証ツールとルールのハブである。バリデータおよびルールの規範仕様は Standard に記載する。
+
+## クイックスタート（30秒）
+
+**1. 前提条件**
+
+```bash
+pip install jsonschema   # 未インストールの場合
+```
+
+**2. サンプルバンドルに対してバリデーションを実行**
+
+```bash
+# ルート JSON 単体
+python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+
+# Evidence Bundle ディレクトリ（v0.1 最小例：manifest / object_index / payload_index / signing / hash_chain を検証）
+python validator/src/validate.py examples/evidence_bundle_v01_minimal
+```
+
+**3. レポートを読み、エラー/警告を修正**
+
+出力例（成功）：
+
+```
+OK
+```
+
+出力例（失敗）：
+
+```
+Schema validation failed:
+<root>: 'version' is a required property
+<root>: 'dictionary' is a required property
+<root>: 'evidence' is a required property
+```
+
+**終了コード**: `0` = 成功, `1` = バリデーションエラー, `2` = 使用法エラー（引数不足など）
+
+---
+
+## 出力形式（--format）と CI での使い分け
+
+| オプション | 用途 | 出力 |
+|------------|------|------|
+| `default`（省略時） | ローカルでの確認 | 人間向けメッセージ（OK / エラー一覧） |
+| `--format json` | CI・スクリプト向け | 機械可読 JSON（`valid`, `errors`, `warnings`, `path`, `profiles_valid`） |
+| `--format sarif` | GitHub Code Scanning | SARIF 2.1.0（ruleId, level, location, message）。提出前ゲートとして Code Scanning に結果を載せる際に使用。 |
+
+**例（Evidence Bundle v0.1 最小例の検証）**
+
+```bash
+# ローカルで成功確認
+python validator/src/validate.py examples/evidence_bundle_v01_minimal
+
+# JSON で結果を取得（CI でパースする場合）
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format json
+
+# SARIF をファイルに保存（Code Scanning アップロード用）
+python validator/src/validate.py examples/evidence_bundle_v01_minimal --validate-profiles --format sarif > dist/validator.sarif
+```
+
+**GitHub 上での見え方**: Quality Gate ワークフローで `--format sarif` の結果を `upload-sarif` により Code Scanning に送信している。PR でバリデータが失敗すると、Code Scanning の「Security」タブに `aimo-standard/validation` の結果として表示され、どのパスでどのエラーかが確認できる。
+
+---
+
+## チェックする内容
+
+- **スキーマ検証**: root オブジェクト、dictionary、evidence が JSON Schema に準拠しているか
+- **辞書整合性**: すべてのコードがタクソノミー辞書に存在するか
+- **コードステータス**: 非推奨コードは警告、削除コードはエラー
+
+## チェックしない内容
+
+- **コンテンツの正確性**: バリデータは構造をチェックし、意味はチェックしない
+- **準拠保証**: バリデーション合格は規制への準拠を保証しない
+- **人の判断**: 文脈依存の判断は人によるレビューが必要（[人による監督プロトコル](../governance/human-oversight-protocol/)参照）
+- **ログの自動収集**: バリデータは提出された証跡を検証するが、ログを収集しない
+
+---
+
+## リソース
+
+- **仕様**: [Standard > Current > Validator](../standard/current/07-validator/) — ルール、参照チェック、検証と証跡の関係。
+- **ルールと実装**: リポジトリの `validator/rules/`（チェック）、`validator/src/`（参照実装）。実行方法と CI での利用は仕様に記載。
+- **解釈**: 検証「失敗」が監査上何を意味するか（仕様で説明）。
+
+適合性とアーティファクトの利用については [Conformance](../conformance/) と [Artifacts](../artifacts/) を参照。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/examples/ -->
+
+# Examples
+
+This section points to end-to-end and minimal examples that show how artifacts are assembled.
+
+- **Minimal bundle**: `examples/minimal/` in the repository (e.g., `sample_ev.json`, `sample_dictionary.json`).
+- **Evidence Bundle (minimal)**: `examples/evidence_bundle_v01_minimal/` — normative minimal Bundle (manifest, object_index, payload_index, hash_chain, signing); see [Evidence Bundle](../artifacts/evidence-bundle/) and [Minimum Evidence](../artifacts/minimum-evidence/).
+- **Evidence Bundle (EU AI Act Annex IV sample)**: `examples/evidence_bundle_v01_annex_iv_sample/` — official sample aligned with EU AI Act Annex IV technical documentation for high-risk AI; same structure as minimal, with root payload and an Annex IV technical documentation payload (`payloads/ANNEXIV_technical_documentation.md`). The bundle includes `signatures/` and `hashes/` and satisfies normative Evidence Bundle v0.1 path and coverage requirements. See [EU AI Act mapping](../coverage-map/eu-ai-act/) and profile `coverage_map/profiles/eu_ai_act_annex_iv.json`.
+- **Schema alignment**: validate against `schemas/jsonschema/` and [Standard](../standard/current/).
+- **Audit-ready packaging**: see the [Trust Package](../governance/trust-package/).
+
+### GPAI CoP evidence bundle outline
+
+For **EU GPAI Code of Practice** alignment, attach the **Model Documentation Form** (or equivalent) as an external form:
+
+1. Add the form file (e.g. PDF or DOC) under `payloads/` and assign a stable `logical_id` (e.g. `GPAI_MODEL_DOC_FORM`) in the bundle `manifest.json` `payload_index`.
+2. Record the file path, `sha256`, `mime`, and `size` in the payload_index so the bundle remains integrity-verifiable.
+3. Reference the form in your coverage map or handoff index so auditors can trace between the GPAI form and AIMO taxonomy/bundle objects.
+
+Profile: `coverage_map/profiles/eu_gp_ai_cop.json`. See [EV Template — External Forms](../standard/current/06-ev-template/#external-forms-official-templateschecklists-attached-as-is) and [Procurement & Disclosure Overlays](../coverage-map/procurement-and-disclosure/) for UK/Japan overlays.
+
+Detailed scenario coverage is added in later change units.
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/cite/ -->
+
+# 引用方法
+
+本ページでは、学術論文、監査報告書、提案書における AIMO Standard の引用ガイダンスを提供する。
+
+## CITATION.cff
+
+リポジトリには Citation File Format 標準に従った [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) ファイルが含まれる。
+
+GitHub はこのファイルから引用情報を自動表示する。
+
+## 推奨引用
+
+### 短縮形（インライン）
+
+> AIMO Standard Contributors. (2026). AIMO Standard. https://standard.aimoaas.com/
+
+### BibTeX
+
+```bibtex
+@software{aimo_standard,
+  author = {{AIMO Standard Contributors}},
+  title = {AIMO Standard},
+  url = {https://standard.aimoaas.com/},
+  version = {0.1.2},
+  year = {2026}
+}
+```
+
+### APA スタイル
+
+> AIMO Standard Contributors. (2026). *AIMO Standard* (Version 0.1.2) [Software]. https://standard.aimoaas.com/
+
+## バージョン固有の引用
+
+特定バージョンを引用する場合：
+
+> AIMO Standard Contributors. (2026). AIMO Standard v0.1.2. https://github.com/billyrise/aimo-standard/releases/tag/v0.1.2
+
+## 監査ドキュメント
+
+監査報告書・コンプライアンス文書向け：
+
+| 項目 | 値 |
+| ---- | -- |
+| 標準名 | AIMO Standard |
+| バージョン | （使用バージョンを指定、例：v0.1.2） |
+| ウェブサイト | https://standard.aimoaas.com/ |
+| リポジトリ | https://github.com/billyrise/aimo-standard |
+| リリース | https://github.com/billyrise/aimo-standard/releases |
+
+## URL ガイダンス
+
+### 正規 URL
+
+公式ドキュメントにはこれらの URL を使用：
+
+| 用途 | URL |
+| ---- | --- |
+| 最新ドキュメント | https://standard.aimoaas.com/latest/ |
+| 特定バージョン | https://standard.aimoaas.com/0.1.2/ |
+| GitHub リリース | https://github.com/billyrise/aimo-standard/releases |
+
+!!! note "サイトパスのフォーマット"
+    サイトパスでは `v` プレフィックスを省略します。バージョン `v0.1.2` の場合、URLでは `/0.1.2/` を使用します。
+
+### 避けるべき URL
+
+- GitHub Pages ミラー URL（一時的）
+- ブランチ固有 URL（変更される可能性）
+
+## 関連ページ
+
+- [Trust Package](../trust-package/) — 監査対応資料
+- [ガバナンス](../) — プロジェクトガバナンス
+- [ライセンス](../license/) — ライセンス条件
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/contributing/ -->
+
+# コントリビュート
+
+本ページでは、AIMO Standard へのコントリビュートガイドラインを提供する。
+
+## クイックスタート
+
+1. リポジトリをフォーク
+2. フィーチャーブランチを作成
+3. 以下のガイドラインに従って変更
+4. 品質チェックを実行
+5. プルリクエストを提出
+
+## 主要原則
+
+| 原則 | 説明 |
+| ---- | ---- |
+| 英語が正 | まず `docs/en/` を編集し、その後 `docs/ja/` を更新 |
+| SSOT | このリポジトリが唯一の情報源 |
+| 生成ファイルを手動編集しない | ソースを編集、再生成、コミット |
+| すべての変更は PR 経由 | メンテナも PR を使用 |
+
+## 品質チェック
+
+PR 提出前に実行：
+
+```bash
+# 仮想環境を有効化
+source .venv/bin/activate
+
+# lint 実行
+python tooling/checks/lint_i18n.py
+python tooling/checks/lint_schema.py
+python tooling/audit/baseline_audit.py --check
+
+# ドキュメントビルド
+mkdocs build --strict
+```
+
+## 変更の種類
+
+| 種類 | 例 | レビュー要件 |
+| ---- | -- | ------------ |
+| 規範的 | スキーマ変更、要件 | メンテナ＋議論 |
+| 非規範的 | 誤字修正、明確化 | メンテナ承認 |
+| i18n | 翻訳 | 構造が EN と一致 |
+| ツール | CI/CD、スクリプト | メンテナ承認 |
+
+## i18n ガイドライン
+
+### 更新順序
+
+1. 英語ソースを編集（`docs/en/...`）
+2. 日本語翻訳を更新（`docs/ja/...`）
+3. `lint_i18n.py` で整合性を確認
+4. 両方を一緒にコミット
+
+### 構造要件
+
+- 両言語で同じファイル名
+- 同じ見出し階層
+- セクションごとに同じページ数
+
+## PR チェックリスト
+
+PR 提出時に確認：
+
+- [ ] 変更の種類を特定（docs / schema / examples / tooling）
+- [ ] 破壊的変更の評価を完了
+- [ ] i18n: EN と JA を一緒に更新（該当する場合）
+- [ ] 品質チェック合格
+- [ ] 関連 issue をリンク
+
+## 破壊的変更
+
+破壊的変更には以下が必要：
+
+1. 実装前に issue で議論
+2. [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) に従いバージョンアップ
+3. 移行ガイダンス付きの変更履歴エントリ
+
+## 適合性主張の更新
+
+適合性主張を追加・変更するには：
+
+1. カバレッジマップ YAML を更新
+2. 対応するドキュメントページを更新
+3. バリデータテストを実行
+4. マッピング根拠を文書化
+
+## 完全なガイドライン
+
+ルートレベルのガイドは [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) を参照。
+
+## 関連ページ
+
+- [ガバナンス](../) — プロジェクトガバナンス
+- [ローカライゼーションガイド](../../contributing/localization/) — i18n 詳細
+- [責任境界](../responsibility-boundary/) — AIMO が提供するもの
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/human-oversight-protocol/ -->
+
+# 人による監督プロトコル
+
+本ページでは、自動検証（Validator）でチェックできることと、人による審査（Human-in-the-Loop）が必要なことの境界を定義する。AIガバナンス証跡プロセスにおける機械と人の判断の責任を明確にする。
+
+## 目的
+
+自動検証ツールは構造的・構文的な正確性を効率的にチェックできるが、文脈依存の判断において人の判断を代替することはできない。本プロトコルは：
+
+- バリデータが検証できること・できないことを明確にする
+- 効果的なガバナンスに必要な人による審査の範囲を定義する
+- 人による監督プロセスを文書化することで監査説明を支援する
+- AIガバナンスワークフローを実装する組織にフレームワークを提供する
+
+## 自動検証でできること（Validator スコープ）
+
+AIMO バリデータおよび類似の自動ツールは以下をチェックできる：
+
+| 機能 | 説明 |
+| --- | --- |
+| **必須フィールド/ドキュメントの完全性** | マニフェスト、EV レコード、その他アーティファクトに必須フィールドがすべて存在することを検証 |
+| **構造の整合性** | アーティファクト間の参照、ID、相互リンクを検証（例：request_id → review_id） |
+| **スキーマ検証** | JSON/YAML アーティファクトが定義されたスキーマに適合することを確認 |
+| **コードフォーマット検証** | タクソノミーコードが期待されるパターンに一致することを確認（例：`UC-001`） |
+| **完全性チェック** | ハッシュの形式と存在を検証（コンテンツとの再計算は行わない） |
+| **辞書検証** | コードがタクソノミー辞書に存在することを確認 |
+
+詳細なバリデーションルールとリファレンス実装は [バリデータ](../../standard/current/07-validator/) を参照。
+
+## 人による審査が必要なこと（Human-in-the-Loop スコープ）
+
+以下の領域は人の判断が必要であり、自動化できない：
+
+| 機能 | 説明 |
+| --- | --- |
+| **文脈依存のリスク判断** | 組織の文脈に基づくビジネス、倫理、運用上のリスク評価 |
+| **例外承認の根拠** | 例外が正当化されるか、代替統制が十分かの評価 |
+| **是正の意思決定** | 修正の優先順位付け、リソース配分、タイムラインの決定 |
+| **ポリシーのトレードオフ** | 競合する要件のバランス（例：スピード vs 徹底性、コスト vs リスク） |
+| **残余リスクの受容** | 統制後の残余リスクが許容可能かの判断 |
+| **部門横断的な影響評価** | 法務、人事、運用等の他機能への影響の評価 |
+| **コンテンツの正確性検証** | 証跡のコンテンツが事実として正確で完全であることの確認 |
+| **ステークホルダーへの説明** | 監査人、規制当局、経営陣への決定の説明 |
+
+## 責任境界
+
+| 側面 | バリデータ（機械） | 人による審査 |
+| --- | --- | --- |
+| **構造** | ✓ 検証可能 | フラグ時に審査 |
+| **完全性** | ✓ フィールドを検証可能 | コンテンツの妥当性を確認 |
+| **フォーマット** | ✓ 検証可能 | — |
+| **リスク判断** | ✗ 評価不可 | ✓ 評価必須 |
+| **例外承認** | ✗ 決定不可 | ✓ 決定必須 |
+| **是正優先順位** | ✗ 優先順位付け不可 | ✓ 優先順位付け必須 |
+| **法的解釈** | ✗ 解釈不可 | ✓ 法務と確認必須 |
+| **監査結論** | ✗ 結論不可 | ✓ 監査人の責任 |
+
+!!! note "補完的な役割"
+    バリデータと人による審査は**代替**ではなく**補完**である。バリデータは人による審査の前に構造的整合性を確保し、人による審査は文脈上の適切性を確保する。
+
+## 証跡の期待事項
+
+人による監督を実装する組織は以下を文書化すべきである：
+
+| 証跡種別 | 説明 |
+| --- | --- |
+| **審査記録** | 誰が、いつ、どのような決定を行ったか |
+| **承認根拠** | なぜその決定が行われたか（特に例外の場合） |
+| **エスカレーション記録** | いつ、なぜ上位権限にエスカレーションされたか |
+| **是正計画** | 問題対処のための計画、担当者、タイムライン |
+| **サインオフ** | 審査が完了したことの正式な宣誓 |
+
+これらの記録は [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) に従い Evidence Bundle に含めるべきである。
+
+## 非過剰主張
+
+!!! warning "重要"
+    本プロトコルは**人による監督を文書化するためのフレームワーク**を定義する。以下は**行わない**：
+
+    - 法的助言または規制解釈の提供
+    - いかなる規制・規格への準拠保証
+    - 適格な人の判断を自動化された判断で代替
+    - 特定の組織プロセスの規定
+
+    組織は本フレームワークを自らの文脈、リスクプロファイル、規制要件に適応させる必要がある。
+
+## 関連ページ
+
+- [バリデータ](../../standard/current/07-validator/) — 自動検証ルールとリファレンス実装
+- [責任境界](../responsibility-boundary/) — AIMO が提供するもの vs 採用者の責任
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — MUST レベル証跡チェックリスト
+- [Trust Package](../trust-package/) — 監査対応資料ハブ
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/ -->
+
+# ガバナンス
+
+このセクションは、プロジェクトガバナンス、セキュリティ、ライセンス、引用、コントリビュートガイドラインのハブです。
+
+監査対応資料はこちらから: **[Trust Package](trust-package/)**。
+
+## ガバナンスページ
+
+| ページ | 説明 |
+| ------ | ---- |
+| [Trust Package](trust-package/) | 監査対応資料ハブ |
+| [責任境界](responsibility-boundary/) | AIMO が提供するもの・しないもの |
+| [セキュリティ](security/) | 脆弱性報告・セキュリティポリシー |
+| [ライセンス](license/) | ライセンス条件（Apache-2.0） |
+| [商標](trademarks/) | 商標使用ガイドライン |
+| [引用方法](cite/) | 論文・監査向け引用ガイダンス |
+| [コントリビュート](contributing/) | AIMO Standard への貢献方法 |
+| [SEO & Canonical ポリシー](seo-canonical-policy/) | URL 正規化ガイダンス |
+
+## リポジトリポリシーファイル
+
+以下のファイルはリポジトリルートにあり、権威あるポリシーを含む：
+
+| ファイル | 説明 |
+| -------- | ---- |
+| [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) | SSOT、変更プロセス、規範的 vs 非規範的 |
+| [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) | 完全なセキュリティポリシー |
+| [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) | Apache-2.0 ライセンス |
+| [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) | 帰属表示 |
+| [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) | 完全な商標ポリシー |
+| [CITATION.cff](https://github.com/billyrise/aimo-standard/blob/main/CITATION.cff) | 機械可読な引用情報 |
+| [CODE_OF_CONDUCT.md](https://github.com/billyrise/aimo-standard/blob/main/CODE_OF_CONDUCT.md) | コミュニティガイドライン |
+| [CONTRIBUTING.md](https://github.com/billyrise/aimo-standard/blob/main/CONTRIBUTING.md) | コントリビュートクイックスタート |
+| [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) | SemVer ポリシー |
+
+## 監査ジャーニー
+
+監査人・コンプライアンス担当者向けの推奨読み順：
+
+1. **[Trust Package](trust-package/)** — 監査対応資料の概要
+2. **[責任境界](responsibility-boundary/)** — スコープと採用者責任
+3. **[セキュリティ](security/)** — セキュリティ体制と開示ポリシー
+4. **[ライセンス](license/)** — 採用のためのライセンス条件
+5. **[引用方法](cite/)** — 監査ドキュメント向け引用
+
+## 関連ページ
+
+- [Releases](../../releases/) — リリーススナップショットと変更履歴
+- [Conformance](../conformance/) — 適合性レベル
+- [ローカライゼーションガイド](../contributing/localization/) — i18n ワークフロー
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/license/ -->
+
+# ライセンス
+
+本ページでは、AIMO Standard の資料に適用されるライセンス条件を説明する。
+
+## ライセンス種別
+
+AIMO Standard は **Apache License, Version 2.0** でライセンスされる。
+
+- SPDX 識別子: `Apache-2.0`
+- 全文: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+## 対象範囲
+
+### 対象資料
+
+| 資料 | ライセンス | 場所 |
+| ---- | ---------- | ---- |
+| ドキュメント | Apache-2.0 | `docs/` |
+| JSON スキーマ | Apache-2.0 | `schemas/` |
+| テンプレート | Apache-2.0 | `templates/` |
+| サンプル | Apache-2.0 | `examples/` |
+| バリデータ | Apache-2.0 | `validator/` |
+| ツール | Apache-2.0 | `tooling/` |
+| PDF リリース | Apache-2.0 | GitHub Releases |
+| Artifacts ZIP | Apache-2.0 | GitHub Releases |
+
+### 許可される利用
+
+Apache-2.0 では以下が許可される：
+
+- 商用・非商用を問わず利用
+- 変更・派生物の作成
+- オリジナルまたは変更版の配布
+- プロプライエタリ製品への組込み
+
+### 条件
+
+AIMO Standard 資料を利用する際：
+
+1. 配布物にライセンス通知を含める
+2. 帰属表示を提供（[NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) 参照）
+3. 重大な変更がある場合は明記
+4. 商標は許可なく使用しない（[商標](../trademarks/) 参照）
+
+## NOTICE ファイル
+
+[NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) に必須の帰属情報が含まれる。
+
+## サードパーティコンポーネント
+
+AIMO Standard にはサードパーティコンポーネントが含まれる場合がある。各コンポーネントは元のライセンスを保持する。
+
+## FAQ
+
+**Q: AIMO Standard を商用製品で使用できるか？**
+A: 可能。Apache-2.0 は商用利用を許可する。
+
+**Q: 実装をオープンソースにする必要があるか？**
+A: 不要。Apache-2.0 は派生物のオープンソース化を要求しない。
+
+**Q: スキーマを変更できるか？**
+A: 可能だが、変更を明記し、変更したスキーマでは適合を主張できない。
+
+## ライセンスファイル
+
+- [LICENSE.txt](https://github.com/billyrise/aimo-standard/blob/main/LICENSE.txt) — ライセンス文
+- [NOTICE.txt](https://github.com/billyrise/aimo-standard/blob/main/NOTICE.txt) — 帰属表示
+
+## 関連ページ
+
+- [商標](../trademarks/) — 商標使用
+- [ガバナンス](../) — プロジェクトガバナンス
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/responsibility-boundary/ -->
+
+# 責任の境界（Responsibility Boundary）
+
+本ページは、AIMO Standard が提供するものと提供しないもの、前提としていること、および採用者の責任を定義します。
+
+## 証明と保証の境界（Proof vs Assurance）
+
+| 境界 | AIMO が提供するもの | 判断主体 |
+| --- | --- | --- |
+| **証明（証跡）** | Evidence Bundle 構造、Validator、スキーマ、テンプレート、Coverage Map（参考）。AIMO は構造適合をチェックする**証跡パック**と**Validator**を提供します。 | 採用者が証跡を作成；AIMO がフォーマットとルールを定義。 |
+| **保証・適合・認証** | AIMO は認証、保証意見、適合判断を**発行しません**。 | **外部:** 顧客、監査人、または**認定認証機関**が適合・認証を判断します。 |
+
+適合性と主張文言は [Conformance](../../conformance/) および [ISO 42001 認証準備ツールキット](../../artifacts/iso-42001-certification-readiness-toolkit/) で統一しています。AIMO は**証跡準備**と**監査引き継ぎ**を支援し、認証や適合保証は行いません。
+
+## AIMO Standard が提供するもの
+
+- **構造化された証跡フォーマット**: AI ガバナンス証跡のためのスキーマ、テンプレート、タクソノミー。
+- **追跡可能性フレームワーク**: ライフサイクルに基づく証跡のリンク（申請 → 審査 → 例外 → 更新）。
+- **説明可能性の支援**: 監査議論のための外部フレームワークへの Coverage Map。
+- **検証ツール**: 参照 Validator と構造一貫性チェックのルール。
+- **ドキュメント**: 規範仕様、例、ガイダンス。
+
+## AIMO Standard が提供しないもの
+
+| スコープ外 | 説明 |
+| --- | --- |
+| **法的助言** | AIMO は法令を解釈しません。規制適合については資格ある法務に相談してください。 |
+| **コンプライアンス認証** | AIMO の利用はいかなる規制・フレームワーク（ISO 42001、EU AI Act、NIST AI RMF 等）への適合認証ではありません。 |
+| **「AIMO による ISO 認証」** | AIMO は認証を発行しません。認証は認定認証機関が行います。 |
+| **「AIMO により EU AI Act 適合」** | AIMO は証跡を構造化するのみで、規制適合を保証・認証しません。 |
+| **リスク評価** | AIMO は証跡を構造化しますが、AI リスク評価の実施・検証は行いません。 |
+| **技術的コントロール** | AIMO はアクセス制御、暗号化等のセキュリティコントロールを実装せず、期待事項を文書化します。 |
+| **監査の実行** | AIMO は監査人向け資料を提供しますが、監査は実施しません。 |
+| **AI モデル評価** | AIMO はモデルの性能・バイアス・安全性を評価しません。 |
+
+## 前提
+
+AIMO Standard は以下を前提としています：
+
+1. **採用者にガバナンスプロセスがあること**: 申請、審査、承認、例外のワークフローが存在する。
+2. **採用者が証跡を維持すること**: 証跡は採用者側のシステムで作成・保存・保持される。
+3. **採用者が権威ある本文で検証すること**: Coverage Map 利用時は、採用者が元のフレームワークまたは規制を確認する。
+4. **ツールは任意**: 参照 Validator は便宜のためであり、採用者は自前の検証を用いてよい。
+
+## 採用者の責任
+
+| 責任 | 説明 |
+| --- | --- |
+| **証跡の作成** | EV スキーマに沿った正確でタイムリーな証跡レコードを生成する。 |
+| **証跡の保存・保持** | 適切なアクセス制御と保持期間で証跡を安全に保存する。 |
+| **整合性・アクセス制御** | 証跡の整合性を守るため、ハッシュ、WORM、監査ログ等のコントロールを実装する。 |
+| **法的検証** | 権威ある法文書に照らして適合主張を検証し、必要に応じて法務助言を得る。 |
+| **継続的整合** | AIMO Standard のバージョンと外部フレームワークの変化に合わせて証跡とマッピングを更新する。 |
+| **監査準備** | 監査人への提出前に Evidence Bundle をパッケージ化し、検証を実行する。 |
+
+## RACI マトリクス
+
+以下の RACI マトリクスは、AIMO Standard・採用者・監査人の役割間の責任を整理します。
+
+| アクティビティ | AIMO Standard | 採用者 | 監査人 |
+| --- | :---: | :---: | :---: |
+| **証跡スキーマ・テンプレートの定義** | R/A | I | I |
+| **証跡レコードの作成** | — | R/A | I |
+| **証跡の保存・保持** | — | R/A | I |
+| **アクセス制御の実装** | — | R/A | I |
+| **整合性コントロール（ハッシュ、WORM）の実装** | — | R/A | I |
+| **バンドルに対する Validator の実行** | C | R/A | C |
+| **提出物のパッケージ（zip、チェックサム）** | C | R/A | I |
+| **チェックサム（sha256）の検証** | — | C | R/A |
+| **バンドル構造の検証（Validator）** | — | C | R/A |
+| **規制要件の解釈** | — | R/A | C |
+| **監査結論の表明** | — | — | R/A |
+| **法的助言の提供** | — | — | — |
+
+**凡例**: R = 実行責任、A = 説明責任、C = 相談、I = 報告、— = 該当なし
+
+!!! note "要点"
+    AIMO Standard は**フォーマットの定義**に責任を持ちます。採用者は**証跡の作成・保存・検証**に責任を持ちます。監査人は**提出物の検証と監査結論の表明**に責任を持ちます。
+
+!!! warning "非認証の注記"
+    AIMO Standard は参考情報であり、適合の認証や法的助言を提供しません。監査結論および適合評価は、資格ある監査人と法務専門家の専権です。
+
+## 主張ポリシー
+
+| 許容される主張 | 許容されない主張 |
+| --- | --- |
+| 「Evidence Bundle は AIMO Standard v0.1.2 に従って作成され、AIMO Validator により構造検証されました。」 | 「EU AI Act 適合」「ISO 42001 認証取得」「政府承認」等 |
+| 「AIMO アーティファクトで ISO/IEC 42001 準備を支援しています。認証の判断は認定認証機関にあります。」 | AIMO が適合を認証する、または法的助言を提供する旨の主張。 |
+
+## 過大主張禁止
+
+!!! warning "重要"
+    AIMO Standard は**説明可能性と証跡準備**を支援します。**法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証は行いません**。採用者は権威ある本文に照らして主張を検証し、必要に応じて専門家の助言を得てください。
+
+この表明は、Trust Package、Evidence Bundle、Minimum Evidence Requirements、Coverage Map、Releases を含む AIMO Standard の全ドキュメントに適用されます。
+
+## 関連ページ
+
+- [Trust Package](../trust-package/) — 監査人向け資料ハブ
+- [Human Oversight Protocol](../human-oversight-protocol/) — 機械と人のレビュー境界
+- [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — ライフサイクル別 MUST チェックリスト
+- [Coverage Map Methodology](../../coverage-map/methodology/) — マッピングの位置づけと限界
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/security/ -->
+
+# セキュリティ
+
+本ページでは、AIMO Standard のセキュリティポリシー（脆弱性報告・開示手順を含む）を説明する。
+
+## 対象範囲
+
+### 対象
+
+- バリデータ参照実装（`validator/`）
+- ビルド・リリースツール（`tooling/`）
+- JSON スキーマ（`schemas/`）
+- ドキュメントサイト基盤
+
+### 対象外
+
+- 仕様コンテンツ（規範テキストはセキュリティ成果物ではない）
+- AIMO Standard を使用した採用者の実装
+- 外部依存関係（上流メンテナに報告すること）
+
+## サポートバージョン
+
+| バージョン | サポート |
+| ---------- | -------- |
+| latest (dev) | 対応 |
+| タグ付きリリース (vX.Y.Z) | 対応（直近2マイナーバージョン） |
+| 古いリリース | 非対応（アップグレード推奨） |
+
+## 脆弱性の報告
+
+セキュリティ脆弱性については、公開 GitHub issue を**作成しないこと**。
+
+### プロセス
+
+1. GitHub のプライベート脆弱性報告機能で非公開報告
+2. 記載内容：説明、再現手順、影響バージョン、影響範囲
+3. 評価・修正開発の時間を確保
+
+### タイムライン
+
+| フェーズ | 期間 |
+| -------- | ---- |
+| 受領確認 | 72時間 |
+| 初期評価 | 7日 |
+| 協調開示 | 最大90日 |
+
+## 開示ポリシー
+
+1. 脆弱性は非公開で報告
+2. 公開前に修正を開発
+3. 修正後にセキュリティアドバイザリを公開
+4. 報告者をクレジット（匿名希望の場合を除く）
+
+## セキュリティ対策
+
+- すべての変更に CI/CD チェック
+- SHA-256 チェックサム付き署名リリース
+- マージ前に必須 PR レビュー
+
+## 完全なポリシー
+
+完全なセキュリティポリシーは [SECURITY.md](https://github.com/billyrise/aimo-standard/blob/main/SECURITY.md) を参照。
+
+## 関連ページ
+
+- [Trust Package](trust-package.md) — 監査対応資料
+- [ガバナンス](index.md) — プロジェクトガバナンス
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/seo-canonical-policy/ -->
+
+# SEO & Canonical ポリシー
+
+このページでは、AIMO Standardが検索エンジン、監査人、外部参照に対してどのようにURL正規化を管理しているかを説明します。
+
+## 本番サイト vs ミラーサイト
+
+| 環境 | URL | 役割 | インデックス可 |
+|------|-----|------|----------------|
+| **本番（Production）** | `https://standard.aimoaas.com/` | 正規サイト（すべての目的で使用） | はい |
+| GitHub Pages | `https://billyrise.github.io/aimo-standard/` | 一時的なミラー / CIプレビュー | いいえ (noindex) |
+
+**基本原則**: 本番サイト（`standard.aimoaas.com`）が正規URLです。GitHub Pagesは一時的なバックアップ/ミラーとして機能し、監査レポートや外部参照で引用すべきではありません。
+
+## Canonical URL 戦略
+
+### Canonical URL の生成方法
+
+AIMO Standardは[MkDocs Material](https://squidfunk.github.io/mkdocs-material/)を使用し、以下の設定で運用しています：
+
+```yaml
+# mkdocs.yml
+site_url: https://standard.aimoaas.com/
+```
+
+この`site_url`設定により：
+
+1. **`<link rel="canonical">`** — 生成される各HTMLページに本番URLを指すcanonicalリンクが含まれます。
+2. **`sitemap.xml`** — サイトマップ内のすべてのURLが本番を参照します。
+3. **`robots.txt`** — サイトマップ参照が本番を指します。
+4. **`hreflang` alternates** — 言語代替が本番URLを使用します。
+
+### 言語別の Canonical URL
+
+| 言語 | URLパターン | 例 |
+|------|-------------|-----|
+| 英語（デフォルト） | `https://standard.aimoaas.com/{X.Y.Z}/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| 日本語 | `https://standard.aimoaas.com/{X.Y.Z}/ja/{path}` | `https://standard.aimoaas.com/{X.Y.Z}/ja/governance/` |
+
+各言語バージョンは自己参照のcanonicalを持ち、他の言語への`hreflang`代替と、英語版を指す`x-default`を含みます。
+
+### バージョン管理とCanonical
+
+AIMO Standardはドキュメントのバージョン管理に[mike](https://github.com/jimporter/mike)を `alias_type: redirect` で使用しています：
+
+| バージョン | URLパターン | Canonical状態 | インデックス可 |
+|-----------|-------------|---------------|----------------|
+| バージョン指定（例：`0.0.1`） | `https://standard.aimoaas.com/0.0.1/` | 特定バージョンの正規 | はい |
+| `latest`（エイリアス） | `https://standard.aimoaas.com/latest/` | 現行リリースへ**リダイレクト** | はい（ターゲット経由） |
+| `dev` | `https://standard.aimoaas.com/dev/` | プレビューのみ | **いいえ**（noindex強制） |
+
+**重要な区別：**
+
+| 側面 | `/X.Y.Z/` | `/latest/` | `/dev/` |
+|------|-----------|------------|---------|
+| 内容 | 固定スナップショット | `/X.Y.Z/`へリダイレクト | mainブランチプレビュー |
+| 可変性 | 不変 | リリース時にポインタ更新 | 継続的 |
+| 監査用 | **はい（推奨）** | はい（固定に解決） | **絶対不可** |
+| SEO | インデックス対象 | ターゲット経由で対象 | noindex |
+
+**alias_type: redirect の動作：**
+
+ファイルをコピーする代わりに、`/latest/` にはリダイレクトページが含まれます：
+
+```html
+
+<meta http-equiv="refresh" content="0; url=../{X.Y.Z}/">
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/">
+```
+
+これにより：
+
+1. **コンテンツのドリフトなし** — `/latest/` は指すリリースと乖離できません。
+2. **重複コンテンツなし** — 検索エンジンは1つの正規ソースを認識。
+3. **アトミックな更新** — エイリアスの変更で全ページを一度に更新。
+
+!!! info "Git タグ vs. サイトパス"
+    Git リリースタグは `v` プレフィックスを使用します（例：`v0.0.1`）が、サイトパスでは `v` を省略します（例：`/0.0.1/`）。これは mike などのドキュメントバージョン管理ツールの標準的な方法です。
+
+## 監査人ガイダンス：引用すべきURL
+
+監査レポート、コンプライアンス文書、または外部参照でAIMO Standardを引用する際：
+
+### 推奨される引用URL
+
+| ユースケース | 推奨URL |
+|--------------|---------|
+| 現行安定版仕様 | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
+| 特定バージョン（監査用） | `https://standard.aimoaas.com/{X.Y.Z}/standard/current/` |
+| ガバナンス & ポリシー | `https://standard.aimoaas.com/{X.Y.Z}/governance/` |
+| Trust Package | `https://standard.aimoaas.com/{X.Y.Z}/governance/trust-package/` |
+
+### 引用すべきでないURL
+
+- ~~`https://billyrise.github.io/aimo-standard/`~~ — 一時的なミラー、正規ではない
+- ~~`https://standard.aimoaas.com/dev/`~~ — 開発版、変更される可能性あり
+
+### 不変性のためのバージョン指定引用
+
+不変の参照が必要な正式監査では、バージョン指定スナップショットURLを使用してください：
+
+```
+https://standard.aimoaas.com/1.0.0/standard/current/01-overview/
+```
+
+バージョン指定スナップショットはリリース時点で凍結され、変更されません。
+
+!!! note "URLフォーマット"
+    サイトパスでは `v` プレフィックスを省略します。バージョン `v1.0.0` の場合、URLでは `/1.0.0/` を使用します。
+
+## 技術的実装
+
+### 生成されるHTMLの例
+
+生成される各HTMLページの`<head>`には、canonicalとhreflangタグが含まれます：
+
+```html
+
+<link rel="canonical" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
+
+<link rel="alternate" hreflang="en" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
+<link rel="alternate" hreflang="ja" href="https://standard.aimoaas.com/{X.Y.Z}/ja/governance/">
+<link rel="alternate" hreflang="x-default" href="https://standard.aimoaas.com/{X.Y.Z}/governance/">
+```
+
+### robots.txt
+
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://standard.aimoaas.com/sitemap.xml
+```
+
+### サイトマップ
+
+サイトマップは`mkdocs-static-i18n`プラグインによって生成され、以下を含みます：
+
+- すべての本番URL
+- 各言語の`hreflang`代替
+
+## noindex 設定
+
+### `/dev/`（プレビュー）— 必須 noindex
+
+`/dev/` バージョンには未リリースのコンテンツが含まれており、以下を防ぐために noindex が必須です：
+
+- 検索エンジンが不安定なコンテンツをインデックスすること
+- ユーザーが検索経由で `/dev/` を見つけて監査で引用すること
+- リリース済みと未リリースのコンテンツの混乱
+
+**実装：**
+
+`deploy-dev.yml` ワークフローがテーマオーバーライド経由で `/dev/` のすべてのページに noindex メタタグを挿入します：
+
+```html
+
+<meta name="robots" content="noindex, nofollow">
+```
+
+### GitHub Pages ミラー — noindex
+
+GitHub Pages（`billyrise.github.io` のミラーサイト）へのデプロイ時、重複インデックスを防ぐためにすべてのページに noindex を設定する必要があります：
+
+```html
+<meta name="robots" content="noindex, nofollow">
+```
+
+これにより、検索エンジンは常に `standard.aimoaas.com` の本番 canonical URL を優先します。
+
+## 検証方法
+
+各ビルド後、以下の方法でcanonical URLを検証できます：
+
+1. **生成されたHTMLの確認** — `mkdocs build`後に`site/`ディレクトリをチェック
+2. **ブラウザDevToolsの使用** — デプロイされたページの`<head>`セクションを検査
+3. **Google Search Console** — どのURLがインデックスされているかを監視
+
+検証コマンドの例：
+
+```bash
+mkdocs build
+grep -r 'rel="canonical"' site/ | head -5
+```
+
+期待される出力は本番URLを表示します。例：
+
+```
+site/index.html:<link rel="canonical" href="https://standard.aimoaas.com/">
+site/governance/index.html:<link rel="canonical" href="https://standard.aimoaas.com/governance/">
+```
+
+## 関連ドキュメント
+
+- [Trust Package](../trust-package/) — 監査対応資料
+- [Releases](../../releases/) — バージョン履歴と変更履歴
+- [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — バージョンポリシー
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/trademarks/ -->
+
+# 商標
+
+本ページでは、AIMO 関連の名称の商標上の取扱いと使用ガイドラインを説明する。
+
+**English notice (key facts):** Only AIMOaaS has been filed for trademark registration by RISEby Inc. (pending; registration not yet granted). "AIMO" is a registered trademark owned by third parties in various jurisdictions (including Japan); RISEby Inc. does not claim ownership. "AIMO Standard" and "Certified AIMO" are not registered by RISEby. "Certified AIMO" is a provisional name; no active certification scheme exists.
+
+正確な商標の帰属・出願状況は上記の English notice を参照してください。RISEby が商標出願しているのは AIMOaaS のみです。
+
+## 表記ガイダンス
+
+商標出願中の期間は以下のルールが適用される：
+
+- **許容**：「商標（出願中）」、「application pending」、TM 記号（任意）
+- **禁止**：「登録商標」、® 記号、登録番号
+
+詳細は完全なポリシーを参照。
+
+## 許可される使用
+
+### 説明的な参照
+
+互換性を説明するために AIMO 商標を使用できる：
+
+- 「AIMO Standard と互換」
+- 「AIMO Standard v0.0.1 を実装」
+- 「AIMO Standard 形式でエビデンスをエクスポート」
+
+**条件**：
+
+1. 仕様のすべての MUST 要件を満たす
+2. 公式バリデータをルール変更なしで通過
+3. 特定のバージョンを明記
+
+### 学術利用
+
+以下で AIMO Standard を引用できる：
+
+- 学術論文
+- 研究出版物
+- 研修資料（帰属表示付き）
+
+引用形式は [引用方法](../cite/) を参照。
+
+## 禁止される使用
+
+| 禁止事項 | 理由 |
+| -------- | ---- |
+| 「AIMO」を製品/会社名として使用 | 混乱を招く |
+| 認証なしに「Certified AIMO」を主張 | 認証プログラムが存在しない |
+| ドメイン名に商標を使用 | 公式リソースと競合 |
+| 公式な推奨を暗示 | ユーザーを誤解させる |
+
+## 適合性の主張
+
+### 主張できること
+
+> 「本製品は AIMO Standard v0.0.1 を実装しています。」
+
+### 主張できないこと
+
+- 「AIMO 認証」（認証プログラムなし）
+- 「公式 AIMO 実装」（メンテナでない限り）
+- 「AIMO Standard 推奨」
+
+## 完全なポリシー
+
+完全な商標ポリシーは [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) を参照。
+
+## 関連ページ
+
+- [ライセンス](../license/) — ライセンス条件
+- [引用方法](../cite/) — 引用ガイダンス
+- [ガバナンス](../) — プロジェクトガバナンス
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/governance/trust-package/ -->
+
+# Trust Package（Assurance Package）
+
+本ページは、監査人・法務・ITセキュリティが採用準備を評価するために必要な最小資料をまとめたハブです。証跡の目次や Coverage 表の詳細は各セクションで管理されています。
+
+## ダウンロード
+
+**[Trust Package PDF のダウンロード（最新リリース）](https://github.com/billyrise/aimo-standard/releases/latest)**
+
+Trust Package PDF は監査人向け資料を1つの文書に集約しています。各 GitHub リリースには以下が含まれます：
+
+- `trust_package.pdf` — 英語版 Trust Package
+- `trust_package.ja.pdf` — 日本語版 Trust Package
+- `aimo-standard-artifacts.zip` — スキーマ、テンプレート、例、Validator ルール
+- `SHA256SUMS.txt` — 検証用チェックサム
+
+## 含まれる内容
+
+- **Conformance**: 適合の主張方法と各レベルの意味 — [Conformance](../../conformance/)
+- **Coverage Map**: 外部標準との対応 — [Coverage Map 索引](../../coverage-map/)、[Coverage Map 方法論](../../coverage-map/methodology/)
+- **Standard**: 規範要件と定義 — [Standard (Current)](../../standard/current/)
+- **Taxonomy**: AI ガバナンスの 8 次元分類 — [Taxonomy](../../standard/current/03-taxonomy/)、[Codes](../../standard/current/04-codes/)、[Dictionary](../../standard/current/05-dictionary/)
+- **Evidence Bundle**: 構造、目次、追跡可能性 — [Evidence Bundle](../../artifacts/evidence-bundle/)
+- **Minimum Evidence Requirements**: ライフサイクル別 MUST チェックリスト — [Minimum Evidence Requirements](../../artifacts/minimum-evidence/)
+- **ISO/IEC 42001 Certification Readiness Toolkit**: ISO 42001 に沿った監査可能証跡への最短経路 — [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/)。ツールキットは準備の支援のみ。認証の判断は認定認証機関が行います。
+- **Validator**: ルールと参照チェック — [Validator](../../validator/)
+- **Examples**: 監査可能なサンプルバンドル — [Examples](../../examples/)
+- **Releases**: 変更履歴と配布 — [Releases](../../releases/)
+- **Governance**: ポリシー、セキュリティ、ライセンス — [Governance](../../governance/)
+
+## 監査準備の最小セット
+
+| 項目 | 参照先 | 成果／証明内容 |
+| --- | --- | --- |
+| 適合レベル | [Conformance](../../conformance/) | 適合の主張方法と必要な証跡の範囲 |
+| Coverage マッピング | [Coverage Map 索引](../../coverage-map/)、[Coverage Map 方法論](../../coverage-map/methodology/) | 外部規制・標準への説明可能性 |
+| Taxonomy & Dictionary | [Taxonomy](../../standard/current/03-taxonomy/)、[Codes](../../standard/current/04-codes/)、[Dictionary](../../standard/current/05-dictionary/) | AI システムの分類（8 次元、91 コード） |
+| 証跡アーティファクト | [Evidence Bundle](../../artifacts/evidence-bundle/)、[Minimum Evidence](../../artifacts/minimum-evidence/)、[EV Template](../../standard/current/06-ev-template/) | 追跡可能性を支える必要データ |
+| Validator チェック | [Validator](../../validator/) | 内部一貫性・完全性の検証方法 |
+| サンプルバンドル | [Examples](../../examples/) | 監査可能パッケージの実例 |
+| 変更管理 | [Releases](../../releases/)、[Governance](../../governance/) | 更新の管理・共有方法 |
+| セキュリティ／ライセンス／商標 | [Governance](../../governance/) | 採用判断のための法的・セキュリティ姿勢 |
+
+## 引用方法
+
+引用のガイダンスと文脈はリポジトリの README を、権威あるポリシーへのリンクは Governance を参照してください。
+[README.md](https://github.com/billyrise/aimo-standard/blob/main/README.md) および [Governance](../../governance/) を参照。
+
+## Artifacts zip の内容
+
+`aimo-standard-artifacts.zip` には以下が含まれます：
+
+- **Taxonomy (SSOT)**: `source_pack/03_taxonomy/` — 辞書 CSV（91 コード）、YAML、コード体系
+- **JSON Schemas**: `schemas/jsonschema/` — 機械可読な検証スキーマ
+- **Templates**: `templates/ev/` — 証跡レコードテンプレート（JSON + Markdown）
+- **Examples**: `examples/` — 迅速な採用のための最小サンプルバンドル
+- **Coverage Map**: `coverage_map/coverage_map.yaml` — 外部標準との対応
+- **Validator Rules**: `validator/rules/` — 検証ルール定義
+- **Governance ドキュメント**: `VERSIONING.md`, `GOVERNANCE.md`, `SECURITY.md`, `LICENSE.txt` 等
+
+## 責任の境界
+
+Trust Package は**保証・監査引き継ぎ**の入口です：監査人と採用者向けの資料を集約しています。AIMO Standard は構造化証跡フォーマットと説明可能性の枠組みを提供しますが、**認証、適合保証、法務助言、監査の実施は行いません**。認証・適合の判断は認定認証機関、監査人、採用組織にあります。
+
+スコープの定義、前提、採用者責任の詳細は [Responsibility Boundary](../responsibility-boundary/) および [Conformance](../../conformance/) を参照してください。
+
+## 提出パッケージの準備方法
+
+監査可能な提出物を準備するには、次の手順に従ってください。
+
+1. **Evidence Bundle の生成**: [Evidence Bundle](../../artifacts/evidence-bundle/) および [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) に従い、EV レコード、Dictionary、Summary、Change Log を作成してください。ISO 42001 を意識した準備については [ISO 42001 Certification Readiness Toolkit](../../artifacts/iso-42001-certification-readiness-toolkit/) を参照してください。
+2. **Validator の実行**: `python validator/src/validate.py bundle/root.json` を実行して構造の一貫性を確認してください。エラーがあれば修正してから先に進んでください。
+3. **チェックサムの作成**: 提出する全ファイルの SHA-256 チェックサムを生成してください：
+
+    === "Linux"
+
+        ```bash
+        sha256sum *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "macOS"
+
+        ```bash
+        shasum -a 256 *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "Windows (PowerShell)"
+
+        ```powershell
+        Get-ChildItem *.json, *.pdf | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+            "$hash  $($_.Name)"
+        } | Out-File SHA256SUMS.txt -Encoding UTF8
+        ```
+4. **アーティファクトのパッケージ化**: Evidence Bundle の zip アーカイブを作成してください：
+   ```bash
+   zip -r evidence_bundle.zip bundle_directory/
+   ```
+5. **リリースバージョンの参照**: バンドルが対応する AIMO Standard のバージョン（例: `v1.0.0`）を明記してください。
+6. **提出**: zip、チェックサム、バージョン参照を監査人またはコンプライアンス担当に提供してください。
+
+リリース資産と検証については [Releases](../../releases/) を参照してください。
+
+## 過大主張禁止
+
+!!! warning "重要：認証・保証・法規適合の主張は行いません"
+    - AIMO Standard は**証跡のパッケージングと検証のフォーマット**を定義します。法令や標準への適合を認証するものではありません。
+    - 監査・保証の意見は、独立した監査人と採用組織の責任です。
+    - **適切な主張**: 「Evidence Bundle は AIMO Standard v0.1.2 に従って作成され、AIMO Validator により構造検証されました。」
+    - **不適切な主張**: 「EU AI Act 適合」「ISO 42001 認証取得」「政府承認」等。
+
+スコープ、前提、採用者責任の詳細は [Responsibility Boundary](../responsibility-boundary/) を参照してください。
+
+## 監査人向け：検証手順
+
+証跡の提出物を受け取った際は、次の手順で整合性と構造を検証してください。
+
+!!! success "ビルド出所の提供"
+    すべてのリリース資産には暗号署名付きのビルド attestation が含まれます。attestation の検証手順は [Verification Procedure](../../standard/versions/#4-verify-build-provenance-attestation) を参照してください。
+
+### Step 1: チェックサムの検証（SHA-256）
+
+=== "Linux"
+
+    ```bash
+    # 提出物とともに SHA256SUMS.txt をダウンロードまたは受け取る
+    # 全ファイルが記録されたチェックサムと一致することを確認
+    sha256sum -c SHA256SUMS.txt
+
+    # または個別ファイルを手動で検証：
+    sha256sum evidence_bundle.zip
+    # 出力を SHA256SUMS.txt の値と比較
+    ```
+
+=== "macOS"
+
+    ```bash
+    # 全ファイルが記録されたチェックサムと一致することを確認
+    shasum -a 256 -c SHA256SUMS.txt
+
+    # または個別ファイルを手動で検証：
+    shasum -a 256 evidence_bundle.zip
+    # 出力を SHA256SUMS.txt の値と比較
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # 個別ファイルの検証
+    Get-FileHash .\evidence_bundle.zip -Algorithm SHA256
+
+    # Hash の出力を SHA256SUMS.txt と比較
+    Get-Content .\SHA256SUMS.txt
+    ```
+
+いずれかのチェックサムが失敗した場合は、提出物を却下するか再提出を求めてください。
+
+### Step 2: バンドル構造の検証（Validator）
+
+**前提**（初回のみ）：
+
+```bash
+# 公式 AIMO Standard リリースをクローン
+git clone https://github.com/billyrise/aimo-standard.git
+cd aimo-standard
+
+# 重要: 提出物に記載されたバージョンと一致させる
+# VERSION を提出者が申告したバージョン（例: v0.0.1）に置き換える
+VERSION=v0.0.1  # ← 提出物のバージョンに合わせる
+git checkout "$VERSION"
+
+# Python 環境のセットアップ
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+!!! warning "バージョン一致"
+    提出物に記載された AIMO Standard のバージョンを必ず使用してください。異なるバージョンではスキーマやルールの違いにより検証結果が一致しない場合があります。
+
+**検証の実行**:
+
+```bash
+# 提出されたバンドルを展開
+unzip evidence_bundle.zip -d bundle/
+
+# バンドルの root.json に対して Validator を実行
+python validator/src/validate.py bundle/root.json
+
+# 想定出力: "validation OK" またはエラー一覧
+```
+
+**例**（同梱サンプル使用）:
+
+```bash
+python validator/src/validate.py examples/evidence_bundle_minimal/root.json
+```
+
+Validator は以下をチェックします：
+
+- 必須ファイルの存在（EV レコード、Dictionary）
+- JSON がスキーマに準拠していること
+- 相互参照（request_id、review_id 等）が有効であること
+- タイムスタンプが存在し適切にフォーマットされていること
+
+### Step 3: バージョン整合の確認
+
+提出物が公式 AIMO Standard リリースを参照していることを確認してください：
+
+1. 記載されたバージョン（例: `v0.0.1`）が [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認する
+2. 提出されたスキーマをリリース資産と比較する
+3. 公式リリースからの相違があれば記録する
+
+### 確認ポイント
+
+| チェック | 合格基準 | 不合格時の対応 |
+| --- | --- | --- |
+| チェックサム一致 | すべての `sha256sum -c` が成功 | 却下または再提出依頼 |
+| Validator 成功 | `validate.py` からエラーなし | 受領前に修正を依頼 |
+| バージョン存在 | GitHub にリリースタグが存在 | バージョン整合を確認 |
+| 必須フィールド | EV レコードに id、timestamp、source、summary がある | 完成を依頼 |
+| 追跡可能性 | 相互参照が正しく解決する | リンク修正を依頼 |
+
+!!! info "監査人の独立性"
+    検証の独立性のため、Validator とスキーマは提出者ではなく公式 AIMO Standard リリースから直接取得してください。
+
+## 監査の流れ
+
+このページから推奨される監査の流れは以下のとおりです。
+
+1. **分類体系**: [Taxonomy](../../standard/current/03-taxonomy/) + [Dictionary](../../standard/current/05-dictionary/) — 8 次元コード体系の理解
+2. **証跡構造**: [Evidence Bundle](../../artifacts/evidence-bundle/) — バンドル目次と追跡可能性の理解
+3. **必要証跡**: [Minimum Evidence Requirements](../../artifacts/minimum-evidence/) — ライフサイクル別 MUST チェックリスト
+4. **フレームワーク対応**: [Coverage Map](../../coverage-map/) + [Methodology](../../coverage-map/methodology/) — AIMO と外部フレームワークの対応
+5. **検証**: [Validator](../../validator/) — 構造一貫性チェックの実行
+6. **ダウンロード**: [Releases](../../releases/) — リリース資産の取得とチェックサム検証
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/releases/ -->
+
+# リリース（Releases）
+
+本セクションは、バージョン付きリリース、changelog、移行、配布アーティファクトのハブです。
+
+## 最新リリースのダウンロード
+
+**[GitHub Releases](https://github.com/billyrise/aimo-standard/releases/latest)** — これが「latest」リリースの単一の真実の情報源です。サイトの `/latest/` は同じバージョンへリダイレクトします。
+
+## 検証手順（恒久ページ）
+
+監査人向けの**検証手順**（資産のダウンロード、チェックサム検証、ビルド来歴証明）は PDF に限定されず、恒久の Web ページでも参照できます。
+
+- **[Standard → Versions → 検証手順](../standard/versions/)** — Linux/macOS/Windows でのステップごとのチェックサム検証とビルド来歴証明
+
+監査成果物で検証手順を記載する際はこのページを参照してください。
+
+## リリースアセット
+
+各公式リリース（`vX.Y.Z` タグ）には以下が含まれます：
+
+| アセット | 説明 |
+| --- | --- |
+| `trust_package.pdf` | 英語版 Trust Package — 監査対応の保証資料 |
+| `trust_package.ja.pdf` | 日本語版 Trust Package |
+| `aimo-standard-artifacts.zip` | スキーマ、テンプレート、サンプル、バリデータルール |
+| `SHA256SUMS.txt` | 全アセットの SHA-256 チェックサム |
+
+### ダウンロードの検証
+
+ダウンロード後、チェックサムでファイルの整合性を検証できます：
+
+=== "Linux"
+
+    ```bash
+    # チェックサムファイルをダウンロード
+    curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+
+    # 特定のファイルを検証
+    sha256sum -c SHA256SUMS.txt --ignore-missing
+
+    # または手動で検証：
+    sha256sum trust_package.pdf
+    # 出力を SHA256SUMS.txt と比較
+    ```
+
+=== "macOS"
+
+    ```bash
+    # チェックサムファイルをダウンロード
+    curl -LO https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt
+
+    # 特定のファイルを検証
+    shasum -a 256 -c SHA256SUMS.txt
+
+    # または手動で検証：
+    shasum -a 256 trust_package.pdf
+    # 出力を SHA256SUMS.txt と比較
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # チェックサムファイルをダウンロード
+    Invoke-WebRequest -Uri "https://github.com/billyrise/aimo-standard/releases/latest/download/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+
+    # 特定のファイルを検証
+    Get-FileHash .\trust_package.pdf -Algorithm SHA256
+
+    # Hash 出力を SHA256SUMS.txt と比較
+    Get-Content .\SHA256SUMS.txt
+    ```
+
+## Artifacts Zip の内容
+
+`aimo-standard-artifacts.zip` には以下が含まれます：
+
+- `schemas/jsonschema/*` — 検証用 JSON スキーマ
+- `templates/ev/*` — エビデンステンプレート（JSON + Markdown）
+- `examples/*` — サンプルエビデンスバンドル
+- `coverage_map/coverage_map.yaml` — 外部標準へのマッピング
+- `validator/rules/*` — 検証ルール定義
+- `VERSIONING.md`、`GOVERNANCE.md`、`SECURITY.md` など
+
+## リソース
+
+- **バージョン履歴テーブル**: [Standard > Versions](../standard/versions/) — 全リリースアセット（PDF、ZIP、SHA256）への直接リンク付きバージョンテーブル
+- **Changelog（仕様）**: [Standard > Current > Changelog](../standard/current/08-changelog/) — 規範・非規範の変更履歴。
+- **リリースプロセス**: タグ `vX.Y.Z`、CI ビルド、`dist/` 下の PDF、チェックサム、GitHub Release アセット。リポジトリの [GOVERNANCE.md](https://github.com/billyrise/aimo-standard/blob/main/GOVERNANCE.md) および [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照。
+- **移行ガイド**: [MIGRATION.md](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) — 破壊的変更のアップグレードパス。
+
+ガバナンスとバージョニングポリシーは [Governance](../governance/) を参照。
+
+## 提出パッケージの準備
+
+監査提出用の証跡を準備する際：
+
+1. **Evidence Bundle の作成**: [Evidence Bundle](../artifacts/evidence-bundle/) と [Minimum Evidence Requirements](../artifacts/minimum-evidence/) に従い、EV レコード、Dictionary、Summary、Change Log を作成する。
+2. **Validator の実行**: `python validator/src/validate.py bundle/root.json` を実行して構造整合性を確認する。エラーはすべて修正する。
+3. **チェックサムの生成**: 検証用の SHA-256 チェックサムを作成する：
+
+    === "Linux"
+
+        ```bash
+        sha256sum *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "macOS"
+
+        ```bash
+        shasum -a 256 *.json *.pdf > SHA256SUMS.txt
+        ```
+
+    === "Windows (PowerShell)"
+
+        ```powershell
+        Get-ChildItem *.json, *.pdf | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
+            "$hash  $($_.Name)"
+        } | Out-File SHA256SUMS.txt -Encoding UTF8
+        ```
+4. **パッケージ化**: バンドルディレクトリの zip アーカイブを作成する。
+5. **バージョン整合の記録**: 証跡が整合する AIMO Standard リリース（例：`v1.0.0`）を記録する。
+6. **提出**: パッケージ、チェックサム、バージョン参照を監査人に提供する。
+
+完全な準備ガイドは [Trust Package](../governance/trust-package/) を参照。
+
+## 監査人向け：検証手順
+
+証跡提出物を受領した監査人は、完全性と構造を検証すべきである：
+
+1. **チェックサム検証**: チェックサム検証（Linux: `sha256sum -c`、macOS: `shasum -a 256 -c`、Windows: `Get-FileHash`）を実行してファイルの完全性を確認
+2. **バリデータ実行**: `python validator/src/validate.py bundle/root.json` を実行して構造を確認
+3. **バージョン確認**: 記載された AIMO Standard バージョンが [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) に存在することを確認
+
+!!! tip "ツールを独立に取得"
+    監査人はバリデータとスキーマを、提出者からではなく、公式 AIMO Standard リリースから直接ダウンロードすべきである。
+
+完全な検証手順（チェックサム、証明、ステップごと）は **[Standard → Versions → 検証手順](../standard/versions/)** を参照。監査対応資料は [Trust Package](../governance/trust-package/) も参照。
+
+## 非過剰主張ステートメント
+
+!!! warning "重要"
+    AIMO Standard は**説明可能性と証跡準備**を支援する。法的助言の提供、適合の保証、いかなる規制・フレームワークへの適合認証も**行わない**。採用者は権威ある条文と照合し、適切に専門家の助言を得ること。
+
+スコープ、前提条件、採用者責任は [責任境界](../governance/responsibility-boundary/) を参照。
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/contributing/localization/ -->
+
+# ローカライゼーションガイド
+
+本ページでは、AIMO Standard ドキュメントのローカライゼーション（i18n）構造、メンテナンスワークフロー、SSOT（Single Source of Truth）原則について説明します。
+
+## 言語純度ポリシー
+
+**各言語ページはその言語のコンテンツのみを含むべきです。**
+
+| ルール | 説明 |
+| --- | --- |
+| **ENページ** | CJK文字や言語固有カラム（`_ja`サフィックス等）への参照を含まない |
+| **JAページ** | EN固有の用語を正規構造として説明しない |
+| **例外** | `tooling/checks/lint_i18n.py` の `MIXED_LANGUAGE_ALLOWLIST` に記載 |
+
+このポリシーにより：
+1. 読者は選択した言語のみを見る
+2. 新言語追加時に既存ページを更新する必要がない
+3. CIが自動的に違反を検出できる
+
+## 言語構造
+
+AIMO Standard ドキュメントは**フォルダベースの i18n 構造**を採用しています：
+
+```
+docs/
+├── en/           # 英語（正本）
+├── ja/           # 日本語（日本語）
+├── es/           # スペイン語（Español）
+├── fr/           # フランス語（Français）
+├── de/           # ドイツ語（Deutsch）
+├── pt/           # ポルトガル語（Português）
+├── it/           # イタリア語（Italiano）
+├── zh/           # 簡体字中国語（简体中文）
+├── zh-TW/        # 繁体字中国語（繁體中文）
+└── ko/           # 韓国語（한국어）
+```
+
+- **英語が正本（canonical）**: `docs/en/` フォルダがドキュメントコンテンツの正式なソースです。
+- **他の言語は構造を反映**: 各言語フォルダ（`ja/` 等）は `en/` と同じファイル構造を維持します。
+- **同一ファイル名**: すべての言語で `.md` 拡張子を使用（ファイル名に言語サフィックスなし）。
+- **英語へのフォールバック**: 翻訳がないページは自動的に英語コンテンツにフォールバックします。
+
+## タクソノミーデータモデル
+
+タクソノミーは**言語中立のcanonical構造**と個別の翻訳パックを使用します：
+
+```
+data/
+└── taxonomy/
+    ├── canonical.yaml           # 言語中立（コード、ステータス、ライフサイクル）
+    └── i18n/
+        ├── en.yaml              # 英語ラベルと定義
+        ├── ja.yaml              # 日本語ラベルと定義
+        └── {lang}.yaml          # 追加言語（空のテンプレート）
+```
+
+### Canonical構造 (`canonical.yaml`)
+
+言語中立のデータを含みます：
+
+- コード識別子（例: `FS-001`, `UC-001`）
+- ステータス（`active`, `deprecated`, `removed`）
+- ライフサイクルメタデータ（`introduced_in`, `deprecated_in`, `removed_in`, `replaced_by`）
+- スコープノートと例（技術的参照として英語）
+
+### 翻訳パック (`i18n/*.yaml`)
+
+各言語パックには以下が含まれます：
+
+- 次元名（例: "Functional Scope" / "機能スコープ"）
+- コードラベル（例: "End-user Productivity" / "社内生産性"）
+- コード定義
+
+**フォールバック**: 翻訳がない場合、システムは英語を使用します。
+
+## SSOT原則
+
+AIMOはタクソノミーデータに**SSOT-firstアーキテクチャ**を採用しています：
+
+| アセットタイプ | SSOT場所 | 説明 |
+| --- | --- | --- |
+| **タクソノミー（構造）** | `data/taxonomy/canonical.yaml` | 言語中立構造（SSOT） |
+| **タクソノミー（i18n）** | `data/taxonomy/i18n/*.yaml` | 言語別翻訳（SSOT） |
+| **カバレッジマップ** | `coverage_map/coverage_map.yaml` | フレームワークと証跡のマッピング |
+| **スキーマ** | `schemas/jsonschema/` | JSON検証スキーマ |
+
+### 派生ファイル
+
+以下のファイルはSSOTから**生成**されるため、手動編集禁止です：
+
+| ファイル | 生成元 | ジェネレータ |
+| --- | --- | --- |
+| `artifacts/taxonomy/{version}/{lang}/taxonomy_dictionary.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/legacy/taxonomy_dictionary_v0.1.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_en.yaml` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_ja.yaml` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/code_system.csv` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/dimensions_en_ja.md` | canonical + i18n | `build_artifacts.py` |
+| `source_pack/03_taxonomy/taxonomy_dictionary.json` | canonical + i18n | `build_artifacts.py` |
+
+### 言語コード（BCP47）
+
+AIMOはBCP47言語コードを採用しています：
+
+| コード | 言語 | ステータス |
+| --- | --- | --- |
+| `en` | English | 正本（ソース） |
+| `ja` | 日本語 | アクティブ |
+| `es` | Español（スペイン語） | アクティブ |
+| `fr` | Français（フランス語） | アクティブ |
+| `de` | Deutsch（ドイツ語） | アクティブ |
+| `pt` | Português（ポルトガル語） | アクティブ |
+| `it` | Italiano（イタリア語） | アクティブ |
+| `zh` | 简体中文（簡体字中国語） | アクティブ |
+| `zh-TW` | 繁體中文（繁体字中国語） | アクティブ |
+| `ko` | 한국어（韓国語） | アクティブ |
+
+### レガシーCSVファイル（凍結）
+
+`source_pack/03_taxonomy/legacy/` にあるレガシー英日混在CSVファイルは：
+
+- **21列で凍結** — 新しい言語列は追加されません
+- **後方互換性のため維持** — 既存の連携は引き続き使用可能
+- **CIで強制** — `label_es`, `definition_de` などを追加するとビルドが失敗します
+
+新しい言語には `artifacts/taxonomy/{version}/{lang}/` の言語別アーティファクトを使用してください。
+
+## 翻訳鮮度トラッキング
+
+AIMOは英語（ソース）と翻訳コンテンツの整合性を維持するための**翻訳鮮度トラッキング**システムを使用しています。
+
+### 仕組み
+
+1. 各翻訳ファイルには、どのバージョンの英語ソースから翻訳されたかを追跡するメタデータが含まれます
+2. 英語コンテンツが更新されると、システムが古くなった翻訳を検出します
+3. CIは古い翻訳について警告しますが、ブロックはしません（翻訳は遅れても問題ありません）
+
+### 翻訳メタデータ
+
+翻訳ファイルにはフロントマターメタデータが含まれます：
+
+```yaml
+---
+# TRANSLATION METADATA - DO NOT REMOVE
+source_file: en/standard/current/01-overview.md
+source_hash: abc123def456
+translation_date: 2026-02-02
+translator: human|machine|hybrid
+translation_status: current|outdated|needs_review
+---
+```
+
+### 翻訳状態マーカー（隠し要素）
+
+全 doc ページのソースには、**隠し HTML コメント**（フロントマター直後）が含まれ、英語正本か翻訳済み／未翻訳かをスクリプトで判別できます。サイトの表示には出ません。
+
+| 値 | 意味 |
+| --- | --- |
+| `` | 英語正本ページ（`docs/en/`）。 |
+| `` | 当該ロケールは英語ソースの翻訳済み。 |
+| `` | 当該ロケールのファイルはあるが内容は英語のコピーで、翻訳待ち。 |
+
+**使い方**
+
+- 未翻訳ページ一覧: `grep -r "aimo:translation_status=untranslated" docs/`
+- 新言語・新ページ追加時は `python tooling/i18n/add_translation_markers.py` でマーカーを挿入・修正。`--strict` で本文先頭 400 文字を英語と比較して未翻訳を検出。
+- 翻訳完了後はマーカーを `translated` にすること（またはスクリプトを再実行して更新）。
+
+### 同期ツールの使用方法
+
+```bash
+# すべての翻訳の鮮度をチェック
+python tooling/i18n/sync_translations.py --check
+
+# 特定の言語をチェック
+python tooling/i18n/sync_translations.py --check --lang ja
+
+# 翻訳レポートを生成
+python tooling/i18n/sync_translations.py --report
+
+# 新しい言語を初期化（ENをベースとしてコピー）
+python tooling/i18n/sync_translations.py --init-lang es
+
+# 翻訳完了後にメタデータを更新
+python tooling/i18n/sync_translations.py --update-meta docs/ja/index.md
+```
+
+詳細な技術仕様については、`tooling/i18n/TRANSLATION_SYNC_SPEC.md` を参照してください。
+
+## 更新ワークフロー
+
+### タクソノミーの更新（新しいSSOT-Firstワークフロー）
+
+1. `data/taxonomy/` のSSOTを編集:
+   - 構造変更 → `canonical.yaml`
+   - 英語翻訳 → `i18n/en.yaml`
+   - 日本語翻訳 → `i18n/ja.yaml`
+2. 検証を実行: `python tooling/checks/lint_taxonomy_ssot.py`
+3. 全派生ファイルを再生成: `python tooling/taxonomy/build_artifacts.py --version current --langs en ja`
+4. 必要に応じてドキュメントページを更新
+5. すべての変更をまとめてコミット
+
+### カバレッジマップの更新
+
+1. `coverage_map/coverage_map.yaml`（SSOT）を編集
+2. 対応するフレームワークページの表を更新（`docs/en/coverage-map/*.md`）
+3. 日本語訳を更新（`docs/ja/coverage-map/*.md`）
+4. すべての変更をまとめてコミット
+
+### ドキュメントの更新
+
+1. 英語ソース（`docs/en/...`）を編集
+2. 必要に応じて翻訳を更新（または後で更新としてマーク）
+3. `python tooling/i18n/sync_translations.py --check` を実行して古い翻訳を確認
+4. `python tooling/checks/lint_i18n.py` を実行して見出し整合性を確認
+5. `mkdocs build --strict` を実行してビルドを確認
+6. すべての変更をまとめてコミット
+
+!!! tip "前リリースの翻訳を流用して工数を抑える"
+    新リリース（例: v0.1.2）の**翻訳漏れ**を直すときは、**必ず前リリース（例: v0.1.1）の内容を確認**してください：
+    1. 前リリースの翻訳ファイルを取得：`git show v0.1.1:docs/ja/governance/trust-package.md`
+    2. 英語ソースが**同じか軽微な変更のみ**（リンクパスや1セクション追加など）なら、**前リリースの翻訳をコピー**し、**差分だけ**適用（リンクパスの更新、新段落、frontmatter）。
+    3. 英語の内容が大きく変わった場合のみ、ゼロから翻訳し直してください。
+    これにより翻訳工数を最小限にし、既存の表現を活かせます。
+
+!!! note "翻訳の優先度"
+    すべての翻訳をすぐに更新する必要はありません。Tier 1（重要）ページを優先してください：
+    
+    - `index.md`
+    - `standard/current/*.md`
+    - `governance/index.md`
+    - `releases/`
+
+## 新言語の追加（5ステップ）
+
+新しい言語（例：スペイン語）を追加するには：
+
+### ステップ1: タクソノミーパックを生成
+
+```bash
+python tooling/taxonomy/build_i18n_taxonomy.py --add-lang es --lang-name "Español"
+```
+
+英語参照をコメントとして含む `data/taxonomy/i18n/es.yaml` が作成されます。
+
+### ステップ2: ドキュメントフォルダを作成
+
+```bash
+mkdir -p docs/es && cp -r docs/en/* docs/es/
+```
+
+### ステップ3: mkdocs.ymlを更新
+
+```yaml
+plugins:
+  - i18n:
+      languages:
+        - locale: es
+          name: Español
+          build: true
+```
+
+### ステップ4: 翻訳
+
+- `data/taxonomy/i18n/es.yaml` を翻訳
+- `docs/es/` のファイルを翻訳
+
+### ステップ5: 検証
+
+```bash
+python tooling/checks/lint_i18n.py && mkdocs build --strict
+```
+
+!!! success "完了"
+    新言語は `/dev/es/` で利用可能になります
+
+## ファイル命名規則
+
+| パターン | 例 | 説明 |
+| --- | --- | --- |
+| `index.md` | `docs/ja/governance/index.md` | セクションランディングページ |
+| `{topic}.md` | `docs/ja/governance/trust-package.md` | トピックページ |
+| `{NN}-{topic}.md` | `docs/ja/standard/current/03-taxonomy.md` | 番号付き仕様ページ |
+
+## 品質チェック
+
+コミット前に以下のチェックを実行：
+
+```bash
+# i18n構造、見出し整合性、旧フレーズ検出
+python tooling/checks/lint_i18n.py
+
+# スキーマとマニフェストのlint
+python tooling/checks/lint_schema.py
+python tooling/checks/lint_manifest.py
+
+# タクソノミーSSOT lint
+python tooling/checks/lint_taxonomy_ssot.py --required-langs en
+python tooling/checks/lint_legacy_csv.py
+python tooling/checks/lint_taxonomy_dictionary.py
+python tooling/checks/lint_taxonomy_json.py
+
+# タクソノミーアーティファクトが最新か確認
+python tooling/taxonomy/build_artifacts.py --check
+
+# ビルド確認
+mkdocs build --strict
+```
+
+## 関連ページ
+
+- [Releases](../../releases/) — ダウンロード可能なパッケージ
+- [Governance](../../governance/) — プロジェクトガバナンス
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/current/00-versioning-reference-policy/ -->
+
+# バージョニング・参照方針（Versioning & Reference Policy）
+
+本ページはドキュメント URL の**運用規約**を定義する。第三者（監査人・実装者・ツール）は、これらのルールに従って URL を解釈すること（MUST）。
+
+## 規範的 URL の意味
+
+| URL パターン | 意味 | MUST |
+|--------------|------|------|
+| **`/X.Y.Z/`**（例: `/0.0.3/`） | **不変リリース** — 凍結スナップショット。リリース後は内容を変更しない。 | 監査引用・再現可能な参照に使用する。公開後、`/X.Y.Z/` は**書き換えない**。 |
+| **`/latest/`** | **最新の安定版のみ。** 直近の**リリース済み**バージョンへのエイリアス（リダイレクト）。 | タグ付きリリースのみを指すこと。開発版・PR プレビュー・`/dev/` を指してはならない。 |
+| **`/dev/`** | **開発版（不安定）。** main ブランチのプレビュー。内容はいつでも変更され得る。 | 監査提出・引用に使用してはならない。参照・再現性には `/latest/` または `/X.Y.Z/` を使用すること。 |
+
+## ルール（MUST）
+
+1. **`/X.Y.Z/` は不変とする。**  
+   リリース済みバージョンのディレクトリはリリース時に凍結する。そのパスへの追記・修正・差し替えは行わない。修正が必要な場合は新バージョンをリリースする（例: `X.Y.Z+1`）。
+
+2. **`/latest/` は「最新の安定版」のみを指す。**  
+   `/latest/` は、現在の**タグ付き**リリース（例: GitHub Releases の「latest」タグが指すバージョン）へリダイレクトすること（MUST）。開発ビルド・PR プレビュー・未リリース内容を提供してはならない。
+
+3. **`/dev/` は開発版（不安定）である。**  
+   `/dev/` は現在の main ブランチを反映し、明示的に**未リリース**とする。監査での引用・提出に使用してはならない。サイトは `/dev/` に noindex や「開発プレビュー」の表示を行い、誤用を防いでもよい。
+
+4. **`/latest/` の更新はリリース手順に従う。**  
+   `/latest/` エイリアスは**公式リリース手順によってのみ**更新する。その手順では以下を満たすこと（MUST）:
+   - **バージョンタグ**（例: `vX.Y.Z`）のプッシュでトリガーすること；
+   - デプロイ前に品質ゲート（テスト・リント）を実行すること；
+   - バージョン付きドキュメントを `/X.Y.Z/` にデプロイすること；
+   - `latest` エイリアスをその `/X.Y.Z/` に設定・更新すること（例: `mike set-default latest` 等）；
+   - 対応する GitHub Release を作成し、アセット（PDF・成果物・チェックサム等）を添付すること。
+
+   `main` への通常のプッシュ（バージョンタグなし）では `/latest/` を変更してはならない。`/dev/` の更新のみ可とする。
+
+## 監査向け要約
+
+- **正規・再現可能な引用:** `https://standard.aimoaas.com/X.Y.Z/`（例: `0.0.3`）を使用し、バージョンおよび必要に応じて [GitHub Release](https://github.com/billyrise/aimo-standard/releases) のリリースタグ・コミットを記録すること。
+- **一般的な参照:** `/latest/` は現行の安定リリースへリダイレクトするため許容される。
+- **引用しないこと:** `/dev/` — 開発用であり、監査・提出には使用しない。
+
+## 関連
+
+- [Versions（バージョン一覧）](../versions/index.md) — バージョン履歴、「latest」の SSOT、検証手順
+- [Changelog](08-changelog.md) — 規範的変更履歴
+- [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) — 完全なバージョニング方針とリリースフロー
+- [Release workflow](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml) — タグ付けにより `/latest/` が更新され `/X.Y.Z/` がデプロイされる手順
+
+
+---
+<!-- page: https://standard.aimoaas.com/latest/ja/standard/versions/ -->
+
+# バージョン一覧
+
+公式リリースは固定されたスナップショットとして、監査対応PDFおよび機械可読アーティファクトとともに公開されます。
+
+## 最新リリース
+
+!!! success "現在のバージョン"
+    **v0.1.2** (2026-02-13) — [ドキュメントを見る](../current/) | [GitHub Release](https://github.com/billyrise/aimo-standard/releases/tag/v0.1.2)
+
+## バージョン履歴
+
+| バージョン | 日付 | リリースノート | PDF (EN) | PDF (JA) | アーティファクト | チェックサム |
+| :--------- | :--- | :------------- | :------- | :------- | :--------------- | :----------- |
+| **v0.1.2** | 2026-02-13 | [Changelog](../current/08-changelog/#version-012) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.2/SHA256SUMS.txt) |
+| **v0.1.1** | 2026-02-04 | [Changelog](../current/08-changelog/#version-011) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.1/SHA256SUMS.txt) |
+| **v0.1.0** | 2026-02-03 | [Changelog](../current/08-changelog/#version-010) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.1.0/SHA256SUMS.txt) |
+| **v0.0.3** | 2026-02-02 | [Changelog](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.3/SHA256SUMS.txt) |
+| **v0.0.2** | 2026-02-02 | [Changelog](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.2/SHA256SUMS.txt) |
+| **v0.0.1** | 2026-02-02 | [Changelog](../current/08-changelog/) | [trust_package.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.pdf) | [trust_package.ja.pdf](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/trust_package.ja.pdf) | [ZIP](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/aimo-standard-artifacts.zip) | [SHA256](https://github.com/billyrise/aimo-standard/releases/download/v0.0.1/SHA256SUMS.txt) |
+
+!!! note "データソース"
+    このバージョンテーブルは [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) と同期しています。各リリースタグ（`vX.Y.Z`）は仕様の固定スナップショットに対応します。
+
+## /latest とバージョン付き URL — 誤引用を防ぐ
+
+| URL | 用途 | 監査・証跡 |
+|-----|------|------------|
+| **`/X.Y.Z/`**（例：`/0.1.1/`） | 固定スナップショット；変更されない。 | 監査引用・再現可能な証跡には**必須**で使用。 |
+| **`/latest/`** | 現行リリースへのリダイレクト；新タグリリース時に更新。 | 参照用；監査証跡としては**非推奨**（指し先が変わるため）。 |
+
+**「latest」の正式な定義**は [GitHub Releases](https://github.com/billyrise/aimo-standard/releases) の **latest** タグです。サイトの `/latest/` はそのリリースへリダイレクトします。**リリースワークフロー**（タグ push で起動）のみが `/latest/` を更新します。詳細は [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照してください。
+
+| ソース | 役割 |
+|--------|------|
+| **GitHub Release の latest タグ** | SSOT — 「現行リリース」の唯一の定義 |
+| **バージョンテーブル**（本ページ） | リリースワークフローでリリースと同期。デプロイ前にタグと一致している必要あり |
+| **Changelog** | 規範的な変更履歴。リリースノートが参照 |
+| **サイトの `/latest/`** | GitHub Release の latest と同じバージョンへリダイレクト |
+
+リリース手順の詳細は [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) および [release ワークフロー](https://github.com/billyrise/aimo-standard/blob/main/.github/workflows/release.yml) を参照してください。バージョンテーブルと Changelog はリリース準備の一環で更新され、デプロイ済みバージョンと常に一致します。
+
+## 法的・商標に関する注意
+
+商標の帰属・使用（「AIMO」が第三者の登録商標であること、RISEby が商標出願しているのは AIMOaaS のみであることを含む）は [Governance → 商標](../../governance/trademarks/) およびリポジトリの [TRADEMARKS.md](https://github.com/billyrise/aimo-standard/blob/main/TRADEMARKS.md) に記載しています。最新の商標・法的注意は、最新リリースのドキュメントまたは上記 TRADEMARKS.md を参照してください。
+
+## 監査人向け：正規 URL とバージョン固定
+
+監査報告書で特定バージョンを引用し、再現性を確保するには：
+
+1. **正規 URL**：そのバージョンの固定ドキュメント URL を使用（例：`https://standard.aimoaas.com/0.1.1/`。使用したバージョンで `0.0.3` を置き換え）。**v0.1.1 以降**：監査証跡では `/latest/` よりバージョン付き URL（例：`https://standard.aimoaas.com/0.1.1/`）の引用を推奨し、スナップショットの曖昧さを避けてください。
+2. **バージョン固定**：[GitHub Release](https://github.com/billyrise/aimo-standard/releases) ページの**リリースタグ**（例：`v0.1.1`）および任意で**コミットハッシュ**を記録。これにより、仕様スナップショットがリリース資産（PDF、ZIP、チェックサム）と一致することを独立に検証できます。
+3. **エビデンスの整合**：提出物に、準拠した AIMO Standard のバージョン（例：`v0.1.1`）を明記し、バリデータとスキーマは同一リリースから取得してください。
+
+## バージョン層
+
+AIMO Standard では三つのバージョン概念を使用します。現行リリースでは一致していますが、将来のリリースでは独立してバージョン管理する場合があります。
+
+| 層 | 説明 | 記載箇所 |
+|----|------|----------|
+| **Standard バージョン**（サイト/リリース） | リリースタグとドキュメントスナップショット（例：`v0.1.1`）。 | バージョンテーブル、GitHub Releases、`/X.Y.Z/` URL。 |
+| **Taxonomy スキーマバージョン** | コード体系と taxonomy/スキーマ定義のバージョン。 | マニフェストの `taxonomy_version`；スキーマの `$id` またはドキュメント。 |
+| **Dictionary コンテンツバージョン** | 辞書エントリ（コードと定義）のバージョン。 | 辞書メタデータ；0.0.x では taxonomy と同じ。 |
+
+「AIMO Standard vX.Y.Z」を引用する場合、**Standard バージョン**が正規スナップショットを定義します。Validator と Minimum Evidence Requirements は、そのリリースのアーティファクトとスキーマを参照します。
+
+## 検証手順
+
+監査人および実装者は、SHA-256 チェックサムを使用してダウンロードの整合性を検証すべきです。
+
+### 1. リリースアセットのダウンロード
+
+=== "Linux / macOS"
+
+    ```bash
+    # 特定バージョンの全アセットをダウンロード
+    VERSION=v0.1.2
+    BASE_URL="https://github.com/billyrise/aimo-standard/releases/download/${VERSION}"
+
+    curl -LO "${BASE_URL}/trust_package.pdf"
+    curl -LO "${BASE_URL}/trust_package.ja.pdf"
+    curl -LO "${BASE_URL}/aimo-standard-artifacts.zip"
+    curl -LO "${BASE_URL}/SHA256SUMS.txt"
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # 特定バージョンの全アセットをダウンロード
+    $VERSION = "v0.1.1"
+    $BASE_URL = "https://github.com/billyrise/aimo-standard/releases/download/$VERSION"
+
+    Invoke-WebRequest -Uri "$BASE_URL/trust_package.pdf" -OutFile trust_package.pdf
+    Invoke-WebRequest -Uri "$BASE_URL/trust_package.ja.pdf" -OutFile trust_package.ja.pdf
+    Invoke-WebRequest -Uri "$BASE_URL/aimo-standard-artifacts.zip" -OutFile aimo-standard-artifacts.zip
+    Invoke-WebRequest -Uri "$BASE_URL/SHA256SUMS.txt" -OutFile SHA256SUMS.txt
+    ```
+
+### 2. チェックサム検証
+
+=== "Linux"
+
+    ```bash
+    # ダウンロードした全ファイルをチェックサムで検証
+    sha256sum -c SHA256SUMS.txt
+
+    # 期待される出力（すべて "OK" と表示されるべき）:
+    # trust_package.pdf: OK
+    # trust_package.ja.pdf: OK
+    # aimo-standard-artifacts.zip: OK
+    ```
+
+=== "macOS"
+
+    ```bash
+    # ダウンロードした全ファイルをチェックサムで検証
+    shasum -a 256 -c SHA256SUMS.txt
+
+    # 期待される出力（すべて "OK" と表示されるべき）:
+    # trust_package.pdf: OK
+    # trust_package.ja.pdf: OK
+    # aimo-standard-artifacts.zip: OK
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # 各ファイルを検証
+    Get-FileHash .\trust_package.pdf -Algorithm SHA256
+    Get-FileHash .\trust_package.ja.pdf -Algorithm SHA256
+    Get-FileHash .\aimo-standard-artifacts.zip -Algorithm SHA256
+
+    # Hash 出力を SHA256SUMS.txt と比較
+    Get-Content .\SHA256SUMS.txt
+    ```
+
+### 3. 手動検証（代替方法）
+
+=== "Linux"
+
+    ```bash
+    # 特定ファイルのハッシュを計算
+    sha256sum trust_package.pdf
+
+    # 出力を SHA256SUMS.txt と比較
+    cat SHA256SUMS.txt
+    ```
+
+=== "macOS"
+
+    ```bash
+    # 特定ファイルのハッシュを計算
+    shasum -a 256 trust_package.pdf
+
+    # 出力を SHA256SUMS.txt と比較
+    cat SHA256SUMS.txt
+    ```
+
+=== "Windows (PowerShell)"
+
+    ```powershell
+    # 特定ファイルのハッシュを計算
+    Get-FileHash .\trust_package.pdf -Algorithm SHA256
+
+    # チェックサムファイルを表示
+    Get-Content .\SHA256SUMS.txt
+    ```
+
+!!! tip "監査人向け"
+    チェックサムファイルは常に公式 GitHub Release から直接取得し、提出者からは受け取らないでください。これにより独立した検証が保証されます。
+
+### 4. ビルド来歴の検証（Attestation）
+
+すべてのリリースアセットには GitHub Actions によって生成された暗号署名付きビルド来歴証明（attestation）が含まれています。これにより、アセットが公式リポジトリで改ざんなくビルドされたことを検証できます。
+
+**前提条件**: [GitHub CLI](https://cli.github.com/) (`gh`) のインストール
+
+```bash
+# GitHub CLI でリリースアセットをダウンロード
+VERSION=v0.1.2
+gh release download "$VERSION" --repo billyrise/aimo-standard
+
+# 各アセットの attestation を検証
+gh attestation verify trust_package.pdf --repo billyrise/aimo-standard
+gh attestation verify trust_package.ja.pdf --repo billyrise/aimo-standard
+gh attestation verify aimo-standard-artifacts.zip --repo billyrise/aimo-standard
+gh attestation verify SHA256SUMS.txt --repo billyrise/aimo-standard
+```
+
+**期待される出力**（成功時）:
+
+```
+Loaded digest sha256:abc123... for file trust_package.pdf
+Loaded 1 attestation from GitHub API
+✓ Verification succeeded!
+```
+
+**オフライン検証**（エアギャップ環境）:
+
+```bash
+# まず trusted root をダウンロード（ネットワーク接続が1回必要）
+gh attestation trusted-root > trusted-root.jsonl
+
+# その後オフラインで検証
+gh attestation verify trust_package.pdf \
+  --repo billyrise/aimo-standard \
+  --custom-trusted-root trusted-root.jsonl
+```
+
+!!! info "attestation が証明すること"
+    ビルド来歴証明は、リリースアセットが以下であることを暗号学的に証明します：
+
+    1. GitHub Actions によってビルドされた（開発者のローカルマシンではない）
+    2. 公式の `billyrise/aimo-standard` リポジトリからビルドされた
+    3. リリースタグに関連付けられた正確なコミットからビルドされた
+    4. ビルド完了後に改変されていない
+
+## 互換性
+
+AIMO Standard は [Semantic Versioning](https://semver.org/) (SemVer) に従います：
+
+| 変更タイプ | バージョン更新 | 影響 |
+| :--------- | :------------- | :--- |
+| **MAJOR** | X.0.0 | 破壊的変更 — 移行が必要 |
+| **MINOR** | 0.X.0 | 後方互換の追加 |
+| **PATCH** | 0.0.X | 修正と明確化 |
+
+**運用規約**（URL の意味と MUST ルール）は [バージョニング・参照方針](../current/00-versioning-reference-policy/) を参照。完全なバージョニングポリシーは [VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md) を参照してください。
+
+## 移行
+
+破壊的変更を含むバージョン間のアップグレード時：
+
+1. [Changelog](../current/08-changelog/) で破壊的変更を確認
+2. [移行ガイド](https://github.com/billyrise/aimo-standard/blob/main/MIGRATION.md) で具体的なアップグレードパスを確認
+3. Evidence Bundle を新しいスキーマ要件に合わせて更新
+4. バリデータを再実行して準拠を検証
+
+!!! warning "破壊的変更"
+    MAJOR バージョン更新では、既存の Evidence Bundle の変更が必要な場合があります。アップグレード前に必ず移行ガイドを確認してください。
+
+## バージョン別ドキュメントスナップショット
+
+各リリースは以下でアクセス可能な固定ドキュメントスナップショットを作成します：
+
+- 本番環境: `https://standard.aimoaas.com/{version}/`（例: `/0.1.1/`）
+- GitHub Pages: `https://billyrise.github.io/aimo-standard/{version}/`
+
+### URL タイプとその意味
+
+| URLパターン | 説明 | 監査引用に使用可能？ |
+|-------------|------|---------------------|
+| `/X.Y.Z/`（例: `/0.1.1/`） | **固定リリース** — 不変のスナップショット | **はい**（推奨） |
+| `/latest/` | **エイリアス** — 最新リリースへリダイレクト | はい（`/X.Y.Z/`に解決） |
+| `/dev/` | **プレビュー** — 未リリースのmainブランチ内容 | **いいえ**（引用不可） |
+
+!!! warning "`/latest/` と `/dev/` の違いについて"
+    - **`/latest/`** は最新の**リリース済み**バージョンへのエイリアス（リダイレクト）です。固定スナップショットに解決されるため、引用に安全です。
+    - **`/dev/`** は現在の `main` ブランチを反映しており、**未リリースの変更**が含まれている可能性があります。監査レポートでは `/dev/` を絶対に引用しないでください。
+
+### よくある質問
+
+??? question "`/latest/` がバージョン番号でないのはなぜですか？"
+    `/latest/` は最新の安定リリース（例: `/0.1.1/`）に常にリダイレクトする便利なエイリアスです。これにより、ユーザーは単一のURLをブックマークしながら、自動的に現行バージョンを取得できます。不変性が必要な正式監査では、代わりに明示的なバージョンURLを引用してください。
+
+??? question "監査人はどのURLを引用すべきですか？"
+    - **正式監査（不変性が必要）**: `/X.Y.Z/` を使用（例: `https://standard.aimoaas.com/0.1.1/standard/current/`）
+    - **一般的な参照**: `/latest/` は現行リリースにリダイレクトされるため許容可能
+    - **絶対に引用しないでください**: `/dev/`（未リリース、変更される可能性あり）
+
+??? question "`/latest/` が期待と異なる内容を表示した場合は？"
+    これはデプロイメントのバグです。`/latest/` が最新の [GitHub Release](https://github.com/billyrise/aimo-standard/releases) と異なると思われる場合は、[Issue を報告](https://github.com/billyrise/aimo-standard/issues)してください。`/latest/` エイリアスは常に最新のタグ付きリリースにリダイレクトされるべきです。
+
+## リソース
+
+- **[リリースハブ](../../../releases/)** — 提出準備、監査人による検証、非過剰主張ステートメント
+- **[Trust Package](../../governance/trust-package/)** — 監査対応保証資料
+- **[Changelog（詳細）](../current/08-changelog/)** — 廃止追跡を含む完全な変更履歴
+- **[VERSIONING.md](https://github.com/billyrise/aimo-standard/blob/main/VERSIONING.md)** — 完全なバージョニングポリシー
