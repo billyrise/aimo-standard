@@ -48,7 +48,7 @@ The following aligns with **EU official timeline** (AI Act Service Desk / Commis
 
 ## Harmonised standards and presumption of conformity (Article 40)
 
-When **harmonised standards** are published in the EU Official Journal under the AI Act, compliance with them can provide **presumption of conformity** with the corresponding requirements. The exact list and dates depend on standardisation work and OJ publication. AIMO mappings are informative and do not confer presumption of conformity. For current status, see the European Commission and AI Office sources in **References** below.
+When **harmonised standards** are published in the EU Official Journal under the AI Act, compliance with them can provide **presumption of conformity** with the corresponding requirements. The exact list and dates depend on standardisation work and OJ publication. AIMO mappings are informative and do not confer presumption of conformity. For current status, see the European Commission [AI Act standardisation](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) page and **References** below.
 
 ## 2026 AI Office guidelines (implementation detail)
 
@@ -64,9 +64,18 @@ These guidelines are **update triggers** for AIMO profiles and coverage mappings
 !!! warning "Not legal advice"
     This page is for explanatory use only. You must verify applicability and dates against the official regulation and any implementing or amending acts. AIMO does not provide legal advice or guarantee compliance.
 
+!!! note "Legal note / Informative mapping"
+    This page is **informative** only. Legal interpretation should be based on the official regulation (EUR-Lex) and European Commission publications. AIMO does not provide legal advice or guarantee compliance.
+
 ## References
 
-- [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Artificial Intelligence Act
-- [EU AI Act implementation timeline](https://artificialintelligenceact.eu/implementation-timeline) (AI Act Service Desk / Commission-aligned; informative)
-- European Commission / AI Office — clear guidelines and timeline (check Commission news and AI Act Service Desk for current URLs)
+**Primary sources**
+
+- [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689) (EUR-Lex) — Artificial Intelligence Act (legal text)
+- [Timeline for the implementation of the EU AI Act](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) — European Commission AI Act Service Desk (implementation timeline)
+- [Standardisation of the AI Act](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) — European Commission Digital Strategy (harmonised standards, presumption of conformity)
+
+**Other**
+
+- European Commission / AI Office — guidelines and timeline (see AI Act Service Desk and Commission news for current URLs)
 - [EPRS — EU AI Act implementation](https://www.europarl.europa.eu/thinktank/) — Parliament briefing (informative)

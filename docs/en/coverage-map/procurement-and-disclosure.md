@@ -5,16 +5,46 @@ description: Procurement and disclosure overlays (UK, Japan). UK ATRS, UK procur
 
 # Procurement & Disclosure Overlays (UK, Japan)
 
-This page describes **reference mappings** between AIMO evidence and selected **UK** and **Japan** procurement and disclosure frameworks. It is **reference mapping only**; AIMO does not replace official checklists or government guidance.
+This page describes **reference mappings** between AIMO evidence and selected **UK** and **Japan** procurement and disclosure frameworks. The goal is **burden reduction via reuse of AIMO evidence**: adopters can reuse evidence they already produce for AIMO to support procurement and disclosure requirements. It is **informative mapping only**; AIMO does not guarantee full compliance with government requirements. Verify against the official sources below.
 
-## UK: ATRS and AI procurement
+## Primary sources
+
+**UK**
+
+- [Algorithmic Transparency Recording Standard (ATRS) Hub](https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub) — GOV.UK (template, guidance, published records)
+- [ATRS template](https://www.gov.uk/government/publications/algorithmic-transparency-template) — Official template for public sector
+- [Guidance for organisations using the ATRS](https://www.gov.uk/government/publications/guidance-for-organisations-using-the-algorithmic-transparency-standard/algorithmic-transparency-recording-standard-guidance-for-public-sector-bodies) — GOV.UK
+
+**Japan**
+
+- [Digital Agency — GenAI procurement and utilisation guideline](https://www.digital.go.jp/news/3579c42d-b11c-4756-b66e-3d3e35175623) — Digital Agency (Cabinet Secretariat): guideline on generative AI procurement and use in government
+- [AI Business Guidelines](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/index.html) — METI / MIC (Ministry of Economy, Trade and Industry / Ministry of Internal Affairs and Communications)
+
+## Mapping table (UK)
+
+| Government requirement (topic) | AIMO artifact(s) | Where in Evidence Bundle | Validator coverage | Note |
+| --- | --- | --- | --- | --- |
+| ATRS — accountability / owner | Summary, review | manifest; objects/ (EV, Summary); payload_index | schema_validate_ev | Informative mapping; does not guarantee full compliance. |
+| ATRS — system / model description | Dictionary, EV | objects/; schemas/jsonschema/aimo-dictionary.schema.json | schema_validate_dictionary | Attach official ATRS record in External Forms; link by logical_id. |
+| ATRS — risk considerations | Dictionary, request, review, exception | objects/; templates/ev/ | schema_validate_ev | Profile: `coverage_map/profiles/uk_atrs_procurement.json`. |
+| Procurement — supplier evidence | request, review, exception; Evidence Bundle | manifest, object_index, payload_index; examples/evidence_bundle_minimal/ | schema_validate_ev | Use bundle to structure evidence; UK guidance remains authoritative. |
+
+## Mapping table (Japan)
+
+| Government requirement (topic) | AIMO artifact(s) | Where in Evidence Bundle | Validator coverage | Note |
+| --- | --- | --- | --- | --- |
+| GenAI procurement checklist (Digital Agency) | External Form (checklist as-is); Dictionary, Summary | payload_index; External Forms section; manifest reference | N/A (attachment) | Informative mapping; does not guarantee full compliance. Profile: `coverage_map/profiles/jp_gov_genai_procurement.json`. |
+| AI Business Guidelines — governance / traceability | Summary, dictionary, request, review, change_log | objects/; manifest; templates/ev/ | schema_validate_dictionary, schema_validate_ev | Map checklist items to AIMO taxonomy where useful for traceability. |
+| Risk / accountability documentation | Dictionary, EV, review, exception | objects/; schemas/jsonschema/ | schema_validate_ev | Verify against official Digital Agency and METI/MIC guidance. |
+
+## UK: ATRS and AI procurement (summary)
 
 | Topic | AIMO evidence / mapping | Notes |
 | --- | --- | --- |
 | **UK ATRS** (AI Transparency Record) | Summary, review (accountability owner), evidence (model/system description), dictionary (risk considerations). Profile: `coverage_map/profiles/uk_atrs_procurement.json`. | Attach or reference ATRS-style transparency record in External Forms; link to bundle objects by logical_id. |
 | **UK procurement guidance** | Request, review, exception; Evidence Bundle for supplier evaluation. | Use AIMO bundle to structure evidence for procurement evaluation; official UK guidance remains authoritative. |
 
-## Japan: Government GenAI procurement and AI Business Guidelines
+## Japan: Government GenAI procurement and AI Business Guidelines (summary)
 
 | Topic | AIMO evidence / mapping | Notes |
 | --- | --- | --- |

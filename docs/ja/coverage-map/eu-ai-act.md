@@ -48,7 +48,7 @@ description: AIMO Standard と EU AI 法のマッピング。AIMO タクソノ�
 
 ## 調和標準と適合推定（第40条）
 
-AI 法に基づき EU 官報で**調和標準**が公布されると、それへの適合は対応する要求への**適合推定**となり得ます。一覧・日付は標準化作業と官報公布に依存します。AIMO のマッピングは参考であり、適合推定を与えません。現状は**参考文献**の委員会・AI オフィスを参照してください。
+AI 法に基づき EU 官報で**調和標準**が公布されると、それへの適合は対応する要求への**適合推定**となり得ます。一覧・日付は標準化作業と官報公布に依存します。AIMO のマッピングは参考であり、適合推定を与えません。現状は欧州委員会の [AI 法標準化](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) ページおよび**参考文献**を参照してください。
 
 ## 2026年 AI オフィスガイドライン（実施詳細）
 
@@ -64,9 +64,18 @@ AI 法に基づき EU 官報で**調和標準**が公布されると、それへ
 !!! warning "法務助言ではない"
     本ページは説明目的のみです。適用範囲・日付は正式な規則および施行・改正法で確認してください。AIMO は法務助言も適合保証も提供しません。
 
+!!! note "法的注記 / 参考マッピング"
+    本ページは**参考**であり、法的解釈は正式な規則（EUR-Lex）および欧州委員会公表物に基づいてください。AIMO は法務助言も適合保証も提供しません。
+
 ## 参考文献
 
-- [規則 (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689)（EUR-Lex）— 人工知能法
-- [EU AI 法実施タイムライン](https://artificialintelligenceact.eu/implementation-timeline)（AI 法サービスデスク/委員会準拠；参考）
-- 欧州委員会 / AI オフィス — ガイドライン・タイムライン（委員会ニュース・AI 法サービスデスクで最新 URL を確認）
+**一次ソース**
+
+- [規則 (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689)（EUR-Lex）— 人工知能法（法文）
+- [EU AI 法の実施タイムライン](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) — 欧州委員会 AI 法サービスデスク（実施タイムライン）
+- [AI 法の標準化](https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation) — 欧州委員会デジタル戦略（調和標準・適合推定）
+
+**その他**
+
+- 欧州委員会 / AI オフィス — ガイドライン・タイムライン（AI 法サービスデスク・委員会ニュースで最新 URL を確認）
 - [EPRS — EU AI 法実施](https://www.europarl.europa.eu/thinktank/) — 議会ブリーフィング（参考）

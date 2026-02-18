@@ -64,9 +64,9 @@ Trust Package PDF は監査人向け資料を1つの文書に集約していま�
 
 ## 責任の境界
 
-AIMO Standard は構造化された証跡フォーマットと説明可能性の枠組みを提供します。**法的助言、コンプライアンス認証、リスク評価、監査の実行は提供しません**。
+Trust Package は**保証・監査引き継ぎ**の入口です：監査人と採用者向けの資料を集約しています。AIMO Standard は構造化証跡フォーマットと説明可能性の枠組みを提供しますが、**認証、適合保証、法務助言、監査の実施は行いません**。認証・適合の判断は認定認証機関、監査人、採用組織にあります。
 
-スコープの定義、前提、採用者責任の詳細は [Responsibility Boundary](../responsibility-boundary/) を参照してください。
+スコープの定義、前提、採用者責任の詳細は [Responsibility Boundary](../responsibility-boundary/) および [Conformance](../../conformance/) を参照してください。
 
 ## 提出パッケージの準備方法
 

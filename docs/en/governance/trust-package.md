@@ -65,9 +65,9 @@ The `aimo-standard-artifacts.zip` includes:
 
 ## Responsibility boundary
 
-The AIMO Standard provides a structured evidence format and explainability framework. It does **not** provide legal advice, compliance certification, risk assessment, or audit execution.
+The Trust Package is an **assurance and audit handoff** entry point: it consolidates materials for auditors and adopters. The AIMO Standard provides a structured evidence format and explainability framework; it does **not** certify, guarantee compliance, provide legal advice, or conduct audits. Certification and compliance decisions remain with accredited certification bodies, auditors, and the adopting organization.
 
-For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](../responsibility-boundary/).
+For the full scope definition, assumptions, and adopter responsibilities, see [Responsibility Boundary](../responsibility-boundary/) and [Conformance](../../conformance/).
 
 ## How to prepare a submission package
 

@@ -13,7 +13,28 @@ description: AIMO Standard conformance levels. How organizations claim complianc
     **Inappropriate claim:** "EU AI Act compliant", "ISO 42001 certified", "government approved".
     <!-- /UNACCEPTABLE_CLAIMS_EXAMPLES -->
 
+AIMO Standard positions as an **assurance / audit handoff / continuous evidence layer**: it provides evidence packaging, validators, and traceability so that adopters and auditors can work with structured evidence. AIMO is **not** a certifier; certification and compliance decisions are made by accredited certification bodies, auditors, and the adopting organization.
+
 These tiers are **internal evidence maturity levels** for packaging and traceability. They are **not** a certification, **not** an assurance opinion, and **not** legal or regulatory compliance.
+
+## Compatibility claims (ISO/NIST/EU)
+
+The following **informative mappings** link AIMO evidence and artifacts to external frameworks. They support explainability and audit handoff; they do **not** confer certification or guarantee compliance. Verify against the authoritative framework texts.
+
+- [Coverage Map — ISO/IEC 42001](../coverage-map/iso-42001/) — mapping to ISO/IEC 42001 (AI management system)
+- [Coverage Map — NIST AI RMF](../coverage-map/nist-ai-rmf/) — mapping to NIST AI Risk Management Framework
+- [Coverage Map — EU AI Act](../coverage-map/eu-ai-act/) — mapping to EU AI Act themes (high-level; not legal advice)
+
+Primary sources and claim language are documented on each coverage map page and in [Responsibility Boundary](../governance/responsibility-boundary/).
+
+## Non-claims (what AIMO does NOT claim)
+
+- AIMO does **not** certify conformity to ISO/IEC 42001, NIST AI RMF, EU AI Act, or any other framework.
+- AIMO does **not** guarantee regulatory or legal compliance.
+- AIMO does **not** provide assurance opinions or legal advice.
+- AIMO does **not** decide whether an organization meets external requirements; that is the responsibility of adopters, auditors, and certification bodies.
+
+AIMO **does** provide: structured evidence format, validator, coverage mappings (informative), and materials to support audit handoff. See [Responsibility Boundary](../governance/responsibility-boundary/) for the full scope.
 
 !!! note "Tier name alias"
     The top tier was previously referred to as "Gold" in informal discussions; the **official tier name is Audit-Ready**.

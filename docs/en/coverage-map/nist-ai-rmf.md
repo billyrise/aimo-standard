@@ -5,6 +5,9 @@ description: AIMO Standard to NIST AI RMF mapping. Traceability between AIMO tax
 
 # NIST AI RMF mapping
 
+!!! note "Primary source"
+    **NIST AI Risk Management Framework (AI RMF 1.0)** — [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) (NIST official publication and resources). Verify mapping and applicability against this primary source.
+
 > Traceability shortcuts: Taxonomy → Minimum Evidence → Validator → Human Oversight Protocol.
 
 - [Taxonomy](../../standard/current/03-taxonomy/)
@@ -13,7 +16,7 @@ description: AIMO Standard to NIST AI RMF mapping. Traceability between AIMO tax
 - [Validator](../../validator/)
 - [Human Oversight Protocol](../../governance/human-oversight-protocol/)
 
-This page maps selected NIST AI Risk Management Framework (Govern, Map, Measure, Manage) themes to AIMO evidence and artifacts. It is for explainability only; it does not guarantee conformity to the NIST AI RMF. Verify against the NIST publication.
+This page maps selected NIST AI Risk Management Framework (Govern, Map, Measure, Manage) themes to AIMO evidence and artifacts. It is for explainability only; it does not guarantee conformity to the NIST AI RMF. Verify against the [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) publication.
 
 
 ## Mapping table

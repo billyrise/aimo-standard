@@ -30,6 +30,8 @@ ISO/IEC 42001 型コントロール（コンテキスト、リーダーシップ
 - **Use:** "We use AIMO artifacts to support ISO/IEC 42001 readiness; certification decisions remain with accredited certification bodies."
 - **Do not use:** "ISO 42001 certified by AIMO" or "AIMO certifies compliance."
 
+一次ソース（公式規格）: [ISO/IEC 42001:2023](https://www.iso.org/standard/42001)（ISO）。本ツールキットは [Conformance](../../conformance/) および [Responsibility Boundary](../../governance/responsibility-boundary/) と整合しており、AIMO は認証も適合保証も行いません。
+
 ## Related
 
 - [Conformance](../../conformance/) — Levels (Foundation, Operational, Audit-Ready) and claim language
