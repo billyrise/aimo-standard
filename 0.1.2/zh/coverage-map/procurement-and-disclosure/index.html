@@ -1347,9 +1347,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要来源
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      映射表（英国）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      映射表（日本）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#atrs-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      英国：ATRS 与 AI 采购
+      英国：ATRS 与 AI 采购（摘要）
     </span>
   </a>
   
@@ -1358,14 +1385,14 @@
         <li class="md-nav__item">
   <a href="#genai-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      日本：政府 GenAI 采购与 AI 商业指南
+      日本：政府 GenAI 采购与 AI 商业指南（摘要）
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       使用方式
     </span>
@@ -2275,9 +2302,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要来源
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      映射表（英国）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      映射表（日本）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#atrs-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      英国：ATRS 与 AI 采购
+      英国：ATRS 与 AI 采购（摘要）
     </span>
   </a>
   
@@ -2286,14 +2340,14 @@
         <li class="md-nav__item">
   <a href="#genai-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      日本：政府 GenAI 采购与 AI 商业指南
+      日本：政府 GenAI 采购与 AI 商业指南（摘要）
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       使用方式
     </span>
@@ -2344,8 +2398,97 @@
 <!-- aimo:translation_status=translated -->
 
 <h1 id="_1">采购与披露叠加（英国、日本）</h1>
-<p>本页说明 AIMO 证据与选定<strong>英国</strong>及<strong>日本</strong>采购与披露框架之间的<strong>参考映射</strong>。仅为<strong>参考映射</strong>；AIMO 不取代正式检查表或政府指南。</p>
-<h2 id="atrs-ai">英国：ATRS 与 AI 采购</h2>
+<p>本页说明 AIMO 证据与选定<strong>英国</strong>及<strong>日本</strong>采购与披露框架之间的<strong>参考映射</strong>。旨在<strong>通过复用 AIMO 证据减轻负担</strong>。仅为<strong>参考映射</strong>；AIMO 不保证完全满足政府要求。请对照下列官方来源验证。</p>
+<h2 id="_2">主要来源</h2>
+<p><strong>英国</strong></p>
+<ul>
+<li><a href="https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub">Algorithmic Transparency Recording Standard (ATRS) Hub</a> — GOV.UK（模板、指南、已发布记录）</li>
+<li><a href="https://www.gov.uk/government/publications/algorithmic-transparency-template">ATRS 模板</a> — 公共部门官方模板</li>
+<li><a href="https://www.gov.uk/government/publications/guidance-for-organisations-using-the-algorithmic-transparency-standard/algorithmic-transparency-recording-standard-guidance-for-public-sector-bodies">使用 ATRS 的组织指南</a> — GOV.UK</li>
+</ul>
+<p><strong>日本</strong></p>
+<ul>
+<li><a href="https://www.digital.go.jp/news/3579c42d-b11c-4756-b66e-3d3e35175623">数字厅 — GenAI 采购与利用指南</a> — 数字厅（内阁官房）</li>
+<li><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/index.html">AI 商业指南</a> — 经济产业省 / 总务省</li>
+</ul>
+<h2 id="_3">映射表（英国）</h2>
+<table>
+<thead>
+<tr>
+<th>政府要求（主题）</th>
+<th>AIMO 工件</th>
+<th>在 Evidence Bundle 中的位置</th>
+<th>验证器覆盖</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATRS — 问责/负责人</td>
+<td>Summary、review</td>
+<td>manifest；objects/（EV、Summary）；payload_index</td>
+<td>schema_validate_ev</td>
+<td>参考映射；不保证完全符合。</td>
+</tr>
+<tr>
+<td>ATRS — 系统/模型描述</td>
+<td>Dictionary、EV</td>
+<td>objects/；schemas/jsonschema/aimo-dictionary.schema.json</td>
+<td>schema_validate_dictionary</td>
+<td>于外部表单附上正式 ATRS 记录；以 logical_id 链接。</td>
+</tr>
+<tr>
+<td>ATRS — 风险考量</td>
+<td>Dictionary、request、review、exception</td>
+<td>objects/；templates/ev/</td>
+<td>schema_validate_ev</td>
+<td>配置：<code>coverage_map/profiles/uk_atrs_procurement.json</code>。</td>
+</tr>
+<tr>
+<td>采购 — 供应商证据</td>
+<td>request、review、exception；Evidence Bundle</td>
+<td>manifest、object_index、payload_index；examples/evidence_bundle_minimal/</td>
+<td>schema_validate_ev</td>
+<td>以组合结构化证据；英国正式指南仍为权威。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">映射表（日本）</h2>
+<table>
+<thead>
+<tr>
+<th>政府要求（主题）</th>
+<th>AIMO 工件</th>
+<th>在 Evidence Bundle 中的位置</th>
+<th>验证器覆盖</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GenAI 采购检查表（数字厅）</td>
+<td>外部表单（检查表原文）；Dictionary、Summary</td>
+<td>payload_index；外部表单节；manifest 参照</td>
+<td>N/A（附件）</td>
+<td>参考映射；不保证完全符合。配置：<code>coverage_map/profiles/jp_gov_genai_procurement.json</code>。</td>
+</tr>
+<tr>
+<td>AI 商业指南 — 治理/可追溯性</td>
+<td>Summary、dictionary、request、review、change_log</td>
+<td>objects/；manifest；templates/ev/</td>
+<td>schema_validate_dictionary、schema_validate_ev</td>
+<td>在有利于可追溯性时将列表项映射至 AIMO 分类法。</td>
+</tr>
+<tr>
+<td>风险/责任文档</td>
+<td>Dictionary、EV、review、exception</td>
+<td>objects/；schemas/jsonschema/</td>
+<td>schema_validate_ev</td>
+<td>请对照数字厅与经产省/总务省正式指南验证。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="atrs-ai">英国：ATRS 与 AI 采购（摘要）</h2>
 <table>
 <thead>
 <tr>
@@ -2367,7 +2510,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="genai-ai">日本：政府 GenAI 采购与 AI 商业指南</h2>
+<h2 id="genai-ai">日本：政府 GenAI 采购与 AI 商业指南（摘要）</h2>
 <table>
 <thead>
 <tr>
@@ -2389,7 +2532,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_2">使用方式</h2>
+<h2 id="_5">使用方式</h2>
 <ul>
 <li><strong>外部表单</strong>：将英国或日本正式模板/检查表<strong>原样</strong>附上（PDF、DOC 等），进行哈希，并列于证据包 <a href="../../standard/current/09-evidence-bundle-structure/">payload_index</a> 或 <a href="../../standard/current/06-ev-template/">EV 模板外部表单章节</a>。在 manifest 与映射中以 logical_id 参照。</li>
 <li><strong>配置文件</strong>：上列配置文件定义可选用的机器可读映射；不施加法律或契约义务。</li>
