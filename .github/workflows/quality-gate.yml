@@ -96,6 +96,11 @@ jobs:
           PYTHONWARNINGS: ignore
         run: python -m pytest tests/ validator/tests/ -v --tb=short
 
+      - name: Generate llms-full.txt (all languages)
+        run: |
+          echo "=== Generating llms-full.txt for all 10 languages ==="
+          python tooling/build_llms_txt.py --all-langs
+
       - name: Build Documentation
         run: |
           echo "=== MkDocs Build (strict mode) ==="

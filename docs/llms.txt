@@ -1,0 +1,89 @@
+# AIMO Standard
+
+> AIMO Standard is an open standard for AI governance, audit evidence, and agentic AI risk
+> management. It provides a structured taxonomy (8 dimensions, 91 codes), minimum evidence
+> requirements, validation tooling, and audit-ready artifact schemas for enterprise AI compliance.
+>
+> License: Apache-2.0. Free to use, adapt, and redistribute.
+> Cite: https://standard.aimoaas.com/latest/governance/cite/
+> Version: 0.1.2 (released 2026-02-13)
+> Repository: https://github.com/billyrise/aimo-standard
+
+## Core Standard
+
+- [Overview](https://standard.aimoaas.com/latest/standard/current/01-overview/): What AIMO Standard is, why it exists, and how it addresses shadow AI and agentic AI risk.
+- [Scope](https://standard.aimoaas.com/latest/standard/current/02-scope/): Applicability boundaries, target organizations, and in-scope AI system categories.
+- [Taxonomy](https://standard.aimoaas.com/latest/standard/current/03-taxonomy/): The 8-dimension taxonomy for classifying AI usage. Core conceptual framework.
+- [Taxonomy Codes](https://standard.aimoaas.com/latest/standard/current/04-codes/): All 91 taxonomy codes with definitions. The complete classification vocabulary.
+- [ID Policy and Namespace](https://standard.aimoaas.com/latest/standard/current/04b-id-policy-namespace/): How taxonomy code identifiers are assigned and governed.
+- [Dictionary](https://standard.aimoaas.com/latest/standard/current/05-dictionary/): Term definitions for all concepts used across the standard.
+- [Evidence Template](https://standard.aimoaas.com/latest/standard/current/06-ev-template/): The canonical evidence record format for documenting AI system usage.
+- [Validator](https://standard.aimoaas.com/latest/standard/current/07-validator/): Schema validation rules and how to use the AIMO Validator.
+- [Evidence Bundle Structure](https://standard.aimoaas.com/latest/standard/current/09-evidence-bundle-structure/): How to package evidence records into a compliant audit bundle.
+- [Changelog](https://standard.aimoaas.com/latest/standard/current/08-changelog/): Version history of the standard specification.
+- [Roadmap v0.2](https://standard.aimoaas.com/latest/standard/current/10-roadmap-v0.2/): Planned features and direction for the next major version.
+
+## Artifacts
+
+- [Artifacts Overview](https://standard.aimoaas.com/latest/artifacts/): Index of all downloadable artifacts and tooling outputs.
+- [Evidence Bundle](https://standard.aimoaas.com/latest/artifacts/evidence-bundle/): Template and specification for assembling a complete audit evidence bundle.
+- [Minimum Evidence Requirements](https://standard.aimoaas.com/latest/artifacts/minimum-evidence/): The minimum set of evidence fields required per taxonomy code for audit readiness.
+- [Evidence Bundle Coverage Map](https://standard.aimoaas.com/latest/artifacts/evidence-bundle-coverage-map/): Maps evidence bundle contents to regulatory framework requirements.
+- [Justified Non-Compliance](https://standard.aimoaas.com/latest/artifacts/justified-non-compliance/): How to document and justify deviations from standard requirements.
+- [ISO 42001 Certification Readiness Toolkit](https://standard.aimoaas.com/latest/artifacts/iso-42001-certification-readiness-toolkit/): Structured toolkit for organizations pursuing ISO 42001 certification.
+- [Signature Verification Roadmap](https://standard.aimoaas.com/latest/artifacts/signature-verification-roadmap/): Plan for cryptographic signing and verification of evidence bundles.
+- [Log Schemas — Agent Activity](https://standard.aimoaas.com/latest/artifacts/log-schemas/agent-activity/): Schema for logging agentic AI system actions for audit.
+- [Log Schemas — Shadow AI Discovery](https://standard.aimoaas.com/latest/artifacts/log-schemas/shadow-ai-discovery/): Schema for documenting shadow AI discovery findings.
+
+## Coverage Map (Regulatory Alignment)
+
+- [Coverage Map Overview](https://standard.aimoaas.com/latest/coverage-map/): How AIMO Standard evidence maps to international AI regulations.
+- [EU AI Act](https://standard.aimoaas.com/latest/coverage-map/eu-ai-act/): Mapping of AIMO evidence requirements to EU AI Act Annex IV obligations.
+- [ISO 42001](https://standard.aimoaas.com/latest/coverage-map/iso-42001/): Coverage of ISO 42001:2023 AI management system requirements.
+- [ISO 42006](https://standard.aimoaas.com/latest/coverage-map/iso-42006/): Coverage of ISO 42006 AI audit requirements.
+- [NIST AI RMF](https://standard.aimoaas.com/latest/coverage-map/nist-ai-rmf/): Alignment with NIST AI Risk Management Framework.
+- [ISMS Integration](https://standard.aimoaas.com/latest/coverage-map/isms/): Integration guidance for ISO 27001 / ISMS practitioners.
+- [Procurement and Disclosure](https://standard.aimoaas.com/latest/coverage-map/procurement-and-disclosure/): Coverage for AI procurement transparency and supplier disclosure obligations.
+- [Coverage Methodology](https://standard.aimoaas.com/latest/coverage-map/methodology/): How coverage assessments are conducted and scored.
+
+## Conformance
+
+- [Conformance](https://standard.aimoaas.com/latest/conformance/): Conformance levels, self-assessment process, and certification pathway.
+
+## Validator
+
+- [Validator](https://standard.aimoaas.com/latest/validator/): Command-line and API validator for AIMO evidence bundles and taxonomy codes.
+
+## Examples
+
+- [Examples](https://standard.aimoaas.com/latest/examples/): Sample evidence bundles, taxonomy usage, and audit scenarios.
+
+## Governance
+
+- [Governance Overview](https://standard.aimoaas.com/latest/governance/): Organizational governance structure for AIMO Standard.
+- [Trust Package](https://standard.aimoaas.com/latest/governance/trust-package/): The canonical trust package for relying parties and auditors.
+- [Responsibility Boundary](https://standard.aimoaas.com/latest/governance/responsibility-boundary/): Scope of responsibility for AIMO Standard Contributors.
+- [Human Oversight Protocol](https://standard.aimoaas.com/latest/governance/human-oversight-protocol/): Requirements for human oversight of AI systems documented under this standard.
+- [How to Cite](https://standard.aimoaas.com/latest/governance/cite/): Citation instructions for research, audit reports, and regulatory submissions.
+- [License](https://standard.aimoaas.com/latest/governance/license/): Apache-2.0 license terms for AIMO Standard.
+- [Contributing](https://standard.aimoaas.com/latest/governance/contributing/): How to contribute to the standard.
+
+## Releases
+
+- [Releases](https://standard.aimoaas.com/latest/releases/): Release notes, downloadable artifacts (PDF, ZIP), and version history.
+
+## Full Text
+
+- [llms-full.txt](https://standard.aimoaas.com/llms-full.txt): Complete concatenated text of all English documentation pages for LLM ingestion.
+
+## Other Languages
+
+- [日本語 (Japanese) llms.txt](https://standard.aimoaas.com/latest/ja/llms.txt)
+- [Español (Spanish) llms.txt](https://standard.aimoaas.com/latest/es/llms.txt)
+- [Français (French) llms.txt](https://standard.aimoaas.com/latest/fr/llms.txt)
+- [Deutsch (German) llms.txt](https://standard.aimoaas.com/latest/de/llms.txt)
+- [Português (Portuguese) llms.txt](https://standard.aimoaas.com/latest/pt/llms.txt)
+- [Italiano (Italian) llms.txt](https://standard.aimoaas.com/latest/it/llms.txt)
+- [简体中文 (Simplified Chinese) llms.txt](https://standard.aimoaas.com/latest/zh/llms.txt)
+- [繁體中文 (Traditional Chinese) llms.txt](https://standard.aimoaas.com/latest/zh-TW/llms.txt)
+- [한국어 (Korean) llms.txt](https://standard.aimoaas.com/latest/ko/llms.txt)

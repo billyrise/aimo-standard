@@ -11,29 +11,47 @@
 {% endif %}
 {% endif %}
 
-{# --- hreflang tags for multilingual SEO --- #}
+{# --- hreflang tags for multilingual SEO (all 10 languages) --- #}
 {% if page and page.canonical_url %}
-{# Extract path from canonical URL #}
+{# Extract path from canonical URL and derive the base path (without language prefix) #}
 {% set current_path = page.canonical_url | replace(config.site_url, '') %}
-{% if current_path.startswith('ja/') %}
-{# JA page: EN alternate is without /ja/, JA is current #}
-{% set en_path = current_path[3:] %}
-<link rel="alternate" hreflang="en" href="{{ config.site_url }}{{ en_path }}">
-<link rel="alternate" hreflang="ja" href="{{ page.canonical_url }}">
-{% else %}
-{# EN page: JA alternate has /ja/ prefix #}
-<link rel="alternate" hreflang="en" href="{{ page.canonical_url }}">
-<link rel="alternate" hreflang="ja" href="{{ config.site_url }}ja/{{ current_path }}">
-{% endif %}
-<link rel="alternate" hreflang="x-default" href="{{ config.site_url }}{{ current_path if not current_path.startswith('ja/') else current_path[3:] }}">
+{% set ns = namespace(base_path=current_path) %}
+{% set lang_prefixes = ['ja/', 'es/', 'fr/', 'de/', 'pt/', 'it/', 'zh/', 'zh-TW/', 'ko/'] %}
+{% for prefix in lang_prefixes %}
+{% if current_path.startswith(prefix) %}{% set ns.base_path = current_path[prefix | length:] %}{% endif %}
+{% endfor %}
+<link rel="alternate" hreflang="en"       href="{{ config.site_url }}{{ ns.base_path }}">
+<link rel="alternate" hreflang="ja"       href="{{ config.site_url }}ja/{{ ns.base_path }}">
+<link rel="alternate" hreflang="es"       href="{{ config.site_url }}es/{{ ns.base_path }}">
+<link rel="alternate" hreflang="fr"       href="{{ config.site_url }}fr/{{ ns.base_path }}">
+<link rel="alternate" hreflang="de"       href="{{ config.site_url }}de/{{ ns.base_path }}">
+<link rel="alternate" hreflang="pt"       href="{{ config.site_url }}pt/{{ ns.base_path }}">
+<link rel="alternate" hreflang="it"       href="{{ config.site_url }}it/{{ ns.base_path }}">
+<link rel="alternate" hreflang="zh-Hans"  href="{{ config.site_url }}zh/{{ ns.base_path }}">
+<link rel="alternate" hreflang="zh-Hant"  href="{{ config.site_url }}zh-TW/{{ ns.base_path }}">
+<link rel="alternate" hreflang="ko"       href="{{ config.site_url }}ko/{{ ns.base_path }}">
+<link rel="alternate" hreflang="x-default" href="{{ config.site_url }}{{ ns.base_path }}">
 {% endif %}
 
-{# --- Open Graph meta tags for social sharing --- #}
+{# --- Open Graph meta tags for social sharing (all 10 languages) --- #}
 {% set og_title = page.meta.title | default(page.title) | default(config.site_name) if page else config.site_name %}
 {% set og_description = page.meta.description | default(config.site_description) if page else config.site_description %}
 {% set og_url = page.canonical_url | default(config.site_url) if page else config.site_url %}
 {% set og_image = config.site_url ~ "assets/images/og-image.png" %}
-{% set og_locale = "ja_JP" if (page and page.canonical_url and "ja/" in page.canonical_url) else "en_US" %}
+{# Detect current locale from URL for og:locale #}
+{% set og_locale = "en_US" %}
+{% if page and page.canonical_url %}
+{% if "/ja/" in page.canonical_url %}{% set og_locale = "ja_JP" %}
+{% elif "/es/" in page.canonical_url %}{% set og_locale = "es_ES" %}
+{% elif "/fr/" in page.canonical_url %}{% set og_locale = "fr_FR" %}
+{% elif "/de/" in page.canonical_url %}{% set og_locale = "de_DE" %}
+{% elif "/pt/" in page.canonical_url %}{% set og_locale = "pt_BR" %}
+{% elif "/it/" in page.canonical_url %}{% set og_locale = "it_IT" %}
+{% elif "/zh-TW/" in page.canonical_url %}{% set og_locale = "zh_TW" %}
+{% elif "/zh/" in page.canonical_url %}{% set og_locale = "zh_CN" %}
+{% elif "/ko/" in page.canonical_url %}{% set og_locale = "ko_KR" %}
+{% endif %}
+{% endif %}
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ config.site_name }}">
@@ -42,11 +60,10 @@
 <meta property="og:url" content="{{ og_url }}">
 <meta property="og:image" content="{{ og_image }}">
 <meta property="og:locale" content="{{ og_locale }}">
-{% if og_locale == "ja_JP" %}
-<meta property="og:locale:alternate" content="en_US">
-{% else %}
-<meta property="og:locale:alternate" content="ja_JP">
-{% endif %}
+{% set all_og_locales = ["en_US", "ja_JP", "es_ES", "fr_FR", "de_DE", "pt_BR", "it_IT", "zh_CN", "zh_TW", "ko_KR"] %}
+{% for alt_locale in all_og_locales %}{% if alt_locale != og_locale %}
+<meta property="og:locale:alternate" content="{{ alt_locale }}">
+{% endif %}{% endfor %}
 
 {# --- Twitter Card meta tags --- #}
 <meta name="twitter:card" content="summary_large_image">
@@ -71,7 +88,7 @@
   "name": "{{ config.site_name }}",
   "url": "{{ config.site_url }}",
   "description": "{{ config.site_description }}",
-  "inLanguage": ["en", "ja"],
+  "inLanguage": ["en", "ja", "es", "fr", "de", "pt", "it", "zh", "zh-TW", "ko"],
   "publisher": {
     "@type": "Organization",
     "name": "AIMO Standard Contributors",
@@ -92,7 +109,7 @@
   "headline": "{{ og_title }}",
   "description": "{{ og_description }}",
   "url": "{{ og_url }}",
-  "inLanguage": "{{ 'ja' if (page.canonical_url and 'ja/' in page.canonical_url) else 'en' }}",
+  "inLanguage": "{{ 'ja' if '/ja/' in page.canonical_url else 'es' if '/es/' in page.canonical_url else 'fr' if '/fr/' in page.canonical_url else 'de' if '/de/' in page.canonical_url else 'pt' if '/pt/' in page.canonical_url else 'it' if '/it/' in page.canonical_url else 'zh-TW' if '/zh-TW/' in page.canonical_url else 'zh' if '/zh/' in page.canonical_url else 'ko' if '/ko/' in page.canonical_url else 'en' }}",
   "isPartOf": {
     "@type": "WebSite",
     "name": "{{ config.site_name }}",

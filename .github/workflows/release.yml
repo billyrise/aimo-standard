@@ -149,6 +149,11 @@ jobs:
           echo "=== Internal Link Check (nav targets must exist) ==="
           python tooling/checks/check_internal_links.py --check
 
+      - name: Generate llms-full.txt (all languages)
+        run: |
+          echo "=== Generating llms-full.txt for all 10 languages ==="
+          python tooling/build_llms_txt.py --all-langs
+
       - name: Build docs (mkdocs)
         run: python -m mkdocs build --strict
 
@@ -293,7 +298,7 @@ jobs:
           cat > robots.txt << 'ROBOTS_EOF'
           # AIMO Standard robots.txt
           # Canonical site: https://standard.aimoaas.com/
-          # Production is fully crawlable; only /dev/ (preview) is disallowed.
+          # Production is fully crawlable; only /dev/ (preview) is disallowed. No global crawler block.
           
           User-agent: *
           Allow: /
@@ -301,6 +306,44 @@ jobs:
           
           # Disallow dev preview only (unreleased content — not for audit citation)
           Disallow: /dev/
+          
+          # AI training and retrieval crawlers — explicitly welcome
+          # AIMO Standard is Apache-2.0 licensed and intended for AI governance knowledge bases.
+          User-agent: GPTBot
+          Allow: /
+          
+          User-agent: ChatGPT-User
+          Allow: /
+          
+          User-agent: OAI-SearchBot
+          Allow: /
+          
+          User-agent: ClaudeBot
+          Allow: /
+          
+          User-agent: anthropic-ai
+          Allow: /
+          
+          User-agent: Google-Extended
+          Allow: /
+          
+          User-agent: PerplexityBot
+          Allow: /
+          
+          User-agent: Meta-ExternalAgent
+          Allow: /
+          
+          User-agent: Amazonbot
+          Allow: /
+          
+          User-agent: Applebot-Extended
+          Allow: /
+          
+          User-agent: CCBot
+          Allow: /
+          
+          User-agent: cohere-ai
+          Allow: /
           
           # Sitemap location
           Sitemap: https://standard.aimoaas.com/sitemap.xml
@@ -320,12 +363,34 @@ jobs:
             echo "WARNING: No sitemap.xml found to copy"
           fi
           
+          # Copy llms.txt from latest version to root (AI crawler entry point)
+          if [ -f "${VERSION}/llms.txt" ]; then
+            cp "${VERSION}/llms.txt" llms.txt
+            echo "Copied: ${VERSION}/llms.txt -> llms.txt"
+          elif [ -f "latest/llms.txt" ]; then
+            cp "latest/llms.txt" llms.txt
+            echo "Copied: latest/llms.txt -> llms.txt"
+          else
+            echo "WARNING: No llms.txt found to copy"
+          fi
+          
+          # Copy llms-full.txt from latest version to root (full-text for LLM ingestion)
+          if [ -f "${VERSION}/llms-full.txt" ]; then
+            cp "${VERSION}/llms-full.txt" llms-full.txt
+            echo "Copied: ${VERSION}/llms-full.txt -> llms-full.txt"
+          elif [ -f "latest/llms-full.txt" ]; then
+            cp "latest/llms-full.txt" llms-full.txt
+            echo "Copied: latest/llms-full.txt -> llms-full.txt"
+          else
+            echo "WARNING: No llms-full.txt found to copy"
+          fi
+          
           # Commit and push
-          git add robots.txt sitemap.xml 2>/dev/null || git add robots.txt
+          git add robots.txt sitemap.xml llms.txt llms-full.txt 2>/dev/null || git add robots.txt
           if git diff --cached --quiet; then
             echo "SEO files unchanged; nothing to commit."
           else
-            git commit -m "chore(pages): deploy root SEO files (robots.txt, sitemap.xml)"
+            git commit -m "chore(pages): deploy root SEO files (robots.txt, sitemap.xml, llms.txt, llms-full.txt)"
             git push origin gh-pages
             echo "✓ Root SEO files deployed"
           fi
