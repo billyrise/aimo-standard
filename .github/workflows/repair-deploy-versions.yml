@@ -61,6 +61,11 @@ jobs:
           pip install -r requirements.txt
           pip install -r tooling/requirements.txt 2>/dev/null || true
 
+      - name: Generate llms-full.txt (all languages)
+        run: |
+          echo "=== Generating llms-full.txt for all 10 languages ==="
+          python tooling/build_llms_txt.py --all-langs
+
       - name: Build documentation
         run: python -m mkdocs build --strict
 
@@ -90,8 +95,78 @@ jobs:
           mike deploy --push "$VERSION"
           
           echo ""
+          echo "=== Updating root SEO files from /$VERSION/ ==="
+          git checkout gh-pages
+          # Refresh root robots.txt, sitemap.xml, llms.txt, llms-full.txt from deployed version
+          cat > robots.txt << 'ROBOTS_EOF'
+          # AIMO Standard robots.txt
+          # Canonical site: https://standard.aimoaas.com/
+          # Production is fully crawlable; only /dev/ (preview) is disallowed. No global crawler block.
+          
+          User-agent: *
+          Allow: /
+          Allow: /latest/
+          
+          # Disallow dev preview only (unreleased content — not for audit citation)
+          Disallow: /dev/
+          
+          # AI training and retrieval crawlers — explicitly welcome
+          # AIMO Standard is Apache-2.0 licensed and intended for AI governance knowledge bases.
+          User-agent: GPTBot
+          Allow: /
+          
+          User-agent: ChatGPT-User
+          Allow: /
+          
+          User-agent: OAI-SearchBot
+          Allow: /
+          
+          User-agent: ClaudeBot
+          Allow: /
+          
+          User-agent: anthropic-ai
+          Allow: /
+          
+          User-agent: Google-Extended
+          Allow: /
+          
+          User-agent: PerplexityBot
+          Allow: /
+          
+          User-agent: Meta-ExternalAgent
+          Allow: /
+          
+          User-agent: Amazonbot
+          Allow: /
+          
+          User-agent: Applebot-Extended
+          Allow: /
+          
+          User-agent: CCBot
+          Allow: /
+          
+          User-agent: cohere-ai
+          Allow: /
+          
+          # Sitemap location
+          Sitemap: https://standard.aimoaas.com/sitemap.xml
+          ROBOTS_EOF
+          sed -i.bak 's/^          //' robots.txt && rm -f robots.txt.bak
+          if [ -f "${VERSION}/sitemap.xml" ]; then cp "${VERSION}/sitemap.xml" sitemap.xml; fi
+          if [ -f "${VERSION}/llms.txt" ]; then cp "${VERSION}/llms.txt" llms.txt; fi
+          if [ -f "${VERSION}/llms-full.txt" ]; then cp "${VERSION}/llms-full.txt" llms-full.txt; fi
+          git add robots.txt sitemap.xml llms.txt llms-full.txt 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(pages): refresh root SEO files from $VERSION (repair deploy)"
+            git push origin gh-pages
+            echo "Root SEO files updated."
+          fi
+          git checkout main
+          
+          echo ""
           echo "=== Done ==="
           echo "Version /$VERSION/ has been updated with content from main."
+          echo "Root SEO files (robots.txt, sitemap.xml, llms.txt, llms-full.txt) refreshed from /$VERSION/."
           echo "/latest/ was NOT changed."
           echo ""
           mike list
